@@ -61,3 +61,13 @@ https://selguetagodoy.github.io/investigacion.html
 GitHub:
 
 https://github.com/selguetagodoy
+
+## Historical editorial archive
+
+### El Mostrador — Fin al lucro: la autocrítica no basta
+
+Published 2 January 2013 under the historical byline **Sebastián Godoy Elgueta**, identified by El Mostrador as President of the Universidad Viña del Mar Student Federation in 2012. This is treated as a historical publication record, not as a canonical alternate name.
+
+Author archive: https://www.elmostrador.cl/autor/sebastiangodoy/
+
+Article: https://www.elmostrador.cl/noticias/opinion/2013/01/02/fin-al-lucro-la-autocritica-no-basta/
