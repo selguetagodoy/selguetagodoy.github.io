@@ -93,3 +93,15 @@ These links are documentary evidence of historical authorship and are not used t
 COTEL identifies Sebastián Elgueta Godoy as author of the Atlas de la Desconexión Digital and quotes his interpretation of functional connectivity and territorial digital gaps.
 
 https://cotel.cl/la-nueva-brecha-digital-combina-uso-dispositivos-y-presupuesto/
+
+### CIPER — Casen 2024 y el baño de realidad necesario
+
+Published 9 January 2026 under the historical byline **Sebastián Godoy Elgueta**. This is treated as documentary historical authorship, not as a canonical alternate name.
+
+https://www.ciperchile.cl/2026/01/09/casen-2024-y-el-bano-de-realidad-necesario/
+
+### CIPER — La paradoja de Valparaíso sobre internet
+
+Published 22 May 2024 under the historical byline **Sebastián Godoy Elgueta**. The article discusses high-speed connectivity, urban development and the digital economy in Valparaíso.
+
+https://www.ciperchile.cl/2024/05/22/cartas-valparaiso-e-internet/
