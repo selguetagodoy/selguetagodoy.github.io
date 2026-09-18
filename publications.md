@@ -34,6 +34,24 @@ Academia.edu profile:
 
 https://uai.academia.edu/ElguetaGodoy
 
+### Estrategias de movilidad urbana integrada e incremento de la geografía de la oportunidad
+
+https://www.academia.edu/101999104/Estrategias_de_movilidad_urbana_integrada_e_incremento_de_la_geograf%C3%ADa_de_la_oportunidad_para_el_Barrio_de_Forestal_Vi%C3%B1a_del_Mar_Chile
+
+### Efectos de la Geografía de oportunidades en el mercado laboral y movilidad residencial
+
+https://www.academia.edu/102009939/Efectos_de_la_Geograf%C3%ADa_de_oportunidades_en_el_mercado_laboral_y_disposiciones_de_la_movilidad_residencial_en_un_asentamiento_irregular_el_caso_de_los_residentes_del_Campamento_Felipe_Camiroaga_en_Vi%C3%B1a_del_Mar_Regi%C3%B3n_de_Valpara%C3%ADso_
+
+### Ejercicio académico de consulta de pertinencia — Tren Rápido Valparaíso-Santiago
+
+https://www.academia.edu/105621782/EJERCICIO_ACADEMICO_DE_CONSULTA_DE_PERTINENCIA_TREN_RAPIDO_VALPARAISO_SANTIAGO
+
+### Connected but Dependent? Digital Autonomy and the Second Digital Divide among Older Adults in Chile
+
+The paper is publicly listed under Sebastián Elgueta Godoy on the verified Academia.edu profile. Until a stable direct paper URL is independently resolved, use the verified author profile rather than inventing a paper URL.
+
+https://uai.academia.edu/ElguetaGodoy
+
 ## Research outputs
 
 Official research overview:
