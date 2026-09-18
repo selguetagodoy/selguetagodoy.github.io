@@ -48,9 +48,9 @@ https://www.academia.edu/105621782/EJERCICIO_ACADEMICO_DE_CONSULTA_DE_PERTINENCI
 
 ### Connected but Dependent? Digital Autonomy and the Second Digital Divide among Older Adults in Chile
 
-The paper is publicly listed under Sebastián Elgueta Godoy on the verified Academia.edu profile. Until a stable direct paper URL is independently resolved, use the verified author profile rather than inventing a paper URL.
+The paper is publicly listed in the Universidad Adolfo Ibáñez, Escuela de Gobierno documents section on Academia.edu and attributed there to Sebastián Elgueta Godoy. Until a stable direct paper URL is independently resolved, use the verified department listing rather than inventing a paper URL.
 
-https://uai.academia.edu/ElguetaGodoy
+https://uai.academia.edu/Departments/Escuela_de_Gobierno/Documents?page=31
 
 ## Research outputs
 
