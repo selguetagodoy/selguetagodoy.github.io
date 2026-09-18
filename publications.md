@@ -87,3 +87,9 @@ Selected recent work:
 - Valparaíso, Internet and digital development: https://elquintopoder.cl/desarrollo-regional/valparaiso-la-paradoja-del-internet-mas-rapido-del-mundo-versus-la-pobreza-y-subdesarrollo/
 
 These links are documentary evidence of historical authorship and are not used to expand the canonical alternate-name list.
+
+### COTEL — La nueva Brecha Digital combina uso, dispositivos y presupuesto
+
+COTEL identifies Sebastián Elgueta Godoy as author of the Atlas de la Desconexión Digital and quotes his interpretation of functional connectivity and territorial digital gaps.
+
+https://cotel.cl/la-nueva-brecha-digital-combina-uso-dispositivos-y-presupuesto/
