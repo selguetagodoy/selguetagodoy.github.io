@@ -71,3 +71,19 @@ Published 2 January 2013 under the historical byline **Sebastián Godoy Elgueta*
 Author archive: https://www.elmostrador.cl/autor/sebastiangodoy/
 
 Article: https://www.elmostrador.cl/noticias/opinion/2013/01/02/fin-al-lucro-la-autocritica-no-basta/
+
+## El Quinto Poder — author archive
+
+The external author archive contains ten public contributions from 2012 through 2026 under the historical byline Sebastián Godoy Elgueta.
+
+Author profile: https://elquintopoder.cl/perfil-de-usuario/?user=9439
+
+Selected recent work:
+
+- CASEN 2024: https://elquintopoder.cl/chile-2030/casen-2024-un-bano-de-realidad-necesario-para-el-desarrollo/
+- Digital connectivity and skills: https://elquintopoder.cl/chile-2030/chile-conectividad-digital-de-primer-mundo-habilidades-digitales-de-tercer-mundo/
+- Concessions and shared value: https://elquintopoder.cl/chile-2030/la-ruta-hacia-el-valor-compartido-concesiones-y-bienestar-social-para-chile/
+- Censo 2024 and Valparaíso: https://elquintopoder.cl/desarrollo-regional/censo-2024-valparaiso-se-apaga-mientras-sus-vecinos-se-expanden/
+- Valparaíso, Internet and digital development: https://elquintopoder.cl/desarrollo-regional/valparaiso-la-paradoja-del-internet-mas-rapido-del-mundo-versus-la-pobreza-y-subdesarrollo/
+
+These links are documentary evidence of historical authorship and are not used to expand the canonical alternate-name list.
