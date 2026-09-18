@@ -1,0 +1,59 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Collect changed public URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+          if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            FILES=$(git ls-tree -r --name-only "$AFTER" | grep -E '^[^/]+\.html$' || true)
+          else
+            FILES=$(git diff --name-only "$BEFORE" "$AFTER" -- '*.html' | grep -E '^[^/]+\.html$' || true)
+          fi
+          : > urls.txt
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            if [ "$file" = "index.html" ]; then
+              echo "https://selguetagodoy.github.io/" >> urls.txt
+            else
+              echo "https://selguetagodoy.github.io/$file" >> urls.txt
+            fi
+          done <<< "$FILES"
+          sort -u urls.txt -o urls.txt
+          cat urls.txt
+
+      - name: Submit changed URLs to IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+          COUNT=$(wc -l < urls.txt | tr -d ' ')
+          [ "$COUNT" -eq 0 ] && exit 0
+          URLS=$(jq -R -s -c 'split("\n") | map(select(length > 0))' urls.txt)
+          jq -n \
+            --arg host "selguetagodoy.github.io" \
+            --arg key "d1556c74f2037f1b2098ecc2adbb80f4" \
+            --arg keyLocation "https://selguetagodoy.github.io/d1556c74f2037f1b2098ecc2adbb80f4.txt" \
+            --argjson urlList "$URLS" \
+            '{host:$host,key:$key,keyLocation:$keyLocation,urlList:$urlList}' > payload.json
+          curl --fail-with-body --retry 2 \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d @payload.json \
+            https://api.indexnow.org/indexnow
