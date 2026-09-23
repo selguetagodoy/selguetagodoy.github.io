@@ -50,6 +50,8 @@ Substack: https://substack.com/@sebastianelguetagodoy
 
 Academia.edu: https://uai.academia.edu/ElguetaGodoy
 
+ResearchGate: https://www.researchgate.net/profile/Sebastian-Elgueta-Godoy
+
 Institutional profile: https://www.coordenadaspublicas.cl/nosotros/
 
 Historical author archive — El Quinto Poder: https://elquintopoder.cl/perfil-de-usuario/?user=9439
