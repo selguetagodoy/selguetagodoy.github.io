@@ -16,7 +16,7 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - Sociology — Universidad Viña del Mar.
 - Master's degree in Urban and Regional Project Management — Universidad Viña del Mar.
 - Master's degree in Political Communication and Public Affairs — Universidad Adolfo Ibáñez.
-- [Universidad Viña del Mar institutional repository](https://repositorio.uvm.cl/items/001169d9-106f-41c3-bf7b-8724752ffd7a): Persistent academic thesis record.
+- [Universidad Viña del Mar institutional repository](https://hdl.handle.net/20.500.12536/841): Persistent academic thesis record.
 
 ## Research and datasets
 
