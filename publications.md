@@ -18,6 +18,10 @@ Academic document by Sebastián Elgueta Godoy associated with the Atlas de la De
 
 https://www.academia.edu/176096186/Una_radiograf%C3%ADa_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_%C3%8Dndice_de_Vulnerabilidad_Digital
 
+ResearchGate record:
+
+https://www.researchgate.net/publication/414679752_Una_radiografia_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_Indice_de_Vulnerabilidad_Digital
+
 Canonical explanatory page:
 
 https://selguetagodoy.github.io/indice-vulnerabilidad-digital-chile.html
