@@ -26,6 +26,15 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - [Latin America Digital Infrastructure Observatory](https://selguetagodoy.github.io/latin-america-digital-infrastructure/): Public observatory.
 - [GitHub](https://github.com/selguetagodoy): Public repositories and reproducible research.
 
+## Persistent identifiers
+
+- Chile Digital Inclusion: https://doi.org/10.5281/zenodo.22921190
+- Latin America Digital Infrastructure: https://doi.org/10.5281/zenodo.22921174
+- Atlas de la Desconexión Digital de Chile: https://doi.org/10.5281/zenodo.22921208
+- Internet Speeds and Connectivity: https://doi.org/10.5281/zenodo.22921202
+- Chile State Institutional Map: https://doi.org/10.5281/zenodo.22921220
+- Stakeholder Routes Chile: https://doi.org/10.5281/zenodo.22921233
+
 ## Publications and external evidence
 
 - [Publications markdown](https://selguetagodoy.github.io/publications.md): Verified publications and references.
