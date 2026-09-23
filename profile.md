@@ -12,7 +12,7 @@ He has more than 13 years of professional experience across the public sector, l
 - Master's degree in Urban and Regional Project Management — Universidad Viña del Mar.
 - Master's degree in Political Communication and Public Affairs — Universidad Adolfo Ibáñez.
 
-A persistent academic thesis record is available through the Universidad Viña del Mar institutional repository: https://repositorio.uvm.cl/items/001169d9-106f-41c3-bf7b-8724752ffd7a
+A persistent academic thesis record is available through the Universidad Viña del Mar institutional repository: https://hdl.handle.net/20.500.12536/841
 
 ## Public research
 
