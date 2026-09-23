@@ -40,7 +40,10 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - [Publications markdown](https://selguetagodoy.github.io/publications.md): Verified publications and references.
 - [CIPER — El próximo paso del 5G](https://www.ciperchile.cl/2026/07/10/el-proximo-paso-del-5g/): Opinion piece submitted by Sebastián Elgueta Godoy.
 - [COTEL Congress 2026 agenda](https://cotel.cl/congreso/agenda/): Public event reference.
-- [COTEL — Atlas de la Desconexión Digital](https://cotel.cl/cotel-presenta-el-atlas-de-la-desconexion-digital/): Public institutional reference.
+- [Atlas de la Desconexión Digital de Chile 2026](https://selguetagodoy.github.io/atlas-desconexion-digital-chile.html): Canonical project landing with institutional evidence, repository, DOI and interactive version.
+- [COTEL — Atlas de la Desconexión Digital](https://cotel.cl/cotel-presenta-el-atlas-de-la-desconexion-digital/): Institutional announcement naming Sebastián Elgueta Godoy as presenter.
+- [COTEL — La nueva Brecha Digital](https://cotel.cl/la-nueva-brecha-digital-combina-uso-dispositivos-y-presupuesto/): Institutional article identifying Sebastián Elgueta Godoy as author of the Atlas.
+- [COTEL — Atlas available for public consultation](https://cotel.cl/cotel-pone-a-disposicion-el-atlas-de-la-desconexion-digital-para-consulta-publica/): Institutional publication linking the public interactive Atlas.
 - [Coordenadas Públicas](https://www.coordenadaspublicas.cl/nosotros/): Current institutional profile.
 - [El Quinto Poder author archive](https://elquintopoder.cl/perfil-de-usuario/?user=9439): Historical verified author archive.
 - [El Mostrador author archive](https://www.elmostrador.cl/autor/sebastiangodoy/): Historical verified author archive.
