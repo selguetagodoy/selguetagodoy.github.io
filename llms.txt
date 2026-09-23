@@ -21,8 +21,8 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 ## Research and datasets
 
 - [Research overview](https://selguetagodoy.github.io/research.md): Public research projects and methodology.
-- [Chile Digital Inclusion](https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html): Public dataset on digital inclusion and connectivity in Chile.
-- [Latin America Digital Infrastructure](https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html): Comparative public dataset on digital infrastructure in Latin America.
+- [Chile Digital Inclusion](https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html): Public dataset on digital inclusion and connectivity in Chile. Versioned release: https://github.com/selguetagodoy/Chile-Digital-Inclusion/releases/tag/v0.1.0
+- [Latin America Digital Infrastructure](https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html): Comparative public dataset on digital infrastructure in Latin America. Versioned release: https://github.com/selguetagodoy/latin-america-digital-infrastructure/releases/tag/v0.2.0
 - [Latin America Digital Infrastructure Observatory](https://selguetagodoy.github.io/latin-america-digital-infrastructure/): Public observatory.
 - [GitHub](https://github.com/selguetagodoy): Public repositories and reproducible research.
 
@@ -33,6 +33,8 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - [COTEL Congress 2026 agenda](https://cotel.cl/congreso/agenda/): Public event reference.
 - [COTEL — Atlas de la Desconexión Digital](https://cotel.cl/cotel-presenta-el-atlas-de-la-desconexion-digital/): Public institutional reference.
 - [Coordenadas Públicas](https://www.coordenadaspublicas.cl/nosotros/): Current institutional profile.
+- [El Quinto Poder author archive](https://elquintopoder.cl/perfil-de-usuario/?user=9439): Historical verified author archive.
+- [El Mostrador author archive](https://www.elmostrador.cl/autor/sebastiangodoy/): Historical verified author archive.
 
 ## Other verified profiles
 
