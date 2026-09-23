@@ -20,11 +20,21 @@ Repository: https://github.com/selguetagodoy/Chile-Digital-Inclusion
 
 ## Atlas de la Desconexión Digital de Chile
 
-A territorial research project that distinguishes the intensity of digital connectivity gaps from their social scale across Chilean municipalities.
+A territorial research project authored by Sebastián Elgueta Godoy. The Atlas and its associated database analyze digital connectivity, territorial fragility and digital vulnerability across Chile.
+
+Atlas landing: https://selguetagodoy.github.io/atlas-desconexion-digital-chile.html
+
+Digital Vulnerability Index: https://selguetagodoy.github.io/indice-vulnerabilidad-digital-chile.html
+
+Academic document: https://www.academia.edu/176096186/Una_radiograf%C3%ADa_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_%C3%8Dndice_de_Vulnerabilidad_Digital
 
 Repository: https://github.com/selguetagodoy/atlas-desconexion-digital-chile.
 
-External reference: https://cotel.cl/cotel-presenta-el-atlas-de-la-desconexion-digital/
+DOI: https://doi.org/10.5281/zenodo.22921208
+
+Institutional evidence: https://cotel.cl/la-nueva-brecha-digital-combina-uso-dispositivos-y-presupuesto/
+
+Public consultation: https://cotel.cl/cotel-pone-a-disposicion-el-atlas-de-la-desconexion-digital-para-consulta-publica/
 
 ## Internet performance research
 
