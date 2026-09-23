@@ -37,6 +37,8 @@ GitHub: https://github.com/selguetagodoy
 
 LinkedIn: https://cl.linkedin.com/in/sebastian-elgueta-godoy
 
+Substack: https://substack.com/@sebastianelguetagodoy
+
 Academia.edu: https://uai.academia.edu/ElguetaGodoy
 
 Institutional profile: https://www.coordenadaspublicas.cl/nosotros/
