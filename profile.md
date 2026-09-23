@@ -20,6 +20,7 @@ Sebastián develops public, source-backed research using open data, longitudinal
 
 Selected projects include:
 
+- **Una radiografía territorial del acceso, la fragilidad digital y el nuevo Índice de Vulnerabilidad Digital** — academic document associated with the Atlas de la Desconexión Digital de Chile 2026: https://www.academia.edu/176096186/Una_radiograf%C3%ADa_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_%C3%8Dndice_de_Vulnerabilidad_Digital
 - Latin America Digital Infrastructure.
 - Chile Digital Inclusion.
 - Atlas de la Desconexión Digital de Chile.
