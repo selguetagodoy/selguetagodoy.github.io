@@ -10,6 +10,18 @@ The page identifies the contribution as submitted by Sebastián Elgueta Godoy.
 
 https://www.ciperchile.cl/2026/07/10/el-proximo-paso-del-5g/
 
+## Academic work
+
+### Una radiografía territorial del acceso, la fragilidad digital y el nuevo Índice de Vulnerabilidad Digital
+
+Academic document by Sebastián Elgueta Godoy associated with the Atlas de la Desconexión Digital de Chile 2026.
+
+https://www.academia.edu/176096186/Una_radiograf%C3%ADa_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_%C3%8Dndice_de_Vulnerabilidad_Digital
+
+Canonical explanatory page:
+
+https://selguetagodoy.github.io/indice-vulnerabilidad-digital-chile.html
+
 ## Institutional references
 
 ### Atlas de la Desconexión Digital de Chile
@@ -28,7 +40,7 @@ Coordenadas Públicas:
 
 https://www.coordenadaspublicas.cl/nosotros/
 
-## Academic work
+## Other academic work
 
 Academia.edu profile:
 
