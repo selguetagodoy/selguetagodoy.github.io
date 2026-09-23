@@ -25,6 +25,15 @@ Selected projects include:
 - Atlas de la Desconexión Digital de Chile.
 - Internet performance and connectivity research.
 
+## Persistent research identifiers
+
+- Chile Digital Inclusion — DOI: https://doi.org/10.5281/zenodo.22921190
+- Latin America Digital Infrastructure — DOI: https://doi.org/10.5281/zenodo.22921174
+- Atlas de la Desconexión Digital de Chile — DOI: https://doi.org/10.5281/zenodo.22921208
+- Internet Speeds and Connectivity — DOI: https://doi.org/10.5281/zenodo.22921202
+- Chile State Institutional Map — DOI: https://doi.org/10.5281/zenodo.22921220
+- Stakeholder Routes Chile — DOI: https://doi.org/10.5281/zenodo.22921233
+
 ## Canonical identity
 
 Canonical name: **Sebastián Elgueta Godoy**
