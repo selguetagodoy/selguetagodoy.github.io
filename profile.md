@@ -40,3 +40,5 @@ LinkedIn: https://cl.linkedin.com/in/sebastian-elgueta-godoy
 Academia.edu: https://uai.academia.edu/ElguetaGodoy
 
 Institutional profile: https://www.coordenadaspublicas.cl/nosotros/
+
+Historical author archive: https://elquintopoder.cl/perfil-de-usuario/?user=9439
