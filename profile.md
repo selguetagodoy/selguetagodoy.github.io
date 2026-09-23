@@ -6,6 +6,14 @@ His work sits at the intersection of public policy, regulation, infrastructure, 
 
 He has more than 13 years of professional experience across the public sector, legislative advisory work, strategic consulting and applied research.
 
+## Education
+
+- Sociology — Universidad Viña del Mar.
+- Master's degree in Urban and Regional Project Management — Universidad Viña del Mar.
+- Master's degree in Political Communication and Public Affairs — Universidad Adolfo Ibáñez.
+
+A persistent academic thesis record is available through the Universidad Viña del Mar institutional repository: https://repositorio.uvm.cl/items/001169d9-106f-41c3-bf7b-8724752ffd7a
+
 ## Public research
 
 Sebastián develops public, source-backed research using open data, longitudinal indicators, international benchmarking and territorial analysis.
