@@ -16,7 +16,9 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - Sociology — Universidad Viña del Mar.
 - Master's degree in Urban and Regional Project Management — Universidad Viña del Mar.
 - Master's degree in Political Communication and Public Affairs — Universidad Adolfo Ibáñez.
-- [Universidad Viña del Mar institutional repository](https://hdl.handle.net/20.500.12536/841): Persistent academic thesis record.
+- [Universidad Viña del Mar institutional repository](https://hdl.handle.net/20.500.12536/841): Persistent academic thesis record for *Infraestructura de movilidad urbana a escala de barrio* (2019).
+- [Mobility and geography of opportunities thesis landing](https://selguetagodoy.github.io/movilidad-urbana-geografia-oportunidades-forestal.html): Consolidated identity page linking the UVM institutional record and Academia.edu version.
+- [Academia.edu — Estrategias de movilidad urbana integrada e incremento de la geografía de la oportunidad](https://www.academia.edu/101999104/Estrategias_de_movilidad_urbana_integrada_e_incremento_de_la_geograf%C3%ADa_de_la_oportunidad_para_el_Barrio_de_Forestal_Vi%C3%B1a_del_Mar_Chile): Public academic version associated with Sebastián Elgueta Godoy.
 
 ## Research and datasets
 
