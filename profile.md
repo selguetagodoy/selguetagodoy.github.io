@@ -43,4 +43,6 @@ Academia.edu: https://uai.academia.edu/ElguetaGodoy
 
 Institutional profile: https://www.coordenadaspublicas.cl/nosotros/
 
-Historical author archive: https://elquintopoder.cl/perfil-de-usuario/?user=9439
+Historical author archive — El Quinto Poder: https://elquintopoder.cl/perfil-de-usuario/?user=9439
+
+Historical author archive — El Mostrador: https://www.elmostrador.cl/autor/sebastiangodoy/
