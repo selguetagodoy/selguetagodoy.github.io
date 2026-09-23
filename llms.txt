@@ -11,6 +11,13 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - [Verified web directory](https://selguetagodoy.github.io/en-la-web.html): Curated public profiles and external references.
 - [Profile markdown](https://selguetagodoy.github.io/profile.md): Concise machine-readable biography.
 
+## Education and academic identity
+
+- Sociology — Universidad Viña del Mar.
+- Master's degree in Urban and Regional Project Management — Universidad Viña del Mar.
+- Master's degree in Political Communication and Public Affairs — Universidad Adolfo Ibáñez.
+- [Universidad Viña del Mar institutional repository](https://repositorio.uvm.cl/items/001169d9-106f-41c3-bf7b-8724752ffd7a): Persistent academic thesis record.
+
 ## Research and datasets
 
 - [Research overview](https://selguetagodoy.github.io/research.md): Public research projects and methodology.
