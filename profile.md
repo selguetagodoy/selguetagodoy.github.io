@@ -40,6 +40,8 @@ Canonical name: **Sebastián Elgueta Godoy**
 
 Accepted unaccented spelling: **Sebastian Elgueta Godoy**
 
+Historical publication variant: **Sebastián Godoy Elgueta** (also **Sebastian Godoy Elgueta**).
+
 Official website: https://selguetagodoy.github.io/
 
 GitHub: https://github.com/selguetagodoy
