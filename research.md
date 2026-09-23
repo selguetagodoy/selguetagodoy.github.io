@@ -26,7 +26,9 @@ Atlas landing: https://selguetagodoy.github.io/atlas-desconexion-digital-chile.h
 
 Digital Vulnerability Index: https://selguetagodoy.github.io/indice-vulnerabilidad-digital-chile.html
 
-Academic document: https://www.academia.edu/176096186/Una_radiograf%C3%ADa_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_%C3%8Dndice_de_Vulnerabilidad_Digital
+Academic document — Academia.edu: https://www.academia.edu/176096186/Una_radiograf%C3%ADa_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_%C3%8Dndice_de_Vulnerabilidad_Digital
+
+Academic document — ResearchGate: https://www.researchgate.net/publication/414679752_Una_radiografia_territorial_del_acceso_la_fragilidad_digital_y_el_nuevo_Indice_de_Vulnerabilidad_Digital
 
 Repository: https://github.com/selguetagodoy/atlas-desconexion-digital-chile.
 
