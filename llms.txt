@@ -62,6 +62,7 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - [Google Sites portfolio](https://sites.google.com/view/sebastianelguetagodoy)
 - [WordPress](https://sebastianelguetagodoy.wordpress.com/)
 - [Substack](https://substack.com/@sebastianelguetagodoy): Verified public profile for notes and professional publications.
+- [Facebook](https://www.facebook.com/sebagodoyelgueta/): Public social profile associated with Sebastián Elgueta Godoy under the historical username `sebagodoyelgueta`.
 - [Gamma visual microsite](https://gamma.app/docs/Sebastian-Elgueta-Godoy-Public-Affairs-Digital-Infrastructure-Res-6kksqeeykbp631f)
 
 - [English digital infrastructure research microsite](https://gamma.app/docs/Sebastian-Elgueta-Godoy-Digital-Infrastructure-Research-in-Latin--caib98dx4bxld86): English-language research profile and open-data overview.
