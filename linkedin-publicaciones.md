@@ -40,6 +40,36 @@ Canonical publications hub: https://selguetagodoy.github.io/linkedin-publicacion
 - **Internet como servicio público de telecomunicaciones**:
   https://es.linkedin.com/posts/sebastian-elgueta-godoy_en-mi-rol-como-asesor-legislativo-me-toc%C3%B3-activity-7192265990527700993-iQlS
 
+## Regulation and public policy
+
+- **Ley N° 21.708 y derechos de usuarios de telecomunicaciones**:
+  https://es.linkedin.com/posts/sebasti%C3%A1n-enrique-godoy-elgueta_ley-21708-activity-7263164606183784449-IViN
+
+- **Retiro y ordenamiento de cables de telecomunicaciones**:
+  https://es.linkedin.com/posts/sebasti%C3%A1n-enrique-godoy-elgueta_contralor%C3%ADa-toma-raz%C3%B3n-del-reglamento-para-activity-7307428871539183616-3JMm
+
+- **Servicios móviles de última milla y Fondo de Desarrollo de las Telecomunicaciones**:
+  https://es.linkedin.com/posts/sebasti%C3%A1n-enrique-godoy-elgueta_subtel-subtel-fdt-activity-7157749532095647744-Ihjc
+
+- **Seguridad en telecomunicaciones e identificación de usuarios**:
+  https://es.linkedin.com/posts/sebasti%C3%A1n-enrique-godoy-elgueta_esta-iniciativa-es-parte-de-la-agenda-de-activity-7188933285895438336-i8RC
+
+## Inclusion and territory
+
+- **Inclusión digital y autonomía de personas mayores**:
+  https://es.linkedin.com/posts/sebastian-elgueta-godoy_inclusi%C3%B3ndigital-brechadigital-personasmayores-activity-7478560403715850240-SxOc
+
+- **Chile en la vanguardia digital**:
+  https://es.linkedin.com/posts/sebasti%C3%A1n-enrique-godoy-elgueta_chiledigital-conectividad-telecomunicaciones-activity-7371949761551077376-zRD7
+
+- **Valparaíso, Internet y desarrollo urbano digital**:
+  https://es.linkedin.com/posts/sebasti%C3%A1n-enrique-godoy-elgueta_ciper-chile-activity-7199169407632179200-8coG
+
+## Professional trajectory
+
+- **Cierre de etapa profesional en SUBTEL**:
+  https://es.linkedin.com/posts/sebastian-elgueta-godoy_hoy-cierro-una-etapa-profesional-que-fue-activity-7429623437481930752-j4R8
+
 ## Digital infrastructure
 
 - **La IA necesita licencia social** — data centers, artificial intelligence, energy, permits and territory:
