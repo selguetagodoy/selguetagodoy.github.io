@@ -1,5 +1,17 @@
 # Publications and external references — Sebastián Elgueta Godoy
 
+## LinkedIn publications
+
+Public LinkedIn analyses by Sebastián Elgueta Godoy are indexed at:
+
+https://selguetagodoy.github.io/linkedin-publicaciones.html
+
+Machine-readable archive:
+
+https://selguetagodoy.github.io/linkedin-publicaciones.md
+
+Selected indexed posts include Ookla Chile Q2 2026, Informe del sector Teleco 2025, Informe del Sector Teleco Chile 1T 2026, portabilidad del mercado telco, registro de SIM/eSIM, Reglamento de la Ley Jammer and “La IA necesita licencia social”.
+
 ## Verified authorship
 
 ### El próximo paso del 5G
