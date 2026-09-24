@@ -40,6 +40,7 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 ## Publications and external evidence
 
 - [LinkedIn publications archive](https://selguetagodoy.github.io/linkedin-publicaciones.html): Curated index of publicly accessible LinkedIn posts by Sebastián Elgueta Godoy on telecommunications, connectivity, regulation, data, data centers, artificial intelligence and public policy.
+- [LinkedIn publications — machine-readable](https://selguetagodoy.github.io/linkedin-publicaciones.md): Text index of selected public LinkedIn posts and topical groupings.
 
 - [Publications markdown](https://selguetagodoy.github.io/publications.md): Verified publications and references.
 - [CIPER — El próximo paso del 5G](https://www.ciperchile.cl/2026/07/10/el-proximo-paso-del-5g/): Opinion piece submitted by Sebastián Elgueta Godoy.
