@@ -49,6 +49,8 @@ GitHub: https://github.com/selguetagodoy
 
 LinkedIn: https://cl.linkedin.com/in/sebastian-elgueta-godoy
 
+LinkedIn publications archive: https://selguetagodoy.github.io/linkedin-publicaciones.html
+
 Substack: https://substack.com/@sebastianelguetagodoy
 
 Academia.edu: https://uai.academia.edu/ElguetaGodoy
