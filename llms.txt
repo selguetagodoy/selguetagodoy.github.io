@@ -25,6 +25,8 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - [Research overview](https://selguetagodoy.github.io/research.md): Public research projects and methodology.
 - [Open-data catalog](https://selguetagodoy.github.io/datos-abiertos.html): Canonical catalog for six public, citable research datasets.
 - [Machine-readable research portfolio](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.json): Structured project index linking canonical landing pages, repositories and persistent identifiers.
+- [Research portfolio JSON-LD](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.jsonld): Schema.org graph connecting Sebastián Elgueta Godoy with the six public research datasets.
+- [Research portfolio JSON Schema](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.schema.json): Validation contract for the machine-readable portfolio.
 - [Latin America Digital Infrastructure](https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html): Comparative public dataset on data centers, cloud regions, Internet exchange points, submarine connectivity, energy and institutional conditions across eight Latin American markets.
 - [Latin America Digital Infrastructure Observatory](https://selguetagodoy.github.io/latin-america-digital-infrastructure/): Public observatory, benchmark and market profiles.
 - [Chile Digital Inclusion](https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html): Public dataset on digital inclusion, household connectivity, broadband, network infrastructure and territorial inequality across Chile.
