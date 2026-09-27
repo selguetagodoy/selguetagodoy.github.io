@@ -385,6 +385,70 @@ def check_research_portfolio(failures: list[str]) -> int:
     return len(projects)
 
 
+def check_research_feeds(failures: list[str]) -> tuple[int, int]:
+    portfolio_path = ROOT / "research-portfolio.json"
+    atom_path = ROOT / "research-feed.xml"
+    json_path = ROOT / "research-feed.json"
+
+    if not portfolio_path.exists():
+        failures.append("research-portfolio.json: missing for feed validation")
+        return 0, 0
+
+    try:
+        portfolio = json.loads(portfolio_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        failures.append(f"research-portfolio.json: invalid JSON for feed validation — {exc}")
+        return 0, 0
+
+    expected_ids = {p["version_doi"] for p in portfolio.get("projects", []) if p.get("version_doi")}
+
+    atom_count = 0
+    if not atom_path.exists():
+        failures.append("research-feed.xml: missing")
+    else:
+        try:
+            root = ET.parse(atom_path).getroot()
+            ns = {"a": "http://www.w3.org/2005/Atom"}
+            entries = root.findall("a:entry", ns)
+            atom_count = len(entries)
+            atom_ids = {
+                node.text.strip()
+                for entry in entries
+                for node in [entry.find("a:id", ns)]
+                if node is not None and node.text
+            }
+            if atom_count != 6:
+                failures.append(f"research-feed.xml: expected 6 entries, found {atom_count}")
+            if atom_ids != expected_ids:
+                failures.append(
+                    "research-feed.xml: DOI set differs from research portfolio"
+                )
+        except ET.ParseError as exc:
+            failures.append(f"research-feed.xml: invalid Atom XML — {exc}")
+
+    json_count = 0
+    if not json_path.exists():
+        failures.append("research-feed.json: missing")
+    else:
+        try:
+            feed = json.loads(json_path.read_text(encoding="utf-8"))
+            if feed.get("version") != "https://jsonfeed.org/version/1.1":
+                failures.append("research-feed.json: unexpected JSON Feed version")
+            items = feed.get("items", [])
+            json_count = len(items)
+            json_ids = {item.get("id") for item in items if item.get("id")}
+            if json_count != 6:
+                failures.append(f"research-feed.json: expected 6 items, found {json_count}")
+            if json_ids != expected_ids:
+                failures.append(
+                    "research-feed.json: DOI set differs from research portfolio"
+                )
+        except json.JSONDecodeError as exc:
+            failures.append(f"research-feed.json: invalid JSON — {exc}")
+
+    return atom_count, json_count
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--external", action="store_true", help="Revisar también URLs http(s)")
@@ -412,6 +476,7 @@ def main() -> int:
     jsonld_dataset_count, jsonld_catalog_count = check_research_jsonld(failures)
     citation_dataset_count = check_dataset_citation_metadata(failures)
     portfolio_project_count = check_research_portfolio(failures)
+    atom_entry_count, json_feed_item_count = check_research_feeds(failures)
     external_urls: set[str] = set()
     total_jsonld = 0
     total_links = 0
@@ -494,6 +559,8 @@ def main() -> int:
     print(f"- DataCatalog nodes en research.jsonld: {jsonld_catalog_count}")
     print(f"- fichas de dataset con metadatos de citación validados: {citation_dataset_count}")
     print(f"- proyectos en research-portfolio.json: {portfolio_project_count}")
+    print(f"- entradas en Atom research feed: {atom_entry_count}")
+    print(f"- ítems en JSON research feed: {json_feed_item_count}")
     print(f"- duplicados en sitemap: {duplicate_sitemap_urls}")
     print(f"- fallos locales: {len(failures)}")
     print(f"- advertencias: {len(warnings)}")
