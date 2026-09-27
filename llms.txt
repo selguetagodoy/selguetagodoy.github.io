@@ -36,12 +36,12 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 
 ## Persistent identifiers
 
-- Chile Digital Inclusion: https://doi.org/10.5281/zenodo.22921190
-- Latin America Digital Infrastructure: https://doi.org/10.5281/zenodo.22921174
-- Atlas de la Desconexión Digital de Chile: https://doi.org/10.5281/zenodo.22921208
-- Internet Speeds and Connectivity: https://doi.org/10.5281/zenodo.22921202
-- Chile State Institutional Map: https://doi.org/10.5281/zenodo.22921220
-- Stakeholder Routes Chile: https://doi.org/10.5281/zenodo.22921233
+- Latin America Digital Infrastructure — concept DOI: https://doi.org/10.5281/zenodo.22921174 · version v0.2.0 DOI: https://doi.org/10.5281/zenodo.22921175
+- Chile Digital Inclusion — concept DOI: https://doi.org/10.5281/zenodo.22921190 · version v0.1.0 DOI: https://doi.org/10.5281/zenodo.22921191
+- Atlas de la Desconexión Digital de Chile 2026 — concept DOI: https://doi.org/10.5281/zenodo.22921208 · version v0.1.0 DOI: https://doi.org/10.5281/zenodo.22921209
+- Velocidades de Internet — concept DOI: https://doi.org/10.5281/zenodo.22921202 · version v0.1.0 DOI: https://doi.org/10.5281/zenodo.22921203
+- Chile State Institutional Map — concept DOI: https://doi.org/10.5281/zenodo.22921220 · version v0.1.0 DOI: https://doi.org/10.5281/zenodo.22921221
+- Stakeholder Routes Chile — concept DOI: https://doi.org/10.5281/zenodo.22921233 · current GitHub release v0.3.0 · latest confirmed version-specific DOI: v0.2.0 https://doi.org/10.5281/zenodo.22921234
 
 ## Publications and external evidence
 
