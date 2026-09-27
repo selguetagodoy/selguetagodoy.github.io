@@ -29,9 +29,9 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 - [Open-data catalog](https://selguetagodoy.github.io/datos-abiertos.html): Canonical catalog for six public, citable research datasets.
 - [Open-data catalog JSON](https://selguetagodoy.github.io/datasets.json): Machine-readable public catalog derived from the canonical research portfolio.
 - [Research JSON-LD](https://selguetagodoy.github.io/research.jsonld): Schema.org graph connecting Sebastián Elgueta Godoy, the public DataCatalog and the six datasets.
-- [Machine-readable research portfolio](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.json): Structured project index linking canonical landing pages, repositories and persistent identifiers.
+- [Machine-readable research portfolio](https://selguetagodoy.github.io/research-portfolio.json): Structured project index linking canonical landing pages, repositories and persistent identifiers.
 - [Research portfolio JSON-LD](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.jsonld): Schema.org graph connecting Sebastián Elgueta Godoy with the six public research datasets.
-- [Research portfolio JSON Schema](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.schema.json): Validation contract for the machine-readable portfolio.
+- [Research portfolio JSON Schema](https://selguetagodoy.github.io/research-portfolio.schema.json): Validation contract for the machine-readable portfolio.
 - [Latin America Digital Infrastructure](https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html): Comparative public dataset on data centers, cloud regions, Internet exchange points, submarine connectivity, energy and institutional conditions across eight Latin American markets.
 - [Latin America Digital Infrastructure Observatory](https://selguetagodoy.github.io/latin-america-digital-infrastructure/): Public observatory, benchmark and market profiles.
 - [Chile Digital Inclusion](https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html): Public dataset on digital inclusion, household connectivity, broadband, network infrastructure and territorial inequality across Chile.
