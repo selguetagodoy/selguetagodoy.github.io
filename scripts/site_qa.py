@@ -238,6 +238,15 @@ def check_dataset_citation_metadata(failures: list[str]) -> int:
         actual_title = parser.meta_names.get("citation_title")
         actual_doi = parser.meta_names.get("citation_doi")
         actual_date = parser.meta_names.get("citation_publication_date")
+        page_text = page_path.read_text(encoding="utf-8", errors="replace")
+
+        if "CITA APA 7" not in page_text:
+            failures.append(f"{page_path.name}: missing copy-ready APA citation block")
+        expected_version = (item.get("latest_citable_version") or "").removeprefix("v")
+        if expected_version and f"Version {expected_version}" not in page_text:
+            failures.append(f"{page_path.name}: APA citation version mismatch")
+        if expected_doi and f"https://doi.org/{expected_doi}" not in page_text:
+            failures.append(f"{page_path.name}: APA citation DOI missing")
 
         if actual_title != expected_title:
             failures.append(
