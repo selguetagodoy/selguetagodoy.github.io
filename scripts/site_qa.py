@@ -153,6 +153,56 @@ def check_sitemap_and_robots(failures: list[str], warnings: list[str]) -> tuple[
     return sitemap_count, duplicate_count
 
 
+def check_dataset_catalog(failures: list[str]) -> int:
+    path = ROOT / "datasets.json"
+    if not path.exists():
+        failures.append("datasets.json: missing")
+        return 0
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        failures.append(f"datasets.json: invalid JSON — {exc}")
+        return 0
+
+    datasets = payload.get("datasets", [])
+    if len(datasets) != 6:
+        failures.append(f"datasets.json: expected 6 datasets, found {len(datasets)}")
+
+    ids: set[str] = set()
+    landings: set[str] = set()
+    for item in datasets:
+        dataset_id = item.get("id")
+        landing = item.get("landing")
+        if not dataset_id:
+            failures.append("datasets.json: dataset without id")
+            continue
+        if dataset_id in ids:
+            failures.append(f"datasets.json: duplicate id — {dataset_id}")
+        ids.add(dataset_id)
+
+        if not landing:
+            failures.append(f"datasets.json: {dataset_id} missing landing")
+            continue
+        if landing in landings:
+            failures.append(f"datasets.json: duplicate landing — {landing}")
+        landings.add(landing)
+
+        parsed = urlparse(landing)
+        if parsed.netloc != "selguetagodoy.github.io":
+            failures.append(f"datasets.json: non-canonical landing host — {landing}")
+            continue
+        rel = parsed.path.lstrip("/")
+        target = ROOT / rel
+        if not target.exists():
+            failures.append(f"datasets.json: landing target missing — {landing}")
+
+        for field in ("repository", "concept_doi", "version_doi", "title", "description"):
+            if not item.get(field):
+                failures.append(f"datasets.json: {dataset_id} missing {field}")
+
+    return len(datasets)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--external", action="store_true", help="Revisar también URLs http(s)")
@@ -162,6 +212,7 @@ def main() -> int:
     failures: list[str] = []
     warnings: list[str] = []
     sitemap_count, duplicate_sitemap_urls = check_sitemap_and_robots(failures, warnings)
+    dataset_count = check_dataset_catalog(failures)
     external_urls: set[str] = set()
     total_jsonld = 0
     total_links = 0
@@ -212,6 +263,7 @@ def main() -> int:
     print(f"- enlaces/recursos inspeccionados: {total_links}")
     print(f"- bloques JSON-LD validados: {total_jsonld}")
     print(f"- URLs en sitemap: {sitemap_count}")
+    print(f"- datasets en catálogo JSON: {dataset_count}")
     print(f"- duplicados en sitemap: {duplicate_sitemap_urls}")
     print(f"- fallos locales: {len(failures)}")
     print(f"- advertencias: {len(warnings)}")
