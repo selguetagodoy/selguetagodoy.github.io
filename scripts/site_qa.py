@@ -32,9 +32,21 @@ class PageParser(HTMLParser):
         self.has_description = False
         self.og_images: list[str] = []
         self.meta_names: dict[str, str] = {}
+        self.html_lang: str | None = None
+        self.has_title = False
+        self.h1_count = 0
+        self.images_without_alt: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {k.lower(): v for k, v in attrs if v is not None}
+        if tag == "html":
+            self.html_lang = values.get("lang")
+        if tag == "title":
+            self.has_title = True
+        if tag == "h1":
+            self.h1_count += 1
+        if tag == "img" and "alt" not in values:
+            self.images_without_alt.append(values.get("src", "(sin src)"))
         if tag == "a" and values.get("href"):
             self.links.append(values["href"])
         if tag in {"img", "script", "source"} and values.get("src"):
@@ -315,6 +327,17 @@ def main() -> int:
     for page in html_files:
         parser = PageParser()
         parser.feed(page.read_text(encoding="utf-8", errors="replace"))
+
+        if not parser.html_lang:
+            failures.append(f"{page.name}: falta atributo lang en <html>")
+        if not parser.has_title:
+            failures.append(f"{page.name}: falta <title>")
+        if parser.h1_count != 1:
+            failures.append(f"{page.name}: se esperaba 1 <h1>, encontrados {parser.h1_count}")
+        if parser.images_without_alt:
+            failures.append(
+                f"{page.name}: imágenes sin alt — {parser.images_without_alt}"
+            )
 
         if not parser.has_canonical:
             warnings.append(f"{page.name}: sin canonical")
