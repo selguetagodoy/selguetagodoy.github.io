@@ -23,6 +23,7 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 ## Research and datasets
 
 - [Research overview](https://selguetagodoy.github.io/research.md): Public research projects and methodology.
+- [Research methodology and reproducibility](https://selguetagodoy.github.io/metodologia-reproducibilidad.html): Shared evidence, provenance, versioning, correction and citation standard for the six public research projects.
 - [Open-data catalog](https://selguetagodoy.github.io/datos-abiertos.html): Canonical catalog for six public, citable research datasets.
 - [Open-data catalog JSON](https://selguetagodoy.github.io/datasets.json): Machine-readable public catalog derived from the canonical research portfolio.
 - [Machine-readable research portfolio](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.json): Structured project index linking canonical landing pages, repositories and persistent identifiers.
