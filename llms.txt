@@ -23,9 +23,15 @@ Use **Sebastián Elgueta Godoy** as the canonical name. The unaccented form **Se
 ## Research and datasets
 
 - [Research overview](https://selguetagodoy.github.io/research.md): Public research projects and methodology.
-- [Chile Digital Inclusion](https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html): Public dataset on digital inclusion and connectivity in Chile. Versioned release: https://github.com/selguetagodoy/Chile-Digital-Inclusion/releases/tag/v0.1.0
-- [Latin America Digital Infrastructure](https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html): Comparative public dataset on digital infrastructure in Latin America. Versioned release: https://github.com/selguetagodoy/latin-america-digital-infrastructure/releases/tag/v0.2.0
-- [Latin America Digital Infrastructure Observatory](https://selguetagodoy.github.io/latin-america-digital-infrastructure/): Public observatory.
+- [Open-data catalog](https://selguetagodoy.github.io/datos-abiertos.html): Canonical catalog for six public, citable research datasets.
+- [Machine-readable research portfolio](https://github.com/selguetagodoy/selguetagodoy/blob/main/research-portfolio.json): Structured project index linking canonical landing pages, repositories and persistent identifiers.
+- [Latin America Digital Infrastructure](https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html): Comparative public dataset on data centers, cloud regions, Internet exchange points, submarine connectivity, energy and institutional conditions across eight Latin American markets.
+- [Latin America Digital Infrastructure Observatory](https://selguetagodoy.github.io/latin-america-digital-infrastructure/): Public observatory, benchmark and market profiles.
+- [Chile Digital Inclusion](https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html): Public dataset on digital inclusion, household connectivity, broadband, network infrastructure and territorial inequality across Chile.
+- [Atlas de la Desconexión Digital de Chile 2026](https://selguetagodoy.github.io/atlas-desconexion-digital-chile.html): Territorial research on digital exclusion, fragility and vulnerability in Chile.
+- [Velocidades de Internet — Chile, Colombia y comparadores internacionales](https://selguetagodoy.github.io/dataset-velocidades-internet.html): Reproducible longitudinal Internet-performance dataset preserving Akamai/Ookla methodological breaks.
+- [Chile State Institutional Map](https://selguetagodoy.github.io/dataset-chile-state-institutional-map.html): Machine-readable institutional map of the Chilean State for public affairs and regulatory analysis.
+- [Stakeholder Routes Chile](https://selguetagodoy.github.io/dataset-stakeholder-routes-chile.html): Decision-route dataset linking actors, stages, competences and regulatory outcomes.
 - [GitHub](https://github.com/selguetagodoy): Public repositories and reproducible research.
 
 ## Persistent identifiers
