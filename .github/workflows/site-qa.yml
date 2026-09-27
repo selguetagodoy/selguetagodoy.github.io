@@ -1,0 +1,57 @@
+name: Site QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "*.md"
+      - "assets/**"
+      - "scripts/site_qa.py"
+      - ".github/workflows/site-qa.yml"
+  schedule:
+    - cron: "30 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seg-site-qa
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Validate local site
+        if: github.event_name != 'schedule'
+        run: |
+          set -o pipefail
+          python scripts/site_qa.py | tee site-qa-report.txt
+
+      - name: Validate site and external links
+        if: github.event_name == 'schedule'
+        run: |
+          set -o pipefail
+          python scripts/site_qa.py --external | tee site-qa-report.txt
+
+      - name: Publish summary
+        if: always()
+        run: |
+          echo "## Site QA" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f site-qa-report.txt ]; then
+            cat site-qa-report.txt >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "El chequeo no alcanzó a generar reporte; revisar logs." >> "$GITHUB_STEP_SUMMARY"
+          fi
