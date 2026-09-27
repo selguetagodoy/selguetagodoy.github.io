@@ -2,7 +2,7 @@
 
 Repositorio del sitio público de **Sebastián Elgueta Godoy**, sociólogo y consultor en asuntos públicos, regulación, telecomunicaciones e infraestructura digital en Chile.
 
-🌐 **Sitio oficial:** https://selguetagodoy.github.io/
+🌐 **Sitio oficial:** https://selguetagodoy.github.io/\n\n[![Site QA](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml) [![IndexNow](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml)
 
 ## Áreas y páginas temáticas
 
