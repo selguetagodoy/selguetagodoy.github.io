@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sebastián Elgueta Godoy — Research releases</title>
+  <id>https://selguetagodoy.github.io/research-feed.xml</id>
+  <link rel="self" href="https://selguetagodoy.github.io/research-feed.xml"/>
+  <link rel="alternate" href="https://selguetagodoy.github.io/investigacion.html"/>
+  <updated>2026-09-27T00:00:00Z</updated>
+  <author><name>Sebastián Elgueta Godoy</name><uri>https://selguetagodoy.github.io/</uri></author>
+  <entry>
+    <title>Latin America Digital Infrastructure — v0.2.0</title>
+    <id>https://doi.org/10.5281/zenodo.22921175</id>
+    <link href="https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html"/>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.22921175"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <published>2026-09-23T00:00:00Z</published>
+    <author><name>Sebastián Elgueta Godoy</name><uri>https://selguetagodoy.github.io/</uri></author>
+    <summary>Comparative dataset and observatory on data centers, cloud regions, IXPs, submarine connectivity, energy and institutional conditions across eight Latin American benchmark markets. Current and citable release: v0.2.0.</summary>
+    <category term="data centers"/>
+    <category term="digital infrastructure"/>
+    <category term="Latin America"/>
+    <category term="cloud"/>
+    <category term="IXP"/>
+    <category term="energy"/>
+    <category term="telecommunications"/>
+    <category term="benchmark"/>
+  </entry>
+  <entry>
+    <title>Chile Digital Inclusion — v0.1.0</title>
+    <id>https://doi.org/10.5281/zenodo.22921191</id>
+    <link href="https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html"/>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.22921191"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <published>2026-09-23T00:00:00Z</published>
+    <author><name>Sebastián Elgueta Godoy</name><uri>https://selguetagodoy.github.io/</uri></author>
+    <summary>Communal dataset on digital inclusion, household connectivity, broadband, fixed and mobile infrastructure, education connectivity and observed network performance across Chile. Current and citable release: v0.1.0.</summary>
+    <category term="digital inclusion"/>
+    <category term="digital divide"/>
+    <category term="Chile"/>
+    <category term="broadband"/>
+    <category term="4G"/>
+    <category term="5G"/>
+    <category term="connectivity"/>
+    <category term="territorial analysis"/>
+  </entry>
+  <entry>
+    <title>Atlas de la Desconexión Digital de Chile 2026 — v0.1.0</title>
+    <id>https://doi.org/10.5281/zenodo.22921209</id>
+    <link href="https://selguetagodoy.github.io/atlas-desconexion-digital-chile.html"/>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.22921209"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <published>2026-09-23T00:00:00Z</published>
+    <author><name>Sebastián Elgueta Godoy</name><uri>https://selguetagodoy.github.io/</uri></author>
+    <summary>Territorial research and public dataset on digital exclusion, connectivity, digital fragility and vulnerability in Chile, associated with the Digital Vulnerability Index. Current and citable release: v0.1.0.</summary>
+    <category term="digital divide"/>
+    <category term="digital vulnerability"/>
+    <category term="Chile"/>
+    <category term="territory"/>
+    <category term="connectivity"/>
+    <category term="digital inclusion"/>
+    <category term="IVD"/>
+  </entry>
+  <entry>
+    <title>Velocidades de Internet — Chile, Colombia y comparadores internacionales — v0.1.0</title>
+    <id>https://doi.org/10.5281/zenodo.22921203</id>
+    <link href="https://selguetagodoy.github.io/dataset-velocidades-internet.html"/>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.22921203"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <published>2026-09-23T00:00:00Z</published>
+    <author><name>Sebastián Elgueta Godoy</name><uri>https://selguetagodoy.github.io/</uri></author>
+    <summary>Longitudinal analytical dataset on fixed and mobile Internet speeds from 2008 to 2026, preserving the methodological separation between Akamai and Ookla. Current and citable release: v0.1.0.</summary>
+    <category term="Internet speed"/>
+    <category term="broadband"/>
+    <category term="Ookla"/>
+    <category term="Akamai"/>
+    <category term="Chile"/>
+    <category term="Colombia"/>
+    <category term="network performance"/>
+    <category term="connectivity"/>
+  </entry>
+  <entry>
+    <title>Chile State Institutional Map — v0.1.0</title>
+    <id>https://doi.org/10.5281/zenodo.22921221</id>
+    <link href="https://selguetagodoy.github.io/dataset-chile-state-institutional-map.html"/>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.22921221"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <published>2026-09-23T00:00:00Z</published>
+    <author><name>Sebastián Elgueta Godoy</name><uri>https://selguetagodoy.github.io/</uri></author>
+    <summary>Machine-readable institutional map of the Chilean State for public affairs, public policy, regulatory analysis and stakeholder mapping. Current and citable release: v0.1.0.</summary>
+    <category term="Chile"/>
+    <category term="public affairs"/>
+    <category term="government"/>
+    <category term="regulation"/>
+    <category term="institutional analysis"/>
+    <category term="stakeholder mapping"/>
+    <category term="open data"/>
+  </entry>
+  <entry>
+    <title>Stakeholder Routes Chile — v0.2.0</title>
+    <id>https://doi.org/10.5281/zenodo.22921234</id>
+    <link href="https://selguetagodoy.github.io/dataset-stakeholder-routes-chile.html"/>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.22921234"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <published>2026-09-23T00:00:00Z</published>
+    <author><name>Sebastián Elgueta Godoy</name><uri>https://selguetagodoy.github.io/</uri></author>
+    <summary>Decision-route dataset for public affairs and investment projects in Chile, mapping regulatory pathways by actor, stage, competence, conditionality and decision point. Current GitHub release: v0.3.0; latest citable snapshot: v0.2.0.</summary>
+    <category term="public affairs"/>
+    <category term="stakeholder mapping"/>
+    <category term="Chile"/>
+    <category term="regulation"/>
+    <category term="permitting"/>
+    <category term="investment"/>
+    <category term="decision routes"/>
+  </entry>
+</feed>
