@@ -29,7 +29,8 @@
       "concept_doi": "https://doi.org/10.5281/zenodo.22921174",
       "version_doi": "https://doi.org/10.5281/zenodo.22921175",
       "latest_git_release": "v0.2.0",
-      "latest_citable_version": "v0.2.0"
+      "latest_citable_version": "v0.2.0",
+      "data_package": "https://github.com/selguetagodoy/latin-america-digital-infrastructure/blob/main/datapackage.json"
     },
     {
       "id": "chile-digital-inclusion",
@@ -51,7 +52,8 @@
       "concept_doi": "https://doi.org/10.5281/zenodo.22921190",
       "version_doi": "https://doi.org/10.5281/zenodo.22921191",
       "latest_git_release": "v0.1.0",
-      "latest_citable_version": "v0.1.0"
+      "latest_citable_version": "v0.1.0",
+      "data_package": "https://github.com/selguetagodoy/Chile-Digital-Inclusion/blob/main/datapackage.json"
     },
     {
       "id": "atlas-desconexion-digital-chile",
@@ -72,7 +74,8 @@
       "concept_doi": "https://doi.org/10.5281/zenodo.22921208",
       "version_doi": "https://doi.org/10.5281/zenodo.22921209",
       "latest_git_release": "v0.1.0",
-      "latest_citable_version": "v0.1.0"
+      "latest_citable_version": "v0.1.0",
+      "data_package": "https://github.com/selguetagodoy/atlas-desconexion-digital-chile./blob/main/datapackage.json"
     },
     {
       "id": "internet-speeds",
@@ -94,7 +97,8 @@
       "concept_doi": "https://doi.org/10.5281/zenodo.22921202",
       "version_doi": "https://doi.org/10.5281/zenodo.22921203",
       "latest_git_release": "v0.1.0",
-      "latest_citable_version": "v0.1.0"
+      "latest_citable_version": "v0.1.0",
+      "data_package": "https://github.com/selguetagodoy/Ookla/blob/main/datapackage.json"
     },
     {
       "id": "chile-state-institutional-map",
@@ -115,7 +119,8 @@
       "concept_doi": "https://doi.org/10.5281/zenodo.22921220",
       "version_doi": "https://doi.org/10.5281/zenodo.22921221",
       "latest_git_release": "v0.1.0",
-      "latest_citable_version": "v0.1.0"
+      "latest_citable_version": "v0.1.0",
+      "data_package": "https://github.com/selguetagodoy/chile-state-institutional-map-/blob/main/datapackage.json"
     },
     {
       "id": "stakeholder-routes-chile",
@@ -136,7 +141,8 @@
       "concept_doi": "https://doi.org/10.5281/zenodo.22921233",
       "version_doi": "https://doi.org/10.5281/zenodo.22921234",
       "latest_git_release": "v0.3.0",
-      "latest_citable_version": "v0.2.0"
+      "latest_citable_version": "v0.2.0",
+      "data_package": "https://github.com/selguetagodoy/stakeholder_routes_Chile/blob/main/datapackage.json"
     }
   ]
 }
