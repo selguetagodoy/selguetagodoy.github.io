@@ -163,6 +163,8 @@
     "public_dataset_json": "https://selguetagodoy.github.io/datasets.json",
     "research_jsonld": "https://selguetagodoy.github.io/research.jsonld",
     "methodology": "https://selguetagodoy.github.io/metodologia-reproducibilidad.html",
-    "research_status": "https://selguetagodoy.github.io/estado-investigacion.html"
+    "research_status": "https://selguetagodoy.github.io/estado-investigacion.html",
+    "atom_feed": "https://selguetagodoy.github.io/research-feed.xml",
+    "json_feed": "https://selguetagodoy.github.io/research-feed.json"
   }
 }
