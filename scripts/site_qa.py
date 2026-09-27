@@ -294,6 +294,96 @@ def check_dataset_catalog(failures: list[str]) -> int:
     return len(datasets)
 
 
+def check_research_portfolio(failures: list[str]) -> int:
+    portfolio_path = ROOT / "research-portfolio.json"
+    schema_path = ROOT / "research-portfolio.schema.json"
+    datasets_path = ROOT / "datasets.json"
+
+    for path in (portfolio_path, schema_path, datasets_path):
+        if not path.exists():
+            failures.append(f"{path.name}: missing")
+            return 0
+
+    try:
+        portfolio = json.loads(portfolio_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        failures.append(f"research-portfolio.json: invalid JSON — {exc}")
+        return 0
+
+    try:
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        failures.append(f"research-portfolio.schema.json: invalid JSON — {exc}")
+        return 0
+
+    try:
+        public_catalog = json.loads(datasets_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        failures.append(f"datasets.json: invalid JSON during portfolio comparison — {exc}")
+        return 0
+
+    expected_schema = "https://selguetagodoy.github.io/research-portfolio.schema.json"
+    if portfolio.get("$schema") != expected_schema:
+        failures.append("research-portfolio.json: unexpected $schema")
+    if schema.get("$id") != expected_schema:
+        failures.append("research-portfolio.schema.json: unexpected $id")
+
+    projects = portfolio.get("projects", [])
+    datasets = public_catalog.get("datasets", [])
+    if len(projects) != 6:
+        failures.append(f"research-portfolio.json: expected 6 projects, found {len(projects)}")
+    if len(datasets) != 6:
+        failures.append(f"datasets.json: expected 6 datasets for portfolio comparison, found {len(datasets)}")
+
+    pmap = {p.get("id"): p for p in projects if p.get("id")}
+    dmap = {d.get("id"): d for d in datasets if d.get("id")}
+    if set(pmap) != set(dmap):
+        failures.append(
+            "research-portfolio.json / datasets.json ID mismatch — "
+            f"portfolio_only={sorted(set(pmap)-set(dmap))} "
+            f"datasets_only={sorted(set(dmap)-set(pmap))}"
+        )
+
+    compare_fields = (
+        "title",
+        "scope",
+        "landing",
+        "repository",
+        "concept_doi",
+        "version_doi",
+        "latest_git_release",
+        "latest_citable_version",
+        "data_package",
+        "citable_release_date",
+    )
+    for dataset_id in sorted(set(pmap) & set(dmap)):
+        p = pmap[dataset_id]
+        d = dmap[dataset_id]
+        for field in compare_fields:
+            if p.get(field) != d.get(field):
+                failures.append(
+                    f"{dataset_id}: portfolio/catalog mismatch for {field} — "
+                    f"{p.get(field)!r} != {d.get(field)!r}"
+                )
+
+    interfaces = portfolio.get("interfaces", {})
+    expected_interfaces = {
+        "research_overview",
+        "open_data_catalog",
+        "public_dataset_json",
+        "methodology",
+        "research_status",
+        "research_jsonld",
+    }
+    missing_interfaces = expected_interfaces - set(interfaces)
+    if missing_interfaces:
+        failures.append(
+            f"research-portfolio.json: missing interfaces {sorted(missing_interfaces)}"
+        )
+
+    return len(projects)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--external", action="store_true", help="Revisar también URLs http(s)")
@@ -320,6 +410,7 @@ def main() -> int:
     dataset_count = check_dataset_catalog(failures)
     jsonld_dataset_count, jsonld_catalog_count = check_research_jsonld(failures)
     citation_dataset_count = check_dataset_citation_metadata(failures)
+    portfolio_project_count = check_research_portfolio(failures)
     external_urls: set[str] = set()
     total_jsonld = 0
     total_links = 0
@@ -401,6 +492,7 @@ def main() -> int:
     print(f"- Dataset nodes en research.jsonld: {jsonld_dataset_count}")
     print(f"- DataCatalog nodes en research.jsonld: {jsonld_catalog_count}")
     print(f"- fichas de dataset con metadatos de citación validados: {citation_dataset_count}")
+    print(f"- proyectos en research-portfolio.json: {portfolio_project_count}")
     print(f"- duplicados en sitemap: {duplicate_sitemap_urls}")
     print(f"- fallos locales: {len(failures)}")
     print(f"- advertencias: {len(warnings)}")
