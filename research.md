@@ -3,6 +3,10 @@
 Canonical author: **Sebastián Elgueta Godoy**  
 Official site: https://selguetagodoy.github.io/  
 Open-data catalog: https://selguetagodoy.github.io/datos-abiertos.html  
+Methodology and reproducibility: https://selguetagodoy.github.io/metodologia-reproducibilidad.html  
+Research status: https://selguetagodoy.github.io/estado-investigacion.html  
+Public dataset JSON: https://selguetagodoy.github.io/datasets.json  
+Research JSON-LD: https://selguetagodoy.github.io/research.jsonld  
 GitHub: https://github.com/selguetagodoy
 
 ## Latin America Digital Infrastructure
