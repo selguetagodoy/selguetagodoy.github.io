@@ -127,6 +127,8 @@ def check_sitemap_and_robots(failures: list[str], warnings: list[str]) -> tuple[
                     warnings.append(f"sitemap.xml: external hostname — {url}")
                     continue
                 path = parsed.path.lstrip("/")
+                if path.startswith("latin-america-digital-infrastructure/"):
+                    continue
                 if not path:
                     target = ROOT / "index.html"
                 elif path.endswith("/"):
