@@ -153,6 +153,27 @@ def check_sitemap_and_robots(failures: list[str], warnings: list[str]) -> tuple[
     return sitemap_count, duplicate_count
 
 
+def check_research_jsonld(failures: list[str]) -> tuple[int, int]:
+    path = ROOT / "research.jsonld"
+    if not path.exists():
+        failures.append("research.jsonld: missing")
+        return 0, 0
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        failures.append(f"research.jsonld: invalid JSON — {exc}")
+        return 0, 0
+
+    graph = payload.get("@graph", [])
+    datasets = [node for node in graph if node.get("@type") == "Dataset"]
+    catalogs = [node for node in graph if node.get("@type") == "DataCatalog"]
+    if len(datasets) != 6:
+        failures.append(f"research.jsonld: expected 6 Dataset nodes, found {len(datasets)}")
+    if len(catalogs) != 1:
+        failures.append(f"research.jsonld: expected 1 DataCatalog node, found {len(catalogs)}")
+    return len(datasets), len(catalogs)
+
+
 def check_dataset_catalog(failures: list[str]) -> int:
     path = ROOT / "datasets.json"
     if not path.exists():
@@ -213,6 +234,7 @@ def main() -> int:
     warnings: list[str] = []
     sitemap_count, duplicate_sitemap_urls = check_sitemap_and_robots(failures, warnings)
     dataset_count = check_dataset_catalog(failures)
+    jsonld_dataset_count, jsonld_catalog_count = check_research_jsonld(failures)
     external_urls: set[str] = set()
     total_jsonld = 0
     total_links = 0
@@ -264,6 +286,8 @@ def main() -> int:
     print(f"- bloques JSON-LD validados: {total_jsonld}")
     print(f"- URLs en sitemap: {sitemap_count}")
     print(f"- datasets en catálogo JSON: {dataset_count}")
+    print(f"- Dataset nodes en research.jsonld: {jsonld_dataset_count}")
+    print(f"- DataCatalog nodes en research.jsonld: {jsonld_catalog_count}")
     print(f"- duplicados en sitemap: {duplicate_sitemap_urls}")
     print(f"- fallos locales: {len(failures)}")
     print(f"- advertencias: {len(warnings)}")
