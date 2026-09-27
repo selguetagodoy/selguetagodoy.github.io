@@ -31,6 +31,7 @@ class PageParser(HTMLParser):
         self.canonical_url: str | None = None
         self.has_description = False
         self.og_images: list[str] = []
+        self.meta_names: dict[str, str] = {}
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {k.lower(): v for k, v in attrs if v is not None}
@@ -43,6 +44,8 @@ class PageParser(HTMLParser):
             if values.get("rel") == "canonical":
                 self.has_canonical = True
                 self.canonical_url = values.get("href")
+        if tag == "meta" and values.get("name") and values.get("content"):
+            self.meta_names[values["name"]] = values["content"]
         if tag == "meta" and values.get("name") == "description":
             self.has_description = True
         if tag == "meta" and values.get("property") == "og:image" and values.get("content"):
@@ -179,6 +182,56 @@ def check_research_jsonld(failures: list[str]) -> tuple[int, int]:
     return len(datasets), len(catalogs)
 
 
+def check_dataset_citation_metadata(failures: list[str]) -> int:
+    path = ROOT / "datasets.json"
+    if not path.exists():
+        return 0
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return 0
+
+    checked = 0
+    for item in payload.get("datasets", []):
+        landing = item.get("landing")
+        if not landing:
+            continue
+        parsed = urlparse(landing)
+        if parsed.netloc != "selguetagodoy.github.io":
+            continue
+        page_path = ROOT / parsed.path.lstrip("/")
+        if not page_path.exists():
+            continue
+
+        parser = PageParser()
+        parser.feed(page_path.read_text(encoding="utf-8", errors="replace"))
+        expected_doi = (item.get("version_doi") or "").removeprefix("https://doi.org/")
+        expected_title = item.get("title")
+        expected_date = item.get("citable_release_date")
+
+        actual_title = parser.meta_names.get("citation_title")
+        actual_doi = parser.meta_names.get("citation_doi")
+        actual_date = parser.meta_names.get("citation_publication_date")
+
+        if actual_title != expected_title:
+            failures.append(
+                f"{page_path.name}: citation_title mismatch — "
+                f"{actual_title!r} != {expected_title!r}"
+            )
+        if actual_doi != expected_doi:
+            failures.append(
+                f"{page_path.name}: citation_doi mismatch — "
+                f"{actual_doi!r} != {expected_doi!r}"
+            )
+        if actual_date != expected_date:
+            failures.append(
+                f"{page_path.name}: citation_publication_date mismatch — "
+                f"{actual_date!r} != {expected_date!r}"
+            )
+        checked += 1
+    return checked
+
+
 def check_dataset_catalog(failures: list[str]) -> int:
     path = ROOT / "datasets.json"
     if not path.exists():
@@ -222,7 +275,7 @@ def check_dataset_catalog(failures: list[str]) -> int:
         if not target.exists():
             failures.append(f"datasets.json: landing target missing — {landing}")
 
-        for field in ("repository", "concept_doi", "version_doi", "title", "description", "data_package"):
+        for field in ("repository", "concept_doi", "version_doi", "title", "description", "data_package", "latest_citable_version", "citable_release_date"):
             if not item.get(field):
                 failures.append(f"datasets.json: {dataset_id} missing {field}")
 
@@ -254,6 +307,7 @@ def main() -> int:
     sitemap_count, duplicate_sitemap_urls = check_sitemap_and_robots(failures, warnings)
     dataset_count = check_dataset_catalog(failures)
     jsonld_dataset_count, jsonld_catalog_count = check_research_jsonld(failures)
+    citation_dataset_count = check_dataset_citation_metadata(failures)
     external_urls: set[str] = set()
     total_jsonld = 0
     total_links = 0
@@ -323,6 +377,7 @@ def main() -> int:
     print(f"- datasets en catálogo JSON: {dataset_count}")
     print(f"- Dataset nodes en research.jsonld: {jsonld_dataset_count}")
     print(f"- DataCatalog nodes en research.jsonld: {jsonld_catalog_count}")
+    print(f"- fichas de dataset con metadatos de citación validados: {citation_dataset_count}")
     print(f"- duplicados en sitemap: {duplicate_sitemap_urls}")
     print(f"- fallos locales: {len(failures)}")
     print(f"- advertencias: {len(warnings)}")
