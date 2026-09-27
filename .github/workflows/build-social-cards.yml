@@ -16,6 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Render every current SVG source in assets/social.
   render:
     runs-on: ubuntu-latest
     timeout-minutes: 10
