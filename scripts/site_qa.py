@@ -196,7 +196,7 @@ def check_dataset_catalog(failures: list[str]) -> int:
         if not target.exists():
             failures.append(f"datasets.json: landing target missing — {landing}")
 
-        for field in ("repository", "concept_doi", "version_doi", "title", "description"):
+        for field in ("repository", "concept_doi", "version_doi", "title", "description", "data_package"):
             if not item.get(field):
                 failures.append(f"datasets.json: {dataset_id} missing {field}")
 
