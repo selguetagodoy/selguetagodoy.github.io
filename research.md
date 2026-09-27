@@ -2,6 +2,7 @@
 
 Canonical author: **Sebastián Elgueta Godoy**  
 Official site: https://selguetagodoy.github.io/  
+Human research overview: https://selguetagodoy.github.io/investigacion.html  
 Open-data catalog: https://selguetagodoy.github.io/datos-abiertos.html  
 Methodology and reproducibility: https://selguetagodoy.github.io/metodologia-reproducibilidad.html  
 Research status: https://selguetagodoy.github.io/estado-investigacion.html  
