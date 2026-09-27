@@ -1,5 +1,40 @@
 # Publications and external references — Sebastián Elgueta Godoy
 
+## Citable research datasets
+
+These are public research outputs and datasets, distinct from journalistic or opinion publications.
+
+### Latin America Digital Infrastructure
+- Landing: https://selguetagodoy.github.io/dataset-latin-america-digital-infrastructure.html
+- Version DOI: https://doi.org/10.5281/zenodo.22921175
+- Concept DOI: https://doi.org/10.5281/zenodo.22921174
+
+### Chile Digital Inclusion
+- Landing: https://selguetagodoy.github.io/dataset-chile-digital-inclusion.html
+- Version DOI: https://doi.org/10.5281/zenodo.22921191
+- Concept DOI: https://doi.org/10.5281/zenodo.22921190
+
+### Atlas de la Desconexión Digital de Chile 2026
+- Landing: https://selguetagodoy.github.io/atlas-desconexion-digital-chile.html
+- Version DOI: https://doi.org/10.5281/zenodo.22921209
+- Concept DOI: https://doi.org/10.5281/zenodo.22921208
+
+### Velocidades de Internet — Chile, Colombia y comparadores internacionales
+- Landing: https://selguetagodoy.github.io/dataset-velocidades-internet.html
+- Version DOI: https://doi.org/10.5281/zenodo.22921203
+- Concept DOI: https://doi.org/10.5281/zenodo.22921202
+
+### Chile State Institutional Map
+- Landing: https://selguetagodoy.github.io/dataset-chile-state-institutional-map.html
+- Version DOI: https://doi.org/10.5281/zenodo.22921221
+- Concept DOI: https://doi.org/10.5281/zenodo.22921220
+
+### Stakeholder Routes Chile
+- Landing: https://selguetagodoy.github.io/dataset-stakeholder-routes-chile.html
+- Current GitHub release: v0.3.0
+- Latest confirmed version-specific DOI: v0.2.0 — https://doi.org/10.5281/zenodo.22921234
+- Concept DOI: https://doi.org/10.5281/zenodo.22921233
+
 ## LinkedIn publications
 
 Public LinkedIn analyses by Sebastián Elgueta Godoy are indexed at:
