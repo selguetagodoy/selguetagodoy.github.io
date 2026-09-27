@@ -79,6 +79,14 @@ Research index: https://selguetagodoy.github.io/research.md
 
 Open-data catalog: https://selguetagodoy.github.io/datos-abiertos.html
 
+Methodology and reproducibility: https://selguetagodoy.github.io/metodologia-reproducibilidad.html
+
+Research status: https://selguetagodoy.github.io/estado-investigacion.html
+
+Public dataset JSON: https://selguetagodoy.github.io/datasets.json
+
+Research JSON-LD: https://selguetagodoy.github.io/research.jsonld
+
 GitHub: https://github.com/selguetagodoy
 
 LinkedIn: https://cl.linkedin.com/in/sebastian-elgueta-godoy
