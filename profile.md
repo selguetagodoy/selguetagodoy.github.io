@@ -75,6 +75,8 @@ Historical publication variant: **Sebastián Godoy Elgueta** (also **Sebastian G
 
 Official website: https://selguetagodoy.github.io/
 
+Human research overview: https://selguetagodoy.github.io/investigacion.html
+
 Research index: https://selguetagodoy.github.io/research.md
 
 Open-data catalog: https://selguetagodoy.github.io/datos-abiertos.html
