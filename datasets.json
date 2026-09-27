@@ -31,7 +31,8 @@
       "latest_git_release": "v0.2.0",
       "latest_citable_version": "v0.2.0",
       "data_package": "https://github.com/selguetagodoy/latin-america-digital-infrastructure/blob/main/datapackage.json",
-      "citable_release_date": "2026-09-23"
+      "citable_release_date": "2026-09-23",
+      "ro_crate": "https://raw.githubusercontent.com/selguetagodoy/latin-america-digital-infrastructure/main/ro-crate-metadata.json"
     },
     {
       "id": "chile-digital-inclusion",
@@ -55,7 +56,8 @@
       "latest_git_release": "v0.1.0",
       "latest_citable_version": "v0.1.0",
       "data_package": "https://github.com/selguetagodoy/Chile-Digital-Inclusion/blob/main/datapackage.json",
-      "citable_release_date": "2026-09-23"
+      "citable_release_date": "2026-09-23",
+      "ro_crate": "https://raw.githubusercontent.com/selguetagodoy/Chile-Digital-Inclusion/main/ro-crate-metadata.json"
     },
     {
       "id": "atlas-desconexion-digital-chile",
@@ -78,7 +80,8 @@
       "latest_git_release": "v0.1.0",
       "latest_citable_version": "v0.1.0",
       "data_package": "https://github.com/selguetagodoy/atlas-desconexion-digital-chile./blob/main/datapackage.json",
-      "citable_release_date": "2026-09-23"
+      "citable_release_date": "2026-09-23",
+      "ro_crate": "https://raw.githubusercontent.com/selguetagodoy/atlas-desconexion-digital-chile./main/ro-crate-metadata.json"
     },
     {
       "id": "internet-speeds",
@@ -102,7 +105,8 @@
       "latest_git_release": "v0.1.0",
       "latest_citable_version": "v0.1.0",
       "data_package": "https://github.com/selguetagodoy/Ookla/blob/main/datapackage.json",
-      "citable_release_date": "2026-09-23"
+      "citable_release_date": "2026-09-23",
+      "ro_crate": "https://raw.githubusercontent.com/selguetagodoy/Ookla/main/ro-crate-metadata.json"
     },
     {
       "id": "chile-state-institutional-map",
@@ -125,7 +129,8 @@
       "latest_git_release": "v0.1.0",
       "latest_citable_version": "v0.1.0",
       "data_package": "https://github.com/selguetagodoy/chile-state-institutional-map-/blob/main/datapackage.json",
-      "citable_release_date": "2026-09-23"
+      "citable_release_date": "2026-09-23",
+      "ro_crate": "https://raw.githubusercontent.com/selguetagodoy/chile-state-institutional-map-/main/ro-crate-metadata.json"
     },
     {
       "id": "stakeholder-routes-chile",
@@ -148,7 +153,8 @@
       "latest_git_release": "v0.3.0",
       "latest_citable_version": "v0.2.0",
       "data_package": "https://github.com/selguetagodoy/stakeholder_routes_Chile/blob/main/datapackage.json",
-      "citable_release_date": "2026-09-23"
+      "citable_release_date": "2026-09-23",
+      "ro_crate": "https://raw.githubusercontent.com/selguetagodoy/stakeholder_routes_Chile/main/ro-crate-metadata.json"
     }
   ],
   "interfaces": {
