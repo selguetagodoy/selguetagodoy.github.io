@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
 from pathlib import Path
@@ -99,6 +100,57 @@ def check_external(url: str) -> tuple[str, str]:
         return "WARN", str(exc)
 
 
+def check_sitemap_and_robots(failures: list[str], warnings: list[str]) -> tuple[int, int]:
+    sitemap = ROOT / "sitemap.xml"
+    robots = ROOT / "robots.txt"
+    sitemap_count = 0
+    duplicate_count = 0
+
+    if not sitemap.exists():
+        failures.append("sitemap.xml: missing")
+    else:
+        try:
+            tree = ET.parse(sitemap)
+            root = tree.getroot()
+            ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+            locs = [node.text.strip() for node in root.findall(".//sm:loc", ns) if node.text]
+            sitemap_count = len(locs)
+            seen: set[str] = set()
+            for url in locs:
+                if url in seen:
+                    duplicate_count += 1
+                    failures.append(f"sitemap.xml: duplicate URL — {url}")
+                    continue
+                seen.add(url)
+                parsed = urlparse(url)
+                if parsed.netloc != "selguetagodoy.github.io":
+                    warnings.append(f"sitemap.xml: external hostname — {url}")
+                    continue
+                path = parsed.path.lstrip("/")
+                if not path:
+                    target = ROOT / "index.html"
+                elif path.endswith("/"):
+                    if path.startswith("latin-america-digital-infrastructure/"):
+                        continue
+                    target = ROOT / path / "index.html"
+                else:
+                    target = ROOT / path
+                if not target.exists():
+                    failures.append(f"sitemap.xml: target missing — {url}")
+        except ET.ParseError as exc:
+            failures.append(f"sitemap.xml: invalid XML — {exc}")
+
+    if not robots.exists():
+        failures.append("robots.txt: missing")
+    else:
+        text = robots.read_text(encoding="utf-8", errors="replace")
+        expected = "Sitemap: https://selguetagodoy.github.io/sitemap.xml"
+        if expected not in text:
+            failures.append("robots.txt: canonical sitemap declaration missing")
+
+    return sitemap_count, duplicate_count
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--external", action="store_true", help="Revisar también URLs http(s)")
@@ -107,6 +159,7 @@ def main() -> int:
     html_files = sorted(ROOT.glob("*.html"))
     failures: list[str] = []
     warnings: list[str] = []
+    sitemap_count, duplicate_sitemap_urls = check_sitemap_and_robots(failures, warnings)
     external_urls: set[str] = set()
     total_jsonld = 0
     total_links = 0
@@ -156,6 +209,8 @@ def main() -> int:
     print(f"- HTML revisados: {len(html_files)}")
     print(f"- enlaces/recursos inspeccionados: {total_links}")
     print(f"- bloques JSON-LD validados: {total_jsonld}")
+    print(f"- URLs en sitemap: {sitemap_count}")
+    print(f"- duplicados en sitemap: {duplicate_sitemap_urls}")
     print(f"- fallos locales: {len(failures)}")
     print(f"- advertencias: {len(warnings)}")
 
