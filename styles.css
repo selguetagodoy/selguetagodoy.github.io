@@ -199,3 +199,17 @@
  .premium-graphic-panel{min-height:390px;padding:27px}.graphic-title{font-size:2.15rem}.infra-matrix{grid-template-columns:1fr 1fr}
  .premium-page .section{padding:50px 0}.premium-page .card{padding:24px}.premium-page .quote{font-size:2rem}
 }
+
+
+/* Premium secondary pages — 2026-09-27 */
+.premium-publications .section:nth-child(even),
+.premium-projects .section:nth-child(even),
+.premium-contact .section:nth-child(even){background:rgba(243,241,236,.54)}
+.premium-publications .grid.two .card{min-height:250px}
+.premium-publications .grid.two .card h3{font-size:1.35rem}
+.premium-projects .grid.two .card{min-height:220px}
+.premium-projects .grid.two .card h3{font-size:1.5rem}
+.premium-contact .grid.two .card{min-height:210px}
+.premium-contact .grid.two .card h3{font-size:1.7rem}
+.premium-contact-photo img{object-position:center 20%}
+.premium-contact .note{max-width:920px}
