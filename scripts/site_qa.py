@@ -28,7 +28,9 @@ class PageParser(HTMLParser):
         self._in_jsonld = False
         self._buffer: list[str] = []
         self.has_canonical = False
+        self.canonical_url: str | None = None
         self.has_description = False
+        self.og_images: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {k.lower(): v for k, v in attrs if v is not None}
@@ -40,8 +42,11 @@ class PageParser(HTMLParser):
             self.links.append(values["href"])
             if values.get("rel") == "canonical":
                 self.has_canonical = True
+                self.canonical_url = values.get("href")
         if tag == "meta" and values.get("name") == "description":
             self.has_description = True
+        if tag == "meta" and values.get("property") == "og:image" and values.get("content"):
+            self.og_images.append(values["content"])
         if tag == "script" and values.get("type") == "application/ld+json":
             self._in_jsonld = True
             self._buffer = []
@@ -232,6 +237,20 @@ def main() -> int:
     html_files = sorted(ROOT.glob("*.html"))
     failures: list[str] = []
     warnings: list[str] = []
+    sitemap_locs: set[str] = set()
+    sitemap_path = ROOT / "sitemap.xml"
+    if sitemap_path.exists():
+        try:
+            sitemap_tree = ET.parse(sitemap_path)
+            sitemap_root = sitemap_tree.getroot()
+            sitemap_ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+            sitemap_locs = {
+                node.text.strip()
+                for node in sitemap_root.findall(".//sm:loc", sitemap_ns)
+                if node.text
+            }
+        except ET.ParseError:
+            pass
     sitemap_count, duplicate_sitemap_urls = check_sitemap_and_robots(failures, warnings)
     dataset_count = check_dataset_catalog(failures)
     jsonld_dataset_count, jsonld_catalog_count = check_research_jsonld(failures)
@@ -245,8 +264,24 @@ def main() -> int:
 
         if not parser.has_canonical:
             warnings.append(f"{page.name}: sin canonical")
+        elif parser.canonical_url and parser.canonical_url not in sitemap_locs:
+            failures.append(
+                f"{page.name}: canonical no está en sitemap — {parser.canonical_url}"
+            )
         if not parser.has_description:
             warnings.append(f"{page.name}: sin meta description")
+
+        if not parser.og_images:
+            warnings.append(f"{page.name}: sin og:image")
+        for og_image in parser.og_images:
+            parsed_og = urlparse(og_image)
+            if parsed_og.netloc == "selguetagodoy.github.io":
+                og_path = unquote(parsed_og.path).lstrip("/")
+                og_target = ROOT / og_path
+                if not og_target.exists():
+                    failures.append(
+                        f"{page.name}: og:image local inexistente — {og_image}"
+                    )
 
         for block in parser.jsonld:
             total_jsonld += 1
