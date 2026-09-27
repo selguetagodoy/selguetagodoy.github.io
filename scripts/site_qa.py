@@ -287,7 +287,7 @@ def check_dataset_catalog(failures: list[str]) -> int:
         if not target.exists():
             failures.append(f"datasets.json: landing target missing — {landing}")
 
-        for field in ("repository", "concept_doi", "version_doi", "title", "description", "data_package", "latest_citable_version", "citable_release_date"):
+        for field in ("repository", "concept_doi", "version_doi", "title", "description", "data_package", "ro_crate", "latest_citable_version", "citable_release_date"):
             if not item.get(field):
                 failures.append(f"datasets.json: {dataset_id} missing {field}")
 
@@ -354,6 +354,7 @@ def check_research_portfolio(failures: list[str]) -> int:
         "latest_git_release",
         "latest_citable_version",
         "data_package",
+        "ro_crate",
         "citable_release_date",
     )
     for dataset_id in sorted(set(pmap) & set(dmap)):
