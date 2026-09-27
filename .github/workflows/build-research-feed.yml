@@ -1,0 +1,44 @@
+name: Build Research Feeds
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "research-portfolio.json"
+      - "scripts/build_research_feed.py"
+      - ".github/workflows/build-research-feed.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-research-feeds
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Render feeds
+        run: python scripts/build_research_feed.py
+      - name: Commit feeds
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research-feed.xml research-feed.json
+          if git diff --cached --quiet; then
+            echo "No feed changes."
+            exit 0
+          fi
+          git commit -m "Render research release feeds"
+          git pull --rebase origin main
+          git push origin HEAD:main
