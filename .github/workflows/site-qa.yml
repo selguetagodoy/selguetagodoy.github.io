@@ -10,6 +10,7 @@ on:
       - "robots.txt"
       - "llms.txt"
       - "datasets.json"
+      - "research.jsonld"
       - "assets/**"
       - "scripts/site_qa.py"
       - ".github/workflows/site-qa.yml"
