@@ -9,6 +9,7 @@ on:
       - "sitemap.xml"
       - "robots.txt"
       - "llms.txt"
+      - "datasets.json"
       - "assets/**"
       - "scripts/site_qa.py"
       - ".github/workflows/site-qa.yml"
