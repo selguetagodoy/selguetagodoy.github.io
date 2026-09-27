@@ -36,6 +36,9 @@ class PageParser(HTMLParser):
         self.has_title = False
         self.h1_count = 0
         self.images_without_alt: list[str] = []
+        self.describedby_links: list[dict[str, str]] = []
+        self.related_links: list[str] = []
+        self.type_links: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {k.lower(): v for k, v in attrs if v is not None}
@@ -53,6 +56,17 @@ class PageParser(HTMLParser):
             self.links.append(values["src"])
         if tag == "link" and values.get("href"):
             self.links.append(values["href"])
+            rel_tokens = set((values.get("rel") or "").split())
+            if "describedby" in rel_tokens:
+                self.describedby_links.append({
+                    "href": values["href"],
+                    "type": values.get("type", ""),
+                    "profile": values.get("profile", ""),
+                })
+            if "related" in rel_tokens:
+                self.related_links.append(values["href"])
+            if "type" in rel_tokens:
+                self.type_links.append(values["href"])
             if values.get("rel") == "canonical":
                 self.has_canonical = True
                 self.canonical_url = values.get("href")
@@ -449,6 +463,74 @@ def check_research_feeds(failures: list[str]) -> tuple[int, int]:
     return atom_count, json_count
 
 
+def check_dataset_discovery_links(failures: list[str]) -> int:
+    path = ROOT / "datasets.json"
+    if not path.exists():
+        failures.append("datasets.json: missing for metadata discovery validation")
+        return 0
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        failures.append(f"datasets.json: invalid JSON for metadata discovery validation — {exc}")
+        return 0
+
+    checked = 0
+    for item in payload.get("datasets", []):
+        landing = item.get("landing")
+        repository = item.get("repository")
+        version_doi = item.get("version_doi")
+        if not landing or not repository or not version_doi:
+            continue
+        parsed = urlparse(landing)
+        page_path = ROOT / parsed.path.lstrip("/")
+        if not page_path.exists():
+            continue
+
+        parser = PageParser()
+        parser.feed(page_path.read_text(encoding="utf-8", errors="replace"))
+        raw_base = repository.replace(
+            "https://github.com/", "https://raw.githubusercontent.com/"
+        ).rstrip("/") + "/main"
+
+        expected = {
+            f"{raw_base}/CITATION.cff",
+            f"{raw_base}/CITATION.bib",
+            f"{raw_base}/codemeta.json",
+            f"{raw_base}/datapackage.json",
+            f"{raw_base}/ro-crate-metadata.json",
+        }
+        actual = {link["href"] for link in parser.describedby_links}
+        missing = expected - actual
+        if missing:
+            failures.append(
+                f"{page_path.name}: missing describedby metadata links — {sorted(missing)}"
+            )
+
+        crate = next(
+            (
+                link
+                for link in parser.describedby_links
+                if link["href"].endswith("/ro-crate-metadata.json")
+            ),
+            None,
+        )
+        if not crate or crate.get("profile") != "https://w3id.org/ro/crate/1.2":
+            failures.append(
+                f"{page_path.name}: RO-Crate describedby profile missing or incorrect"
+            )
+
+        if version_doi not in parser.related_links:
+            failures.append(
+                f"{page_path.name}: version DOI missing as related scholarly identifier"
+            )
+        if "https://schema.org/Dataset" not in parser.type_links:
+            failures.append(
+                f"{page_path.name}: Dataset type discovery link missing"
+            )
+        checked += 1
+    return checked
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--external", action="store_true", help="Revisar también URLs http(s)")
@@ -477,6 +559,7 @@ def main() -> int:
     citation_dataset_count = check_dataset_citation_metadata(failures)
     portfolio_project_count = check_research_portfolio(failures)
     atom_entry_count, json_feed_item_count = check_research_feeds(failures)
+    discovery_dataset_count = check_dataset_discovery_links(failures)
     external_urls: set[str] = set()
     total_jsonld = 0
     total_links = 0
@@ -561,6 +644,7 @@ def main() -> int:
     print(f"- proyectos en research-portfolio.json: {portfolio_project_count}")
     print(f"- entradas en Atom research feed: {atom_entry_count}")
     print(f"- ítems en JSON research feed: {json_feed_item_count}")
+    print(f"- fichas con metadata discovery links validados: {discovery_dataset_count}")
     print(f"- duplicados en sitemap: {duplicate_sitemap_urls}")
     print(f"- fallos locales: {len(failures)}")
     print(f"- advertencias: {len(warnings)}")
