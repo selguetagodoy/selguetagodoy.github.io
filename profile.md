@@ -2,7 +2,7 @@
 
 Sebastián Elgueta Godoy is a Chilean sociologist, public-affairs consultant and applied researcher based in Santiago, Chile.
 
-His work sits at the intersection of **public policy, regulation, infrastructure, investment, data and territory**. His principal areas include public affairs, telecommunications, digital infrastructure, data centers, connectivity, digital inclusion, regulatory analysis and territorial development in Chile and Latin America.
+His work connects **public affairs, regulated markets, public policy, institutional analysis and applied research**. His areas of sectoral analysis include healthcare, energy, tourism, technology and infrastructure in Chile and Latin America. His publicly available research also covers telecommunications, data centers, connectivity and territorial development.
 
 He has more than 13 years of professional experience across the public sector, legislative advisory work, strategic consulting and applied research.
 
@@ -100,8 +100,6 @@ Substack: https://substack.com/@sebastianelguetagodoy
 Academia.edu: https://uai.academia.edu/ElguetaGodoy
 
 ResearchGate: https://www.researchgate.net/profile/Sebastian-Elgueta-Godoy
-
-Institutional profile: https://www.coordenadaspublicas.cl/nosotros/
 
 Historical author archive — El Quinto Poder: https://elquintopoder.cl/perfil-de-usuario/?user=9439
 
