@@ -1,12 +1,14 @@
 # Sebastián Elgueta Godoy — sitio oficial
 
-Repositorio del sitio público de **Sebastián Elgueta Godoy**, sociólogo y consultor en asuntos públicos, regulación, telecomunicaciones e infraestructura digital en Chile.
+Repositorio del sitio público de **Sebastián Elgueta Godoy**, sociólogo y consultor en asuntos públicos, análisis regulatorio e investigación aplicada sobre mercados regulados y políticas públicas en Chile y América Latina. Sectores de análisis: salud, energía, turismo, tecnología e infraestructura.
 
 🌐 **Sitio oficial:** https://selguetagodoy.github.io/\n\n[![Site QA](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml) [![IndexNow](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml)
 
 ## Áreas y páginas temáticas
 
 - [Asuntos públicos y análisis regulatorio en Chile](https://selguetagodoy.github.io/asuntos-publicos.html)
+- [Mercados regulados: salud, energía, turismo y tecnología](https://selguetagodoy.github.io/mercados-regulados.html)
+- [Políticas públicas](https://selguetagodoy.github.io/politicas-publicas.html)
 - [Data centers e infraestructura digital en Chile](https://selguetagodoy.github.io/infraestructura-digital.html)
 - [Telecomunicaciones en Chile](https://selguetagodoy.github.io/telecomunicaciones.html)
 - [Inclusión digital en Chile](https://selguetagodoy.github.io/inclusion-digital.html)
