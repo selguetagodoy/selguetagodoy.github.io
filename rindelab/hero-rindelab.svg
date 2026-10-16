@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="Ilustración de movilidad urbana en Chile con vehículos y cordillera de los Andes">
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#123a59"/><stop offset=".5" stop-color="#355b76"/><stop offset="1" stop-color="#94b0bd"/></linearGradient>
+<linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#d2e0e8"/><stop offset=".48" stop-color="#819daf"/><stop offset="1" stop-color="#3d6680"/></linearGradient>
+<linearGradient id="road" x2="0" y2="1"><stop stop-color="#405f72"/><stop offset="1" stop-color="#0e263d"/></linearGradient>
+<linearGradient id="sedan" x2="0" y2="1"><stop stop-color="#edf8fa"/><stop offset=".4" stop-color="#b0cbd6"/><stop offset="1" stop-color="#47697d"/></linearGradient>
+<linearGradient id="suv" x2="0" y2="1"><stop stop-color="#35cfc5"/><stop offset=".45" stop-color="#138b9a"/><stop offset="1" stop-color="#0a536c"/></linearGradient>
+<linearGradient id="truck" x2="0" y2="1"><stop stop-color="#cbd9e5"/><stop offset=".5" stop-color="#758da1"/><stop offset="1" stop-color="#345368"/></linearGradient>
+<radialGradient id="sun"><stop stop-color="#f2dbb7" stop-opacity=".68"/><stop offset="1" stop-color="#e9c89a" stop-opacity="0"/></radialGradient>
+<filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="sh"><feDropShadow dx="0" dy="18" stdDeviation="15" flood-color="#092238" flood-opacity=".48"/></filter>
+</defs>
+<rect width="1280" height="640" fill="url(#sky)"/>
+<circle cx="945" cy="125" r="215" fill="url(#sun)"/>
+<path d="M0 338L73 285 146 314 255 210 311 246 414 160 489 204 605 95 704 184 791 115 883 205 967 144 1066 249 1166 176 1280 286V470H0Z" fill="url(#mountain)" opacity=".94"/>
+<path d="M255 210L312 245 292 235 279 230Z M414 160L488 205 465 191 446 194Z M605 95L704 184 661 157 646 164 627 141Z M791 115L883 205 838 175 819 178Z M967 144L1066 249 1014 205 996 203Z" fill="#e4edf1" opacity=".92"/>
+<path d="M0 395L171 328 312 365 430 278 604 342 728 263 916 332 1080 267 1280 348V490H0Z" fill="#416c83" opacity=".68"/>
+<g fill="#214661" opacity=".83">
+<rect x="75" y="328" width="29" height="134"/><rect x="112" y="354" width="21" height="109"/><rect x="138" y="339" width="40" height="123"/><rect x="188" y="320" width="22" height="143"/><rect x="218" y="347" width="39" height="119"/><rect x="265" y="306" width="30" height="159"/>
+<rect x="310" y="339" width="39" height="130"/><rect x="357" y="298" width="30" height="168"/><rect x="394" y="326" width="39" height="142"/><rect x="443" y="289" width="24" height="178"/><rect x="476" y="314" width="43" height="156"/><rect x="531" y="344" width="29" height="126"/><rect x="575" y="277" width="37" height="191"/><rect x="620" y="301" width="26" height="165"/><rect x="660" y="337" width="42" height="132"/><rect x="712" y="308" width="35" height="159"/>
+<rect x="753" y="319" width="21" height="146"/><rect x="788" y="350" width="43" height="116"/><rect x="842" y="282" width="34" height="185"/><rect x="891" y="316" width="44" height="150"/><rect x="946" y="333" width="39" height="134"/><rect x="994" y="300" width="31" height="170"/><rect x="1034" y="324" width="54" height="148"/><rect x="1098" y="330" width="43" height="141"/><rect x="1150" y="286" width="36" height="180"/><rect x="1193" y="320" width="45" height="150"/>
+</g>
+<path d="M695 464V253h10v211Zm-16-207h42v-7h-42Zm3 2h36l-6-22h-24Z" fill="#d6dfe2"/><path d="M692 236L700 190 708 236" fill="#e6edef"/><g stroke="#86aab8" opacity=".58"><path d="M78 344h25M140 359h30M190 341h15M362 315h21M477 334h38M847 302h27M1040 343h41M1199 333h36"/></g>
+<path d="M0 475C196 465 342 470 520 478S1030 478 1280 460V640H0Z" fill="url(#road)"/>
+<path d="M0 497H1280" stroke="#8ba9b6" stroke-width="4" opacity=".7"/>
+<path d="M0 588H1280" stroke="#e3eaf0" stroke-width="3" stroke-dasharray="88 72" opacity=".28"/>
+<g filter="url(#sh)" transform="translate(135 373)">
+<ellipse cx="225" cy="181" rx="215" ry="19" fill="#072137" opacity=".56"/>
+<path d="M20 106Q35 83 94 79L154 30Q173 14 207 14H304Q338 17 357 47L390 79Q418 84 429 103L433 142Q428 151 410 155H33Q9 153 10 136Z" fill="url(#sedan)" stroke="#b2d1dd" stroke-width="3"/>
+<path d="M116 77L163 35Q180 22 207 23L228 23V79ZM236 23H299Q330 26 344 50L359 79H236Z" fill="#193d55" stroke="#76a9b7" stroke-width="2"/>
+<path d="M29 119h45M375 119h46" stroke="#effcff" stroke-width="10" stroke-linecap="round"/><path d="M159 128h132" stroke="#21475e" stroke-width="4" opacity=".5"/>
+<circle cx="103" cy="151" r="39" fill="#091d30" stroke="#7895a8" stroke-width="5"/><circle cx="103" cy="151" r="19" fill="#bed5df"/><circle cx="352" cy="151" r="39" fill="#091d30" stroke="#7895a8" stroke-width="5"/><circle cx="352" cy="151" r="19" fill="#bed5df"/>
+</g>
+<g filter="url(#sh)" transform="translate(575 350)">
+<ellipse cx="221" cy="205" rx="212" ry="18" fill="#04192c" opacity=".62"/>
+<path d="M7 130L28 96Q38 89 78 86L122 34Q145 9 192 9H303Q350 11 370 45L398 88Q433 96 438 130L432 167Q429 176 406 177H25Q12 173 7 155Z" fill="url(#suv)" stroke="#4cdfcc" stroke-width="3"/>
+<path d="M90 87L132 40Q149 22 191 22H225V89ZM237 22H300Q337 25 354 50L370 89H237Z" fill="#11374b" stroke="#68bac2" stroke-width="2"/>
+<path d="M24 133L75 135M369 135H423" stroke="#c8fdf5" stroke-width="12" stroke-linecap="round"/><path d="M185 143h80" stroke="#0e4f63" stroke-width="5"/>
+<circle cx="106" cy="175" r="41" fill="#081f2f" stroke="#7baeb9" stroke-width="5"/><circle cx="106" cy="175" r="19" fill="#b8d1dc"/><circle cx="344" cy="175" r="41" fill="#081f2f" stroke="#7baeb9" stroke-width="5"/><circle cx="344" cy="175" r="19" fill="#b8d1dc"/>
+</g>
+<g filter="url(#sh)" transform="translate(950 392) scale(.72)">
+<ellipse cx="217" cy="161" rx="195" ry="17" fill="#051c30" opacity=".66"/>
+<path d="M15 95Q23 69 77 68L115 18H251L303 60H389Q425 67 432 91L431 130H18Z" fill="url(#truck)" stroke="#d0dee9" stroke-width="3"/>
+<path d="M122 26H248L297 67H101Z" fill="#15354a" stroke="#81a6b7" stroke-width="3"/>
+<path d="M297 64h102v15H297" fill="#244960"/><path d="M34 106h38m322 0h30" stroke="#f2faff" stroke-width="10" stroke-linecap="round"/>
+<circle cx="93" cy="132" r="36" fill="#071d2e" stroke="#8098a9" stroke-width="5"/><circle cx="93" cy="132" r="17" fill="#c6d6e0"/><circle cx="351" cy="132" r="36" fill="#071d2e" stroke="#8098a9" stroke-width="5"/><circle cx="351" cy="132" r="17" fill="#c6d6e0"/>
+</g>
+<g fill="#d1eff1" opacity=".75"><circle cx="355" cy="288" r="3"/><circle cx="790" cy="215" r="4"/><circle cx="1060" cy="189" r="2"/></g>
+</svg>
