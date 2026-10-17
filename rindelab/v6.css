@@ -174,3 +174,13 @@ body{background:radial-gradient(ellipse 85% 25% at 49% 21%,#e5f5f6 0%,rgba(229,2
  .search-card-heading{margin-bottom:8px;padding-bottom:8px}
  .search-card{padding-top:11px}
 }
+
+
+/* Ciclo de homologación visible en cada resultado y posición del ranking. */
+.vehicle-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:6px}
+.vehicle-badges .vehicle-tech{margin-top:0}
+.cycle-badge,.rank-cycle{display:inline-flex;align-items:center;border:1px solid #bfd6e6;background:#eff6fd;color:#275c80;border-radius:6px;padding:3px 7px;font-size:10px;font-weight:820;line-height:1.45;white-space:nowrap}
+.cycle-badge[data-cycle="NEDC"],.rank-cycle[data-cycle="NEDC"]{background:#fff4e5;border-color:#f0d5ac;color:#906027}
+.cycle-badge[data-cycle="WLTP"],.rank-cycle[data-cycle="WLTP"]{background:#e6f7f5;border-color:#bce5e1;color:#08716d}
+.rank-cycle{padding:1px 5px;margin-left:3px;font-size:9px;vertical-align:baseline}
+@media(max-width:600px){.vehicle-badges{gap:6px}.cycle-badge{font-size:10px}.rank-cycle{font-size:9px}}
