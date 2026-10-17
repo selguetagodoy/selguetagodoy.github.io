@@ -454,6 +454,9 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
  });
   await test('Carrocería Station Wagon y Jeep funciona en '+width+' px',async()=>{
   await p.locator('#statsOpen').click();
+  await p.selectOption('#statsTech','');
+  await p.selectOption('#statsMetric','cost');
+  await p.selectOption('#statsCycle','');
   await p.selectOption('#statsBody','station');
   assert.match(await p.locator('#statsBodyHint').textContent(),/Station Wagon/);
   assert((await p.locator('.rank-item').count())>0);
