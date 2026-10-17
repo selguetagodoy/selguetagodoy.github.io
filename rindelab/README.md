@@ -28,6 +28,30 @@ La base emplea el registro oficial 3CV publicado por el Ministerio de Energía c
 - La ficha conserva marca y motorización **de origen** separadas de los ajustes interpretativos para navegación.
 - Para validación final consultar https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx
 
+## Auditoría de carrocerías 3CV — rankings
+
+La auditoría de las **8.053 fichas visibles** identificó **18 denominaciones originales de carrocería**. Las agrupaciones previas cubrían todos los registros, pero denominaban «SUV / Station Wagon» a un conjunto que sumaba indiscriminadamente 3.525 Station Wagon y 31 registros «Jeep»/«Tipo Jeep». Esa descripción podía interpretarse erróneamente como un ranking específico de SUV.
+
+Se preserva cada carrocería **tal como está declarada en el 3CV**, sin modificar los JSON ni inventar una segmentación comercial. La ventana de estadísticas utiliza ocho grupos **mutuamente excluyentes**, cuya suma corresponde exactamente al universo visible:
+
+| Filtro visible | Carrocerías de origen | Fichas al corte |
+|---|---|---:|
+| Station Wagon (3CV) | Station Wagon | 3.525 |
+| Jeep / Tipo Jeep (3CV) | Jeep, Tipo Jeep | 31 |
+| Sedán / limusina | Sedán, Limusina | 1.072 |
+| Hatchback | Hatchback | 1.156 |
+| Camioneta | Camioneta | 1.056 |
+| Coupé / descapotable | Coupé, Cabriolet, Convertible, Descapotable, Roadster | 676 |
+| Furgón / van / minivan | Furgón, Van, Minivan, Microvan | 352 |
+| Bus / minibús | Bus, Minibus | 185 |
+| **Total** | **18 etiquetas originales** | **8.053** |
+
+El grupo «Station Wagon» puede contener vehículos vendidos como SUV, pero **no equivale a un inventario de SUV verificados**. La aplicación explica la limitación al seleccionar esa categoría. Tampoco se presume que «Jeep/Tipo Jeep» agote todos los todoterreno: son dos etiquetas históricas concretas del archivo.
+
+Se detectó un caso a revisar con la fuente: **INEOS Grenadier Pick-Up** figura como «Station Wagon» en la extracción 3CV. Este registro permanece allí hasta contrastar el expediente original y no se reclasifica automáticamente por el nombre del modelo. El filtro técnico de búsqueda conserva las 18 categorías exactas, en vez de reemplazarlas por grupos editoriales.
+
+La regresión automatizada valida las ocho particiones con cobertura completa, cero duplicaciones y cero registros sin categoría, junto con las tablas de rankings y la presentación móvil.
+
 ## Auditoría de fichas y comparación de enchufables
 
 Tras habilitar las estadísticas, se corrigió otra incoherencia: los resultados PHEV/REEV ofrecían ordenar por **menor o mayor costo energético** aun cuando ningún registro del filtro tenía un costo combinado calculable. Estas opciones se deshabilitan cuando todos los resultados carecen de costo estimable y se muestra una explicación visible; siguen funcionando para los filtros con costos calculables.

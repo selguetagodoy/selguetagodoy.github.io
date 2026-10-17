@@ -336,9 +336,12 @@ function openCompare(){
  if(!$('compareDialog').open)$('compareDialog').showModal();
  requestAnimationFrame(syncCompareScrollControls);
 }
-// Estadísticas independientes del catálogo: rankings homogéneos por ciclo, sin proxies para PHEV/REEV.
+// Estadísticas independientes del catálogo: mostrar ciclo original y excluir proxies de costo PHEV/REEV.
+// Grupos exclusivos derivados de las 18 denominaciones exactas de carrocería 3CV.
+// «Station Wagon» no equivale a SUV comercial; «Jeep/Tipo Jeep» se agrupan aparte.
 const rankingBodies={
- sw:['Station Wagon','Jeep','Tipo Jeep'],
+ station:['Station Wagon'],
+ offroad:['Jeep','Tipo Jeep'],
  sedan:['Sedán','Limusina'],
  hatch:['Hatchback'],
  pickup:['Camioneta'],
@@ -382,6 +385,7 @@ function renderStatistics(){
  const isPerformance=metric==='performance',isElectric=metric==='electric',isWeighted=metric==='weighted';
  $('statsSummaryTitle').textContent=rankingTitle(metric,ascending);
  $('statsSummarySubtitle').textContent=(cycle||'NEDC + WLTP')+' · '+(tech||'Todas las motorizaciones')+' · '+(body?$('statsBody').selectedOptions[0].text:'Todas las carrocerías');
+ $('statsBodyHint').textContent=body==='station'?'El 3CV declara «Station Wagon», categoría que puede incluir modelos comercializados como SUV; no es un ranking exclusivo de SUV.':body==='offroad'?'Agrupa únicamente las carrocerías «Jeep» y «Tipo Jeep» declaradas al 3CV; no incluye todos los SUV.':'';
  ranking.replaceChildren();note.textContent='';$('statsResultCount').textContent='';
  if(!all.length){note.textContent='Cargando datos oficiales…';return;}
  if(isPerformance&&!tech){
