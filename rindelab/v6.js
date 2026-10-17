@@ -182,7 +182,7 @@ function render(){
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
   const selectedNow=selected.includes(index);
   article.innerHTML='<div class="vehicle-heading"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<span class="vehicle-tech">'+safe(row[F.TECH])+'</span><p>'+safe(row[F.CYCLE]||'Sin ciclo')+' · '+safe(row[F.DATE]||'Sin fecha')+'</p></div>'+
+   '<span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><p>'+safe(row[F.CYCLE]||'Sin ciclo')+' · '+safe(row[F.DATE]||'Sin fecha')+'</p></div>'+
    '<div class="vehicle-cell"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell"><small>Costo estimado /100 km</small><strong'+(cost(row)===null?' class="no-data"':'')+'>'+safe(money(cost(row)))+'</strong></div>'+
    '<div class="vehicle-actions"><button type="button" class="button secondary" data-detail="'+index+'">Ver ficha</button>'+
