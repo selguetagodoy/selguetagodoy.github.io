@@ -121,18 +121,66 @@ function fillSelect(id,idx){
  $(id).innerHTML=$(id).options[0].outerHTML+values.map(x=>'<option value="'+safe(x)+'">'+safe(x)+'</option>').join('');
  if(values.includes(current))$(id).value=current;
 }
+/* Desplegable de modelos dependiente de la marca y sugerencias de escritura. */
+let suggestionIndex=[];
+function prepareSearchSuggestions(){
+ const unique=new Map(), brands=new Set();
+ for(const r of all){
+  brands.add(r[F.BRAND]);
+  const item=r[F.BRAND]+' '+r[F.MODEL];
+  const key=normalizeSearch(item);
+  if(!unique.has(key))unique.set(key,{value:item,normalized:key});
+ }
+ suggestionIndex=[
+  ...[...brands].sort((a,b)=>a.localeCompare(b,'es')).map(value=>({value,normalized:normalizeSearch(value)})),
+  ...unique.values()
+ ];
+}
+function updateSearchSuggestions(value){
+ const query=normalizeSearch(value);
+ const list=$('catalogSuggestions');
+ if(query.length<2){list.replaceChildren();return;}
+ const hits=[];
+ for(const item of suggestionIndex){
+  if(item.normalized.includes(query)||item.normalized.replace(/\s+/g,'').includes(query.replace(/\s+/g,''))){
+   hits.push(item.value);
+   if(hits.length>=14)break;
+  }
+ }
+ list.replaceChildren(...hits.map(value=>{
+  const option=document.createElement('option');option.value=value;return option;
+ }));
+}
+function updateModelOptions(){
+ const brand=$('brand').value,el=$('model'),chosen=el.value;
+ if(!brand){
+  el.disabled=true;
+  el.replaceChildren(new Option('Selecciona primero una marca',''));
+  $('modelStatus').textContent='Elige una marca para desplegar sus modelos.';
+  return;
+ }
+ const models=[...new Set(all.filter(r=>r[F.BRAND]===brand).map(r=>r[F.MODEL]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));
+ el.replaceChildren(new Option('Todos los modelos de '+brand+' ('+fmt(models.length)+')',''),...models.map(name=>new Option(name,name)));
+ el.disabled=false;
+ if(models.includes(chosen))el.value=chosen;
+ $('modelStatus').textContent=fmt(models.length)+' modelos y versiones disponibles en las homologaciones de '+brand+'.';
+}
+function resetCatalogFacets(){
+ for(const id of ['tech','brand','bodytype','cycle','year','model'])$(id).value='';
+ updateModelOptions();
+}
 function filters(){
- const raw=$('search').value.trim(),t=$('tech').value,b=$('brand').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value;
+ const raw=$('search').value.trim(),t=$('tech').value,b=$('brand').value,model=$('model').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value;
  const query=normalizeSearch(raw);
  const candidates=all.filter(r=>searchMatches(r,query));
- filtered=candidates.filter(r=>(!t||r[F.TECH]===t)&&(!b||r[F.BRAND]===b)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
+ filtered=candidates.filter(r=>(!t||r[F.TECH]===t)&&(!b||r[F.BRAND]===b)&&(!model||r[F.MODEL]===model)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
  const hidden=candidates.length>0&&filtered.length===0;
- const contextActive=Boolean(t||b||body||cycle||year);
+ const contextActive=Boolean(t||b||model||body||cycle||year);
  $('searchStatus').textContent=query?(
   hidden?'Se encontraron '+fmt(candidates.length)+' coincidencias en la base, pero los filtros activos las están ocultando.':
   filtered.length?fmt(filtered.length)+' coincidencias para «'+raw+'»'+(contextActive?' dentro de los filtros seleccionados.': ' en todo el catálogo histórico.'):
   'No se encontró «'+raw+'» en la base 3CV. Intenta con otra marca, modelo o escritura.'
- ):'Busca por marca o modelo entre '+fmt(all.length)+' homologaciones históricas, incluidos NEDC y WLTP.';
+ ):model?'Modelo seleccionado: '+model+' · '+fmt(filtered.length)+' homologaciones encontradas.':b?'Marca seleccionada: '+b+' · '+fmt(filtered.length)+' homologaciones.':'Busca una marca o modelo entre '+fmt(all.length)+' homologaciones históricas, incluidos NEDC y WLTP.';
  $('showAllSearch').hidden=!(query&&hidden);
  $('search').setAttribute('aria-invalid',query&&hidden?'true':'false');
  let sort=$('sort').value;
@@ -276,9 +324,12 @@ function restoreEnergy(){
  if(!loading)filters();renderManual();
 }
 function populate(){
- const m=$('brand').value,b=$('bodytype').value;fillSelect('brand',F.BRAND);fillSelect('bodytype',F.BODY);
+ const m=$('brand').value,b=$('bodytype').value;
+ fillSelect('brand',F.BRAND);fillSelect('bodytype',F.BODY);
  if([...$('brand').options].some(x=>x.value===m))$('brand').value=m;
  if([...$('bodytype').options].some(x=>x.value===b))$('bodytype').value=b;
+ updateModelOptions();
+ prepareSearchSuggestions();
 }
 async function initialize(){
  try{
@@ -296,9 +347,11 @@ async function initialize(){
   $('resultInfo').textContent='No se pudo cargar el registro oficial';$('chart').innerHTML='<div class="empty">Sin datos</div>';
  }
 }
-for(const id of ['search','tech','brand','bodytype','cycle','year','sort','charge','zone','period','customKwh','octane','losses','p93','p95','p97','diesel','annualKm']){
+for(const id of ['search','tech','brand','model','bodytype','cycle','year','sort','charge','zone','period','customKwh','octane','losses','p93','p95','p97','diesel','annualKm']){
  $(id).addEventListener(id==='search'||['p93','p95','p97','diesel','customKwh','annualKm'].includes(id)?'input':'change',()=>{
   if(loading)return;
+  if(id==='brand')updateModelOptions();
+  if(id==='search')updateSearchSuggestions($('search').value);
   filters();renderManual();
  });
 }
@@ -308,7 +361,7 @@ $('catalogSearchForm').addEventListener('submit',event=>{
  const query=$('search').value.trim();
  $('search').value=query;
  $('heroSearchInput').value=query;
- ['tech','brand','bodytype','cycle','year'].forEach(id=>$(id).value='');
+ resetCatalogFacets();
  $('sort').value='recent';
  if(!loading){
   filters();
@@ -319,14 +372,14 @@ $('catalogSearchForm').addEventListener('submit',event=>{
 $('heroSearchForm').addEventListener('submit',event=>{
  event.preventDefault();
  $('search').value=$('heroSearchInput').value.trim();
- ['tech','brand','bodytype','cycle','year'].forEach(id=>$(id).value='');
+ resetCatalogFacets();
  $('sort').value='recent';
  if(!loading)filters();
  $('catalogo').scrollIntoView({behavior:'smooth',block:'start'});
 });
 $('search').addEventListener('input',()=>{$('heroSearchInput').value=$('search').value;});
 $('showAllSearch').addEventListener('click',()=>{
- ['tech','brand','bodytype','cycle','year'].forEach(id=>$(id).value='');
+ resetCatalogFacets();
  $('sort').value='recent';
  if(!loading)filters();
  $('search').focus();
@@ -337,7 +390,7 @@ $('tbody').addEventListener('click',e=>{
  if(d)details(Number(d.dataset.detail));else if(c)toggle(Number(c.dataset.compare));
 });
 $('comparison').addEventListener('click',e=>{const btn=e.target.closest('[data-compare]');if(btn)toggle(Number(btn.dataset.compare));});
-$('reset').addEventListener('click',()=>{['search','brand','bodytype','tech','cycle','year'].forEach(id=>$(id).value='');$('heroSearchInput').value='';$('sort').value='recent';if(!loading)filters();});
+$('reset').addEventListener('click',()=>{$('search').value='';resetCatalogFacets();$('catalogSuggestions').replaceChildren();$('heroSearchInput').value='';$('sort').value='recent';if(!loading)filters();});
 $('resetEnergy').addEventListener('click',restoreEnergy);
 $('export').addEventListener('click',()=>{if(!loading)csv()});
 $('prev').addEventListener('click',()=>{if(page>0){page--;render();$('results').scrollIntoView({behavior:'smooth'});}});
