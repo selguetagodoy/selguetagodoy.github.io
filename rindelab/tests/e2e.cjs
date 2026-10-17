@@ -66,7 +66,7 @@ const assert = require('node:assert/strict');
   assert.match(await page.locator('#comparisonWarning').textContent(),/NEDC y WLTP/);
   await page.locator('#compareReset').click();
   assert(await page.locator('#compareTray').isHidden());
-  assert.match(await page.locator('#comparison').textContent(),/selecciona dos vehículos/i);
+  assert.match(await page.locator('#comparison').textContent(),/tu comparador está esperando vehículos/i);
  });
  await test('Buscador y categoría conservan filtros al usar Buscar',async()=>{
   await page.locator('#reset').click();
