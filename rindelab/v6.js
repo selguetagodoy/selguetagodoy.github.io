@@ -119,8 +119,8 @@ function metric(row){
  if(t==='EV')return number(row[F.EL])?fixed(row[F.EL])+' km/kWh':'No informado';
  if(t==='PHEV'||t==='REEV'){
   const portions=[];
-  if(number(row[F.PH]))portions.push(fixed(row[F.PH])+' km/L ponderado');
-  if(number(row[F.EL]))portions.push(fixed(row[F.EL])+' km/kWh ponderado');
+  if(number(row[F.EL]))portions.push('Eléctrico: '+fixed(row[F.EL])+' km/kWh');
+  if(number(row[F.PH]))portions.push('Ponderado: '+fixed(row[F.PH])+' km/L');
   return portions.join(' · ')||'No informado';
  }
  return number(row[F.KM])?fixed(row[F.KM])+' km/L mixto':'No informado';
@@ -159,14 +159,31 @@ function textSuggestions(criteria){
  const picks=[...options].map(([key,label])=>({label,d:d(criteria.q,key)})).filter(x=>x.d>0&&x.d<=Math.max(2,Math.floor(criteria.q.length*.24))).sort((a,b)=>a.d-b.d||a.label.length-b.label.length).slice(0,3);
  if(picks.length){box.append('¿Buscabas otro nombre? ');for(const x of picks){const btn=document.createElement('button');btn.type='button';btn.dataset.suggestion=x.label;btn.textContent=x.label;box.append(btn);}box.hidden=false;}
 }
+function syncSortAvailability(){
+ const hasCost=results.some(row=>cost(row)!==null);
+ for(const value of ['cheapest','expensive']){
+  const option=$('sort').querySelector('option[value="'+value+'"]');
+  if(option)option.disabled=!hasCost;
+ }
+ if(!hasCost&&['cheapest','expensive'].includes($('sort').value))$('sort').value='recent';
+ return hasCost;
+}
 function render(){
  if(!submitted)return;
+ const costAvailable=syncSortAvailability();
  const sorted=sortRows(results,$('sort').value),visible=sorted.slice(0,limit),sort=$('sort').value;
  $('resultCount').textContent=fmt(results.length)+' '+(results.length===1?'versión encontrada':'versiones encontradas');
  $('emptyState').hidden=!!results.length;
  if(!results.length)$('emptyState').innerHTML='<strong>Sin coincidencias</strong>Prueba con otra marca, modelo o quita un filtro técnico.';
- $('sortNote').hidden=!['cheapest','expensive'].includes(sort);
- if(!$('sortNote').hidden)$('sortNote').textContent='Orden único por costo estimado. Cada ficha indica WLTP o NEDC: son ensayos distintos y sus resultados no son directamente equivalentes. Los precios de energía son referenciales.';
+ $('sortNote').hidden=costAvailable&&!['cheapest','expensive'].includes(sort);
+ if(!costAvailable&&results.length){
+  $('sortNote').textContent='No hay costo energético combinado calculable con los datos 3CV para esta selección. Se muestran por fecha de homologación. Para PHEV/REEV, consulta los rendimientos eléctrico y ponderado en Estadísticas.';
+  $('sortNote').hidden=false;
+ }else if(!costAvailable){
+  $('sortNote').hidden=true;
+ }else if(!$('sortNote').hidden){
+  $('sortNote').textContent='Orden único por costo estimado. Cada ficha indica WLTP o NEDC: son ensayos distintos y sus resultados no son directamente equivalentes. Los precios de energía son referenciales.';
+ }
  const list=$('resultList');list.replaceChildren();
  for(const row of visible){
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
@@ -201,12 +218,20 @@ function showDetail(i){
   ['Combustible',r[F.FUEL]],['Carrocería',r[F.BODY]],['Tracción',r[F.DRIVE]],
   ['Transmisión',r[F.TRANS]],['Cilindrada',r[F.ENGINE]],
   ['Ciclo de homologación',r[F.CYCLE]],['Fecha de homologación',r[F.DATE]],
-  ['Código 3CV',r[F.CODE]],['Rendimiento oficial',metric(r)],
-  ['Costo energético estimado/100 km',money(cost(r))],
+  ['Código 3CV',r[F.CODE]],
+  ...(isPlugInTechnology(r[F.TECH])?
+   [['Rendimiento eléctrico informado (km/kWh)',number(r[F.EL])?fixed(r[F.EL]):'N/D'],
+    ['Rendimiento ponderado informado (km/L)',number(r[F.PH])?fixed(r[F.PH]):'N/D']]:
+   [['Rendimiento oficial',metric(r)]]),
+  ['Costo energético estimado/100 km',isPlugInTechnology(r[F.TECH])?'No calculable sin supuestos de uso eléctrico y combustible':money(cost(r))],
   ['Batería (kWh)',r[F.BAT]],['Conector AC',r[F.AC]],['Conector DC',r[F.DC]],
   ['CO₂ (g/km)',r[F.CO2]],['Norma de emisiones',r[F.NORM]]
  ];
- $('detailContent').innerHTML='<p class="note">Datos de homologación, no un rendimiento medido en ruta ni una oferta de venta. Los costos usan los precios editables de Metodología y fuentes.</p>'+
+ $('detailContent').innerHTML='<p class="note">'+
+  (isPlugInTechnology(r[F.TECH])?
+   'Los rendimientos eléctrico (km/kWh) y ponderado (km/L) son datos registrados en 3CV, bajo condiciones de ensayo. No corresponden al costo combinado real ni acreditan consumo de combustible con batería descargada.':
+   'Datos de homologación, no un rendimiento medido en ruta ni una oferta de venta. Los costos usan los precios editables de Metodología y fuentes.')+
+  '</p>'+
   '<dl class="details-list">'+items.map(([k,v])=>'<dt>'+safe(k)+'</dt><dd>'+safe(v===null||v===''?'N/D':v)+'</dd>').join('')+'</dl>';
  $('detailDialog').showModal();
 }
@@ -272,9 +297,14 @@ function renderComparisonContent(){
  const uniqueCycles=new Set(vehicles.map(x=>x.row[F.CYCLE]).filter(Boolean));
  const mixedCycles=uniqueCycles.size>1;
  const columns=vehicles.length;
+ const containsPlugIn=vehicles.some(({row})=>isPlugInTechnology(row[F.TECH]));
  const dataRows=[
   ['Motorización',r=>r[F.TECH]],
   ['Rendimiento oficial',r=>metric(r)],
+  ...(containsPlugIn?[
+   ['Rendimiento eléctrico (km/kWh)',r=>(isPlugInTechnology(r[F.TECH])||r[F.TECH]==='EV')&&number(r[F.EL])?fixed(r[F.EL]):'No aplica'],
+   ['Rendimiento ponderado (km/L)',r=>isPlugInTechnology(r[F.TECH])&&number(r[F.PH])?fixed(r[F.PH]):'No aplica']
+  ]:[]),
   ['Costo estimado /100 km',r=>money(cost(r))],
   ['Ciclo de ensayo',r=>r[F.CYCLE]],
   ['Homologación',r=>r[F.DATE]],
