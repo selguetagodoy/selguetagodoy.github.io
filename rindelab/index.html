@@ -11,7 +11,7 @@
 <meta property="og:description" content="Busca vehículos, compara rendimientos y costos estimados de energía en Chile. Datos 3CV.">
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261017-hybrids9">
+<link rel="stylesheet" href="./v6.css?v=20261017-bodyaudit11">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -141,15 +141,16 @@
   <div class="stats-controls">
    <div class="field"><label for="statsMetric">¿Qué quieres comparar?</label><select id="statsMetric"><option value="cost">Costo energético por 100 km</option><option value="performance">Rendimiento homologado</option><option value="electric" disabled>Rendimiento eléctrico informado (km/kWh)</option><option value="weighted" disabled>Rendimiento ponderado informado (km/L)</option></select></div>
    <div class="field"><label for="statsTech">Motorización</label><select id="statsTech"><option value="">Todas las motorizaciones</option><option value="Bencina">Bencina</option><option value="Diésel">Diésel</option><option value="MHEV">Híbrido suave (MHEV)</option><option value="HEV">Híbrido (HEV)</option><option value="PHEV">Híbrido enchufable (PHEV)</option><option value="REEV">Extensor de autonomía (REEV)</option><option value="EV">Eléctrico (EV)</option></select></div>
-   <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="sw">SUV / Station Wagon</option><option value="sedan">Sedán</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van</option><option value="bus">Bus / minibús</option></select></div>
+   <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="station">Station Wagon (3CV)</option><option value="offroad">Jeep / Tipo Jeep (3CV)</option><option value="sedan">Sedán / limusina</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van / minivan</option><option value="bus">Bus / minibús</option></select></div>
    <div class="field"><label for="statsCycle">Ciclo de ensayo</label><select id="statsCycle"><option value="">Todos (NEDC + WLTP)</option><option value="WLTP">Solo WLTP</option><option value="NEDC">Solo NEDC</option></select></div>
    <div class="field"><label for="statsOrder">Ordenar los 10</label><select id="statsOrder"><option value="asc">Menor a mayor</option><option value="desc">Mayor a menor</option></select></div>
   </div>
   <p id="statsMetricHint" class="stats-metric-hint" role="status" aria-live="polite">Selecciona una medida.</p>
+  <p id="statsBodyHint" class="stats-body-hint" role="note"></p>
   <div class="stats-summary"><div><span class="stats-live-indicator" aria-hidden="true"></span><strong id="statsSummaryTitle">Top 10 por costo energético</strong><p id="statsSummarySubtitle"></p></div><span id="statsResultCount" class="stats-count"></span></div>
   <div id="statsNotice" class="stats-notice" role="status" aria-live="polite"></div>
   <div id="statsRanking" class="stats-ranking" aria-live="polite"></div>
-  <p class="stats-footnote">NEDC y WLTP se identifican por ciclo y no son directamente equivalentes. Para híbridos enchufables (PHEV) y eléctricos con extensor (REEV) puedes consultar rendimiento eléctrico informado (km/kWh) y ponderado (km/L), sin suponer un costo combinado. Las denominaciones comerciales no se usan para inventar subcategorías híbridas.</p>
+  <p class="stats-footnote">Las categorías de carrocería siguen las denominaciones 3CV; «Station Wagon» puede incluir SUV, pero no es un segmento SUV verificado. NEDC y WLTP se identifican por ciclo y no son directamente equivalentes. Para híbridos enchufables (PHEV) y eléctricos con extensor (REEV) puedes consultar rendimiento eléctrico informado (km/kWh) y ponderado (km/L), sin suponer un costo combinado. Las denominaciones comerciales no se usan para inventar subcategorías híbridas.</p>
  </div>
 </dialog>
 <dialog id="detailDialog" class="modal" aria-labelledby="detailTitle">
@@ -171,6 +172,6 @@
 <footer class="footer">
  <div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy · <a href="mailto:e.elguetagodoy@gmail.com">Contacto</a></span><small>Chequea la información en los sitios oficiales. Fuente 3CV, Ministerio de Energía.</small></div>
 </footer>
-<script src="./v6.js?v=20261017-hybridqa10" defer></script>
+<script src="./v6.js?v=20261017-bodyaudit11" defer></script>
 </body>
 </html>
