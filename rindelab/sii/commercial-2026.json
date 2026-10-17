@@ -229,5 +229,126 @@
     "checkedAt": "2026-10-17",
     "currency": "CLP",
     "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Creta Grand",
+    "version": "CRETA GRAND SU2i 2.0 MT GO FL",
+    "modelYear": null,
+    "priceListClp": 21790000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Creta Grand",
+    "version": "CRETA GRAND SU2i 2.0 AT PLUS FL",
+    "modelYear": null,
+    "priceListClp": 24290000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Tucson",
+    "version": "TUCSON NX4c 2.0 MT GO FL",
+    "modelYear": null,
+    "priceListClp": 24390000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Tucson",
+    "version": "TUCSON NX4c 2.0 AT PLUS FL",
+    "modelYear": null,
+    "priceListClp": 25990000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Tucson",
+    "version": "TUCSON NX4c 1.5T AT 4WD PLUS FL",
+    "modelYear": null,
+    "priceListClp": 30190000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Tucson",
+    "version": "TUCSON NX4c 2.0 AT BLACKLINE FL",
+    "modelYear": null,
+    "priceListClp": 30190000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Venue",
+    "version": "Venue QU2i 1.0T MT GO",
+    "modelYear": null,
+    "priceListClp": 16490000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Venue",
+    "version": "Venue QU2i 1.0T MT PLUS",
+    "modelYear": null,
+    "priceListClp": 17190000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Venue",
+    "version": "Venue QU2i 1.0T AT PLUS",
+    "modelYear": null,
+    "priceListClp": 18990000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Venue",
+    "version": "Venue QU2i 1.0T AT DESIGN",
+    "modelYear": null,
+    "priceListClp": 20490000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Kona",
+    "version": "KONA SX2 EV GO LR",
+    "modelYear": null,
+    "priceListClp": 40090000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-electrico/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
   }
 ]
