@@ -26,6 +26,7 @@ function catalog(){
 }
 function canonicalFamily(brand,family){
  const key=norm(family),b=norm(brand);
+ if(b==='MAZDA'&&/^CX\s*-?\s*(3|5|30)$/.test(key))return 'CX-'+key.match(/(30|3|5)$/)[1];
  if(b==='MG'&&key==='MGZS')return 'ZS';
  if(b==='MG'&&key==='MGS5')return 'S5';
  return key;
