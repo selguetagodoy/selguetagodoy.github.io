@@ -121,18 +121,121 @@ function fillSelect(id,idx){
  $(id).innerHTML=$(id).options[0].outerHTML+values.map(x=>'<option value="'+safe(x)+'">'+safe(x)+'</option>').join('');
  if(values.includes(current))$(id).value=current;
 }
+/* Desplegable de modelos dependiente de la marca y sugerencias de escritura. */
+let suggestionIndex=[];
+function prepareSearchSuggestions(){
+ const unique=new Map(), brands=new Set();
+ for(const r of all){
+  brands.add(r[F.BRAND]);
+  const item=r[F.BRAND]+' '+r[F.MODEL];
+  const key=normalizeSearch(item);
+  if(!unique.has(key))unique.set(key,{value:item,normalized:key});
+ }
+ suggestionIndex=[
+  ...[...brands].sort((a,b)=>a.localeCompare(b,'es')).map(value=>({value,normalized:normalizeSearch(value)})),
+  ...unique.values()
+ ];
+}
+function updateSearchSuggestions(value){
+ const query=normalizeSearch(value);
+ const list=$('catalogSuggestions');
+ if(query.length<2){list.replaceChildren();return;}
+ const hits=[];
+ for(const item of suggestionIndex){
+  if(item.normalized.includes(query)||item.normalized.replace(/\s+/g,'').includes(query.replace(/\s+/g,''))){
+   hits.push(item.value);
+   if(hits.length>=14)break;
+  }
+ }
+ list.replaceChildren(...hits.map(value=>{
+  const option=document.createElement('option');option.value=value;return option;
+ }));
+}
+/* Familias de modelos para navegar las versiones exactas del 3CV. */
+function modelFamily(r){
+ let name=String(r[F.MODEL]||'').trim();
+ const brand=String(r[F.BRAND]||'').trim();
+ if(name.toLowerCase().startsWith((brand+' ').toLowerCase()))name=name.slice(brand.length).trim();
+ name=name.replace(/^(?:(?:All[\s-]+New|New|Nuevo|Nueva)\s+)+/i,'').trim();
+ if(!name)return String(r[F.MODEL]||'').trim();
+ const patterns=[
+  [/^GR\s+Corolla\b/i,'GR Corolla'],
+  [/^Corolla\s+Cross\b/i,'Corolla Cross'],
+  [/^Corolla\s+(?:SD|SEDAN|SEDÁN)\b/i,'Corolla Sedán'],
+  [/^Corolla\s+(?:HB|HATCHBACK)\b/i,'Corolla Hatchback'],
+  [/^Yaris\s+Cross\b/i,'Yaris Cross'],
+  [/^Land\s+Cruiser\s+Prado\b/i,'Land Cruiser Prado'],
+  [/^Land\s+Cruiser\b/i,'Land Cruiser'],
+  [/^Range\s+Rover\s+(Sport|Velar|Evoque)\b/i,null],
+  [/^Range\s+Rover\b/i,'Range Rover'],
+  [/^Discovery\s+Sport\b/i,'Discovery Sport'],
+  [/^Defender\s+(90|110|130)\b/i,null],
+  [/^Grand\s+Vitara\b/i,'Grand Vitara'],
+  [/^LPM\s+(?:B10|C10)\b/i,null],
+  [/^Avatr\s+\d+\b/i,null],
+  [/^RAV4\b/i,'RAV4'],
+  [/^Evoque\b/i,'Range Rover Evoque'],
+  [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],
+  [/^Deepal\s+[A-Z0-9-]+\b/i,null],
+  [/^Haval\s+(H6|H9|Jolion(?:\s+Pro)?|Dargo)\b/i,null],
+  [/^Tiggo\s+\d+\b/i,null],
+  [/^ATTO\s+\d+\b/i,null],
+  [/^Model\s+[3SYX]\b/i,null],
+  [/^F[\s-]?(150|250|350)\b/i,null],
+  [/^e[\s-]?Vitara\b/i,'e Vitara'],
+  [/^e[\s-]?208\b/i,'e-208'],
+  [/^e[\s-]?2008\b/i,'e-2008']
+ ];
+ for(const [regex,label] of patterns){
+  const match=name.match(regex);
+  if(match)return label||match[0].replace(/^F[\s-]?(\d+)/i,'F-$1');
+ }
+ const parts=name.split(/\s+/).filter(Boolean);
+ if(!parts.length)return name;
+ if(['Serie','Series','Clase','Class','Model','Grand','Range'].includes(parts[0])&&parts.length>1)return parts.slice(0,2).join(' ');
+ return parts[0];
+}
+function updateModelOptions(){
+ const brand=$('brand').value,el=$('model'),current=el.value;
+ if(!brand){
+  el.disabled=true;
+  el.replaceChildren(new Option('Selecciona primero una marca',''));
+  $('modelStatus').textContent='Elige una marca para desplegar sus modelos.';
+  return;
+ }
+ const families=new Map();
+ let versions=0;
+ for(const r of all){
+  if(r[F.BRAND]!==brand)continue;
+  versions++;
+  const value=modelFamily(r),key=normalizeSearch(value);
+  if(!key)continue;
+  const item=families.get(key);
+  if(item)item.count++;
+  else families.set(key,{label:value,count:1});
+ }
+ const models=[...families.entries()].sort((a,b)=>a[1].label.localeCompare(b[1].label,'es',{numeric:true}));
+ el.replaceChildren(new Option('Todos los modelos ('+fmt(models.length)+')',''),...models.map(([key,item])=>new Option(item.label+' · '+fmt(item.count)+' fichas',key)));
+ el.disabled=false;
+ if(models.some(([key])=>key===current))el.value=current;
+ $('modelStatus').textContent=fmt(models.length)+' familias de modelos · '+fmt(versions)+' fichas homologadas. Elige un modelo para ver todas sus versiones.';
+}
+function resetCatalogFacets(){
+ for(const id of ['tech','brand','bodytype','cycle','year','model'])$(id).value='';
+ updateModelOptions();
+}
 function filters(){
- const raw=$('search').value.trim(),t=$('tech').value,b=$('brand').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value;
+ const raw=$('search').value.trim(),t=$('tech').value,b=$('brand').value,model=$('model').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value;
  const query=normalizeSearch(raw);
  const candidates=all.filter(r=>searchMatches(r,query));
- filtered=candidates.filter(r=>(!t||r[F.TECH]===t)&&(!b||r[F.BRAND]===b)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
+ filtered=candidates.filter(r=>(!t||r[F.TECH]===t)&&(!b||r[F.BRAND]===b)&&(!model||normalizeSearch(modelFamily(r))===model)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
  const hidden=candidates.length>0&&filtered.length===0;
- const contextActive=Boolean(t||b||body||cycle||year);
+ const contextActive=Boolean(t||b||model||body||cycle||year);
  $('searchStatus').textContent=query?(
   hidden?'Se encontraron '+fmt(candidates.length)+' coincidencias en la base, pero los filtros activos las están ocultando.':
   filtered.length?fmt(filtered.length)+' coincidencias para «'+raw+'»'+(contextActive?' dentro de los filtros seleccionados.': ' en todo el catálogo histórico.'):
   'No se encontró «'+raw+'» en la base 3CV. Intenta con otra marca, modelo o escritura.'
- ):'Busca por marca o modelo entre '+fmt(all.length)+' homologaciones históricas, incluidos NEDC y WLTP.';
+ ):model?'Modelo seleccionado: '+model+' · '+fmt(filtered.length)+' homologaciones encontradas.':b?'Marca seleccionada: '+b+' · '+fmt(filtered.length)+' homologaciones.':'Busca una marca o modelo entre '+fmt(all.length)+' homologaciones históricas, incluidos NEDC y WLTP.';
  $('showAllSearch').hidden=!(query&&hidden);
  $('search').setAttribute('aria-invalid',query&&hidden?'true':'false');
  let sort=$('sort').value;
@@ -276,9 +379,12 @@ function restoreEnergy(){
  if(!loading)filters();renderManual();
 }
 function populate(){
- const m=$('brand').value,b=$('bodytype').value;fillSelect('brand',F.BRAND);fillSelect('bodytype',F.BODY);
+ const m=$('brand').value,b=$('bodytype').value;
+ fillSelect('brand',F.BRAND);fillSelect('bodytype',F.BODY);
  if([...$('brand').options].some(x=>x.value===m))$('brand').value=m;
  if([...$('bodytype').options].some(x=>x.value===b))$('bodytype').value=b;
+ updateModelOptions();
+ prepareSearchSuggestions();
 }
 async function initialize(){
  try{
@@ -296,9 +402,11 @@ async function initialize(){
   $('resultInfo').textContent='No se pudo cargar el registro oficial';$('chart').innerHTML='<div class="empty">Sin datos</div>';
  }
 }
-for(const id of ['search','tech','brand','bodytype','cycle','year','sort','charge','zone','period','customKwh','octane','losses','p93','p95','p97','diesel','annualKm']){
+for(const id of ['search','tech','brand','model','bodytype','cycle','year','sort','charge','zone','period','customKwh','octane','losses','p93','p95','p97','diesel','annualKm']){
  $(id).addEventListener(id==='search'||['p93','p95','p97','diesel','customKwh','annualKm'].includes(id)?'input':'change',()=>{
   if(loading)return;
+  if(id==='brand'){$('model').value='';updateModelOptions();}
+  if(id==='search')updateSearchSuggestions($('search').value);
   filters();renderManual();
  });
 }
@@ -308,7 +416,7 @@ $('catalogSearchForm').addEventListener('submit',event=>{
  const query=$('search').value.trim();
  $('search').value=query;
  $('heroSearchInput').value=query;
- ['tech','brand','bodytype','cycle','year'].forEach(id=>$(id).value='');
+ resetCatalogFacets();
  $('sort').value='recent';
  if(!loading){
   filters();
@@ -319,14 +427,14 @@ $('catalogSearchForm').addEventListener('submit',event=>{
 $('heroSearchForm').addEventListener('submit',event=>{
  event.preventDefault();
  $('search').value=$('heroSearchInput').value.trim();
- ['tech','brand','bodytype','cycle','year'].forEach(id=>$(id).value='');
+ resetCatalogFacets();
  $('sort').value='recent';
  if(!loading)filters();
  $('catalogo').scrollIntoView({behavior:'smooth',block:'start'});
 });
 $('search').addEventListener('input',()=>{$('heroSearchInput').value=$('search').value;});
 $('showAllSearch').addEventListener('click',()=>{
- ['tech','brand','bodytype','cycle','year'].forEach(id=>$(id).value='');
+ resetCatalogFacets();
  $('sort').value='recent';
  if(!loading)filters();
  $('search').focus();
@@ -337,7 +445,7 @@ $('tbody').addEventListener('click',e=>{
  if(d)details(Number(d.dataset.detail));else if(c)toggle(Number(c.dataset.compare));
 });
 $('comparison').addEventListener('click',e=>{const btn=e.target.closest('[data-compare]');if(btn)toggle(Number(btn.dataset.compare));});
-$('reset').addEventListener('click',()=>{['search','brand','bodytype','tech','cycle','year'].forEach(id=>$(id).value='');$('heroSearchInput').value='';$('sort').value='recent';if(!loading)filters();});
+$('reset').addEventListener('click',()=>{$('search').value='';resetCatalogFacets();$('catalogSuggestions').replaceChildren();$('heroSearchInput').value='';$('sort').value='recent';if(!loading)filters();});
 $('resetEnergy').addEventListener('click',restoreEnergy);
 $('export').addEventListener('click',()=>{if(!loading)csv()});
 $('prev').addEventListener('click',()=>{if(page>0){page--;render();$('results').scrollIntoView({behavior:'smooth'});}});

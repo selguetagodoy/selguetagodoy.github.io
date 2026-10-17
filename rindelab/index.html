@@ -58,7 +58,17 @@ footer{background:#071f34;color:#bed0df;margin-top:20px;padding:39px 0 0}.footer
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta,.feature-card{transition:none}}
 
 </style>
-<link rel="stylesheet" href="./audit-v2.css">
+<link rel="stylesheet" href="./audit-v2.css?v=20261017-modelos1">
+<style id="critical-catalog-layout">
+/* Estilos críticos integrados para evitar botones desalineados por caché de CSS externo */
+.catalog-search-form{display:grid!important;grid-template-columns:minmax(0,1fr) 126px!important;align-items:stretch!important;gap:10px!important;width:100%!important;margin:0!important}
+.catalog-search-form input{min-width:0!important;width:100%!important;min-height:50px!important;border-radius:9px!important;box-sizing:border-box!important}
+.catalog-search-form button{display:flex!important;align-items:center!important;justify-content:center!important;background:#0b426c!important;border:1px solid #0b426c!important;color:#fff!important;font:800 13px system-ui,sans-serif!important;border-radius:9px!important;min-height:50px!important;width:126px!important;cursor:pointer!important;padding:9px 13px!important}
+.catalog-search-top{width:100%;margin-bottom:16px}
+.catalog-primary-filters{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:13px}
+@media(max-width:1080px){.catalog-primary-filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){.catalog-search-form{grid-template-columns:minmax(0,1fr) 86px!important;gap:7px!important}.catalog-search-form button{width:86px!important;font-size:12px!important}.catalog-primary-filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style>
 </head>
 <body>
 <div class="top" id="inicio"><div class="shell sitebar">
@@ -92,8 +102,19 @@ footer{background:#071f34;color:#bed0df;margin-top:20px;padding:39px 0 0}.footer
 <main class="shell content">
 <div class="notice source-warning" role="note"><span class="warning-symbol" aria-hidden="true">!</span><div><strong>Chequea la información en los sitios oficiales.</strong><br>Los datos proceden de homologaciones 3CV y pueden cambiar. <strong>Una homologación histórica no confirma que el vehículo siga a la venta.</strong> Verifica versiones, rendimientos y precios en los sitios de las marcas y organismos públicos.</div><a href="https://www.consumovehicular.cl/" target="_blank" rel="noopener noreferrer">Fuente oficial ↗</a></div>
 <section class="stats" aria-label="Indicadores"><div class="stat"><div class="value" id="sTotal">—</div><span class="label">Versiones filtradas</span></div><div class="stat"><div class="value" id="sBrands">—</div><span class="label">Marcas distintas</span></div><div class="stat"><div class="value" id="sWLTP">—</div><span class="label">Fichas WLTP filtradas</span></div><div class="stat"><div class="value" id="sCompare">0/4</div><span class="label">Vehículos seleccionados</span></div></section>
-<section class="panel filter-panel" id="catalogo" aria-label="Filtros"><div class="panel-head"><div><h2>Explorar vehículos</h2><p>Busca en todas las homologaciones registradas. Los filtros de año y ciclo son opcionales; aplícalos solo cuando necesites una comparación específica.</p></div><div class="actions"><button id="reset" class="button" type="button">Restablecer</button><button id="export" class="button primary" type="button">Descargar CSV</button></div></div><div class="panel-body">
-<div class="toolbar"><div class="field search-field"><label for="search">Buscar por marca, modelo o versión</label><form id="catalogSearchForm" class="catalog-search-form" role="search" aria-label="Buscar vehículos en el catálogo"><input id="search" type="search" placeholder="Ej. Toyota Corolla, Mercedes-Benz, F-150..." autocomplete="off" aria-describedby="searchStatus" spellcheck="false"><button id="catalogSearchButton" type="submit" aria-label="Buscar marca o modelo en todas las homologaciones">Buscar <span aria-hidden="true">→</span></button></form></div><div class="field"><label for="tech">Tecnología</label><select id="tech"><option value="">Todas las tecnologías</option><option>Bencina</option><option>Diésel</option><option>MHEV</option><option>HEV</option><option>PHEV</option><option>REEV</option><option>EV</option></select></div><div class="field"><label for="brand">Marca</label><select id="brand"><option value="">Todas las marcas</option></select></div><div class="field"><label for="bodytype">Carrocería</label><select id="bodytype"><option value="">Todas las carrocerías</option></select></div></div>
+<section class="panel filter-panel" id="catalogo" aria-label="Filtros"><div class="panel-head"><div><h2>Explorar vehículos</h2><p>Busca por nombre o selecciona primero una marca y luego un modelo. Los filtros de año y ciclo son opcionales.</p></div><div class="actions"><button id="reset" class="button" type="button">Restablecer</button><button id="export" class="button primary" type="button">Descargar CSV</button></div></div><div class="panel-body">
+<div class="catalog-search-top">
+<div class="field search-field"><label for="search">¿Qué marca o modelo estás buscando?</label>
+<form id="catalogSearchForm" class="catalog-search-form" role="search" aria-label="Buscar vehículos en el catálogo">
+<input id="search" type="search" list="catalogSuggestions" placeholder="Ej. Toyota Corolla, Leapmotor C10, Ford F-150..." autocomplete="off" aria-autocomplete="list" aria-describedby="searchStatus" spellcheck="false">
+<datalist id="catalogSuggestions"></datalist>
+<button id="catalogSearchButton" type="submit" aria-label="Buscar marca o modelo en todas las homologaciones">Buscar <span aria-hidden="true">→</span></button></form>
+<p class="catalog-hint">Escribe una marca o modelo para ver sugerencias, o selecciónalos en los filtros.</p></div></div>
+<div class="toolbar catalog-primary-filters">
+<div class="field"><label for="brand">Marca</label><select id="brand"><option value="">Todas las marcas</option></select></div>
+<div class="field"><label for="model">Modelo / versión</label><select id="model" disabled aria-describedby="modelStatus"><option value="">Selecciona primero una marca</option></select><small class="model-status" id="modelStatus">Elige una marca para desplegar sus modelos.</small></div>
+<div class="field"><label for="tech">Tecnología</label><select id="tech"><option value="">Todas las tecnologías</option><option>Bencina</option><option>Diésel</option><option>MHEV</option><option>HEV</option><option>PHEV</option><option>REEV</option><option>EV</option></select></div>
+<div class="field"><label for="bodytype">Carrocería</label><select id="bodytype"><option value="">Todas las carrocerías</option></select></div></div>
 <div class="search-feedback" role="status" aria-live="polite"><span id="searchStatus">Busca en el historial completo: ningún año ni ciclo prefiltrado.</span><button class="button search-show-all" id="showAllSearch" type="button" hidden>Ver coincidencias en todo el catálogo →</button></div>
 <div class="toolbar second"><div class="field"><label for="cycle">Ciclo de ensayo</label><select id="cycle"><option value="" selected>Todos los ciclos (NEDC y WLTP)</option><option value="WLTP">Solo WLTP</option><option value="NEDC">Solo NEDC</option></select></div><div class="field"><label for="year">Homologados desde</label><select id="year"><option value="" selected>Todo el historial</option><option value="2025">Desde 2025</option><option value="2024">Desde 2024</option><option value="2020">Desde 2020</option><option value="2015">Desde 2015</option></select></div><div class="field"><label for="sort">Ordenar resultados</label><select id="sort"><option value="recent">Fecha más reciente</option><option value="cheapest">Menor costo por 100 km</option><option value="expensive">Mayor costo por 100 km</option><option value="name">Marca y modelo</option></select></div><div class="field"><label>Tarifa energética</label><a class="button charge-config-link" href="#energyPanel">Configurar electrolinera ↗</a></div></div>
 <details style="margin-top:19px" id="energyPanel"><summary style="font-weight:750;cursor:pointer;color:var(--navy);font-size:13px">Modificar precios de energía ($/L y $/kWh)</summary>
@@ -112,5 +133,5 @@ footer{background:#071f34;color:#bed0df;margin-top:20px;padding:39px 0 0}.footer
 <footer id="autor"><div class="shell footer-inner"><div><div class="footer-logo"><span>RINDE</span><em>LAB</em></div><div class="footer-tag">INTELIGENCIA VEHICULAR BASADA EN DATOS</div><p>Con las alzas, cada peso cuenta.</p></div><div class="footer-links"><a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#comparator">Comparador</a><a href="#metodologia">Metodología</a></div><div class="footer-credit"><strong>Creada por Sebastián Elgueta Godoy</strong><a href="mailto:e.elguetagodoy@gmail.com">e.elguetagodoy@gmail.com</a><small>Chequea la información en los sitios oficiales.</small></div></div><div class="shell footer-bottom">Proyecto independiente de análisis vehicular · Fuente de datos: Ministerio de Energía y 3CV · Corte de base: mayo de 2026</div></footer>
 <dialog id="detail" aria-labelledby="detailTitle"><div class="modalhead"><h2 id="detailTitle">Ficha técnica</h2><button type="button" class="button" id="closeDetail" aria-label="Cerrar ficha">Cerrar ×</button></div><div class="modalbody" id="detailBody"></div></dialog>
 <script src="./ui-v2.js" defer></script>
-<script src="./app-v2.js" defer></script>
+<script src="./app-v2.js?v=20261017-modelos1" defer></script>
 </body></html>
