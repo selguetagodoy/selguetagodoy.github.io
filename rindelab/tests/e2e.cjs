@@ -315,7 +315,7 @@ await test('Enchufables no presentan un orden por costo que no pueden calcular',
  assert.equal(await page.inputValue('#sort'),'cheapest');
 });
 await test('Comparación enchufable y eléctrico desglosa rendimientos sin inferir costos',async()=>{
- await page.click('#compareClear');
+ if(await page.locator('#compareTray').isVisible())await page.click('#compareClear');
  await page.click('#resetButton');
  await page.selectOption('#tech','PHEV');
  await page.click('#searchButton');
