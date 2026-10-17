@@ -279,7 +279,7 @@ await test('Comparar exactamente dos vehículos y limpiar selección',async()=>{
  await page.locator('.vehicle-card button[data-compare]').nth(1).click();
  assert(await page.locator('#compareOpen').isEnabled());await page.locator('#compareOpen').click();
  assert(await page.locator('#compareDialog').evaluate(x=>x.open));
- assert.equal(await page.locator('#compareContent .compare-row').count(),8);
+ assert.equal(await page.locator('#compareContent .compare-row').count(),11);
  await page.locator('#compareClose').click();await page.click('#compareClear');
  assert(await page.locator('#compareTray').isHidden());
 });
@@ -317,7 +317,7 @@ await test('Ventana de cinco columnas permite scroll, quitar uno y agregar otro'
  await page.click('#compareOpen');
  assert(await page.locator('#compareDialog').evaluate(e=>e.open));
  assert.equal(await page.locator('.comparison-table thead th').count(),6);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),7);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),10);
  assert.equal(await page.locator('.compare-model-cell').count(),5);
  const horizontal=await page.locator('.compare-scroller').evaluate(e=>({width:e.scrollWidth,visible:e.clientWidth,start:e.scrollLeft}));
  if(horizontal.width>horizontal.visible+2){
@@ -395,7 +395,7 @@ await test('Comparación enchufable y eléctrico desglosa rendimientos sin infer
  assert(labels.includes('Rendimiento eléctrico (km/kWh)'));
  assert(labels.includes('Rendimiento ponderado (km/L)'));
  assert.equal(await page.locator('.comparison-table thead th').count(),4);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),9);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),12);
  const note=await page.locator('#compareContent').textContent();
  assert.match(note,/Sin dato comparable/);
  await page.click('#compareClose');
@@ -421,6 +421,52 @@ await test('Orden global mezcla ciclos y muestra su etiqueta individual',async()
  assert(labels.every(x=>x==='WLTP'||x==='NEDC'||x==='Ciclo no informado'));
  assert.equal(await page.locator('.group-label').count(),0);
  assert.match(await page.locator('#sortNote').textContent(),/Orden único/);
+});
+await test('Consulta SII requiere año y selección expresa antes de mostrar tasación',async()=>{
+ await page.click('#resetButton');
+ await page.fill('#query','Corolla Cross');await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ assert(await page.locator('#siiSection').isVisible());
+ assert.match(await page.locator('#siiCurrentValue').textContent(),/Elige el año y la versión/);
+ await page.click('#siiShowLookup');
+ await page.waitForFunction(()=>!!document.querySelector('#siiBrand option[value="TOYOTA"]'));
+ assert.equal(await page.inputValue('#siiBrand'),'TOYOTA');
+ await page.fill('#siiModelQuery','Corolla Cross');
+ await page.click('#siiSearch');
+ assert.match(await page.locator('#siiMatches').textContent(),/Selecciona la marca y el año/);
+ await page.selectOption('#siiYear','2025');
+ await page.click('#siiSearch');
+ await page.locator('.sii-item').first().waitFor({state:'visible'});
+ assert((await page.locator('.sii-item').count())>=1);
+ assert.match(await page.locator('.sii-item').first().textContent(),/Código SII: /);
+ await page.locator('.sii-item button').first().click();
+ assert.match(await page.locator('#siiCurrentValue').textContent(),/Tasación fiscal SII 2026/);
+ assert.match(await page.locator('#siiCurrentValue').textContent(),/Permiso circulación 2026/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/No hay un precio de venta nuevo verificado/);
+ await page.locator('#detailClose').click();
+});
+await test('Tasación y permiso seleccionados aparecen en comparación de dos vehículos',async()=>{
+ if(await page.locator('#compareTray').isVisible())await page.click('#compareClear');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ await page.locator('.vehicle-card button[data-compare]').nth(1).click();
+ await page.click('#compareOpen');
+ const data=await page.locator('#compareContent').textContent();
+ assert.match(data,/Tasación fiscal SII 2026/);
+ assert.match(data,/Permiso de circulación 2026/);
+ assert(data.includes('Precio comercial nuevo (desde)'));
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),10);
+ assert.match(data,/22.354.806|23.139.460|21.570.147|18.775.083|20.189.698/);
+ await page.locator('#compareClose').click();
+ await page.click('#compareClear');
+});
+await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores inferidos',async()=>{
+ const m=await page.evaluate(async()=>fetch('./sii/data/index.json').then(r=>r.json()));
+ assert.equal(m.records,81697);
+ assert.equal(m.skipped,0);
+ assert.equal(m.missingValue,0);
+ assert.equal(m.year,2026);
+ assert(m.buckets.length>=20);
+ assert(m.brands.length>=260);
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
@@ -466,7 +512,20 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert(dim.doc<=dim.screen+3);
   await p.locator('#statsClose').click();
  });
-  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
+  await test('Tasación SII accesible en móvil y tableta '+width+' px',async()=>{
+  await p.click('#resetButton');
+  await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+  await p.locator('.vehicle-card button[data-detail]').first().click();
+  await p.locator('#siiShowLookup').click();
+  await p.waitForFunction(()=>!!document.querySelector('#siiBrand option[value="TOYOTA"]'));
+  await p.selectOption('#siiYear','2025');await p.fill('#siiModelQuery','Corolla Cross');await p.click('#siiSearch');
+  await p.locator('.sii-item').first().waitFor({state:'visible'});
+  assert((await p.locator('.sii-item').count())>0);
+  const w=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,screen:innerWidth}));
+  assert(w.doc<=w.screen+3);
+  await p.locator('#detailClose').click();
+ });
+ await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
   const dimensions=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,search:document.querySelector('#searchButton').getBoundingClientRect().height,searchTop:document.querySelector('#searchButton').getBoundingClientRect().top+scrollY}));
   assert(dimensions.doc<=dimensions.view+3,JSON.stringify(dimensions));
   assert(dimensions.search>=44);

@@ -234,6 +234,7 @@ function showDetail(i){
   '</p>'+
   '<dl class="details-list">'+items.map(([k,v])=>'<dt>'+safe(k)+'</dt><dd>'+safe(v===null||v===''?'N/D':v)+'</dd>').join('')+'</dl>';
  $('detailDialog').showModal();
+ if(window.RindelabSII)window.RindelabSII.show(r,family(r));
 }
 const MAX_COMPARE=5;
 function syncCompareScrollControls(){
@@ -326,6 +327,7 @@ function renderComparisonContent(){
   '<div class="compare-scroller" tabindex="0" role="region" aria-label="Tabla comparativa desplazable horizontalmente">'+
   '<table class="comparison-table" style="--compare-columns:'+columns+'">'+header+body+'</table></div>'+
   '<p class="compare-note">Costos energéticos referenciales por 100 km, no costo de propiedad ni consumo real. Para comparar rendimientos directamente, utiliza un mismo ciclo y tecnología.</p>';
+ if(window.RindelabSII)window.RindelabSII.decorateComparison(vehicles);
  const scroller=$('compareContent').querySelector('.compare-scroller');
  scroller.addEventListener('scroll',syncCompareScrollControls,{passive:true});
  syncCompareScrollControls();
@@ -513,5 +515,6 @@ $('compareClose').addEventListener('click',()=>$('compareDialog').close());
 window.addEventListener('resize',syncCompareScrollControls);
 $('detailClose').addEventListener('click',()=>$('detailDialog').close());
 $('detailDialog').addEventListener('close',()=>{const url=new URL(location.href);if(url.searchParams.has('codigo')){url.searchParams.delete('codigo');history.replaceState(null,'',url.pathname+url.search+url.hash);}});
+if(window.RindelabSII)window.RindelabSII.family=family;
 init();
 })();
