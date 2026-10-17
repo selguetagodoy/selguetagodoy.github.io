@@ -19,7 +19,10 @@ function cleanRecord(source){
  const r=source.slice();r[F.BRAND]=brandAlias[r[F.BRAND]]||r[F.BRAND];
  const name=r[F.MODEL]||'';
  if(r[F.TECH]==='Bencina'&&/\b(?:HYBRID|HIBRID[OA]|HÍBRID[OA]|E-HYBRID|HEV)\b/i.test(name)){
-   r[F.TECH]=/\bMHEV\b|MILD[\s-]?HYBRID|\bISG\b|48V/i.test(name)?'MHEV':'Híbrido por verificar';
+   // Fiat 600 Hybrid y Jeep Avenger E-Hybrid corroborados por documentación de fabricante.
+   // Para otros nombres "Hybrid" sin ficha revisada no se infiere HEV ni MHEV.
+   const verifiedMhev=/^Fiat 600 Hybrid$/i.test(r[F.BRAND]+' '+name)||/^Jeep(?: Jeep)? Avenger .*E-Hybrid$/i.test(r[F.BRAND]+' '+name);
+   r[F.TECH]=verifiedMhev||/\bMHEV\b|MILD[\s-]?HYBRID|\bISG\b|48V/i.test(name)?'MHEV':'Híbrido por verificar';
  }
  if(r[F.TECH]==='MHEV' && !/ISG|MHEV|MILD[\s-]?HYBRID|48V/i.test(name)){
    r[F.TECH]='Híbrido por verificar';
