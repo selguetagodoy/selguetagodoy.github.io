@@ -212,6 +212,28 @@ const assert = require('node:assert/strict');
   const dimensions=await mobile.evaluate(()=>({doc:document.documentElement.scrollWidth,view:window.innerWidth}));
   assert(dimensions.doc<=dimensions.view+3,'Desbordamiento global: '+JSON.stringify(dimensions));
  });
+ await test('Pantalla compacta de 320 px sin desbordamiento',async()=>{
+  const small=await browser.newPage({viewport:{width:320,height:700},isMobile:true,deviceScaleFactor:1});
+  try{
+   await small.goto(base,{waitUntil:'networkidle'});
+   await small.waitForFunction(()=>document.querySelector('#sTotal')?.textContent==='8.053');
+   const d=await small.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,hero:document.querySelector('.hero').getBoundingClientRect().height}));
+   assert(d.doc<=d.view+3,JSON.stringify(d));assert(d.hero<800,JSON.stringify(d));
+   await small.locator('#search').fill('Corolla Cross');
+   assert.equal(await small.locator('#sTotal').textContent(),'4');
+  }finally{await small.close()}
+ });
+ await test('Tableta de 768 px con filtros y resultados utilizables',async()=>{
+  const tablet=await browser.newPage({viewport:{width:768,height:1024},deviceScaleFactor:1});
+  try{
+   await tablet.goto(base,{waitUntil:'networkidle'});
+   await tablet.waitForFunction(()=>document.querySelector('#sTotal')?.textContent==='8.053');
+   await tablet.locator('#search').fill('Toyota Hilux');
+   assert(Number((await tablet.locator('#sTotal').textContent()).replace(/\./g,''))>0);
+   const widths=await tablet.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+   assert(widths.doc<=widths.view+3,JSON.stringify(widths));
+  }finally{await tablet.close()}
+ });
  await mobile.close();await browser.close();
  console.log('\n'+checks+' pruebas aprobadas · '+failures+' fallidas');
  if(failures)process.exit(1);
