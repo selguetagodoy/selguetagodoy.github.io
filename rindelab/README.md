@@ -1,43 +1,48 @@
 # RINDELAB · Con las alzas, cada peso cuenta
 
-**RINDELAB** es la interfaz de análisis de costos de energía vehicular y rendimientos homologados en Chile, creada por Sebastián Elgueta Godoy.
+Herramienta independiente de consulta y comparación de homologaciones vehiculares chilenas. Creada por **Sebastián Elgueta Godoy**.
 
-## Abrir sitio
+Sitio: https://selguetagodoy.github.io/rindelab/
 
-La interfaz principal es `/rindelab/index.html`; al publicar el repositorio con GitHub Pages queda disponible en:
+## Versión 5 — navegación centrada en búsqueda
 
-https://selguetagodoy.github.io/rindelab/
+- **Búsqueda libre por marca, modelo, versión y código** con coincidencias normalizadas; admite separadores alternativos y variantes de escritura conocidas.
+- **Búsqueda como primer control del catálogo**, sin obligar a escoger una categoría.
+- **Filtros dependientes**: categoría → marcas compatibles → familias de modelos disponibles; motorización, ciclo, fecha y carrocería refinan los listados.
+- Ante **filtros incompatibles**, se indica cuántas coincidencias existen en el catálogo completo y se permite eliminar filtros con una acción.
+- **Correcciones sugeridas** ante errores de escritura, sin inventar vehículos.
+- Orden explícito por **más relevantes**, **homologaciones más recientes**, marca/modelo y costo condicionado a tecnología/ciclo homogéneos.
+- **10 resultados iniciales** y botón para mostrar otros diez, en lugar de desplegar 25 fichas largas.
+- Comparador de **2 a 4 vehículos**, con bandeja de selección persistente, navegación horizontal accesible y advertencia al mezclar ciclos NEDC y WLTP. No desplaza automáticamente la pantalla al elegir el segundo vehículo.
+- Interfaz móvil simplificada: menú compacto, portada reducida, controles táctiles de al menos 44 píxeles en acciones principales, filtros verticales y comparador desplazable con botones.
+- Los análisis detallados, las tecnologías y la metodología quedan en paneles desplegables; el CSV está en **Más herramientas**.
+- Hoja de estilos activa única `ux-v5.css`; módulos activos `app-v5.js` y `ui-v5.js`.
 
-El visualizador usa la misma base de datos en `../vehiculos/data/` para evitar duplicar las 9 particiones de datos. **Ambas carpetas deben existir juntas en la rama publicada.**
+## Base y límites metodológicos
 
-## Identidad
+La fuente es el registro público 3CV del Ministerio de Energía, con corte declarado **8 de mayo de 2026**. El manifiesto conserva **8.056 registros**, mientras la vista muestra **8.053**: tres fichas poseen fechas posteriores al corte y se excluyen deliberadamente de la consulta. Esta diferencia no constituye por sí misma un error de transcripción; las fechas deben verificarse en la planilla fuente antes de corregirlas.
 
-- Marca: **RINDELAB**.
-- Propuesta editorial: *Inteligencia vehicular basada en datos*.
-- Eslogan: *Con las alzas, cada peso cuenta*.
-- Advertencia: *Chequea la información en los sitios oficiales*.
-- Firma: *Creada por Sebastián Elgueta Godoy*.
-- Contacto: e.elguetagodoy@gmail.com.
-- Azul petróleo `#0a2138`, turquesa `#23d9d2`, blanco `#ffffff`.
+- La categoría navegable se construye a partir de la **carrocería 3CV**. «Station Wagon» no es una certificación de segmento SUV.
+- Cada fila conserva ciclo de homologación, fecha, código 3CV, carrocería y otros campos del registro.
+- La **motorización declarada en 3CV** se conserva y presenta separadamente de la **clasificación interpretativa** utilizada para orientar los filtros. La marca original también queda distinguida en la ficha y el CSV.
+- Fórmulas de escenarios: combustibles `100 / km_por_litro × CLP_por_litro`; EV `100 / km_por_kWh × CLP_por_kWh × (1 + pérdidas_asumidas)`.
+- Los indicadores ponderados de **PHEV y REEV** no se equiparan a consumos por modo con batería descargada. El simulador manual utiliza exclusivamente valores introducidos por el usuario.
+- No mezclar directamente rendimientos **NEDC y WLTP**. Ninguna homologación acredita disponibilidad comercial actual, precio de compra ni consumo real en ruta.
+- Las tarifas iniciales son supuestos editables, **no cotizaciones en tiempo real**.
 
-## Datos y metodología
+Planilla fuente: https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx
 
-Registros de homologación 3CV del Ministerio de Energía, base publicada el 8 de mayo de 2026. No implican disponibilidad comercial en octubre de 2026. Se conserva ciclo NEDC o WLTP, la fecha, la homologación por código y las distintas motorizaciones.
+## Pruebas
 
-**Cálculos:** combustible `100 / km/L × precio/L`; electricidad `100 / km/kWh × precio/kWh × (1 + porcentaje de pérdidas asumidas)`. Para enchufables, PHEV y REEV muestran por separado los costos eléctricos y de combustible declarados. Los resultados representan escenarios comparativos, no promesas de costo real.
+Suite reproducible `rindelab/tests/e2e.cjs` con Playwright Chromium, que verifica carga y recuentos, búsqueda de Corolla Cross, dependencias categoría/marca/modelo, conflictos de filtros, errores tipográficos, tarifas, ordenamiento, comparador, móvil y ausencia de desbordamiento horizontal.
 
-Precios iniciales editables: bencina 93 ($1.535/L), 95 ($1.572/L), 97 ($1.613/L), diésel ($1.503/L), AC ($340/kWh), DC ($495/kWh), con corte de referencia 16 de octubre de 2026.
+Local:
+1. Servir la raíz del repositorio: `python3 -m http.server 8765`.
+2. Instalar `playwright` y navegador Chromium: `npm install --no-save playwright && npx playwright install chromium`.
+3. Ejecutar `node rindelab/tests/e2e.cjs`.
 
-## Componentes
+CI: `.github/workflows/rindelab-ui-e2e.yml`, activo para pull requests y cambios a `main`.
 
-- `index.html`: portal responsivo, portada, catálogo, comparador, costo por 100 km, tabla y CSV.
-- `hero-rindelab.svg`: ilustración vectorial original del paisaje urbano chileno y vehículos.
-- `favicon.svg`: identidad abreviada RINDELAB.
-- `../vehiculos/data/manifest.json`: fecha de corte y estructura de datos.
-- `../vehiculos/data/vehiculos_01.json` a `vehiculos_09.json`: fichas homologadas.
+## Autoría y contacto
 
-## Estado
-
-El código de front-end ha superado validación sintáctica de JavaScript y referencia todos los IDs críticos de interfaz. La verificación en navegador y el despliegue final en Pages son pasos adicionales. Cualquier ranking que combine tecnologías o ciclos requiere lectura de sus advertencias metodológicas.
-
-Proyecto independiente, sin patrocinio ni afiliación oficial con las marcas.
+**Sebastián Elgueta Godoy** · e.elguetagodoy@gmail.com. «Chequea la información en los sitios oficiales». Proyecto independiente sin afiliación ni patrocinio de fabricantes.
