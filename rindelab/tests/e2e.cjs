@@ -105,7 +105,7 @@ await test('REEV muestra sus 8 registros y ambas métricas con orden dinámico',
  await page.selectOption('#statsMetric','electric');
  await page.locator('.rank-item').first().click();
  assert(await page.locator('#statsDialog').isHidden());
- assert.match(await page.locator('#detailContent').textContent(),/Rendimiento oficial/);
+ assert.match(await page.locator('#detailContent').textContent(),/Rendimiento eléctrico informado/);
  await page.locator('#detailClose').click();
 });
 await test('Desaparece híbrido por verificar y se conserva tecnología 3CV',async()=>{
