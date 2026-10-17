@@ -6,10 +6,19 @@ const clp=n=>Number.isFinite(n)?'$'+Math.round(n).toLocaleString('es-CL'):'Sin p
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const makeIdentity=p=>norm([p.brand,p.family,p.version,p.modelYear||'N/A'].join(' '));
+function ageDays(value){
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(String(value||'')))return null;
+ const checked=Date.parse(value+'T00:00:00Z');
+ return Number.isFinite(checked)?Math.max(0,Math.floor((Date.now()-checked)/86400000)):null;
+}
+function ageWarning(record){
+ const days=ageDays(record?.checkedAt);
+ return days!==null&&days>=30?'Datos revisados hace '+days+' días. Confirma el precio de lista en el sitio oficial antes de comparar o comprar.':'';
+}
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[];
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261017-list63').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261017-list84').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
   return loaded;
@@ -42,7 +51,8 @@ function render(section,row,family){
   const summary=document.createElement('div');summary.className='sii-selected-price';
   summary.innerHTML='<small>VERSIÓN COMERCIAL SELECCIONADA</small><strong>'+clp(chosen.priceListClp)+'</strong>'+
    '<p>'+esc(chosen.brand+' '+chosen.family+' · '+chosen.version)+(chosen.modelYear?' · modelo '+chosen.modelYear:' · año de modelo no informado')+'</p>'+
-   '<p class="sii-small">Precio consultado '+esc(chosen.checkedAt)+'. Confirma vigencia con la fuente antes de comprar.</p>'+
+   '<p class="sii-small">Fecha de consulta: '+esc(chosen.checkedAt)+'. El fabricante puede modificar el precio sin previo aviso.</p>'+
+   (ageWarning(chosen)?'<p class="sii-price-age" role="status">'+esc(ageWarning(chosen))+'</p>':'')+
    '<a href="'+esc(chosen.source)+'" target="_blank" rel="noopener noreferrer">Ver precio en sitio oficial ↗</a>';
   const remove=document.createElement('button');remove.type='button';remove.className='button secondary';remove.textContent='Quitar versión comercial';
   remove.addEventListener('click',()=>{clear(row);render(section,row,family);});
@@ -59,7 +69,9 @@ function render(section,row,family){
  const list=document.createElement('div');list.className='sii-price-list';
  for(const p of available){
   const item=document.createElement('article');item.className='sii-price-item';
-  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>Lista sin bonos · fuente revisada '+esc(p.checkedAt)+'</span></div><div class="sii-price-amount">'+clp(p.priceListClp)+'</div>';
+  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>Lista sin bonos · consultado '+esc(p.checkedAt)+'</span>'+
+    (ageWarning(p)?'<span class="sii-price-age">'+esc(ageWarning(p))+'</span>':'')+
+    '</div><div class="sii-price-amount">'+clp(p.priceListClp)+'</div>';
   const actions=document.createElement('div');actions.className='sii-price-actions';
   const choose=document.createElement('button');choose.type='button';choose.className='button secondary';choose.textContent='Elegir esta versión';
   choose.disabled=!!chosen&&makeIdentity(chosen)===makeIdentity(p);
