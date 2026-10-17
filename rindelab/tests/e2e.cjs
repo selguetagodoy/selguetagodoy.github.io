@@ -45,7 +45,7 @@ await test('Estadísticas cambian al ordenar mayor costo y al filtrar camionetas
  assert(values.every((v,i)=>i===0||values[i-1]>=v),'Top 10 mayor costo: '+JSON.stringify(values));
  await page.selectOption('#statsBody','pickup');
  assert.equal(await page.locator('.rank-item').count(),10);
- assert.match(await page.locator('#statsResultCount').textContent(),/fichas comparables/);
+ assert.match(await page.locator('#statsResultCount').textContent(),/fichas con esta medida/);
  assert((await page.locator('.rank-item').allTextContents()).every(x=>x.includes('Camioneta')));
  await page.locator('#statsClose').click();
 });
@@ -87,7 +87,6 @@ await test('PHEV muestra 232 fichas y rendimiento eléctrico y ponderado sin cos
 });
 await test('REEV muestra sus 8 registros y ambas métricas con orden dinámico',async()=>{
  await page.locator('#statsOpen').click();
- await page.selectOption('#statsMetric','cost');
  await page.selectOption('#statsTech','REEV');
  assert.equal(await page.inputValue('#statsMetric'),'electric');
  assert.match(await page.locator('#statsResultCount').textContent(),/^8 fichas/);
@@ -125,8 +124,8 @@ await test('Desaparece híbrido por verificar y se conserva tecnología 3CV',asy
 });
 await test('Ranking abre ficha completa y cierra estadísticas',async()=>{
  await page.locator('#statsOpen').click();
- await page.selectOption('#statsMetric','cost');
  await page.selectOption('#statsTech','Bencina');
+ await page.selectOption('#statsMetric','cost');
  await page.selectOption('#statsBody','');
  await page.locator('.rank-item').first().click();
  assert(await page.locator('#statsDialog').isHidden());
