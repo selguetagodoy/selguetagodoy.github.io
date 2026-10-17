@@ -59,6 +59,16 @@ footer{background:#071f34;color:#bed0df;margin-top:20px;padding:39px 0 0}.footer
 
 </style>
 <link rel="stylesheet" href="./audit-v2.css?v=20261017-modelos1">
+<style id="critical-catalog-layout">
+/* Estilos críticos integrados para evitar botones desalineados por caché de CSS externo */
+.catalog-search-form{display:grid!important;grid-template-columns:minmax(0,1fr) 126px!important;align-items:stretch!important;gap:10px!important;width:100%!important;margin:0!important}
+.catalog-search-form input{min-width:0!important;width:100%!important;min-height:50px!important;border-radius:9px!important;box-sizing:border-box!important}
+.catalog-search-form button{display:flex!important;align-items:center!important;justify-content:center!important;background:#0b426c!important;border:1px solid #0b426c!important;color:#fff!important;font:800 13px system-ui,sans-serif!important;border-radius:9px!important;min-height:50px!important;width:126px!important;cursor:pointer!important;padding:9px 13px!important}
+.catalog-search-top{width:100%;margin-bottom:16px}
+.catalog-primary-filters{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:13px}
+@media(max-width:1080px){.catalog-primary-filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){.catalog-search-form{grid-template-columns:minmax(0,1fr) 86px!important;gap:7px!important}.catalog-search-form button{width:86px!important;font-size:12px!important}.catalog-primary-filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style>
 </head>
 <body>
 <div class="top" id="inicio"><div class="shell sitebar">
