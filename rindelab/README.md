@@ -9,9 +9,11 @@ Web pública: https://selguetagodoy.github.io/rindelab/
 1. Escribir marca o modelo, o seleccionar **Marca → Modelo → Motorización**.
 2. Pulsar **Buscar vehículos**. Los resultados no aparecen ni cambian antes del clic.
 3. Ordenar la lista por **homologación más reciente**, **menor costo estimado**, **mayor costo estimado** o **marca y modelo**.
-4. Seleccionar **Ver ficha** para revisar los datos 3CV, o **Comparar +** en dos vehículos y abrir el comparador.
-5. Ampliar los **Filtros técnicos adicionales** cuando se requiera ciclo, fecha o carrocería.
-6. Consultar la metodología o editar los precios referenciales en **Metodología y fuentes**.
+4. Elegir **Ver ficha** para revisar los datos 3CV o pulsar **Comparar +** para seleccionar **entre dos y cinco vehículos**. La bandeja conserva modelos al hacer una nueva búsqueda, incluso al usar «Limpiar» (que solo restablece filtros).
+5. Desde la bandeja o la ventana de comparación, utilizar **«+ Agregar otro»** para buscar otra marca o modelo. Cada vehículo puede retirarse individualmente con «×», sin vaciar la lista. Con cinco modelos se puede reemplazar uno quitándolo primero.
+6. Pulsar **«Comparar N vehículos»** para abrir la tabla lateral. En pantallas estrechas se desplaza horizontalmente con el dedo o las flechas; cuando caben todas las columnas no se muestran controles de desplazamiento.
+7. Ampliar los **Filtros técnicos adicionales** cuando se requiera ciclo, fecha o carrocería.
+8. Consultar la metodología o editar los precios referenciales en **Metodología y fuentes**.
 
 La interfaz principal no incluye contadores de marcas, rankings de extremos, simuladores híbridos independientes, banners educativos ni comparador vacío. Tiene un único formulario, resultados y comparación opcional.
 
