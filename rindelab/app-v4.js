@@ -238,10 +238,13 @@ function categoryApplies(r,key){
  return Boolean(c && c.types && c.types.includes(r[F.BODY]));
 }
 function updateCategoryCounts(){
+ const select=$('category');
  for(const cat of categories){
+  const count=all.filter(r=>categoryApplies(r,cat.id)).length;
   const span=$('count-'+(cat.id||'all'));
-  if(!span)continue;
-  span.textContent=fmt(all.filter(r=>categoryApplies(r,cat.id)).length);
+  if(span)span.textContent=fmt(count);
+  const option=[...select.options].find(o=>o.value===cat.id);
+  if(option)option.textContent=(cat.id?cat.label:'Todas las categorías')+' · '+fmt(count)+' fichas';
  }
  updateCategorySelection();
 }
