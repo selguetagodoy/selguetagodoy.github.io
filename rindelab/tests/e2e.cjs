@@ -30,6 +30,14 @@ const assert = require('node:assert/strict');
   const allBody=await page.locator('#tbody tr').allTextContents();
   assert(allBody.every(s=>s.toLowerCase().includes('camioneta')));
  });
+ await test('Desplegable de categoría visible y sincronizado con tarjetas',async()=>{
+  assert(await page.locator('#category').isVisible());
+  const option=page.locator('#category option[value="sedan"]');
+  assert.match(await option.textContent(),/1\.072/);
+  await page.selectOption('#category','sedan');
+  assert.match(await page.locator('#sTotal').textContent(),/1\.072/);
+  assert.equal(await page.locator('#categoryChips button[data-category="sedan"]').getAttribute('aria-pressed'),'true');
+ });
  await test('Categoría sedán y reset',async()=>{
   await page.locator('#categoryChips button[data-category="sedan"]').click();
   assert.match(await page.locator('#sTotal').textContent(),/1\.072/);
