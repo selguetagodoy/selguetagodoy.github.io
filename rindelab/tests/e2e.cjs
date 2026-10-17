@@ -473,15 +473,15 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
 });
-await test('Catálogo de 92 precios de lista sin bonos con fuente oficial',async()=>{
+await test('Catálogo de 114 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,92);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Changan','Ford','Hyundai','Kia','MG','Suzuki','Toyota']);
+ assert.equal(list.length,114);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Changan','Ford','Hyundai','Kia','MG','Mazda','Subaru','Suzuki','Toyota']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.mazda\.cl|www\.subaru\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -522,9 +522,9 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
  await page.click('#detailClose');
 });
 await test('Ampliación Hyundai: once precios de lista con fuentes oficiales',async()=>{
- const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
+ const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list114').then(r=>r.json()));
  const hyundai=p.filter(x=>x.brand==='Hyundai');
- assert.equal(p.length,92);
+ assert.equal(p.length,114);
  assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
@@ -543,7 +543,7 @@ await test('Creta Grand conserva su familia independiente de Creta',async()=>{
  assert.deepEqual(f,['Creta Grand','Creta Grand','Creta']);
 });
 await test('Ampliación Suzuki y MG: 27 nuevas versiones con precio de lista',async()=>{
- const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list114').then(r=>r.json()));
  const suzuki=list.filter(x=>x.brand==='Suzuki'),mg=list.filter(x=>x.brand==='MG');
  assert.equal(suzuki.length,12);
  assert.equal(mg.length,15);
@@ -585,7 +585,7 @@ await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselec
  await page.locator('#detailClose').click();
 });
 await test('Changan: 21 precios de lista oficiales en siete familias diferenciadas',async()=>{
- const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list114').then(r=>r.json()));
  const v=list.filter(x=>x.brand==='Changan'),groups={};
  for(const x of v){groups[x.family]=(groups[x.family]||0)+1;assert(x.source.startsWith('https://www.changan.cl/'));}
  assert.equal(v.length,21);
@@ -650,7 +650,7 @@ await test('Changan Deepal y AVATR tienen listas independientes y fuente especí
  }
 });
 await test('Ford: ocho precios de lista vigentes para Territory y Maverick',async()=>{
- const items=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
+ const items=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list114').then(r=>r.json()));
  const ford=items.filter(x=>x.brand==='Ford');
  assert.equal(ford.length,8);
  assert.equal(ford.filter(x=>x.family==='Territory').length,4);
@@ -684,6 +684,55 @@ await test('Ford Maverick ofrece cuatro versiones sin atribuir precio por coinci
  assert.match(await page.locator('#siiCommercial').textContent(),/31\.285\.100/);
  assert.match(await page.locator('#siiCommercial').textContent(),/40\.210\.100/);
  await page.locator('#detailClose').click();
+});
+await test('Mazda: 12 precios de lista CX-30/CX-3/CX-5 con modelo 2027 confirmado',async()=>{
+ const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list114').then(r=>r.json()));
+ const mazda=all.filter(x=>x.brand==='Mazda');
+ assert.equal(mazda.length,12);
+ for(const [family,n] of [['CX-30',5],['CX-3',2],['CX-5',5]]){
+  assert.equal(mazda.filter(x=>x.family===family).length,n);
+ }
+ assert(mazda.every(x=>x.modelYear===2027));
+ assert.equal(mazda.find(x=>x.version==='ENTRY 2.0 2WD AT 7G').priceListClp,22990000);
+ assert.equal(mazda.find(x=>x.version==='HIGH 2.5 AWD 6AT 7G').priceListClp,29690000);
+ assert.equal(mazda.find(x=>x.family==='CX-3'&&x.version==='CORE 2.0 MT').priceListClp,19790000);
+ assert.equal(mazda.find(x=>x.version==='SIGNATURE 2.5T AWD 6AT').priceListClp,35190000);
+ assert(mazda.every(x=>x.source.startsWith('https://www.mazda.cl/')));
+});
+await test('Subaru: 10 precios de lista Crosstrek, Forester y Outback con año no supuesto',async()=>{
+ const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list114').then(r=>r.json()));
+ const subaru=all.filter(x=>x.brand==='Subaru');
+ assert.equal(subaru.length,10);
+ assert.equal(subaru.filter(x=>x.family==='Crosstrek').length,4);
+ assert.equal(subaru.filter(x=>x.family==='Forester').length,4);
+ assert.equal(subaru.filter(x=>x.family==='Outback').length,2);
+ assert(subaru.filter(x=>x.family==='Outback').every(x=>x.modelYear===null));
+ assert.equal(subaru.find(x=>x.family==='Forester'&&x.version==='2.5 AWD CVT XS ES').priceListClp,31490000);
+ assert.equal(subaru.find(x=>x.family==='Crosstrek'&&x.version==='2.0I AWD CVT').priceListClp,25990000);
+ assert.equal(subaru.find(x=>x.family==='Outback'&&x.version==='Premium').priceListClp,37990000);
+ assert(subaru.every(x=>x.source.startsWith('https://www.subaru.cl/')));
+});
+await test('Mazda CX30 y CX-30 comparten catálogo sin asignación automática',async()=>{
+ for(const term of ['CX30','CX-30']){
+  await page.click('#resetButton');await page.fill('#query',term);await page.click('#searchButton');
+  assert((await page.locator('.vehicle-card').count())>0,'Sin resultados '+term);
+  await page.locator('.vehicle-card button[data-detail]').first().click();
+  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===5);
+  assert.equal(await page.locator('.sii-selected-price').count(),0);
+  assert.match(await page.locator('#siiCommercial').textContent(),/22\.990\.000/);
+  assert.match(await page.locator('#siiCommercial').textContent(),/29\.690\.000/);
+  await page.locator('#detailClose').click();
+ }
+});
+await test('Subaru Forester y Crosstrek separan familias y conservan cuatro versiones',async()=>{
+ for(const term of ['Forester 2.5','Crosstrek']){
+  await page.click('#resetButton');await page.fill('#query',term);await page.click('#searchButton');
+  assert((await page.locator('.vehicle-card').count())>0,'Sin resultados '+term);
+  await page.locator('.vehicle-card button[data-detail]').first().click();
+  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
+  assert.equal(await page.locator('.sii-selected-price').count(),0);
+  await page.locator('#detailClose').click();
+ }
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
@@ -746,6 +795,14 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   await p.click('#resetButton');await p.fill('#query','Corolla Cross');await p.click('#searchButton');
   await p.locator('.vehicle-card button[data-detail]').first().click();
   await p.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
+  const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+  assert(size.doc<=size.view+3);
+  await p.locator('#detailClose').click();
+ });
+ await test('Precios Mazda disponibles en ficha móvil '+width+' px',async()=>{
+  await p.click('#resetButton');await p.fill('#query','CX-30');await p.click('#searchButton');
+  await p.locator('.vehicle-card button[data-detail]').first().click();
+  await p.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===5);
   const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
   assert(size.doc<=size.view+3);
   await p.locator('#detailClose').click();
