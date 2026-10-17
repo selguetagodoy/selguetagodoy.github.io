@@ -77,3 +77,5 @@
  .feature-card{padding:15px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+.charge-config-link{display:flex;align-items:center;justify-content:center;min-height:43px;text-decoration:none!important;color:#0f5f76;border-color:#bcd8dc;background:#f0f9fa;font-size:12px}.charge-config-link:hover{background:#e0f2f4}
