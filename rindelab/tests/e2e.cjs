@@ -22,10 +22,14 @@ await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
  assert.equal(await page.locator('#results').isHidden(),true);
  assert.equal(await page.locator('#compareTray').isHidden(),true);
 });
-await test('Abrir estadísticas modal y calcular los diez costos menores WLTP',async()=>{
+await test('Abrir ranking conjunto NEDC y WLTP y ordenar por menor costo',async()=>{
  await page.locator('#statsOpen').click();
  assert(await page.locator('#statsDialog').evaluate(e=>e.open));
+ assert.equal(await page.inputValue('#statsCycle'),'');
  assert.equal(await page.locator('.rank-item').count(),10);
+ assert.equal(await page.locator('.rank-cycle').count(),10);
+ const labels=await page.locator('.rank-cycle').allTextContents();
+ assert(labels.every(x=>x==='WLTP'||x==='NEDC'||x==='Ciclo no informado'));
  const first=await page.locator('.rank-value').allTextContents();
  const costs=first.map(x=>Number(x.replace(/\D/g,''))).filter(Number.isFinite);
  assert(costs.length===10);
@@ -43,6 +47,24 @@ await test('Estadísticas cambian al ordenar mayor costo y al filtrar camionetas
  assert.equal(await page.locator('.rank-item').count(),10);
  assert.match(await page.locator('#statsResultCount').textContent(),/fichas comparables/);
  assert((await page.locator('.rank-item').allTextContents()).every(x=>x.includes('Camioneta')));
+ await page.locator('#statsClose').click();
+});
+await test('El filtro opcional permite WLTP o NEDC sin separar el ranking conjunto',async()=>{
+ await page.locator('#statsOpen').click();
+ await page.selectOption('#statsTech','');
+ await page.selectOption('#statsBody','');
+ await page.selectOption('#statsMetric','cost');
+ await page.selectOption('#statsCycle','');
+ const allCount=Number((await page.locator('#statsResultCount').textContent()).replace(/\D/g,''));
+ assert(allCount>0);
+ await page.selectOption('#statsCycle','WLTP');
+ const wltpCount=Number((await page.locator('#statsResultCount').textContent()).replace(/\D/g,''));
+ assert(wltpCount>0&&wltpCount<allCount,'WLTP '+wltpCount+' / all '+allCount);
+ assert((await page.locator('.rank-cycle').allTextContents()).every(x=>x==='WLTP'));
+ await page.selectOption('#statsCycle','NEDC');
+ assert((await page.locator('.rank-cycle').allTextContents()).every(x=>x==='NEDC'));
+ await page.selectOption('#statsCycle','');
+ assert.equal(await page.inputValue('#statsCycle'),'');
  await page.locator('#statsClose').click();
 });
 await test('Estadísticas no mezclan km/L con km/kWh ni ponderados PHEV',async()=>{
@@ -102,20 +124,22 @@ await test('Orden menor costo es funcional y mantiene la selección',async()=>{
  assert.equal(await page.inputValue('#sort'),'cheapest');
  assert(await page.locator('#sortNote').isVisible());
  const values=await page.locator('.vehicle-card').evaluateAll(nodes=>nodes.map(n=>({
-  cycle:n.querySelector('.vehicle-heading p').textContent.split('·')[0].trim(),
+  cycle:n.querySelector('.cycle-badge').textContent.trim(),
   value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/\D/g,''))||null
  })));
  assert(values.filter(x=>x.value).length>2);
- assert(values.every((x,i)=>i===0||x.cycle!==values[i-1].cycle||values[i-1].value===null||x.value===null||values[i-1].value<=x.value),'Costo ascendente por ciclo: '+JSON.stringify(values));
+ assert(values.every((x,i)=>i===0||values[i-1].value===null||x.value===null||values[i-1].value<=x.value),'Costo ascendente global: '+JSON.stringify(values));
+ assert.equal(await page.locator('.group-label').count(),0);
+ assert.equal(await page.locator('.cycle-badge').count(),await page.locator('.vehicle-card').count());
 });
 await test('Orden mayor costo y marca/modelo cambian el listado',async()=>{
  await page.selectOption('#sort','expensive');assert.equal(await page.inputValue('#sort'),'expensive');
  const values=await page.locator('.vehicle-card').evaluateAll(nodes=>nodes.map(n=>({
-  cycle:n.querySelector('.vehicle-heading p').textContent.split('·')[0].trim(),
+  cycle:n.querySelector('.cycle-badge').textContent.trim(),
   value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/\D/g,''))||null
  })));
  assert(values.filter(x=>x.value).length>2);
- assert(values.every((x,i)=>i===0||x.cycle!==values[i-1].cycle||values[i-1].value===null||x.value===null||values[i-1].value>=x.value),'Costo descendente por ciclo: '+JSON.stringify(values));
+ assert(values.every((x,i)=>i===0||values[i-1].value===null||x.value===null||values[i-1].value>=x.value),'Costo descendente global: '+JSON.stringify(values));
  await page.selectOption('#sort','name');assert.equal(await page.inputValue('#sort'),'name');assert(await page.locator('#sortNote').isHidden());
 });
 await test('Más resultados funciona sin paginación compleja',async()=>{
@@ -168,6 +192,17 @@ await test('Edición de precios modifica costos, sin bloquear el ordenamiento',a
  let second=(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').first().textContent());
  assert.notEqual(first,second);
  await page.selectOption('#sort','cheapest');assert.equal(await page.inputValue('#sort'),'cheapest');
+});
+await test('Orden global mezcla ciclos y muestra su etiqueta individual',async()=>{
+ await page.click('#resetButton');
+ await page.click('#searchButton');
+ await page.selectOption('#sort','cheapest');
+ await page.click('#more');
+ const labels=await page.locator('.cycle-badge').allTextContents();
+ assert(labels.length===20);
+ assert(labels.every(x=>x==='WLTP'||x==='NEDC'||x==='Ciclo no informado'));
+ assert.equal(await page.locator('.group-label').count(),0);
+ assert.match(await page.locator('#sortNote').textContent(),/Orden único/);
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
