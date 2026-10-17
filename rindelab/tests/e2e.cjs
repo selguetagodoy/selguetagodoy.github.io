@@ -606,6 +606,13 @@ await test('Familias Changan estrictas: Hunter diésel no recibe precios REEV',a
  });
  assert.deepEqual(groups,['CS35 Max','CS55 Plus','CS55','CS75 Plus','X7 Plus','Hunter','Hunter REEV','Hunter eléctrico','S07','Avatr 07']);
 });
+await test('Búsqueda de cilindrada Hunter 2.0 no confunde dígitos de código 3CV con modelo',async()=>{
+ await page.click('#resetButton');await page.fill('#query','Hunter 2.0');await page.click('#searchButton');
+ const cards=await page.locator('.vehicle-card h3').allTextContents();
+ assert.equal(cards.length,2);
+ assert(cards.every(v=>/Changan Hunter 2\.0/i.test(v)),'Resultados inesperados para Hunter 2.0: '+cards.join(', '));
+ assert(!cards.some(v=>/Hunter E\b/i.test(v)));
+});
 await test('Changan Hunter presenta cuatro precios de lista seleccionables sin autoasignar',async()=>{
  await page.click('#resetButton');await page.fill('#query','Hunter 2.0');await page.click('#searchButton');
  assert((await page.locator('.vehicle-card').count())>0);
