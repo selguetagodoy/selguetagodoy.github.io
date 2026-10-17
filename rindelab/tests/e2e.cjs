@@ -612,7 +612,10 @@ await test('Changan Hunter presenta cuatro precios de lista seleccionables sin a
  await page.locator('.vehicle-card button[data-detail]').first().click();
  await page.waitForTimeout(1000);
  const hunterItems=await page.locator('.sii-price-item').count();
- assert.equal(hunterItems,4,'Hunter diésel - '+String(await page.locator('#siiCommercial').textContent()).slice(0,700));
+ const hunterTitle=await page.locator('#detailContent').textContent();
+ const hunterVisibleName=await page.locator('.vehicle-card h3').first().textContent();
+ const hunterFamily=await page.evaluate(name=>window.RindelabSII.family(['Changan',name.replace(/^Changan\s+/i,'')]),hunterVisibleName);
+ assert.equal(hunterItems,4,'Hunter diésel - '+hunterVisibleName+' / '+hunterFamily+' / '+String(await page.locator('#siiCommercial').textContent()).slice(0,700));
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  assert.match(await page.locator('#siiCommercial').textContent(),/20\.890\.000/);
  await page.locator('.sii-price-item').first().locator('button').click();
