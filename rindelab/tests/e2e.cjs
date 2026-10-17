@@ -442,7 +442,11 @@ await test('Consulta SII requiere año y selección expresa antes de mostrar tas
  await page.locator('.sii-item button').first().click();
  assert.match(await page.locator('#siiCurrentValue').textContent(),/Tasación fiscal SII 2026/);
  assert.match(await page.locator('#siiCurrentValue').textContent(),/Permiso circulación 2026/);
- assert.match(await page.locator('#siiCommercial').textContent(),/No hay un precio de venta nuevo verificado/);
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
+ assert.equal(await page.locator('.sii-price-item').count(),2);
+ assert.match(await page.locator('#siiCommercial').textContent(),/27\.990\.000/);
+ await page.locator('.sii-price-item').first().locator('button').click();
+ assert.match(await page.locator('.sii-selected-price').textContent(),/27\.990\.000/);
  await page.locator('#detailClose').click();
 });
 await test('Tasación y permiso seleccionados aparecen en comparación de dos vehículos',async()=>{
@@ -453,7 +457,8 @@ await test('Tasación y permiso seleccionados aparecen en comparación de dos ve
  const data=await page.locator('#compareContent').textContent();
  assert.match(data,/Tasación fiscal SII 2026/);
  assert.match(data,/Permiso de circulación 2026/);
- assert(data.includes('Precio comercial nuevo (desde)'));
+ assert(data.includes('Precio de lista nuevo (sin bonos)'));
+ assert.match(data,/27\.990\.000/);
  assert.equal(await page.locator('.comparison-table tbody tr').count(),10);
  assert.match(data,/22.354.806|23.139.460|21.570.147|18.775.083|20.189.698/);
  await page.locator('#compareClose').click();
@@ -467,6 +472,37 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert.equal(m.year,2026);
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
+});
+await test('Catálogo inicial de 21 precios de lista sin bonos con fuente oficial',async()=>{
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert.equal(list.length,21);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Toyota']);
+ const seen=new Set();
+ for(const item of list){
+  assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
+  assert.equal(item.currency,'CLP');
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl)\//);
+  const key=[item.brand,item.family,item.version,item.modelYear].join('|');
+  assert(!seen.has(key),'Precio de lista duplicado '+key);
+  seen.add(key);
+ }
+});
+await test('No asigna precio de lista automáticamente y permite elegir o quitar versión',async()=>{
+ await page.click('#resetButton');await page.fill('#query','Corolla Cross');await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-detail]').nth(1).click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
+ assert.match(await page.locator('#siiCommercial').textContent(),/Elige solamente|Elige manualmente|Elige manualmente la versión/i);
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ await page.locator('.sii-price-item').nth(1).locator('button').click();
+ assert.match(await page.locator('.sii-selected-price').textContent(),/29\.990\.000/);
+ await page.locator('.sii-selected-price button').click();
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ await page.click('#detailClose');
+ await page.click('#resetButton');await page.fill('#query','Hilux');await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
+ assert.match(await page.locator('#siiCommercial').textContent(),/45\.290\.000/);
+ await page.click('#detailClose');
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
@@ -523,6 +559,14 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert((await p.locator('.sii-item').count())>0);
   const w=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,screen:innerWidth}));
   assert(w.doc<=w.screen+3);
+  await p.locator('#detailClose').click();
+ });
+ await test('Precios de lista consultables y visibles en '+width+' px',async()=>{
+  await p.click('#resetButton');await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+  await p.locator('.vehicle-card button[data-detail]').first().click();
+  await p.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
+  const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+  assert(size.doc<=size.view+3);
   await p.locator('#detailClose').click();
  });
  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{

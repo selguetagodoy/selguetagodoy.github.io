@@ -1,1 +1,233 @@
-[]
+[
+  {
+    "brand": "Toyota",
+    "family": "Corolla Cross",
+    "version": "XEI 1.8 HEV CVT",
+    "modelYear": 2026,
+    "priceListClp": 27990000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Corolla Cross",
+    "version": "SEG 1.8 HEV",
+    "modelYear": 2026,
+    "priceListClp": 29990000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Raize",
+    "version": "1.2 E MT",
+    "modelYear": 2026,
+    "priceListClp": 15990000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Raize",
+    "version": "1.2 E CVT",
+    "modelYear": 2026,
+    "priceListClp": 16990000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Raize",
+    "version": "1.2 G CVT",
+    "modelYear": 2026,
+    "priceListClp": 18490000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-Gasolina%2FModelo-Raize",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Yaris",
+    "version": "i MT",
+    "modelYear": 2026,
+    "priceListClp": 14690000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Hilux",
+    "version": "4x4 2.8 MT SR Diesel",
+    "modelYear": 2026,
+    "priceListClp": 45290000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-H%26iacute%3Bbrido",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Hilux",
+    "version": "4x2 2.4 MT SR Diesel",
+    "modelYear": 2026,
+    "priceListClp": 34790000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-H%26iacute%3Bbrido",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Toyota",
+    "family": "Corolla Sedán",
+    "version": "SEG 1.8 CVT HEV",
+    "modelYear": 2026,
+    "priceListClp": 28490000,
+    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-H%26iacute%3Bbrido",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Creta",
+    "version": "SU2id 1.5 MT GO FL",
+    "modelYear": null,
+    "priceListClp": 18290000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Creta",
+    "version": "SU2id 1.5 MT PLUS FL",
+    "modelYear": null,
+    "priceListClp": 19090000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Creta",
+    "version": "SU2id 1.5 CVT PLUS FL",
+    "modelYear": null,
+    "priceListClp": 20590000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Creta",
+    "version": "SU2id 1.5 CVT DESIGN FL",
+    "modelYear": null,
+    "priceListClp": 22790000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Kona",
+    "version": "SX2 1.6T AT 4WD N-LINE",
+    "modelYear": null,
+    "priceListClp": 35790000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-kona/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Kona",
+    "version": "SX2 1.6 AT HEV PLUS",
+    "modelYear": null,
+    "priceListClp": 27590000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Kona",
+    "version": "SX2 1.6 AT HEV DESIGN",
+    "modelYear": null,
+    "priceListClp": 30190000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Inster",
+    "version": "AX EV PLUS",
+    "modelYear": null,
+    "priceListClp": 21990000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Inster",
+    "version": "AX EV DESIGN LR",
+    "modelYear": null,
+    "priceListClp": 24490000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Palisade",
+    "version": "LX3 2.5T HEV AT AWD LIMITED",
+    "modelYear": null,
+    "priceListClp": 59990000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Palisade",
+    "version": "LX3 2.5T HEV AT AWD CALLIGRAPHY",
+    "modelYear": null,
+    "priceListClp": 65990000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Palisade",
+    "version": "LX3 2.5T HEV AT AWD 7P CALLIGRAPHY",
+    "modelYear": null,
+    "priceListClp": 66990000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  }
+]
