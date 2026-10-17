@@ -54,7 +54,7 @@ await test('Orden menor costo es funcional y mantiene la selección',async()=>{
  assert(await page.locator('#sortNote').isVisible());
  const values=await page.locator('.vehicle-card').evaluateAll(nodes=>nodes.map(n=>({
   cycle:n.querySelector('.vehicle-heading p').textContent.split('·')[0].trim(),
-  value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/[^\\d]/g,''))||null
+  value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/\D/g,''))||null
  })));
  assert(values.filter(x=>x.value).length>2);
  assert(values.every((x,i)=>i===0||x.cycle!==values[i-1].cycle||values[i-1].value===null||x.value===null||values[i-1].value<=x.value),'Costo ascendente por ciclo: '+JSON.stringify(values));
@@ -63,7 +63,7 @@ await test('Orden mayor costo y marca/modelo cambian el listado',async()=>{
  await page.selectOption('#sort','expensive');assert.equal(await page.inputValue('#sort'),'expensive');
  const values=await page.locator('.vehicle-card').evaluateAll(nodes=>nodes.map(n=>({
   cycle:n.querySelector('.vehicle-heading p').textContent.split('·')[0].trim(),
-  value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/[^\\d]/g,''))||null
+  value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/\D/g,''))||null
  })));
  assert(values.filter(x=>x.value).length>2);
  assert(values.every((x,i)=>i===0||x.cycle!==values[i-1].cycle||values[i-1].value===null||x.value===null||values[i-1].value>=x.value),'Costo descendente por ciclo: '+JSON.stringify(values));
