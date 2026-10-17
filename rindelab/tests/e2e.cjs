@@ -473,15 +473,15 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
 });
-await test('Catálogo de 63 precios de lista sin bonos con fuente oficial',async()=>{
+await test('Catálogo de 84 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,63);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Kia','MG','Suzuki','Toyota']);
+ assert.equal(list.length,84);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Changan','Hyundai','Kia','MG','Suzuki','Toyota']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -522,9 +522,9 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
  await page.click('#detailClose');
 });
 await test('Ampliación Hyundai: once precios de lista con fuentes oficiales',async()=>{
- const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list63').then(r=>r.json()));
+ const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list84').then(r=>r.json()));
  const hyundai=p.filter(x=>x.brand==='Hyundai');
- assert.equal(p.length,63);
+ assert.equal(p.length,84);
  assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
@@ -543,7 +543,7 @@ await test('Creta Grand conserva su familia independiente de Creta',async()=>{
  assert.deepEqual(f,['Creta Grand','Creta Grand','Creta']);
 });
 await test('Ampliación Suzuki y MG: 27 nuevas versiones con precio de lista',async()=>{
- const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list63').then(r=>r.json()));
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list84').then(r=>r.json()));
  const suzuki=list.filter(x=>x.brand==='Suzuki'),mg=list.filter(x=>x.brand==='MG');
  assert.equal(suzuki.length,12);
  assert.equal(mg.length,15);
@@ -583,6 +583,55 @@ await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselec
  assert.match(await page.locator('#siiCommercial').textContent(),/16\.990\.000/);
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('#detailClose').click();
+});
+await test('Changan: 21 precios de lista oficiales en siete familias diferenciadas',async()=>{
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list84').then(r=>r.json()));
+ const v=list.filter(x=>x.brand==='Changan'),groups={};
+ for(const x of v){groups[x.family]=(groups[x.family]||0)+1;assert(x.source.startsWith('https://www.changan.cl/'));}
+ assert.equal(v.length,21);
+ assert.deepEqual(groups,{'CS35 Max':4,Hunter:4,'X7 Plus':4,'CS75 Plus':2,'CS55 Plus':3,S07:2,'Avatr 07':2});
+ assert.equal(v.find(x=>x.version==='CS35 Max Comfort MT').priceListClp,14490000);
+ assert.equal(v.find(x=>x.version==='Hunter 2.0T 4X2 Comfort MT').priceListClp,20890000);
+ assert.equal(v.find(x=>x.version==='Deepal S07 REEV').priceListClp,32990000);
+ assert.equal(v.find(x=>x.version==='AVATR 07 4x2 REEV RWD').priceListClp,55990000);
+});
+await test('Familias Changan estrictas: Hunter diésel no recibe precios REEV',async()=>{
+ const groups=await page.evaluate(()=>{
+  const f=window.RindelabSII.family;
+  return [
+   'CS35 MAX 1.5 MT','CS55 Plus 1.5 Turbo DCT','CS55 1.5 Turbo AT',
+   'CS75 Plus 1.5T AT','X7 Plus 1.5 Turbo TA','Hunter 2.0 MT 4WD',
+   'HUNTER EREV 4x2','HUNTER E','S07 EREV','Avatr 07 REEV AWD'
+  ].map(model=>f(['Changan',model]));
+ });
+ assert.deepEqual(groups,['CS35 Max','CS55 Plus','CS55','CS75 Plus','X7 Plus','Hunter','Hunter REEV','Hunter eléctrico','S07','Avatr 07']);
+});
+await test('Changan Hunter presenta cuatro precios de lista seleccionables sin autoasignar',async()=>{
+ await page.click('#resetButton');await page.fill('#query','Hunter 2.0');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ assert.match(await page.locator('#siiCommercial').textContent(),/20\.890\.000/);
+ await page.locator('.sii-price-item').first().locator('button').click();
+ assert.match(await page.locator('.sii-selected-price').textContent(),/20\.890\.000/);
+ await page.locator('#detailClose').click();
+ await page.click('#resetButton');await page.fill('#query','HUNTER EREV');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelector('#siiCommercial')?.textContent?.includes('Sin precio de lista verificado'));
+ assert.equal(await page.locator('.sii-price-item').count(),0);
+ await page.locator('#detailClose').click();
+});
+await test('Changan Deepal y AVATR tienen listas independientes y fuente específica',async()=>{
+ for(const [term,expected] of [['S07 EREV',2],['Avatr 07',2]]){
+  await page.click('#resetButton');await page.fill('#query',term);await page.click('#searchButton');
+  assert((await page.locator('.vehicle-card').count())>0,'Sin homologaciones '+term);
+  await page.locator('.vehicle-card button[data-detail]').first().click();
+  await page.waitForFunction(n=>document.querySelectorAll('.sii-price-item').length===n,expected);
+  assert.equal(await page.locator('.sii-selected-price').count(),0);
+  await page.locator('#detailClose').click();
+ }
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
