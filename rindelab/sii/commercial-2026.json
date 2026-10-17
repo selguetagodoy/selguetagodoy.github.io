@@ -922,5 +922,93 @@
     "checkedAt": "2026-10-17",
     "currency": "CLP",
     "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Territory",
+    "version": "Trend 1.5L AT 4x2",
+    "modelYear": null,
+    "priceListClp": 21290000,
+    "source": "https://www.ford.cl/suvs-crossovers/territory/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Territory",
+    "version": "Titanium 1.5L AT 4x2",
+    "modelYear": null,
+    "priceListClp": 25690000,
+    "source": "https://www.ford.cl/suvs-crossovers/territory/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Territory",
+    "version": "Titanium Híbrida 1.5L AT 4x2",
+    "modelYear": null,
+    "priceListClp": 30590000,
+    "source": "https://www.ford.cl/hibridos/territory-hibrida/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Territory",
+    "version": "Platinum Híbrida 1.5L AT 4x2",
+    "modelYear": null,
+    "priceListClp": 32190000,
+    "source": "https://www.ford.cl/hibridos/territory-hibrida/versiones/platinum/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Maverick",
+    "version": "XLT 2.0L AT AWD",
+    "modelYear": null,
+    "priceListClp": 31285100,
+    "source": "https://www.ford.cl/pickups/maverick/comparar-modelos/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Maverick",
+    "version": "Lariat Black 2.0L AT AWD",
+    "modelYear": null,
+    "priceListClp": 37235100,
+    "source": "https://www.ford.cl/pickups/maverick/comparar-modelos/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Maverick",
+    "version": "Lariat FHEV 2.5L AT AWD",
+    "modelYear": null,
+    "priceListClp": 39615100,
+    "source": "https://www.ford.cl/pickups/maverick/comparar-modelos/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+  },
+  {
+    "brand": "Ford",
+    "family": "Maverick",
+    "version": "Tremor 2.0L AT AWD",
+    "modelYear": null,
+    "priceListClp": 40210100,
+    "source": "https://www.ford.cl/pickups/maverick/comparar-modelos/",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
   }
 ]
