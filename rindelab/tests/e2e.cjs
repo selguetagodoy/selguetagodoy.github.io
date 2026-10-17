@@ -473,15 +473,15 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
 });
-await test('Catálogo de 84 precios de lista sin bonos con fuente oficial',async()=>{
+await test('Catálogo de 92 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,84);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Changan','Hyundai','Kia','MG','Suzuki','Toyota']);
+ assert.equal(list.length,92);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Changan','Ford','Hyundai','Kia','MG','Suzuki','Toyota']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -522,9 +522,9 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
  await page.click('#detailClose');
 });
 await test('Ampliación Hyundai: once precios de lista con fuentes oficiales',async()=>{
- const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list84').then(r=>r.json()));
+ const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
  const hyundai=p.filter(x=>x.brand==='Hyundai');
- assert.equal(p.length,84);
+ assert.equal(p.length,92);
  assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
@@ -543,7 +543,7 @@ await test('Creta Grand conserva su familia independiente de Creta',async()=>{
  assert.deepEqual(f,['Creta Grand','Creta Grand','Creta']);
 });
 await test('Ampliación Suzuki y MG: 27 nuevas versiones con precio de lista',async()=>{
- const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list84').then(r=>r.json()));
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
  const suzuki=list.filter(x=>x.brand==='Suzuki'),mg=list.filter(x=>x.brand==='MG');
  assert.equal(suzuki.length,12);
  assert.equal(mg.length,15);
@@ -585,7 +585,7 @@ await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselec
  await page.locator('#detailClose').click();
 });
 await test('Changan: 21 precios de lista oficiales en siete familias diferenciadas',async()=>{
- const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list84').then(r=>r.json()));
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
  const v=list.filter(x=>x.brand==='Changan'),groups={};
  for(const x of v){groups[x.family]=(groups[x.family]||0)+1;assert(x.source.startsWith('https://www.changan.cl/'));}
  assert.equal(v.length,21);
@@ -648,6 +648,42 @@ await test('Changan Deepal y AVATR tienen listas independientes y fuente especí
   assert.equal(await page.locator('.sii-selected-price').count(),0);
   await page.locator('#detailClose').click();
  }
+});
+await test('Ford: ocho precios de lista vigentes para Territory y Maverick',async()=>{
+ const items=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list92').then(r=>r.json()));
+ const ford=items.filter(x=>x.brand==='Ford');
+ assert.equal(ford.length,8);
+ assert.equal(ford.filter(x=>x.family==='Territory').length,4);
+ assert.equal(ford.filter(x=>x.family==='Maverick').length,4);
+ assert(ford.every(x=>x.source.startsWith('https://www.ford.cl/')));
+ assert.equal(ford.find(x=>x.version==='Trend 1.5L AT 4x2').priceListClp,21290000);
+ assert.equal(ford.find(x=>x.version==='Platinum Híbrida 1.5L AT 4x2').priceListClp,32190000);
+ assert.equal(ford.find(x=>x.version==='Lariat FHEV 2.5L AT AWD').priceListClp,39615100);
+ assert.equal(ford.find(x=>x.version==='Tremor 2.0L AT AWD').priceListClp,40210100);
+});
+await test('Ford Territory muestra cuatro listas con versión y fuente diferenciadas',async()=>{
+ await page.click('#resetButton');await page.fill('#query','Territory FHEV');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ assert.match(await page.locator('#siiCommercial').textContent(),/21\.290\.000/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/32\.190\.000/);
+ await page.locator('.sii-price-item').nth(3).locator('button').click();
+ assert.match(await page.locator('.sii-selected-price').textContent(),/32\.190\.000/);
+ await page.locator('.sii-selected-price button').click();
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ await page.locator('#detailClose').click();
+});
+await test('Ford Maverick ofrece cuatro versiones sin atribuir precio por coincidencia automática',async()=>{
+ await page.click('#resetButton');await page.fill('#query','Maverick');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ assert.match(await page.locator('#siiCommercial').textContent(),/31\.285\.100/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/40\.210\.100/);
+ await page.locator('#detailClose').click();
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
