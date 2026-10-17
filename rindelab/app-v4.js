@@ -321,6 +321,7 @@ function renderComparison(){
  $('compareTrayText').textContent=size===1?'Elige al menos otra versión en la tabla para compararlas.':size>=2?'Comparación lista. Puedes agregar hasta '+(4-size)+' versiones más.':'';
  $('compareNow').disabled=size<2;
  tray.hidden=size===0;
+ document.body.classList.toggle('has-compare-selection',size>0);
  $('compareTrayModels').innerHTML=vehicles.map((r,j)=>'<span class="selected-model">'+safe(r[F.BRAND]+' '+r[F.MODEL])+'<button type="button" data-tray-remove="'+selected[j]+'" aria-label="Quitar '+safe(r[F.BRAND]+' '+r[F.MODEL])+'">×</button></span>').join('');
  const mixed=new Set(vehicles.map(r=>r[F.CYCLE])).size>1;
  warning.hidden=!mixed;
@@ -514,6 +515,13 @@ $('categoryChips').addEventListener('click',event=>{
  filters();
 });
 $('category').addEventListener('change',()=>{$('bodytype').value='';updateCategorySelection();});
+$('navCompare').addEventListener('click',event=>{
+ event.preventDefault();
+ if(selected.length<2){
+  $('searchStatus').textContent='Para comparar, primero elige dos vehículos en los resultados usando «Comparar +». Tu selección aparecerá abajo.';
+  $('catalogo').scrollIntoView({behavior:'smooth',block:'start'});
+ }else showComparison();
+});
 $('compareNow').addEventListener('click',showComparison);
 $('compareReset').addEventListener('click',()=>{selected=[];render();});
 $('compareTrayModels').addEventListener('click',event=>{
