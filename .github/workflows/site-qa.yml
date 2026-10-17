@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "*.html"
+      - "*.js"
+      - "scripts/*.mjs"
+      - "search-index.json"
       - "*.md"
       - "sitemap.xml"
       - "robots.txt"
@@ -13,6 +16,14 @@ on:
       - "research.jsonld"
       - "assets/**"
       - "scripts/site_qa.py"
+      - ".github/workflows/site-qa.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "*.js"
+      - "scripts/*.mjs"
+      - "search-index.json"
       - ".github/workflows/site-qa.yml"
   schedule:
     - cron: "30 9 * * 1"
@@ -37,6 +48,18 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: "3.13"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Check application JavaScript
+        run: |
+          node --check dashboard-data-centers-2026.js
+          node --check site-nav.js
+          node --check site-search.js
+          node --check scripts/build-search-index.mjs
 
       - name: Validate local site
         if: github.event_name != 'schedule'

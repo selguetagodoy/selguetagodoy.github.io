@@ -58,3 +58,16 @@ Se excluyen páginas noindex, URLs no canónicas y metadatos que identifiquen
 vínculos comerciales reservados. El generador falla ante estos últimos en
 lugar de añadirlos. Las aplicaciones y los respaldos en Drive/GitHub
 no se modifican por este proceso.
+
+## Dashboard Data Centers — estructura
+
+La página dashboard-data-centers-2026.html contiene la interfaz y sus
+metadatos públicos; dashboard-data-centers-2026.js contiene exactamente
+el código JavaScript y los datos públicos que antes estaban incrustados en
+el mismo HTML. Esta separación permite reutilizar la caché del archivo
+JavaScript y descargar un documento HTML considerablemente más pequeño,
+sin modificar el cálculo, los indicadores ni la metodología del benchmark.
+
+Las actualizaciones del dashboard deben conservar ambos archivos y pasar
+el control Site QA. El flujo comprueba también la sintaxis JavaScript con
+Node.js, tanto antes de fusionar un PR como al publicar cambios en main.
