@@ -280,13 +280,13 @@ $('resetButton').addEventListener('click',()=>{
 });
 for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
  if(id==='brand')$('model').value='';
- if(id!=='brand'&&id!=='model')choices();
+ if(id!=='model')choices();
  $('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';
 });
 $('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';});
 $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
 $('sort').addEventListener('change',render);
-for(const id of ['gasPrice','dieselPrice','electricPrice'])$(id).addEventListener('change',()=>{if(submitted)render();if($('compareDialog').open)openCompare();});
+for(const id of ['gasPrice','dieselPrice','electricPrice'])$(id).addEventListener('change',()=>{if(submitted)render();});
 $('resultList').addEventListener('click',event=>{
  const detail=event.target.closest('[data-detail]'),comparison=event.target.closest('[data-compare]');
  if(detail)showDetail(Number(detail.dataset.detail));
