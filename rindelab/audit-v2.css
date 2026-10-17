@@ -1,0 +1,79 @@
+/* RINDELAB 2.0: accesibilidad, jerarquía de datos y simulación basada en criterios verificables */
+:root{--warn:#8d5b18;--warnbg:#fff4df;--inkstrong:#102c47}
+.energy-panel{margin-top:24px;border:1px solid #cbdde6;background:linear-gradient(180deg,#f5fbfc,#ffffff);border-radius:13px;padding:0 16px 17px}
+.energy-panel summary{list-style:none;display:flex;align-items:center;gap:14px;justify-content:space-between;cursor:pointer;padding:17px 2px;color:#153751;border-bottom:1px solid transparent;font-size:14px}
+.energy-panel summary::-webkit-details-marker{display:none}
+.energy-panel[open] summary{border-bottom-color:#d6e5eb;margin-bottom:16px}
+.energy-panel summary:after{content:"⌄";font-size:20px;line-height:1;font-weight:800;color:#24838e;order:3}
+.energy-panel[open] summary:after{transform:rotate(180deg)}
+.price-brief{font-size:12px;letter-spacing:0;font-weight:750;background:#e0f4f5;border-radius:10px;padding:7px 12px;color:#167380}
+.energy-panel .prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;gap:12px}
+.energy-selects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.field-action{display:flex;flex-direction:column;justify-content:end}
+.field-action .button{height:43px}
+.filter-info{padding-top:7px}
+.filter-info .price-helper{margin:4px 0}
+#sortWarning:not(:empty){background:#fff3de;border:1px solid #f1d9ab;border-radius:7px;padding:10px;color:#885723}
+.panel-head p strong{color:#173f5e}
+.eyebrow-ui{font-size:10px;letter-spacing:.12em;font-weight:900;color:#11828c}
+.manual-scenario{border-top:4px solid #16beb9;margin:22px 0 23px}
+.scenario-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:end}
+.scenario-share{min-width:0}
+.scenario-share input[type=range]{border:0;padding:0;accent-color:#149aa3}
+.scenario-share strong{display:block;text-align:right;font-size:19px;color:#0d5e77}
+.manual-result{border:1px solid #cee2e4;background:#f3fafb;padding:20px 22px;border-radius:11px;margin-top:19px;color:#1c4760;min-height:74px}
+.manual-result>p{font-size:12px;color:#667f8d;line-height:1.6;margin:10px 0 0}
+.mix-totals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mix-totals>div{background:#ffffff;border:1px solid #d4e9ec;padding:14px;border-radius:9px}
+.mix-totals small{display:block;font-size:11px;color:#597b87}
+.mix-totals strong{display:block;font-size:26px;color:#123550;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.mix-breakdown{font-size:12px;margin:11px 1px;color:#2d7180}
+.pill-warn{background:#fff2df;color:#90601e;border-color:#f2d59f;white-space:normal}
+.info-notice{color:#694d27;background:#fff4dc;border-color:#efdab1}
+.info-notice strong{color:#704e14}
+.warning-copy{border-left:3px solid #e8ae55;background:#fff6e9;padding:11px;font-size:11.5px;line-height:1.5;color:#78582f}
+.chart-notice{background:#eef6f8;border:1px solid #d8e8ec;border-radius:8px;padding:13px 15px;font-size:12px;color:#2b5c70}
+.chart-group{padding:7px 0 17px}
+.chart-group h3{font-size:14px;color:#203d53;margin:12px 0}
+.chart-group .chart-row{margin-bottom:7px}
+.chart-group+.chart-group{border-top:1px solid #dde8eb;padding-top:13px}
+.chart-group .bar{background:#15a0a4}
+.metric-content{font-variant-numeric:tabular-nums}
+.table tr td .mini-btn{margin-right:8px;margin-bottom:6px}
+.footer-credit a{word-break:break-word}
+#catalogCount{position:absolute}
+.source-caption{font-size:12px;color:#657b8c}
+@media(max-width:1050px){
+ .energy-panel .prices{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .energy-selects{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .scenario-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+ .energy-panel .prices,.energy-selects,.scenario-grid{grid-template-columns:1fr}
+ .energy-panel summary{align-items:flex-start;flex-direction:column;gap:6px;padding-right:28px;position:relative}
+ .energy-panel summary:after{position:absolute;right:1px;top:18px}
+ .price-brief{max-width:100%;white-space:normal;font-size:11px}
+ .table-scroll{overflow:visible}
+ .table{display:block}
+ .table thead{display:none}
+ .table tbody{display:grid;gap:12px;padding:12px}
+ .table tbody tr{display:block;background:#fff;border:1px solid #dfe8ec;border-radius:12px;padding:14px;box-shadow:0 7px 18px rgba(11,44,74,.045)}
+ .table td{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border:0;padding:8px 1px;min-width:0;white-space:normal;font-size:12px}
+ .table td:first-child{display:block;border-bottom:1px solid #e3ecf0;margin-bottom:5px;padding:4px 0 12px;min-width:0}
+ .table td:before{content:attr(data-label);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#71899a;max-width:39%;flex:0 0 39%}
+ .table td:first-child:before{display:none}
+ .table td:last-child{align-items:center;justify-content:flex-end;border-top:1px solid #e7eef1;margin-top:6px;flex-wrap:wrap}
+ .table td:last-child:before{display:none}
+ .table .model{font-size:14px}
+ .table .pill,.table .flag{white-space:normal;text-align:right}
+ .table .subline,.table .metric-content{max-width:100%;white-space:normal}
+ .table td:nth-child(5){align-items:center}
+ .table td:nth-child(5) .cost{font-size:15px}
+ .table .mini-btn{display:inline-block;padding:8px 11px;text-decoration:none;border:1px solid #d0e3e6;border-radius:8px;margin:2px 0 2px 6px;font-size:11px}
+ .table tbody tr td[colspan]{display:block}
+ .chart-row{grid-template-columns:minmax(80px,120px) 1fr 85px}
+ .mix-totals{grid-template-columns:1fr}
+ .manual-result{padding:14px}
+ .feature-card{padding:15px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
