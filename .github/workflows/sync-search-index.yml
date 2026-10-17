@@ -1,0 +1,62 @@
+name: Sync Research Search Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "scripts/build-search-index.mjs"
+      - ".github/workflows/sync-search-index.yml"
+  schedule:
+    - cron: "15 10 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seg-search-index
+  cancel-in-progress: true
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Generate public search catalog
+        run: node scripts/build-search-index.mjs
+
+      - name: Commit updated index only when needed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add search-index.json
+          if git diff --cached --quiet; then
+            echo "Search index is up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh public research search index"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo "Published refreshed index."
+              exit 0
+            fi
+            sleep "$attempt"
+          done
+          echo "Could not push the refreshed index after three attempts."
+          exit 1

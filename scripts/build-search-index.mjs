@@ -50,6 +50,42 @@ const description=get(html,/<meta\s+name="description"\s+content="([^"]+)"/i);
 if(!title||!description)throw Error("Falta metadata: "+file);
 results.push({title,url:file,description,category,keywords});
 }
+// Descubrimiento automático de nuevas investigaciones públicas y verificables.
+// Excluye páginas de navegación, fuentes privadas y documentos no canónicos.
+// Opt-in opcional: <meta name="search-category" content="investigacion">.
+const categories=new Set(["investigacion","datos","herramientas","politicas","publicaciones"]);
+const known=new Set(results.map(item=>item.url));
+const autoTypes=new Set(["Article","ScholarlyArticle","Report","Dataset","ResearchProject","WebApplication"]);
+const getMeta=(html,name)=>{
+  for(const match of html.matchAll(/<meta\s+name="([^"]+)"\s+content="([^"]*)"/gi)){
+    if(match[1].toLowerCase()===name.toLowerCase())return decode(match[2]).trim();
+  }
+  return "";
+};
+for(const file of fs.readdirSync(root).filter(f=>f.endsWith(".html")).sort()){
+  if(known.has(file)||["index.html","contacto.html","bio.html","bio-en.html"].includes(file))continue;
+  const html=fs.readFileSync(path.join(root,file),"utf8");
+  if(/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html))continue;
+  if(getMeta(html,"search-index").toLowerCase()==="no")continue;
+  const title=get(html,/<title>([^<]+)<\/title>/i).replace(/\s+[|·]\s+Sebasti[aá]n Elgueta Godoy.*$/i,"").trim();
+  const description=getMeta(html,"description");
+  const canonical=get(html,/<link\s+rel="canonical"\s+href="([^"]+)"/i);
+  if(!title||!description||canonical!=="https://selguetagodoy.github.io/"+file)continue;
+  const explicit=getMeta(html,"search-category").toLowerCase();
+  if(explicit&&!categories.has(explicit))throw Error("Categoría de búsqueda no autorizada: "+file);
+  const types=new Set();
+  for(const match of html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)){
+    let ld;try{ld=JSON.parse(match[1])}catch{continue}
+    for(const node of [ld,...(Array.isArray(ld["@graph"])?ld["@graph"]:[])]){
+      for(const type of [].concat(node["@type"]||[]))types.add(type);
+    }
+  }
+  if(!explicit&&![...types].some(t=>autoTypes.has(t)))continue;
+  const category=explicit||(types.has("Dataset")?"datos":types.has("WebApplication")?"herramientas":"investigacion");
+  const keywords=getMeta(html,"keywords")||title;
+  results.push({title,url:file,description,category,keywords});
+  known.add(file);
+}
 results.push(...external);
 for(const r of results){if(/Prospectiva|CSL Behring|Vertex|Electrolux|Coordenadas P[uú]blicas/i.test(JSON.stringify(r)))throw Error("Entidad comercial inesperada en índice "+r.url)}
 const target=path.join(root,"search-index.json");fs.writeFileSync(target,JSON.stringify(results,null,2)+"\n","utf8");
