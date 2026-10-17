@@ -403,7 +403,7 @@ function render(){
  $('heroTotal').textContent=fmt(all.length);
  $('yearNote').textContent='Desde '+($('year').value||'todos los años')+' · '+($('cycle').value||'ambos ciclos')+'.';
  setTariff();
- const start=page*pageSize,sub=filtered.slice(start,start+pageSize);
+ const start=0,sub=filtered.slice(0,visibleLimit);
  $('tbody').innerHTML=sub.length?sub.map(r=>{
   const idx=all.indexOf(r),t=r[F.TECH],checked=selected.includes(idx);
   return '<tr>'+
@@ -415,10 +415,8 @@ function render(){
    '<td data-label="Acciones"><button class="mini-btn" data-detail="'+idx+'">Ver ficha</button><button class="mini-btn" data-compare="'+idx+'">'+(checked?'Quitar del comparador':'Comparar +')+'</button></td>'+
   '</tr>';
  }).join(''):'<tr><td colspan="6"><div class="empty">No se encontraron versiones. Revisa filtros y ciclo de ensayo.</div></td></tr>';
- const count=Math.max(1,Math.ceil(filtered.length/pageSize));
- $('pageInfo').textContent=filtered.length?'Mostrando '+fmt(start+1)+'–'+fmt(Math.min(filtered.length,start+pageSize))+' de '+fmt(filtered.length):'Sin registros';
- $('pagenum').textContent=(page+1)+' de '+count;
- $('prev').disabled=page===0;$('next').disabled=page+1>=count;
+ $('pageInfo').textContent=filtered.length?'Mostrando '+fmt(Math.min(filtered.length,visibleLimit))+' de '+fmt(filtered.length)+' fichas':'Sin registros';
+ $('next').hidden=visibleLimit>=filtered.length; $('next').disabled=visibleLimit>=filtered.length;
  renderComparison();
  renderExtremes();
 }
@@ -441,7 +439,7 @@ function renderExtremes(){
 }
 function details(i){
  const r=all[i],t=r[F.TECH],p=cost(r),url='https://consumovehicular.minenergia.cl/';
- const labels=[['Marca',r[F.BRAND]],['Modelo y versión',r[F.MODEL]],['Tecnología clasificada',t],['Combustible',r[F.FUEL]],['Carrocería',r[F.BODY]],['Tracción',r[F.DRIVE]],['Transmisión',r[F.TRANS]],['Cilindrada',r[F.ENGINE]],['Homologado el',r[F.DATE]],['Código del informe 3CV',r[F.CODE]],['Categoría 3CV',r[F.CLASS]],['Ciclo',r[F.CYCLE]],['Mixto combustión (km/L)',r[F.KM]],['Rendimiento eléctrico de etiqueta (km/kWh)',r[F.EL]],['Rendimiento ponderado combustible PHEV/REEV (km/L)',r[F.PH]],['Batería (kWh)',r[F.BAT]],['Conector AC',r[F.AC]],['Conector DC',r[F.DC]],['CO₂ (g/km)',r[F.CO2]],['Norma emisiones',r[F.NORM]],['Costo estimado por 100 km',p.base===null?'No calculable de forma comparable':cash(p.base)]];
+ const labels=[['Marca',r[F.BRAND]],['Modelo y versión',r[F.MODEL]],['Motorización declarada (3CV)',r.sourceTech],['Clasificación interpretativa',t],['Combustible',r[F.FUEL]],['Carrocería',r[F.BODY]],['Tracción',r[F.DRIVE]],['Transmisión',r[F.TRANS]],['Cilindrada',r[F.ENGINE]],['Homologado el',r[F.DATE]],['Código del informe 3CV',r[F.CODE]],['Categoría 3CV',r[F.CLASS]],['Ciclo',r[F.CYCLE]],['Mixto combustión (km/L)',r[F.KM]],['Rendimiento eléctrico de etiqueta (km/kWh)',r[F.EL]],['Rendimiento ponderado combustible PHEV/REEV (km/L)',r[F.PH]],['Batería (kWh)',r[F.BAT]],['Conector AC',r[F.AC]],['Conector DC',r[F.DC]],['CO₂ (g/km)',r[F.CO2]],['Norma emisiones',r[F.NORM]],['Costo estimado por 100 km',p.base===null?'No calculable de forma comparable':cash(p.base)]];
  let note=warningRow(r)||'Rendimiento de homologación en laboratorio: no equivale a consumo real observado.';
  if(t==='PHEV'||t==='REEV')note+=' Solo como referencia matemática, la conversión aislada de cada indicador ponderado arroja '+(p.electricReference===null?'N/D':cash(p.electricReference))+' eléctrico y '+(p.fuelReference===null?'N/D':cash(p.fuelReference))+' combustible por 100 km; estas cifras NO son costos de conducción por modo, ni deben sumarse.';
  if(t==='EV'&&!p.supported)note+=' El tipo de conexión DC elegido no se encuentra verificado en esta ficha.';
@@ -464,13 +462,13 @@ function toggle(i){
  else if(selected.length>=4){alert('Puedes comparar hasta cuatro vehículos. Quita uno para continuar.');return;}
  else selected.push(i);
  render();
- if(at<0&&selected.length===2)showComparison();
+ // La selección no desplaza la pantalla: el usuario decide cuándo ver la comparación.
 }
 function csv(){
- const head=['Marca','Modelo y versión','Tecnología revisada','Combustible','Carrocería','Tracción','Transmisión','Cilindrada','Fecha homologación','Código 3CV','Categoría','Ciclo','Mixto km/L','Ponderado eléctrico km/kWh','Ponderado combustible km/L','Batería kWh','Conector AC','Conector DC','CO₂ g/km','Norma','Costo energético comparable CLP/100km','Advertencia'];
+ const head=['Marca','Modelo y versión','Clasificación interpretativa','Combustible','Carrocería','Tracción','Transmisión','Cilindrada','Fecha homologación','Código 3CV','Categoría','Ciclo','Mixto km/L','Ponderado eléctrico km/kWh','Ponderado combustible km/L','Batería kWh','Conector AC','Conector DC','CO₂ g/km','Norma','Costo energético comparable CLP/100km','Advertencia','Motorización de origen 3CV'];
  const escapeCell=v=>{let s=String(v===null||v===undefined?'':v);if(/^[=+\-@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};
  const lines=[head.map(escapeCell).join(';')];
- for(const r of filtered){const p=cost(r);const record=r.slice(0,20);record.push(p.base===null?'':Math.round(p.base));record.push(warningRow(r)||'Indicador homologado; no prueba de consumo real');lines.push(record.map(escapeCell).join(';'));}
+ for(const r of filtered){const p=cost(r);const record=r.slice(0,20);record.push(p.base===null?'':Math.round(p.base));record.push(warningRow(r)||'Indicador homologado; no prueba de consumo real');record.push(r.sourceTech||'');lines.push(record.map(escapeCell).join(';'));}
  const blob=new Blob(['\uFEFF',lines.join('\r\n')],{type:'text/csv;charset=utf-8'});
  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='rindelab_3cv_homologaciones_filtradas.csv';document.body.appendChild(a);a.click();
  setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},300);
@@ -495,7 +493,7 @@ function populate(){
  fillSelect('brand',F.BRAND);fillSelect('bodytype',F.BODY);
  if([...$('brand').options].some(x=>x.value===m))$('brand').value=m;
  if([...$('bodytype').options].some(x=>x.value===b))$('bodytype').value=b;
- updateModelOptions();
+ updateFacets();
  prepareSearchSuggestions();
 }
 async function initialize(){
@@ -517,8 +515,8 @@ async function initialize(){
 for(const id of ['search','category','tech','brand','model','bodytype','cycle','year','sort','charge','zone','period','customKwh','octane','losses','p93','p95','p97','diesel','annualKm']){
  $(id).addEventListener(id==='search'||['p93','p95','p97','diesel','customKwh','annualKm'].includes(id)?'input':'change',()=>{
   if(loading)return;
-  if(id==='brand'){$('model').value='';updateModelOptions();}
-  if(id==='search')updateSearchSuggestions($('search').value);
+  if(id==='search'){updateSearchSuggestions($('search').value);if(['recent','relevance'].includes($('sort').value))$('sort').value=$('search').value.trim()?'relevance':'recent';}
+  if(['category','tech','brand','cycle','year','bodytype'].includes(id))updateFacets();
   filters();renderManual();
  });
 }
@@ -526,7 +524,7 @@ for(const id of ['search','category','tech','brand','model','bodytype','cycle','
 $('catalogSearchForm').addEventListener('submit',event=>{
  event.preventDefault();
  $('search').value=$('search').value.trim();
- $('sort').value='recent';
+ if(['recent','relevance'].includes($('sort').value))$('sort').value=$('search').value?'relevance':'recent';
  // Conservar categoría, marca y modelo elegidos: la búsqueda respeta la selección.
  // Si una selección oculta resultados, se ofrece Ver coincidencias en todo el historial.
  if(!loading){
@@ -546,9 +544,9 @@ $('categoryChips').addEventListener('click',event=>{
  if(!button)return;
  $('category').value=button.dataset.category;
  $('bodytype').value='';
- filters();
+ updateFacets();filters();
 });
-$('category').addEventListener('change',()=>{$('bodytype').value='';updateCategorySelection();});
+$('category').addEventListener('change',()=>{$('bodytype').value='';updateFacets();updateCategorySelection();});
 $('navCompare').addEventListener('click',event=>{
  event.preventDefault();
  if(selected.length<2){
@@ -574,9 +572,34 @@ $('comparison').addEventListener('click',e=>{const btn=e.target.closest('[data-c
 $('reset').addEventListener('click',()=>{$('search').value='';resetCatalogFacets();$('catalogSuggestions').replaceChildren();$('sort').value='recent';if(!loading)filters();});
 $('resetEnergy').addEventListener('click',restoreEnergy);
 $('export').addEventListener('click',()=>{if(!loading)csv()});
-$('prev').addEventListener('click',()=>{if(page>0){page--;render();$('results').scrollIntoView({behavior:'smooth'});}});
-$('next').addEventListener('click',()=>{if((page+1)*pageSize<filtered.length){page++;render();$('results').scrollIntoView({behavior:'smooth'});}});
+$('next').addEventListener('click',()=>{visibleLimit+=pageSize;render();});
 $('clearCompare').addEventListener('click',()=>{selected=[];render();});
+$('searchAlternatives').addEventListener('click',e=>{
+ const button=e.target.closest('[data-suggest]');if(!button)return;
+ $('search').value=button.dataset.suggest;$('sort').value='relevance';
+ resetCatalogFacets();filters();$('search').focus();
+});
+for(const id of ['comparePrev','compareNext'])$(id).addEventListener('click',()=>{
+ const scroller=$('comparison').querySelector('.matrix-scroll');if(!scroller)return;
+ scroller.scrollBy({left:id==='compareNext'?225:-225,behavior:'smooth'});
+});
+const menu=$('mobileMenuToggle'),nav=$('mainNav');
+menu.addEventListener('click',()=>{
+ const expanded=menu.getAttribute('aria-expanded')!=='true';
+ menu.setAttribute('aria-expanded',String(expanded));nav.classList.toggle('is-open',expanded);
+});
+nav.addEventListener('click',e=>{
+ if(!e.target.closest('a'))return;
+ menu.setAttribute('aria-expanded','false');nav.classList.remove('is-open');
+});
+for(const [selector,target] of [['a[href="#hallazgos"]','analysisDisclosure'],['a[href="#metodologia"]','methodDisclosure']]){
+ document.querySelectorAll(selector).forEach(link=>link.addEventListener('click',()=>{$(target).open=true;}));
+}
+document.querySelectorAll('[data-compare-nav]').forEach(link=>link.addEventListener('click',e=>{
+ e.preventDefault();
+ if(selected.length>=2)showComparison();
+ else{$('searchStatus').textContent='Selecciona dos vehículos con «Comparar +» para activar la comparación.';$('catalogo').scrollIntoView({behavior:'smooth'});}
+}));
 $('closeDetail').addEventListener('click',closeDetail);
 $('detail').addEventListener('close',()=>{const u=new URL(location.href);if(u.searchParams.has('codigo')){u.searchParams.delete('codigo');history.replaceState(null,'',u.pathname+u.search+u.hash);}});
 setTariff();renderManual();initialize();
