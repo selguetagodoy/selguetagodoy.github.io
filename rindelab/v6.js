@@ -66,7 +66,10 @@ function queryText(row){
 function matchesText(row,q){
  if(!q)return true;
  const hay=queryText(row),words=q.split(' ');
- return hay.words.includes(q)||hay.compact.includes(q.replace(/\s/g,''))||words.every(w=>hay.words.includes(w));
+ // No usar dígitos sueltos de los códigos 3CV para hacer coincidir motores (p. ej. Hunter 2.0 ≠ Hunter E).
+ const modelWords=normalize(row[F.BRAND]+' '+row[F.MODEL]).split(' ');
+ return hay.words.includes(q)||hay.compact.includes(q.replace(/\s/g,''))||
+  words.every(w=>/^\d{1,2}$/.test(w)?modelWords.includes(w):hay.words.includes(w));
 }
 function inputCriteria(){
  return {q:normalize($('query').value),brand:$('brand').value,model:$('model').value,tech:$('tech').value,body:$('bodytype').value,cycle:$('cycle').value,year:$('year').value};
