@@ -21,7 +21,7 @@ La base emplea el registro oficial 3CV publicado por el Ministerio de Energía c
 
 - El orden por costo utiliza supuestos iniciales editables: bencina 93 CLP 1.535/L, diésel CLP 1.503/L y electricidad CLP 340/kWh. No son precios en tiempo real ni especifican el octanaje exigido por el fabricante.
 - Combustible: **100 ÷ rendimiento mixto km/L × precio CLP/L**. Eléctrico: **100 ÷ rendimiento km/kWh × tarifa CLP/kWh**, sin pérdidas de carga ni cobros adicionales.
-- Cuando los resultados incluyen ciclos distintos, **NEDC y WLTP se ordenan en grupos separados**, en lugar de asumir equivalencia entre ensayos. También pueden diferir segmentos y tecnologías.
+- Los resultados y rankings muestran **NEDC y WLTP en una sola lista** de menor a mayor o mayor a menor costo, con el ciclo visible en cada ficha. Este orden conjunto es **orientativo**, ya que ambos procedimientos de ensayo no son directamente equivalentes. Se puede filtrar por ciclo cuando se requiera una comparación más homogénea.
 - Se marca **Sin dato comparable** cuando no corresponde calcular costo energético, incluidos PHEV/REEV ponderados y las clasificaciones híbridas no verificadas.
 - La ficha conserva marca y motorización **de origen** separadas de los ajustes interpretativos para navegación.
 - Para validación final consultar https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx
@@ -35,7 +35,7 @@ Las estadísticas se muestran en un **diálogo independiente y accesible**, no e
 - Orden: menor a mayor y mayor a menor.
 - Motorización: bencina, diésel, MHEV, HEV, PHEV, REEV, EV u otras categorías según fuente.
 - Carrocería: SUV/Station Wagon, sedán, hatchback, camioneta, coupé, furgón o bus.
-- Ciclo: WLTP o NEDC, siempre **por separado**.
+- Ciclo: **Todos (WLTP + NEDC) por defecto**, o bien solo WLTP o solo NEDC. Cada posición del top 10 señala su ciclo mediante una etiqueta visible.
 
 Los rankings están calculados a partir de las fichas reales que cumplen los filtros; cada fila permite abrir la ficha técnica. Los costos de PHEV y REEV sin valores comparables no se modelan ni sustituyen con proxies. Para rendimiento es necesario seleccionar una motorización con unidades homogéneas (km/L o km/kWh). Sin filas elegibles, el panel informa la limitación en vez de inventar valores. Las tarifas son las mismas que utiliza el buscador y pueden editarse en «Metodología y fuentes».
 
