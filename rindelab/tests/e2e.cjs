@@ -473,9 +473,9 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
 });
-await test('Catálogo inicial de 25 precios de lista sin bonos con fuente oficial',async()=>{
+await test('Catálogo de 36 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,25);
+ assert.equal(list.length,36);
  assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Kia','Toyota']);
  const seen=new Set();
  for(const item of list){
@@ -520,6 +520,27 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
  await page.locator('.sii-selected-price button').click();
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.click('#detailClose');
+});
+await test('Ampliación Hyundai: once precios de lista con fuentes oficiales',async()=>{
+ const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list36').then(r=>r.json()));
+ const hyundai=p.filter(x=>x.brand==='Hyundai');
+ assert.equal(p.length,36);
+ assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
+ assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
+ assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
+ assert.equal(hyundai.filter(x=>x.family==='Kona'&&/\bEV\b/.test(x.version)).length,1);
+ assert.equal(p.find(x=>x.version==='TUCSON NX4c 2.0 MT GO FL')?.priceListClp,24390000);
+ assert.equal(p.find(x=>x.version==='KONA SX2 EV GO LR')?.priceListClp,40090000);
+ assert.equal(p.find(x=>x.version==='CRETA GRAND SU2i 2.0 MT GO FL')?.priceListClp,21790000);
+ const unique=new Set();
+ for(const x of p){const key=[x.brand,x.family,x.version,x.modelYear].join('|');assert(!unique.has(key));unique.add(key);}
+});
+await test('Creta Grand conserva su familia independiente de Creta',async()=>{
+ const f=await page.evaluate(()=>{
+  const family=window.RindelabSII.family;
+  return ['Creta Grand 2.0 MT','The New Creta Grand AT','Creta 1.5 CVT'].map(model=>family(['Hyundai',model]));
+ });
+ assert.deepEqual(f,['Creta Grand','Creta Grand','Creta']);
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
