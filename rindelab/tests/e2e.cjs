@@ -610,7 +610,9 @@ await test('Changan Hunter presenta cuatro precios de lista seleccionables sin a
  await page.click('#resetButton');await page.fill('#query','Hunter 2.0');await page.click('#searchButton');
  assert((await page.locator('.vehicle-card').count())>0);
  await page.locator('.vehicle-card button[data-detail]').first().click();
- await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
+ await page.waitForTimeout(1000);
+ const hunterItems=await page.locator('.sii-price-item').count();
+ assert.equal(hunterItems,4,'Hunter diésel - '+String(await page.locator('#siiCommercial').textContent()).slice(0,700));
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  assert.match(await page.locator('#siiCommercial').textContent(),/20\.890\.000/);
  await page.locator('.sii-price-item').first().locator('button').click();
@@ -619,7 +621,9 @@ await test('Changan Hunter presenta cuatro precios de lista seleccionables sin a
  await page.click('#resetButton');await page.fill('#query','HUNTER EREV');await page.click('#searchButton');
  assert((await page.locator('.vehicle-card').count())>0);
  await page.locator('.vehicle-card button[data-detail]').first().click();
- await page.waitForFunction(()=>document.querySelector('#siiCommercial')?.textContent?.includes('Sin precio de lista verificado'));
+ await page.waitForTimeout(1000);
+ const noReev=String(await page.locator('#siiCommercial').textContent());
+ assert.match(noReev,/Sin precio de lista verificado/,'Hunter EREV - '+noReev.slice(0,700));
  assert.equal(await page.locator('.sii-price-item').count(),0);
  await page.locator('#detailClose').click();
 });
@@ -628,7 +632,9 @@ await test('Changan Deepal y AVATR tienen listas independientes y fuente especí
   await page.click('#resetButton');await page.fill('#query',term);await page.click('#searchButton');
   assert((await page.locator('.vehicle-card').count())>0,'Sin homologaciones '+term);
   await page.locator('.vehicle-card button[data-detail]').first().click();
-  await page.waitForFunction(n=>document.querySelectorAll('.sii-price-item').length===n,expected);
+  await page.waitForTimeout(1000);
+  const count=await page.locator('.sii-price-item').count();
+  assert.equal(count,expected,term+' - '+String(await page.locator('#siiCommercial').textContent()).slice(0,700));
   assert.equal(await page.locator('.sii-selected-price').count(),0);
   await page.locator('#detailClose').click();
  }
