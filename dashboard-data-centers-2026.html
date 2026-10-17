@@ -1,9 +1,14 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Benchmark Data Centers 2026 · Dashboard interactivo | Sebastián Elgueta Godoy</title><meta name="description" content="Dashboard interactivo evidence-only de 10 hubs de data centers, con 31 métricas sobre mercado, pipeline, energía, permisos, costos, conectividad, fiscalidad, talento y riesgo entre 2020 y 1S26."><meta name="author" content="Sebastián Elgueta Godoy"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1"><link rel="canonical" href="https://selguetagodoy.github.io/dashboard-data-centers-2026.html"><meta property="og:type" content="website"><meta property="og:title" content="Benchmark Data Centers 2026 · Dashboard interactivo"><meta property="og:description" content="10 hubs comparados con evidencia trazable y sin interpolaciones ni proxies sintéticos."><meta property="og:url" content="https://selguetagodoy.github.io/dashboard-data-centers-2026.html"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Benchmark Data Centers 2026","url":"https://selguetagodoy.github.io/dashboard-data-centers-2026.html","applicationCategory":"DataVisualizationApplication","creator":{"@type":"Person","name":"Sebastián Elgueta Godoy","url":"https://selguetagodoy.github.io/"},"description":"Dashboard interactivo evidence-only para comparar 10 hubs de data centers entre 2020 y 1S26.","inLanguage":"es-CL"}</script>
+<title>Benchmark Data Centers 2026 · Dashboard interactivo | Sebastián Elgueta Godoy</title><meta name="description" content="Dashboard interactivo evidence-only de 10 hubs de data centers, con 31 métricas sobre mercado, pipeline, energía, permisos, costos, conectividad, fiscalidad, talento y riesgo entre 2020 y 1S26."><meta name="author" content="Sebastián Elgueta Godoy"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1"><link rel="canonical" href="https://selguetagodoy.github.io/dashboard-data-centers-2026.html"><meta property="og:type" content="website"><meta property="og:title" content="Benchmark Data Centers 2026 · Dashboard interactivo"><meta property="og:description" content="10 hubs comparados con evidencia trazable y sin interpolaciones ni proxies sintéticos."><meta property="og:url" content="https://selguetagodoy.github.io/dashboard-data-centers-2026.html">
+<meta property="og:image" content="https://selguetagodoy.github.io/assets/social/data-centers-dashboard-2026.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portada editorial del dashboard interactivo de Data Centers 2026">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Benchmark Data Centers 2026","url":"https://selguetagodoy.github.io/dashboard-data-centers-2026.html","applicationCategory":"DataVisualizationApplication","creator":{"@type":"Person","name":"Sebastián Elgueta Godoy","url":"https://selguetagodoy.github.io/"},"description":"Dashboard interactivo evidence-only para comparar 10 hubs de data centers entre 2020 y 1S26.","inLanguage":"es-CL"}</script>
 <style>
 :root{
   --navy:#0b2a52; --blue:#174f8a; --blue2:#4e86c6; --ink:#14233a;
@@ -74,8 +79,18 @@ tbody tr:hover{background:#f8fafc}
  .kpis{grid-template-columns:1fr}
  .cov-row{grid-template-columns:100px repeat(10,20px);overflow:auto}
 }
+/* Mobile table containment — Phase 3. No changes to chart data or behavior. */
+.shell{overflow-x:clip}
+.grid{grid-template-columns:repeat(12,minmax(0,1fr))}
+.grid>.card,.table-card{min-width:0;max-width:100%}
+.table-card>div[style*="overflow"]{max-width:100%;overscroll-behavior-x:contain}
+@media(max-width:620px){.table-card table{min-width:520px}}
 </style>
-</head>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Benchmark Data Centers 2026 · Dashboard interactivo">
+<meta name="twitter:description" content="10 hubs comparados con evidencia trazable y sin interpolaciones ni proxies sintéticos.">
+<meta name="twitter:image" content="https://selguetagodoy.github.io/assets/social/data-centers-dashboard-2026.png"></head>
 <body>
 <div class="shell">
   <section class="header">

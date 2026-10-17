@@ -40,3 +40,21 @@ Versión internacional aceptada: **Sebastian Elgueta Godoy**
 
 - [Laboratorio Digital](https://selguetagodoy.github.io/laboratorio.html): Atlas, RINDELAB y dashboard de data centers.
 - [Buscar investigaciones](https://selguetagodoy.github.io/investigacion.html#buscador): índice estático generado con node scripts/build-search-index.mjs.
+
+## Actualización automática del buscador
+
+El buscador de investigaciones utiliza search-index.json, generado con
+node scripts/build-search-index.mjs. El flujo Sync Research Search Index
+de GitHub Actions regenera el catálogo al publicar o modificar páginas HTML
+y mediante una comprobación semanal. Solo publica un nuevo índice si hay cambios.
+
+Una nueva investigación se incorpora si tiene título, metadescripción,
+URL canónica y datos estructurados de tipo Article, ScholarlyArticle, Report,
+Dataset, ResearchProject o WebApplication. También puede indicarse la categoría
+de forma explícita mediante el metadato HTML search-category con los valores
+investigacion, datos, herramientas, politicas o publicaciones.
+
+Se excluyen páginas noindex, URLs no canónicas y metadatos que identifiquen
+vínculos comerciales reservados. El generador falla ante estos últimos en
+lugar de añadirlos. Las aplicaciones y los respaldos en Drive/GitHub
+no se modifican por este proceso.
