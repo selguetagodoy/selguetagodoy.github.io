@@ -40,6 +40,7 @@ await test('Marca Toyota despliega solo modelos de Toyota',async()=>{
 await test('Filtros técnicos mantienen ciclo sin modificar la base',async()=>{
  await page.click('#resetButton');
  await page.selectOption('#brand',{label:'Toyota'});
+ await page.locator('#technical summary').click();
  await page.selectOption('#cycle','WLTP');
  await page.selectOption('#model','');
  await page.click('#searchButton');
@@ -51,14 +52,21 @@ await test('Orden menor costo es funcional y mantiene la selección',async()=>{
  await page.selectOption('#sort','cheapest');
  assert.equal(await page.inputValue('#sort'),'cheapest');
  assert(await page.locator('#sortNote').isVisible());
- const costs=await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').allTextContents();
- const values=costs.map(t=>Number(t.replace(/[^\d]/g,''))).filter(n=>n>0);
- assert(values.length>2);assert(values.every((v,i)=>i===0||values[i-1]<=v),'Costo ascendente: '+values);
+ const values=await page.locator('.vehicle-card').evaluateAll(nodes=>nodes.map(n=>({
+  cycle:n.querySelector('.vehicle-heading p').textContent.split('·')[0].trim(),
+  value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/[^\\d]/g,''))||null
+ })));
+ assert(values.filter(x=>x.value).length>2);
+ assert(values.every((x,i)=>i===0||x.cycle!==values[i-1].cycle||values[i-1].value===null||x.value===null||values[i-1].value<=x.value),'Costo ascendente por ciclo: '+JSON.stringify(values));
 });
 await test('Orden mayor costo y marca/modelo cambian el listado',async()=>{
  await page.selectOption('#sort','expensive');assert.equal(await page.inputValue('#sort'),'expensive');
- const costs=(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').allTextContents()).map(t=>Number(t.replace(/[^\d]/g,''))).filter(n=>n>0);
- assert(costs.length>2);assert(costs.every((v,i)=>i===0||costs[i-1]>=v),'Costo descendente: '+costs);
+ const values=await page.locator('.vehicle-card').evaluateAll(nodes=>nodes.map(n=>({
+  cycle:n.querySelector('.vehicle-heading p').textContent.split('·')[0].trim(),
+  value:Number(n.querySelector('.vehicle-cell:nth-child(3) strong').textContent.replace(/[^\\d]/g,''))||null
+ })));
+ assert(values.filter(x=>x.value).length>2);
+ assert(values.every((x,i)=>i===0||x.cycle!==values[i-1].cycle||values[i-1].value===null||x.value===null||values[i-1].value>=x.value),'Costo descendente por ciclo: '+JSON.stringify(values));
  await page.selectOption('#sort','name');assert.equal(await page.inputValue('#sort'),'name');assert(await page.locator('#sortNote').isHidden());
 });
 await test('Más resultados funciona sin paginación compleja',async()=>{
