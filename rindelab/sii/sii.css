@@ -1,0 +1,48 @@
+
+/* Valores tributarios 2026, seleccionados por código y año SII. */
+.sii-section{margin-top:22px;background:linear-gradient(145deg,#f5fafc,#fff);border:1px solid #cadfe9;border-radius:13px;padding:17px 18px}
+.sii-section-head{display:flex;justify-content:space-between;align-items:start;gap:10px}
+.sii-overline{display:block;color:#16828d;font-size:10px;letter-spacing:.11em;font-weight:800}
+.sii-section h3{margin:4px 0 9px;color:#173f57;font-size:18px}
+.sii-origin{color:#155a77;background:#e3f0f5;border-radius:6px;padding:5px 8px;font-size:10px;font-weight:800;white-space:nowrap}
+.sii-small{color:#607b8c;font-size:11px;line-height:1.6}
+.sii-pending{padding:13px;background:#f1f5f8;border:1px dashed #c5d9e3;border-radius:8px;color:#58778a;font-size:12px}
+.sii-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.sii-lookup{background:white;border:1px solid #d3e3e9;border-radius:10px;padding:14px;margin:12px 0}
+.sii-lookup-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.sii-lookup-grid .sii-model-search{grid-column:1/-1}
+.sii-lookup .field select,.sii-lookup .field input{width:100%;min-width:0;height:45px}
+.sii-lookup #siiSearch{margin:5px 0 13px}
+.sii-error{font-size:12px;color:#99412a;padding:13px 10px;background:#fff5ef;border-radius:8px}
+.sii-found{font-size:12px;font-weight:730;color:#2d637b;margin:0 0 8px}
+.sii-results{display:flex;flex-direction:column;gap:9px;max-height:420px;overflow:auto;padding:3px}
+.sii-item{padding:11px 12px;border:1px solid #d8e7ed;border-radius:9px;background:#fcfeff;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(105px,.8fr) auto;align-items:center;gap:9px}
+.sii-item strong{font-size:12px;color:#21485f;display:block;overflow-wrap:anywhere}
+.sii-item span{display:block;color:#648095;font-size:10px;margin-top:5px}
+.sii-item-values{display:grid;grid-template-columns:1fr auto;gap:2px 7px;font-variant-numeric:tabular-nums}
+.sii-item-values small{font-size:10px;color:#6f8695}
+.sii-item-values b{font-size:11px;color:#18576d}
+.sii-item .button{font-size:11px;min-height:43px}
+.sii-selected{border:1px solid #b5deda;background:#f0fbf8;border-radius:9px;padding:11px 12px}
+.sii-selected p{font-size:11px;line-height:1.5;margin:8px 0 0}
+.sii-kpis{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.sii-kpis>div{padding:10px;background:white;border:1px solid #d1e5e5;border-radius:8px}
+.sii-kpis small{font-size:10px;color:#638292;display:block}
+.sii-kpis strong{font-size:17px;color:#116679;display:block;margin-top:2px}
+.sii-commercial{margin:14px 0;padding:12px 13px;border-radius:10px;background:#eef5fa;border:1px solid #d2e4ee}
+.sii-commercial>small{display:block;font-weight:820;letter-spacing:.045em;font-size:10px;color:#516e87}
+.sii-commercial>strong{display:block;font-size:21px;color:#155774;margin:5px 0}
+.sii-commercial>strong span{font-size:11px;color:#6a8390;font-weight:650}
+.sii-commercial p{font-size:11px;color:#496b7c;line-height:1.5;margin:8px 0}
+.sii-commercial a,.sii-links a{font-size:11px;font-weight:730}
+.sii-links{display:flex;gap:15px;flex-wrap:wrap;border-top:1px solid #d7e5ec;padding-top:12px}
+@media(max-width:600px){
+ .sii-section{padding:12px 10px}.sii-lookup{padding:10px}.sii-lookup-grid{grid-template-columns:1fr}
+ .sii-lookup-grid .sii-model-search{grid-column:auto}
+ .sii-item{grid-template-columns:1fr 1fr;gap:9px}
+ .sii-item>div:first-child{grid-column:1/-1}
+ .sii-item .button{grid-column:1/-1;width:100%}
+ .sii-kpis strong{font-size:14px}
+ .sii-kpis small{font-size:9px}
+ .sii-lookup .field select,.sii-lookup .field input{font-size:12px}
+}
