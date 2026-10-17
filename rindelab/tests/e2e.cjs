@@ -136,6 +136,7 @@ await test('Ranking abre ficha completa y cierra estadísticas',async()=>{
  await page.locator('#detailClose').click();
 });
 await test('Buscar explícitamente y recuperar cuatro Corolla Cross',async()=>{
+ await page.click('#resetButton');
  await page.fill('#query','Corolla Cross');
  assert.equal(await page.locator('#results').isHidden(),true);
  await page.click('#searchButton');
