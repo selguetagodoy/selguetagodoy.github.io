@@ -27,7 +27,7 @@ await test('Abrir estadísticas modal y calcular los diez costos menores WLTP',a
  assert(await page.locator('#statsDialog').evaluate(e=>e.open));
  assert.equal(await page.locator('.rank-item').count(),10);
  const first=await page.locator('.rank-value').allTextContents();
- const costs=first.map(x=>Number(x.replace(/\\D/g,''))).filter(Number.isFinite);
+ const costs=first.map(x=>Number(x.replace(/\D/g,''))).filter(Number.isFinite);
  assert(costs.length===10);
  assert(costs.every((v,i)=>i===0||costs[i-1]<=v),'Top 10 menor costo: '+JSON.stringify(costs));
  await page.locator('#statsClose').click();
@@ -36,7 +36,7 @@ await test('Abrir estadísticas modal y calcular los diez costos menores WLTP',a
 await test('Estadísticas cambian al ordenar mayor costo y al filtrar camionetas',async()=>{
  await page.locator('#statsOpen').click();
  await page.selectOption('#statsOrder','desc');
- const values=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/\\D/g,''))).filter(Number.isFinite);
+ const values=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/\D/g,''))).filter(Number.isFinite);
  assert(values.length===10);
  assert(values.every((v,i)=>i===0||values[i-1]>=v),'Top 10 mayor costo: '+JSON.stringify(values));
  await page.selectOption('#statsBody','pickup');
@@ -60,6 +60,9 @@ await test('Estadísticas no mezclan km/L con km/kWh ni ponderados PHEV',async()
 });
 await test('Ranking abre ficha completa y cierra estadísticas',async()=>{
  await page.locator('#statsOpen').click();
+ await page.selectOption('#statsMetric','cost');
+ await page.selectOption('#statsTech','Bencina');
+ await page.selectOption('#statsBody','');
  await page.locator('.rank-item').first().click();
  assert(await page.locator('#statsDialog').isHidden());
  assert(await page.locator('#detailDialog').evaluate(e=>e.open));
