@@ -511,7 +511,7 @@ await test('Ampliación precio de lista Hyundai: 11 nuevas versiones documentada
  assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
- assert.equal(hyundai.filter(x=>x.family==='Kona'&&x.version.includes('EV')).length,1);
+ assert.equal(hyundai.filter(x=>x.family==='Kona'&&/\bEV\b/.test(x.version)).length,1);
  assert.equal(p.find(x=>x.version==='CRETA GRAND SU2i 2.0 MT GO FL')?.priceListClp,21790000);
  assert.equal(p.find(x=>x.version==='KONA SX2 EV GO LR')?.priceListClp,40090000);
  assert.equal(p.find(x=>x.version==='TUCSON NX4c 2.0 MT GO FL')?.priceListClp,24390000);
