@@ -321,6 +321,7 @@ function renderComparison(){
  $('compareTrayText').textContent=size===1?'Elige al menos otra versión en la tabla para compararlas.':size>=2?'Comparación lista. Puedes agregar hasta '+(4-size)+' versiones más.':'';
  $('compareNow').disabled=size<2;
  tray.hidden=size===0;
+ document.body.classList.toggle('has-compare-tray',size>0);
  document.body.classList.toggle('has-compare-selection',size>0);
  $('compareTrayModels').innerHTML=vehicles.map((r,j)=>'<span class="selected-model">'+safe(r[F.BRAND]+' '+r[F.MODEL])+'<button type="button" data-tray-remove="'+selected[j]+'" aria-label="Quitar '+safe(r[F.BRAND]+' '+r[F.MODEL])+'">×</button></span>').join('');
  const mixed=new Set(vehicles.map(r=>r[F.CYCLE])).size>1;
@@ -491,10 +492,10 @@ for(const id of ['search','category','tech','brand','model','bodytype','cycle','
 /* Búsqueda explícita del catálogo: realiza búsqueda global y navega a resultados. */
 $('catalogSearchForm').addEventListener('submit',event=>{
  event.preventDefault();
- const query=$('search').value.trim();
- $('search').value=query;
- resetCatalogFacets();
+ $('search').value=$('search').value.trim();
  $('sort').value='recent';
+ // Conservar categoría, marca y modelo elegidos: la búsqueda respeta la selección.
+ // Si una selección oculta resultados, se ofrece Ver coincidencias en todo el historial.
  if(!loading){
   filters();
   $('results').scrollIntoView({behavior:'smooth',block:'start'});
@@ -524,6 +525,9 @@ $('navCompare').addEventListener('click',event=>{
 });
 $('compareNow').addEventListener('click',showComparison);
 $('compareReset').addEventListener('click',()=>{selected=[];render();});
+$('compareTray').addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&selected.length){selected=[];render();}
+});
 $('compareTrayModels').addEventListener('click',event=>{
  const button=event.target.closest('[data-tray-remove]');
  if(button)toggle(Number(button.dataset.trayRemove));
