@@ -26,6 +26,11 @@ function family(row){
  name=name.replace(/^(?:(?:The[\s-]+New|All[\s-]+New|New|Nuevo|Nueva)\s+)+/i,'').trim();
  if(!name)return row[F.MODEL];
  const patterns=[
+  // Subfamilias declaradas explícitamente, sin equiparar generaciones comerciales distintas.
+  [/^CS35\s+MAX\b/i,'CS35 Max'],[/^CS75\s+Plus\b/i,'CS75 Plus'],
+  [/^CS\s*55\s+Plus\b/i,'CS55 Plus'],[/^X7\s+Plus\b/i,'X7 Plus'],
+  [/^Hunter\s+(?:EREV|E-?REEV|REEV)\b/i,'Hunter REEV'],
+  [/^Hunter\s+E\b/i,'Hunter eléctrico'],
   [/^GR\s+Corolla\b/i,'GR Corolla'],[/^Corolla\s+Cross\b/i,'Corolla Cross'],[/^Creta\s+Grand\b/i,'Creta Grand'],
   [/^Corolla\s+(?:SD|SEDAN|SEDÁN)\b/i,'Corolla Sedán'],
   [/^Corolla\s+(?:HB|HATCHBACK)\b/i,'Corolla Hatchback'],
