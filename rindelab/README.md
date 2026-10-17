@@ -26,6 +26,19 @@ La base emplea el registro oficial 3CV publicado por el Ministerio de Energía c
 - La ficha conserva marca y motorización **de origen** separadas de los ajustes interpretativos para navegación.
 - Para validación final consultar https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx
 
+## Renovación visual y ventana de estadísticas (v7)
+
+La portada incorpora la ilustración original de vehículos y cordillera (`hero-rindelab.svg`), un tratamiento visual más trabajado y un acceso a **Ver rankings y estadísticas**. Se conserva **una sola búsqueda** y la lista de resultados aparece únicamente al pulsar «Buscar». Las fichas de resultados tienen una jerarquía visual más clara, sin añadir cifras no respaldadas.
+
+Las estadísticas se muestran en un **diálogo independiente y accesible**, no en el flujo principal. Permiten consultar **top 10** con controles dinámicos de:
+- Métrica: costo energético estimado en CLP/100 km o rendimiento homologado.
+- Orden: menor a mayor y mayor a menor.
+- Motorización: bencina, diésel, MHEV, HEV, PHEV, REEV, EV u otras categorías según fuente.
+- Carrocería: SUV/Station Wagon, sedán, hatchback, camioneta, coupé, furgón o bus.
+- Ciclo: WLTP o NEDC, siempre **por separado**.
+
+Los rankings están calculados a partir de las fichas reales que cumplen los filtros; cada fila permite abrir la ficha técnica. Los costos de PHEV y REEV sin valores comparables no se modelan ni sustituyen con proxies. Para rendimiento es necesario seleccionar una motorización con unidades homogéneas (km/L o km/kWh). Sin filas elegibles, el panel informa la limitación en vez de inventar valores. Las tarifas son las mismas que utiliza el buscador y pueden editarse en «Metodología y fuentes».
+
 ## Estructura
 
 - `rindelab/index.html`: buscador, resultados, diálogos y metodología.
