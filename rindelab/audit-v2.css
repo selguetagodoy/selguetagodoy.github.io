@@ -79,3 +79,30 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 
 .charge-config-link{display:flex;align-items:center;justify-content:center;min-height:43px;text-decoration:none!important;color:#0f5f76;border-color:#bcd8dc;background:#f0f9fa;font-size:12px}.charge-config-link:hover{background:#e0f2f4}
+
+
+/* Búsqueda global clara, sin filtros históricos preseleccionados */
+.hero-search-form{margin:23px 0 18px;max-width:625px;padding:14px 15px 12px;border:1px solid rgba(157,213,220,.32);background:rgba(6,34,53,.43);border-radius:13px;box-shadow:0 12px 28px rgba(5,25,44,.12)}
+.hero-search-form label{display:block;font-weight:760;font-size:12px;letter-spacing:.015em;color:#d5eeee;margin-bottom:9px}
+.hero-search-row{display:flex;align-items:stretch;gap:8px}
+.hero-search-row input{flex:1;min-width:0;min-height:49px;border-radius:8px;background:#fff;color:#12344a;border:1px solid #bcd4dd;padding:12px 15px;font-size:13px;outline-offset:3px}
+.hero-search-row input:focus{outline:3px solid #18c6bd;outline-offset:2px}
+.hero-search-row button{white-space:nowrap;border:0;border-radius:8px;background:#20d5ca;color:#062c39;font-weight:850;font-size:13px;padding:0 20px;cursor:pointer;min-width:98px}
+.hero-search-row button:hover{background:#67ede2}
+.hero-search-form small{display:block;font-size:10.5px;color:#aacdd4;margin-top:9px;line-height:1.5}
+.hero-buttons{margin-top:16px}
+.search-field{position:relative}
+.search-field input{min-height:48px;border:1px solid #7eb8c4;background:#f8fdfd;font-size:13px;font-weight:550}
+.search-field input:focus{border-color:#09878b;box-shadow:0 0 0 3px #0a93921b}
+.search-feedback{margin-top:9px;min-height:36px;padding:9px 13px;background:#eff7f9;border:1px solid #dce9ee;border-radius:8px;color:#355970;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;flex-wrap:wrap}
+.search-show-all{background:#0c5b7b!important;color:white!important;border:0!important;border-radius:7px;font-weight:750}
+.search-show-all[hidden]{display:none!important}
+#search[aria-invalid=true]{border-color:#c58e33}
+@media(max-width:640px){
+ .hero-search-form{margin-top:19px;padding:12px}
+ .hero-search-row input{font-size:12px}
+ .hero-search-row button{min-width:79px;padding:0 10px;font-size:12px}
+ .hero-search-form small{font-size:10px}
+ .search-feedback{align-items:start}
+ .search-show-all{width:100%;justify-content:center}
+}
