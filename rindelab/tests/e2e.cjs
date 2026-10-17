@@ -29,6 +29,60 @@ await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
  assert.equal(await page.locator('#results').isHidden(),true);
  assert.equal(await page.locator('#compareTray').isHidden(),true);
 });
+await test('Carrocerías 3CV: ocho grupos exclusivos cubren todas las 8.053 fichas',async()=>{
+ const audit=await page.evaluate(async()=>{
+  const mf=await fetch('../vehiculos/data/manifest.json').then(r=>r.json());
+  const list=(await Promise.all(mf.files.map(f=>fetch('../vehiculos/'+f).then(r=>r.json())))).flat()
+   .filter(r=>r&&r[0]&&r[1]&&r[8]&&r[8]<=mf.published);
+  const groups={
+   station:['Station Wagon'],
+   offroad:['Jeep','Tipo Jeep'],
+   sedan:['Sedán','Limusina'],
+   hatch:['Hatchback'],
+   pickup:['Camioneta'],
+   sport:['Coupé','Cabriolet','Convertible','Descapotable','Roadster'],
+   van:['Furgón','Van','Minivan','Microvan'],
+   bus:['Bus','Minibus']
+  };
+  const counts={};let overlaps=0,unmapped=0;
+  for(const key of Object.keys(groups))counts[key]=0;
+  for(const r of list){
+   const hits=Object.entries(groups).filter(([,names])=>names.includes(r[4])).map(([key])=>key);
+   if(hits.length===0)unmapped++;
+   if(hits.length>1)overlaps++;
+   for(const key of hits)counts[key]++;
+  }
+  return {total:list.length,unmapped,overlaps,counts,sourceLabels:new Set(list.map(r=>r[4])).size};
+ });
+ assert.equal(audit.total,8053);
+ assert.equal(audit.sourceLabels,18);
+ assert.equal(audit.overlaps,0);
+ assert.equal(audit.unmapped,0);
+ assert.deepEqual(audit.counts,{station:3525,offroad:31,sedan:1072,hatch:1156,pickup:1056,sport:676,van:352,bus:185});
+});
+await test('Rankings separan Station Wagon de Jeep y mantienen carrocería original',async()=>{
+ await page.locator('#statsOpen').click();
+ await page.selectOption('#statsTech','');
+ await page.selectOption('#statsMetric','cost');
+ await page.selectOption('#statsCycle','');
+ await page.selectOption('#statsBody','station');
+ assert.match(await page.locator('#statsBodyHint').textContent(),/no es un ranking exclusivo de SUV/);
+ assert((await page.locator('.rank-item').count())>0);
+ const stationRows=await page.locator('.rank-item').allTextContents();
+ assert(stationRows.every(x=>x.includes('Station Wagon')));
+ await page.selectOption('#statsBody','offroad');
+ assert.match(await page.locator('#statsBodyHint').textContent(),/Jeep/);
+ assert((await page.locator('.rank-item').count())>0);
+ const jeepRows=await page.locator('.rank-item').allTextContents();
+ assert(jeepRows.every(x=>x.includes('Jeep')&&!x.includes('Station Wagon')));
+ await page.selectOption('#statsBody','pickup');
+ assert((await page.locator('.rank-item').count())>0);
+ const pickupRows=await page.locator('.rank-item').allTextContents();
+ assert(pickupRows.every(x=>x.includes('Camioneta')));
+ await page.selectOption('#statsBody','');
+ assert.equal(await page.locator('#statsBodyHint').textContent(),'');
+ await page.locator('#statsClose').click();
+});
 await test('Abrir ranking conjunto NEDC y WLTP y ordenar por menor costo',async()=>{
  await page.locator('#statsOpen').click();
  assert(await page.locator('#statsDialog').evaluate(e=>e.open));
@@ -396,6 +450,17 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert.equal(await p.locator('.rank-item').count(),8);
   const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,screen:innerWidth}));
   assert(size.doc<=size.screen+3);
+  await p.locator('#statsClose').click();
+ });
+  await test('Carrocería Station Wagon y Jeep funciona en '+width+' px',async()=>{
+  await p.locator('#statsOpen').click();
+  await p.selectOption('#statsBody','station');
+  assert.match(await p.locator('#statsBodyHint').textContent(),/Station Wagon/);
+  assert((await p.locator('.rank-item').count())>0);
+  await p.selectOption('#statsBody','offroad');
+  assert((await p.locator('.rank-item').count())>0);
+  const dim=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,screen:innerWidth}));
+  assert(dim.doc<=dim.screen+3);
   await p.locator('#statsClose').click();
  });
   await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
