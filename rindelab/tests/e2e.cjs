@@ -14,6 +14,13 @@ async function open(width,height){
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
+await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
+ const manifest=await page.evaluate(async()=>fetch('../vehiculos/data/manifest.json').then(r=>r.json()));
+ assert.equal(manifest.count,8056);
+ assert.equal(manifest.excluded,3);
+ assert.equal(manifest.count-manifest.excluded,8053);
+ assert.equal(await page.locator('#recordCount').textContent(),'8.053');
+});
 await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
  assert.match(await page.locator('h1').textContent(),/cada peso cuenta/i);
  assert.equal(await page.locator('.search-card-heading h2').textContent(),'Busca tu vehículo');
