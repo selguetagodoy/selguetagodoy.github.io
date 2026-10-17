@@ -213,9 +213,13 @@ await test('Ventana de cinco columnas permite scroll, quitar uno y agregar otro'
  assert.equal(await page.locator('.comparison-table thead th').count(),6);
  assert.equal(await page.locator('.comparison-table tbody tr').count(),7);
  assert.equal(await page.locator('.compare-model-cell').count(),5);
- const start=await page.locator('.compare-scroller').evaluate(e=>e.scrollLeft);
- await page.locator('#compareNext').click();await page.waitForTimeout(400);
- assert((await page.locator('.compare-scroller').evaluate(e=>e.scrollLeft))>start);
+ const horizontal=await page.locator('.compare-scroller').evaluate(e=>({width:e.scrollWidth,visible:e.clientWidth,start:e.scrollLeft}));
+ if(horizontal.width>horizontal.visible+2){
+  await page.locator('#compareNext').click();await page.waitForTimeout(400);
+  assert((await page.locator('.compare-scroller').evaluate(e=>e.scrollLeft))>horizontal.start);
+ }else{
+  assert(await page.locator('.compare-scroll-actions').isHidden(),'Las flechas deben ocultarse cuando caben cinco columnas');
+ }
  await page.locator('.compare-remove').first().click();
  assert.equal(await page.locator('.compare-model-cell').count(),4);
  assert.equal(await page.locator('.selected-vehicle-chip').count(),4);
