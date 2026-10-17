@@ -83,3 +83,14 @@
 }
 @media(max-width:420px){.site-universal .universal-brand strong{font-size:.96rem}.site-universal .universal-brand small{font-size:.51rem}.site-universal .universal-brand{min-width:0}.lab-hero h1{font-size:3rem}.lab-card-media{min-height:195px}.lab-card-links{gap:13px}.research-browser .browser-heading h2{font-size:1.5rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.site-universal *, .research-browser *, .lab-page *{transition:none!important;animation:none!important}}
+
+/* Phase 5: verified WCAG contrast adjustments in light sections. */
+.home-premium .seg-strip-index,
+.home-premium .seg-sector-num,
+.lab-keyline b {color:#795222}
+.home-premium .seg-sector-footnote {color:#50636e}
+.home-premium .seg-lab-type,
+.home-premium .seg-eyebrow:not(.seg-eyebrow-light),
+.lab-main .lab-eyebrow,
+.research-browser .browser-type,
+.main .section-label {color:#765020}
