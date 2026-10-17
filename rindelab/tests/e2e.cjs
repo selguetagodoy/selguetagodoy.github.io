@@ -263,7 +263,7 @@ await test('Orden global mezcla ciclos y muestra su etiqueta individual',async()
  await page.click('#searchButton');
  await page.selectOption('#sort','cheapest');
  await page.click('#more');
- const labels=await page.locator('.cycle-badge').allTextContents();
+ const labels=await page.locator('#resultList .cycle-badge').allTextContents();
  assert(labels.length===20);
  assert(labels.every(x=>x==='WLTP'||x==='NEDC'||x==='Ciclo no informado'));
  assert.equal(await page.locator('.group-label').count(),0);
