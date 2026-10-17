@@ -5,14 +5,14 @@
 const { chromium } = require('playwright');
 const assert = require('node:assert/strict');
 (async()=>{
- const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+ const browser=await chromium.launch(process.platform==='win32'?{channel:'chrome',headless:true}:{headless:true,args:['--no-sandbox']});
  const base='http://127.0.0.1:8765/rindelab/';
  let failures=0,checks=0;
  async function test(name,fn){
   try{await fn();console.log('PASS '+name);checks++}
   catch(e){failures++;console.error('FAIL '+name+' — '+e.stack)}
  }
- const page=await browser.newPage({viewport:{width:1440,height:940}});
+ const page=await browser.newPage({viewport:{width:1440,height:940}});await page.emulateMedia({reducedMotion:'reduce'});
  const errors=[];page.on('pageerror',e=>errors.push('Page error: '+e.message));
  page.on('console',msg=>{if(msg.type()==='error')errors.push('Console: '+msg.text())});
  await test('Carga y base oficial',async()=>{
@@ -39,7 +39,6 @@ const assert = require('node:assert/strict');
   assert.equal(await page.locator('#categoryChips button[data-category="sedan"]').getAttribute('aria-pressed'),'true');
  });
  await test('Categoría sedán y reset',async()=>{
-  await page.locator('#categoryChips button[data-category="sedan"]').click();
   assert.match(await page.locator('#sTotal').textContent(),/1\.072/);
   await page.locator('#reset').click();
   assert.match(await page.locator('#sTotal').textContent(),/8\.053/);
@@ -106,9 +105,62 @@ const assert = require('node:assert/strict');
   await page.selectOption('#period','peak');
   assert.match(await page.locator('#activeTariff').textContent(),/\$450\/kWh/);
  });
+ await test('Búsqueda libre Corolla Cross sin selección previa',async()=>{
+  await page.locator('#reset').click();
+  await page.locator('#search').fill('Corolla Cross');
+  assert.equal(await page.locator('#sTotal').textContent(),'4');
+  assert.equal(await page.locator('#sort').inputValue(),'relevance');
+  assert.equal(await page.locator('#tbody tr').count(),4);
+ });
+ await test('Categoría cambia opciones de marcas y modelos',async()=>{
+  await page.locator('#reset').click();
+  await page.selectOption('#category','pickup');
+  assert.equal(await page.locator('#sTotal').textContent(),'1.056');
+  assert.equal(await page.locator('#brand option').count(),Number((await page.locator('#sBrands').textContent()).replace(/\./g,''))+1);
+  await page.selectOption('#brand',{label:'Toyota'});
+  assert(await page.locator('#model option').filter({hasText:'Hilux'}).count()>0);
+  assert.equal(await page.locator('#model option').filter({hasText:'Corolla Cross'}).count(),0);
+  await page.selectOption('#category','sw');
+  assert(await page.locator('#model option').filter({hasText:'Corolla Cross'}).count()>0);
+ });
+ await test('Conflictos de categoría pueden eliminarse con un clic',async()=>{
+  await page.locator('#reset').click();
+  await page.selectOption('#category','pickup');
+  await page.locator('#search').fill('Corolla Cross');
+  assert.equal(await page.locator('#sTotal').textContent(),'0');
+  assert(await page.locator('#showAllSearch').isVisible());
+  await page.locator('#showAllSearch').click();
+  assert.equal(await page.locator('#sTotal').textContent(),'4');
+  assert.equal(await page.locator('#category').inputValue(),'');
+ });
+ await test('Sugerencia por error de escritura',async()=>{
+  await page.locator('#reset').click();
+  await page.locator('#search').fill('Corolla Croos');
+  assert.equal(await page.locator('#sTotal').textContent(),'0');
+  assert(await page.locator('#searchAlternatives button').count()>0);
+  await page.locator('#searchAlternatives button').first().click();
+  assert(await page.locator('#tbody tr').count()>0);
+ });
+ await test('Mostrar diez resultados y después veinte',async()=>{
+  await page.locator('#reset').click();
+  assert.equal(await page.locator('#tbody tr').count(),10);
+  await page.locator('#next').click();
+  assert.equal(await page.locator('#tbody tr').count(),20);
+ });
+ await test('La fuente de motorización queda distinguida en las fichas',async()=>{
+  await page.locator('#tbody button[data-detail]').first().click();
+  assert.match(await page.locator('#detailBody').textContent(),/Motorización declarada \(3CV\)/);
+  assert.match(await page.locator('#detailBody').textContent(),/Clasificación interpretativa/);
+  await page.locator('#closeDetail').click();
+ });
+ await test('Paneles editoriales son accesibles y están plegados',async()=>{
+  assert.equal(await page.locator('#analysisDisclosure').evaluate(x=>x.open),false);
+  await page.locator('#analysisDisclosure summary').click();
+  assert.equal(await page.locator('#analysisDisclosure').evaluate(x=>x.open),true);
+ });
  await test('Sin errores JS en escritorio',async()=>{assert.deepEqual(errors,[])});
  await page.close();
- const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:2});
+ const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:2});await mobile.emulateMedia({reducedMotion:'reduce'});
  const mobileErrors=[];mobile.on('pageerror',e=>mobileErrors.push(e.message));
  await test('Categorías móviles y navegación accesible',async()=>{
   await mobile.goto(base,{waitUntil:'networkidle'});
@@ -119,9 +171,68 @@ const assert = require('node:assert/strict');
   assert.match(await mobile.locator('#sTotal').textContent(),/1\.056/);
   assert.deepEqual(mobileErrors,[]);
  });
+ await test('Menú móvil compacto se abre y se cierra',async()=>{
+  assert(await mobile.locator('#mobileMenuToggle').isVisible());
+  assert(await mobile.locator('#mainNav').isHidden());
+  await mobile.locator('#mobileMenuToggle').click();
+  assert(await mobile.locator('#mainNav').isVisible());
+  await mobile.locator('#mainNav a[href="#catalogo"]').click();
+  assert(await mobile.locator('#mainNav').isHidden());
+ });
+ await test('Búsqueda móvil, lote corto y comparador accesible',async()=>{
+  await mobile.locator('#reset').click();
+  await mobile.locator('#search').fill('Corolla Cross');
+  assert.equal(await mobile.locator('#sTotal').textContent(),'4');
+  assert.equal(await mobile.locator('#tbody tr').count(),4);
+  await mobile.locator('#tbody button[data-compare]').first().click();
+  await mobile.locator('#tbody button[data-compare]').nth(1).click();
+  assert(await mobile.locator('#compareTray').isVisible());
+  assert.equal(await mobile.locator('#comparison .matrix thead th').count(),3);
+  await mobile.locator('#compareNow').click();
+  assert(await mobile.locator('#compareNext').isVisible());
+  const start=await mobile.locator('.matrix-scroll').evaluate(e=>e.scrollLeft);
+  await mobile.locator('#compareNext').click();
+  await mobile.waitForTimeout(400);
+  const end=await mobile.locator('.matrix-scroll').evaluate(e=>e.scrollLeft);
+  assert(end>start);
+  await mobile.locator('#compareReset').click();
+ });
+ await test('Portada móvil compacta y controles táctiles',async()=>{
+  const m=await mobile.evaluate(()=>({
+   hero:document.querySelector('.hero').getBoundingClientRect().height,
+   art:getComputedStyle(document.querySelector('.hero-art')).display,
+   menu:document.querySelector('#mobileMenuToggle').getBoundingClientRect().height,
+   search:document.querySelector('#search').getBoundingClientRect().height
+  }));
+  assert(m.hero<750,'Portada excede 750 px: '+m.hero);
+  assert.equal(m.art,'none');
+  assert(m.menu>=44&&m.search>=44);
+ });
  await test('Sin desbordamiento horizontal en móvil',async()=>{
   const dimensions=await mobile.evaluate(()=>({doc:document.documentElement.scrollWidth,view:window.innerWidth}));
   assert(dimensions.doc<=dimensions.view+3,'Desbordamiento global: '+JSON.stringify(dimensions));
+ });
+ await test('Pantalla compacta de 320 px sin desbordamiento',async()=>{
+  const small=await browser.newPage({viewport:{width:320,height:700},isMobile:true,deviceScaleFactor:1});
+  try{
+   await small.goto(base,{waitUntil:'networkidle'});
+   await small.waitForFunction(()=>document.querySelector('#sTotal')?.textContent==='8.053');
+   const d=await small.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,hero:document.querySelector('.hero').getBoundingClientRect().height}));
+   assert(d.doc<=d.view+3,JSON.stringify(d));assert(d.hero<800,JSON.stringify(d));
+   await small.locator('#search').fill('Corolla Cross');
+   assert.equal(await small.locator('#sTotal').textContent(),'4');
+  }finally{await small.close()}
+ });
+ await test('Tableta de 768 px con filtros y resultados utilizables',async()=>{
+  const tablet=await browser.newPage({viewport:{width:768,height:1024},deviceScaleFactor:1});
+  try{
+   await tablet.goto(base,{waitUntil:'networkidle'});
+   await tablet.waitForFunction(()=>document.querySelector('#sTotal')?.textContent==='8.053');
+   await tablet.locator('#search').fill('Toyota Hilux');
+   assert(Number((await tablet.locator('#sTotal').textContent()).replace(/\./g,''))>0);
+   const widths=await tablet.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+   assert(widths.doc<=widths.view+3,JSON.stringify(widths));
+  }finally{await tablet.close()}
  });
  await mobile.close();await browser.close();
  console.log('\n'+checks+' pruebas aprobadas · '+failures+' fallidas');

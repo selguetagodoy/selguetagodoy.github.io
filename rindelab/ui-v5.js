@@ -1,4 +1,4 @@
-/* RINDELAB v4: tarifas y simulación; conserva los datos originales 3CV */
+/* RINDELAB v5: tarifas y simulación; compatible con buscador unificado; conserva los datos originales 3CV */
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
 const pricing=$('energyPanel');
