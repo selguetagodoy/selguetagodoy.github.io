@@ -1,0 +1,226 @@
+[
+  {
+    "title": "Mercados Regulados en Chile",
+    "url": "mercados-regulados.html",
+    "description": "Investigación y análisis de mercados regulados en Chile: salud, energía, turismo y tecnología. Regulación, políticas públicas, instituciones y evidencia sectorial.",
+    "category": "politicas",
+    "keywords": "salud energia turismo tecnologia regulación institucional mercados regulados"
+  },
+  {
+    "title": "Políticas Públicas en Chile",
+    "url": "politicas-publicas.html",
+    "description": "Análisis de políticas públicas en Chile, diseño e implementación institucional, regulación y sectores como salud, energía, turismo y tecnología.",
+    "category": "politicas",
+    "keywords": "politicas publicas implementación instituciones presupuesto"
+  },
+  {
+    "title": "Asuntos Públicos y Mercados Regulados en Chile",
+    "url": "asuntos-publicos.html",
+    "description": "Análisis de asuntos públicos, regulación y mercados regulados en Chile. Enfoque institucional y sectorial en salud, energía, turismo y tecnología.",
+    "category": "politicas",
+    "keywords": "asuntos publicos regulación relaciones institucionales"
+  },
+  {
+    "title": "Regulación de telecomunicaciones en Chile",
+    "url": "regulacion-telecomunicaciones-chile.html",
+    "description": "Análisis de regulación de telecomunicaciones en Chile por Sebastián Elgueta Godoy: derechos de usuarios, Internet como servicio público, SIM/eSIM, seguridad, cableado, FDT, última milla y conectividad.",
+    "category": "investigacion",
+    "keywords": "telecomunicaciones normas regulación derechos usuarios"
+  },
+  {
+    "title": "Telecomunicaciones en Chile: regulación, conectividad y 5G",
+    "url": "telecomunicaciones.html",
+    "description": "Análisis de telecomunicaciones en Chile: regulación, conectividad, fibra óptica, 5G, desempeño de Internet, competencia y brechas territoriales.",
+    "category": "investigacion",
+    "keywords": "subtel fibra optica 5g servicios publicos"
+  },
+  {
+    "title": "Atlas de la Desconexión Digital de Chile 2026",
+    "url": "atlas-desconexion-digital-chile.html",
+    "description": "Atlas de la Desconexión Digital de Chile 2026, investigación y base de datos de autoría de Sebastián Elgueta Godoy sobre conectividad, brecha digital, fragilidad e inclusión territorial, presentada en COTEL.",
+    "category": "investigacion",
+    "keywords": "atlas cotel conectividad comunal ivd territorial"
+  },
+  {
+    "title": "Índice de Vulnerabilidad Digital en Chile",
+    "url": "indice-vulnerabilidad-digital-chile.html",
+    "description": "Índice de Vulnerabilidad Digital desarrollado por Sebastián Elgueta Godoy en el Atlas de la Desconexión Digital de Chile 2026: conectividad, fragilidad digital, desigualdad territorial y brecha digital.",
+    "category": "investigacion",
+    "keywords": "indice vulnerabilidad digital ivd brecha"
+  },
+  {
+    "title": "Conectividad funcional en Chile",
+    "url": "conectividad-funcional-chile.html",
+    "description": "Conectividad funcional en Chile: análisis de Sebastián Elgueta Godoy a partir del Atlas de la Desconexión Digital de Chile 2026 sobre acceso, uso, dispositivos, calidad y autonomía digital.",
+    "category": "investigacion",
+    "keywords": "internet hogares conectividad funcional"
+  },
+  {
+    "title": "Autonomía digital de personas mayores en Chile",
+    "url": "autonomia-digital-personas-mayores-chile.html",
+    "description": "Análisis de autonomía digital de personas mayores en Chile: acceso, habilidades, dependencia, ciudadanía digital y segunda brecha digital.",
+    "category": "investigacion",
+    "keywords": "personas mayores autonomía digital inclusión"
+  },
+  {
+    "title": "Inclusión y autonomía digital en Chile",
+    "url": "inclusion-digital.html",
+    "description": "Investigación sobre inclusión digital en Chile, segunda brecha digital, habilidades y autonomía de personas mayores, con datos públicos y análisis territorial.",
+    "category": "investigacion",
+    "keywords": "inclusion brecha digital desigualdad"
+  },
+  {
+    "title": "Benchmark Data Centers 2026: 10 hubs comparados",
+    "url": "benchmark-data-centers-2026.html",
+    "description": "Benchmark público de 10 hubs de data centers entre 2020 y 1S 2026, con series trazables de capacidad, mercado, energía, permisos, conectividad y fiscalidad.",
+    "category": "investigacion",
+    "keywords": "data centers benchmarking hubs estudio competitividad"
+  },
+  {
+    "title": "Benchmark Data Centers 2026 · Dashboard interactivo",
+    "url": "dashboard-data-centers-2026.html",
+    "description": "Dashboard interactivo evidence-only de 10 hubs de data centers, con 31 métricas sobre mercado, pipeline, energía, permisos, costos, conectividad, fiscalidad, talento y riesgo entre 2020 y 1S26.",
+    "category": "herramientas",
+    "keywords": "dashboard panel interactivo capacidad instalada 10 hubs"
+  },
+  {
+    "title": "Data Centers en Chile 2026: capacidad, mercado y pipeline",
+    "url": "data-centers-chile-2026.html",
+    "description": "Radiografía 2026 del mercado de data centers en Chile y Santiago: capacidad instalada, inventario comercial, disponibilidad, pipeline y energía, con fuentes CBRE, Colliers, GPS Property e IRENA.",
+    "category": "investigacion",
+    "keywords": "data centers chile capacidad pipeline mercado"
+  },
+  {
+    "title": "Energía para Data Centers en Chile 2026",
+    "url": "energia-data-centers-chile-2026.html",
+    "description": "Energía y data centers en Chile 2026: renovables, demanda eléctrica, conexión, transmisión, almacenamiento y recortes ERV como factores de competitividad.",
+    "category": "investigacion",
+    "keywords": "energia electricidad data centers permisos inversión"
+  },
+  {
+    "title": "Permisos para data centers en Chile | Guía regulatoria 2026",
+    "url": "permisos-data-centers-chile.html",
+    "description": "Síntesis 2026 sobre permisos y evaluación ambiental de data centers en Chile: SEIA, infraestructura eléctrica, sustancias peligrosas, PAS y criterios oficiales.",
+    "category": "investigacion",
+    "keywords": "permisos infraestructura digital"
+  },
+  {
+    "title": "Permisos para Data Centers en Chile 2026",
+    "url": "permisos-data-centers-chile-2026.html",
+    "description": "Ruta regulatoria 2026 para proyectos de data centers en Chile: SEIA, criterio ambiental específico, Ley Marco de Autorizaciones Sectoriales, OASI, SUPER y principales puntos de decisión.",
+    "category": "investigacion",
+    "keywords": "permisos data centers tramitacion"
+  },
+  {
+    "title": "Data centers e infraestructura digital en Chile",
+    "url": "infraestructura-digital.html",
+    "description": "Análisis de competitividad de data centers e infraestructura digital en Chile: energía, permisos, conectividad, costos, talento, regulación y territorio.",
+    "category": "investigacion",
+    "keywords": "infraestructura digital mercados"
+  },
+  {
+    "title": "Datos abiertos",
+    "url": "datos-abiertos.html",
+    "description": "Catálogo de datasets públicos de Sebastián Elgueta Godoy sobre inclusión digital, conectividad e infraestructura digital en Chile y América Latina.",
+    "category": "datos",
+    "keywords": "datos abiertos reproducibilidad metodologia"
+  },
+  {
+    "title": "Chile Digital Inclusion | Dataset de Sebastián Elgueta Godoy",
+    "url": "dataset-chile-digital-inclusion.html",
+    "description": "Dataset público de Sebastián Elgueta Godoy sobre inclusión digital, conectividad, brechas territoriales, redes y desempeño de Internet en Chile.",
+    "category": "datos",
+    "keywords": "dataset inclusion digital hogares"
+  },
+  {
+    "title": "Chile State Institutional Map | Dataset de Sebastián Elgueta Godoy",
+    "url": "dataset-chile-state-institutional-map.html",
+    "description": "Mapa institucional abierto del Estado de Chile para asuntos públicos, políticas públicas, regulación y stakeholder mapping, desarrollado por Sebastián Elgueta Godoy.",
+    "category": "datos",
+    "keywords": "estado instituciones chile mapa institucional"
+  },
+  {
+    "title": "Stakeholder Routes Chile | Dataset de Sebastián Elgueta Godoy",
+    "url": "dataset-stakeholder-routes-chile.html",
+    "description": "Dataset abierto de Sebastián Elgueta Godoy sobre rutas de decisión, actores, competencias y puntos regulatorios para asuntos públicos e inversión en Chile.",
+    "category": "datos",
+    "keywords": "stakeholder rutas instituciones"
+  },
+  {
+    "title": "Velocidades de Internet — Chile, Colombia y comparadores internacionales | Dataset de Sebastián Elgueta Godoy",
+    "url": "dataset-velocidades-internet.html",
+    "description": "Dataset reproducible de Sebastián Elgueta Godoy sobre velocidades de Internet fija y móvil entre 2008 y 2026, con series Akamai y Ookla separadas metodológicamente.",
+    "category": "datos",
+    "keywords": "ookla velocidad internet chile colombia"
+  },
+  {
+    "title": "Latin America Digital Infrastructure | Dataset by Sebastian Elgueta Godoy",
+    "url": "dataset-latin-america-digital-infrastructure.html",
+    "description": "Public comparative dataset by Sebastian Elgueta Godoy on data centers, cloud regions, IXPs, submarine connectivity, energy and digital infrastructure in Latin America.",
+    "category": "datos",
+    "keywords": "infraestructura digital latinoamerica observatorio"
+  },
+  {
+    "title": "Movilidad urbana y geografía de oportunidades en Forestal",
+    "url": "movilidad-urbana-geografia-oportunidades-forestal.html",
+    "description": "Tesis de postgrado de Sebastián Elgueta Godoy sobre movilidad urbana integrada, infraestructura a escala de barrio y geografía de oportunidades en Forestal, Viña del Mar.",
+    "category": "investigacion",
+    "keywords": "movilidad urbana geografía forestal viña del mar"
+  },
+  {
+    "title": "Territorio y desarrollo",
+    "url": "territorio.html",
+    "description": "Territorio, movilidad, infraestructura y desarrollo regional en el trabajo de Sebastián Elgueta Godoy.",
+    "category": "investigacion",
+    "keywords": "territorio politicas publicas desarrollo"
+  },
+  {
+    "title": "Metodología y reproducibilidad",
+    "url": "metodologia-reproducibilidad.html",
+    "description": "Estándar común de Sebastián Elgueta Godoy para investigación aplicada, trazabilidad, datos faltantes, fuentes, versionamiento, citación y reproducibilidad.",
+    "category": "datos",
+    "keywords": "metodologia reproducibilidad fuentes"
+  },
+  {
+    "title": "Sebastián Elgueta Godoy | Publicaciones y análisis",
+    "url": "publicaciones.html",
+    "description": "Publicaciones y análisis de Sebastián Elgueta Godoy sobre asuntos públicos, políticas públicas, regulación, infraestructura digital y territorio.",
+    "category": "publicaciones",
+    "keywords": "publicaciones articulos academia"
+  },
+  {
+    "title": "Publicaciones de Sebastián Elgueta Godoy en LinkedIn | Telecomunicaciones, regulación y datos",
+    "url": "linkedin-publicaciones.html",
+    "description": "Selección de publicaciones de Sebastián Elgueta Godoy en LinkedIn sobre telecomunicaciones, conectividad, regulación, datos, data centers, inteligencia artificial y políticas públicas.",
+    "category": "publicaciones",
+    "keywords": "articulos linkedin reflexiones"
+  },
+  {
+    "title": "Laboratorio Digital",
+    "url": "laboratorio.html",
+    "description": "Laboratorio digital de Sebastián Elgueta Godoy. Explora RINDELAB, el Atlas de la Desconexión Digital y el dashboard del benchmark de data centers.",
+    "category": "herramientas",
+    "keywords": "laboratorio aplicaciones atlas rindelab data centers"
+  },
+  {
+    "title": "Proyectos de Sebastián Elgueta Godoy | Datos abiertos",
+    "url": "proyectos.html",
+    "description": "Proyectos de investigación aplicada y datos abiertos de Sebastián Elgueta Godoy sobre regulación, infraestructura digital, conectividad y territorio.",
+    "category": "herramientas",
+    "keywords": "proyectos repositorios aplicaciones herramientas"
+  },
+  {
+    "title": "Atlas de la Desconexión Digital — Visualizador comunal",
+    "url": "https://atlas-visualizador-cotel.vercel.app/",
+    "description": "Explora mapas comunales, conectividad e indicadores del Atlas con búsqueda y ranking.",
+    "category": "herramientas",
+    "keywords": "atlas cotel visualizador mapa comunas datos brecha digital"
+  },
+  {
+    "title": "RINDELAB — Comparador vehicular",
+    "url": "https://selguetagodoy.github.io/rindelab/",
+    "description": "Consulta homologaciones y compara escenarios de costos de bencina, diésel y electricidad.",
+    "category": "herramientas",
+    "keywords": "rindelab autos vehículos movilidad energía eficiencia costos"
+  }
+]
