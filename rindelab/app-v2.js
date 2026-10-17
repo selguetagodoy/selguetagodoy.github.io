@@ -21,7 +21,7 @@ function searchDocument(r){
  let saved=searchCache.get(r);if(saved)return saved;
  const brand=String(r[F.BRAND]||''),model=String(r[F.MODEL]||'');
  const aliases=[];
- if(/^M\.?\s*Benz$/i.test(brand))aliases.push('mercedes benz mercedes-benz mercedes');
+ if(/^(M\.?\s*Benz|Mercedes[\s-]?Benz)$/i.test(brand))aliases.push('mercedes benz mercedes-benz mercedes');
  if(/^(Great Wall|GWM)$/i.test(brand))aliases.push('gwm great wall haval');
  if(/^Leapmotor$/i.test(brand))aliases.push('leap motor leapmotor');
  if(/\bF[\s-]?150\b/i.test(model))aliases.push('f150 f-150 f 150');
@@ -47,7 +47,7 @@ function searchRelevance(r,query){
  if(record.compact.includes(compact))return 3;
  return 4;
 }
-const brandAlias={'RAM':'RAM','Ram':'RAM','LEAPMOTOR':'Leapmotor','Leapmotor':'Leapmotor','Faw':'FAW','FAW':'FAW'};
+const brandAlias={'M. Benz':'Mercedes-Benz','RAM':'RAM','Ram':'RAM','LEAPMOTOR':'Leapmotor','Leapmotor':'Leapmotor','Faw':'FAW','FAW':'FAW'};
 function cleanRecord(source){
  const r=source.slice();r[F.BRAND]=brandAlias[r[F.BRAND]]||r[F.BRAND];
  const name=r[F.MODEL]||'';
