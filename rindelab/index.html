@@ -11,7 +11,7 @@
 <meta property="og:description" content="Busca vehículos, compara rendimientos y costos estimados de energía en Chile. Datos 3CV.">
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261017-ciclos8">
+<link rel="stylesheet" href="./v6.css?v=20261017-compare5">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -119,10 +119,17 @@
   </details>
  </section>
 </main>
-<div id="compareTray" class="compare-tray" hidden>
+<div id="compareTray" class="compare-tray" hidden aria-label="Vehículos elegidos para comparar">
  <div class="compare-inner">
-  <p id="compareStatus" aria-live="polite">Selecciona dos vehículos para compararlos.</p>
-  <div class="compare-actions"><button type="button" id="compareOpen" class="button primary" disabled>Comparar vehículos</button><button type="button" id="compareClear" class="button tray-clear">Vaciar</button></div>
+  <div class="compare-selection">
+   <p id="compareStatus" role="status" aria-live="polite">Elige entre dos y cinco vehículos para compararlos.</p>
+   <div id="compareSelected" class="compare-selected" aria-label="Modelos seleccionados"></div>
+  </div>
+  <div class="compare-actions">
+   <button type="button" id="compareAdd" class="button tray-add">+ Agregar otro</button>
+   <button type="button" id="compareOpen" class="button primary" disabled>Comparar</button>
+   <button type="button" id="compareClear" class="button tray-clear">Vaciar</button>
+  </div>
  </div>
 </div>
 <dialog id="statsDialog" class="modal stats-modal" aria-labelledby="statsTitle">
@@ -149,12 +156,20 @@
  <div id="detailContent" class="modal-body"></div>
 </dialog>
 <dialog id="compareDialog" class="modal compare-modal" aria-labelledby="compareTitle">
- <div class="modal-head"><h2 id="compareTitle">Comparación de vehículos</h2><button type="button" class="button secondary" id="compareClose" aria-label="Cerrar comparación">Cerrar ×</button></div>
- <div id="compareContent" class="modal-body"></div>
+ <div class="modal-head"><div><h2 id="compareTitle">Comparación de vehículos</h2><p id="compareDialogSummary" class="compare-dialog-summary">Hasta cinco modelos, lado a lado.</p></div><button type="button" class="button secondary" id="compareClose" aria-label="Cerrar comparación">Cerrar ×</button></div>
+ <div class="compare-dialog-toolbar">
+  <button type="button" id="compareDialogAdd" class="button primary">+ Agregar otro vehículo</button>
+  <span id="compareScrollHint">Desliza horizontalmente para revisar los vehículos.</span>
+  <div class="compare-scroll-actions">
+   <button type="button" id="comparePrev" class="button secondary" aria-label="Ver columnas anteriores">←</button>
+   <button type="button" id="compareNext" class="button secondary" aria-label="Ver columnas siguientes">→</button>
+  </div>
+ </div>
+ <div id="compareContent" class="modal-body compare-content"></div>
 </dialog>
 <footer class="footer">
  <div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy · <a href="mailto:e.elguetagodoy@gmail.com">Contacto</a></span><small>Chequea la información en los sitios oficiales. Fuente 3CV, Ministerio de Energía.</small></div>
 </footer>
-<script src="./v6.js?v=20261017-ciclos8" defer></script>
+<script src="./v6.js?v=20261017-compare5" defer></script>
 </body>
 </html>
