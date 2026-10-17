@@ -182,7 +182,7 @@ function render(){
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
   const selectedNow=selected.includes(index);
   article.innerHTML='<div class="vehicle-heading"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<span class="vehicle-tech">'+safe(row[F.TECH])+'</span><p>'+safe(row[F.CYCLE]||'Sin ciclo')+' · '+safe(row[F.DATE]||'Sin fecha')+'</p></div>'+
+   '<span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><p>'+safe(row[F.CYCLE]||'Sin ciclo')+' · '+safe(row[F.DATE]||'Sin fecha')+'</p></div>'+
    '<div class="vehicle-cell"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell"><small>Costo estimado /100 km</small><strong'+(cost(row)===null?' class="no-data"':'')+'>'+safe(money(cost(row)))+'</strong></div>'+
    '<div class="vehicle-actions"><button type="button" class="button secondary" data-detail="'+index+'">Ver ficha</button>'+
@@ -252,6 +252,76 @@ function openCompare(){
   '<p class="compare-note">Costos referenciales de energía, no costo de propiedad ni consumo real. Para un contraste homogéneo utiliza el mismo ciclo y una tecnología comparable.</p>';
  $('compareDialog').showModal();
 }
+// Estadísticas independientes del catálogo: rankings homogéneos por ciclo, sin proxies para PHEV/REEV.
+const rankingBodies={
+ sw:['Station Wagon','Jeep','Tipo Jeep'],
+ sedan:['Sedán','Limusina'],
+ hatch:['Hatchback'],
+ pickup:['Camioneta'],
+ sport:['Coupé','Cabriolet','Convertible','Descapotable','Roadster'],
+ van:['Furgón','Van','Minivan','Microvan'],
+ bus:['Bus','Minibus']
+};
+function rankingPerformance(row){
+ const t=row[F.TECH];
+ if(['PHEV','REEV','Híbrido por verificar'].includes(t))return null;
+ return t==='EV'?number(row[F.EL]):number(row[F.KM]);
+}
+function rankingTitle(metric,ascending){
+ if(metric==='cost')return ascending?'Top 10 · menor costo energético':'Top 10 · mayor costo energético';
+ return ascending?'Top 10 · menor rendimiento':'Top 10 · mayor rendimiento';
+}
+function renderStatistics(){
+ const metric=$('statsMetric').value,tech=$('statsTech').value,body=$('statsBody').value,cycle=$('statsCycle').value,ascending=$('statsOrder').value==='asc';
+ const note=$('statsNotice'),ranking=$('statsRanking');
+ const isPerformance=metric==='performance';
+ $('statsSummaryTitle').textContent=rankingTitle(metric,ascending);
+ const cycleLabel=cycle+' · '+(tech||'Todas las motorizaciones')+' · '+(body?$('statsBody').selectedOptions[0].text:'Todas las carrocerías');
+ $('statsSummarySubtitle').textContent=cycleLabel;
+ ranking.replaceChildren();
+ note.textContent='';
+ $('statsResultCount').textContent='';
+ if(!all.length){note.textContent='Cargando datos oficiales…';return;}
+ if(isPerformance&&(!tech||['PHEV','REEV','Híbrido por verificar'].includes(tech))){
+  note.textContent='Para ordenar rendimiento, elige una motorización Bencina, Diésel, MHEV, HEV o EV. Los km/L y km/kWh no son equivalentes; los rendimientos ponderados PHEV/REEV no permiten un ranking comparable por modo.';
+  return;
+ }
+ const candidate=all.filter(row=>(!tech||row[F.TECH]===tech)&&row[F.CYCLE]===cycle&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
+ const scored=candidate.map(row=>({row,value:isPerformance?rankingPerformance(row):cost(row)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
+ scored.sort((a,b)=>(ascending?a.value-b.value:b.value-a.value)||b.row[F.DATE].localeCompare(a.row[F.DATE])||(a.row[F.BRAND]+' '+a.row[F.MODEL]).localeCompare(b.row[F.BRAND]+' '+b.row[F.MODEL],'es'));
+ $('statsResultCount').textContent=fmt(scored.length)+' fichas comparables';
+ if(!scored.length){
+  ranking.innerHTML='<div class="stats-empty"><strong>No hay registros comparables con estos filtros.</strong><p>Prueba otro ciclo, carrocería o motorización.</p></div>';return;
+ }
+ if(metric==='cost'&&!tech)note.textContent='Los costos son comparables solo como estimaciones monetarias bajo las tarifas indicadas; corresponden a motorizaciones diferentes. La clasificación considera un único ciclo ('+cycle+').';
+ if(metric==='cost'&&tech)note.textContent='Precios energéticos de referencia editables. El ranking conserva el ciclo '+cycle+' y no considera precio de compra, mantención ni condiciones reales de conducción.';
+ if(isPerformance)note.textContent='Se comparan únicamente rendimientos en '+(tech==='EV'?'km/kWh':'km/L')+' de la misma motorización y ciclo '+cycle+'. Las diferencias de carrocería, peso y uso pueden afectar la comparación.';
+ const ten=scored.slice(0,10),maxValue=Math.max(...ten.map(p=>p.value),1);
+ for(let i=0;i<ten.length;i++){
+  const {row,value}=ten[i],index=all.indexOf(row);
+  const label=metric==='cost'?money(value):(fixed(value)+(tech==='EV'?' km/kWh':' km/L'));
+  const item=document.createElement('button');item.type='button';item.className='rank-item';item.dataset.statsDetail=String(index);
+  item.setAttribute('aria-label','Ver ficha de '+row[F.BRAND]+' '+row[F.MODEL]+', '+label);
+  item.innerHTML='<span class="rank-number">'+String(i+1).padStart(2,'0')+'</span>'+
+   '<span class="rank-main"><strong>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</strong>'+
+   '<small>'+safe(row[F.TECH])+' · '+safe(row[F.BODY]||'Carrocería no informada')+'</small>'+
+   '<span class="rank-track"><span class="rank-fill" style="width:'+Math.max(4,value/maxValue*100).toFixed(2)+'%"></span></span></span>'+
+   '<span class="rank-value">'+safe(label)+'<span class="rank-arrow" aria-hidden="true">↗</span></span>';
+  ranking.append(item);
+ }
+}
+$('statsOpen').disabled=true;
+$('statsOpen').addEventListener('click',()=>{
+ $('statsDialog').showModal();renderStatistics();
+});
+$('statsClose').addEventListener('click',()=>$('statsDialog').close());
+for(const id of ['statsMetric','statsTech','statsBody','statsCycle','statsOrder'])$(id).addEventListener('change',renderStatistics);
+$('statsRanking').addEventListener('click',event=>{
+ const button=event.target.closest('[data-stats-detail]');
+ if(!button)return;
+ $('statsDialog').close();showDetail(Number(button.dataset.statsDetail));
+});
+
 async function init(){
  try{
   const manifest=await fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('No se pudo cargar el manifiesto 3CV');return r.json();});
@@ -260,6 +330,7 @@ async function init(){
   all=files.flat().filter(r=>r&&r[F.BRAND]&&r[F.MODEL]&&r[F.DATE]&&r[F.DATE]<=cut).map(cleanRow);
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
+  $('statsOpen').disabled=false;
   const bodies=[...new Set(all.map(r=>r[F.BODY]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es')).map(value=>({value}));
   setOptions('bodytype',bodies,'Todas las carrocerías');choices();
   $('searchButton').disabled=false;
@@ -286,7 +357,7 @@ for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListene
 $('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';});
 $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
 $('sort').addEventListener('change',render);
-for(const id of ['gasPrice','dieselPrice','electricPrice'])$(id).addEventListener('change',()=>{if(submitted)render();});
+for(const id of ['gasPrice','dieselPrice','electricPrice'])$(id).addEventListener('change',()=>{if(submitted)render();if($('statsDialog').open)renderStatistics();});
 $('resultList').addEventListener('click',event=>{
  const detail=event.target.closest('[data-detail]'),comparison=event.target.closest('[data-compare]');
  if(detail)showDetail(Number(detail.dataset.detail));
