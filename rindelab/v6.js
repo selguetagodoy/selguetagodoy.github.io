@@ -134,12 +134,9 @@ function sortRows(rows,sort){
  if(sort==='name')copy.sort((a,b)=>(a[F.BRAND]+' '+a[F.MODEL]).localeCompare(b[F.BRAND]+' '+b[F.MODEL],'es'));
  else if(sort==='recent')copy.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
  else if(sort==='cheapest'||sort==='expensive'){
-  const order=['WLTP','NEDC'];
-  copy.sort((a,b)=>{
-   const ka=a[F.CYCLE],kb=b[F.CYCLE],ia=order.indexOf(ka),ib=order.indexOf(kb);
-   const ga=ia<0?2:ia,gb=ib<0?2:ib;
-   return ga-gb||cmpCost(a,b)||b[F.DATE].localeCompare(a[F.DATE]);
-  });
+  // Una sola lista global por costo. El ciclo permanece visible en cada ficha;
+  // el orden no implica equivalencia experimental NEDC/WLTP.
+  copy.sort((a,b)=>cmpCost(a,b)||b[F.DATE].localeCompare(a[F.DATE]));
  }
  return copy;
 }
@@ -173,16 +170,13 @@ function render(){
  $('emptyState').hidden=!!results.length;
  if(!results.length)$('emptyState').innerHTML='<strong>Sin coincidencias</strong>Prueba con otra marca, modelo o quita un filtro técnico.';
  $('sortNote').hidden=!['cheapest','expensive'].includes(sort);
- if(!$('sortNote').hidden)$('sortNote').textContent='Ordenado por costo estimado dentro de cada ciclo (WLTP y NEDC por separado). Los precios son referenciales; los ciclos y las tecnologías no son directamente equivalentes.';
- const list=$('resultList');list.replaceChildren();let lastCycle=null;
+ if(!$('sortNote').hidden)$('sortNote').textContent='Orden único por costo estimado. Cada ficha indica WLTP o NEDC: son ensayos distintos y sus resultados no son directamente equivalentes. Los precios de energía son referenciales.';
+ const list=$('resultList');list.replaceChildren();
  for(const row of visible){
-  if(['cheapest','expensive'].includes(sort)&&row[F.CYCLE]!==lastCycle){
-   const hdr=document.createElement('div');hdr.className='group-label';hdr.textContent='Ciclo '+(row[F.CYCLE]||'no informado');list.append(hdr);lastCycle=row[F.CYCLE];
-  }
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
   const selectedNow=selected.includes(index);
   article.innerHTML='<div class="vehicle-heading"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><p>'+safe(row[F.CYCLE]||'Sin ciclo')+' · '+safe(row[F.DATE]||'Sin fecha')+'</p></div>'+
+   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div><p>Homologación '+safe(row[F.DATE]||'sin fecha')+'</p></div>'+
    '<div class="vehicle-cell"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell"><small>Costo estimado /100 km</small><strong'+(cost(row)===null?' class="no-data"':'')+'>'+safe(money(cost(row)))+'</strong></div>'+
    '<div class="vehicle-actions"><button type="button" class="button secondary" data-detail="'+index+'">Ver ficha</button>'+
@@ -276,7 +270,7 @@ function renderStatistics(){
  const note=$('statsNotice'),ranking=$('statsRanking');
  const isPerformance=metric==='performance';
  $('statsSummaryTitle').textContent=rankingTitle(metric,ascending);
- const cycleLabel=cycle+' · '+(tech||'Todas las motorizaciones')+' · '+(body?$('statsBody').selectedOptions[0].text:'Todas las carrocerías');
+ const cycleLabel=(cycle||'NEDC + WLTP')+' · '+(tech||'Todas las motorizaciones')+' · '+(body?$('statsBody').selectedOptions[0].text:'Todas las carrocerías');
  $('statsSummarySubtitle').textContent=cycleLabel;
  ranking.replaceChildren();
  note.textContent='';
@@ -286,16 +280,15 @@ function renderStatistics(){
   note.textContent='Para ordenar rendimiento, elige una motorización Bencina, Diésel, MHEV, HEV o EV. Los km/L y km/kWh no son equivalentes; los rendimientos ponderados PHEV/REEV no permiten un ranking comparable por modo.';
   return;
  }
- const candidate=all.filter(row=>(!tech||row[F.TECH]===tech)&&row[F.CYCLE]===cycle&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
+ const candidate=all.filter(row=>(!tech||row[F.TECH]===tech)&&(!cycle||row[F.CYCLE]===cycle)&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
  const scored=candidate.map(row=>({row,value:isPerformance?rankingPerformance(row):cost(row)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
  scored.sort((a,b)=>(ascending?a.value-b.value:b.value-a.value)||b.row[F.DATE].localeCompare(a.row[F.DATE])||(a.row[F.BRAND]+' '+a.row[F.MODEL]).localeCompare(b.row[F.BRAND]+' '+b.row[F.MODEL],'es'));
  $('statsResultCount').textContent=fmt(scored.length)+' fichas comparables';
  if(!scored.length){
   ranking.innerHTML='<div class="stats-empty"><strong>No hay registros comparables con estos filtros.</strong><p>Prueba otro ciclo, carrocería o motorización.</p></div>';return;
  }
- if(metric==='cost'&&!tech)note.textContent='Los costos son comparables solo como estimaciones monetarias bajo las tarifas indicadas; corresponden a motorizaciones diferentes. La clasificación considera un único ciclo ('+cycle+').';
- if(metric==='cost'&&tech)note.textContent='Precios energéticos de referencia editables. El ranking conserva el ciclo '+cycle+' y no considera precio de compra, mantención ni condiciones reales de conducción.';
- if(isPerformance)note.textContent='Se comparan únicamente rendimientos en '+(tech==='EV'?'km/kWh':'km/L')+' de la misma motorización y ciclo '+cycle+'. Las diferencias de carrocería, peso y uso pueden afectar la comparación.';
+ if(metric==='cost')note.textContent='Ranking único de costos energéticos estimados. Cada vehículo indica su ciclo (WLTP o NEDC). Los ensayos no son directamente equivalentes y pueden existir distintas motorizaciones; el orden es orientativo, no una comparación técnica homogénea. Precios referenciales editables.';
+ if(isPerformance)note.textContent='Ranking orientativo dentro de una sola motorización, en '+(tech==='EV'?'km/kWh':'km/L')+'. '+(cycle?'Ciclo seleccionado: '+cycle+'.':'Incluye NEDC y WLTP identificados por vehículo; los ensayos no son directamente equivalentes.')+' Las diferencias de carrocería, peso y uso también pueden afectar las cifras.';
  const ten=scored.slice(0,10),maxValue=Math.max(...ten.map(p=>p.value),1);
  for(let i=0;i<ten.length;i++){
   const {row,value}=ten[i],index=all.indexOf(row);
@@ -304,7 +297,7 @@ function renderStatistics(){
   item.setAttribute('aria-label','Ver ficha de '+row[F.BRAND]+' '+row[F.MODEL]+', '+label);
   item.innerHTML='<span class="rank-number">'+String(i+1).padStart(2,'0')+'</span>'+
    '<span class="rank-main"><strong>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</strong>'+
-   '<small>'+safe(row[F.TECH])+' · '+safe(row[F.BODY]||'Carrocería no informada')+'</small>'+
+   '<small>'+safe(row[F.TECH])+' · '+safe(row[F.BODY]||'Carrocería no informada')+' <span class="rank-cycle" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></small>'+
    '<span class="rank-track"><span class="rank-fill" style="width:'+Math.max(4,value/maxValue*100).toFixed(2)+'%"></span></span></span>'+
    '<span class="rank-value">'+safe(label)+'<span class="rank-arrow" aria-hidden="true">↗</span></span>';
   ranking.append(item);
