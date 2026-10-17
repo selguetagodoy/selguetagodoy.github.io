@@ -5,7 +5,7 @@
     "version": "XEI 1.8 HEV CVT",
     "modelYear": 2026,
     "priceListClp": 27990000,
-    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
+    "source": "https://tienda.toyota.cl/index.php?controller=product&id_product=533&rewrite=corolla-cross",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
     "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
@@ -71,18 +71,7 @@
     "version": "4x4 2.8 MT SR Diesel",
     "modelYear": 2026,
     "priceListClp": 45290000,
-    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-H%26iacute%3Bbrido",
-    "checkedAt": "2026-10-17",
-    "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
-  },
-  {
-    "brand": "Toyota",
-    "family": "Hilux",
-    "version": "4x2 2.4 MT SR Diesel",
-    "modelYear": 2026,
-    "priceListClp": 34790000,
-    "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-H%26iacute%3Bbrido",
+    "source": "https://tienda.toyota.cl/index.php?controller=product&id_product=234&id_product_attribute=222&rewrite=hilux",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
     "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
@@ -229,5 +218,60 @@
     "checkedAt": "2026-10-17",
     "currency": "CLP",
     "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+  },
+  {
+    "brand": "Kia",
+    "family": "Morning",
+    "version": "LX 1.0L 5MT",
+    "modelYear": null,
+    "priceListClp": 10990000,
+    "source": "https://www.kia.cl/promociones/kia-morning.html",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista con IVA, sin bono directo ni de financiamiento. Cargos adicionales según condiciones del fabricante."
+  },
+  {
+    "brand": "Kia",
+    "family": "Morning",
+    "version": "LX 1.2L 5MT",
+    "modelYear": null,
+    "priceListClp": 11990000,
+    "source": "https://www.kia.cl/promociones/kia-morning.html",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista con IVA, sin bono directo ni de financiamiento. Cargos adicionales según condiciones del fabricante."
+  },
+  {
+    "brand": "Kia",
+    "family": "Morning",
+    "version": "EX 1.2L 5MT FULL",
+    "modelYear": null,
+    "priceListClp": 13490000,
+    "source": "https://www.kia.cl/promociones/kia-morning.html",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista con IVA, sin bono directo ni de financiamiento. Cargos adicionales según condiciones del fabricante."
+  },
+  {
+    "brand": "Kia",
+    "family": "Morning",
+    "version": "LX 1.2L 5AMT",
+    "modelYear": null,
+    "priceListClp": 13490000,
+    "source": "https://www.kia.cl/promociones/kia-morning.html",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista con IVA, sin bono directo ni de financiamiento. Cargos adicionales según condiciones del fabricante."
+  },
+  {
+    "brand": "Kia",
+    "family": "Morning",
+    "version": "EX 1.2L 5AMT FULL",
+    "modelYear": null,
+    "priceListClp": 14990000,
+    "source": "https://www.kia.cl/promociones/kia-morning.html",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista con IVA, sin bono directo ni de financiamiento. Cargos adicionales según condiciones del fabricante."
   }
 ]
