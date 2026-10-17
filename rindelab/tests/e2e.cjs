@@ -475,7 +475,7 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
 });
 await test('Catálogo inicial de 21 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,21);
+ assert.equal(list.length,32);
  assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Toyota']);
  const seen=new Set();
  for(const item of list){
@@ -503,6 +503,25 @@ await test('No asigna precio de lista automáticamente y permite elegir o quitar
  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
  assert.match(await page.locator('#siiCommercial').textContent(),/45\.290\.000/);
  await page.click('#detailClose');
+});
+await test('Ampliación precio de lista Hyundai: 11 nuevas versiones documentadas',async()=>{
+ const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list32').then(r=>r.json()));
+ const hyundai=p.filter(x=>x.brand==='Hyundai');
+ assert.equal(p.length,32);
+ assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
+ assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
+ assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
+ assert.equal(hyundai.filter(x=>x.family==='Kona'&&x.version.includes('EV')).length,1);
+ assert.equal(p.find(x=>x.version==='CRETA GRAND SU2i 2.0 MT GO FL')?.priceListClp,21790000);
+ assert.equal(p.find(x=>x.version==='KONA SX2 EV GO LR')?.priceListClp,40090000);
+ assert.equal(p.find(x=>x.version==='TUCSON NX4c 2.0 MT GO FL')?.priceListClp,24390000);
+});
+await test('Creta Grand no se agrupa dentro de Creta al consultar precios de lista',async()=>{
+ const out=await page.evaluate(()=>{
+  const fn=window.RindelabSII?.family;
+  return ['Creta Grand 2.0 MT','The New Creta Grand AT','Creta 1.5 CVT'].map(model=>fn(['Hyundai',model]));
+ });
+ assert.deepEqual(out,['Creta Grand','Creta Grand','Creta']);
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
