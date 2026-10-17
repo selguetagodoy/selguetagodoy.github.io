@@ -5,7 +5,7 @@
 const fs=require('node:fs'),path=require('node:path');
 const file=path.join(__dirname,'../rindelab/sii/commercial-2026.json');
 const entries=JSON.parse(fs.readFileSync(file,'utf8'));
-const allowed=new Set(['tienda.toyota.cl','www.hyundai.cl','www.kia.cl','www.suzuki.cl','suzuki.cl','www.mgmotor.cl','www.changan.cl']);
+const allowed=new Set(['tienda.toyota.cl','www.hyundai.cl','www.kia.cl','www.suzuki.cl','suzuki.cl','www.mgmotor.cl','www.changan.cl','www.ford.cl']);
 const ages=[],sources=new Set(),errors=[],warnings=[],keys=new Set(),today=Date.now();
 const iso=/^\d{4}-\d{2}-\d{2}$/;
 const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim().replace(/\s+/g,' ');
