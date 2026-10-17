@@ -11,7 +11,7 @@
 <meta property="og:description" content="Busca vehículos, compara rendimientos y costos estimados de energía en Chile. Datos 3CV.">
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261017-sii12"><link rel="stylesheet" href="./sii/sii.css?v=20261017-sii12">
+<link rel="stylesheet" href="./v6.css?v=20261017-sii12"><link rel="stylesheet" href="./sii/sii.css?v=20261017-pricelist13">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -105,6 +105,7 @@
     <p><strong>Estimación energética.</strong> Para combustibles se utiliza 100 ÷ km/L × precio por litro; para eléctricos, 100 ÷ km/kWh × tarifa por kWh. Los precios iniciales son supuestos editables, no cotizaciones en tiempo real. Para PHEV y REEV se presentan los rendimientos eléctrico y ponderado informados por el 3CV, sin transformarlos en costos combinados ficticios.</p>
     <p><strong>Comparabilidad.</strong> RINDELAB muestra NEDC y WLTP en una sola lista, con el ciclo identificado en cada vehículo. Puedes ordenar los costos estimados de menor a mayor o viceversa, pero los ensayos NEDC y WLTP no son directamente equivalentes; el ranking conjunto es orientativo.</p>
     <p><strong>Tasación fiscal y permiso.</strong> La nómina SII 2026 tiene códigos, años de fabricación y versiones distintas de las homologaciones 3CV. La consulta es manual y no asigna importes automáticamente. El permiso SII es el valor publicado para un código y año; la tasación no es el precio de reventa. Los precios nuevos se muestran solo como referencias de modelo publicadas por fabricantes, con su fuente y fecha; no necesariamente corresponden a la versión o a un vehículo a la venta.</p>
+    <p><strong>Precios de lista.</strong> Se muestran únicamente valores de lista de vehículos nuevos documentados por fabricante o tienda oficial, sin bonos ni financiamiento. La cobertura inicial es parcial y exige seleccionar manualmente una versión comercial; no se presume que coincida con la homologación 3CV. Los valores pueden cambiar y no incluyen gastos adicionales cuando se cobran aparte. Si falta una fuente verificable, RINDELAB no muestra un precio.</p>
     <p><strong>Trazabilidad.</strong> Las fichas incluyen código de homologación, fecha y tecnología declarada por 3CV. Una denominación comercial como «Hybrid» no basta para reclasificar de forma automática el tipo de motorización; se conserva la clasificación de origen y se explica la discrepancia en la ficha.</p>
     <p><a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Descargar planilla oficial 3CV ↗</a></p>
     <details class="prices" id="priceSettings">
@@ -174,6 +175,7 @@
  <div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy · <a href="mailto:e.elguetagodoy@gmail.com">Contacto</a></span><small>Chequea la información en los sitios oficiales. Fuente 3CV, Ministerio de Energía.</small></div>
 </footer>
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
-<script src="./v6.js?v=20261017-sii12" defer></script>
+<script src="./sii/prices.js?v=20261017-pricelist13" defer></script>
+<script src="./v6.js?v=20261017-pricelist13" defer></script>
 </body>
 </html>
