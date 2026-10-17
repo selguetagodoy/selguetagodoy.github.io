@@ -11,7 +11,7 @@
 <meta property="og:description" content="Busca vehículos, compara rendimientos y costos estimados de energía en Chile. Datos 3CV.">
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261017-visual7">
+<link rel="stylesheet" href="./v6.css?v=20261017-ciclos8">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -103,7 +103,7 @@
    <div class="source-body">
     <p><strong>Datos oficiales.</strong> RINDELAB utiliza la planilla de homologaciones del 3CV, difundida por el Ministerio de Energía, con corte declarado al 8 de mayo de 2026. Se muestran <span id="recordCount">—</span> fichas. Tres registros posteriores al corte se excluyen de los resultados sin alterarlos en el archivo original. No se trata de un inventario de autos actualmente a la venta.</p>
     <p><strong>Estimación energética.</strong> Para combustibles se utiliza 100 ÷ km/L × precio por litro; para eléctricos, 100 ÷ km/kWh × tarifa por kWh. Los precios iniciales son supuestos editables, no cotizaciones en tiempo real. Los híbridos enchufables y de autonomía extendida pueden presentar consumos ponderados que no permiten calcular de forma rigurosa el costo individual de cada modo.</p>
-    <p><strong>Comparabilidad.</strong> Los resultados NEDC y WLTP no son directamente equivalentes. Al ordenar por costos con ambos ciclos presentes, RINDELAB muestra grupos separados por ciclo y ordena dentro de cada grupo.</p>
+    <p><strong>Comparabilidad.</strong> RINDELAB muestra NEDC y WLTP en una sola lista, con el ciclo identificado en cada vehículo. Puedes ordenar los costos estimados de menor a mayor o viceversa, pero los ensayos NEDC y WLTP no son directamente equivalentes; el ranking conjunto es orientativo.</p>
     <p><strong>Trazabilidad.</strong> Las fichas incluyen código de homologación, fecha, motorización declarada y, si corresponde, clasificación interpretativa. La información debe corroborarse con la fuente original.</p>
     <p><a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Descargar planilla oficial 3CV ↗</a></p>
     <details class="prices" id="priceSettings">
@@ -135,13 +135,13 @@
    <div class="field"><label for="statsMetric">¿Qué quieres comparar?</label><select id="statsMetric"><option value="cost">Costo energético por 100 km</option><option value="performance">Rendimiento homologado</option></select></div>
    <div class="field"><label for="statsTech">Motorización</label><select id="statsTech"><option value="">Todas las motorizaciones</option><option value="Bencina">Bencina</option><option value="Diésel">Diésel</option><option value="MHEV">Híbrido suave (MHEV)</option><option value="HEV">Híbrido (HEV)</option><option value="PHEV">Híbrido enchufable (PHEV)</option><option value="REEV">Extensor de autonomía (REEV)</option><option value="EV">Eléctrico (EV)</option><option value="Híbrido por verificar">Híbrido por verificar</option></select></div>
    <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="sw">SUV / Station Wagon</option><option value="sedan">Sedán</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van</option><option value="bus">Bus / minibús</option></select></div>
-   <div class="field"><label for="statsCycle">Ciclo de ensayo</label><select id="statsCycle"><option value="WLTP">WLTP</option><option value="NEDC">NEDC</option></select></div>
+   <div class="field"><label for="statsCycle">Ciclo de ensayo</label><select id="statsCycle"><option value="">Todos (NEDC + WLTP)</option><option value="WLTP">Solo WLTP</option><option value="NEDC">Solo NEDC</option></select></div>
    <div class="field"><label for="statsOrder">Ordenar los 10</label><select id="statsOrder"><option value="asc">Menor a mayor</option><option value="desc">Mayor a menor</option></select></div>
   </div>
   <div class="stats-summary"><div><span class="stats-live-indicator" aria-hidden="true"></span><strong id="statsSummaryTitle">Top 10 por costo energético</strong><p id="statsSummarySubtitle"></p></div><span id="statsResultCount" class="stats-count"></span></div>
   <div id="statsNotice" class="stats-notice" role="status" aria-live="polite"></div>
   <div id="statsRanking" class="stats-ranking" aria-live="polite"></div>
-  <p class="stats-footnote">Valores homologados y costos energéticos referenciales, no mediciones de uso real. No se equiparan ciclos de ensayo ni se infieren costos para indicadores ponderados PHEV/REEV. Cambia los precios en «Metodología y fuentes».</p>
+  <p class="stats-footnote">Resultados de NEDC y WLTP en una sola clasificación, identificados por ciclo. Los ensayos no son equivalentes, por lo que el orden conjunto es orientativo. No se infieren costos para indicadores ponderados PHEV/REEV. Los precios pueden cambiarse en «Metodología y fuentes».</p>
  </div>
 </dialog>
 <dialog id="detailDialog" class="modal" aria-labelledby="detailTitle">
@@ -155,6 +155,6 @@
 <footer class="footer">
  <div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy · <a href="mailto:e.elguetagodoy@gmail.com">Contacto</a></span><small>Chequea la información en los sitios oficiales. Fuente 3CV, Ministerio de Energía.</small></div>
 </footer>
-<script src="./v6.js?v=20261017-visual7" defer></script>
+<script src="./v6.js?v=20261017-ciclos8" defer></script>
 </body>
 </html>
