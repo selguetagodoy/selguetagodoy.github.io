@@ -213,6 +213,15 @@ function showDetail(i){
  $('detailDialog').showModal();
 }
 const MAX_COMPARE=5;
+function syncCompareScrollControls(){
+ const scroller=$('compareContent').querySelector('.compare-scroller');
+ const buttons=document.querySelector('.compare-scroll-actions');
+ const overflow=!!scroller&&$('compareDialog').open&&scroller.scrollWidth>scroller.clientWidth+2;
+ buttons.hidden=!overflow;
+ $('compareScrollHint').hidden=!overflow;
+ $('comparePrev').disabled=!overflow||scroller.scrollLeft<=1;
+ $('compareNext').disabled=!overflow||scroller.scrollLeft>=scroller.scrollWidth-scroller.clientWidth-1;
+}
 function compareUpdate(message=''){
  const n=selected.length;
  $('compareTray').hidden=n===0;
@@ -237,6 +246,7 @@ function compareUpdate(message=''){
  if($('compareDialog').open){
   if(n<2)$('compareDialog').close();
   else renderComparisonContent();
+  syncCompareScrollControls();
  }
 }
 function selectForCompare(i){
@@ -288,12 +298,15 @@ function renderComparisonContent(){
   '<div class="compare-scroller" tabindex="0" role="region" aria-label="Tabla comparativa desplazable horizontalmente">'+
   '<table class="comparison-table" style="--compare-columns:'+columns+'">'+header+body+'</table></div>'+
   '<p class="compare-note">Costos energéticos referenciales por 100 km, no costo de propiedad ni consumo real. Para comparar rendimientos directamente, utiliza un mismo ciclo y tecnología.</p>';
- $('compareScrollHint').hidden=false;
+ const scroller=$('compareContent').querySelector('.compare-scroller');
+ scroller.addEventListener('scroll',syncCompareScrollControls,{passive:true});
+ syncCompareScrollControls();
 }
 function openCompare(){
  if(selected.length<2)return;
  renderComparisonContent();
  if(!$('compareDialog').open)$('compareDialog').showModal();
+ requestAnimationFrame(syncCompareScrollControls);
 }
 // Estadísticas independientes del catálogo: rankings homogéneos por ciclo, sin proxies para PHEV/REEV.
 const rankingBodies={
@@ -431,6 +444,7 @@ for(const [id,direction] of [['comparePrev',-1],['compareNext',1]]){
 }
 $('compareClear').addEventListener('click',()=>{selected=[];compareUpdate();if(submitted)render();});
 $('compareClose').addEventListener('click',()=>$('compareDialog').close());
+window.addEventListener('resize',syncCompareScrollControls);
 $('detailClose').addEventListener('click',()=>$('detailDialog').close());
 $('detailDialog').addEventListener('close',()=>{const url=new URL(location.href);if(url.searchParams.has('codigo')){url.searchParams.delete('codigo');history.replaceState(null,'',url.pathname+url.search+url.hash);}});
 init();
