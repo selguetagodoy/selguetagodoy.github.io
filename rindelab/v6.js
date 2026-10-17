@@ -26,6 +26,11 @@ function family(row){
  name=name.replace(/^(?:(?:The[\s-]+New|All[\s-]+New|New|Nuevo|Nueva)\s+)+/i,'').trim();
  if(!name)return row[F.MODEL];
  const patterns=[
+  // Subfamilias declaradas explícitamente, sin equiparar generaciones comerciales distintas.
+  [/^CS35\s+MAX\b/i,'CS35 Max'],[/^CS75\s+Plus\b/i,'CS75 Plus'],
+  [/^CS\s*55\s+Plus\b/i,'CS55 Plus'],[/^X7\s+Plus\b/i,'X7 Plus'],
+  [/^Hunter\s+(?:EREV|E-?REEV|REEV)\b/i,'Hunter REEV'],
+  [/^Hunter\s+E\b/i,'Hunter eléctrico'],
   [/^GR\s+Corolla\b/i,'GR Corolla'],[/^Corolla\s+Cross\b/i,'Corolla Cross'],[/^Creta\s+Grand\b/i,'Creta Grand'],
   [/^Corolla\s+(?:SD|SEDAN|SEDÁN)\b/i,'Corolla Sedán'],
   [/^Corolla\s+(?:HB|HATCHBACK)\b/i,'Corolla Hatchback'],
@@ -61,7 +66,10 @@ function queryText(row){
 function matchesText(row,q){
  if(!q)return true;
  const hay=queryText(row),words=q.split(' ');
- return hay.words.includes(q)||hay.compact.includes(q.replace(/\s/g,''))||words.every(w=>hay.words.includes(w));
+ // No usar dígitos sueltos de los códigos 3CV para hacer coincidir motores (p. ej. Hunter 2.0 ≠ Hunter E).
+ const modelWords=normalize(row[F.BRAND]+' '+row[F.MODEL]).split(' ');
+ return hay.words.includes(q)||hay.compact.includes(q.replace(/\s/g,''))||
+  words.every(w=>/^\d{1,2}$/.test(w)?modelWords.includes(w):hay.words.includes(w));
 }
 function inputCriteria(){
  return {q:normalize($('query').value),brand:$('brand').value,model:$('model').value,tech:$('tech').value,body:$('bodytype').value,cycle:$('cycle').value,year:$('year').value};

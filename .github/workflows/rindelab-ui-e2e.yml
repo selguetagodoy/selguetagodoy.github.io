@@ -5,12 +5,14 @@ on:
     paths:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
+      - "scripts/audit-price-sources.cjs"
   push:
     branches:
       - "main"
     paths:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
+      - "scripts/audit-price-sources.cjs"
   workflow_dispatch:
 
 permissions:
@@ -28,6 +30,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+
+      - name: Validar integridad del catálogo de precios de lista
+        run: node scripts/audit-price-sources.cjs
 
       - name: Install Playwright and Chromium
         run: |

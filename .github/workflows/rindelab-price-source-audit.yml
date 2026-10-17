@@ -1,0 +1,23 @@
+name: RINDELAB — vigencia de precios de lista
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 12 * * 1' # Lunes; hora UTC, independiente de zona horaria
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Revisar catálogo y fuentes oficiales
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Auditar formato, antigüedad y URLs de origen
+        run: node scripts/audit-price-sources.cjs --online
