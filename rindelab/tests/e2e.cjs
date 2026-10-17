@@ -105,7 +105,7 @@ await test('REEV muestra sus 8 registros y ambas métricas con orden dinámico',
  await page.selectOption('#statsMetric','electric');
  await page.locator('.rank-item').first().click();
  assert(await page.locator('#statsDialog').isHidden());
- assert.match(await page.locator('#detailContent').textContent(),/Rendimiento oficial/);
+ assert.match(await page.locator('#detailContent').textContent(),/Rendimiento eléctrico informado/);
  await page.locator('#detailClose').click();
 });
 await test('Desaparece híbrido por verificar y se conserva tecnología 3CV',async()=>{
@@ -292,6 +292,53 @@ await test('No hay cálculos inventados para PHEV y REEV',async()=>{
  assert((await page.locator('.vehicle-card').count())>0);
  const values=await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').allTextContents();
  assert(values.every(x=>x.includes('Sin dato comparable')));
+});
+await test('Enchufables no presentan un orden por costo que no pueden calcular',async()=>{
+ await page.click('#resetButton');
+ await page.selectOption('#tech','PHEV');
+ await page.click('#searchButton');
+ assert(await page.locator('#sort option[value="cheapest"]').isDisabled());
+ assert(await page.locator('#sort option[value="expensive"]').isDisabled());
+ assert.match(await page.locator('#sortNote').textContent(),/No hay costo energético combinado calculable/);
+ assert.equal(await page.inputValue('#sort'),'recent');
+ await page.locator('.vehicle-card').first().locator('button[data-detail]').click();
+ const detail=await page.locator('#detailContent').textContent();
+ assert.match(detail,/Rendimiento eléctrico informado \(km\/kWh\)/);
+ assert.match(detail,/Rendimiento ponderado informado \(km\/L\)/);
+ assert.match(detail,/No calculable sin supuestos/);
+ await page.locator('#detailClose').click();
+ await page.click('#resetButton');
+ await page.selectOption('#tech','Diésel');
+ await page.click('#searchButton');
+ assert(await page.locator('#sort option[value="cheapest"]').isEnabled());
+ await page.selectOption('#sort','cheapest');
+ assert.equal(await page.inputValue('#sort'),'cheapest');
+});
+await test('Comparación enchufable y eléctrico desglosa rendimientos sin inferir costos',async()=>{
+ if(await page.locator('#compareTray').isVisible())await page.click('#compareClear');
+ await page.click('#resetButton');
+ await page.selectOption('#tech','PHEV');
+ await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ await page.click('#resetButton');
+ await page.selectOption('#tech','REEV');
+ await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ await page.click('#resetButton');
+ await page.selectOption('#tech','EV');
+ await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),3);
+ await page.click('#compareOpen');
+ const labels=await page.locator('.comparison-table tbody th.compare-label').allTextContents();
+ assert(labels.includes('Rendimiento eléctrico (km/kWh)'));
+ assert(labels.includes('Rendimiento ponderado (km/L)'));
+ assert.equal(await page.locator('.comparison-table thead th').count(),4);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),9);
+ const note=await page.locator('#compareContent').textContent();
+ assert.match(note,/Sin dato comparable/);
+ await page.click('#compareClose');
+ await page.click('#compareClear');
 });
 await test('Edición de precios modifica costos, sin bloquear el ordenamiento',async()=>{
  await page.click('#resetButton');await page.selectOption('#tech','Diésel');await page.click('#searchButton');
