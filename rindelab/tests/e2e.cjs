@@ -473,15 +473,15 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
 });
-await test('Catálogo de 36 precios de lista sin bonos con fuente oficial',async()=>{
+await test('Catálogo de 63 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,36);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Kia','Toyota']);
+ assert.equal(list.length,63);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Kia','MG','Suzuki','Toyota']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -522,9 +522,9 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
  await page.click('#detailClose');
 });
 await test('Ampliación Hyundai: once precios de lista con fuentes oficiales',async()=>{
- const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list36').then(r=>r.json()));
+ const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list63').then(r=>r.json()));
  const hyundai=p.filter(x=>x.brand==='Hyundai');
- assert.equal(p.length,36);
+ assert.equal(p.length,63);
  assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
@@ -541,6 +541,48 @@ await test('Creta Grand conserva su familia independiente de Creta',async()=>{
   return ['Creta Grand 2.0 MT','The New Creta Grand AT','Creta 1.5 CVT'].map(model=>family(['Hyundai',model]));
  });
  assert.deepEqual(f,['Creta Grand','Creta Grand','Creta']);
+});
+await test('Ampliación Suzuki y MG: 27 nuevas versiones con precio de lista',async()=>{
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261017-list63').then(r=>r.json()));
+ const suzuki=list.filter(x=>x.brand==='Suzuki'),mg=list.filter(x=>x.brand==='MG');
+ assert.equal(suzuki.length,12);
+ assert.equal(mg.length,15);
+ assert.equal(suzuki.filter(x=>x.family==='Swift').length,4);
+ assert.equal(suzuki.filter(x=>x.family==='Fronx').length,4);
+ assert.equal(suzuki.filter(x=>x.family==='Celerio').length,2);
+ assert.equal(suzuki.filter(x=>x.family==='Jimny').length,2);
+ assert.equal(mg.filter(x=>x.family==='MG3').length,5);
+ assert.equal(mg.filter(x=>x.family==='ZS').length,7);
+ assert.equal(mg.filter(x=>x.family==='S5').length,3);
+ assert.equal(list.find(x=>x.brand==='Suzuki'&&x.family==='Swift'&&x.version==='1.2 GL')?.priceListClp,14090000);
+ assert.equal(list.find(x=>x.brand==='MG'&&x.family==='MG3'&&x.version==='MG3 HEV 1.5L COM')?.priceListClp,16990000);
+ assert.equal(list.find(x=>x.brand==='MG'&&x.family==='S5'&&x.version==='MG S5 EV 62kW LUX')?.priceListClp,28490000);
+ assert(suzuki.concat(mg).every(x=>x.modelYear===null));
+});
+await test('Swift muestra cuatro precios de lista, con selección manual y fuentes',async()=>{
+ await page.click('#resetButton');
+ await page.fill('#query','Swift');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
+ assert.equal(await page.locator('.sii-price-item').count(),4);
+ assert.match(await page.locator('#siiCommercial').textContent(),/14\.090\.000/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/17\.490\.000/);
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ await page.locator('.sii-price-item button').first().click();
+ assert.match(await page.locator('.sii-selected-price').textContent(),/14\.090\.000/);
+ assert.match(await page.locator('.sii-selected-price a').getAttribute('href'),/suzuki\.cl\/vehiculo\/swift-hybrid/);
+ await page.locator('#detailClose').click();
+});
+await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselección',async()=>{
+ await page.click('#resetButton');await page.fill('#query','MG3');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===5);
+ assert.match(await page.locator('#siiCommercial').textContent(),/10\.990\.000/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/16\.990\.000/);
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ await page.locator('#detailClose').click();
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
