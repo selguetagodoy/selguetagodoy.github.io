@@ -4,7 +4,7 @@
   "retrieved": "2026-10-16",
   "scope": "Registros de homologación 3CV, no equivalen al inventario comercial actualmente disponible",
   "count": 8056,
-  "excluded": 2,
+  "excluded": 3,
   "fields": [
     "marca",
     "modelo",
