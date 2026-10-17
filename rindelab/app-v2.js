@@ -171,6 +171,10 @@ function modelFamily(r){
   [/^Discovery\s+Sport\b/i,'Discovery Sport'],
   [/^Defender\s+(90|110|130)\b/i,null],
   [/^Grand\s+Vitara\b/i,'Grand Vitara'],
+  [/^LPM\s+(?:B10|C10)\b/i,null],
+  [/^Avatr\s+\d+\b/i,null],
+  [/^RAV4\b/i,'RAV4'],
+  [/^Evoque\b/i,'Range Rover Evoque'],
   [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],
   [/^Deepal\s+[A-Z0-9-]+\b/i,null],
   [/^Haval\s+(H6|H9|Jolion(?:\s+Pro)?|Dargo)\b/i,null],
@@ -205,10 +209,13 @@ function updateModelOptions(){
   if(r[F.BRAND]!==brand)continue;
   versions++;
   const value=modelFamily(r),key=normalizeSearch(value);
-  if(key&&!families.has(key))families.set(key,value);
+  if(!key)continue;
+  const item=families.get(key);
+  if(item)item.count++;
+  else families.set(key,{label:value,count:1});
  }
- const models=[...families.entries()].sort((a,b)=>a[1].localeCompare(b[1],'es',{numeric:true}));
- el.replaceChildren(new Option('Todos los modelos ('+fmt(models.length)+')',''),...models.map(([key,label])=>new Option(label,key)));
+ const models=[...families.entries()].sort((a,b)=>a[1].label.localeCompare(b[1].label,'es',{numeric:true}));
+ el.replaceChildren(new Option('Todos los modelos ('+fmt(models.length)+')',''),...models.map(([key,item])=>new Option(item.label+' · '+fmt(item.count)+' fichas',key)));
  el.disabled=false;
  if(models.some(([key])=>key===current))el.value=current;
  $('modelStatus').textContent=fmt(models.length)+' familias de modelos · '+fmt(versions)+' fichas homologadas. Elige un modelo para ver todas sus versiones.';
