@@ -1,240 +1,140 @@
-/* QA navegador de RINDELAB v4.
-  Ejecutar desde la raíz del repositorio después de: npm install --no-save playwright
-  Requiere un servidor HTTP local: python3 -m http.server 8765
-*/
-const { chromium } = require('playwright');
-const assert = require('node:assert/strict');
+/* RINDELAB v6 — pruebas funcionales en Chromium */
+const {chromium}=require('playwright'),assert=require('node:assert/strict');
 (async()=>{
- const browser=await chromium.launch(process.platform==='win32'?{channel:'chrome',headless:true}:{headless:true,args:['--no-sandbox']});
- const base='http://127.0.0.1:8765/rindelab/';
- let failures=0,checks=0;
- async function test(name,fn){
-  try{await fn();console.log('PASS '+name);checks++}
-  catch(e){failures++;console.error('FAIL '+name+' — '+e.stack)}
- }
- const page=await browser.newPage({viewport:{width:1440,height:940}});await page.emulateMedia({reducedMotion:'reduce'});
- const errors=[];page.on('pageerror',e=>errors.push('Page error: '+e.message));
- page.on('console',msg=>{if(msg.type()==='error')errors.push('Console: '+msg.text())});
- await test('Carga y base oficial',async()=>{
-  const res=await page.goto(base,{waitUntil:'networkidle',timeout:30000});
-  assert.equal(res.status(),200);
-  await page.waitForFunction(()=>document.querySelector('#sTotal')?.textContent?.includes('8.053'),{timeout:25000});
-  assert.match(await page.locator('#resultInfo').textContent(),/8\.053/);
+const browser=await chromium.launch(process.platform==='win32'?{channel:'chrome',headless:true}:{headless:true,args:['--no-sandbox']});
+let passed=0,failed=0;
+async function test(label,action){try{await action();console.log('PASS '+label);passed++;}catch(error){console.error('FAIL '+label+' — '+error.stack);failed++;}}
+const base='http://127.0.0.1:8765/rindelab/';
+async function open(width,height){
+ const page=await browser.newPage({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,deviceScaleFactor:1});
+ await page.emulateMedia({reducedMotion:'reduce'});
+ const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));page.on('console',m=>{if(m.type()==='error')errors.push('Console: '+m.text())});
+ const r=await page.goto(base,{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
+ await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.053',{timeout:25000});
+ return {page,errors};
+}
+const {page,errors}=await open(1440,900);
+await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
+ assert.equal(await page.locator('h1').textContent(),'Busca tu vehículo');
+ assert.equal(await page.locator('.stats,.tech-overview,.manual-scenario,.chart,.guide-steps').count(),0);
+ assert.equal(await page.locator('#results').isHidden(),true);
+ assert.equal(await page.locator('#compareTray').isHidden(),true);
+});
+await test('Buscar explícitamente y recuperar cuatro Corolla Cross',async()=>{
+ await page.fill('#query','Corolla Cross');
+ assert.equal(await page.locator('#results').isHidden(),true);
+ await page.click('#searchButton');
+ assert.match(await page.locator('#resultCount').textContent(),/4 versiones encontradas/);
+ assert.equal(await page.locator('.vehicle-card').count(),4);
+ assert((await page.locator('.vehicle-card').allTextContents()).every(x=>x.includes('Corolla Cross')));
+});
+await test('Marca Toyota despliega solo modelos de Toyota',async()=>{
+ await page.click('#resetButton');await page.selectOption('#brand',{label:'Toyota'});
+ assert.equal(await page.locator('#model').isDisabled(),false);
+ const opts=await page.locator('#model option').allTextContents();
+ assert(opts.some(s=>s.includes('Corolla Cross')));assert(opts.some(s=>s.includes('Hilux')));
+ const selected=await page.locator('#model option').filter({hasText:'Corolla Cross'}).first().getAttribute('value');
+ await page.selectOption('#model',selected);assert.equal(await page.locator('#results').isHidden(),true);
+ await page.click('#searchButton');assert.match(await page.locator('#resultCount').textContent(),/^4 versiones/);
+});
+await test('Filtros técnicos mantienen ciclo sin modificar la base',async()=>{
+ await page.click('#resetButton');
+ await page.selectOption('#brand',{label:'Toyota'});
+ await page.selectOption('#cycle','WLTP');
+ await page.selectOption('#model','');
+ await page.click('#searchButton');
+ assert(Number((await page.locator('#resultCount').textContent()).match(/\d+/)[0])>0);
+ const rows=await page.locator('.vehicle-card').allTextContents();assert(rows.every(t=>t.includes('WLTP')));
+});
+await test('Orden menor costo es funcional y mantiene la selección',async()=>{
+ await page.click('#resetButton');await page.selectOption('#brand',{label:'Toyota'});await page.click('#searchButton');
+ await page.selectOption('#sort','cheapest');
+ assert.equal(await page.inputValue('#sort'),'cheapest');
+ assert(await page.locator('#sortNote').isVisible());
+ const costs=await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').allTextContents();
+ const values=costs.map(t=>Number(t.replace(/[^\d]/g,''))).filter(n=>n>0);
+ assert(values.length>2);assert(values.every((v,i)=>i===0||values[i-1]<=v),'Costo ascendente: '+values);
+});
+await test('Orden mayor costo y marca/modelo cambian el listado',async()=>{
+ await page.selectOption('#sort','expensive');assert.equal(await page.inputValue('#sort'),'expensive');
+ const costs=(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').allTextContents()).map(t=>Number(t.replace(/[^\d]/g,''))).filter(n=>n>0);
+ assert(costs.length>2);assert(costs.every((v,i)=>i===0||costs[i-1]>=v),'Costo descendente: '+costs);
+ await page.selectOption('#sort','name');assert.equal(await page.inputValue('#sort'),'name');assert(await page.locator('#sortNote').isHidden());
+});
+await test('Más resultados funciona sin paginación compleja',async()=>{
+ assert.equal(await page.locator('.vehicle-card').count(),10);
+ await page.click('#more');assert.equal(await page.locator('.vehicle-card').count(),20);
+});
+await test('Error ortográfico sugiere Corolla Cross',async()=>{
+ await page.click('#resetButton');await page.fill('#query','Corolla Croos');await page.click('#searchButton');
+ assert.match(await page.locator('#resultCount').textContent(),/^0 versiones/);
+ assert(await page.locator('#suggested button').count()>0);
+ await page.locator('#suggested button').first().click();
+ assert(Number((await page.locator('#resultCount').textContent()).match(/\d+/)[0])>0);
+});
+await test('Filtros incompatibles ofrecen recuperación',async()=>{
+ await page.click('#resetButton');await page.selectOption('#brand',{label:'Ford'});await page.fill('#query','Corolla Cross');await page.click('#searchButton');
+ assert.match(await page.locator('#resultCount').textContent(),/^0 versiones/);
+ assert.match(await page.locator('#suggested').textContent(),/sin filtros/);
+ await page.locator('#suggested button').first().click();
+ assert.match(await page.locator('#resultCount').textContent(),/^4 versiones/);
+});
+await test('La ficha conserva origen y cifra oficial',async()=>{
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ assert(await page.locator('#detailDialog').evaluate(x=>x.open));
+ assert.match(await page.locator('#detailContent').textContent(),/Motorización declarada 3CV/);
+ assert.match(await page.locator('#detailContent').textContent(),/Código 3CV/);
+ await page.click('#detailClose');
+});
+await test('Comparar exactamente dos vehículos y limpiar selección',async()=>{
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ assert(await page.locator('#compareTray').isVisible());assert(await page.locator('#compareOpen').isDisabled());
+ await page.locator('.vehicle-card button[data-compare]').nth(1).click();
+ assert(await page.locator('#compareOpen').isEnabled());await page.locator('#compareOpen').click();
+ assert(await page.locator('#compareDialog').evaluate(x=>x.open));
+ assert.equal(await page.locator('#compareContent .compare-row').count(),8);
+ await page.locator('#compareClose').click();await page.click('#compareClear');
+ assert(await page.locator('#compareTray').isHidden());
+});
+await test('No hay cálculos inventados para PHEV y REEV',async()=>{
+ await page.click('#resetButton');await page.selectOption('#tech','PHEV');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ const values=await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').allTextContents();
+ assert(values.every(x=>x.includes('Sin dato comparable')));
+});
+await test('Edición de precios modifica costos, sin bloquear el ordenamiento',async()=>{
+ await page.click('#resetButton');await page.selectOption('#tech','Diésel');await page.click('#searchButton');
+ let first=(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').first().textContent());
+ await page.locator('#methodology summary').first().click();
+ await page.locator('#priceSettings summary').click();
+ await page.fill('#dieselPrice','2500');await page.locator('#dieselPrice').dispatchEvent('change');
+ let second=(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').first().textContent());
+ assert.notEqual(first,second);
+ await page.selectOption('#sort','cheapest');assert.equal(await page.inputValue('#sort'),'cheapest');
+});
+await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
+await page.close();
+for(const [width,height] of [[768,1024],[390,844],[320,700]]){
+ const {page:p,errors:issues}=await open(width,height);
+ await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
+  const dimensions=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,search:document.querySelector('#searchButton').getBoundingClientRect().height,searchTop:document.querySelector('#searchButton').getBoundingClientRect().top+scrollY}));
+  assert(dimensions.doc<=dimensions.view+3,JSON.stringify(dimensions));
+  assert(dimensions.search>=44);
+  if(width<=390)assert(dimensions.searchTop<900,'Buscador excesivamente bajo: '+dimensions.searchTop);
  });
- await test('Categorías visibles y conteos basados en el 3CV',async()=>{
-  assert.equal(await page.locator('#categoryChips button[data-category]').count(),8);
-  await page.locator('#categoryChips button[data-category="pickup"]').click();
-  await page.waitForTimeout(180);
-  assert.match(await page.locator('#sTotal').textContent(),/1\.056/);
-  assert.equal(await page.locator('#category').inputValue(),'pickup');
-  const allBody=await page.locator('#tbody tr').allTextContents();
-  assert(allBody.every(s=>s.toLowerCase().includes('camioneta')));
+ await test('Búsqueda y comparación '+width+' px',async()=>{
+  await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+  assert.match(await p.locator('#resultCount').textContent(),/^4 versiones/);
+  await p.locator('.vehicle-card button[data-compare]').first().click();
+  await p.locator('.vehicle-card button[data-compare]').nth(1).click();
+  await p.locator('#compareOpen').click();
+  assert(await p.locator('#compareDialog').evaluate(x=>x.open));
+  const dims=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+  assert(dims.doc<=dims.view+3);
+  assert.deepEqual(issues,[]);
  });
- await test('Desplegable de categoría visible y sincronizado con tarjetas',async()=>{
-  assert(await page.locator('#category').isVisible());
-  const option=page.locator('#category option[value="sedan"]');
-  assert.match(await option.textContent(),/1\.072/);
-  await page.selectOption('#category','sedan');
-  assert.match(await page.locator('#sTotal').textContent(),/1\.072/);
-  assert.equal(await page.locator('#categoryChips button[data-category="sedan"]').getAttribute('aria-pressed'),'true');
- });
- await test('Categoría sedán y reset',async()=>{
-  assert.match(await page.locator('#sTotal').textContent(),/1\.072/);
-  await page.locator('#reset').click();
-  assert.match(await page.locator('#sTotal').textContent(),/8\.053/);
-  assert.equal(await page.locator('#category').inputValue(),'');
- });
- await test('Marca, modelo y comparador de dos versiones',async()=>{
-  await page.selectOption('#brand',{label:'Toyota'});
-  await page.waitForFunction(()=>!document.querySelector('#model')?.disabled);
-  const option=page.locator('#model option').filter({hasText:'Corolla Cross'}).first();
-  const family=await option.getAttribute('value');
-  assert(family,'No se encontró familia Corolla Cross');
-  await page.selectOption('#model',family);
-  assert.match(await page.locator('#sTotal').textContent(),/^4$/);
-  await page.locator('#tbody button[data-compare]').first().click();
-  assert.equal(await page.locator('#compareTrayCount').textContent(),'1 de 4 vehículos seleccionados');
-  assert(await page.locator('#compareTray').isVisible());
-  await page.locator('#tbody button[data-compare]').nth(1).click();
-  assert.match(await page.locator('#compareTrayCount').textContent(),/^2 de 4/);
-  assert(await page.locator('#comparison .matrix').isVisible());
-  assert.equal(await page.locator('#comparison .matrix thead th').count(),3);
-  assert.equal(await page.locator('#comparison .matrix tbody tr').count(),8);
-  assert(await page.locator('#compareNow').isEnabled());
- });
- await test('Selección persiste entre filtros y advierte NEDC/WLTP',async()=>{
-  await page.locator('#reset').click();
-  await page.locator('#search').fill('Toyota Hilux BEV');
-  await page.waitForTimeout(150);
-  assert(await page.locator('#tbody button[data-compare]').count()>0);
-  await page.locator('#tbody button[data-compare]').first().click();
-  assert.match(await page.locator('#compareTrayCount').textContent(),/^3 de 4/);
-  assert(await page.locator('#comparisonWarning').isVisible());
-  assert.match(await page.locator('#comparisonWarning').textContent(),/NEDC y WLTP/);
-  await page.locator('#compareReset').click();
-  assert(await page.locator('#compareTray').isHidden());
-  assert.match(await page.locator('#comparison').textContent(),/tu comparador está esperando vehículos/i);
- });
- await test('Buscador y categoría conservan filtros al usar Buscar',async()=>{
-  await page.locator('#reset').click();
-  await page.locator('#categoryChips button[data-category="sw"]').click();
-  await page.locator('#search').fill('Corolla Cross');
-  const count=await page.locator('#sTotal').textContent();
-  assert(count!=='0');
-  await page.locator('#catalogSearchButton').click();
-  assert.equal(await page.locator('#category').inputValue(),'sw');
-  assert.equal(await page.locator('#sTotal').textContent(),count);
-  await page.locator('#reset').click();
-  await page.locator('#search').fill('Corolla');
-  assert.equal(await page.locator('#sTotal').textContent(),'21');
- });
- await test('Filtros técnicos en bloque secundario',async()=>{
-  await page.locator('#advancedFilters summary').click();
-  assert(await page.locator('#cycle').isVisible());
-  await page.selectOption('#cycle','WLTP');
-  const wltp=await page.locator('#sTotal').textContent();
-  assert.notEqual(wltp,'8.053');
-  await page.locator('#reset').click();
-  assert.equal(await page.locator('#cycle').inputValue(),'');
- });
- await test('Tarifas configurables siguen funcionando',async()=>{
-  await page.locator('.energy-shortcut').click();
-  assert(await page.locator('#energyPanel').evaluate(el=>el.open));
-  await page.selectOption('#charge','dc50');
-  assert.match(await page.locator('#activeTariff').textContent(),/\$395\/kWh/);
-  await page.selectOption('#period','peak');
-  assert.match(await page.locator('#activeTariff').textContent(),/\$450\/kWh/);
- });
- await test('Búsqueda libre Corolla Cross sin selección previa',async()=>{
-  await page.locator('#reset').click();
-  await page.locator('#search').fill('Corolla Cross');
-  assert.equal(await page.locator('#sTotal').textContent(),'4');
-  assert.equal(await page.locator('#sort').inputValue(),'relevance');
-  assert.equal(await page.locator('#tbody tr').count(),4);
- });
- await test('Categoría cambia opciones de marcas y modelos',async()=>{
-  await page.locator('#reset').click();
-  await page.selectOption('#category','pickup');
-  assert.equal(await page.locator('#sTotal').textContent(),'1.056');
-  assert.equal(await page.locator('#brand option').count(),Number((await page.locator('#sBrands').textContent()).replace(/\./g,''))+1);
-  await page.selectOption('#brand',{label:'Toyota'});
-  assert(await page.locator('#model option').filter({hasText:'Hilux'}).count()>0);
-  assert.equal(await page.locator('#model option').filter({hasText:'Corolla Cross'}).count(),0);
-  await page.selectOption('#category','sw');
-  assert(await page.locator('#model option').filter({hasText:'Corolla Cross'}).count()>0);
- });
- await test('Conflictos de categoría pueden eliminarse con un clic',async()=>{
-  await page.locator('#reset').click();
-  await page.selectOption('#category','pickup');
-  await page.locator('#search').fill('Corolla Cross');
-  assert.equal(await page.locator('#sTotal').textContent(),'0');
-  assert(await page.locator('#showAllSearch').isVisible());
-  await page.locator('#showAllSearch').click();
-  assert.equal(await page.locator('#sTotal').textContent(),'4');
-  assert.equal(await page.locator('#category').inputValue(),'');
- });
- await test('Sugerencia por error de escritura',async()=>{
-  await page.locator('#reset').click();
-  await page.locator('#search').fill('Corolla Croos');
-  assert.equal(await page.locator('#sTotal').textContent(),'0');
-  assert(await page.locator('#searchAlternatives button').count()>0);
-  await page.locator('#searchAlternatives button').first().click();
-  assert(await page.locator('#tbody tr').count()>0);
- });
- await test('Mostrar diez resultados y después veinte',async()=>{
-  await page.locator('#reset').click();
-  assert.equal(await page.locator('#tbody tr').count(),10);
-  await page.locator('#next').click();
-  assert.equal(await page.locator('#tbody tr').count(),20);
- });
- await test('La fuente de motorización queda distinguida en las fichas',async()=>{
-  await page.locator('#tbody button[data-detail]').first().click();
-  assert.match(await page.locator('#detailBody').textContent(),/Motorización declarada \(3CV\)/);
-  assert.match(await page.locator('#detailBody').textContent(),/Clasificación interpretativa/);
-  await page.locator('#closeDetail').click();
- });
- await test('Paneles editoriales son accesibles y están plegados',async()=>{
-  assert.equal(await page.locator('#analysisDisclosure').evaluate(x=>x.open),false);
-  await page.locator('#analysisDisclosure summary').click();
-  assert.equal(await page.locator('#analysisDisclosure').evaluate(x=>x.open),true);
- });
- await test('Sin errores JS en escritorio',async()=>{assert.deepEqual(errors,[])});
- await page.close();
- const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:2});await mobile.emulateMedia({reducedMotion:'reduce'});
- const mobileErrors=[];mobile.on('pageerror',e=>mobileErrors.push(e.message));
- await test('Categorías móviles y navegación accesible',async()=>{
-  await mobile.goto(base,{waitUntil:'networkidle'});
-  await mobile.waitForFunction(()=>document.querySelector('#sTotal')?.textContent?.includes('8.053'));
-  assert(await mobile.locator('#category').isVisible());
-  assert(await mobile.locator('#categoryChips').isHidden());
-  await mobile.selectOption('#category','pickup');
-  assert.match(await mobile.locator('#sTotal').textContent(),/1\.056/);
-  assert.deepEqual(mobileErrors,[]);
- });
- await test('Menú móvil compacto se abre y se cierra',async()=>{
-  assert(await mobile.locator('#mobileMenuToggle').isVisible());
-  assert(await mobile.locator('#mainNav').isHidden());
-  await mobile.locator('#mobileMenuToggle').click();
-  assert(await mobile.locator('#mainNav').isVisible());
-  await mobile.locator('#mainNav a[href="#catalogo"]').click();
-  assert(await mobile.locator('#mainNav').isHidden());
- });
- await test('Búsqueda móvil, lote corto y comparador accesible',async()=>{
-  await mobile.locator('#reset').click();
-  await mobile.locator('#search').fill('Corolla Cross');
-  assert.equal(await mobile.locator('#sTotal').textContent(),'4');
-  assert.equal(await mobile.locator('#tbody tr').count(),4);
-  await mobile.locator('#tbody button[data-compare]').first().click();
-  await mobile.locator('#tbody button[data-compare]').nth(1).click();
-  assert(await mobile.locator('#compareTray').isVisible());
-  assert.equal(await mobile.locator('#comparison .matrix thead th').count(),3);
-  await mobile.locator('#compareNow').click();
-  assert(await mobile.locator('#compareNext').isVisible());
-  const start=await mobile.locator('.matrix-scroll').evaluate(e=>e.scrollLeft);
-  await mobile.locator('#compareNext').click();
-  await mobile.waitForTimeout(400);
-  const end=await mobile.locator('.matrix-scroll').evaluate(e=>e.scrollLeft);
-  assert(end>start);
-  await mobile.locator('#compareReset').click();
- });
- await test('Portada móvil compacta y controles táctiles',async()=>{
-  const m=await mobile.evaluate(()=>({
-   hero:document.querySelector('.hero').getBoundingClientRect().height,
-   art:getComputedStyle(document.querySelector('.hero-art')).display,
-   menu:document.querySelector('#mobileMenuToggle').getBoundingClientRect().height,
-   search:document.querySelector('#search').getBoundingClientRect().height
-  }));
-  assert(m.hero<750,'Portada excede 750 px: '+m.hero);
-  assert.equal(m.art,'none');
-  assert(m.menu>=44&&m.search>=44);
- });
- await test('Sin desbordamiento horizontal en móvil',async()=>{
-  const dimensions=await mobile.evaluate(()=>({doc:document.documentElement.scrollWidth,view:window.innerWidth}));
-  assert(dimensions.doc<=dimensions.view+3,'Desbordamiento global: '+JSON.stringify(dimensions));
- });
- await test('Pantalla compacta de 320 px sin desbordamiento',async()=>{
-  const small=await browser.newPage({viewport:{width:320,height:700},isMobile:true,deviceScaleFactor:1});
-  try{
-   await small.goto(base,{waitUntil:'networkidle'});
-   await small.waitForFunction(()=>document.querySelector('#sTotal')?.textContent==='8.053');
-   const d=await small.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,hero:document.querySelector('.hero').getBoundingClientRect().height}));
-   assert(d.doc<=d.view+3,JSON.stringify(d));assert(d.hero<800,JSON.stringify(d));
-   await small.locator('#search').fill('Corolla Cross');
-   assert.equal(await small.locator('#sTotal').textContent(),'4');
-  }finally{await small.close()}
- });
- await test('Tableta de 768 px con filtros y resultados utilizables',async()=>{
-  const tablet=await browser.newPage({viewport:{width:768,height:1024},deviceScaleFactor:1});
-  try{
-   await tablet.goto(base,{waitUntil:'networkidle'});
-   await tablet.waitForFunction(()=>document.querySelector('#sTotal')?.textContent==='8.053');
-   await tablet.locator('#search').fill('Toyota Hilux');
-   assert(Number((await tablet.locator('#sTotal').textContent()).replace(/\./g,''))>0);
-   const widths=await tablet.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
-   assert(widths.doc<=widths.view+3,JSON.stringify(widths));
-  }finally{await tablet.close()}
- });
- await mobile.close();await browser.close();
- console.log('\n'+checks+' pruebas aprobadas · '+failures+' fallidas');
- if(failures)process.exit(1);
-})().catch(error=>{console.error(error);process.exit(1)});
+ await p.close();
+}
+await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
+if(failed)process.exit(1);
+})().catch(e=>{console.error(e);process.exit(1)});
