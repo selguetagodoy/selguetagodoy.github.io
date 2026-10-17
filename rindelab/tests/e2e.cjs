@@ -177,6 +177,71 @@ await test('Comparar exactamente dos vehículos y limpiar selección',async()=>{
  await page.locator('#compareClose').click();await page.click('#compareClear');
  assert(await page.locator('#compareTray').isHidden());
 });
+await test('Selección persistente al cambiar de búsqueda o limpiar los filtros',async()=>{
+ await page.click('#resetButton');
+ await page.fill('#query','Corolla Cross');await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ assert.match(await page.locator('#compareStatus').textContent(),/1 vehículo seleccionado/);
+ await page.locator('#compareAdd').click();
+ assert(await page.locator('#query').evaluate(e=>document.activeElement===e));
+ await page.fill('#query','Hilux');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),2);
+ await page.click('#resetButton');
+ assert(await page.locator('#results').isHidden());
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),2);
+ assert(await page.locator('#compareOpen').isEnabled());
+});
+await test('Agregar hasta cinco modelos de búsquedas diferentes y rechazar el sexto',async()=>{
+ for(const name of ['Ford','Hyundai','Kia']){
+  await page.fill('#query',name);await page.click('#searchButton');
+  assert((await page.locator('.vehicle-card').count())>0,name);
+  await page.locator('.vehicle-card button[data-compare]').first().click();
+ }
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),5);
+ assert.match(await page.locator('#compareStatus').textContent(),/5 de 5/);
+ assert.equal(await page.locator('#compareOpen').textContent(),'Comparar 5 vehículos');
+ await page.fill('#query','BYD');await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),5);
+ assert.match(await page.locator('#compareStatus').textContent(),/Quita uno/);
+});
+await test('Ventana de cinco columnas permite scroll, quitar uno y agregar otro',async()=>{
+ await page.click('#compareOpen');
+ assert(await page.locator('#compareDialog').evaluate(e=>e.open));
+ assert.equal(await page.locator('.comparison-table thead th').count(),6);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),7);
+ assert.equal(await page.locator('.compare-model-cell').count(),5);
+ const horizontal=await page.locator('.compare-scroller').evaluate(e=>({width:e.scrollWidth,visible:e.clientWidth,start:e.scrollLeft}));
+ if(horizontal.width>horizontal.visible+2){
+  await page.locator('#compareNext').click();await page.waitForTimeout(400);
+  assert((await page.locator('.compare-scroller').evaluate(e=>e.scrollLeft))>horizontal.start);
+ }else{
+  assert(await page.locator('.compare-scroll-actions').isHidden(),'Las flechas deben ocultarse cuando caben cinco columnas');
+ }
+ await page.locator('.compare-remove').first().click();
+ assert.equal(await page.locator('.compare-model-cell').count(),4);
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),4);
+ await page.click('#compareDialogAdd');
+ assert(await page.locator('#compareDialog').isHidden());
+ assert(await page.locator('#query').evaluate(e=>document.activeElement===e));
+ await page.fill('#query','BYD');await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),5);
+ await page.click('#compareOpen');
+ assert.equal(await page.locator('.comparison-table thead th').count(),6);
+ await page.click('#compareClose');
+});
+await test('Quitar un vehículo de la bandeja permite agregar otro sin vaciar',async()=>{
+ await page.locator('.selected-chip-remove').first().click();
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),4);
+ await page.fill('#query','Corolla Cross');await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-compare]').first().click();
+ assert.equal(await page.locator('.selected-vehicle-chip').count(),5);
+ await page.click('#compareClear');
+ assert(await page.locator('#compareTray').isHidden());
+});
 await test('No hay cálculos inventados para PHEV y REEV',async()=>{
  await page.click('#resetButton');await page.selectOption('#tech','PHEV');await page.click('#searchButton');
  assert((await page.locator('.vehicle-card').count())>0);
@@ -198,7 +263,7 @@ await test('Orden global mezcla ciclos y muestra su etiqueta individual',async()
  await page.click('#searchButton');
  await page.selectOption('#sort','cheapest');
  await page.click('#more');
- const labels=await page.locator('.cycle-badge').allTextContents();
+ const labels=await page.locator('#resultList .cycle-badge').allTextContents();
  assert(labels.length===20);
  assert(labels.every(x=>x==='WLTP'||x==='NEDC'||x==='Ciclo no informado'));
  assert.equal(await page.locator('.group-label').count(),0);
@@ -226,6 +291,22 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert(dimensions.doc<=dimensions.view+3,JSON.stringify(dimensions));
   assert(dimensions.search>=44);
   if(width<=390)assert(dimensions.searchTop<900,'Buscador excesivamente bajo: '+dimensions.searchTop);
+ });
+ await test('Cinco columnas desplazables en pantalla '+width+' px',async()=>{
+  await p.fill('#query','Toyota');await p.click('#searchButton');
+  for(let i=0;i<5;i++)await p.locator('.vehicle-card button[data-compare]').nth(i).click();
+  assert.equal(await p.locator('.selected-vehicle-chip').count(),5);
+  await p.locator('#compareOpen').click();
+  assert.equal(await p.locator('.comparison-table thead th').count(),6);
+  const geometry=await p.evaluate(()=>{const e=document.querySelector('.compare-scroller');return {doc:document.documentElement.scrollWidth,view:innerWidth,width:e.scrollWidth,visible:e.clientWidth}});
+  assert(geometry.doc<=geometry.view+3,JSON.stringify(geometry));
+  assert(geometry.width>geometry.visible,JSON.stringify(geometry));
+  await p.locator('#compareNext').click();await p.waitForTimeout(400);
+  assert((await p.locator('.compare-scroller').evaluate(e=>e.scrollLeft))>0);
+  await p.locator('#compareDialogAdd').click();
+  assert(await p.locator('#compareDialog').isHidden());
+  assert.equal(await p.locator('.selected-vehicle-chip').count(),5);
+  await p.locator('#compareClear').click();
  });
  await test('Búsqueda y comparación '+width+' px',async()=>{
   await p.fill('#query','Corolla Cross');await p.click('#searchButton');

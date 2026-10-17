@@ -212,39 +212,101 @@ function showDetail(i){
   '<dl class="details-list">'+items.map(([k,v])=>'<dt>'+safe(k)+'</dt><dd>'+safe(v===null||v===''?'N/D':v)+'</dd>').join('')+'</dl>';
  $('detailDialog').showModal();
 }
-function compareUpdate(){
+const MAX_COMPARE=5;
+function syncCompareScrollControls(){
+ const scroller=$('compareContent').querySelector('.compare-scroller');
+ const buttons=document.querySelector('.compare-scroll-actions');
+ const overflow=!!scroller&&$('compareDialog').open&&scroller.scrollWidth>scroller.clientWidth+2;
+ buttons.hidden=!overflow;
+ $('compareScrollHint').hidden=!overflow;
+ $('comparePrev').disabled=!overflow||scroller.scrollLeft<=1;
+ $('compareNext').disabled=!overflow||scroller.scrollLeft>=scroller.scrollWidth-scroller.clientWidth-1;
+}
+function compareUpdate(message=''){
  const n=selected.length;
- $('compareTray').hidden=!n;document.body.classList.toggle('has-tray',!!n);
- $('compareStatus').textContent=n===1?'1 de 2 vehículos. Elige uno más.':n===2?'2 vehículos seleccionados. Ya puedes compararlos.':'';
- $('compareOpen').disabled=n!==2;
+ $('compareTray').hidden=n===0;
+ document.body.classList.toggle('has-tray',n>0);
+ const nLabel=n===1?'1 vehículo seleccionado · agrega al menos uno más.':
+   n===MAX_COMPARE?'5 de 5 vehículos · puedes comparar o quitar uno para cambiarlo.':
+   n+' de 5 vehículos seleccionados · '+(n>=2?'puedes comparar o agregar otros.':'agrega otro vehículo.');
+ $('compareStatus').textContent=message||nLabel;
+ $('compareOpen').disabled=n<2;
+ $('compareOpen').textContent=n>=2?'Comparar '+n+' vehículos':'Comparar';
+ $('compareAdd').textContent=n===MAX_COMPARE?'Cambiar un vehículo':'+ Agregar otro';
+ const chipBox=$('compareSelected');chipBox.replaceChildren();
+ selected.forEach(i=>{
+  const r=all[i];if(!r)return;
+  const chip=document.createElement('div');chip.className='selected-vehicle-chip';
+  const label=document.createElement('span');label.className='selected-chip-label';
+  label.textContent=r[F.BRAND]+' '+r[F.MODEL];label.title=label.textContent;
+  const remove=document.createElement('button');remove.type='button';remove.className='selected-chip-remove';
+  remove.dataset.removeCompare=String(i);remove.setAttribute('aria-label','Quitar '+label.textContent+' de la comparación');
+  remove.textContent='×';chip.append(label,remove);chipBox.append(chip);
+ });
+ if($('compareDialog').open){
+  if(n<2)$('compareDialog').close();
+  else renderComparisonContent();
+  syncCompareScrollControls();
+ }
 }
 function selectForCompare(i){
+ if(!Number.isInteger(i)||!all[i])return;
  const found=selected.indexOf(i);
  if(found>=0)selected.splice(found,1);
- else if(selected.length>=2){
-  $('compareStatus').textContent='Solo puedes comparar dos vehículos a la vez. Vacía la selección para elegir otros.';
+ else if(selected.length>=MAX_COMPARE){
+  compareUpdate('Ya seleccionaste cinco vehículos. Quita uno de la bandeja para agregar otro.');
   return;
  }else selected.push(i);
  compareUpdate();if(submitted)render();
 }
-function openCompare(){
- if(selected.length!==2)return;
- const first=all[selected[0]],second=all[selected[1]];
- const cyclesDiffer=first[F.CYCLE]!==second[F.CYCLE];
- const rows=[
-  ['Motorización',first[F.TECH],second[F.TECH]],
-  ['Rendimiento oficial',metric(first),metric(second)],
-  ['Costo estimado /100 km',money(cost(first)),money(cost(second))],
-  ['Ciclo de ensayo',first[F.CYCLE],second[F.CYCLE]],
-  ['Homologación',first[F.DATE],second[F.DATE]],
-  ['Carrocería',first[F.BODY],second[F.BODY]],
-  ['Código 3CV',first[F.CODE],second[F.CODE]]
+function goAddVehicle(){
+ if($('compareDialog').open)$('compareDialog').close();
+ const message=selected.length>=MAX_COMPARE?
+  'Ya tienes cinco vehículos. Quita uno de la bandeja para agregar otro modelo.':
+  'Escribe otra marca o modelo y pulsa Buscar. Conservaremos los vehículos seleccionados.';
+ compareUpdate(message);
+ $('query').scrollIntoView({block:'center',behavior:'instant'});
+ $('query').focus({preventScroll:true});
+}
+function renderComparisonContent(){
+ const vehicles=selected.map(i=>({index:i,row:all[i]})).filter(x=>x.row);
+ if(vehicles.length<2)return;
+ const uniqueCycles=new Set(vehicles.map(x=>x.row[F.CYCLE]).filter(Boolean));
+ const mixedCycles=uniqueCycles.size>1;
+ const columns=vehicles.length;
+ const dataRows=[
+  ['Motorización',r=>r[F.TECH]],
+  ['Rendimiento oficial',r=>metric(r)],
+  ['Costo estimado /100 km',r=>money(cost(r))],
+  ['Ciclo de ensayo',r=>r[F.CYCLE]],
+  ['Homologación',r=>r[F.DATE]],
+  ['Carrocería',r=>r[F.BODY]],
+  ['Código 3CV',r=>r[F.CODE]]
  ];
- $('compareContent').innerHTML=(cyclesDiffer?'<div class="note"><strong>Importante:</strong> los vehículos utilizan ciclos NEDC y WLTP distintos; sus cifras no pueden compararse directamente.</div>':'')+
-  '<div class="compare-row header"><div class="compare-label">Indicador</div><div class="compare-data">'+safe(first[F.BRAND]+' '+first[F.MODEL])+'</div><div class="compare-data">'+safe(second[F.BRAND]+' '+second[F.MODEL])+'</div></div>'+
-  rows.map(([title,a,b])=>'<div class="compare-row"><div class="compare-label">'+safe(title)+'</div><div class="compare-data">'+safe(a||'N/D')+'</div><div class="compare-data">'+safe(b||'N/D')+'</div></div>').join('')+
-  '<p class="compare-note">Costos referenciales de energía, no costo de propiedad ni consumo real. Para un contraste homogéneo utiliza el mismo ciclo y una tecnología comparable.</p>';
- $('compareDialog').showModal();
+ const esc=value=>safe(value===undefined||value===null||value===''?'N/D':value);
+ const header='<thead><tr class="compare-row header"><th scope="col" class="compare-label">Indicador</th>'+
+  vehicles.map(({index,row})=>'<th scope="col" class="compare-data compare-model-cell">'+
+   '<span class="compare-model-name">'+esc(row[F.BRAND]+' '+row[F.MODEL])+'</span>'+
+   '<span class="cycle-badge" data-cycle="'+esc(row[F.CYCLE])+'">'+esc(row[F.CYCLE]||'Sin ciclo')+'</span>'+
+   '<button type="button" data-remove-compare="'+index+'" class="compare-remove" aria-label="Quitar '+esc(row[F.BRAND]+' '+row[F.MODEL])+' de la comparación">Quitar ×</button></th>').join('')+'</tr></thead>';
+ const body='<tbody>'+dataRows.map(([title,get])=>'<tr class="compare-row"><th scope="row" class="compare-label">'+esc(title)+'</th>'+
+  vehicles.map(({row})=>'<td class="compare-data">'+esc(get(row))+'</td>').join('')+'</tr>').join('')+'</tbody>';
+ $('compareDialogSummary').textContent=columns+' de 5 vehículos seleccionados';
+ $('compareDialogAdd').textContent=columns===MAX_COMPARE?'Cambiar un vehículo':'+ Agregar otro vehículo';
+ $('compareContent').innerHTML=(mixedCycles?
+  '<div class="note"><strong>Atención:</strong> aquí hay ensayos NEDC y WLTP. Se muestran juntos, pero sus cifras no son directamente equivalentes.</div>':'')+
+  '<div class="compare-scroller" tabindex="0" role="region" aria-label="Tabla comparativa desplazable horizontalmente">'+
+  '<table class="comparison-table" style="--compare-columns:'+columns+'">'+header+body+'</table></div>'+
+  '<p class="compare-note">Costos energéticos referenciales por 100 km, no costo de propiedad ni consumo real. Para comparar rendimientos directamente, utiliza un mismo ciclo y tecnología.</p>';
+ const scroller=$('compareContent').querySelector('.compare-scroller');
+ scroller.addEventListener('scroll',syncCompareScrollControls,{passive:true});
+ syncCompareScrollControls();
+}
+function openCompare(){
+ if(selected.length<2)return;
+ renderComparisonContent();
+ if(!$('compareDialog').open)$('compareDialog').showModal();
+ requestAnimationFrame(syncCompareScrollControls);
 }
 // Estadísticas independientes del catálogo: rankings homogéneos por ciclo, sin proxies para PHEV/REEV.
 const rankingBodies={
@@ -339,7 +401,7 @@ $('searchButton').disabled=true;
 $('vehicleForm').addEventListener('submit',event=>{event.preventDefault();if(all.length)performSearch();});
 $('resetButton').addEventListener('click',()=>{
  for(const id of ['query','brand','model','tech','bodytype','cycle','year'])$(id).value='';
- choices();$('sort').value='recent';submitted=false;results=[];selected=[];compareUpdate();
+ choices();$('sort').value='recent';submitted=false;results=[];compareUpdate();
  $('results').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
 });
 for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
@@ -350,7 +412,7 @@ for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListene
 $('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';});
 $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
 $('sort').addEventListener('change',render);
-for(const id of ['gasPrice','dieselPrice','electricPrice'])$(id).addEventListener('change',()=>{if(submitted)render();if($('statsDialog').open)renderStatistics();});
+for(const id of ['gasPrice','dieselPrice','electricPrice'])$(id).addEventListener('change',()=>{if(submitted)render();if($('statsDialog').open)renderStatistics();if($('compareDialog').open)renderComparisonContent();});
 $('resultList').addEventListener('click',event=>{
  const detail=event.target.closest('[data-detail]'),comparison=event.target.closest('[data-compare]');
  if(detail)showDetail(Number(detail.dataset.detail));
@@ -364,8 +426,25 @@ $('suggested').addEventListener('click',event=>{
  performSearch();
 });
 $('compareOpen').addEventListener('click',openCompare);
+$('compareAdd').addEventListener('click',goAddVehicle);
+$('compareDialogAdd').addEventListener('click',goAddVehicle);
+$('compareSelected').addEventListener('click',event=>{
+ const remove=event.target.closest('[data-remove-compare]');if(remove)selectForCompare(Number(remove.dataset.removeCompare));
+});
+$('compareContent').addEventListener('click',event=>{
+ const remove=event.target.closest('[data-remove-compare]');if(remove)selectForCompare(Number(remove.dataset.removeCompare));
+});
+for(const [id,direction] of [['comparePrev',-1],['compareNext',1]]){
+ $(id).addEventListener('click',()=>{
+  const scroller=$('compareContent').querySelector('.compare-scroller');if(!scroller)return;
+  const cells=scroller.querySelectorAll('thead .compare-data');
+  const step=cells[0]?.getBoundingClientRect().width||190;
+  scroller.scrollBy({left:direction*step,behavior:'smooth'});
+ });
+}
 $('compareClear').addEventListener('click',()=>{selected=[];compareUpdate();if(submitted)render();});
 $('compareClose').addEventListener('click',()=>$('compareDialog').close());
+window.addEventListener('resize',syncCompareScrollControls);
 $('detailClose').addEventListener('click',()=>$('detailDialog').close());
 $('detailDialog').addEventListener('close',()=>{const url=new URL(location.href);if(url.searchParams.has('codigo')){url.searchParams.delete('codigo');history.replaceState(null,'',url.pathname+url.search+url.hash);}});
 init();
