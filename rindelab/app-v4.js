@@ -5,8 +5,8 @@ const F={BRAND:0,MODEL:1,TECH:2,FUEL:3,BODY:4,DRIVE:5,TRANS:6,ENGINE:7,DATE:8,CO
 const VALID=['Bencina','Diésel','MHEV','HEV','PHEV','REEV','EV','Híbrido por verificar'];
 const tariffs={ac22:{cityValley:340,cityPeak:395,road:395},dc50:{cityValley:395,cityPeak:450,road:450},dc120:{cityValley:440,cityPeak:495,road:495}};
 const defaults={p93:1535,p95:1572,p97:1613,diesel:1503,customKwh:'',losses:'0',octane:'p93',charge:'ac22',zone:'city',period:'valley',annualKm:15000};
-let all=[],filtered=[],selected=[],page=0,loading=true,validDate='2026-05-08';
-const pageSize=25;
+let all=[],filtered=[],selected=[],loading=true,validDate='2026-05-08',visibleLimit=10;
+const pageSize=10;
 const safe=s=>String(s===null||s===undefined?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=n=>n!==null&&n!==''&&Number.isFinite(Number(n))?Number(n):null;
 const positive=n=>number(n)>0?number(n):null;
@@ -49,7 +49,7 @@ function searchRelevance(r,query){
 }
 const brandAlias={'M. Benz':'Mercedes-Benz','RAM':'RAM','Ram':'RAM','LEAPMOTOR':'Leapmotor','Leapmotor':'Leapmotor','Faw':'FAW','FAW':'FAW'};
 function cleanRecord(source){
- const r=source.slice();r[F.BRAND]=brandAlias[r[F.BRAND]]||r[F.BRAND];
+ const r=source.slice();Object.defineProperty(r,'sourceTech',{value:source[F.TECH],enumerable:false});r[F.BRAND]=brandAlias[r[F.BRAND]]||r[F.BRAND];
  const name=r[F.MODEL]||'';
  if(r[F.TECH]==='Bencina'&&/\b(?:HYBRID|HIBRID[OA]|HÍBRID[OA]|E-HYBRID|HEV)\b/i.test(name)){
    // Fiat 600 Hybrid y Jeep Avenger E-Hybrid corroborados por documentación de fabricante.
@@ -115,12 +115,25 @@ function warningRow(r){
  const t=r[F.TECH];
  return t==='PHEV'||t==='REEV'?'Los rendimientos de etiqueta son ponderados: no equivalen a consumo eléctrico puro ni a combustible con batería descargada.':t==='Híbrido por verificar'?'Propulsión sin clasificación HEV/MHEV validada: se omite costo hasta revisarla.':null;
 }
-function fillSelect(id,idx){
- const current=$(id).value;
- const values=[...new Set(all.map(r=>r[idx]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
- $(id).innerHTML=$(id).options[0].outerHTML+values.map(x=>'<option value="'+safe(x)+'">'+safe(x)+'</option>').join('');
- if(values.includes(current))$(id).value=current;
+function fillSelect(id,idx,records=all){
+ const el=$(id),current=el.value;
+ const values=[...new Set(records.map(r=>r[idx]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+ el.replaceChildren(new Option(id==='brand'?'Todas las marcas':'Todas las carrocerías',''),...values.map(v=>new Option(v,v)));
+ if(values.includes(current))el.value=current;
+ return current!==''&&!values.includes(current);
 }
+function facetRows(){
+ const category=$('category').value,tech=$('tech').value,cycle=$('cycle').value,year=$('year').value,body=$('bodytype').value;
+ return all.filter(r=>categoryApplies(r,category)&&(!tech||r[F.TECH]===tech)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year)&&(!body||r[F.BODY]===body));
+}
+function updateFacets(){
+ const base=all.filter(r=>categoryApplies(r,$('category').value));
+ fillSelect('bodytype',F.BODY,base);
+ const invalidBrand=fillSelect('brand',F.BRAND,facetRows());
+ if(invalidBrand)$('model').value='';
+ updateModelOptions();
+}
+
 /* Desplegable de modelos dependiente de la marca y sugerencias de escritura. */
 let suggestionIndex=[];
 function prepareSearchSuggestions(){
@@ -149,6 +162,36 @@ function updateSearchSuggestions(value){
  }
  list.replaceChildren(...hits.map(value=>{
   const option=document.createElement('option');option.value=value;return option;
+ }));
+}
+function typoDistance(a,b){
+ if(Math.abs(a.length-b.length)>4)return 99;
+ const dp=Array.from({length:b.length+1},(_,i)=>i);
+ for(let i=1;i<=a.length;i++){
+  let previous=dp[0];dp[0]=i;
+  for(let j=1;j<=b.length;j++){
+   const old=dp[j];dp[j]=Math.min(dp[j]+1,dp[j-1]+1,previous+(a[i-1]===b[j-1]?0:1));previous=old;
+  }
+ }
+ return dp[b.length];
+}
+function renderAlternatives(query,total){
+ const box=$('searchAlternatives');if(!box)return;
+ if(!query||total){box.replaceChildren();box.hidden=true;return;}
+ const unique=new Map();
+ for(const r of all){
+  const m=modelFamily(r);
+  for(const name of [m,r[F.BRAND]+' '+m]){
+   const key=normalizeSearch(name);if(key&&!unique.has(key))unique.set(key,name);
+  }
+ }
+ const picks=[...unique].map(([key,name])=>({name,d:typoDistance(query,key)}))
+  .filter(x=>x.d>0&&x.d<=Math.max(2,Math.floor(query.length*.24)))
+  .sort((a,b)=>a.d-b.d||a.name.length-b.name.length).slice(0,3);
+ box.hidden=!picks.length;
+ box.replaceChildren(...picks.map(x=>{
+  const button=document.createElement('button');button.type='button';button.className='suggestion-button';
+  button.dataset.suggest=x.name;button.textContent=x.name;return button;
  }));
 }
 /* Familias de modelos para navegar las versiones exactas del 3CV. */
@@ -198,28 +241,22 @@ function modelFamily(r){
 function updateModelOptions(){
  const brand=$('brand').value,el=$('model'),current=el.value;
  if(!brand){
-  el.disabled=true;
-  el.replaceChildren(new Option('Selecciona primero una marca',''));
-  $('modelStatus').textContent='Elige una marca para desplegar sus modelos.';
-  return;
+  el.disabled=true;el.replaceChildren(new Option('Primero elige una marca',''));
+  $('modelStatus').textContent='Selecciona una marca para ver sus modelos compatibles.';return;
  }
- const families=new Map();
- let versions=0;
- for(const r of all){
+ const families=new Map();let versions=0;
+ for(const r of facetRows()){
   if(r[F.BRAND]!==brand)continue;
-  versions++;
-  const value=modelFamily(r),key=normalizeSearch(value);
-  if(!key)continue;
-  const item=families.get(key);
-  if(item)item.count++;
-  else families.set(key,{label:value,count:1});
+  versions++;const value=modelFamily(r),key=normalizeSearch(value);if(!key)continue;
+  const item=families.get(key);if(item)item.count++;else families.set(key,{label:value,count:1});
  }
  const models=[...families.entries()].sort((a,b)=>a[1].label.localeCompare(b[1].label,'es',{numeric:true}));
  el.replaceChildren(new Option('Todos los modelos ('+fmt(models.length)+')',''),...models.map(([key,item])=>new Option(item.label+' · '+fmt(item.count)+(item.count===1?' ficha':' fichas'),key)));
- el.disabled=false;
+ el.disabled=models.length===0;
  if(models.some(([key])=>key===current))el.value=current;
- $('modelStatus').textContent=fmt(models.length)+' familias de modelos · '+fmt(versions)+' fichas homologadas. Elige un modelo para ver todas sus versiones.';
+ $('modelStatus').textContent=fmt(models.length)+' modelos · '+fmt(versions)+' fichas compatibles con tus filtros.';
 }
+
 /* Las categorías agrupan solamente etiquetas de CARROCERÍA oficiales del 3CV. */
 const categories=[
  {id:'',label:'Todos',types:null},
@@ -266,46 +303,39 @@ function updateCategorySelection(){
 }
 function resetCatalogFacets(){
  for(const id of ['tech','brand','bodytype','cycle','year','model','category'])$(id).value='';
- updateModelOptions();updateCategorySelection();
+ updateFacets();updateCategorySelection();
 }
 function filters(){
  const raw=$('search').value.trim(),t=$('tech').value,b=$('brand').value,model=$('model').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value,category=$('category').value;
- const query=normalizeSearch(raw);
- const candidates=all.filter(r=>searchMatches(r,query));
+ const query=normalizeSearch(raw),candidates=all.filter(r=>searchMatches(r,query));
  filtered=candidates.filter(r=>categoryApplies(r,category)&&(!t||r[F.TECH]===t)&&(!b||r[F.BRAND]===b)&&(!model||normalizeSearch(modelFamily(r))===model)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
- const hidden=candidates.length>0&&filtered.length===0;
- const contextActive=Boolean(category||t||b||model||body||cycle||year);
+ const hidden=Boolean(query&&candidates.length&&filtered.length===0);
+ const context=Boolean(category||t||b||model||body||cycle||year);
  $('searchStatus').textContent=query?(
-  hidden?'Se encontraron '+fmt(candidates.length)+' coincidencias en la base, pero los filtros activos las están ocultando.':
-  filtered.length?fmt(filtered.length)+' coincidencias para «'+raw+'»'+(contextActive?' dentro de los filtros seleccionados.': ' en todo el catálogo histórico.'):
-  'No se encontró «'+raw+'» en la base 3CV. Intenta con otra marca, modelo o escritura.'
- ):model?'Modelo seleccionado · '+fmt(filtered.length)+' fichas.':b?'Marca seleccionada: '+b+' · '+fmt(filtered.length)+' fichas.':category?'Categoría: '+safe((categoryLookup.get(category)||categories[0]).label)+' · '+fmt(filtered.length)+' fichas.':'Busca un modelo o selecciona una categoría entre '+fmt(all.length)+' homologaciones históricas.';
- $('showAllSearch').hidden=!(query&&hidden);
- $('search').setAttribute('aria-invalid',query&&hidden?'true':'false');
+  hidden?'Encontramos '+fmt(candidates.length)+' coincidencias, pero los filtros activos las ocultan. Puedes quitarlos con un clic.':
+  filtered.length?fmt(filtered.length)+' coincidencias para «'+raw+'»'+(context?' con tus filtros.':' en todo el historial.'):
+  'No encontramos «'+raw+'». Revisa la escritura o las sugerencias.'
+ ):model?'Modelo seleccionado · '+fmt(filtered.length)+' fichas.':b?'Marca seleccionada: '+b+' · '+fmt(filtered.length)+' fichas.':category?'Categoría: '+(categoryLookup.get(category)||categories[0]).label+' · '+fmt(filtered.length)+' fichas.':'Escribe una marca o modelo para buscar entre '+fmt(all.length)+' homologaciones históricas.';
+ $('showAllSearch').hidden=!hidden;
+ $('search').setAttribute('aria-invalid',query&&!filtered.length?'true':'false');
+ renderAlternatives(query,candidates.length);
  updateCategorySelection();
  let sort=$('sort').value;
  const canRank=t&&cycle&&!['PHEV','REEV','Híbrido por verificar'].includes(t);
  if(!canRank&&(sort==='cheapest'||sort==='expensive')){
-  $('sort').value='recent';sort='recent';
-  $('sortWarning').textContent='Para ordenar por costo, selecciona una sola tecnología con consumo no ponderado y un ciclo de ensayo.';
+  $('sort').value=query?'relevance':'recent';sort=$('sort').value;
+  $('sortWarning').textContent='Para ordenar por costo, elige tecnología con consumo no ponderado y ciclo de ensayo.';
  }else $('sortWarning').textContent='';
- if(sort==='recent'){
-  filtered.sort((a,b)=>{
-   const relevance=query?searchRelevance(a,query)-searchRelevance(b,query):0;
-   return relevance||b[F.DATE].localeCompare(a[F.DATE]);
-  });
- }
+ if(sort==='relevance'&&query)filtered.sort((a,b)=>searchRelevance(a,query)-searchRelevance(b,query)||b[F.DATE].localeCompare(a[F.DATE]));
+ else if(sort==='recent'||sort==='relevance')filtered.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
  if(sort==='name')filtered.sort((a,b)=>(a[F.BRAND]+' '+a[F.MODEL]).localeCompare(b[F.BRAND]+' '+b[F.MODEL],'es'));
- if(sort==='cheapest'||sort==='expensive'){
-  filtered.sort((a,b)=>{
-   const c=cost(a).base,d=cost(b).base;
-   if(c===null)return d===null?0:1;
-   if(d===null)return -1;
-   return sort==='cheapest'?c-d:d-c;
-  });
- }
- page=0;render();
+ if(sort==='cheapest'||sort==='expensive')filtered.sort((a,b)=>{
+  const c=cost(a).base,d=cost(b).base;if(c===null)return d===null?0:1;if(d===null)return -1;
+  return sort==='cheapest'?c-d:d-c;
+ });
+ visibleLimit=pageSize;render();
 }
+
 function rowCost(r){
  const p=cost(r),t=r[F.TECH];
  if(t==='PHEV'||t==='REEV'){
