@@ -215,7 +215,7 @@ function updateModelOptions(){
   else families.set(key,{label:value,count:1});
  }
  const models=[...families.entries()].sort((a,b)=>a[1].label.localeCompare(b[1].label,'es',{numeric:true}));
- el.replaceChildren(new Option('Todos los modelos ('+fmt(models.length)+')',''),...models.map(([key,item])=>new Option(item.label+' · '+fmt(item.count)+' fichas',key)));
+ el.replaceChildren(new Option('Todos los modelos ('+fmt(models.length)+')',''),...models.map(([key,item])=>new Option(item.label+' · '+fmt(item.count)+(item.count===1?' ficha':' fichas'),key)));
  el.disabled=false;
  if(models.some(([key])=>key===current))el.value=current;
  $('modelStatus').textContent=fmt(models.length)+' familias de modelos · '+fmt(versions)+' fichas homologadas. Elige un modelo para ver todas sus versiones.';
