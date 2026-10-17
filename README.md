@@ -35,3 +35,8 @@ Versión internacional aceptada: **Sebastian Elgueta Godoy**
 - [Chile Digital Inclusion](https://github.com/selguetagodoy/Chile-Digital-Inclusion)
 - [Atlas de la Desconexión Digital de Chile](https://github.com/selguetagodoy/atlas-desconexion-digital-chile.)
 - [Internet Speeds / Ookla](https://github.com/selguetagodoy/Ookla)
+
+## Laboratorio y buscador
+
+- [Laboratorio Digital](https://selguetagodoy.github.io/laboratorio.html): Atlas, RINDELAB y dashboard de data centers.
+- [Buscar investigaciones](https://selguetagodoy.github.io/investigacion.html#buscador): índice estático generado con node scripts/build-search-index.mjs.
