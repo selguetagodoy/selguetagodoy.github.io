@@ -15,5 +15,6 @@ heading.querySelector('h2').textContent='Extremos de costo por tecnología';
 heading.querySelector('p').textContent='Menor y mayor costo dentro de un ciclo y tecnología; filtra carrocería para mejorar la equivalencia.';
 const note=$('chart').nextElementSibling;if(note)note.textContent='La comparación no incorpora precio del vehículo, tamaño, mantención ni consumos observados en ruta.';
 const faq=$('metodologia');if(faq)faq.querySelector('.about')?.insertAdjacentHTML('beforeend','<div><h3>Híbridos enchufables</h3><p>El 3CV publica rendimientos ponderados de combustible y electricidad para PHEV/REEV. No son ensayos independientes de batería descargada. <a href="https://consumovehicular.minenergia.cl/faq-page" target="_blank" rel="noopener noreferrer">Guía oficial de etiquetas 3CV ↗</a></p></div>');
+document.querySelector('.charge-config-link')?.addEventListener('click',()=>{$('energyPanel').open=true;});
 const ribbon=document.querySelector('.tech-ribbon');if(ribbon&&!ribbon.textContent.includes('MHEV'))ribbon.insertAdjacentHTML('beforeend','<span>MHEV</span>');
 })();
