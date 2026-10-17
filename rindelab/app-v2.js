@@ -302,6 +302,19 @@ for(const id of ['search','tech','brand','bodytype','cycle','year','sort','charg
   filters();renderManual();
  });
 }
+/* Búsqueda explícita del catálogo: realiza búsqueda global y navega a resultados. */
+$('catalogSearchForm').addEventListener('submit',event=>{
+ event.preventDefault();
+ const query=$('search').value.trim();
+ $('search').value=query;
+ $('heroSearchInput').value=query;
+ ['tech','brand','bodytype','cycle','year'].forEach(id=>$(id).value='');
+ $('sort').value='recent';
+ if(!loading){
+  filters();
+  $('results').scrollIntoView({behavior:'smooth',block:'start'});
+ }
+});
 /* Hero y catálogo comparten la misma búsqueda global. */
 $('heroSearchForm').addEventListener('submit',event=>{
  event.preventDefault();
