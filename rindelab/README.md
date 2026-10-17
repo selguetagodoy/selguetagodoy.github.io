@@ -1,48 +1,37 @@
 # RINDELAB · Con las alzas, cada peso cuenta
 
-Herramienta independiente de consulta y comparación de homologaciones vehiculares chilenas. Creada por **Sebastián Elgueta Godoy**.
+**RINDELAB v6** es un buscador independiente de vehículos homologados en Chile, creado por **Sebastián Elgueta Godoy**.
 
-Sitio: https://selguetagodoy.github.io/rindelab/
+Web pública: https://selguetagodoy.github.io/rindelab/
 
-## Versión 5 — navegación centrada en búsqueda
+## Flujo principal
 
-- **Búsqueda libre por marca, modelo, versión y código** con coincidencias normalizadas; admite separadores alternativos y variantes de escritura conocidas.
-- **Búsqueda como primer control del catálogo**, sin obligar a escoger una categoría.
-- **Filtros dependientes**: categoría → marcas compatibles → familias de modelos disponibles; motorización, ciclo, fecha y carrocería refinan los listados.
-- Ante **filtros incompatibles**, se indica cuántas coincidencias existen en el catálogo completo y se permite eliminar filtros con una acción.
-- **Correcciones sugeridas** ante errores de escritura, sin inventar vehículos.
-- Orden explícito por **más relevantes**, **homologaciones más recientes**, marca/modelo y costo condicionado a tecnología/ciclo homogéneos.
-- **10 resultados iniciales** y botón para mostrar otros diez, en lugar de desplegar 25 fichas largas.
-- Comparador de **2 a 4 vehículos**, con bandeja de selección persistente, navegación horizontal accesible y advertencia al mezclar ciclos NEDC y WLTP. No desplaza automáticamente la pantalla al elegir el segundo vehículo.
-- Interfaz móvil simplificada: menú compacto, portada reducida, controles táctiles de al menos 44 píxeles en acciones principales, filtros verticales y comparador desplazable con botones.
-- Los análisis detallados, las tecnologías y la metodología quedan en paneles desplegables; el CSV está en **Más herramientas**.
-- Hoja de estilos activa única `ux-v5.css`; módulos activos `app-v5.js` y `ui-v5.js`.
+1. Escribir marca o modelo, o seleccionar **Marca → Modelo → Motorización**.
+2. Pulsar **Buscar vehículos**. Los resultados no aparecen ni cambian antes del clic.
+3. Ordenar la lista por **homologación más reciente**, **menor costo estimado**, **mayor costo estimado** o **marca y modelo**.
+4. Seleccionar **Ver ficha** para revisar los datos 3CV, o **Comparar +** en dos vehículos y abrir el comparador.
+5. Ampliar los **Filtros técnicos adicionales** cuando se requiera ciclo, fecha o carrocería.
+6. Consultar la metodología o editar los precios referenciales en **Metodología y fuentes**.
 
-## Base y límites metodológicos
+La interfaz principal no incluye contadores de marcas, rankings de extremos, simuladores híbridos independientes, banners educativos ni comparador vacío. Tiene un único formulario, resultados y comparación opcional.
 
-La fuente es el registro público 3CV del Ministerio de Energía, con corte declarado **8 de mayo de 2026**. El manifiesto conserva **8.056 registros**, mientras la vista muestra **8.053**: tres fichas poseen fechas posteriores al corte y se excluyen deliberadamente de la consulta. Esta diferencia no constituye por sí misma un error de transcripción; las fechas deben verificarse en la planilla fuente antes de corregirlas.
+## Fuente, datos y límites
 
-- La categoría navegable se construye a partir de la **carrocería 3CV**. «Station Wagon» no es una certificación de segmento SUV.
-- Cada fila conserva ciclo de homologación, fecha, código 3CV, carrocería y otros campos del registro.
-- La **motorización declarada en 3CV** se conserva y presenta separadamente de la **clasificación interpretativa** utilizada para orientar los filtros. La marca original también queda distinguida en la ficha y el CSV.
-- Fórmulas de escenarios: combustibles `100 / km_por_litro × CLP_por_litro`; EV `100 / km_por_kWh × CLP_por_kWh × (1 + pérdidas_asumidas)`.
-- Los indicadores ponderados de **PHEV y REEV** no se equiparan a consumos por modo con batería descargada. El simulador manual utiliza exclusivamente valores introducidos por el usuario.
-- No mezclar directamente rendimientos **NEDC y WLTP**. Ninguna homologación acredita disponibilidad comercial actual, precio de compra ni consumo real en ruta.
-- Las tarifas iniciales son supuestos editables, **no cotizaciones en tiempo real**.
+La base emplea el registro oficial 3CV publicado por el Ministerio de Energía con corte declarado **8 de mayo de 2026**. El manifiesto contiene **8.056 registros** y la aplicación utiliza **8.053** con fecha igual o anterior al corte. No se modifica el archivo de origen. Es una base de homologaciones históricas, no de vehículos disponibles actualmente para venta.
 
-Planilla fuente: https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx
+- El orden por costo utiliza supuestos iniciales editables: bencina 93 CLP 1.535/L, diésel CLP 1.503/L y electricidad CLP 340/kWh. No son precios en tiempo real ni especifican el octanaje exigido por el fabricante.
+- Combustible: **100 ÷ rendimiento mixto km/L × precio CLP/L**. Eléctrico: **100 ÷ rendimiento km/kWh × tarifa CLP/kWh**, sin pérdidas de carga ni cobros adicionales.
+- Cuando los resultados incluyen ciclos distintos, **NEDC y WLTP se ordenan en grupos separados**, en lugar de asumir equivalencia entre ensayos. También pueden diferir segmentos y tecnologías.
+- Se marca **Sin dato comparable** cuando no corresponde calcular costo energético, incluidos PHEV/REEV ponderados y las clasificaciones híbridas no verificadas.
+- La ficha conserva marca y motorización **de origen** separadas de los ajustes interpretativos para navegación.
+- Para validación final consultar https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx
 
-## Pruebas
+## Estructura
 
-Suite reproducible `rindelab/tests/e2e.cjs` con Playwright Chromium, que verifica carga y recuentos, búsqueda de Corolla Cross, dependencias categoría/marca/modelo, conflictos de filtros, errores tipográficos, tarifas, ordenamiento, comparador, móvil y ausencia de desbordamiento horizontal.
+- `rindelab/index.html`: buscador, resultados, diálogos y metodología.
+- `rindelab/v6.js`: carga oficial, búsqueda explícita, filtros dependientes, costo, ordenamiento y comparación.
+- `rindelab/v6.css`: sistema visual responsive.
+- `rindelab/tests/e2e.cjs`: pruebas E2E con Playwright Chromium; incluye 320, 390, 768 y 1.440 px.
+- `.github/workflows/rindelab-ui-e2e.yml`: CI de Playwright en pull requests y main.
 
-Local:
-1. Servir la raíz del repositorio: `python3 -m http.server 8765`.
-2. Instalar `playwright` y navegador Chromium: `npm install --no-save playwright && npx playwright install chromium`.
-3. Ejecutar `node rindelab/tests/e2e.cjs`.
-
-CI: `.github/workflows/rindelab-ui-e2e.yml`, activo para pull requests y cambios a `main`.
-
-## Autoría y contacto
-
-**Sebastián Elgueta Godoy** · e.elguetagodoy@gmail.com. «Chequea la información en los sitios oficiales». Proyecto independiente sin afiliación ni patrocinio de fabricantes.
+Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Playwright y ejecutar `node rindelab/tests/e2e.cjs`. La verificación de datos y tarifas no sustituye la documentación 3CV.

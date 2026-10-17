@@ -1,110 +1,130 @@
 <!doctype html>
 <html lang="es-CL">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0c2039">
-<meta name="description" content="RINDELAB. Con las alzas, cada peso cuenta. Compara costos por 100 kilómetros de vehículos eléctricos, híbridos, bencineros y diésel de Chile. Fuente oficial 3CV.">
-<title>RINDELAB | Con las alzas, cada peso cuenta</title>
-<link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<meta property="og:type" content="website"><meta property="og:title" content="RINDELAB | Con las alzas, cada peso cuenta"><meta property="og:description" content="Compara consumo y costos energéticos de vehículos homologados en Chile con información oficial.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102a43">
+<meta name="description" content="RINDELAB: busca vehículos homologados en Chile, revisa sus rendimientos y compara el costo estimado de energía por 100 kilómetros.">
 <meta name="author" content="Sebastián Elgueta Godoy">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RINDELAB | Con las alzas, cada peso cuenta">
+<meta property="og:description" content="Busca vehículos, compara rendimientos y costos estimados de energía en Chile. Datos 3CV.">
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
-<meta property="og:url" content="https://selguetagodoy.github.io/rindelab/">
-<meta property="og:site_name" content="RINDELAB"><meta property="og:locale" content="es_CL">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"RINDELAB","url":"https://selguetagodoy.github.io/rindelab/","applicationCategory":"ReferenceApplication","operatingSystem":"Web","inLanguage":"es-CL","description":"Visualizador independiente de homologaciones vehiculares de Chile, rendimientos y costo energético referencial con precios de energía configurables.","creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}},{"@type":"Dataset","name":"Visualización de homologaciones vehiculares de Chile — corte mayo de 2026","description":"Datos extraídos del registro público 3CV con homologaciones históricas, sin verificar oferta comercial vigente.","dateModified":"2026-05-08","isAccessibleForFree":true,"citation":"https://consumovehicular.minenergia.cl/","creator":{"@type":"Organization","name":"Centro de Control y Certificación Vehicular (3CV)"},"url":"https://selguetagodoy.github.io/rindelab/"}]}</script>
-<link rel="stylesheet" href="./ux-v5.css?v=20261017-ux5">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./v6.css?v=20261017-simple1">
+<title>RINDELAB | Busca tu vehículo</title>
 </head>
 <body>
-<div class="top" id="inicio"><div class="shell sitebar">
-<a class="brand" href="#inicio" aria-label="RINDELAB inicio"><span>RINDE</span><em>LAB</em><small>INTELIGENCIA VEHICULAR BASADA EN DATOS</small></a>
-<button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú de navegación">☰ Menú</button>
-<nav class="navlinks" id="mainNav" aria-label="Navegación principal">
-<a href="#inicio" class="active">Inicio</a><a href="#catalogo">Catálogo</a><a href="#comparator" class="compare-nav" data-compare-nav>Comparador</a><a href="#tecnologias">Tecnologías</a><a href="#metodologia">Metodología</a><a href="#hallazgos">Hallazgos</a><a href="#autor">Acerca de</a>
-</nav><a href="mailto:e.elguetagodoy@gmail.com" class="contactlink" aria-label="Escribir correo de contacto">Contacto <span aria-hidden="true">↗</span></a>
-</div></div>
-<header class="hero" aria-labelledby="site-headline"><div class="shell hero-grid">
-<div class="hero-copy">
-<span class="eyebrow"><span class="signal-dot"></span> RINDELAB · EFICIENCIA VEHICULAR EN CHILE</span>
-<h1 id="site-headline">Con las alzas,<br><span>cada peso cuenta</span></h1>
-<p>Explora rendimientos homologados de bencineros, diésel, híbridos y eléctricos. Compara escenarios de costos por 100 kilómetros con tarifas editables y advertencias metodológicas claras.</p>
-<div class="hero-buttons redesigned-hero-actions">
-<a class="cta main-cta" href="#catalogo">Explorar vehículos <span aria-hidden="true">→</span></a>
-<a class="cta outline-cta" href="#guia">Cómo comparar <span aria-hidden="true">↓</span></a>
-</div>
-<p class="hero-trust">8.053 homologaciones históricas para consultar y comparar. Sin sustituir las cifras oficiales ni la oferta comercial vigente.</p>
-<div class="hero-metadata"><span><b id="heroTotal">—</b> homologaciones en la base</span><span>Fuente 3CV · corte 08.05.2026</span></div>
-</div>
-<div class="hero-art"><img src="./hero-rindelab.svg" alt="Ilustración de automóviles y vehículos de distintas categorías frente a la cordillera de los Andes en Santiago" width="1280" height="640" fetchpriority="high">
-<div class="tech-ribbon" aria-label="Tecnologías incluidas"><span>EV</span><span>PHEV</span><span>HEV</span><span>REEV</span><span>Bencina</span><span>Diésel</span></div></div>
-</div></header>
-<section class="features shell guide-steps" id="guia" aria-label="Cómo utilizar RINDELAB">
-<div class="guide-card"><span class="guide-number">01</span><span><strong>Elige una categoría</strong><small>Sedán, camioneta, hatchback, SUV / Station Wagon u otra carrocería.</small></span></div>
-<div class="guide-card"><span class="guide-number">02</span><span><strong>Busca un vehículo</strong><small>Selecciona marca y modelo, o escribe su nombre directamente.</small></span></div>
-<div class="guide-card"><span class="guide-number">03</span><span><strong>Compáralos</strong><small>Presiona «Comparar +» en dos a cuatro fichas. Revisa los resultados lado a lado.</small></span></div>
-</section>
-<main class="shell content">
-<div class="notice source-warning" role="note"><span class="warning-symbol" aria-hidden="true">!</span><div><strong>Chequea la información en los sitios oficiales.</strong><br>Los datos proceden de homologaciones 3CV y pueden cambiar. <strong>Una homologación histórica no confirma que el vehículo siga a la venta.</strong> Verifica versiones, rendimientos y precios en los sitios de las marcas y organismos públicos.</div><a href="https://www.consumovehicular.cl/" target="_blank" rel="noopener noreferrer">Fuente oficial ↗</a></div>
-
-<section class="panel filter-panel explorer" id="catalogo" aria-labelledby="explorerTitle">
-<div class="panel-head"><div><span class="section-overline">EXPLORAR EL CATÁLOGO</span><h2 id="explorerTitle">Encuentra tu vehículo</h2><p>Empieza por la categoría, elige marca y modelo o utiliza el buscador. Los resultados aparecen inmediatamente debajo.</p></div><div class="actions"><button class="button" id="reset" type="button">Limpiar filtros</button><details class="tools-dropdown"><summary>Más herramientas</summary><button id="export" class="button subtle" type="button">Exportar resultados CSV</button></details></div></div>
-<div class="panel-body">
-<div class="search-first"><strong>Busca por marca o modelo</strong><p>Escribe directamente el vehículo que te interesa, por ejemplo Corolla Cross. Los filtros son opcionales.</p><div class="catalog-search-top"><div class="field search-field"><label for="search">Marca, modelo o versión</label>
-<form id="catalogSearchForm" class="catalog-search-form" role="search" aria-label="Buscar en todo el catálogo">
-<input id="search" type="search" list="catalogSuggestions" placeholder="Ej. Corolla Cross, Ranger, Leapmotor C10..." autocomplete="off" aria-autocomplete="list" aria-describedby="searchStatus" spellcheck="false">
-<datalist id="catalogSuggestions"></datalist>
-<button id="catalogSearchButton" type="submit">Buscar <span aria-hidden="true">→</span></button></form></div></div></div>
-<div class="search-feedback" role="status" aria-live="polite"><span id="searchStatus">Escribe una marca o modelo para comenzar.</span><button class="button search-show-all" id="showAllSearch" type="button" hidden>Quitar filtros incompatibles y ver resultados →</button><div id="searchAlternatives" class="search-alternatives" aria-label="Sugerencias de búsqueda" hidden></div></div>
-<div class="step-heading"><span class="step-index">1</span><div><strong>Opcional · Filtrar por categoría</strong><small>Limita los resultados a un tipo de vehículo.</small></div></div>
-<div class="category-grid" id="categoryChips" role="group" aria-label="Elegir categoría de vehículo">
-<button type="button" class="category-chip selected" data-category="" aria-pressed="true">Todos <span id="count-all">—</span></button>
-<button type="button" class="category-chip" data-category="sw" aria-pressed="false">SUV / Station Wagon <span id="count-sw">—</span></button>
-<button type="button" class="category-chip" data-category="sedan" aria-pressed="false">Sedán <span id="count-sedan">—</span></button>
-<button type="button" class="category-chip" data-category="hatch" aria-pressed="false">Hatchback <span id="count-hatch">—</span></button>
-<button type="button" class="category-chip" data-category="pickup" aria-pressed="false">Camioneta <span id="count-pickup">—</span></button>
-<button type="button" class="category-chip" data-category="sport" aria-pressed="false">Coupé / descapotable <span id="count-sport">—</span></button>
-<button type="button" class="category-chip" data-category="van" aria-pressed="false">Furgón / van <span id="count-van">—</span></button>
-<button type="button" class="category-chip" data-category="bus" aria-pressed="false">Bus / minibús <span id="count-bus">—</span></button>
-</div>
-<div id="categorySelectionInfo" class="category-selection-info" aria-live="polite">Elige una categoría para filtrar las homologaciones y ver sus vehículos.</div>
-<div class="category-select-wrap"><label for="category">Categoría del vehículo</label>
-<select id="category" aria-describedby="categoryHelp"><option value="">Todas las categorías</option><option value="sw">SUV / Station Wagon</option><option value="sedan">Sedán</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé y descapotable</option><option value="van">Furgón y van</option><option value="bus">Bus y minibús</option></select>
-<p class="micro-note" id="categoryHelp">Agrupación para navegar. «Station Wagon» es una clasificación de carrocería 3CV, no una certificación de segmento SUV.</p></div>
-<div class="section-separator"></div>
-<div class="step-heading"><span class="step-index">2</span><div><strong>Opcional · Afinar por marca, modelo y motorización</strong><small>Las listas muestran opciones compatibles con los filtros seleccionados.</small></div></div>
-<div class="toolbar catalog-primary-filters">
-<div class="field"><label for="brand">Marca</label><select id="brand"><option value="">Todas las marcas</option></select></div>
-<div class="field"><label for="model">Modelo</label><select id="model" disabled aria-describedby="modelStatus"><option value="">Primero elige una marca</option></select><small class="model-status" id="modelStatus">Elige una marca para desplegar sus modelos.</small></div>
-<div class="field"><label for="tech">Motorización</label><select id="tech"><option value="">Todas las motorizaciones</option><option value="Bencina">Bencina</option><option value="Diésel">Diésel</option><option value="MHEV">MHEV</option><option value="HEV">HEV</option><option value="PHEV">PHEV</option><option value="REEV">REEV</option><option value="EV">Eléctrico puro (EV)</option><option value="Híbrido por verificar">Híbrido por verificar</option></select></div></div>
-
-
-<details class="advanced-filters" id="advancedFilters"><summary>Filtros técnicos adicionales <span>Ciclo, año y carrocería exacta</span></summary>
-<div class="advanced-inner"><p class="advanced-note">Usa estos filtros solo cuando necesites precisión metodológica. <strong>No compares directamente cifras NEDC con WLTP.</strong></p>
-<div class="technical-grid">
-<div class="field"><label for="cycle">Ciclo de ensayo</label><select id="cycle"><option value="">NEDC y WLTP (sin comparación)</option><option value="WLTP">Solo WLTP</option><option value="NEDC">Solo NEDC</option></select></div>
-<div class="field"><label for="year">Fecha de homologación</label><select id="year"><option value="">Todo el historial</option><option value="2025">Desde 2025</option><option value="2024">Desde 2024</option><option value="2020">Desde 2020</option><option value="2015">Desde 2015</option></select></div>
-<div class="field"><label for="bodytype">Carrocería exacta (3CV)</label><select id="bodytype"><option value="">Todas las carrocerías</option></select></div></div></div></details>
-<a class="energy-shortcut charge-config-link" href="#energyPanel"> <span>⚡ Ajustar precios de bencina, diésel y electrolineras</span><span>Ver tarifas y supuestos →</span></a>
-<details id="energyPanel"><summary>Tarifas de energía</summary><p>Configuración del simulador.</p></details>
-<p class="sr" id="yearNote">Historial completo</p>
-</div></section>
-<section class="stats" aria-label="Indicadores"><div class="stat"><div class="value" id="sTotal">—</div><span class="label">Versiones filtradas</span></div><div class="stat"><div class="value" id="sBrands">—</div><span class="label">Marcas distintas</span></div><div class="stat"><div class="value" id="sWLTP">—</div><span class="label">Fichas WLTP filtradas</span></div><div class="stat"><div class="value" id="sCompare">0/4</div><span class="label">Vehículos seleccionados</span></div></section>
-<div class="compare-tray" id="compareTray" hidden aria-live="polite">
-<div class="compare-tray-inner"><div class="compare-tray-title"><strong id="compareTrayCount">0 de 4 vehículos</strong><span id="compareTrayText">Añade otra versión para comparar.</span></div>
-<div class="compare-tray-models" id="compareTrayModels"></div>
-<div class="compare-tray-actions"><button type="button" id="compareNow" class="button primary" disabled>Ver comparación →</button><button type="button" id="compareReset" class="button">Vaciar</button></div></div></div>
-<section class="panel data-panel" id="results"><div class="panel-head"><div><h2>Vehículos encontrados</h2><p id="resultInfo" aria-live="polite">Cargando registros oficiales...</p><p class="price-helper sort-warning" id="sortWarning" role="status" aria-live="polite"></p></div><div class="result-actions"><div class="field"><label for="sort">Ordenar</label><select id="sort"><option value="relevance">Más relevantes</option><option value="recent">Homologaciones más recientes</option><option value="name">Marca y modelo</option><option value="cheapest">Menor costo/100 km</option><option value="expensive">Mayor costo/100 km</option></select></div><div class="flags"><span class="flag" id="cyclePill">NEDC / WLTP</span></div></div></div>
-<div class="table-scroll"><table class="table"><thead><tr><th>Marca y versión</th><th>Tecnología</th><th>Homologación</th><th>Consumo oficial</th><th>Costo estimado/100 km</th><th>Herramientas</th></tr></thead><tbody id="tbody"><tr><td colspan="6" class="loading">Cargando base del Ministerio de Energía…</td></tr></tbody></table></div>
-<div class="footerbar"><span class="subline" id="pageInfo">—</span><div class="pager"><button id="next" class="button primary" type="button">Mostrar 10 vehículos más ↓</button></div></div></section>
-<section class="panel" id="comparator"><div class="panel-head"><div><h2>Comparación de vehículos</h2><p>Selecciona de dos a cuatro versiones en los resultados. Cada columna muestra las cifras oficiales y los costos estimados con los mismos precios de energía.</p></div><button class="button" type="button" id="clearCompare">Quitar todos</button></div><div class="panel-body"><div id="comparisonWarning" class="comparison-warning" hidden></div><div class="compare-mobile-controls" aria-label="Navegar por las columnas de la comparación"><span>Desliza la tabla o utiliza las flechas para ver los demás vehículos.</span><div><button id="comparePrev" type="button" class="button" aria-label="Vehículo anterior">←</button><button id="compareNext" type="button" class="button" aria-label="Vehículo siguiente">→</button></div></div><div id="comparison" class="comparison-matrix"><div class="compare-empty">Primero selecciona dos vehículos con el botón «Comparar +» de la tabla.</div></div><div class="compare-back"><a href="#catalogo">← Buscar más vehículos</a></div></div></section>
-<details class="section-disclosure shell-disclosure" id="analysisDisclosure"><summary>Explorar análisis de costos energéticos</summary><section class="panel" id="hallazgos"><div class="panel-head"><div><h2>Extremos de costo energético</h2><p>Diez registros de menor costo por 100 km dentro de los filtros activos. No es un ranking de costo total de propiedad.</p></div></div><div class="panel-body"><div class="chart" id="chart"><div class="loading">Cargando...</div></div><p class="price-helper">Las cifras de ciclos distintos no son directamente comparables. El gráfico se muestra solo cuando eliges una motorización y un ciclo. No reemplaza el costo real medido en ruta.</p></div></section></details>
-<details class="section-disclosure shell-disclosure" id="methodDisclosure"><summary>Metodología y fuentes oficiales</summary><section class="panel" id="metodologia"><div class="panel-head"><div><h2>Metodología y fuentes</h2><p>Trazabilidad de cada registro y advertencias de interpretación.</p></div></div><div class="panel-body about"><div><h3>Fuente de datos</h3><p>Planilla oficial de rendimientos y homologaciones 3CV del Ministerio de Energía, con corte al 8 de mayo de 2026. Incluye registros históricos, versiones repetidas y distintas normas de ensayo. Se identifican como WLTP o NEDC según las columnas de origen. Algunas filas contienen fechas posteriores al corte de la base y se omiten para evitar presentar registros futuros.</p><p><a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener">Descargar planilla fuente (XLSX)</a></p></div><div><h3>Lectura del costo</h3><p>Combustibles: costo = 100 ÷ km/L × $/L. Electricidad: costo = 100 ÷ km/kWh × $/kWh × (1 + pérdidas supuestas). Para PHEV y REEV, el dato de combustible homologado <strong>no debe interpretarse automáticamente como una medición con batería descargada</strong>. Los valores de autonomía, potencia de carga, precio de compra y disponibilidad actual de cada vehículo requieren fuentes adicionales.</p><p>Este observatorio es de carácter analítico, independiente y no constituye una recomendación de compra.</p></div></div></section></details>
+<header class="site-header">
+ <div class="shell header-inner">
+  <a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a>
+  <span class="header-note">Con las alzas, cada peso cuenta.</span>
+  <a href="#fuentes" class="header-source">Fuentes y metodología</a>
+ </div>
+</header>
+<main id="inicio" class="shell">
+ <section class="intro" aria-labelledby="title">
+  <p class="eyebrow">Rendimiento vehicular en Chile</p>
+  <h1 id="title">Busca tu vehículo</h1>
+  <p>Consulta su rendimiento oficial y cuánto costaría recorrer 100 kilómetros, según precios de energía referenciales.</p>
+ </section>
+ <section class="search-card" aria-label="Buscador de vehículos">
+  <form id="vehicleForm" role="search">
+   <div class="fields">
+    <div class="field wide">
+     <label for="query">Nombre del vehículo <span class="optional">(opcional)</span></label>
+     <input id="query" type="search" autocomplete="off" placeholder="Ej. Corolla Cross, Hilux, B10" list="suggestions" spellcheck="false">
+     <datalist id="suggestions"></datalist>
+    </div>
+    <div class="field">
+     <label for="brand">Marca</label>
+     <select id="brand"><option value="">Todas las marcas</option></select>
+    </div>
+    <div class="field">
+     <label for="model">Modelo</label>
+     <select id="model" disabled><option value="">Primero selecciona una marca</option></select>
+    </div>
+    <div class="field">
+     <label for="tech">Motorización</label>
+     <select id="tech">
+      <option value="">Todas las motorizaciones</option>
+      <option value="Bencina">Bencina</option><option value="Diésel">Diésel</option>
+      <option value="MHEV">Híbrido suave (MHEV)</option><option value="HEV">Híbrido (HEV)</option>
+      <option value="PHEV">Híbrido enchufable (PHEV)</option><option value="REEV">Eléctrico con extensor (REEV)</option>
+      <option value="EV">Eléctrico (EV)</option><option value="Híbrido por verificar">Híbrido por verificar</option>
+     </select>
+    </div>
+   </div>
+   <details class="technical" id="technical">
+    <summary>Filtros técnicos adicionales <span aria-hidden="true">⌄</span></summary>
+    <div class="technical-fields">
+     <div class="field"><label for="bodytype">Carrocería (3CV)</label><select id="bodytype"><option value="">Todas</option></select></div>
+     <div class="field"><label for="cycle">Ciclo de homologación</label><select id="cycle"><option value="">Todos los ciclos</option><option value="WLTP">WLTP</option><option value="NEDC">NEDC</option></select></div>
+     <div class="field"><label for="year">Homologación desde</label><select id="year"><option value="">Todo el historial</option><option value="2025">2025</option><option value="2024">2024</option><option value="2020">2020</option><option value="2015">2015</option></select></div>
+    </div>
+   </details>
+   <p id="filterHint" class="form-hint" role="status" aria-live="polite"></p>
+   <div class="form-actions">
+    <button type="submit" class="button primary" id="searchButton">Buscar vehículos <span aria-hidden="true">→</span></button>
+    <button type="button" class="button secondary" id="resetButton">Limpiar</button>
+   </div>
+  </form>
+ </section>
+ <section id="results" class="results" aria-labelledby="resultsTitle" hidden>
+  <div class="results-head">
+   <div><h2 id="resultsTitle">Resultados de búsqueda</h2><p id="resultCount" role="status" aria-live="polite"></p></div>
+   <div class="field sort-field"><label for="sort">Ordenar por</label><select id="sort">
+    <option value="recent">Homologación más reciente</option>
+    <option value="cheapest">Menor costo estimado</option>
+    <option value="expensive">Mayor costo estimado</option>
+    <option value="name">Marca y modelo</option>
+   </select></div>
+  </div>
+  <p id="sortNote" class="sort-note" role="note" hidden></p>
+  <div id="emptyState" class="empty" hidden></div>
+  <div id="suggested" class="suggested" hidden></div>
+  <div id="resultList" class="result-list"></div>
+  <div class="load-more"><button type="button" id="more" class="button secondary" hidden>Mostrar 10 vehículos más</button></div>
+ </section>
+ <section id="fuentes" class="sources">
+  <details id="methodology">
+   <summary>Metodología y fuentes <span aria-hidden="true">⌄</span></summary>
+   <div class="source-body">
+    <p><strong>Datos oficiales.</strong> RINDELAB utiliza la planilla de homologaciones del 3CV, difundida por el Ministerio de Energía, con corte declarado al 8 de mayo de 2026. Se muestran <span id="recordCount">—</span> fichas. Tres registros posteriores al corte se excluyen de los resultados sin alterarlos en el archivo original. No se trata de un inventario de autos actualmente a la venta.</p>
+    <p><strong>Estimación energética.</strong> Para combustibles se utiliza 100 ÷ km/L × precio por litro; para eléctricos, 100 ÷ km/kWh × tarifa por kWh. Los precios iniciales son supuestos editables, no cotizaciones en tiempo real. Los híbridos enchufables y de autonomía extendida pueden presentar consumos ponderados que no permiten calcular de forma rigurosa el costo individual de cada modo.</p>
+    <p><strong>Comparabilidad.</strong> Los resultados NEDC y WLTP no son directamente equivalentes. Al ordenar por costos con ambos ciclos presentes, RINDELAB muestra grupos separados por ciclo y ordena dentro de cada grupo.</p>
+    <p><strong>Trazabilidad.</strong> Las fichas incluyen código de homologación, fecha, motorización declarada y, si corresponde, clasificación interpretativa. La información debe corroborarse con la fuente original.</p>
+    <p><a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Descargar planilla oficial 3CV ↗</a></p>
+    <details class="prices" id="priceSettings">
+     <summary>Modificar precios usados en los cálculos</summary>
+     <div class="price-grid">
+      <div class="field"><label for="gasPrice">Bencina ($/L)</label><input id="gasPrice" type="number" min="1" max="10000" step="1" value="1535"></div>
+      <div class="field"><label for="dieselPrice">Diésel ($/L)</label><input id="dieselPrice" type="number" min="1" max="10000" step="1" value="1503"></div>
+      <div class="field"><label for="electricPrice">Electricidad ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="340"></div>
+     </div>
+     <p>Precios referenciales editables. Para los cálculos eléctricos no se suman pérdidas de carga ni tarifas por tiempo. El octanaje y la tarifa aplicable deben verificarse para cada vehículo y punto de carga.</p>
+    </details>
+   </div>
+  </details>
+ </section>
 </main>
-<details class="shell section-disclosure tech-disclosure" id="techDisclosure"><summary>Conoce las tecnologías de propulsión</summary><section class="tech-overview" id="tecnologias" aria-label="Tecnologías de propulsión"><div class="section-eyebrow">ENTIENDE LA DIFERENCIA</div><h2>No todos los sistemas consumen energía de la misma forma.</h2><p>La plataforma distingue combustibles fósiles y electrificación, sin confundir autonomía eléctrica con rendimiento ponderado.</p><div class="tech-grid">
-<div><span class="flag">BENCINA</span><p>Consumo homologado en kilómetros por litro.</p></div><div><span class="flag">DIÉSEL</span><p>Rendimiento con combustible diésel; incluye distintos segmentos.</p></div><div><span class="flag">MHEV</span><p>Híbrido suave sin capacidad habitual de conducción eléctrica independiente.</p></div><div><span class="flag">HEV</span><p>Híbrido autorrecargable, sin conexión a una electrolinera.</p></div><div><span class="flag">PHEV</span><p>Híbrido enchufable: etiqueta con rendimientos ponderados, no costos por modo.</p></div><div><span class="flag">REEV</span><p>Eléctrico con extensor de autonomía y generador térmico.</p></div><div><span class="flag">EV</span><p>Eléctrico puro: consumo en kilómetros por kWh.</p></div></div></section></details>
-<footer id="autor"><div class="shell footer-inner"><div><div class="footer-logo"><span>RINDE</span><em>LAB</em></div><div class="footer-tag">INTELIGENCIA VEHICULAR BASADA EN DATOS</div><p>Con las alzas, cada peso cuenta.</p></div><div class="footer-links"><a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#comparator" id="navCompare">Comparador</a><a href="#metodologia">Metodología</a></div><div class="footer-credit"><strong>Creada por Sebastián Elgueta Godoy</strong><a href="mailto:e.elguetagodoy@gmail.com">e.elguetagodoy@gmail.com</a><small>Chequea la información en los sitios oficiales.</small></div></div><div class="shell footer-bottom">Proyecto independiente de análisis vehicular · Fuente de datos: Ministerio de Energía y 3CV · Corte de base: mayo de 2026</div></footer>
-<dialog id="detail" aria-labelledby="detailTitle"><div class="modalhead"><h2 id="detailTitle">Ficha técnica</h2><button type="button" class="button" id="closeDetail" aria-label="Cerrar ficha">Cerrar ×</button></div><div class="modalbody" id="detailBody"></div></dialog>
-<script src="./ui-v5.js?v=20261017-ux5" defer></script>
-<script src="./app-v5.js?v=20261017-ux5" defer></script>
-</body></html>
+<div id="compareTray" class="compare-tray" hidden>
+ <div class="compare-inner">
+  <p id="compareStatus" aria-live="polite">Selecciona dos vehículos para compararlos.</p>
+  <div class="compare-actions"><button type="button" id="compareOpen" class="button primary" disabled>Comparar vehículos</button><button type="button" id="compareClear" class="button tray-clear">Vaciar</button></div>
+ </div>
+</div>
+<dialog id="detailDialog" class="modal" aria-labelledby="detailTitle">
+ <div class="modal-head"><h2 id="detailTitle">Ficha del vehículo</h2><button type="button" class="button secondary" id="detailClose" aria-label="Cerrar ficha">Cerrar ×</button></div>
+ <div id="detailContent" class="modal-body"></div>
+</dialog>
+<dialog id="compareDialog" class="modal compare-modal" aria-labelledby="compareTitle">
+ <div class="modal-head"><h2 id="compareTitle">Comparación de vehículos</h2><button type="button" class="button secondary" id="compareClose" aria-label="Cerrar comparación">Cerrar ×</button></div>
+ <div id="compareContent" class="modal-body"></div>
+</dialog>
+<footer class="footer">
+ <div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy · <a href="mailto:e.elguetagodoy@gmail.com">Contacto</a></span><small>Chequea la información en los sitios oficiales. Fuente 3CV, Ministerio de Energía.</small></div>
+</footer>
+<script src="./v6.js?v=20261017-simple1" defer></script>
+</body>
+</html>
