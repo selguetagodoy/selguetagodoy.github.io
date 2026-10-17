@@ -181,7 +181,7 @@ await test('Selección persistente al cambiar de búsqueda o limpiar los filtros
  await page.click('#resetButton');
  await page.fill('#query','Corolla Cross');await page.click('#searchButton');
  await page.locator('.vehicle-card button[data-compare]').first().click();
- assert.match(await page.locator('#compareStatus').textContent(),/1 de 5/);
+ assert.match(await page.locator('#compareStatus').textContent(),/1 vehículo seleccionado/);
  await page.locator('#compareAdd').click();
  assert(await page.locator('#query').evaluate(e=>document.activeElement===e));
  await page.fill('#query','Hilux');await page.click('#searchButton');
