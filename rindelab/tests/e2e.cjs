@@ -67,18 +67,61 @@ await test('El filtro opcional permite WLTP o NEDC sin separar el ranking conjun
  assert.equal(await page.inputValue('#statsCycle'),'');
  await page.locator('#statsClose').click();
 });
-await test('Estadísticas no mezclan km/L con km/kWh ni ponderados PHEV',async()=>{
+await test('PHEV muestra 232 fichas y rendimiento eléctrico y ponderado sin costo inventado',async()=>{
  await page.locator('#statsOpen').click();
  await page.selectOption('#statsMetric','performance');
  assert.equal(await page.locator('.rank-item').count(),0);
- assert.match(await page.locator('#statsNotice').textContent(),/elige una motorización/);
- await page.selectOption('#statsTech','EV');
- assert((await page.locator('.rank-item').count())>0);
- assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
+ assert.match(await page.locator('#statsNotice').textContent(),/Selecciona una motorización/);
  await page.selectOption('#statsTech','PHEV');
- assert.equal(await page.locator('.rank-item').count(),0);
- assert.match(await page.locator('#statsNotice').textContent(),/ponderados/);
+ assert.equal(await page.inputValue('#statsMetric'),'electric');
+ assert(await page.locator('#statsMetric option[value="cost"]').isDisabled());
+ assert.equal(await page.locator('.rank-item').count(),10);
+ assert.match(await page.locator('#statsResultCount').textContent(),/^232 fichas/);
+ assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
+ assert.match(await page.locator('#statsMetricHint').textContent(),/No se calcula un costo energético combinado/);
+ await page.selectOption('#statsMetric','weighted');
+ assert.equal(await page.locator('.rank-item').count(),10);
+ assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/L pond.')));
+ assert.match(await page.locator('#statsNotice').textContent(),/no equivale al rendimiento con batería descargada/);
  await page.locator('#statsClose').click();
+});
+await test('REEV muestra sus 8 registros y ambas métricas con orden dinámico',async()=>{
+ await page.locator('#statsOpen').click();
+ await page.selectOption('#statsMetric','cost');
+ await page.selectOption('#statsTech','REEV');
+ assert.equal(await page.inputValue('#statsMetric'),'electric');
+ assert.match(await page.locator('#statsResultCount').textContent(),/^8 fichas/);
+ assert.equal(await page.locator('.rank-item').count(),8);
+ assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
+ const first=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/[^\d,.]/g,'').replace(',','.')));
+ assert(first.every((v,i)=>i===0||first[i-1]<=v),'REEV ascendente '+first);
+ await page.selectOption('#statsOrder','desc');
+ const reversed=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/[^\d,.]/g,'').replace(',','.')));
+ assert(reversed.every((v,i)=>i===0||reversed[i-1]>=v),'REEV descendente '+reversed);
+ await page.selectOption('#statsMetric','weighted');
+ assert.equal(await page.locator('.rank-item').count(),8);
+ assert.match(await page.locator('#statsNotice').textContent(),/Rendimiento ponderado informado/);
+ await page.selectOption('#statsMetric','electric');
+ await page.locator('.rank-item').first().click();
+ assert(await page.locator('#statsDialog').isHidden());
+ assert.match(await page.locator('#detailContent').textContent(),/Rendimiento oficial/);
+ await page.locator('#detailClose').click();
+});
+await test('Desaparece híbrido por verificar y se conserva tecnología 3CV',async()=>{
+ assert.equal(await page.locator('#tech option[value="Híbrido por verificar"]').count(),0);
+ assert.equal(await page.locator('#statsTech option[value="Híbrido por verificar"]').count(),0);
+ await page.click('#resetButton');
+ await page.fill('#query','Grand Vitara');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0);
+ const candidate=page.locator('.vehicle-card').filter({hasText:'Híbrido'}).first();
+ if(await candidate.count()){
+  await candidate.locator('button[data-detail]').click();
+  const detail=await page.locator('#detailContent').textContent();
+  assert.match(detail,/Motorización declarada 3CV/);
+  assert.match(detail,/Aclaración sobre el nombre comercial/);
+  assert.match(detail,/Bencina/);
+  await page.click('#detailClose');
+ }
 });
 await test('Ranking abre ficha completa y cierra estadísticas',async()=>{
  await page.locator('#statsOpen').click();
@@ -286,7 +329,20 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert(geometry.rank<geometry.modal);
   await p.locator('#statsClose').click();
  });
- await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
+ await test('PHEV y REEV ofrecen datos en ventana móvil '+width+' px',async()=>{
+  await p.locator('#statsOpen').click();
+  await p.selectOption('#statsTech','PHEV');
+  assert.equal(await p.inputValue('#statsMetric'),'electric');
+  assert.equal(await p.locator('.rank-item').count(),10);
+  await p.selectOption('#statsTech','REEV');
+  assert.equal(await p.locator('.rank-item').count(),8);
+  await p.selectOption('#statsMetric','weighted');
+  assert.equal(await p.locator('.rank-item').count(),8);
+  const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,screen:innerWidth}));
+  assert(size.doc<=size.screen+3);
+  await p.locator('#statsClose').click();
+ });
+  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
   const dimensions=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,search:document.querySelector('#searchButton').getBoundingClientRect().height,searchTop:document.querySelector('#searchButton').getBoundingClientRect().top+scrollY}));
   assert(dimensions.doc<=dimensions.view+3,JSON.stringify(dimensions));
   assert(dimensions.search>=44);
