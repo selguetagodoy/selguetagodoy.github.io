@@ -23,10 +23,10 @@ function cleanRow(row){
 function family(row){
  let name=String(row[F.MODEL]||'').trim(),brand=String(row[F.BRAND]||'').trim();
  if(name.toLowerCase().startsWith((brand+' ').toLowerCase()))name=name.slice(brand.length).trim();
- name=name.replace(/^(?:(?:All[\s-]+New|New|Nuevo|Nueva)\s+)+/i,'').trim();
+ name=name.replace(/^(?:(?:The[\s-]+New|All[\s-]+New|New|Nuevo|Nueva)\s+)+/i,'').trim();
  if(!name)return row[F.MODEL];
  const patterns=[
-  [/^GR\s+Corolla\b/i,'GR Corolla'],[/^Corolla\s+Cross\b/i,'Corolla Cross'],
+  [/^GR\s+Corolla\b/i,'GR Corolla'],[/^Corolla\s+Cross\b/i,'Corolla Cross'],[/^Creta\s+Grand\b/i,'Creta Grand'],
   [/^Corolla\s+(?:SD|SEDAN|SEDÁN)\b/i,'Corolla Sedán'],
   [/^Corolla\s+(?:HB|HATCHBACK)\b/i,'Corolla Hatchback'],
   [/^Yaris\s+Cross\b/i,'Yaris Cross'],[/^Land\s+Cruiser\s+Prado\b/i,'Land Cruiser Prado'],
