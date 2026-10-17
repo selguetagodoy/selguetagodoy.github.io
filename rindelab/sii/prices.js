@@ -9,13 +9,22 @@ const makeIdentity=p=>norm([p.brand,p.family,p.version,p.modelYear||'N/A'].join(
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[];
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261017-list36').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261017-list63').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
   return loaded;
  }).catch(()=>{loaded=[];return []}));
 }
-function match(row,family,items){return items.filter(x=>norm(x.brand)===norm(row[0])&&norm(x.family)===norm(family));}
+function canonicalFamily(brand,family){
+ const key=norm(family),b=norm(brand);
+ if(b==='MG'&&key==='MGZS')return 'ZS';
+ if(b==='MG'&&key==='MGS5')return 'S5';
+ return key;
+}
+function match(row,family,items){
+ const b=norm(row[0]),f=canonicalFamily(row[0],family);
+ return items.filter(x=>norm(x.brand)===b&&canonicalFamily(x.brand,x.family)===f);
+}
 function selected(row){
  try{const key=localStorage.getItem(storageKey(row));return loaded.find(x=>makeIdentity(x)===key)||null;}catch{return null;}
 }
