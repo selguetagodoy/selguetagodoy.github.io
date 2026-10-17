@@ -15,10 +15,56 @@ async function open(width,height){
 }
 const {page,errors}=await open(1440,900);
 await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
- assert.equal(await page.locator('h1').textContent(),'Busca tu vehículo');
+ assert.match(await page.locator('h1').textContent(),/cada peso cuenta/i);
+ assert.equal(await page.locator('.search-card-heading h2').textContent(),'Busca tu vehículo');
+ assert(await page.locator('.hero-image img').isVisible());
  assert.equal(await page.locator('.stats,.tech-overview,.manual-scenario,.chart,.guide-steps').count(),0);
  assert.equal(await page.locator('#results').isHidden(),true);
  assert.equal(await page.locator('#compareTray').isHidden(),true);
+});
+await test('Abrir estadísticas modal y calcular los diez costos menores WLTP',async()=>{
+ await page.locator('#statsOpen').click();
+ assert(await page.locator('#statsDialog').evaluate(e=>e.open));
+ assert.equal(await page.locator('.rank-item').count(),10);
+ const first=await page.locator('.rank-value').allTextContents();
+ const costs=first.map(x=>Number(x.replace(/\\D/g,''))).filter(Number.isFinite);
+ assert(costs.length===10);
+ assert(costs.every((v,i)=>i===0||costs[i-1]<=v),'Top 10 menor costo: '+JSON.stringify(costs));
+ await page.locator('#statsClose').click();
+ assert(await page.locator('#statsDialog').isHidden());
+});
+await test('Estadísticas cambian al ordenar mayor costo y al filtrar camionetas',async()=>{
+ await page.locator('#statsOpen').click();
+ await page.selectOption('#statsOrder','desc');
+ const values=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/\\D/g,''))).filter(Number.isFinite);
+ assert(values.length===10);
+ assert(values.every((v,i)=>i===0||values[i-1]>=v),'Top 10 mayor costo: '+JSON.stringify(values));
+ await page.selectOption('#statsBody','pickup');
+ assert.equal(await page.locator('.rank-item').count(),10);
+ assert.match(await page.locator('#statsResultCount').textContent(),/fichas comparables/);
+ assert((await page.locator('.rank-item').allTextContents()).every(x=>x.includes('Camioneta')));
+ await page.locator('#statsClose').click();
+});
+await test('Estadísticas no mezclan km/L con km/kWh ni ponderados PHEV',async()=>{
+ await page.locator('#statsOpen').click();
+ await page.selectOption('#statsMetric','performance');
+ assert.equal(await page.locator('.rank-item').count(),0);
+ assert.match(await page.locator('#statsNotice').textContent(),/elige una motorización/);
+ await page.selectOption('#statsTech','EV');
+ assert((await page.locator('.rank-item').count())>0);
+ assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
+ await page.selectOption('#statsTech','PHEV');
+ assert.equal(await page.locator('.rank-item').count(),0);
+ assert.match(await page.locator('#statsNotice').textContent(),/ponderados/);
+ await page.locator('#statsClose').click();
+});
+await test('Ranking abre ficha completa y cierra estadísticas',async()=>{
+ await page.locator('#statsOpen').click();
+ await page.locator('.rank-item').first().click();
+ assert(await page.locator('#statsDialog').isHidden());
+ assert(await page.locator('#detailDialog').evaluate(e=>e.open));
+ assert.match(await page.locator('#detailContent').textContent(),/Código 3CV/);
+ await page.locator('#detailClose').click();
 });
 await test('Buscar explícitamente y recuperar cuatro Corolla Cross',async()=>{
  await page.fill('#query','Corolla Cross');
@@ -124,6 +170,19 @@ await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){
  const {page:p,errors:issues}=await open(width,height);
+ await test('Estadísticas accesibles y top 10 legible '+width+' px',async()=>{
+  await p.locator('#statsOpen').click();
+  assert(await p.locator('#statsDialog').evaluate(e=>e.open));
+  assert.equal(await p.locator('.rank-item').count(),10);
+  await p.selectOption('#statsMetric','performance');
+  await p.selectOption('#statsTech','EV');
+  assert((await p.locator('.rank-item').count())>0);
+  const geometry=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,viewport:innerWidth,modal:document.querySelector('#statsDialog').getBoundingClientRect().width,rank:document.querySelector('.rank-item').getBoundingClientRect().width}));
+  assert(geometry.doc<=geometry.viewport+3,JSON.stringify(geometry));
+  assert(geometry.modal<=geometry.viewport);
+  assert(geometry.rank<geometry.modal);
+  await p.locator('#statsClose').click();
+ });
  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
   const dimensions=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,search:document.querySelector('#searchButton').getBoundingClientRect().height,searchTop:document.querySelector('#searchButton').getBoundingClientRect().top+scrollY}));
   assert(dimensions.doc<=dimensions.view+3,JSON.stringify(dimensions));
