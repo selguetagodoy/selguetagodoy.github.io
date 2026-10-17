@@ -88,6 +88,7 @@ await test('PHEV muestra 232 fichas y rendimiento eléctrico y ponderado sin cos
 await test('REEV muestra sus 8 registros y ambas métricas con orden dinámico',async()=>{
  await page.locator('#statsOpen').click();
  await page.selectOption('#statsTech','REEV');
+ await page.selectOption('#statsMetric','electric');
  assert.equal(await page.inputValue('#statsMetric'),'electric');
  assert.match(await page.locator('#statsResultCount').textContent(),/^8 fichas/);
  assert.equal(await page.locator('.rank-item').count(),8);
