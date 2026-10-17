@@ -151,19 +151,67 @@ function updateSearchSuggestions(value){
   const option=document.createElement('option');option.value=value;return option;
  }));
 }
+/* Familias de modelos para navegar las versiones exactas del 3CV. */
+function modelFamily(r){
+ let name=String(r[F.MODEL]||'').trim();
+ const brand=String(r[F.BRAND]||'').trim();
+ if(name.toLowerCase().startsWith((brand+' ').toLowerCase()))name=name.slice(brand.length).trim();
+ name=name.replace(/^(?:(?:All[\s-]+New|New|Nuevo|Nueva)\s+)+/i,'').trim();
+ if(!name)return String(r[F.MODEL]||'').trim();
+ const patterns=[
+  [/^GR\s+Corolla\b/i,'GR Corolla'],
+  [/^Corolla\s+Cross\b/i,'Corolla Cross'],
+  [/^Corolla\s+(?:SD|SEDAN|SEDÁN)\b/i,'Corolla Sedán'],
+  [/^Corolla\s+(?:HB|HATCHBACK)\b/i,'Corolla Hatchback'],
+  [/^Yaris\s+Cross\b/i,'Yaris Cross'],
+  [/^Land\s+Cruiser\s+Prado\b/i,'Land Cruiser Prado'],
+  [/^Land\s+Cruiser\b/i,'Land Cruiser'],
+  [/^Range\s+Rover\s+(Sport|Velar|Evoque)\b/i,null],
+  [/^Range\s+Rover\b/i,'Range Rover'],
+  [/^Discovery\s+Sport\b/i,'Discovery Sport'],
+  [/^Defender\s+(90|110|130)\b/i,null],
+  [/^Grand\s+Vitara\b/i,'Grand Vitara'],
+  [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],
+  [/^Deepal\s+[A-Z0-9-]+\b/i,null],
+  [/^Haval\s+(H6|H9|Jolion(?:\s+Pro)?|Dargo)\b/i,null],
+  [/^Tiggo\s+\d+\b/i,null],
+  [/^ATTO\s+\d+\b/i,null],
+  [/^Model\s+[3SYX]\b/i,null],
+  [/^F[\s-]?(150|250|350)\b/i,null],
+  [/^e[\s-]?Vitara\b/i,'e Vitara'],
+  [/^e[\s-]?208\b/i,'e-208'],
+  [/^e[\s-]?2008\b/i,'e-2008']
+ ];
+ for(const [regex,label] of patterns){
+  const match=name.match(regex);
+  if(match)return label||match[0].replace(/^F[\s-]?(\d+)/i,'F-$1');
+ }
+ const parts=name.split(/\s+/).filter(Boolean);
+ if(!parts.length)return name;
+ if(['Serie','Series','Clase','Class','Model','Grand','Range'].includes(parts[0])&&parts.length>1)return parts.slice(0,2).join(' ');
+ return parts[0];
+}
 function updateModelOptions(){
- const brand=$('brand').value,el=$('model'),chosen=el.value;
+ const brand=$('brand').value,el=$('model'),current=el.value;
  if(!brand){
   el.disabled=true;
   el.replaceChildren(new Option('Selecciona primero una marca',''));
   $('modelStatus').textContent='Elige una marca para desplegar sus modelos.';
   return;
  }
- const models=[...new Set(all.filter(r=>r[F.BRAND]===brand).map(r=>r[F.MODEL]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));
- el.replaceChildren(new Option('Todos los modelos de '+brand+' ('+fmt(models.length)+')',''),...models.map(name=>new Option(name,name)));
+ const families=new Map();
+ let versions=0;
+ for(const r of all){
+  if(r[F.BRAND]!==brand)continue;
+  versions++;
+  const value=modelFamily(r),key=normalizeSearch(value);
+  if(key&&!families.has(key))families.set(key,value);
+ }
+ const models=[...families.entries()].sort((a,b)=>a[1].localeCompare(b[1],'es',{numeric:true}));
+ el.replaceChildren(new Option('Todos los modelos ('+fmt(models.length)+')',''),...models.map(([key,label])=>new Option(label,key)));
  el.disabled=false;
- if(models.includes(chosen))el.value=chosen;
- $('modelStatus').textContent=fmt(models.length)+' modelos y versiones disponibles en las homologaciones de '+brand+'.';
+ if(models.some(([key])=>key===current))el.value=current;
+ $('modelStatus').textContent=fmt(models.length)+' familias de modelos · '+fmt(versions)+' fichas homologadas. Elige un modelo para ver todas sus versiones.';
 }
 function resetCatalogFacets(){
  for(const id of ['tech','brand','bodytype','cycle','year','model'])$(id).value='';
@@ -173,7 +221,7 @@ function filters(){
  const raw=$('search').value.trim(),t=$('tech').value,b=$('brand').value,model=$('model').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value;
  const query=normalizeSearch(raw);
  const candidates=all.filter(r=>searchMatches(r,query));
- filtered=candidates.filter(r=>(!t||r[F.TECH]===t)&&(!b||r[F.BRAND]===b)&&(!model||r[F.MODEL]===model)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
+ filtered=candidates.filter(r=>(!t||r[F.TECH]===t)&&(!b||r[F.BRAND]===b)&&(!model||normalizeSearch(modelFamily(r))===model)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
  const hidden=candidates.length>0&&filtered.length===0;
  const contextActive=Boolean(t||b||model||body||cycle||year);
  $('searchStatus').textContent=query?(
@@ -350,7 +398,7 @@ async function initialize(){
 for(const id of ['search','tech','brand','model','bodytype','cycle','year','sort','charge','zone','period','customKwh','octane','losses','p93','p95','p97','diesel','annualKm']){
  $(id).addEventListener(id==='search'||['p93','p95','p97','diesel','customKwh','annualKm'].includes(id)?'input':'change',()=>{
   if(loading)return;
-  if(id==='brand')updateModelOptions();
+  if(id==='brand'){$('model').value='';updateModelOptions();}
   if(id==='search')updateSearchSuggestions($('search').value);
   filters();renderManual();
  });
