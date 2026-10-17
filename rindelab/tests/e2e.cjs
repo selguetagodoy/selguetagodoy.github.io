@@ -12,7 +12,7 @@ const assert = require('node:assert/strict');
   try{await fn();console.log('PASS '+name);checks++}
   catch(e){failures++;console.error('FAIL '+name+' — '+e.stack)}
  }
- const page=await browser.newPage({viewport:{width:1440,height:940}});
+ const page=await browser.newPage({viewport:{width:1440,height:940}});await page.emulateMedia({reducedMotion:'reduce'});
  const errors=[];page.on('pageerror',e=>errors.push('Page error: '+e.message));
  page.on('console',msg=>{if(msg.type()==='error')errors.push('Console: '+msg.text())});
  await test('Carga y base oficial',async()=>{
@@ -39,7 +39,6 @@ const assert = require('node:assert/strict');
   assert.equal(await page.locator('#categoryChips button[data-category="sedan"]').getAttribute('aria-pressed'),'true');
  });
  await test('Categoría sedán y reset',async()=>{
-  await page.locator('#categoryChips button[data-category="sedan"]').click();
   assert.match(await page.locator('#sTotal').textContent(),/1\.072/);
   await page.locator('#reset').click();
   assert.match(await page.locator('#sTotal').textContent(),/8\.053/);
@@ -161,7 +160,7 @@ const assert = require('node:assert/strict');
  });
  await test('Sin errores JS en escritorio',async()=>{assert.deepEqual(errors,[])});
  await page.close();
- const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:2});
+ const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:2});await mobile.emulateMedia({reducedMotion:'reduce'});
  const mobileErrors=[];mobile.on('pageerror',e=>mobileErrors.push(e.message));
  await test('Categorías móviles y navegación accesible',async()=>{
   await mobile.goto(base,{waitUntil:'networkidle'});
