@@ -1,4 +1,4 @@
-name: RINDELAB UI E2E
+name: RINDELAB v6 UI E2E
 
 on:
   pull_request:
@@ -43,5 +43,5 @@ jobs:
             sleep 1
           done
 
-      - name: Verify category selectors, comparison, tariffs and mobile layout
+      - name: Verify explicit search, cost sorting, comparison and responsive layout
         run: node rindelab/tests/e2e.cjs
