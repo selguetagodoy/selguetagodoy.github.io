@@ -1,0 +1,47 @@
+name: RINDELAB UI E2E
+
+on:
+  pull_request:
+    paths:
+      - "rindelab/**"
+      - ".github/workflows/rindelab-ui-e2e.yml"
+  push:
+    branches:
+      - "main"
+    paths:
+      - "rindelab/**"
+      - ".github/workflows/rindelab-ui-e2e.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Launch static web server
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/rindelab-http.log 2>&1 &
+          echo $! > /tmp/rindelab-http.pid
+          for i in {1..20}; do
+            curl --fail --silent http://127.0.0.1:8765/rindelab/ > /dev/null && break
+            sleep 1
+          done
+
+      - name: Verify category selectors, comparison, tariffs and mobile layout
+        run: node rindelab/tests/e2e.cjs
