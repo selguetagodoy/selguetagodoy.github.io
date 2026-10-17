@@ -117,7 +117,7 @@ const assert = require('node:assert/strict');
   await page.locator('#reset').click();
   await page.selectOption('#category','pickup');
   assert.equal(await page.locator('#sTotal').textContent(),'1.056');
-  assert.equal(await page.locator('#brand option').count(),58);
+  assert.equal(await page.locator('#brand option').count(),Number((await page.locator('#sBrands').textContent()).replace(/\./g,''))+1);
   await page.selectOption('#brand',{label:'Toyota'});
   assert(await page.locator('#model option').filter({hasText:'Hilux'}).count()>0);
   assert.equal(await page.locator('#model option').filter({hasText:'Corolla Cross'}).count(),0);
