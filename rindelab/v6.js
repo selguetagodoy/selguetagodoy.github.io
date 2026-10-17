@@ -336,7 +336,7 @@ function openCompare(){
  if(!$('compareDialog').open)$('compareDialog').showModal();
  requestAnimationFrame(syncCompareScrollControls);
 }
-// Estadísticas independientes del catálogo: rankings homogéneos por ciclo, sin proxies para PHEV/REEV.
+// Estadísticas independientes del catálogo: mostrar ciclo original y excluir proxies de costo PHEV/REEV.
 // Grupos exclusivos derivados de las 18 denominaciones exactas de carrocería 3CV.
 // «Station Wagon» no equivale a SUV comercial; «Jeep/Tipo Jeep» se agrupan aparte.
 const rankingBodies={
