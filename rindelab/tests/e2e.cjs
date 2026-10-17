@@ -473,15 +473,15 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
 });
-await test('Catálogo inicial de 21 precios de lista sin bonos con fuente oficial',async()=>{
+await test('Catálogo inicial de 25 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,21);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Toyota']);
+ assert.equal(list.length,25);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Hyundai','Kia','Toyota']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -500,8 +500,25 @@ await test('No asigna precio de lista automáticamente y permite elegir o quitar
  await page.click('#detailClose');
  await page.click('#resetButton');await page.fill('#query','Hilux');await page.click('#searchButton');
  await page.locator('.vehicle-card button[data-detail]').first().click();
- await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===1);
  assert.match(await page.locator('#siiCommercial').textContent(),/45\.290\.000/);
+ await page.click('#detailClose');
+});
+await test('Kia Morning: cinco precios de lista distintos y fuente verificable',async()=>{
+ await page.click('#resetButton');await page.fill('#query','Morning');await page.click('#searchButton');
+ assert((await page.locator('.vehicle-card').count())>0,'Sin fichas 3CV para Morning');
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===5);
+ assert.equal(await page.locator('.sii-price-item').count(),5);
+ assert.match(await page.locator('#siiCommercial').textContent(),/10\.990\.000/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/14\.990\.000/);
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
+ await page.locator('.sii-price-item').first().locator('button').click();
+ assert.match(await page.locator('.sii-selected-price').textContent(),/10\.990\.000/);
+ const url=await page.locator('.sii-selected-price a').getAttribute('href');
+ assert.equal(url,'https://www.kia.cl/promociones/kia-morning.html');
+ await page.locator('.sii-selected-price button').click();
+ assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.click('#detailClose');
 });
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
