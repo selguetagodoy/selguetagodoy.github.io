@@ -13,6 +13,18 @@ Web pública: https://selguetagodoy.github.io/rindelab/
 - **Navegación**: acceso rápido al buscador, supuestos y fuentes; módulos documentales en el pie de página.
 - **Difusión**: metadatos Open Graph, datos estructurados de aplicación/dataset y URLs de comparación con códigos de homologación.
 
+## Cotizador comercial y directorio de tarifas (18 de octubre de 2026)
+
+### Cotizador de autos nuevos
+El módulo público `rindelab/cotizador.html` utiliza las **143 versiones comerciales documentadas de 13 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
+
+La opción de financiamiento es estrictamente matemática y optativa: no calcula una cuota si no se ingresa una tasa nominal anual; el cálculo usa tasa nominal/12, pie y meses de plazo, sin simular CAE, seguros ni gastos contractuales. No hay precotización del banco ni solicitud de datos personales. Únicamente se enlazan cotizadores de fabricante explícitamente comprobados (Hyundai y Changan); el resto dispone de enlace a su fuente oficial verificable. La elección de una versión comercial no adjudica un código 3CV ni un registro SII: ambos requieren evidencia y selección independientes.
+
+Los precios no tienen vigencia automática: a los 30 días de `checkedAt` el módulo advierte que la revisión es antigua; siempre debe confirmarse el valor antes de cerrar una operación. El costo de uso 3CV no se suma al precio de compra porque no existe correspondencia universal auditada entre fichas 3CV y versiones comerciales.
+
+### Directorio de tarifa eléctrica residencial
+Bajo los escenarios de carga de la portada se agregó una consulta de **pliegos BT1** por distribuidora declarada desde la boleta. Se enlazan fuentes oficiales Enel, Saesa, Frontel o el directorio SEC para CGE, Chilquinta y otras, sin imputar valores numéricos por comuna. Los pliegos varían por mes, comuna, red, regulaciones y modalidad. El usuario ingresa a RINDELAB la tarifa real de su boleta o una estimación media explícitamente rotulada, sin confundir costo promedio total de cuenta con costo marginal de recarga.
+
 ## Cómo estimar el costo de carga en casa (18 de octubre de 2026)
 
 RINDELAB distingue **carga residencial** y **electrolinera pública** con resultados monetarios separados para una cantidad de energía elegida por el usuario (20 kWh por defecto, de 1 a 200 kWh). También muestra el costo por 100 km bajo ambas tarifas en la ficha de vehículos EV cuyo rendimiento 3CV permite calcularlo.

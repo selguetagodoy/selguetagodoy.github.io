@@ -17,14 +17,14 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"RINDELAB","url":"https://selguetagodoy.github.io/rindelab/","description":"Consulta homologaciones 3CV y compara costos energéticos estimados de vehículos en Chile.","applicationCategory":"ReferenceApplication","operatingSystem":"Web","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}},{"@type":"Dataset","name":"RINDELAB: rendimientos vehiculares homologados en Chile","description":"Integración independiente de fichas 3CV de mayo 2026 y nuevos códigos de la consulta oficial de octubre 2026. No equivale a un catálogo de vehículos disponibles para venta.","url":"https://selguetagodoy.github.io/rindelab/","isBasedOn":["https://www.consumovehicular.cl/","https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx"],"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}}]}</script>
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261018-home3"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
+<link rel="stylesheet" href="./v6.css?v=20261018-quote4"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
 <header class="site-header">
  <div class="shell header-inner">
   <a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a>
-  <nav class="header-links" aria-label="Navegación principal"><a href="#buscador" class="header-source">Buscar vehículos</a><a href="#supuestos" class="header-source">Costos de energía</a><a href="#fuentes" class="header-source">Fuentes</a></nav>
+  <nav class="header-links" aria-label="Navegación principal"><a href="#buscador" class="header-source">Buscar vehículos</a><a href="#supuestos" class="header-source">Costos de energía</a><a href="./cotizador.html" class="header-source">Cotizar auto</a><a href="#fuentes" class="header-source">Fuentes</a></nav>
  </div>
 </header>
 <main id="inicio" class="shell">
@@ -129,6 +129,25 @@
       <p id="chargeDifference" class="charge-difference" role="status" aria-live="polite">Agrega tu tarifa domiciliaria para comparar.</p>
       <p class="charge-disclaimer">Cálculo de energía: kWh × tarifa. No es una carga completa obligatoriamente, ni incluye pérdidas eléctricas, servicios por tiempo, potencia instalada o cambios de tramo tarifario.</p>
     </section>
+    <details id="homeTariffDirectory" class="home-tariff-directory">
+      <summary>Tarifas de luz por distribuidora: consulta el pliego BT1 vigente</summary>
+      <div class="tariff-directory-body">
+        <div class="field"><label for="tariffDistributor">Selecciona la distribuidora indicada en tu boleta</label>
+          <select id="tariffDistributor">
+            <option value="">Seleccionar distribuidora</option>
+            <option value="enel">Enel Distribución</option>
+            <option value="cge">CGE Distribución</option>
+            <option value="chilquinta">Chilquinta</option>
+            <option value="saesa">Saesa</option>
+            <option value="frontel">Frontel</option>
+            <option value="otra">Otra distribuidora</option>
+          </select>
+        </div>
+        <p id="tariffSourceDescription">Busca primero tu distribuidora en la boleta; la comuna por sí sola no identifica tu pliego ni el cargo total aplicable.</p>
+        <a id="tariffSourceLink" href="https://www.sec.cl/contactar-distribuidora/" target="_blank" rel="noopener noreferrer">Directorio de distribuidoras y tarifas SEC ↗</a>
+        <p>En el pliego, identifica <strong>BT1, comuna, zona/red y fecha</strong>, y diferencia el cargo fijo de los cargos variables por kWh. La tarifa de carga del vehículo puede variar con consumo acumulado y reliquidaciones. RINDELAB no rellena una tarifa numérica si no está verificada para esa combinación.</p>
+      </div>
+    </details>
     <p id="chargeStatus" class="charge-status" role="status" aria-live="polite">Copec Voltex · AC hasta 22 kW · ciudad, horario valle. Tarifa aplicada: $340/kWh.</p>
     <p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa una tarifa introducida desde tu boleta o estimada con el formulario local, sin un precio residencial nacional por defecto. Si falta, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="#fuentes">Revisar metodología</a>.</p>
   </section>
@@ -243,6 +262,6 @@
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
 <script src="./sii/prices.js?v=20261017-list122" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261018-home3" defer></script>
+<script src="./v6.js?v=20261018-quote4" defer></script>
 </body>
 </html>

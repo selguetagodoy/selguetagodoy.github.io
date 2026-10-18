@@ -697,6 +697,21 @@ $('homeChargeRate').addEventListener('input',()=>{
  updateChargeScenario();
  refreshEnergyViews();
 });
+const tariffDirectory={
+ enel:{url:'https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.htmlSi.html',label:'Enel Distribución: pliegos residenciales por comuna, tipo de conexión y período. Comprueba el mes vigente.'},
+ cge:{url:'https://www.sec.cl/contactar-distribuidora/',label:'CGE: busca el acceso a tarifas y área de concesión desde el directorio SEC; verifica el pliego de tu boleta.'},
+ chilquinta:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Chilquinta: busca el acceso oficial a sus tarifas desde la SEC; no se infiere la comuna ni el valor por kWh.'},
+ saesa:{url:'https://web.gruposaesa.cl/es/web/saesa/pago-y-boleta/tarifas-vigentes',label:'Saesa: consulta los pliegos vigentes desde octubre de 2026, según la comuna y el tipo de red.'},
+ frontel:{url:'https://web.gruposaesa.cl/web/frontel/pago-y-boleta/tarifas-vigentes',label:'Frontel: consulta pliegos de suministro regulado en su sección oficial.'},
+ otra:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Otra compañía: identifica tu concesionaria y accede a tarifas desde el directorio oficial SEC.'}
+};
+$('tariffDistributor').addEventListener('change',()=>{
+ const key=$('tariffDistributor').value,info=tariffDirectory[key];
+ $('tariffSourceDescription').textContent=info?.label||'Selecciona la distribuidora de tu boleta. La comuna no basta para conocer los cargos por kWh.';
+ const link=$('tariffSourceLink');
+ link.href=info?.url||'https://www.sec.cl/contactar-distribuidora/';
+ link.textContent=info?'Abrir pliego o directorio oficial ↗':'Directorio de distribuidoras y tarifas SEC ↗';
+});
 $('calcHomeFromBill').addEventListener('click',calculateHomeFromBill);
 $('chargeKwh').addEventListener('input',updateChargingExample);
 $('electricPrice').addEventListener('change',()=>{

@@ -731,7 +731,7 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('.sii-price-item').first().locator('button').click();
  assert.match(await page.locator('.sii-selected-price').textContent(),/10\.990\.000/);
- const url=await page.locator('.sii-selected-price a').getAttribute('href');
+ const url=await page.locator('.sii-selected-price a[target="_blank"]').getAttribute('href');
  assert.equal(url,'https://www.kia.cl/promociones/kia-morning.html');
  await page.locator('.sii-selected-price button').click();
  assert.equal(await page.locator('.sii-selected-price').count(),0);
@@ -787,7 +787,7 @@ await test('Swift muestra cuatro precios de lista, con selección manual y fuent
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('.sii-price-item button').first().click();
  assert.match(await page.locator('.sii-selected-price').textContent(),/14\.090\.000/);
- assert.match(await page.locator('.sii-selected-price a').getAttribute('href'),/suzuki\.cl\/vehiculo\/swift-hybrid/);
+ assert.match(await page.locator('.sii-selected-price a[target="_blank"]').getAttribute('href'),/suzuki\.cl\/vehiculo\/swift-hybrid/);
  await page.locator('#detailClose').click();
 });
 await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselección',async()=>{
@@ -1587,6 +1587,93 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert.deepEqual(issues,[]);
  });
  await p.close();
+}
+
+await test('Directorio de pliegos BT1 conserva fuente sin inventar precios',async()=>{
+ const {page:p,errors:e}=await open(1160,820);
+ await p.locator('#homeTariffDirectory summary').click();
+ assert(await p.locator('#tariffDistributor').isVisible());
+ await p.selectOption('#tariffDistributor','saesa');
+ assert.match(await p.locator('#tariffSourceLink').getAttribute('href'),/gruposaesa\.cl/);
+ assert.match(await p.locator('#tariffSourceDescription').textContent(),/pliegos/);
+ await p.selectOption('#tariffDistributor','cge');
+ assert.match(await p.locator('#tariffSourceLink').getAttribute('href'),/sec\.cl\/contactar-distribuidora/);
+ assert.equal(await p.locator('#homeChargeRate').inputValue(),'');
+ assert.deepEqual(e,[]);
+ await p.close();
+});
+await test('Cotizador separado carga 143 precios de 13 marcas con fuente oficial',async()=>{
+ const p=await browser.newPage({viewport:{width:1360,height:900}});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ const r=await p.goto(base+'cotizador.html',{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
+ await p.waitForFunction(()=>document.querySelector('#quoteCatalogNumber')?.textContent?.includes('143 registros'),{timeout:10000});
+ assert.match(await p.locator('#quoteCatalogNumber').textContent(),/13 marcas/);
+ assert((await p.locator('#quoteBrand option').count())===14);
+ assert(await p.locator('#quoteCopy').isDisabled());
+ assert.equal(await p.locator('.quote-version').count(),24);
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
+await test('Cotizador comercial exige elegir versión y suma solo gastos ingresados',async()=>{
+ const p=await browser.newPage({viewport:{width:1360,height:900}});
+ await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ await p.selectOption('#quoteBrand','Toyota');
+ await p.selectOption('#quoteFamily','Corolla Cross');
+ await p.fill('#quoteSearch','XEI');
+ assert.equal(await p.locator('.quote-version').count(),1);
+ await p.locator('.quote-version button').click();
+ assert.equal(await p.locator('#quoteTotal').textContent(),'$27.990.000');
+ assert.match(await p.locator('#quoteSelected').textContent(),/XEI 1.8 HEV CVT/);
+ assert.match(await p.locator('#quoteSource').getAttribute('href'),/tienda\.toyota\.cl/);
+ assert(await p.locator('#quoteCopy').isEnabled());
+ await p.fill('#quoteGreen','100000');
+ await p.fill('#quoteRegistration','50000');
+ assert.equal(await p.locator('#quoteTotal').textContent(),'$28.140.000');
+ await p.fill('#quoteOther','-1');
+ assert.match(await p.locator('#quoteTotal').textContent(),/Revisa los gastos/);
+ await p.fill('#quoteOther','0');
+ await p.close();
+});
+await test('Crédito solo se simula al ingresar tasa y nunca se presenta como oferta',async()=>{
+ const p=await browser.newPage({viewport:{width:1360,height:900}});
+ await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ await p.selectOption('#quoteBrand','Toyota');await p.selectOption('#quoteFamily','Corolla Cross');await p.fill('#quoteSearch','XEI');
+ await p.locator('.quote-version button').click();
+ await p.locator('#financeDetails summary').click();
+ assert.match(await p.locator('#quoteFinanceOut').textContent(),/Ingresa una tasa/);
+ await p.fill('#quoteDeposit','5000000');
+ await p.fill('#quoteAnnualRate','12');
+ assert.match(await p.locator('#quoteFinanceOut').textContent(),/cuota matemática/);
+ assert.match(await p.locator('#quoteFinanceOut').textContent(),/CAE/);
+ await p.fill('#quoteDeposit','99999999');
+ assert.match(await p.locator('#quoteFinanceOut').textContent(),/pie no puede superar/);
+ await p.close();
+});
+await test('Enlace de cotización desde la ficha 3CV preserva selección comercial manual',async()=>{
+ const {page:p,errors:e}=await open(1280,850);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ await p.locator('.vehicle-card button[data-detail]').first().click();
+ await p.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2,{timeout:10000});
+ await p.locator('.sii-price-item button').first().click();
+ assert.match(await p.locator('.sii-selected-price a[href*="cotizador.html"]').getAttribute('href'),/marca=Toyota/);
+ assert.match(await p.locator('.sii-selected-price a[href*="cotizador.html"]').getAttribute('href'),/modelo=Corolla/);
+ assert.deepEqual(e,[]);
+ await p.close();
+});
+for(const width of [320,390]){
+ await test('Cotizador compra sin desbordamiento en '+width+' px',async()=>{
+  const p=await browser.newPage({viewport:{width,height:820},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+  await p.waitForFunction(()=>document.querySelectorAll('.quote-version').length>0);
+  let box=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+  assert(box.doc<=box.view+3,JSON.stringify(box));
+  await p.selectOption('#quoteBrand','Toyota');await p.selectOption('#quoteFamily','Corolla Cross');await p.fill('#quoteSearch','XEI');
+  await p.locator('.quote-version button').click();
+  box=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+  assert(box.doc<=box.view+3,JSON.stringify(box));
+  assert(await p.locator('#quoteTotal').isVisible());
+  await p.close();
+ });
 }
 await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
 if(failed)process.exit(1);

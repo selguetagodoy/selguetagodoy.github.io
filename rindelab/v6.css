@@ -397,3 +397,14 @@ html{scroll-padding-top:88px}
 .charge-disclaimer{font-size:10px;color:#668092;margin:7px 0 0;line-height:1.5}
 @media(max-width:650px){.bill-grid{grid-template-columns:1fr}.charge-example{padding:12px}.charge-example-title h3{font-size:14px}.charge-example-value strong{font-size:17px}}
 @media(max-width:360px){.charge-example-title{display:block}.charge-example-title .field{max-width:none;margin-top:12px}.charge-example-grid{grid-template-columns:1fr}}
+
+/* Directorio de pliegos residenciales de electricidad BT1: sin tarifa prefijada por comuna. */
+.home-tariff-directory{border:1px solid #cbdfe7;border-radius:10px;background:#f9fcfd;margin-top:13px;padding:0 14px}
+.home-tariff-directory summary{font-size:13px;color:#1c6375;cursor:pointer;min-height:44px;padding:12px 0;font-weight:750}
+.tariff-directory-body{border-top:1px solid #dcebf0;padding:13px 0}
+.tariff-directory-body .field{max-width:410px}
+.tariff-directory-body .field label{font-size:11px;display:block;font-weight:750;margin-bottom:5px;color:#365e75}
+.tariff-directory-body .field select{width:100%;height:44px;padding:9px;border:1px solid #bacfd8;border-radius:7px}
+.tariff-directory-body p{font-size:11px;line-height:1.6;color:#506e7e;margin:8px 0}
+.tariff-directory-body>a{display:inline-block;min-height:38px;padding:8px 10px;font-size:12px;font-weight:720;background:#e5f5f6;border:1px solid #a5d3d6;color:#14616d;border-radius:7px;text-decoration:none}
+@media(max-width:600px){.header-links{column-gap:3px}.header-links .header-source{font-size:10px;padding:5px 5px;line-height:1.25}.home-tariff-directory{padding:0 10px}}
