@@ -981,6 +981,66 @@ await test('Nómina MTT conserva diferencias de clasificación Fronx y la fuente
  assert.deepEqual(errors,[]);
  await p.close();
 });
+await test('Cruce MTT septiembre muestra 229 nuevos, 7491 comunes y 12 discrepancias',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ const resp=await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
+ assert.equal(resp.status(),200);
+ await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
+ assert.equal(await p.locator('#metricCommon').textContent(),'7.491');
+ assert.equal(await p.locator('#metricMttOnly').textContent(),'554');
+ assert.equal(await p.locator('#metricDiffs').textContent(),'12');
+ assert.equal(await p.locator('#deltaRows tr').count(),230);
+ assert.equal(await p.locator('#deltaConflicts tr').count(),12);
+ assert.match(await p.locator('#deltaStatus').textContent(),/Datos de rendimiento añadidos: ninguno/);
+ assert.match(await p.locator('#deltaConflicts').textContent(),/JM10011E60525M00-7/);
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
+await test('Nómina MTT permite filtrar 47 BEV y 32 homologaciones de septiembre',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900}});
+ await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
+ await p.selectOption('#deltaTech','BEV');
+ assert.equal(await p.locator('#deltaRows tr').count(),47);
+ await p.selectOption('#deltaTech','');
+ await p.selectOption('#deltaMonth','2026-09');
+ assert.equal(await p.locator('#deltaRows tr').count(),32);
+ await p.selectOption('#deltaMonth','');
+ await p.fill('#deltaSearch','Deepal S05 REEV');
+ assert.equal(await p.locator('#deltaRows tr').count(),1);
+ assert.match(await p.locator('#deltaRows').textContent(),/C.H. 7881/);
+ assert.match(await p.locator('#deltaRows').textContent(),/Sin ficha en la base de mayo/);
+ await p.close();
+});
+await test('Subaru XV posterior a mayo no se contabiliza como alta de código',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
+ await p.selectOption('#deltaPresence','present');
+ assert.equal(await p.locator('#deltaRows tr').count(),1);
+ assert.match(await p.locator('#deltaRows').textContent(),/SB6195E60815S00-0/);
+ assert.match(await p.locator('#deltaRows').textContent(),/Ya aparece en mayo/);
+ const download=p.waitForEvent('download');
+ await p.locator('#deltaDownload').click();
+ assert.equal((await download).suggestedFilename(),'rindelab-homologaciones-recientes-mtt-20260928.csv');
+ await p.close();
+});
+await test('Cruce MTT septiembre funciona en pantalla de 320 px sin desbordamiento del documento',async()=>{
+ const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
+ const geo=await p.evaluate(()=>({
+  doc:document.documentElement.scrollWidth,view:innerWidth,
+  table:document.querySelector('.delta-table').scrollWidth,
+  viewport:document.querySelector('.delta-table').parentElement.clientWidth
+ }));
+ assert(geo.doc<=geo.view+3,JSON.stringify(geo));
+ assert(geo.table>geo.viewport,JSON.stringify(geo));
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){
