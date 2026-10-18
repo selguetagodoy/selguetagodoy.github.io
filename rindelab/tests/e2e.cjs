@@ -1041,6 +1041,61 @@ await test('Cruce MTT septiembre funciona en pantalla de 320 px sin desbordamien
  assert.deepEqual(errors,[]);
  await p.close();
 });
+await test('Nómina MTT histórica muestra 324 códigos con fecha y 372 filas agrupadas',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
+ await p.selectOption('#deltaGroup','historical');
+ assert.equal(await p.locator('#deltaRows tr').count(),324);
+ assert.match(await p.locator('#deltaCount').textContent(),/324 códigos con fecha hasta mayo \(372 filas MTT\)/);
+ assert(await p.locator('#deltaMonth').isDisabled());
+ assert(await p.locator('#deltaPresence').isDisabled());
+ await p.fill('#deltaSearch','KI5280E40713S');
+ assert.equal(await p.locator('#deltaRows tr').count(),1);
+ assert.match(await p.locator('#deltaRows').textContent(),/3 denominaciones de modelo/);
+ await p.locator('#deltaRows details summary').click();
+ assert.match(await p.locator('#deltaRows').textContent(),/Cerato 5/);
+ assert.match(await p.locator('#deltaRows').textContent(),/Koup/);
+ const dl=p.waitForEvent('download');
+ await p.locator('#deltaDownload').click();
+ assert.equal((await dl).suggestedFilename(),'rindelab-codigos-historicos-mtt-20260928.csv');
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
+await test('Exeed sin fecha se mantiene fuera de altas recientes e históricas fechadas',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
+ await p.selectOption('#deltaGroup','undated');
+ assert.equal(await p.locator('#deltaRows tr').count(),1);
+ const row=await p.locator('#deltaRows').textContent();
+ assert.match(row,/EX10292E60925S00-K/);
+ assert.match(row,/RX 1\.5T PHEV DHT UNLIMITED/);
+ assert.match(row,/C\.H\. 7785/);
+ assert.match(row,/Sin fecha consignada/);
+ assert.match(row,/no se infiere antigüedad/);
+ const dl=p.waitForEvent('download');await p.locator('#deltaDownload').click();
+ assert.equal((await dl).suggestedFilename(),'rindelab-codigos-sin-fecha-mtt-20260928.csv');
+ await p.selectOption('#deltaGroup','recent');
+ assert.equal(await p.locator('#deltaRows tr').count(),230);
+ assert(await p.locator('#deltaMonth').isEnabled());
+ assert(await p.locator('#deltaPresence').isEnabled());
+ await p.close();
+});
+await test('Selector de tres cortes del MTT mantiene ancho móvil 320 px',async()=>{
+ const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
+ for(const group of ['historical','undated','recent']){
+  await p.selectOption('#deltaGroup',group);
+  const dims=await p.evaluate(()=>({document:document.documentElement.scrollWidth,screen:innerWidth}));
+  assert(dims.document<=dims.screen+3,group+' '+JSON.stringify(dims));
+ }
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){
