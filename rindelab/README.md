@@ -119,3 +119,13 @@ La tabla ofrece filtros, enlace directo a la fuente comercial, ejemplos 3CV con 
 Para reproducir el análisis ejecutar: `node scripts/audit-commercial-versions.cjs --json=versions-audit.json`. GitHub Actions ejecuta esta auditoría y sus casos de regresión antes de Playwright.
 
 **Límites:** no se certifica ninguna homologación individual. No se inventan años comerciales, generación, batería, equipamiento, stock ni identidad entre códigos. NEDC/WLTP, tasación fiscal SII, permiso de circulación y precio comercial siguen como conceptos independientes.
+
+## Expediente prioritario de revisión 3CV
+
+Desde la página [Revisión por versión](./versiones.html) se puede activar «Solo revisión prioritaria» para ver las dos versiones Volkswagen Tera 1.6 MSI MT con discrepancia entre fabricante y 3CV, junto con las 22 versiones que tienen un solo candidato preliminar. Esto no implica que existan 24 homologaciones verificadas.
+
+Los 22 candidatos únicos **no representan necesariamente 22 códigos 3CV exclusivos**: algunas terminaciones comerciales (equipamiento) comparten el mismo código técnico candidato. La aplicación muestra el código, si se reutiliza entre versiones comerciales, y mantiene la advertencia sobre falta de equivalencia certificada.
+
+La discrepancia Tera se documenta en [review-notes-2026.json](./sii/review-notes-2026.json), con fuente oficial Volkswagen, código 3CV y diferencia de transmisión. Según el fabricante, Tera Trend MT y Comfort MT llevan caja manual de cinco velocidades, mientras la ficha 3CV «TERA 1.6 MT» código VW9988E60525S00-6 indica «A» en la columna de transmisión. No se modifica ningún registro de la fuente 3CV. El expediente sigue abierto para contrastar con la autoridad correspondiente.
+
+En cada ejecución de GitHub Actions, la etapa auditora genera `versions-audit.json`, `priority-review.json` y `priority-review.md`, y los publica como artefacto `rindelab-qa-3cv-prioridades` por 90 días, con las 24 prioridades y las evidencias para revisión. También se pueden generar localmente con `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`.
