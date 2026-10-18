@@ -4,6 +4,15 @@
 
 Web pública: https://selguetagodoy.github.io/rindelab/
 
+## Legibilidad y jerarquía de resultados (18 de octubre de 2026)
+
+- **Fuente Inter:** se carga gratuitamente desde Google Fonts (400, 500, 600, 700 y 800), con fuentes de sistema como fallback. Esta versión usa el servicio externo de Google Fonts, por lo que no se debe afirmar que está autoalojada ni que no realiza peticiones externas. La incorporación de un fichero WOFF2 autoalojado queda sujeta a disponer de una vía de carga binaria fiable.
+- **Escala y contraste:** la nueva capa `v6.css` prioriza cuerpo de 16 px, texto secundario de 13–15 px, enlaces y controles de al menos 44 px, títulos de tarjeta 18 px y montos anuales de 22–24 px; contrasta los grises sobre blanco y sobre el azul claro. El cotizador utiliza el mismo criterio con `cotizador.css`.
+- **Tarjeta 3CV:** el monto energético **anual estimado** es la cifra principal, siempre acompañado del kilometraje seleccionado; al lado se muestran rendimiento homologado y costo por 100 km, y bajo ellos la proyección a cinco años con tarifas constantes. No se deduce costo para PHEV/REEV si no existe una base comparable o tarifa suficiente; se indica `No estimable`.
+- **Trazabilidad:** una sola fecha de homologación, sufijo del código, tecnología, ciclo y enlace a ficha. La fuente 3CV sigue visible en cada resultado. NEDC y WLTP no se homologan entre sí; la API de octubre no sustituye arbitrariamente la histórica de mayo.
+- **Metodología compacta:** los antiguos dos recuadros descriptivos pasan a un elemento `details` con resumen de datos 3CV y acceso a metodología completa. El registro MTT sin rendimiento sigue siendo un bloque separado y auditable, sin inventar costo.
+- **Validación E2E:** se incorporaron pruebas de tamaños, contraste de etiquetas seleccionadas, comportamiento del costo anual al cambiar kilometraje, fuente desplegable, móvil 320/390 px y cotizador en móvil. Se preservaron las pruebas anteriores de búsqueda, ranking, comparación y control documental.
+
 ## Cambios de experiencia (18 de octubre de 2026)
 
 - **Costos proyectados**: `costo CLP/100 km × km anuales ÷ 100`, con horizonte anual y cinco años a precios constantes. No se calculan TCO, depreciación ni punto de equilibrio comercial sin correspondencia acreditada entre precio de lista y homologación.
