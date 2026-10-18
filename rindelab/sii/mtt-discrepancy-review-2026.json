@@ -15,14 +15,7 @@
   "cases": [
     {
       "code3cv": "JM10011E60525M00-7",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "JMC Vigus",
       "family": "JMC Vigus",
       "officialModel": "All New Vigus Plus MT 4x4",
       "kind": "transmission",
@@ -48,14 +41,7 @@
     },
     {
       "code3cv": "JM10011E60525M01-1",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "JMC Vigus",
       "family": "JMC Vigus",
       "officialModel": "All New Vigus Work MT 4x4",
       "kind": "transmission",
@@ -81,14 +67,7 @@
     },
     {
       "code3cv": "JM10011E60525M02-6",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "JMC Vigus",
       "family": "JMC Vigus",
       "officialModel": "All New Vigus Plus MT 4x2",
       "kind": "transmission",
@@ -114,14 +93,7 @@
     },
     {
       "code3cv": "JM10011E60525M03-0",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "JMC Vigus",
       "family": "JMC Vigus",
       "officialModel": "All New Vigus Work MT 4x2",
       "kind": "transmission",
@@ -147,14 +119,7 @@
     },
     {
       "code3cv": "KI9911E60325S00-5",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "Kia Sportage",
       "family": "Kia Sportage",
       "officialModel": "Sportage 2.0 6MT 2WD",
       "kind": "transmission",
@@ -180,14 +145,7 @@
     },
     {
       "code3cv": "KI9911E60325S01-9",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "Kia Sportage",
       "family": "Kia Sportage",
       "officialModel": "Sportage 2.0 6MT AWD",
       "kind": "transmission",
@@ -213,14 +171,7 @@
     },
     {
       "code3cv": "KR8299E50421S00-7",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "Karry Q22",
       "family": "Karry Q22",
       "officialModel": "Q22 1.3",
       "kind": "transmission",
@@ -246,14 +197,7 @@
     },
     {
       "code3cv": "KR8299E50421S01-0",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "Karry Q22",
       "family": "Karry Q22",
       "officialModel": "Q22 1.3 Cabina Simple",
       "kind": "transmission",
@@ -279,14 +223,7 @@
     },
     {
       "code3cv": "KR8299E50421S02-4",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "Karry Q22",
       "family": "Karry Q22",
       "officialModel": "Q22 1.3 Cargo Box",
       "kind": "transmission",
@@ -312,14 +249,7 @@
     },
     {
       "code3cv": "MA9923E60425M00-6",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "MAN TGE",
       "family": "MAN TGE",
       "officialModel": "TGE 3.180 4x2",
       "kind": "transmission",
@@ -345,14 +275,7 @@
     },
     {
       "code3cv": "MB6988E60517M00-3",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "Mercedes-Benz GLE",
       "family": "Mercedes-Benz GLE",
       "officialModel": "GLE 500e 4 Matic 3,0 Lts. Station Wagon 5P. T/A 4x4 Híbrido",
       "kind": "engine",
@@ -378,14 +301,7 @@
     },
     {
       "code3cv": "NS10421T3C0126S00-7",
-      "group": {
-        "JMC Vigus": 4,
-        "Kia Sportage": 2,
-        "Karry Q22": 3,
-        "MAN TGE": 1,
-        "Mercedes-Benz GLE": 1,
-        "Nissan Kait": 1
-      },
+      "group": "Nissan Kait",
       "family": "Nissan Kait",
       "officialModel": "Nissan Kait",
       "kind": "transmission",
