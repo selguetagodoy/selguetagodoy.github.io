@@ -354,12 +354,22 @@ function render(){
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
   const selectedNow=selected.includes(index);
   const suffix=String(row[F.CODE]||'').slice(-9);
-  article.innerHTML='<div class="vehicle-heading"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'<span class="variant-id">Hom. '+safe(String(row[F.DATE]||'').slice(0,4))+' · '+safe(suffix)+'</span></h3>'+
-   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado') +'</span></div><p>Homologación '+safe(row[F.DATE]||'sin fecha')+'</p><small class="energy-source-line">'+(officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026')+'</small></div>'+
-   '<div class="vehicle-cell"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
-   '<div class="vehicle-cell"><small>Costo estimado /100 km</small><strong'+(cost(row)===null?' class="no-data"':'')+'>'+safe(money(cost(row)))+'</strong><small class="annual-result">'+(annualEnergy(row)===null?'Sin proyección de energía':safe(money(annualEnergy(row)))+' / año · '+safe(money(annualEnergy(row,5)))+' / 5 años')+'</small></div>'+
-   '<div class="vehicle-actions"><button type="button" class="button secondary" data-detail="'+index+'">Ver ficha</button>'+
-   '<button type="button" class="button '+(selectedNow?'primary':'secondary')+'" data-compare="'+index+'" aria-pressed="'+selectedNow+'">'+(selectedNow?'Quitar':'Comparar +')+'</button></div>';
+  const stamp=String(row[F.DATE]||'');
+  const displayDate=/^\d{4}-\d{2}-\d{2}$/.test(stamp)?stamp.slice(8)+'-'+stamp.slice(5,7)+'-'+stamp.slice(0,4):stamp||'sin fecha';
+  const annual=annualEnergy(row),fiveYears=annualEnergy(row,5),per100=cost(row);
+  const annualKm=Number($('annualKm').value);
+  const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
+  article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
+   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p></div>'+
+   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
+   '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
+   '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
+   '<div class="vehicle-actions"><button type="button" class="button primary" data-detail="'+index+'">Ver ficha</button>'+
+   '<button type="button" class="button secondary" data-compare="'+index+'" aria-pressed="'+selectedNow+'">'+(selectedNow?'Quitar':'Comparar +')+'</button></div>'+
+   '<div class="vehicle-annual"><small>Gasto energético anual estimado</small><strong class="vehicle-annual-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual)))+'</strong>'+
+   '<span>'+(annual===null?'Faltan datos de rendimiento o tarifa para calcularlo':'Con '+safe(fmt(annualKm))+' km al año · tarifas constantes')+'</span></div>'+
+   '<div class="vehicle-foot"><span class="vehicle-five-year">'+(fiveYears===null?'Sin proyección a 5 años':'5 años: '+safe(money(fiveYears))+' · tarifas constantes')+'</span>'+
+   '<small class="energy-source-line">Fuente: '+safe(source)+'</small></div>';
   list.append(article);
  }
  $('more').hidden=limit>=results.length;
