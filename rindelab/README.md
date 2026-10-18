@@ -90,3 +90,16 @@ Los rankings están calculados a partir de las fichas reales que cumplen los fil
 - `.github/workflows/rindelab-ui-e2e.yml`: CI de Playwright en pull requests y main.
 
 Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Playwright y ejecutar `node rindelab/tests/e2e.cjs`. La verificación de datos y tarifas no sustituye la documentación 3CV.
+
+
+## Auditoría de cobertura de precios frente al 3CV (octubre de 2026)
+
+La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examinar el grado de **coincidencia nominal por marca y familia** entre el catálogo documental de precios de lista y las fichas de homologación disponibles en el corte oficial 3CV del 08/05/2026. No altera el buscador principal ni las bases oficiales.
+
+- **Denominador comercial:** 122 precios de lista asociados a 39 familias, correspondientes únicamente a las 10 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
+- **Resultado de cobertura nominal:** cada familia comercial registra la cantidad de fichas 3CV cuyo nombre y marca pueden corresponderle, bajo reglas explícitas y comprobables. Los filtros permiten revisar casos con y sin coincidencia y descargar la tabla filtrada como CSV.
+- **No hay emparejamiento automático de versiones.** Una coincidencia de familia puede mezclar generaciones, tracción, combustible, baterías, tecnología o transmisiones diferentes; en esta fase no se certifica ninguna equivalencia técnica entre versiones ni su disponibilidad comercial.
+- **Reglas de exclusión documentadas:** Mazda CX-3 no confunde CX-30; Creta no absorbe Creta Grand; Hunter diésel excluye Hunter E/EREV; Yaris no absorbe Yaris Cross; Corolla Sedán no absorbe Corolla Cross; CS55 Plus no se equipara a CS55 de otra generación.
+- **Reproducibilidad:** `node scripts/audit-commercial-3cv-coverage.cjs --json=coverage-audit.json` produce un informe estructurado y ejecuta aserciones sobre familias que no deben confundirse. La CI lo revisa antes de Playwright, que comprueba filtros, descarga CSV y tamaños de escritorio/móvil.
+
+El 3CV registra homologaciones **históricas**, no una nómina de automóviles nuevos disponibles hoy. La fecha de una homologación no equivale al año comercial de una versión. La tasación SII y el permiso de circulación se mantienen separados.
