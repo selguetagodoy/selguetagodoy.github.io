@@ -51,11 +51,26 @@ assert.equal(recentNew.length,c.afterMayNewCodes);
 assert.equal(recentlyPresent.length,c.afterMayAlreadyInMay);
 assert.equal(c.afterMayRows,audit.recentRecords.length);
 const historical=audit.historicMissingRecords;
-assert.equal(historical.length,c.olderMttRowsNotInMay);
-assert(historical.every(x=>mttSet.has(x.code)&&!maySet.has(x.code)&&x.date<=manifest.published));
-const historicCodes=new Set(historical.map(x=>x.code));
-assert.equal(historicCodes.size,325);
-assert.equal(historicCodes.size+recentNew.length,mttOnly.length);
+const datedHistorical=historical.filter(x=>x.date&&x.date<=manifest.published);
+const undated=historical.filter(x=>!x.date);
+const datedCodes=new Set(datedHistorical.map(x=>x.code));
+const undatedCodes=new Set(undated.map(x=>x.code));
+assert.equal(historical.length,373);
+assert.equal(datedHistorical.length,c.olderMttRowsNotInMay);
+assert.equal(undated.length,c.undatedMttRowsNotInMay);
+assert.equal(datedCodes.size,c.olderMttUniqueCodesNotInMay);
+assert.equal(undatedCodes.size,c.undatedMttUniqueCodesNotInMay);
+assert.equal(datedHistorical.length,372);
+assert.equal(datedCodes.size,324);
+assert.equal(undated.length,1);
+assert.equal(undatedCodes.size,1);
+assert.equal(undated[0].code,'EX10292E60925S00-K');
+assert.deepEqual(audit.missingDateRecords,undated);
+assert(historical.every(x=>mttSet.has(x.code)&&!maySet.has(x.code)));
+assert(datedHistorical.every(x=>x.date&&x.date<=manifest.published));
+assert([...datedCodes].every(x=>!undatedCodes.has(x)));
+assert.equal(datedCodes.size+undatedCodes.size+recentNew.length,mttOnly.length);
+assert.equal(c.mttOnlyCodesTotalReconciled,mttOnly.length);
 assert(c.mttRows>=mttSet.size);
 const diff=audit.matchedCodeTechnicalDifferences;
 assert.equal(diff.length,c.matchedCodeTransmissionOrEngineConflicts);
@@ -77,12 +92,14 @@ assert.deepEqual(grouped,audit.brandAfterMay);
 const status={recordsSeptember:c.mttRows,uniqueSeptember:c.mttUniqueCodes,recordsMay:c.mayRows,
  codesShared:c.codesInBoth,onlySeptember:c.mttCodesNotInMay,onlyMay:c.mayCodesNotInMtt,
  homologatedAfterMay:c.afterMayRows,notInMaySource:c.afterMayNewCodes,alreadyInMay:c.afterMayAlreadyInMay,
+ datedBeforeOrAtMay:c.olderMttUniqueCodesNotInMay,withoutHomologationDate:c.undatedMttUniqueCodesNotInMay,
  transmissionsOrEnginesToReview:c.matchedCodeTransmissionOrEngineConflicts,imputedConsumptionValues:0};
 console.log('RINDELAB MTT COMPLETO '+JSON.stringify(status));
 const dest=process.argv.find(x=>x.startsWith('--json='));
 if(dest){const output=path.resolve(dest.slice('--json='.length));fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,JSON.stringify({schemaVersion:1,source:audit.source,results:status},null,2)+'\n');}
 if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
  '## Nómina MTT septiembre vs 3CV mayo\n\n- **229 códigos posteriores a mayo ausentes de la base de rendimientos**; 1 posterior ya figuraba.\n'+
- '- 7.491 códigos compartidos; 554 exclusivos de MTT y 562 exclusivos de 3CV mayo.\n'+
+ '- 7.491 códigos compartidos; 554 exclusivos de MTT: 229 posteriores a mayo, 324 hasta mayo y 1 sin fecha.\n'+
+ '- Otros 562 códigos aparecen solo en la base de rendimiento de mayo.\n'+
  '- 12 diferencias de transmisión/cilindrada, para revisión, sin alterar datos.\n'+
  '- **0 rendimientos imputados.** Se mantienen cortes y fines distintos.\n');
