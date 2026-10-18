@@ -31,14 +31,14 @@ assert(!matcher.matches('Mazda','CX-3',row('Mazda','CX30 2.0','Bencina','4x2','A
 assert(!matcher.matches('Hyundai','Creta',row('Hyundai','Creta Grand 2.0','Bencina','4x2','M','2.0')));
 const report=audit.audit(commercial,records,manifest.published,official);
 assert.equal(report.schemaVersion,1);
-assert.equal(report.catalogCount,136);
-assert.equal(report.cases.length,136);
+assert.equal(report.catalogCount,143);
+assert.equal(report.cases.length,143);
 assert.equal(report.threeCvRecords,8053);
 assert.equal(report.certificationPerformed,false);
 assert.equal(report.certifiedTechnicalMatches,0);
 assert.equal(report.sourceReviewedVersions,22);
 assert.equal(report.manufacturerCertifiedMatches,0);
-assert.equal(Object.values(report.counts).reduce((a,b)=>a+b,0),136);
+assert.equal(Object.values(report.counts).reduce((a,b)=>a+b,0),143);
 assert(report.cases.every(x=>x.familyCandidates===x.consistentCandidates+x.conflictingCandidates));
 assert(report.cases.every(x=>x.reviewableCandidates<=x.consistentCandidates));
 const get=(brand,family,version)=>report.cases.find(x=>x.brand===brand&&x.family===family&&x.version===version);
