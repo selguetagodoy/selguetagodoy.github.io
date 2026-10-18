@@ -21,7 +21,7 @@ Web pública: https://selguetagodoy.github.io/rindelab/
 4. Elegir **Ver ficha** para revisar los datos 3CV o pulsar **Comparar +** para seleccionar **entre dos y cinco vehículos**. La bandeja conserva modelos al hacer una nueva búsqueda, incluso al usar «Limpiar» (que solo restablece filtros).
 5. Desde la bandeja o la ventana de comparación, utilizar **«+ Agregar otro»** para buscar otra marca o modelo. Cada vehículo puede retirarse individualmente con «×», sin vaciar la lista. Con cinco modelos se puede reemplazar uno quitándolo primero.
 6. Pulsar **«Comparar N vehículos»** para abrir la tabla lateral. En pantallas estrechas se desplaza horizontalmente con el dedo o las flechas; cuando caben todas las columnas no se muestran controles de desplazamiento.
-7. Ajustar **kilómetros por año** y precios de energía desde **Tu escenario**, visible sobre el buscador: el buscador, la ficha y el comparador muestran gasto anual y a cinco años únicamente para consumos energéticos calculables.
+7. Ajustar **kilómetros por año** y precios de energía desde **Tu escenario**, visible a continuación del buscador: el buscador, la ficha y el comparador muestran gasto anual y a cinco años únicamente para consumos energéticos calculables.
 8. Ampliar los **Filtros técnicos adicionales** cuando se requiera ciclo, fecha o carrocería, y consultar **Metodología y fuentes** para conocer los límites de los cálculos.
 9. En el comparador utilizar **Copiar enlace de comparación**; los códigos 3CV se almacenan en el parámetro `?comparar=` y pueden volver a abrir los vehículos seleccionados.
 
