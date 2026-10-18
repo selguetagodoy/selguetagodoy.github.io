@@ -1571,5 +1571,137 @@
     "checkedAt": "2026-10-18",
     "currency": "CLP",
     "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "XL 2.0L Diésel Cabina Doble 4x2 MT",
+    "modelYear": null,
+    "priceListClp": 33665100,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "XL 2.0L Diésel Cabina Doble 4x4 MT",
+    "modelYear": null,
+    "priceListClp": 38306100,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "XLS 2.0L Diésel Cabina Doble 4x2 MT",
+    "modelYear": null,
+    "priceListClp": 35926100,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "XLS 2.0L Diésel Cabina Doble 4x4 MT",
+    "modelYear": null,
+    "priceListClp": 39377100,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "XLT 2.0L Diésel Cabina Doble 4x2 AT",
+    "modelYear": null,
+    "priceListClp": 39876900,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "XLT 2.0L Diésel Cabina Doble 4x4 MT",
+    "modelYear": null,
+    "priceListClp": 42732900,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "XLT 2.0L Diésel Cabina Doble 4x4 AT",
+    "modelYear": null,
+    "priceListClp": 45469900,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "Ford",
+    "family": "Ranger",
+    "version": "Limited 3.0L Diésel Cabina Doble 4x4 AT",
+    "modelYear": null,
+    "priceListClp": 50705900,
+    "source": "https://www.ford.cl/pickups/ranger/comparar-modelos/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista indicado por Ford Chile, distinto del precio financiado; Ford puede modificar valores y disponibilidad. Confirmar cotización del concesionario."
+  },
+  {
+    "brand": "BMW",
+    "family": "X1",
+    "version": "X1 sDrive18i Comfort S",
+    "modelYear": null,
+    "priceListClp": 44900000,
+    "source": "https://www.bmw.cl/modelos/x1",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista por versión publicado por BMW Chile, separado del bono del mes. La promoción de octubre 2026 tiene condiciones; confirmar precio vigente sin financiación."
+  },
+  {
+    "brand": "BMW",
+    "family": "X1",
+    "version": "X1 sDrive18d Dynamic",
+    "modelYear": null,
+    "priceListClp": 48900000,
+    "source": "https://www.bmw.cl/modelos/x1",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista por versión publicado por BMW Chile, separado del bono del mes. La promoción de octubre 2026 tiene condiciones; confirmar precio vigente sin financiación."
+  },
+  {
+    "brand": "BMW",
+    "family": "X1",
+    "version": "X1 sDrive18i M Sport",
+    "modelYear": null,
+    "priceListClp": 51900000,
+    "source": "https://www.bmw.cl/modelos/x1",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista por versión publicado por BMW Chile, separado del bono del mes. La promoción de octubre 2026 tiene condiciones; confirmar precio vigente sin financiación."
+  },
+  {
+    "brand": "BMW",
+    "family": "X1",
+    "version": "X1 xDrive25e Dynamic",
+    "modelYear": null,
+    "priceListClp": 53900000,
+    "source": "https://www.bmw.cl/modelos/x1",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista por versión publicado por BMW Chile, separado del bono del mes. La promoción de octubre 2026 tiene condiciones; confirmar precio vigente sin financiación."
   }
 ]

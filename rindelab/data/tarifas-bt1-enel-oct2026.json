@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "distributor": "Enel Distribución Chile S.A.",
+  "effectiveFrom": "2026-10-01",
+  "documentMonth": "2026-10",
+  "verifiedAt": "2026-10-18",
+  "tariff": "BT1",
+  "officialDocumentUrl": "https://www.enel.cl/content/dam/enel-cl/es/personas/informacion-de-utilidad/tarifas-y-reglamentos/tarifas/tarifas-reguladas/2026/Enel%20Distribuci%C3%B3n%20Chile%20SA._Tarifas%20Suministro%20El%C3%A9ctrico%208T_%20VAD%205T%20Octubre%20de%202026.pdf",
+  "officialIndexUrl": "https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.htmlSi.html",
+  "description": "Pliego oficial de suministro Enel octubre 2026 (Decretos 8T/5T). La tabla diferencia comuna, red y tramo de equidad tarifaria. Los valores parciales no son tarifa incremental completa ni precio que el usuario deba aplicar sin verificar.",
+  "coveredMunicipalities": [
+    "Cerrillos",
+    "Cerro Navia",
+    "Colina",
+    "Conchalí",
+    "Estación Central",
+    "Huechuraba",
+    "Independencia",
+    "La Cisterna",
+    "La Florida",
+    "La Granja",
+    "La Reina",
+    "Lampa",
+    "Las Condes",
+    "Lo Barnechea",
+    "Lo Espejo",
+    "Lo Prado",
+    "Macul",
+    "Maipú",
+    "Ñuñoa",
+    "Pedro Aguirre Cerda",
+    "Peñalolén",
+    "Providencia",
+    "Pudahuel",
+    "Quilicura",
+    "Quinta Normal",
+    "Recoleta",
+    "Renca",
+    "San Joaquín",
+    "San Miguel",
+    "San Ramón",
+    "Santiago",
+    "Tiltil",
+    "Vitacura"
+  ],
+  "networkCodes": [
+    "BT_AA",
+    "BT_SA",
+    "BT_AS",
+    "BT_SS"
+  ],
+  "etrGroups": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6"
+  ],
+  "commonComponents": {
+    "energyChargeGrossClpPerKwh": 162.041,
+    "energyChargeNetClpPerKwh": 136.169,
+    "notes": "La fila 'Cargo por energía (3)' es solo uno de los componentes BT1, según pliego de octubre 2026 páginas 1-2, y NO representa el precio total por kWh. Se suman transporte, compras potencia, distribución por red/ETR y eventuales cargos FET. No trasladar a calculadora sin verificar el total del suministro."
+  },
+  "completeMarginalRateClpPerKwh": null,
+  "incompleteReason": "Falta selección exacta de la red de conexión BT_AA/SA/AS/SS, tramo de equidad tarifaria T1-T6 y evaluación del FET; no publicar una tarifa total automática por comuna.",
+  "geometry": "Cada comuna listada aparece como columna en las páginas 1-2 del pliego. Tiltil puede incluir dos zonas STX distintas.",
+  "sourcePageNumbers": [
+    1,
+    2
+  ]
+}

@@ -31,14 +31,14 @@ assert(!matcher.matches('Mazda','CX-3',row('Mazda','CX30 2.0','Bencina','4x2','A
 assert(!matcher.matches('Hyundai','Creta',row('Hyundai','Creta Grand 2.0','Bencina','4x2','M','2.0')));
 const report=audit.audit(commercial,records,manifest.published,official);
 assert.equal(report.schemaVersion,1);
-assert.equal(report.catalogCount,143);
-assert.equal(report.cases.length,143);
+assert.equal(report.catalogCount,commercial.length);
+assert.equal(report.cases.length,commercial.length);
 assert.equal(report.threeCvRecords,8053);
 assert.equal(report.certificationPerformed,false);
 assert.equal(report.certifiedTechnicalMatches,0);
 assert.equal(report.sourceReviewedVersions,22);
 assert.equal(report.manufacturerCertifiedMatches,0);
-assert.equal(Object.values(report.counts).reduce((a,b)=>a+b,0),143);
+assert.equal(Object.values(report.counts).reduce((a,b)=>a+b,0),commercial.length);
 assert(report.cases.every(x=>x.familyCandidates===x.consistentCandidates+x.conflictingCandidates));
 assert(report.cases.every(x=>x.reviewableCandidates<=x.consistentCandidates));
 const get=(brand,family,version)=>report.cases.find(x=>x.brand===brand&&x.family===family&&x.version===version);
@@ -59,7 +59,7 @@ assert(get('Mazda','CX-30','CORE 2.0 2WD 6AT 7G').expressedSpecifications.engine
 const notes=read('rindelab/sii/review-notes-2026.json');
 assert.equal(notes.schemaVersion,1);
 assert.equal(notes.cases.length,2);
-assert.equal(report.counts.solo_contradicciones,5);
+assert(report.counts.solo_contradicciones>=5,'Mantener las 5 contradicciones documentadas del catálogo original');
 const kaitSense=get('Nissan','Kait','Sense CVT');
 assert.equal(kaitSense.status,'solo_contradicciones','No homologar automáticamente CVT cuando la ficha histórica Nissan Kait consigna transmisión M');
 assert.equal(kaitSense.reviewableCandidates,0);
@@ -74,8 +74,8 @@ assert.equal(foresterHybrid.status,'solo_contradicciones','No atribuir a un Fore
 assert.equal(foresterHybrid.reviewableCandidates,0);
 assert(foresterHybrid.conflictsExamples.some(x=>x.conflicts.some(y=>y.field==='technology')));
 assert.equal(get('Subaru','Crosstrek','2.0I HYBRID AWD CVT TOURING ES').status,'un_candidato_preliminar');
-assert.equal(report.counts.un_candidato_preliminar,23);
-assert(report.singleCandidateUniqueCodes>=1&&report.singleCandidateUniqueCodes<=23);
+assert(report.counts.un_candidato_preliminar>=23,'Mantener los 23 candidatos únicos documentados en la etapa previa');
+assert(report.singleCandidateUniqueCodes>=1&&report.singleCandidateUniqueCodes<=report.counts.un_candidato_preliminar);
 assert(report.sharedCandidateVersions>0,'Algunas versiones distintas deben compartir el candidato 3CV');
 for(const note of notes.cases){
  const item=get(note.brand,note.family,note.version);
@@ -86,10 +86,11 @@ for(const note of notes.cases){
  assert(note.manufacturerEvidenceUrl.startsWith('https://www.volkswagen.cl/'));
 }
 const priority=report.cases.filter(x=>x.status==='solo_contradicciones'||x.status==='un_candidato_preliminar');
-assert.equal(priority.length,28);
+assert.equal(priority.length,report.counts.solo_contradicciones+report.counts.un_candidato_preliminar);
+assert(priority.length>=28,'Mantener las 28 prioridades de base sin descartar casos anteriores');
 const priorityPayload={
  schemaVersion:1,sourceCut:manifest.published,catalogCount:report.catalogCount,
- scope:'28 prioridades documentales, incluidas Tera MT, Forester HEV, S05 EV y Nissan Kait Sense CVT (transmisión oficial histórica M). No certifica correspondencias comerciales.',
+ scope:priority.length+' prioridades documentales, incluidas Tera MT, Forester HEV, S05 EV y Nissan Kait Sense CVT (transmisión oficial histórica M). No certifica correspondencias comerciales.',
  priorities:priority.map(c=>({
   brand:c.brand,family:c.family,version:c.version,priceListClp:c.priceListClp,
   source:c.source,status:c.status,expressedSpecifications:c.expressedSpecifications,manufacturerEvidence:c.manufacturerEvidence,
@@ -108,7 +109,7 @@ if(priorityJson)writeFile(priorityJson.slice('--priority-json='.length),JSON.str
 const priorityMd=outputArg('--priority-md=');
 if(priorityMd){
  const lines=[
- '# RINDELAB — 28 revisiones técnicas pendientes','',
+ '# RINDELAB — '+priority.length+' revisiones técnicas pendientes','',
  'Fuente 3CV al '+manifest.published+'. Ninguna de las correspondencias está certificada.',
  '',
  '| Estado | Marca y versión comercial | Código candidato | Uso del código | Fuente |',

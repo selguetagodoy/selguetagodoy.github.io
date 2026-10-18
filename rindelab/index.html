@@ -17,7 +17,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"RINDELAB","url":"https://selguetagodoy.github.io/rindelab/","description":"Consulta homologaciones 3CV y compara costos energéticos estimados de vehículos en Chile.","applicationCategory":"ReferenceApplication","operatingSystem":"Web","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}},{"@type":"Dataset","name":"RINDELAB: rendimientos vehiculares homologados en Chile","description":"Integración independiente de fichas 3CV de mayo 2026 y nuevos códigos de la consulta oficial de octubre 2026. No equivale a un catálogo de vehículos disponibles para venta.","url":"https://selguetagodoy.github.io/rindelab/","isBasedOn":["https://www.consumovehicular.cl/","https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx"],"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}}]}</script>
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261018-quote4"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
+<link rel="stylesheet" href="./v6.css?v=20261018-list155"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -145,6 +145,16 @@
         </div>
         <p id="tariffSourceDescription">Busca primero tu distribuidora en la boleta; la comuna por sí sola no identifica tu pliego ni el cargo total aplicable.</p>
         <a id="tariffSourceLink" href="https://www.sec.cl/contactar-distribuidora/" target="_blank" rel="noopener noreferrer">Directorio de distribuidoras y tarifas SEC ↗</a>
+        <div id="tariffEnelDetails" class="tariff-enel-details" hidden>
+          <p class="tariff-enel-date"><strong>Enel BT1 · octubre 2026</strong> — pliego oficial identificado. Los siguientes filtros permiten ubicar la fila correcta, pero no constituyen una tarifa total preseleccionada.</p>
+          <div class="tariff-enel-grid">
+            <div class="field"><label for="tariffCommune">Comuna (Enel)</label><select id="tariffCommune"><option value="">Selecciona una comuna del pliego</option></select></div>
+            <div class="field"><label for="tariffNetwork">Tipo de conexión (RED)</label><select id="tariffNetwork"><option value="">Revisa tu boleta</option><option>BT_AA</option><option>BT_SA</option><option>BT_AS</option><option>BT_SS</option></select></div>
+            <div class="field"><label for="tariffEtr">Tramo ETR</label><select id="tariffEtr"><option value="">Revisa tu boleta</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option><option>T5</option><option>T6</option></select></div>
+          </div>
+          <p id="tariffEnelStatus" role="status" aria-live="polite">Selecciona comuna, conexión y tramo de la boleta para localizar el cargo correcto en el PDF.</p>
+          <p class="tariff-component">El pliego registra un <strong>cargo por energía (3) de $162,041/kWh IVA incluido</strong> como uno de sus componentes BT1. <strong>No es el precio completo por kWh</strong>: también pueden corresponder transporte, compras de potencia, distribución y recargos por tramo. No se envía esta cifra a la calculadora domiciliaria.</p>
+        </div>
         <p>En el pliego, identifica <strong>BT1, comuna, zona/red y fecha</strong>, y diferencia el cargo fijo de los cargos variables por kWh. La tarifa de carga del vehículo puede variar con consumo acumulado y reliquidaciones. RINDELAB no rellena una tarifa numérica si no está verificada para esa combinación.</p>
       </div>
     </details>
@@ -262,6 +272,6 @@
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
 <script src="./sii/prices.js?v=20261017-list122" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261018-quote4" defer></script>
+<script src="./v6.js?v=20261018-list155" defer></script>
 </body>
 </html>

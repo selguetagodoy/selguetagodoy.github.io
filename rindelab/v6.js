@@ -698,20 +698,44 @@ $('homeChargeRate').addEventListener('input',()=>{
  refreshEnergyViews();
 });
 const tariffDirectory={
- enel:{url:'https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.htmlSi.html',label:'Enel Distribución: pliegos residenciales por comuna, tipo de conexión y período. Comprueba el mes vigente.'},
- cge:{url:'https://www.sec.cl/contactar-distribuidora/',label:'CGE: busca el acceso a tarifas y área de concesión desde el directorio SEC; verifica el pliego de tu boleta.'},
- chilquinta:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Chilquinta: busca el acceso oficial a sus tarifas desde la SEC; no se infiere la comuna ni el valor por kWh.'},
- saesa:{url:'https://web.gruposaesa.cl/es/web/saesa/pago-y-boleta/tarifas-vigentes',label:'Saesa: consulta los pliegos vigentes desde octubre de 2026, según la comuna y el tipo de red.'},
- frontel:{url:'https://web.gruposaesa.cl/web/frontel/pago-y-boleta/tarifas-vigentes',label:'Frontel: consulta pliegos de suministro regulado en su sección oficial.'},
- otra:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Otra compañía: identifica tu concesionaria y accede a tarifas desde el directorio oficial SEC.'}
+ enel:{url:'https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.htmlSi.html',label:'Enel Distribución: documento BT1 publicado para octubre 2026. La comuna por sí sola no determina el costo completo por kWh.'},
+ cge:{url:'https://www.sec.cl/contactar-distribuidora/',label:'CGE: revisa la distribuidora y las condiciones del pliego desde el directorio SEC; no se infiere una tarifa por comuna.'},
+ chilquinta:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Chilquinta: verifica los pliegos BT1 y la red de conexión desde las fuentes oficiales SEC.'},
+ saesa:{url:'https://web.gruposaesa.cl/es/web/saesa/pago-y-boleta/tarifas-vigentes',label:'Saesa: consulta los pliegos vigentes por comuna y tipo de red; no hay precio por kWh precargado.'},
+ frontel:{url:'https://web.gruposaesa.cl/web/frontel/pago-y-boleta/tarifas-vigentes',label:'Frontel: consulta los pliegos de suministro regulado en su portal oficial.'},
+ otra:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Otra empresa: identifica tu distribuidora y accede al pliego oficial mediante SEC.'}
 };
-$('tariffDistributor').addEventListener('change',()=>{
- const key=$('tariffDistributor').value,info=tariffDirectory[key];
- $('tariffSourceDescription').textContent=info?.label||'Selecciona la distribuidora de tu boleta. La comuna no basta para conocer los cargos por kWh.';
- const link=$('tariffSourceLink');
+let enelDocument=null,enelPending=null;
+function updateBt1Description(){
+ if(!enelDocument)return;
+ const commune=$('tariffCommune').value,network=$('tariffNetwork').value,etr=$('tariffEtr').value;
+ const status=$('tariffEnelStatus');
+ if(!commune){status.textContent='Selecciona la comuna y revisa la RED y el tramo ETR en la boleta. No hay un precio BT1 único nacional.';return;}
+ const incomplete=[!network?'tipo de RED':'',!etr?'tramo ETR':''].filter(Boolean);
+ status.textContent='Pliego Enel '+enelDocument.documentMonth+' · '+commune+' · '+(network||'RED por confirmar')+' · '+(etr||'ETR por confirmar')+'. '+
+  (incomplete.length?'Falta verificar '+incomplete.join(' y ')+'. ':'')+
+  'La tarifa completa no está normalizada para esta combinación; abre el PDF de la distribuidora. El componente cargo por energía no representa el costo marginal de cargar.';
+}
+async function showBt1Directory(){
+ const key=$('tariffDistributor').value,info=tariffDirectory[key],link=$('tariffSourceLink');
+ $('tariffSourceDescription').textContent=info?.label||'Selecciona tu distribuidora desde la boleta. La comuna sola no basta para determinar la tarifa.';
  link.href=info?.url||'https://www.sec.cl/contactar-distribuidora/';
  link.textContent=info?'Abrir pliego o directorio oficial ↗':'Directorio de distribuidoras y tarifas SEC ↗';
-});
+ $('tariffEnelDetails').hidden=key!=='enel';
+ if(key!=='enel')return;
+ try{
+  enelPending??=fetch('./data/tarifas-bt1-enel-oct2026.json?v=20261018-bt1oct').then(r=>{if(!r.ok)throw Error('Fuente BT1 no disponible');return r.json();});
+  const doc=await enelPending;
+  if(doc.schemaVersion!==1||doc.tariff!=='BT1'||doc.documentMonth!=='2026-10'||!Array.isArray(doc.coveredMunicipalities)||doc.completeMarginalRateClpPerKwh!==null)throw Error('Documento BT1 sin garantías de vigencia o tarifa');
+  enelDocument=doc;
+  $('tariffCommune').replaceChildren(new Option('Selecciona una comuna del pliego',''),...doc.coveredMunicipalities.map(x=>new Option(x,x)));
+  $('tariffSourceLink').href=doc.officialDocumentUrl;
+  $('tariffSourceLink').textContent='Abrir pliego Enel BT1 octubre 2026 (PDF) ↗';
+  updateBt1Description();
+ }catch(err){enelPending=null;$('tariffEnelStatus').textContent='No fue posible cargar el índice del pliego oficial: '+err.message+'. Revisa el sitio Enel desde el enlace.';}
+}
+$('tariffDistributor').addEventListener('change',showBt1Directory);
+for(const id of ['tariffCommune','tariffNetwork','tariffEtr'])$(id).addEventListener('change',updateBt1Description);
 $('calcHomeFromBill').addEventListener('click',calculateHomeFromBill);
 $('chargeKwh').addEventListener('input',updateChargingExample);
 $('electricPrice').addEventListener('change',()=>{

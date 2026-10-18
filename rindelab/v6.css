@@ -408,3 +408,14 @@ html{scroll-padding-top:88px}
 .tariff-directory-body p{font-size:11px;line-height:1.6;color:#506e7e;margin:8px 0}
 .tariff-directory-body>a{display:inline-block;min-height:38px;padding:8px 10px;font-size:12px;font-weight:720;background:#e5f5f6;border:1px solid #a5d3d6;color:#14616d;border-radius:7px;text-decoration:none}
 @media(max-width:600px){.header-links{column-gap:3px}.header-links .header-source{font-size:10px;padding:5px 5px;line-height:1.25}.home-tariff-directory{padding:0 10px}}
+
+/* Tarifa Enel BT1 octubre 2026: referencia documental con condiciones RED/ETR, sin costo inventado */
+.tariff-enel-details{margin-top:12px;border:1px solid #bbd8e2;border-radius:10px;padding:12px;background:#f1f9fb}
+.tariff-enel-details p{font-size:11px;line-height:1.6;color:#345a70}
+.tariff-enel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0}
+.tariff-enel-grid .field label{font-size:11px;font-weight:750;color:#244b5f;display:block;margin-bottom:5px}
+.tariff-enel-grid .field select{width:100%;min-width:0;min-height:44px;border:1px solid #bad0db;border-radius:8px;padding:9px;background:white;color:#21465d}
+.tariff-enel-date strong{color:#184d65}
+.tariff-component{border-left:3px solid #4b8796;padding:8px 10px;background:white}
+#tariffEnelStatus{font-weight:730}
+@media(max-width:680px){.tariff-enel-grid{grid-template-columns:1fr;gap:8px}.tariff-enel-details{padding:11px}}
