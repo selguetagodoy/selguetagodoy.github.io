@@ -900,14 +900,14 @@ await test('Cotejo técnico versión 320 px no desborda y mantiene tabla desplaz
  assert.deepEqual(errors,[]);
  await p.close();
 });
-await test('Revisión prioritaria contiene 26 casos, dos VW contrastados y Forester híbrido sin equivalente mayo',async()=>{
+await test('Revisión prioritaria contiene 27 casos; Tera, Forester HEV y S05 EV sin forzar equivalencia',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
  const errs=[];p.on('pageerror',e=>errs.push(e.message));
  await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='136',{timeout:30000});
- assert.match(await p.locator('#versionsPrioritySummary').textContent(),/3 discrepancias · 23 candidatos únicos/);
+ assert.match(await p.locator('#versionsPrioritySummary').textContent(),/4 discrepancias · 23 candidatos únicos/);
  await p.locator('#versionsPriorityOnly').check();
- assert.equal(await p.locator('#versionsRows tr').count(),26);
+ assert.equal(await p.locator('#versionsRows tr').count(),27);
  const tera=p.locator('#versionsRows tr').filter({hasText:'Trend 1.6 MSI MT'});
  assert.equal(await tera.count(),1);
  assert.match(await tera.textContent(),/Discrepancia contrastada con fabricante/);
@@ -916,6 +916,9 @@ await test('Revisión prioritaria contiene 26 casos, dos VW contrastados y Fores
  assert.match(await tera.locator('.reviewed-discrepancy a').getAttribute('href'),/volkswagen.cl\/tera\/tera/);
  const second=p.locator('#versionsRows tr').filter({hasText:'Comfort 1.6 MSI MT'});
  assert.match(await second.textContent(),/discrepancia contrastada con fabricante/i);
+ const deepal=p.locator('#versionsRows tr').filter({hasText:'S05 EV'});
+ assert.equal(await deepal.count(),1);
+ assert.match(await deepal.textContent(),/Solo candidatos contradictorios/);
  const forester=p.locator('#versionsRows tr').filter({hasText:'2.5 HEV AWD CVT SPORT ES'});
  assert.equal(await forester.count(),1);
  assert.match(await forester.textContent(),/Solo candidatos contradictorios/);
