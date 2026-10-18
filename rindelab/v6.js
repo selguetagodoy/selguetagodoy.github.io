@@ -11,6 +11,7 @@ const number=n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>0?Number
 const fixed=n=>number(n)?Number(n).toLocaleString('es-CL',{maximumFractionDigits:2}):'N/D';
 let all=[],results=[],selected=[],submitted=false,limit=10,cut='2026-05-08';
 let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
+const officialCodes=new Set();
 const searchIndex=new WeakMap();
 function cleanRow(row){
  const r=row.slice();
@@ -119,13 +120,13 @@ function filterMTT(f){
 function renderMTT(){
  const container=$('mttSearchSection'),list=$('mttSearchList');list.replaceChildren();
  container.hidden=!mttMatches.length;
- $('mttSearchCount').textContent=fmt(mttMatches.length)+' '+(mttMatches.length===1?'homologación encontrada':'homologaciones encontradas')+' en la nómina MTT, sin rendimiento comparable.';
+ $('mttSearchCount').textContent=fmt(mttMatches.length)+' '+(mttMatches.length===1?'homologación encontrada':'homologaciones encontradas')+' en la nómina MTT, pendiente de ficha energética oficial.';
  for(const item of mttMatches.slice(0,mttLimit)){
   const record=item.source,card=document.createElement('article');card.className='mtt-result-card';
   const heading=document.createElement('div');heading.className='mtt-result-name';
   const small=document.createElement('small');small.textContent=item.row[F.BRAND];heading.append(small);
   const title=document.createElement('strong');title.textContent=record.model;heading.append(title);
-  const tag=document.createElement('em');tag.textContent='Solo homologación MTT · sin consumo oficial de mayo';heading.append(tag);
+  const tag=document.createElement('em');tag.textContent='Solo homologación MTT · sin ficha energética en la consulta oficial de octubre';heading.append(tag);
   const code=document.createElement('div');code.className='mtt-result-source';
   code.append('Código 3CV: '+record.code);
   const cert=document.createElement('small');cert.textContent=record.certificate+' · '+record.date;code.append(cert);
@@ -265,7 +266,7 @@ function render(){
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
   const selectedNow=selected.includes(index);
   article.innerHTML='<div class="vehicle-heading"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado') +'</span></div><p>Homologación '+safe(row[F.DATE]||'sin fecha')+'</p><small class="energy-source-line">Ficha de rendimiento 3CV · corte mayo 2026</small></div>'+
+   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado') +'</span></div><p>Homologación '+safe(row[F.DATE]||'sin fecha')+'</p><small class="energy-source-line">'+(officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026')+'</small></div>'+
    '<div class="vehicle-cell"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell"><small>Costo estimado /100 km</small><strong'+(cost(row)===null?' class="no-data"':'')+'>'+safe(money(cost(row)))+'</strong></div>'+
    '<div class="vehicle-actions"><button type="button" class="button secondary" data-detail="'+index+'">Ver ficha</button>'+
@@ -527,7 +528,15 @@ async function init(){
   const manifest=await fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('No se pudo cargar el manifiesto 3CV');return r.json();});
   cut=manifest.published||cut;
   const files=await Promise.all(manifest.files.map(file=>fetch('../vehiculos/'+file).then(r=>{if(!r.ok)throw Error('Falta '+file);return r.json();})));
-  all=files.flat().filter(r=>r&&r[F.BRAND]&&r[F.MODEL]&&r[F.DATE]&&r[F.DATE]<=cut).map(cleanRow);
+  const legacy=files.flat().filter(r=>r&&r[F.BRAND]&&r[F.MODEL]&&r[F.DATE]&&r[F.DATE]<=cut);
+  if(!window.RindelabOfficialAPI)throw Error('Falta el módulo de actualización de Consumo Vehicular');
+  const officialFiles=await Promise.all([1,2,3,4].map(i=>{
+   const name='./data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json';
+   return fetch(name).then(r=>{if(!r.ok)throw Error('No disponible '+name);return r.json();});
+  }));
+  const additional=window.RindelabOfficialAPI.load(officialFiles,legacy);
+  for(const row of additional)officialCodes.add(row[F.CODE]);
+  all=legacy.concat(additional).map(cleanRow);
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
   $('statsOpen').disabled=false;
@@ -535,10 +544,11 @@ async function init(){
   try{
    const response=await fetch('./sii/mtt-sept-2026-may-2026-cross.json?v=20261018-mtt229-search');
    if(!response.ok)throw Error('HTTP '+response.status);
-   mttRecords=prepareMTT(await response.json());
+   mttRecords=prepareMTT(await response.json()).filter(item=>!officialCodes.has(item.row[F.CODE]));
+   if(mttRecords.length!==1||mttRecords[0].row[F.CODE]!=='PO10585EL0726M01-9')throw Error('Brecha MTT/API inconsistente');
    mttLoadError='';
   }catch(e){
-   mttRecords=[];mttLoadError='No se pudo cargar la nómina MTT de septiembre. La búsqueda de rendimientos 3CV sigue disponible; revisa la fuente MTT o vuelve a intentarlo.';
+   mttRecords=[];mttLoadError='No se pudo cargar el cruce MTT; los rendimientos de mayo y octubre siguen disponibles.';
   }
   $('mttLoadNotice').hidden=!mttLoadError;
   $('mttLoadNotice').textContent=mttLoadError;
