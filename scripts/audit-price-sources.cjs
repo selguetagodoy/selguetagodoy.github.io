@@ -92,7 +92,7 @@ async function checkLinks(){
   ...(warnings.length?warnings.map(s=>'- '+s):['- Sin advertencias']),
   ''
  ].join('\n');
- if(reportFile){fs.mkdirSync(path.dirname(reportFile),{recursive:true});fs.writeFileSync(reportFile,JSON.stringify(machineReport,null,2)+'\\n');}
+ if(reportFile){fs.mkdirSync(path.dirname(reportFile),{recursive:true});fs.writeFileSync(reportFile,JSON.stringify(machineReport,null,2)+'\n');}
  console.log(report);
  if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,report);
  if(process.env.GITHUB_ACTIONS){
