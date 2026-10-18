@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cotizador gratuito de autos nuevos en Chile: precios de lista oficiales por marca y versión, gastos adicionales y simulación referencial de financiamiento. RINDELAB.">
+<meta name="author" content="Sebastián Elgueta Godoy">
+<meta property="og:title" content="Cotizador de autos nuevos | RINDELAB">
+<meta property="og:description" content="143 precios de lista documentados, con fuente y fecha, sin bonos ni precios inventados. Cotiza por versión comercial.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://selguetagodoy.github.io/rindelab/cotizador.html">
+<link rel="canonical" href="https://selguetagodoy.github.io/rindelab/cotizador.html">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./v6.css?v=20261018-home3">
+<link rel="stylesheet" href="./cotizador.css?v=20261018-1">
+<title>Cotizador de autos nuevos | RINDELAB</title>
+<script src="./cotizador.js?v=20261018-1" defer></script>
+</head>
+<body>
+<header class="site-header"><div class="shell header-inner">
+<a class="logo" href="./index.html#inicio" aria-label="RINDELAB, volver al inicio">RINDE<span>LAB</span></a>
+<nav class="header-links" aria-label="Navegación"><a class="header-source" href="./index.html#buscador">Rendimientos 3CV</a><a class="header-source" href="./index.html#supuestos">Costos energéticos</a><a class="header-source" href="./cotizador.html" aria-current="page">Cotizar auto</a></nav>
+</div></header>
+<main class="shell quote-page">
+<div class="quote-intro"><span class="eyebrow">RINDELAB · PRECIO DE COMPRA</span><h1>Cotiza un auto nuevo con precio de lista verificado</h1>
+<p>Elige la <strong>versión comercial exacta</strong>, revisa la fuente original y prepara un presupuesto. Los precios publicados son referencias sujetas a confirmación con la marca: no incluyen bonos de financiamiento ni equivalen a una oferta o reserva.</p></div>
+<div class="quote-layout">
+<section class="quote-catalog" aria-labelledby="catalogTitle">
+<div class="quote-heading"><h2 id="catalogTitle">1. Encuentra marca, modelo y versión</h2><p id="catalogCount" role="status" aria-live="polite">Cargando catálogo oficial…</p></div>
+<div class="quote-filters">
+<div class="field"><label for="quoteSearch">Buscar nombre o versión</label><input id="quoteSearch" type="search" autocomplete="off" placeholder="Ej. Corolla Cross, Hunter, Kona"></div>
+<div class="field"><label for="quoteBrand">Marca</label><select id="quoteBrand"><option value="">Todas las marcas</option></select></div>
+<div class="field"><label for="quoteFamily">Modelo comercial</label><select id="quoteFamily"><option value="">Todos los modelos</option></select></div>
+<div class="field"><label for="quoteSort">Ordenar</label><select id="quoteSort"><option value="brand">Marca y modelo</option><option value="low">Precio menor a mayor</option><option value="high">Precio mayor a menor</option><option value="recent">Última revisión</option></select></div>
+</div>
+<p class="quote-note">Solo precios de <strong>lista</strong> en CLP, de fichas y tiendas de fabricantes. La correspondencia de una versión comercial con una homologación 3CV <strong>no se presume</strong>. Si una versión no aparece, aún no tiene precio documentado en RINDELAB.</p>
+<div id="quoteResults" class="quote-results" aria-live="polite"></div>
+<button type="button" id="quoteMore" class="button secondary" hidden>Ver más versiones</button>
+</section>
+<aside class="quote-aside" aria-labelledby="quoteSummaryTitle">
+<div class="quote-heading"><h2 id="quoteSummaryTitle">2. Tu presupuesto</h2><p>Cálculo local y editable, no una oferta comercial.</p></div>
+<div id="quoteSelected" class="quote-selected"><p>Selecciona una versión del catálogo para calcular su presupuesto.</p></div>
+<div class="quote-extra">
+<h3>Gastos adicionales <small>(opcionales)</small></h3>
+<div class="field"><label for="quoteGreen">Impuesto verde ($)</label><input id="quoteGreen" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+<div class="field"><label for="quoteRegistration">Patente, inscripción y trámites ($)</label><input id="quoteRegistration" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+<div class="field"><label for="quoteOther">Otros gastos informados por la marca ($)</label><input id="quoteOther" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+<p class="quote-note">Ingresa importes solo si están confirmados. El precio de lista no incluye automáticamente impuesto verde, inscripción, seguros, fletes ni otros cargos, según las condiciones del vendedor.</p>
+</div>
+<div class="quote-total">
+<span>Total de compra referencial al contado</span><strong id="quoteTotal">—</strong>
+<small id="quoteTotalNote">Sin versión comercial seleccionada.</small>
+</div>
+<details class="quote-finance" id="financeDetails"><summary>Opcional: estimar pago mensual de un crédito</summary>
+<p class="quote-note">Simulación matemática, no oferta bancaria. No se calcula ninguna cuota sin la tasa que ingreses. No incluye CAE, comisiones, seguros, impuestos del crédito ni valor futuro garantizado.</p>
+<div class="field"><label for="quoteDeposit">Pie ($)</label><input id="quoteDeposit" type="number" min="0" step="1" value="0"></div>
+<div class="field"><label for="quoteAnnualRate">Tasa de interés nominal anual (%)</label><input id="quoteAnnualRate" type="number" min="0" max="100" step="0.01" placeholder="Ingresa la tasa de tu oferta"></div>
+<div class="field"><label for="quoteMonths">Plazo (meses)</label><select id="quoteMonths"><option value="12">12</option><option value="24">24</option><option value="36" selected>36</option><option value="48">48</option><option value="60">60</option></select></div>
+<p id="quoteFinanceOut" role="status" aria-live="polite">Ingresa una tasa para estimar cuotas.</p>
+</details>
+<div class="quote-actions">
+<button type="button" class="button primary" id="quoteCopy">Copiar presupuesto</button>
+<button type="button" class="button secondary" id="quotePrint">Imprimir</button>
+<a id="quoteSource" href="#" class="button secondary" target="_blank" rel="noopener noreferrer" hidden>Confirmar precio en fuente oficial ↗</a>
+<a id="quoteDealer" href="#" class="button secondary" target="_blank" rel="noopener noreferrer" hidden>Solicitar cotización a la marca ↗</a>
+</div>
+<p id="quoteFeedback" class="quote-feedback" role="status" aria-live="polite"></p>
+<p class="quote-privacy">No se solicitan RUT ni datos de contacto. Esta simulación se realiza en tu navegador. La cotización definitiva la entrega el concesionario o fabricante.</p>
+</aside>
+</div>
+<section class="quote-legal">
+<h2>Fuentes y alcance</h2>
+<p>Catálogo <span id="quoteCatalogNumber">—</span> de precios de lista individuales. Cada tarjeta indica la fecha de revisión y conserva un enlace a su página oficial. Los valores pueden variar sin previo aviso; RINDELAB no verifica disponibilidad, stock, costos de financiamiento ni precios finales personalizados en tiempo real. Si el vehículo es usado, revisa la <a href="./index.html">consulta SII dentro de su ficha</a>, que informa tasación fiscal y permiso de circulación, pero no el precio de reventa.</p>
+<p>Los costos energéticos por kilómetro pertenecen a la base <a href="./index.html#buscador">3CV</a>. No se suman al presupuesto de compra salvo que exista correspondencia verificada entre versión comercial y ficha 3CV; esta herramienta no inventa ese vínculo.</p>
+</section>
+</main>
+<footer class="footer"><div class="shell"><strong>RINDELAB</strong><span>Creado por Sebastián Elgueta Godoy · <a href="mailto:e.elguetagodoy@gmail.com">Contacto</a></span><small>Consulta las fuentes de cada cotización. No constituye una oferta vinculante.</small></div></footer>
+</body></html>
