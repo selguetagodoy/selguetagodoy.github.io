@@ -57,7 +57,11 @@ function render(section,row,family){
    '<a href="'+esc(chosen.source)+'" target="_blank" rel="noopener noreferrer">Ver precio en sitio oficial ↗</a>';
   const remove=document.createElement('button');remove.type='button';remove.className='button secondary';remove.textContent='Quitar versión comercial';
   remove.addEventListener('click',()=>{clear(row);render(section,row,family);});
-  summary.append(remove);dst.append(summary);
+  const quote=document.createElement('a');
+  quote.href='./cotizador.html?marca='+encodeURIComponent(chosen.brand)+'&modelo='+encodeURIComponent(chosen.family);
+  quote.className='button secondary';quote.textContent='Preparar presupuesto de compra ↗';
+  quote.title='Elegir versión en cotizador; no se equipara a homologación 3CV';
+  summary.append(remove,quote);dst.append(summary);
  }else if(available.length){
   const p=document.createElement('p');p.className='sii-pending';
   p.textContent='Hay '+available.length+' versión(es) con precio de lista. Elige manualmente la que corresponda; no se asigna un precio a esta homologación por coincidencia de nombre.';
