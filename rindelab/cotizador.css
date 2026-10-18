@@ -50,3 +50,41 @@
 @media(max-width:600px){.quote-intro{padding:22px 0 15px}.quote-intro h1{font-size:29px}.quote-intro p{font-size:12px}.quote-catalog,.quote-aside,.quote-legal{padding:15px;border-radius:12px}.quote-filters{gap:9px}.quote-version{grid-template-columns:minmax(0,1fr) auto}.quote-version-price strong{font-size:14px}}
 @media(max-width:370px){.quote-filters{grid-template-columns:1fr}.quote-version-price strong{font-size:13px}.quote-version-actions .button{font-size:11px}}
 @media print{.site-header,.quote-filters,.quote-results,.quote-note,#quoteMore,.quote-actions,.quote-finance,.footer,.quote-legal{display:none!important}.quote-layout{display:block}.quote-catalog{display:none}.quote-aside{box-shadow:none;border:0;padding:5px}.quote-extra{display:block}.quote-total{background:white;color:black;border:2px solid black}.quote-total>strong,.quote-total>small{color:black}.quote-intro{padding:0}.quote-page{max-width:none;width:100%}}
+
+/* Misma escala tipográfica accesible que el buscador RINDELAB 7.5. */
+.quote-intro h1{font-weight:800;letter-spacing:-.02em;line-height:1.16}
+.quote-intro p{font-size:16px;line-height:1.55;max-width:68ch;color:#465f73}
+.quote-heading h2{font-size:24px;font-weight:700}
+.quote-heading p{font-size:14px;color:#455f73}
+.quote-filters .field label,.quote-extra .field label,.quote-finance .field label{font-size:14px;font-weight:600}
+.quote-filters .field input,.quote-filters .field select,
+.quote-extra .field input,.quote-finance .field input,.quote-finance .field select{font-size:16px;min-height:44px}
+.quote-note,.quote-privacy,.quote-legal p,.quote-empty{font-size:13px;color:#455f73;line-height:1.65;max-width:68ch}
+.quote-version{padding:17px;gap:12px}
+.quote-version>div:first-child strong{font-size:18px;font-weight:700;line-height:1.35}
+.quote-version>div:first-child span,.quote-version>div:first-child small{font-size:13px;color:#455f73;line-height:1.5}
+.quote-version-price strong{font-size:22px;font-weight:700;color:#124b66;letter-spacing:-.01em}
+.quote-version-price span{font-size:13px;color:#455f73}
+.quote-version-actions a{font-size:13px;font-weight:600}
+.quote-version-actions .button,.quote-actions .button{font-size:15px;font-weight:600;min-height:44px}
+.quote-selected>small,.quote-selected p,.quote-selected .quote-date,.quote-extra h3 small{font-size:13px;color:#455f73}
+.quote-selected h3{font-size:18px;font-weight:700}
+.quote-selected>strong{font-size:24px;font-variant-numeric:tabular-nums}
+.quote-extra h3{font-size:16px}
+.quote-total>span,.quote-total>small{font-size:13px}
+.quote-total>strong{font-size:29px;font-variant-numeric:tabular-nums}
+.quote-finance summary,.quote-finance #quoteFinanceOut,.quote-feedback{font-size:13px;line-height:1.55}
+.quote-finance summary{font-weight:600;min-height:44px}
+.quote-catalog,.quote-aside{min-width:0}
+@media(max-width:600px){
+ .quote-intro h1{font-size:clamp(29px,8vw,36px)}
+ .quote-intro p{font-size:15px}
+ .quote-heading h2{font-size:22px}
+ .quote-version{grid-template-columns:minmax(0,1fr) auto}
+ .quote-version-price strong{font-size:clamp(15px,4.3vw,20px);overflow-wrap:anywhere;white-space:normal}
+ .quote-version>div:first-child strong{font-size:17px}
+ .quote-version-actions{gap:6px}
+ .quote-version-actions .button{font-size:14px}
+ .quote-total>strong{font-size:27px}
+}
+@media(max-width:370px){.quote-version-actions{flex-wrap:wrap}.quote-version-actions .button{width:100%}}
