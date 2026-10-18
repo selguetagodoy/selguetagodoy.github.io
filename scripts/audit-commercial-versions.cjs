@@ -56,13 +56,17 @@ assert.equal(get('Hyundai','Venue','Venue QU2i 1.0T MT GO').manufacturerEvidence
 assert.throws(()=>audit.specsFor({brand:'Suzuki',family:'Fronx',version:'1.5 GL AT'},{brand:'Suzuki',family:'Fronx',version:'1.5 GL AT',specifications:{transmission:'M'}}),/Contradicción en nombre comercial/);
 assert(get('Mazda','CX-30','CORE 2.0 2WD 6AT 7G').expressedSpecifications.engine===2);
 
-console.log('REVISION_SUBARU_20261018 '+JSON.stringify({counts:report.counts,caseItems:report.cases.filter(x=>x.brand==='Subaru'&&['Impreza','Forester','Crosstrek'].includes(x.family)).map(x=>({family:x.family,version:x.version,status:x.status,conflicts:x.conflictsExamples.map(c=>({code:c.code3cv,conflicts:c.conflicts})),reviewable:x.reviewableCandidates}))}));
 const notes=read('rindelab/sii/review-notes-2026.json');
 assert.equal(notes.schemaVersion,1);
 assert.equal(notes.cases.length,2);
-assert.equal(report.counts.solo_contradicciones,2);
-assert.equal(report.counts.un_candidato_preliminar,22);
-assert(report.singleCandidateUniqueCodes>=1&&report.singleCandidateUniqueCodes<=22);
+assert.equal(report.counts.solo_contradicciones,3);
+const foresterHybrid=get('Subaru','Forester','2.5 HEV AWD CVT SPORT ES');
+assert.equal(foresterHybrid.status,'solo_contradicciones','No atribuir a un Forester HEV 2026 una ficha histórica contradictoria de 3CV mayo');
+assert.equal(foresterHybrid.reviewableCandidates,0);
+assert(foresterHybrid.conflictsExamples.some(x=>x.conflicts.some(y=>y.field==='technology')));
+assert.equal(get('Subaru','Crosstrek','2.0I HYBRID AWD CVT TOURING ES').status,'un_candidato_preliminar');
+assert.equal(report.counts.un_candidato_preliminar,23);
+assert(report.singleCandidateUniqueCodes>=1&&report.singleCandidateUniqueCodes<=23);
 assert(report.sharedCandidateVersions>0,'Algunas versiones distintas deben compartir el candidato 3CV');
 for(const note of notes.cases){
  const item=get(note.brand,note.family,note.version);
@@ -73,10 +77,10 @@ for(const note of notes.cases){
  assert(note.manufacturerEvidenceUrl.startsWith('https://www.volkswagen.cl/'));
 }
 const priority=report.cases.filter(x=>x.status==='solo_contradicciones'||x.status==='un_candidato_preliminar');
-assert.equal(priority.length,24);
+assert.equal(priority.length,26);
 const priorityPayload={
  schemaVersion:1,sourceCut:manifest.published,catalogCount:report.catalogCount,
- scope:'24 prioridades documentales, no homologaciones certificadas ni asignación comercial automática',
+ scope:'26 prioridades documentales, incluidas dos contradicciones Tera revisadas y una Forester HEV frente al corte histórico de mayo. Ninguna correspondencia comercial certificada.',
  priorities:priority.map(c=>({
   brand:c.brand,family:c.family,version:c.version,priceListClp:c.priceListClp,
   source:c.source,status:c.status,expressedSpecifications:c.expressedSpecifications,manufacturerEvidence:c.manufacturerEvidence,
@@ -95,7 +99,7 @@ if(priorityJson)writeFile(priorityJson.slice('--priority-json='.length),JSON.str
 const priorityMd=outputArg('--priority-md=');
 if(priorityMd){
  const lines=[
- '# RINDELAB — 24 revisiones técnicas pendientes','',
+ '# RINDELAB — 26 revisiones técnicas pendientes','',
  'Fuente 3CV al '+manifest.published+'. Ninguna de las correspondencias está certificada.',
  '',
  '| Estado | Marca y versión comercial | Código candidato | Uso del código | Fuente |',
@@ -110,10 +114,13 @@ if(priorityMd){
  }
  lines.push('','## Discrepancia Volkswagen Tera',
  'La web oficial registra transmisión manual de 5 velocidades para Tera 1.6 MSI MT. La ficha 3CV VW9988E60525S00-6 dice TERA 1.6 MT, pero registra A en transmisión. Revisar con 3CV antes de asociar o modificar.',
- '','Fuentes: https://www.volkswagen.cl/tera/tera y '+manifest.source,'');
+ '','Fuentes: https://www.volkswagen.cl/tera/tera y '+manifest.source,
+ '','## Subaru Forester HEV frente a registros históricos',
+ 'El precio comercial 2026 corresponde a Forester 2.5 HEV AWD CVT Sport ES, pero no tiene candidato compatible entre fichas de mayo. Las coincidencias por familia muestran discrepancias de tecnología, cilindrada o tracción. Esto no equivale a una rectificación ni implica que falte homologación posterior; ver la consulta oficial de octubre por separado.',
+ '','Fuente comercial: https://www.subaru.cl/vehiculos/all-new-forester-hibrido/','');
  writeFile(priorityMd.slice('--priority-md='.length),lines.join('\n'));
 }
-console.log('PRIORIDADES '+JSON.stringify({total:priority.length,contradictions:notes.cases.length,single:report.counts.un_candidato_preliminar,uniqueCodes:report.singleCandidateUniqueCodes,sharedVersionCandidates:report.sharedCandidateVersions}));
+console.log('PRIORIDADES '+JSON.stringify({total:priority.length,contradictions:report.counts.solo_contradicciones,documentedVW:notes.cases.length,single:report.counts.un_candidato_preliminar,uniqueCodes:report.singleCandidateUniqueCodes,sharedVersionCandidates:report.sharedCandidateVersions}));
 for(const x of priorityPayload.priorities)console.log('PRIORIDAD '+JSON.stringify({brand:x.brand,family:x.family,version:x.version,status:x.status,code:x.code3cv,shared:x.sharedWithOtherVersions}));
 
 const out=process.argv.find(s=>s.startsWith('--json='));
