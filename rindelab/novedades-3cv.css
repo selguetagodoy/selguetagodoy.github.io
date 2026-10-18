@@ -40,3 +40,17 @@
 @media(max-width:1050px){.delta-filters{grid-template-columns:repeat(3,minmax(0,1fr))}.delta-bottom-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.delta-context{grid-template-columns:1fr}.delta-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:11px}.delta-filters .field:nth-child(4),.delta-filters .field:nth-child(5){grid-column:1/-1}.delta-table{min-width:820px}.delta-method,.delta-review{padding:16px}.coverage-panel-head{align-items:flex-start;flex-wrap:wrap}}
 @media(max-width:360px){.delta-filters{grid-template-columns:1fr}.delta-filters .field:nth-child(4),.delta-filters .field:nth-child(5){grid-column:auto}.delta-context strong{font-size:22px}}
+
+/* Separación de registros posteriores e históricos. Un código puede figurar en varias filas. */
+.delta-context{grid-template-columns:repeat(4,minmax(0,1fr))}
+.delta-mode-wrap{margin:0 0 14px;padding:14px 18px;background:#eef6f8;border:1px solid #d3e6eb;border-radius:10px}
+.delta-mode-wrap label{display:block;font-size:12px;font-weight:800;color:#204e64;margin-bottom:7px}
+.delta-mode-wrap select{display:block;max-width:100%;width:100%;height:43px;border:1px solid #aacbd4;border-radius:7px;background:#fff;color:#19455c;padding:0 11px;font-size:12px;font-weight:700}
+.delta-mode-wrap p{font-size:11px;line-height:1.55;color:#587386;margin:9px 0 0}
+.delta-disabled{opacity:.48}
+.delta-variants{margin-top:8px;border-top:1px solid #d8e8ed;padding-top:7px}
+.delta-variants summary{cursor:pointer;font-size:10px;color:#176179;font-weight:700}
+.delta-variants ul{padding-left:17px;margin:6px 0 0}
+.delta-variants li{font-size:10px;font-weight:500;color:#4a6b7b;margin:2px 0}
+@media(max-width:950px){.delta-context{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.delta-context{grid-template-columns:1fr}.delta-mode-wrap{padding:12px}.delta-mode-wrap select{font-size:11px}}
