@@ -1,0 +1,24 @@
+/* Auditoría de versiones: vista institucional separada del buscador RINDELAB. */
+.versions-table{min-width:900px;table-layout:fixed}
+.versions-table th:nth-child(1){width:29%}
+.versions-table th:nth-child(2){width:22%}
+.versions-table th:nth-child(3){width:18%}
+.versions-table th:nth-child(4){width:31%}
+.version-name{font-weight:750;color:#163d55}
+.version-name strong,.version-name small,.version-name a{display:block}
+.version-name strong{margin-top:5px;color:#315b74;font-size:12px}
+.version-name small{font-weight:500;color:#637d8e;font-size:11px;margin:7px 0}
+.version-name a{font-size:11px}
+.version-numbers{font-variant-numeric:tabular-nums;color:#43657a}
+.version-status{color:#264c65;font-weight:750}
+.version-details{margin-top:10px;font-weight:400;max-width:100%}
+.version-details summary{cursor:pointer;color:#096c83;font-weight:750;font-size:11px;padding:8px 0;list-style:revert}
+.version-details[open]{background:#f4f9fb;border:1px solid #dce9ee;border-radius:8px;padding:8px}
+.version-evidence{font-size:11px;color:#385469;line-height:1.5;overflow-wrap:anywhere}
+.version-evidence p{margin:9px 0}
+.version-evidence strong{display:block;font-size:11px;color:#193e56}
+.version-evidence ul{margin:6px 0 12px;padding-left:17px}
+.version-evidence li{margin-bottom:10px}
+.version-evidence b{color:#173c55}
+.version-evidence small{display:block;font-size:10px;color:#617f91;margin-top:3px}
+@media(max-width:600px){.versions-table{min-width:800px}.coverage-panel-head .button{font-size:12px}}
