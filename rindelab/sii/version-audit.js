@@ -13,7 +13,7 @@
  ];
  function specsFor(price){
   const v=N(price.version), result={};
-  const engine=v.match(/(?:^| )([0-9][.,][0-9])(?:L|T|I)?(?= |$)/);
+  const engine=String(price.version).toUpperCase().replace(/,/g,'.').match(/(?:^|[^0-9A-Z])([0-9][.][0-9])(?:L|T|I)?(?=[^0-9A-Z]|$)/);
   if(engine)result.engine=Number(engine[1].replace(',','.'));
   if(/\b(?:REEV|EREV)\b/.test(v))result.technology='REEV';
   else if(/\bPHEV\b/.test(v))result.technology='PHEV';
