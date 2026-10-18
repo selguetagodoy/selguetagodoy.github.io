@@ -11,7 +11,7 @@
 <meta property="og:description" content="Busca vehículos, compara rendimientos y costos estimados de energía en Chile. Datos 3CV.">
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261018-mtt229-search"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
+<link rel="stylesheet" href="./v6.css?v=20261018-status-review"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -92,6 +92,10 @@
    </select></div>
   </div>
   <p id="sortNote" class="sort-note" role="note" hidden></p>
+  <div id="sourceLegend" class="source-legend" aria-label="Cómo interpretar los resultados" hidden>
+   <div><span class="source-guide-mark source-guide-energy" aria-hidden="true"></span><strong>Ficha de rendimiento 3CV · mayo</strong><small>Consulta el ciclo y los datos energéticos disponibles antes de calcular.</small></div>
+   <div><span class="source-guide-mark source-guide-mtt" aria-hidden="true"></span><strong>Homologación MTT · septiembre</strong><small>Certificado, código y fecha, pero sin rendimiento para comparar.</small></div>
+  </div>
   <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
    <div class="mtt-search-heading">
     <div><p class="mtt-search-eyebrow">NÓMINA MTT · 28 DE SEPTIEMBRE DE 2026</p><h3 id="mttSearchTitle">Homologaciones recientes sin ficha de rendimiento</h3>
@@ -105,6 +109,10 @@
   <p id="mttLoadNotice" class="mtt-load-notice" role="status" hidden></p>
   <div id="emptyState" class="empty" hidden></div>
   <div id="suggested" class="suggested" hidden></div>
+  <div id="energyResultsHeading" class="energy-results-heading" hidden>
+    <div><strong>Fichas energéticas 3CV</strong><span id="energyResultsCount"></span></div>
+    <small>Fuente de rendimientos al 8 de mayo de 2026 · cada ficha indica su ciclo y disponibilidad de datos.</small>
+  </div>
   <div id="resultList" class="result-list"></div>
   <div class="load-more"><button type="button" id="more" class="button secondary" hidden>Mostrar 10 vehículos más</button></div>
  </section>
@@ -188,6 +196,6 @@
 </footer>
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
 <script src="./sii/prices.js?v=20261017-list122" defer></script>
-<script src="./v6.js?v=20261018-mtt229-search" defer></script>
+<script src="./v6.js?v=20261018-status-review" defer></script>
 </body>
 </html>

@@ -10,6 +10,7 @@ on:
       - "scripts/audit-commercial-versions.cjs"
       - "scripts/audit-homologation-register.cjs"
       - "scripts/audit-mtt-september-coverage.cjs"
+      - "scripts/audit-mtt-discrepancy-review.cjs"
   push:
     branches:
       - "main"
@@ -21,6 +22,7 @@ on:
       - "scripts/audit-commercial-versions.cjs"
       - "scripts/audit-homologation-register.cjs"
       - "scripts/audit-mtt-september-coverage.cjs"
+      - "scripts/audit-mtt-discrepancy-review.cjs"
   workflow_dispatch:
 
 permissions:
@@ -56,6 +58,9 @@ jobs:
       - name: Auditar cruce completo nómina MTT septiembre y 3CV mayo
         run: node scripts/audit-mtt-september-coverage.cjs --json=mtt-september-cross-audit.json
 
+      - name: Auditar fuentes primarias de 12 discrepancias sin rectificaciones ficticias
+        run: node scripts/audit-mtt-discrepancy-review.cjs --json=mtt-discrepancies-audit.json
+
       - name: Guardar expediente auditable de 24 revisiones
         uses: actions/upload-artifact@v4
         with:
@@ -66,6 +71,7 @@ jobs:
             priority-review.md
             homologation-ledger-audit.json
             mtt-september-cross-audit.json
+            mtt-discrepancies-audit.json
           retention-days: 90
 
       - name: Install Playwright and Chromium

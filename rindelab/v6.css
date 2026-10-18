@@ -290,3 +290,25 @@ body.has-tray{padding-bottom:150px}
 .mtt-load-notice{font-size:12px;padding:12px 14px;border:1px solid #ebd8aa;border-radius:7px;background:#fffaf0;color:#79603c}
 @media(max-width:720px){.mtt-result-card{grid-template-columns:1fr 1fr}.mtt-result-name{grid-column:1/-1}}
 @media(max-width:430px){.mtt-search-section{padding:13px 12px}.mtt-result-card{grid-template-columns:1fr}.mtt-result-name{grid-column:auto}.mtt-search-heading h3{font-size:15px}.mtt-search-all{white-space:normal}}
+
+/* Estado de fuente: fichas energéticas 3CV vs solo homologaciones MTT.
+   Las dos fuentes no son intercambiables ni todas las fichas implican costo calculable. */
+.source-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0 0 16px}
+.source-legend>div{min-width:0;background:#f5f9fb;border:1px solid #d8e5eb;border-radius:8px;padding:12px 13px 12px 17px;position:relative}
+.source-guide-mark{position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:8px 0 0 8px}
+.source-guide-energy{background:#287988}.source-guide-mtt{background:#b2854a}
+.source-legend strong{display:block;font-size:11px;font-weight:800;color:#244a60}
+.source-legend small{display:block;margin-top:4px;color:#68808d;font-size:10px;line-height:1.5}
+.energy-results-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin:16px 0 11px;border-bottom:1px solid #dae6eb;padding:0 0 9px}
+.energy-results-heading strong{font-weight:820;font-size:14px;color:#15546b}
+.energy-results-heading span{margin-left:8px;color:#547484;font-size:11px;font-weight:700}
+.energy-results-heading small{font-size:10px;color:#5f7b89;max-width:330px;line-height:1.5}
+.vehicle-card{border-left:3px solid #2c8393}
+.energy-source-line{display:block!important;margin-top:6px!important;font-size:10px!important;font-weight:710;color:#267081!important}
+.mtt-search-section{border-left:3px solid #b68d55;background:#faf9f6}
+.mtt-result-card{border-left:3px solid #bea078}
+.mtt-result-name em{color:#8a622e}
+.mtt-result-metrics small{color:#815f36;font-weight:650}
+@media(max-width:620px){.source-legend{grid-template-columns:1fr}.energy-results-heading{flex-direction:column;gap:3px}.source-legend>div{padding-top:9px;padding-bottom:9px}}
+
+.source-legend[hidden],.energy-results-heading[hidden]{display:none!important}

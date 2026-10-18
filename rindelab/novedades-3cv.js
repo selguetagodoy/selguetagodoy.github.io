@@ -3,6 +3,7 @@
 const $=id=>document.getElementById(id);
 const countFmt=new Intl.NumberFormat('es-CL');
 let report=null;
+let review=null;
 let historicGroups=[];
 let undatedGroups=[];
 function normalized(s){return String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim();}
@@ -121,18 +122,50 @@ function render(){
  }
  if(!list.length){const tr=document.createElement('tr');td(tr,'No hay registros con los filtros seleccionados.').colSpan=5;tbody.append(tr);}
 }
+function visibleReview(){
+ if(!review)return [];
+ const grp=$('deltaReviewGroup').value;
+ return review.cases.filter(x=>!grp||x.group===grp);
+}
 function renderDifferences(){
  const tbody=$('deltaConflicts');tbody.replaceChildren();
- for(const x of report.matchedCodeTechnicalDifferences){
-  const tr=document.createElement('tr'),main=td(tr,x.code);
-  addSub(main,x.mtt.brand+' · '+x.mtt.model,'strong');
-  addSub(main,'Transmisión '+x.mtt.transmission+' · '+x.mtt.engineL+' L');
-  const mtt=td(tr,x.mtt.transmission+' · '+x.mtt.engineL+' L');
-  addSub(mtt,'Registro MTT septiembre');
-  const may=td(tr,x.may.transmission+' · '+x.may.engineL+' L');
-  addSub(may,'Registro 3CV mayo');
+ if(!review)return;
+ const rows=visibleReview();
+ $('deltaReviewCount').textContent=rows.length+' de 12 discrepancias documentales · ninguna rectificación oficial confirmada.';
+ for(const x of rows){
+  const tr=document.createElement('tr');
+  tr.dataset.code=x.code3cv;
+  const main=td(tr,x.code3cv);
+  addSub(main,x.officialModel,'strong');
+  addSub(main,x.group+' · '+(x.kind==='engine'?'Diferencia de cilindrada':'Diferencia de transmisión'));
+  const evidence=document.createElement('details');evidence.className='delta-review-evidence';
+  const heading=document.createElement('summary');heading.textContent='Evidencia del fabricante y limitaciones';evidence.append(heading);
+  const p=document.createElement('p');p.textContent=x.manufacturer.observation;evidence.append(p);
+  const a=document.createElement('a');a.href=x.manufacturer.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Consultar fuente primaria ↗';evidence.append(a);
+  const foot=document.createElement('small');foot.textContent=x.manufacturer.scope==='etiqueta_código_exactamente'?
+   'La etiqueta comercial identifica el código exacto; la discrepancia entre planillas sigue sin rectificación oficial.':
+   'Referencia del modelo/familia; no prueba identidad de este certificado ni rectificación 3CV.';
+  evidence.append(foot);
+  main.append(evidence);
+  const mtt=td(tr,x.kind==='engine'?x.mtt.value+' L':'Transmisión '+x.mtt.value);
+  addSub(mtt,'MTT 28/09 · fila '+x.mtt.excelRow);
+  const may=td(tr,x.kind==='engine'?x.may.value+' L':'Transmisión '+x.may.value);
+  addSub(may,'Rendimientos 08/05');
   tbody.append(tr);
  }
+ if(!rows.length){const tr=document.createElement('tr');td(tr,'No hay discrepancias en esta categoría.').colSpan=3;tbody.append(tr);}
+}
+function downloadReview(){
+ if(!review)return;
+ const headers=['codigo_3cv','familia','modelo_mtt','tipo_diferencia','mtt_valor','mtt_fila',
+  'mayo_valor','fuente_fabricante','alcance_fabricante','observacion','estado','rectificacion_3cv'];
+ const rows=visibleReview().map(x=>[x.code3cv,x.group,x.officialModel,x.kind,x.mtt.value,
+  x.mtt.excelRow,x.may.value,x.manufacturer.url,x.manufacturer.scope,
+  x.manufacturer.observation,x.verificationStatus,'NO DOCUMENTADA']);
+ const content='\ufeff'+[headers,...rows].map(x=>x.map(csvCell).join(';')).join('\r\n')+'\r\n';
+ const blob=new Blob([content],{type:'text/csv;charset=utf-8'});
+ const href=URL.createObjectURL(blob),a=document.createElement('a');a.href=href;
+ a.download='rindelab-expediente-12-discrepancias-3cv-mtt.csv';document.body.append(a);a.click();a.remove();URL.revokeObjectURL(href);
 }
 function csvCell(s){
  const v=String(s??'');
@@ -155,16 +188,24 @@ function download(){
 }
 async function load(){
  try{
-  const res=await fetch('./sii/mtt-sept-2026-may-2026-cross.json?v=20261018-delta1');
-  if(!res.ok)throw Error('Archivo de cotejo no disponible');
-  const data=await res.json();
+  const [res,reviewRes]=await Promise.all([
+   fetch('./sii/mtt-sept-2026-may-2026-cross.json?v=20261018-delta1'),
+   fetch('./sii/mtt-discrepancy-review-2026.json?v=20261018-evidence12')
+  ]);
+  if(!res.ok||!reviewRes.ok)throw Error('Archivo de cotejo o expediente documental no disponible');
+  const [data,reviewed]=await Promise.all([res.json(),reviewRes.json()]);
   if(data.schemaVersion!==1||data.counts?.afterMayRows!==230||data.counts.afterMayNewCodes!==229||
     data.counts.codesInBoth!==7491||data.counts.matchedCodeTransmissionOrEngineConflicts!==12||
     data.recentRecords?.length!==230||data.historicMissingRecords?.length!==373||
     data.counts.olderMttRowsNotInMay!==372||data.counts.undatedMttRowsNotInMay!==1||
     data.counts.olderMttUniqueCodesNotInMay!==324||data.counts.undatedMttUniqueCodesNotInMay!==1||
     data.matchedCodeTechnicalDifferences?.length!==12)throw Error('Cifras documentales incompletas');
-  report=data;
+  if(reviewed.schemaVersion!==1||reviewed.cases?.length!==12||
+   new Set(reviewed.cases.map(x=>x.code3cv)).size!==12||
+   reviewed.cases.some(x=>!data.matchedCodeTechnicalDifferences.some(y=>y.code===x.code3cv&&y.kind===x.kind)||
+    x.certifiedResolved!==false||x.official3cvRectification!==null||
+    !x.manufacturer?.url?.startsWith('https://')))throw Error('Expediente documental incompleto o sin respaldo');
+  report=data;review=reviewed;
   historicGroups=groupMissing(data.historicMissingRecords,'historical');
   undatedGroups=groupMissing(data.historicMissingRecords,'undated');
   $('metricRecentNew').textContent=countFmt.format(report.counts.afterMayNewCodes);
@@ -175,7 +216,11 @@ async function load(){
   // Enlace directo desde el buscador principal al código exacto de la nómina.
   const requestedCode=new URLSearchParams(location.search).get('codigo');
   if(requestedCode&&data.recentRecords.some(x=>x.code===requestedCode))$('deltaSearch').value=requestedCode;
-  $('deltaDownload').disabled=false;switchGroup();renderDifferences();
+  $('deltaDownload').disabled=false;switchGroup();
+  for(const group of Object.keys(review.groups).sort((a,b)=>a.localeCompare(b,'es'))){
+   $('deltaReviewGroup').add(new Option(group+' ('+review.groups[group]+')',group));
+  }
+  $('deltaReviewDownload').disabled=false;renderDifferences();
  }catch(error){
   $('deltaStatus').textContent='No fue posible completar el análisis: '+error.message+'. No se publican resultados parciales.';
   $('deltaDownload').disabled=true;
@@ -183,6 +228,8 @@ async function load(){
  }
 }
 $('deltaGroup').addEventListener('change',switchGroup);
+$('deltaReviewGroup').addEventListener('change',renderDifferences);
+$('deltaReviewDownload').addEventListener('click',downloadReview);
 for(const id of ['deltaBrand','deltaTech','deltaMonth','deltaSearch','deltaPresence']){
  $(id).addEventListener(id==='deltaSearch'?'input':'change',render);
 }

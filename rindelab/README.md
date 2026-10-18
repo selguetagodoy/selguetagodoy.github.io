@@ -193,3 +193,18 @@ La lista MTT muestra modelo, código, número de certificado, fecha y tecnologí
 
 Un fallo transitorio al descargar el cruce MTT no bloquea el buscador de rendimientos: informa la incidencia por separado. La integración incluye regresiones en Chromium para Deepal S05 REEV, Leapmotor B03X, JIM RE-MAX, Kia Sportage HEV, enlaces directos, ausencia de acciones de comparación, paginación y móvil de 320 px.
 
+## Estado de fuentes visible en los resultados
+
+La búsqueda principal distingue las fichas de rendimiento energético 3CV del corte de mayo y las homologaciones MTT posteriores a ese corte que carecen de rendimiento en la base energética. Las fichas energéticas tienen encabezado y línea de procedencia; las tarjetas MTT se presentan con una visualización distinta y conservan código, C.H., fecha y enlace al registro, sin comparador energético. No todos los vehículos de mayo tienen costo energético combinado calculable, especialmente en tecnologías PHEV/REEV, por lo que la distinción es entre **fuentes** y no una promesa de datos completos por vehículo.
+
+## Expediente de 12 diferencias de transmisión o cilindrada
+
+El cruce MTT al 28/09/2026 vs rendimientos del 08/05/2026 detectó 12 códigos presentes en ambos con **11 diferencias de transmisión y una de cilindrada**. Se documentaron individualmente en [mtt-discrepancy-review-2026.json](./sii/mtt-discrepancy-review-2026.json), enlazando una fuente primaria de fabricante o importador para cada familia y conservando ambos valores sin editarlos.
+
+Las familias son JMC Vigus (4), Kia Sportage (2), Karry Q22 (3), MAN TGE (1), Mercedes-Benz GLE (1) y Nissan Kait (1). Fuentes JMC, Kia y Nissan respaldan características de versiones comerciales, pero no rectifican automáticamente la transmisión publicada en el archivo oficial de mayo. En el caso Sportage `KI9911E60325S00-5`, existe una etiqueta energética oficial reproducida por Kia que identifica el **código exacto** y la denominación 6MT 2WD. La evidencia comercial y el documento de homologación deben distinguirse, incluso allí.
+
+Mercedes-Benz indica 2.996 cm³ para GLE 500 e 4MATIC, mientras el registro 3CV de mayo muestra 2.0 L y la nómina MTT 3.0 L. Karry Q22 se comercializa con transmisión manual de cinco velocidades en diversas configuraciones, pero ese dato por sí solo no acredita qué certificado corresponde a cada terminación. MAN TGE dispone de alternativas manuales y automáticas; su familia comercial, por sí sola, no resuelve la discrepancia de un código particular.
+
+La página [Homologaciones recientes](./novedades-3cv.html) conserva los 12 registros con filtro por marca/familia, el dato exacto de ambas fuentes, un desplegable con observación y enlace primario, y exportación CSV del expediente completo o filtrado. Se mantiene el Issue #53 abierto porque no se ha obtenido una **rectificación oficial del 3CV** para ninguno de los 12 registros. El problema Volkswagen Tera 1.6 MT es distinto: discrepancia fabricante contra ambas bases; se mantiene en Issue #47.
+
+La CI ejecuta `node scripts/audit-mtt-discrepancy-review.cjs --json=mtt-discrepancies-audit.json` para validar correspondencia 1:1 con el cruce, códigos, campos, URL HTTPS, alcance de evidencia y cero rectificaciones inventadas. Las pruebas Playwright comprueban las diferencias, los filtros, el desplegable, el CSV y la presentación móvil.
