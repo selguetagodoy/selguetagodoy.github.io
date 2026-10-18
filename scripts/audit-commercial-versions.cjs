@@ -7,6 +7,7 @@ const matcher=require('../rindelab/sii/coverage-matcher.js');
 const audit=require('../rindelab/sii/version-audit.js');
 const manifest=read('vehiculos/data/manifest.json');
 const commercial=read('rindelab/sii/commercial-2026.json');
+const official=read('rindelab/sii/manufacturer-evidence-2026.json');
 const records=manifest.files.flatMap(file=>read('vehiculos/'+file));
 function version(label,brand='Prueba',family='Modelo'){
  return {brand,family,version:label};
@@ -28,13 +29,15 @@ assert(matcher.matches('Changan','Hunter',row('Changan','Hunter 2.0 MT 2WD','Di�
 assert(!matcher.matches('Changan','Hunter',row('Changan','HUNTER EREV 4x2','REEV','4x2','A','2.0')));
 assert(!matcher.matches('Mazda','CX-3',row('Mazda','CX30 2.0','Bencina','4x2','A','2.0')));
 assert(!matcher.matches('Hyundai','Creta',row('Hyundai','Creta Grand 2.0','Bencina','4x2','M','2.0')));
-const report=audit.audit(commercial,records,manifest.published);
+const report=audit.audit(commercial,records,manifest.published,official);
 assert.equal(report.schemaVersion,1);
 assert.equal(report.catalogCount,122);
 assert.equal(report.cases.length,122);
 assert.equal(report.threeCvRecords,8053);
 assert.equal(report.certificationPerformed,false);
 assert.equal(report.certifiedTechnicalMatches,0);
+assert.equal(report.sourceReviewedVersions,22);
+assert.equal(report.manufacturerCertifiedMatches,0);
 assert.equal(Object.values(report.counts).reduce((a,b)=>a+b,0),122);
 assert(report.cases.every(x=>x.familyCandidates===x.consistentCandidates+x.conflictingCandidates));
 assert(report.cases.every(x=>x.reviewableCandidates<=x.consistentCandidates));
@@ -44,6 +47,13 @@ assert(get('Volkswagen','Tera','Trend 1.6 MSI MT').conflictsExamples.some(x=>x.c
 assert(get('Changan','Hunter','Hunter 2.0T 4X2 Comfort MT').examples.every(x=>!x.model.toUpperCase().includes('EREV')));
 assert.equal(get('Subaru','Outback','Premium').status,'informacion_insuficiente','No completar atributos de Premium');
 assert.equal(get('MG','S5','MG S5 EV 49kW COM').expressedSpecifications.technology,'EV');
+assert.equal(get('Suzuki','Fronx','1.5 GL AT').expressedSpecifications.technology,'MHEV');
+assert.equal(get('Changan','Hunter','Hunter 2.0T 4X2 Comfort MT').expressedSpecifications.fuel,'DIESEL');
+assert.equal(get('Changan','Hunter','Hunter 2.0T 4X2 Comfort MT').expressedSpecifications.technology,'DIESEL');
+assert.equal(get('Changan','Avatr 07','AVATR 07 4x2 REEV RWD').expressedSpecifications.transmission,'A');
+assert.equal(get('MG','MG3','MG3 HEV 1.5L COM').expressedSpecifications.transmission,undefined);
+assert.equal(get('Hyundai','Venue','Venue QU2i 1.0T MT GO').manufacturerEvidence.url,'https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/especificaciones-tecnicas/');
+assert.throws(()=>audit.specsFor({brand:'Suzuki',family:'Fronx',version:'1.5 GL AT'},{brand:'Suzuki',family:'Fronx',version:'1.5 GL AT',specifications:{transmission:'M'}}),/Contradicción en nombre comercial/);
 assert(get('Mazda','CX-30','CORE 2.0 2WD 6AT 7G').expressedSpecifications.engine===2);
 
 const notes=read('rindelab/sii/review-notes-2026.json');
@@ -68,7 +78,7 @@ const priorityPayload={
  scope:'24 prioridades documentales, no homologaciones certificadas ni asignación comercial automática',
  priorities:priority.map(c=>({
   brand:c.brand,family:c.family,version:c.version,priceListClp:c.priceListClp,
-  source:c.source,status:c.status,expressedSpecifications:c.expressedSpecifications,
+  source:c.source,status:c.status,expressedSpecifications:c.expressedSpecifications,manufacturerEvidence:c.manufacturerEvidence,
   candidates:c.reviewableCandidates,code3cv:c.singleCandidateCode||null,
   sharedWithOtherVersions:c.sharedWithOtherVersions||0,
   evidence:c.status==='solo_contradicciones'?c.conflictsExamples:c.examples.filter(e=>e.code3cv===c.singleCandidateCode).slice(0,1),
@@ -114,6 +124,7 @@ if(out){
 console.log('RINDELAB: cotejo exploratorio de '+report.catalogCount+' precios versus '+report.threeCvRecords+' fichas 3CV.');
 console.log('Estados documentales: '+JSON.stringify(report.counts));
 console.log('Equivalencias técnicas certificadas: 0; el proceso NO certifica versiones.');
+console.log('Fuentes oficiales de fabricante para versiones individuales: '+report.sourceReviewedVersions+'; certificaciones 3CV: '+report.manufacturerCertifiedMatches);
 if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
  '## Cotejo exploratorio de versiones RINDELAB\n\n'+
  '- Catálogo: '+report.catalogCount+' precios.\n'+

@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-17",
+  "status": "atributos_fabricante_cotejados_no_identidad_3cv_certificada",
+  "sourceRule": "Únicamente fichas de los fabricantes; datos sin respaldo se excluyen.",
+  "entries": [
+    {
+      "brand": "Hyundai",
+      "family": "Kona",
+      "version": "SX2 1.6T AT 4WD N-LINE",
+      "sourceUrl": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-kona/especificaciones-tecnicas/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1.6,
+        "transmission": "A",
+        "drive": "4x4",
+        "fuel": "GASOLINA"
+      },
+      "observation": "Kona N-Line 1.598 cc, automática 8 velocidades y 4WD."
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Tucson",
+      "version": "TUCSON NX4c 1.5T AT 4WD PLUS FL",
+      "sourceUrl": "https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/especificaciones-tecnicas/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1.5,
+        "transmission": "A",
+        "drive": "4x4",
+        "fuel": "GASOLINA"
+      },
+      "observation": "Tucson 1.5 turbo: 8AT, tracción 4WD y gasolina."
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Venue",
+      "version": "Venue QU2i 1.0T MT GO",
+      "sourceUrl": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/especificaciones-tecnicas/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1,
+        "transmission": "M",
+        "fuel": "GASOLINA"
+      },
+      "observation": "Venue QU2i 998 cc turbo; versión MT 6 velocidades."
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Venue",
+      "version": "Venue QU2i 1.0T MT PLUS",
+      "sourceUrl": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/especificaciones-tecnicas/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1,
+        "transmission": "M",
+        "fuel": "GASOLINA"
+      },
+      "observation": "Venue QU2i 998 cc turbo; versión MT 6 velocidades."
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Venue",
+      "version": "Venue QU2i 1.0T AT PLUS",
+      "sourceUrl": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/especificaciones-tecnicas/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1,
+        "transmission": "A",
+        "fuel": "GASOLINA"
+      },
+      "observation": "Venue QU2i 998 cc turbo; versión automática DCT 7 velocidades."
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Venue",
+      "version": "Venue QU2i 1.0T AT DESIGN",
+      "sourceUrl": "https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/especificaciones-tecnicas/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1,
+        "transmission": "A",
+        "fuel": "GASOLINA"
+      },
+      "observation": "Venue QU2i 998 cc turbo; versión automática DCT 7 velocidades."
+    },
+    {
+      "brand": "Suzuki",
+      "family": "Fronx",
+      "version": "1.5 GL AT",
+      "sourceUrl": "https://suzuki.cl/vehiculo/fronx/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1.5,
+        "technology": "MHEV",
+        "transmission": "A"
+      },
+      "observation": "Fronx Hybrid GL/GLX AT: motor Mild Hybrid (ISG) y caja automática."
+    },
+    {
+      "brand": "Suzuki",
+      "family": "Fronx",
+      "version": "1.5 GLX AT",
+      "sourceUrl": "https://suzuki.cl/vehiculo/fronx/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1.5,
+        "technology": "MHEV",
+        "transmission": "A"
+      },
+      "observation": "Fronx Hybrid GL/GLX AT: motor Mild Hybrid (ISG) y caja automática."
+    },
+    {
+      "brand": "MG",
+      "family": "MG3",
+      "version": "MG3 HEV 1.5L COM",
+      "sourceUrl": "https://www.mgmotor.cl/model/MG-3-HEV",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1.5,
+        "technology": "HEV"
+      },
+      "observation": "MG3 1.5L HEV COM: Full Hybrid. El fabricante informa una caja de tres velocidades, sin homologar automáticamente la categoría 3CV a partir de ese dato."
+    },
+    {
+      "brand": "Changan",
+      "family": "Hunter",
+      "version": "Hunter 2.0T 4X2 Comfort MT",
+      "sourceUrl": "https://www.changan.cl/vehiculo/new-hunter/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 2,
+        "technology": "DIESEL",
+        "fuel": "DIESEL",
+        "transmission": "M",
+        "drive": "4x2"
+      },
+      "observation": "Hunter diésel 2.0T DPF AdBlue Euro VI-C, 6MT y tracción 4x2."
+    },
+    {
+      "brand": "Changan",
+      "family": "Hunter",
+      "version": "Hunter 2.0T 4X2 Luxury MT",
+      "sourceUrl": "https://www.changan.cl/vehiculo/new-hunter/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 2,
+        "technology": "DIESEL",
+        "fuel": "DIESEL",
+        "transmission": "M",
+        "drive": "4x2"
+      },
+      "observation": "Hunter diésel 2.0T DPF AdBlue Euro VI-C, 6MT y tracción 4x2."
+    },
+    {
+      "brand": "Changan",
+      "family": "Hunter",
+      "version": "Hunter 2.0T 4X4 Comfort MT",
+      "sourceUrl": "https://www.changan.cl/vehiculo/new-hunter/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 2,
+        "technology": "DIESEL",
+        "fuel": "DIESEL",
+        "transmission": "M",
+        "drive": "4x4"
+      },
+      "observation": "Hunter diésel 2.0T DPF AdBlue Euro VI-C, 6MT y tracción 4x4."
+    },
+    {
+      "brand": "Changan",
+      "family": "Hunter",
+      "version": "Hunter 2.0T 4X4 Elite Sport MT",
+      "sourceUrl": "https://www.changan.cl/vehiculo/new-hunter/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 2,
+        "technology": "DIESEL",
+        "fuel": "DIESEL",
+        "transmission": "M",
+        "drive": "4x4"
+      },
+      "observation": "Hunter diésel 2.0T DPF AdBlue Euro VI-C, 6MT y tracción 4x4."
+    },
+    {
+      "brand": "Changan",
+      "family": "Avatr 07",
+      "version": "AVATR 07 4x2 REEV RWD",
+      "sourceUrl": "https://www.changan.cl/vehiculo/avatr/avatr-07/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "technology": "REEV",
+        "transmission": "A",
+        "drive": "4x2"
+      },
+      "observation": "Avatr 07 REEV tracción posterior 4x2 y transmisión E-CVT."
+    },
+    {
+      "brand": "Changan",
+      "family": "Avatr 07",
+      "version": "AVATR 07 4x4 REEV AWD",
+      "sourceUrl": "https://www.changan.cl/vehiculo/avatr/avatr-07/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "technology": "REEV",
+        "transmission": "A",
+        "drive": "4x4"
+      },
+      "observation": "Avatr 07 REEV tracción total 4x4 y transmisión E-CVT."
+    },
+    {
+      "brand": "Ford",
+      "family": "Territory",
+      "version": "Titanium Híbrida 1.5L AT 4x2",
+      "sourceUrl": "https://www.ford.cl/hibridos/territory-hibrida/versiones/titanium/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "technology": "HEV",
+        "engine": 1.5,
+        "transmission": "A",
+        "drive": "4x2"
+      },
+      "observation": "Territory Híbrida 1.5L, automática DHT y tracción 4x2."
+    },
+    {
+      "brand": "Ford",
+      "family": "Territory",
+      "version": "Platinum Híbrida 1.5L AT 4x2",
+      "sourceUrl": "https://www.ford.cl/hibridos/territory-hibrida/versiones/platinum/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "technology": "HEV",
+        "engine": 1.5,
+        "transmission": "A",
+        "drive": "4x2",
+        "fuel": "GASOLINA"
+      },
+      "observation": "Territory Platinum híbrida 1.5 EcoBoost DHT FWD, gasolina HEV."
+    },
+    {
+      "brand": "Ford",
+      "family": "Maverick",
+      "version": "Lariat FHEV 2.5L AT AWD",
+      "sourceUrl": "https://www.ford.cl/pickups/maverick/comparar-modelos/",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "technology": "HEV",
+        "engine": 2.5,
+        "transmission": "A",
+        "drive": "4x4"
+      },
+      "observation": "Maverick Lariat FHEV 2.5, automática AWD."
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Tera",
+      "version": "Comfort 1.0 TSI AT",
+      "sourceUrl": "https://www.volkswagen.cl/tera/tera",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1,
+        "transmission": "A"
+      },
+      "observation": "Tera 1.0 TSI, transmisión automática 6 velocidades."
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Tera",
+      "version": "High 1.0 TSI AT",
+      "sourceUrl": "https://www.volkswagen.cl/tera/tera",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1,
+        "transmission": "A"
+      },
+      "observation": "Tera 1.0 TSI, transmisión automática 6 velocidades."
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Tera",
+      "version": "Outfit 1.0 TSI AT",
+      "sourceUrl": "https://www.volkswagen.cl/tera/tera",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1,
+        "transmission": "A"
+      },
+      "observation": "Tera 1.0 TSI, transmisión automática 6 velocidades."
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Taos",
+      "version": "Comfortline 1.5 TSI AT",
+      "sourceUrl": "https://www.volkswagen.cl/taos/nuevo-taos",
+      "asOf": "2026-10-17",
+      "specifications": {
+        "engine": 1.5,
+        "transmission": "A"
+      },
+      "observation": "Taos Comfortline 1.5 TSI AT8."
+    }
+  ]
+}

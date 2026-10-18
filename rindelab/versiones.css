@@ -35,3 +35,10 @@
 .reviewed-discrepancy p{margin:6px 0}
 .reviewed-discrepancy a{font-size:11px;font-weight:750;overflow-wrap:anywhere}
 @media(max-width:600px){.priority-tools{align-items:flex-start;flex-direction:column}.priority-toggle{font-size:11px}}
+
+/* Respaldo de fabricante: discreto, plegable y sin certificar códigos 3CV. */
+.manufacturer-evidence{margin-top:9px;padding:8px 10px;background:#f0f9f9;border:1px solid #cde6e5;border-radius:7px;font-size:11px;font-weight:500;line-height:1.5;color:#305766}
+.manufacturer-evidence summary{font-weight:750;cursor:pointer;color:#126378}
+.manufacturer-evidence p{margin:9px 0 6px}
+.manufacturer-evidence a{display:block;font-weight:750;margin:3px 0 6px;overflow-wrap:anywhere}
+.manufacturer-evidence small{font-size:10px;color:#557582;display:block}

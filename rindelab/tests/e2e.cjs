@@ -859,6 +859,44 @@ await test('Código compartido se distingue de versión comercial individual',as
  assert.match(await next.textContent(),/mismo código candidato usado por 1 otra/);
  await p.close();
 });
+
+await test('Fronx MHEV respaldado por fabricante sin certificar equivalencia comercial 3CV',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900}});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='122',{timeout:30000});
+ assert.match(await p.locator('#versionsStatus').textContent(),/22 versiones contrastadas con ficha de fabricante/);
+ await p.selectOption('#versionsBrand','Suzuki');await p.fill('#versionsSearch','Fronx');
+ const gl=p.locator('#versionsRows tr').filter({hasText:'1.5 GL AT'});
+ assert.equal(await gl.count(),1);
+ assert.match(await gl.textContent(),/Tecnología: MHEV/);
+ await gl.locator('.manufacturer-evidence summary').click();
+ assert.match(await gl.textContent(),/Mild Hybrid/);
+ assert.match(await gl.textContent(),/No confirma que el código 3CV corresponda exactamente a esta versión/);
+ assert.equal(await gl.locator('.manufacturer-evidence a').getAttribute('href'),'https://suzuki.cl/vehiculo/fronx/');
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
+await test('Hunter diésel y Avatr REEV muestran fichas oficiales sin cruzar tecnologías',async()=>{
+ const p=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='122',{timeout:30000});
+ await p.selectOption('#versionsBrand','Changan');await p.fill('#versionsSearch','Hunter 2.0T 4X2 Comfort MT');
+ const hunter=p.locator('#versionsRows tr').first();
+ assert.match(await hunter.textContent(),/Tecnología: DIESEL/);
+ assert.match(await hunter.textContent(),/Combustible: DIESEL/);
+ await hunter.locator('.manufacturer-evidence summary').click();
+ assert.match(await hunter.textContent(),/diésel 2.0T DPF/);
+ await p.fill('#versionsSearch','AVATR 07 4x2 REEV RWD');
+ const avatr=p.locator('#versionsRows tr').first();
+ assert.match(await avatr.textContent(),/Tecnología: REEV/);
+ assert.match(await avatr.textContent(),/Transmisión 3CV: A/);
+ const dims=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+ assert(dims.doc<=dims.view+3,JSON.stringify(dims));
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){

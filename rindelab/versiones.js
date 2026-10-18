@@ -78,6 +78,14 @@ function render(){
    code.textContent='Código 3CV candidato: '+x.singleCandidateCode;
    state.append(code);
   }
+  if(x.manufacturerEvidence){
+   const evidence=document.createElement('details');evidence.className='manufacturer-evidence';
+   const h=document.createElement('summary');h.textContent='Ver atributos respaldados por fabricante';evidence.append(h);
+   const note=document.createElement('p');note.textContent=x.manufacturerEvidence.observation;evidence.append(note);
+   const source=document.createElement('a');source.href=x.manufacturerEvidence.url;source.rel='noopener noreferrer';source.target='_blank';source.textContent='Consultar ficha oficial ↗';evidence.append(source);
+   const warning=document.createElement('small');warning.textContent='No confirma que el código 3CV corresponda exactamente a esta versión.';evidence.append(warning);
+   state.append(evidence);
+  }
   if(x.sharedPreliminaryCandidate){
    const shared=document.createElement('p');shared.className='candidate-shared';
    shared.textContent='Atención: mismo código candidato usado por '+x.sharedWithOtherVersions+' otra(s) versión(es) comerciales. No demuestra equivalencia de equipamiento.';
@@ -111,20 +119,21 @@ function download(){
 async function load(){
  try{
   if(!window.RindelabVersionAudit||!window.RindelabCoverage)throw Error('Cotejo de versiones no disponible');
-  const [prices,manifest,notes]=await Promise.all([
+  const [prices,manifest,notes,manufacturer]=await Promise.all([
    fetch('./sii/commercial-2026.json?v=20261018-cotejo1').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}),
    fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('Manifiesto 3CV no disponible');return r.json();}),
-   fetch('./sii/review-notes-2026.json?v=20261018-qa1').then(r=>{if(!r.ok)throw Error('Registro de discrepancias no disponible');return r.json();})
+   fetch('./sii/review-notes-2026.json?v=20261018-qa1').then(r=>{if(!r.ok)throw Error('Registro de discrepancias no disponible');return r.json();}),
+   fetch('./sii/manufacturer-evidence-2026.json?v=20261018-sources1').then(r=>{if(!r.ok)throw Error('Evidencia de fabricantes no disponible');return r.json();})
   ]);
   if(notes.schemaVersion!==1||!Array.isArray(notes.cases))throw Error('Notas de auditoría inválidas');
   reviewNotes=notes.cases;
   const files=await Promise.all(manifest.files.map(p=>fetch('../vehiculos/'+p).then(r=>{if(!r.ok)throw Error('Falta archivo 3CV: '+p);return r.json();})));
-  report=window.RindelabVersionAudit.audit(prices,files.flat(),manifest.published);
+  report=window.RindelabVersionAudit.audit(prices,files.flat(),manifest.published,manufacturer);
   $('versionTotal').textContent=number.format(report.catalogCount);
   $('versionSingle').textContent=number.format(report.counts.un_candidato_preliminar||0);
   $('versionMultiple').textContent=number.format(report.counts.varios_candidatos_preliminares||0);
   $('versionUnresolved').textContent=number.format(report.catalogCount-(report.counts.un_candidato_preliminar||0)-(report.counts.varios_candidatos_preliminares||0));
-  $('versionsStatus').textContent='Corte 3CV '+report.sourceCut+' · '+number.format(report.threeCvRecords)+' homologaciones al corte. Equivalencias técnicas certificadas: ninguna.';
+  $('versionsStatus').textContent='Corte 3CV '+report.sourceCut+' · '+number.format(report.threeCvRecords)+' homologaciones al corte · '+report.sourceReviewedVersions+' versiones contrastadas con ficha de fabricante. Equivalencias técnicas certificadas: ninguna.';
   const brands=[...new Set(report.cases.map(x=>x.brand))].sort((a,b)=>a.localeCompare(b,'es'));
   for(const b of brands)$('versionsBrand').add(new Option(b,b));
   $('versionsPrioritySummary').textContent=(report.counts.solo_contradicciones||0)+' discrepancias · '+(report.counts.un_candidato_preliminar||0)+' candidatos únicos · '+report.singleCandidateUniqueCodes+' códigos 3CV distintos entre estos últimos';

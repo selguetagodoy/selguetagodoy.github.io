@@ -11,7 +11,7 @@
   ['technology','tecnología'],['engine','cilindrada'],['transmission','transmisión'],
   ['drive','tracción'],['generation','código de generación'],['fuel','combustible']
  ];
- function specsFor(price){
+ function specsFor(price,evidence){
   const v=N(price.version), result={};
   const engine=String(price.version).toUpperCase().replace(/,/g,'.').match(/(?:^|[^0-9A-Z])([0-9][.][0-9])(?:L|T|I)?(?=[^0-9A-Z]|$)/);
   if(engine)result.engine=Number(engine[1].replace(',','.'));
@@ -28,6 +28,14 @@
   if(/\bDIESEL\b/.test(v))result.fuel='DIESEL';
   const generation=v.match(/\b(SU2ID|SU2I|NX4C|NX4|LX3|SX2|QU2I|AX1)\b/);
   if(generation)result.generation=generation[1];
+  if(evidence){
+   if(evidence.brand!==price.brand||evidence.family!==price.family||evidence.version!==price.version)throw Error('Evidencia asignada a una versión distinta');
+   for(const [key,value] of Object.entries(evidence.specifications)){
+    if(!fields.some(([name])=>name===key))throw Error('Atributo no cotejable: '+key);
+    if(result[key]!==undefined&&N(result[key])!==N(value))throw Error('Contradicción en nombre comercial y fabricante: '+price.brand+' '+price.family+' '+price.version+' · '+key);
+    result[key]=value;
+   }
+  }
   return result;
  }
  function forRow(row){
@@ -63,7 +71,7 @@
   model:row[1],code3cv:row[9],date:row[8],technology:row[2],
   engine:row[7],transmission:row[6],drive:row[5],fuel:row[3]
  });
- function audit(prices,rows,published){
+ function audit(prices,rows,published,manufacturer){
   if(!Array.isArray(prices)||!Array.isArray(rows)||!published)throw Error('Fuentes de cotejo técnico incompletas');
   const active=rows.filter(r=>Array.isArray(r)&&r[0]&&r[1]&&r[8]&&r[8]<=published);
   const byBrand=new Map();
@@ -71,8 +79,21 @@
    const b=N(row[0]);if(!byBrand.has(b))byBrand.set(b,[]);
    byBrand.get(b).push(row);
   }
+  const evidenceMap=new Map();
+  if(manufacturer){
+   if(manufacturer.schemaVersion!==1||!Array.isArray(manufacturer.entries))throw Error('Fuentes de fabricante inválidas');
+   const keyFor=p=>[p.brand,p.family,p.version].join('|');
+   const commercialKeys=new Set(prices.map(keyFor));
+   for(const entry of manufacturer.entries){
+    const key=keyFor(entry);
+    if(evidenceMap.has(key)||!commercialKeys.has(key))throw Error('Evidencia duplicada o versión no encontrada: '+key);
+    if(!entry.sourceUrl||!entry.sourceUrl.startsWith('https://')||!entry.asOf||!entry.observation||!entry.specifications||!Object.keys(entry.specifications).length)throw Error('Evidencia incompleta: '+key);
+    evidenceMap.set(key,entry);
+   }
+  }
   const cases=prices.map((p,index)=>{
-   const spec=specsFor(p);
+   const evidence=evidenceMap.get([p.brand,p.family,p.version].join('|'))||null;
+   const spec=specsFor(p,evidence);
    const candidates=(byBrand.get(N(p.brand))||[]).filter(r=>coverage.matches(p.brand,p.family,r));
    const consistent=[],contradicted=[];
    for(const c of candidates){
@@ -96,6 +117,7 @@
     id:index+1,brand:p.brand,family:p.family,version:p.version,
     modelYear:p.modelYear,priceListClp:p.priceListClp,source:p.source,checkedAt:p.checkedAt,
     expressedSpecifications:spec,expressedCount:documented,
+    manufacturerEvidence:evidence?{url:evidence.sourceUrl,asOf:evidence.asOf,observation:evidence.observation,specifications:evidence.specifications}:null,
     familyCandidates:candidates.length,consistentCandidates:consistent.length,
     conflictingCandidates:contradicted.length,reviewableCandidates:reviewable.length,status,
     // La lista truncada es solo visual; los conteos provienen del universo completo.
@@ -127,6 +149,8 @@
    scope:'Filtro exploratorio de rasgos declarados en nombres de versiones y columnas 3CV. No verifica identidad comercial, generación ni disponibilidad.',
    singleCandidateUniqueCodes:codeUsers.size,
    sharedCandidateVersions:cases.filter(x=>x.sharedPreliminaryCandidate).length,
+   sourceReviewedVersions:cases.filter(x=>x.manufacturerEvidence!==null).length,
+   manufacturerCertifiedMatches:0,
    counts:statuses,cases};
  }
  return {specsFor,compare,audit};

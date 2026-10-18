@@ -129,3 +129,17 @@ Los 22 candidatos únicos **no representan necesariamente 22 códigos 3CV exclus
 La discrepancia Tera se documenta en [review-notes-2026.json](./sii/review-notes-2026.json), con fuente oficial Volkswagen, código 3CV y diferencia de transmisión. Según el fabricante, Tera Trend MT y Comfort MT llevan caja manual de cinco velocidades, mientras la ficha 3CV «TERA 1.6 MT» código VW9988E60525S00-6 indica «A» en la columna de transmisión. No se modifica ningún registro de la fuente 3CV. El expediente sigue abierto para contrastar con la autoridad correspondiente.
 
 En cada ejecución de GitHub Actions, la etapa auditora genera `versions-audit.json`, `priority-review.json` y `priority-review.md`, y los publica como artefacto `rindelab-qa-3cv-prioridades` por 90 días, con las 24 prioridades y las evidencias para revisión. También se pueden generar localmente con `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`.
+
+## Tercera capa: fichas técnicas oficiales de fabricantes
+
+El archivo [manufacturer-evidence-2026.json](./sii/manufacturer-evidence-2026.json) recoge comprobaciones sobre **22 versiones comerciales específicas** cuyos nombres ya tenían un candidato 3CV preliminar único. Cada registro identifica marca, familia, versión exacta, URL oficial, fecha de revisión, atributos expresos del fabricante y observación.
+
+El cotejo ahora añade especificaciones **solo cuando el fabricante las documenta** y no contradicen los atributos deducibles del nombre comercial. Una contradicción produce fallo en auditoría; no se resuelve atribuyendo una versión por similitud.
+
+**Suzuki Fronx:** el fabricante documenta tecnología Mild Hybrid para GL y GLX AT, contrastada con MHEV de la base 3CV. **Changan Hunter:** las variantes 2.0T MT corresponden a motor diésel, por lo que se cotejan además tipo de combustible y tecnología Diésel, separando las REEV. **Hyundai Venue:** las versiones MT y AT corresponden, respectivamente, a caja manual de seis velocidades y DCT de siete; el dato 3CV solo identifica categoría general M/A.
+
+Se incluyen también las fichas oficiales de Hyundai Kona, Tucson; Changan Avatr 07; MG3 híbrido; Ford Territory híbrida y Maverick FHEV; Volkswagen Tera automático y Taos Comfortline. En Avatr E-CVT y otras automáticas, el cotejo con 3CV usa la categoría amplia A y nunca presupone equivalencia detallada de transmisión.
+
+El indicador `sourceReviewedVersions` refleja fichas comerciales con alguna especificación contrastada, **no vehículos con código 3CV certificado**. Las dos discrepancias Volkswagen Tera manual siguen abiertas. No se cambian precios, fechas de homologación, emisiones ni rendimientos oficiales.
+
+Ejecutar: `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`. El expediente sigue disponible como artefacto descargable desde GitHub Actions.
