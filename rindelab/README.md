@@ -19,7 +19,7 @@ La interfaz principal no incluye contadores de marcas, rankings de extremos, sim
 
 ## Fuente, datos y límites
 
-La base emplea el registro oficial 3CV publicado por el Ministerio de Energía con corte declarado **8 de mayo de 2026**. El manifiesto contiene **8.056 registros** y la aplicación utiliza **8.053** con fecha igual o anterior al corte. No se modifica el archivo de origen. Es una base de homologaciones históricas, no de vehículos disponibles actualmente para venta.
+La base combina **8.053 fichas** del archivo 3CV con corte al **8 de mayo de 2026** y **272 códigos adicionales** identificados en la API oficial de Consumo Vehicular consultada el **18 de octubre de 2026**, para un total de **8.325 códigos únicos**. El manifiesto original de mayo contiene 8.056 registros, de los que la aplicación emplea 8.053 al corte; se conservan sin alteraciones, incluso las diez fichas históricas ausentes de la consulta más reciente. Los 272 registros nuevos preservan sus valores y su ciclo de ensayo oficial. Es un archivo de homologaciones, no una lista de modelos en venta. Los detalles del cruce están documentados en la sección «Quinta capa».
 
 - El orden por costo utiliza supuestos iniciales editables: bencina 93 CLP 1.535/L, diésel CLP 1.503/L y electricidad CLP 340/kWh. No son precios en tiempo real ni especifican el octanaje exigido por el fabricante.
 - Combustible: **100 ÷ rendimiento mixto km/L × precio CLP/L**. Eléctrico: **100 ÷ rendimiento km/kWh × tarifa CLP/kWh**, sin pérdidas de carga ni cobros adicionales.
@@ -158,7 +158,7 @@ La página [Control documental de homologaciones](./homologaciones.html) muestra
 
 La CI ejecuta `node scripts/audit-homologation-register.cjs --json=homologation-ledger-audit.json`, verifica datos y hash, 14/14 códigos, certificado C.H. 7304, diferencias de transmisión y prohibición de certificar versiones por inferencia. Incluye pruebas negativas que deben fallar ante cambios artificiales de fila, transmisión, cilindrada, hash o confirmaciones manuales sin sustento.
 
-**Separación metodológica:** la base de rendimientos (08/05/2026) se mantiene como fuente principal del buscador; la nómina MTT (28/09/2026) se emplea como evidencia registral adicional. No se han incorporado sus rendimientos como reemplazo ni se ha declarado que refleje stock disponible.
+**Separación metodológica:** la base de mayo (08/05/2026) permanece intacta y se complementa con fichas oficiales de la API consultada el 18/10/2026. La nómina MTT (28/09/2026) se emplea como evidencia registral adicional y **no** como fuente sustitutiva de rendimientos. En ningún caso se afirma que estos registros representen stock disponible.
 
 ## Portada fotográfica (octubre de 2026)
 
@@ -185,17 +185,17 @@ Los extractos congelados se encuentran en [mtt-sept-2026-code-index.json](./sii/
 
 ## Homologaciones MTT visibles desde el buscador principal
 
-A partir del cotejo MTT al 28/09/2026, la portada **ya permite buscar los 229 códigos de homologación posteriores al corte del 08/05/2026 que no figuran en la base energética 3CV**. Previamente los códigos se podían consultar únicamente en una página separada; esa desconexión se corrige.
+En una primera etapa, el cotejo MTT al 28/09/2026 incorporó a la portada la búsqueda de **229 códigos posteriores al corte de mayo** que no estaban en esa planilla energética histórica. Desde la integración de la API oficial de octubre, **228 de esos códigos cuentan con fichas energéticas y se buscan en el catálogo principal**; uno sigue visible solo como homologación MTT. La página independiente preserva el cruce histórico completo.
 
-El buscador carga su catálogo energético existente de **8.053 registros** y en paralelo obtiene los 230 registros con fecha posterior de la nómina MTT, excluye el único que ya figuraba en mayo y presenta los 229 restantes como una **sección distinguible** en los resultados. Filtra por texto libre, marca, familia, tecnología oficialmente declarada y fecha. Las nuevas marcas, familias y sugerencias se incorporan a los selectores. También se puede buscar por código exacto y abrir el registro en la página de novedades a través de `?codigo=<código>`.
+El buscador carga **8.325 fichas energéticas** (8.053 de mayo más 272 incorporadas desde la consulta oficial de octubre) y consulta separadamente el conjunto MTT de 230 registros posteriores al corte histórico. Excluye el código que ya estaba en mayo y los **228 incorporados desde la API**, por lo que actualmente la sección «solo MTT» presenta **un único código sin ficha energética**. Se filtra por texto, marca, familia, tecnología y fecha; los códigos MTT conservan el enlace al registro de novedades `?codigo=<código>`.
 
-La lista MTT muestra modelo, código, número de certificado, fecha y tecnología de origen; incluye paginación propia y no ofrece «Comparar» ni un costo inventado. **Las fichas que carecen de rendimientos no se introducen en el conjunto de vehículos comparables, ni en las estadísticas o rankings energéticos.** Los filtros de carrocería y ciclo WLTP/NEDC se consideran no aplicables al catálogo MTT porque ese archivo no ofrece la misma evidencia de eficiencia energética; al solicitarlos se muestran únicamente fichas con dichos atributos en la base de mayo. La clasificación de combustible y motorización para los filtros MTT deriva de los campos explícitos de su nómina, no de denominaciones comerciales.
+El registro MTT pendiente muestra modelo, código, certificado, fecha y tecnología de origen; no ofrece «Comparar» ni costo inventado. **Los registros sin rendimiento no entran en las fichas comparables ni en estadísticas o rankings energéticos.** Los filtros de carrocería y ciclo WLTP/NEDC solo operan sobre las fichas energéticas con dichos atributos, sean de mayo u octubre. La clasificación de motorización MTT procede de los campos explícitos de su nómina, no de nombres comerciales.
 
-Un fallo transitorio al descargar el cruce MTT no bloquea el buscador de rendimientos: informa la incidencia por separado. La integración incluye regresiones en Chromium para Deepal S05 REEV, Leapmotor B03X, JIM RE-MAX, Kia Sportage HEV, enlaces directos, ausencia de acciones de comparación, paginación y móvil de 320 px.
+Un fallo transitorio al descargar el cruce MTT no bloquea el buscador de rendimientos: informa la incidencia por separado. Las regresiones Chromium comprueban que Deepal S05 REEV, Leapmotor B03X, JIM RE-MAX y Kia Sportage HEV ahora aparecen como **fichas energéticas oficiales** cuando el dato está publicado; el Porsche Cayenne pendiente permanece como registro MTT sin rendimiento ni botón de comparación. También se prueban enlaces directos, paginación y móvil de 320 px.
 
 ## Estado de fuentes visible en los resultados
 
-La búsqueda principal distingue las fichas de rendimiento energético 3CV del corte de mayo y las homologaciones MTT posteriores a ese corte que carecen de rendimiento en la base energética. Las fichas energéticas tienen encabezado y línea de procedencia; las tarjetas MTT se presentan con una visualización distinta y conservan código, C.H., fecha y enlace al registro, sin comparador energético. No todos los vehículos de mayo tienen costo energético combinado calculable, especialmente en tecnologías PHEV/REEV, por lo que la distinción es entre **fuentes** y no una promesa de datos completos por vehículo.
+La búsqueda principal distingue **fichas energéticas históricas de mayo, fichas incorporadas desde la API oficial de octubre y registros MTT que aún carecen de ficha energética**. Cada tarjeta energética declara su procedencia y ciclo; el único registro MTT pendiente conserva código, C.H., fecha y enlace documental sin comparador energético. Algunas fichas PHEV/REEV carecen de un costo energético combinado calculable: la procedencia **no** implica que todos los campos estén disponibles.
 
 ## Expediente de 12 diferencias de transmisión o cilindrada
 
