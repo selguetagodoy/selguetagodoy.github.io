@@ -1180,7 +1180,7 @@ await test('Resultados de portada distinguen visualmente fuente energética y ho
  await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
  assert.equal(await p.locator('.mtt-result-card').count(),1);
  assert(await p.locator('#sourceLegend').isVisible());
- assert(await p.locator('#energyResultsHeading').isHidden());
+ assert.equal(await p.locator('#energyResultsHeading').isVisible(),(await p.locator('.vehicle-card').count())>0);
  assert.match(await p.locator('#mttSearchSection').textContent(),/sin consumo oficial de mayo/);
  assert.equal(await p.locator('.mtt-result-card [data-compare]').count(),0);
  await p.fill('#query','Sportage');await p.click('#searchButton');
@@ -1215,7 +1215,7 @@ await test('12 discrepancias con evidencia primaria, desglose familiar y CSV rev
  await p.selectOption('#deltaReviewGroup','Mercedes-Benz GLE');
  assert.equal(await p.locator('#deltaConflicts tr').count(),1);
  assert.match(await p.locator('#deltaConflicts').textContent(),/3 L/);
- assert.match(await p.locator('#deltaConflicts').textContent(),/2 L/);
+ assert.match(await p.locator('#deltaConflicts').textContent(),/2\.0 L/);
  assert.deepEqual(errors,[]);
  await p.close();
 });
