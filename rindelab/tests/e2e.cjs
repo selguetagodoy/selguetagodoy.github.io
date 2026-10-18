@@ -107,7 +107,6 @@ await test('Escenario mixto pondera precios sin imputar rendimiento o perdidas',
  await page.selectOption('#chargeScenario','public');
  await page.selectOption('#publicChargeRate',{label:'AC ≤22 kW · ciudad valle · $340'});
  assert.equal(await page.inputValue('#electricPrice'),'340');
- await page.selectOption('#homeChargeShare','80');
 });
 await test('Costo anual y quinquenal responde al kilometraje sin extrapolar PHEV',async()=>{
  await page.selectOption('#tech','Bencina');await page.click('#searchButton');
