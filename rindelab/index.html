@@ -17,7 +17,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"RINDELAB","url":"https://selguetagodoy.github.io/rindelab/","description":"Consulta homologaciones 3CV y compara costos energéticos estimados de vehículos en Chile.","applicationCategory":"ReferenceApplication","operatingSystem":"Web","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}},{"@type":"Dataset","name":"RINDELAB: rendimientos vehiculares homologados en Chile","description":"Integración independiente de fichas 3CV de mayo 2026 y nuevos códigos de la consulta oficial de octubre 2026. No equivale a un catálogo de vehículos disponibles para venta.","url":"https://selguetagodoy.github.io/rindelab/","isBasedOn":["https://www.consumovehicular.cl/","https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx"],"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}}]}</script>
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261018-charge2"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
+<link rel="stylesheet" href="./v6.css?v=20261018-home3"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -87,7 +87,7 @@
   </form>
  </section>
  <section id="supuestos" class="energy-assumptions" aria-labelledby="energyTitle">
-    <div class="assumptions-heading"><div><span class="search-spot">TU ESCENARIO</span><h2 id="energyTitle">Calcula según tus kilómetros y tarifas</h2></div><p>Modifica los valores para acercarlos a tu situación. No son cotizaciones en tiempo real.</p></div>
+    <div class="assumptions-heading"><div><span class="search-spot">TU ESCENARIO</span><h2 id="energyTitle">Compara cuánto cuesta cargar en casa y en electrolinera</h2></div><p>Modifica los valores para acercarlos a tu situación. No son cotizaciones en tiempo real.</p></div>
     <div class="assumptions-grid">
       <div class="field"><label for="annualKm">Kilómetros al año</label><select id="annualKm"><option value="5000">5.000 km</option><option value="10000">10.000 km</option><option value="15000" selected>15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000 km</option><option value="30000">30.000 km</option></select></div>
       <div class="field"><label for="gasPrice">Bencina ($/L)</label><input id="gasPrice" type="number" min="1" max="10000" step="1" value="1535"></div>
@@ -104,12 +104,33 @@
        <option value="495">DC ≥120 kW · ciudad punta · $495</option>
        <option value="495">DC ≥120 kW · carretera · $495</option>
       </select></div>
-      <div class="field" id="homeChargeField" hidden><label for="homeChargeRate">Tu tarifa domiciliaria ($/kWh)</label><input id="homeChargeRate" type="number" min="1" max="10000" step="1" inputmode="numeric" placeholder="Consulta tu boleta; sin valor predeterminado"></div>
+      <div class="field" id="homeChargeField" hidden><label for="homeChargeRate">Tu precio de casa ($/kWh)</label><input id="homeChargeRate" type="number" min="1" max="10000" step="1" inputmode="numeric" placeholder="Ej. valor $/kWh de tu boleta"></div>
       <div class="field" id="homeShareField" hidden><label for="homeChargeShare">Porcentaje cargado en casa</label><select id="homeChargeShare"><option value="20">20 %</option><option value="40">40 %</option><option value="50">50 %</option><option value="60">60 %</option><option value="80" selected>80 %</option><option value="90">90 %</option></select></div>
       <div class="field"><label for="electricPrice">Tarifa eléctrica aplicada ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="340" readonly aria-describedby="chargeStatus"></div>
     </div>
+    <details id="homeBillHelper" class="home-bill-helper" hidden>
+      <summary>¿No sabes cuánto pagas por kWh en casa? Calcúlalo con tu boleta</summary>
+      <p class="bill-help">Usa tu boleta residencial para estimar un precio promedio por kWh. La estimación se basa en el monto de la boleta menos los cargos fijos que ingreses, dividido por los kWh facturados. <strong>No equivale necesariamente al costo marginal de una recarga adicional</strong>, especialmente si hay tramos de consumo, descuentos, subsidios u otros cargos.</p>
+      <div class="bill-grid">
+        <div class="field"><label for="homeBillAmount">Total de tu boleta ($)</label><input type="number" id="homeBillAmount" inputmode="numeric" min="1" step="1" placeholder="Ej. 35000"></div>
+        <div class="field"><label for="homeBillKwh">Consumo facturado (kWh)</label><input type="number" id="homeBillKwh" inputmode="decimal" min="1" step="0.01" placeholder="Ej. 150"></div>
+        <div class="field"><label for="homeBillFixed">Cargos no proporcionales al consumo ($)</label><input type="number" id="homeBillFixed" inputmode="numeric" min="0" step="1" placeholder="Indica cargos fijos; opcional"></div>
+      </div>
+      <button id="calcHomeFromBill" class="button secondary" type="button">Usar estimación de mi boleta</button>
+      <p id="homeBillStatus" class="bill-result" role="status" aria-live="polite"></p>
+      <p class="bill-help">Si tu boleta detalla el valor del kWh y los cargos variables, es preferible ingresar directamente el precio aplicable. Puedes revisar las <a href="https://www.sec.cl/area-ciudadana/tarifas-electricas/" target="_blank" rel="noopener noreferrer">tarifas residenciales BT1 (SEC)</a> y los <a href="https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.htmlSi.html" target="_blank" rel="noopener noreferrer">pliegos de Enel</a> cuando corresponda.</p>
+    </details>
+    <section class="charge-example" aria-labelledby="chargeExampleHeading">
+      <div class="charge-example-title"><h3 id="chargeExampleHeading">¿Cuánto cuesta una recarga de energía?</h3><div class="field"><label for="chargeKwh">Energía cargada (kWh)</label><input id="chargeKwh" type="number" min="1" max="200" step="1" value="20" inputmode="numeric"></div></div>
+      <div class="charge-example-grid">
+        <div class="charge-example-value"><small>En casa</small><strong id="homeSessionCost">Ingresa tu tarifa</strong><span id="homeSessionRate">Depende de tu boleta</span></div>
+        <div class="charge-example-value"><small>En electrolinera</small><strong id="publicSessionCost">$6.800</strong><span id="publicSessionRate">Copec Voltex, AC ciudad valle</span></div>
+      </div>
+      <p id="chargeDifference" class="charge-difference" role="status" aria-live="polite">Agrega tu tarifa domiciliaria para comparar.</p>
+      <p class="charge-disclaimer">Cálculo de energía: kWh × tarifa. No es una carga completa obligatoriamente, ni incluye pérdidas eléctricas, servicios por tiempo, potencia instalada o cambios de tramo tarifario.</p>
+    </section>
     <p id="chargeStatus" class="charge-status" role="status" aria-live="polite">Copec Voltex · AC hasta 22 kW · ciudad, horario valle. Tarifa aplicada: $340/kWh.</p>
-    <p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se exige una tarifa ingresada manualmente desde tu boleta; sin ese dato, los escenarios domiciliario y mixto no generan costos eléctricos. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. <a href="#fuentes">Revisar metodología</a>.</p>
+    <p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa una tarifa introducida desde tu boleta o estimada con el formulario local, sin un precio residencial nacional por defecto. Si falta, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="#fuentes">Revisar metodología</a>.</p>
   </section>
  <section id="results" class="results" aria-labelledby="resultsTitle" hidden>
   <div class="results-head">
@@ -151,7 +172,7 @@
    <summary>Metodología y fuentes <span aria-hidden="true">⌄</span></summary>
    <div class="source-body">
     <p><strong>Datos oficiales.</strong> RINDELAB conserva 8.053 fichas del archivo 3CV del 8 de mayo de 2026 y añade 272 códigos distintos publicados en la <a href="https://www.consumovehicular.cl/" target="_blank" rel="noopener noreferrer">nueva plataforma oficial Consumo Vehicular</a>, consultada el 18 de octubre de 2026. Se muestran <span id="recordCount">8.325</span> fichas únicas de ambas fuentes. El portal oficial reporta 8.315 registros, de los cuales 8.043 ya coincidían con nuestra base; conservamos otros diez registros históricos de mayo sin borrarlos. Esto no representa stock ni precios de venta.</p>
-    <p><strong>Estimación energética.</strong> Para combustibles se utiliza 100 ÷ km/L × precio por litro; para eléctricos, 100 ÷ km/kWh × tarifa efectiva por kWh. En carga domiciliaria se utiliza únicamente la tarifa introducida por el usuario; en carga pública, la tarifa elegida de Copec Voltex; en escenario mixto se ponderan las tarifas por el porcentaje de energía asignado a cada lugar. Esta mezcla no representa pérdidas de carga, consumo de carretera, cargos por minuto, descuentos ni un patrón verificado. La proyección anual y quinquenal mantiene tarifas y rendimiento constantes. Para PHEV y REEV solo se presentan rendimientos eléctrico y ponderado informados por 3CV; no se inventa un costo energético combinado.</p>
+    <p><strong>Estimación energética.</strong> Para combustibles se utiliza 100 ÷ km/L × precio por litro; para eléctricos, 100 ÷ km/kWh × tarifa efectiva por kWh. En carga domiciliaria se utiliza la tarifa introducida por el usuario o la aproximación obtenida desde su boleta (total menos cargos no asociados al consumo, dividido por kWh facturados); en carga pública, la tarifa elegida de Copec Voltex; en escenario mixto se ponderan las tarifas por el porcentaje de energía asignado a cada lugar. El promedio de la boleta puede diferir del precio marginal por kWh debido a cargos fijos, descuentos, subsidios y tramos; esta mezcla no representa pérdidas de carga, consumo de carretera, cargos por minuto, descuentos ni un patrón verificado. La proyección anual y quinquenal mantiene tarifas y rendimiento constantes. Para PHEV y REEV solo se presentan rendimientos eléctrico y ponderado informados por 3CV; no se inventa un costo energético combinado.</p>
     <p><strong>Comparabilidad.</strong> La búsqueda conserva NEDC y WLTP, identificados por vehículo; sus consumos no son directamente equivalentes. Los rankings comienzan en WLTP y permiten cambiar a NEDC o activar una exploración conjunta no directamente comparable.</p>
     <p><strong>Tasación fiscal y permiso.</strong> La nómina SII 2026 tiene códigos, años de fabricación y versiones distintas de las homologaciones 3CV. La consulta es manual y no asigna importes automáticamente. El permiso SII es el valor publicado para un código y año; la tasación no es el precio de reventa. Los precios nuevos se muestran solo como referencias de modelo publicadas por fabricantes, con su fuente y fecha; no necesariamente corresponden a la versión o a un vehículo a la venta.</p>
     <p><strong>Precios de lista.</strong> Se muestran únicamente valores de lista de vehículos nuevos documentados por fabricante o tienda oficial, sin bonos ni financiamiento. La cobertura inicial es parcial y exige seleccionar manualmente una versión comercial; no se presume que coincida con la homologación 3CV. Los valores pueden cambiar y no incluyen gastos adicionales cuando se cobran aparte. Si falta una fuente verificable, RINDELAB no muestra un precio.</p>
@@ -222,6 +243,6 @@
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
 <script src="./sii/prices.js?v=20261017-list122" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261018-charge2" defer></script>
+<script src="./v6.js?v=20261018-home3" defer></script>
 </body>
 </html>
