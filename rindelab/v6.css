@@ -267,3 +267,26 @@ body.has-tray{padding-bottom:150px}
 /* Acceso secundario a auditoría: respeta la portada y las pantallas pequeñas. */
 .header-links{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}
 @media(max-width:600px){.header-links{gap:8px}.header-links a{font-size:10px}}
+
+/* MTT: listado separado de homologaciones sin fichas energéticas. */
+.mtt-search-section{margin:0 0 21px;padding:18px 19px 19px;border:1px solid #cbdfe5;background:#f5fbfc;border-radius:11px}
+.mtt-search-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.mtt-search-eyebrow{color:#15747e;font-size:10px;font-weight:850;letter-spacing:.085em;margin:0 0 5px}
+.mtt-search-heading h3{font-size:17px;line-height:1.35;margin:0 0 4px;color:#123e58}
+.mtt-search-heading p:not(.mtt-search-eyebrow){font-size:12px;color:#476b7d;margin:0}
+.mtt-search-all{font-size:12px;font-weight:760;white-space:nowrap;margin-top:5px}
+.mtt-search-explainer{font-size:12px;line-height:1.65;color:#465f70;max-width:930px;margin:11px 0 13px}
+.mtt-search-list{display:flex;flex-direction:column;gap:9px}
+.mtt-result-card{border:1px solid #d6e5e9;background:#fff;border-radius:9px;padding:13px 15px;display:grid;grid-template-columns:minmax(170px,1.2fr) minmax(154px,.8fr) minmax(137px,.9fr);gap:12px;align-items:center}
+.mtt-result-name{font-size:13px;font-weight:800;color:#18445c;line-height:1.38;overflow-wrap:anywhere}
+.mtt-result-name small{display:block;font-size:10px;font-weight:600;color:#6b8694;margin-bottom:3px}
+.mtt-result-name em{display:block;margin-top:5px;font-style:normal;font-weight:740;font-size:10px;color:#20717d}
+.mtt-result-source{font-size:11px;overflow-wrap:anywhere;color:#4b6979;line-height:1.5}
+.mtt-result-source small{display:block;color:#6d8594;font-size:10px}
+.mtt-result-source a{display:block;margin-top:6px;font-size:11px;font-weight:750}
+.mtt-result-metrics{font-size:11px;font-weight:750;color:#556d7c;line-height:1.5}
+.mtt-result-metrics small{display:block;font-size:10px;color:#6b8391;font-weight:550;margin-top:4px}
+.mtt-search-section #mttSearchMore{margin-top:13px;min-height:39px;font-size:11px}
+.mtt-load-notice{font-size:12px;padding:12px 14px;border:1px solid #ebd8aa;border-radius:7px;background:#fffaf0;color:#79603c}
+@media(max-width:720px){.mtt-result-card{grid-template-columns:1fr 1fr}.mtt-result-name{grid-column:1/-1}}
+@media(max-width:430px){.mtt-search-section{padding:13px 12px}.mtt-result-card{grid-template-columns:1fr}.mtt-result-name{grid-column:auto}.mtt-search-heading h3{font-size:15px}.mtt-search-all{white-space:normal}}

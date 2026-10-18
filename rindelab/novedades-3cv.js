@@ -172,6 +172,9 @@ async function load(){
   $('metricMttOnly').textContent=countFmt.format(report.counts.mttCodesNotInMay);
   $('metricDiffs').textContent=countFmt.format(report.counts.matchedCodeTransmissionOrEngineConflicts);
   $('deltaStatus').textContent='Cortes: 3CV mayo '+report.source.mayCut+' · MTT septiembre 2026-09-28. '+report.counts.afterMayNewCodes+' códigos recientes sin ficha en mayo. Datos de rendimiento añadidos: ninguno.';
+  // Enlace directo desde el buscador principal al código exacto de la nómina.
+  const requestedCode=new URLSearchParams(location.search).get('codigo');
+  if(requestedCode&&data.recentRecords.some(x=>x.code===requestedCode))$('deltaSearch').value=requestedCode;
   $('deltaDownload').disabled=false;switchGroup();renderDifferences();
  }catch(error){
   $('deltaStatus').textContent='No fue posible completar el análisis: '+error.message+'. No se publican resultados parciales.';
