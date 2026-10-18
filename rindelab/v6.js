@@ -197,7 +197,7 @@ function updateChargingExample(){
  $('publicSessionCost').textContent=publicPrice===null?'Ingresa kWh':money(publicPrice);
  $('publicSessionRate').textContent='Copec Voltex · '+$('publicChargeRate').selectedOptions[0].textContent;
  if(homePrice===null||publicPrice===null){
-  $('chargeDifference').textContent=number($('chargeKwh').value)?'Agrega tu tarifa domiciliaria para comparar.':'Ingresa una cantidad válida de energía (1 a 200 kWh).';
+  $('chargeDifference').textContent=(!number($('chargeKwh').value)||number($('chargeKwh').value)>200)?'Ingresa una cantidad válida de energía (1 a 200 kWh).':'Agrega tu tarifa domiciliaria para comparar.';
  }else if(homePrice<publicPrice){
   $('chargeDifference').textContent='Para esta energía, cargar en casa costaría '+money(publicPrice-homePrice)+' menos que la tarifa pública seleccionada.';
  }else if(homePrice>publicPrice){
@@ -221,7 +221,7 @@ function calculateHomeFromBill(){
  }
  const approx=Math.round(tariff*100)/100;
  $('homeChargeRate').value=String(approx);
- result.textContent='Precio medio aproximado: '+money(approx)+'/kWh ('+money(total-fixed)+' ÷ '+fixedNumber(used)+' kWh). No equivale necesariamente al costo de añadir más consumo: revisa tramo, descuentos y cargos variables.';
+ result.textContent='Precio medio aproximado: $'+fixedNumber(approx)+'/kWh ('+money(total-fixed)+' ÷ '+fixedNumber(used)+' kWh). No equivale necesariamente al costo de añadir más consumo: revisa tramo, descuentos y cargos variables.';
  updateChargeScenario();
  refreshEnergyViews();
 }
