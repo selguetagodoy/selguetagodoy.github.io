@@ -310,3 +310,5 @@ body.has-tray{padding-bottom:150px}
 .mtt-result-name em{color:#8a622e}
 .mtt-result-metrics small{color:#815f36;font-weight:650}
 @media(max-width:620px){.source-legend{grid-template-columns:1fr}.energy-results-heading{flex-direction:column;gap:3px}.source-legend>div{padding-top:9px;padding-bottom:9px}}
+
+.source-legend[hidden],.energy-results-heading[hidden]{display:none!important}
