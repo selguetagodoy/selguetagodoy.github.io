@@ -1254,6 +1254,61 @@
     "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
   },
   {
+    "brand": "Subaru",
+    "family": "Impreza",
+    "version": "2.0I AWD CVT",
+    "modelYear": 2026,
+    "priceListClp": 23390000,
+    "source": "https://www.subaru.cl/vehiculos/all-new-impreza/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante."
+  },
+  {
+    "brand": "Subaru",
+    "family": "Impreza",
+    "version": "2.0I AWD CVT DYNAMIC EYESIGHT",
+    "modelYear": 2026,
+    "priceListClp": 25390000,
+    "source": "https://www.subaru.cl/vehiculos/all-new-impreza/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante."
+  },
+  {
+    "brand": "Subaru",
+    "family": "Impreza",
+    "version": "2.0I AWD CVT TOURING ES HK",
+    "modelYear": 2026,
+    "priceListClp": 28390000,
+    "source": "https://www.subaru.cl/vehiculos/all-new-impreza/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante."
+  },
+  {
+    "brand": "Subaru",
+    "family": "Crosstrek",
+    "version": "2.0I HYBRID AWD CVT TOURING ES",
+    "modelYear": 2026,
+    "priceListClp": 34490000,
+    "source": "https://www.subaru.cl/vehiculos/all-new-crosstrek-hibrido/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante."
+  },
+  {
+    "brand": "Subaru",
+    "family": "Forester",
+    "version": "2.5 HEV AWD CVT SPORT ES",
+    "modelYear": null,
+    "priceListClp": 42990000,
+    "source": "https://www.subaru.cl/vehiculos/all-new-forester-hibrido/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante."
+  },
+  {
     "brand": "Volkswagen",
     "family": "Tera",
     "version": "Trend 1.6 MSI MT",

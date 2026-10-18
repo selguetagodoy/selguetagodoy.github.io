@@ -96,7 +96,7 @@ Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Pl
 
 La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examinar el grado de **coincidencia nominal por marca y familia** entre el catálogo documental de precios de lista y las fichas de homologación disponibles en el corte oficial 3CV del 08/05/2026. No altera el buscador principal ni las bases oficiales.
 
-- **Denominador comercial:** 122 precios de lista asociados a 39 familias, correspondientes únicamente a las 10 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
+- **Denominador comercial:** 127 precios de lista asociados a 40 familias, correspondientes únicamente a las 10 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
 - **Resultado de cobertura nominal:** cada familia comercial registra la cantidad de fichas 3CV cuyo nombre y marca pueden corresponderle, bajo reglas explícitas y comprobables. Los filtros permiten revisar casos con y sin coincidencia y descargar la tabla filtrada como CSV.
 - **No hay emparejamiento automático de versiones.** Una coincidencia de familia puede mezclar generaciones, tracción, combustible, baterías, tecnología o transmisiones diferentes; en esta fase no se certifica ninguna equivalencia técnica entre versiones ni su disponibilidad comercial.
 - **Reglas de exclusión documentadas:** Mazda CX-3 no confunde CX-30; Creta no absorbe Creta Grand; Hunter diésel excluye Hunter E/EREV; Yaris no absorbe Yaris Cross; Corolla Sedán no absorbe Corolla Cross; CS55 Plus no se equipara a CS55 de otra generación.
@@ -104,9 +104,11 @@ La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examin
 
 El 3CV registra homologaciones **históricas**, no una nómina de automóviles nuevos disponibles hoy. La fecha de una homologación no equivale al año comercial de una versión. La tasación SII y el permiso de circulación se mantienen separados.
 
+El 18/10/2026 se incorporaron otras cinco versiones Subaru con precio de lista oficial: tres Impreza, un Crosstrek híbrido y un Forester Strong Hybrid Sport. Se excluyó la versión Forester Strong Hybrid Touring porque la propia ficha comercial muestra un precio de campaña igual al precio de lista pese a consignar bonos; no se deduce un importe alternativo. Los precios incorporados son referencias comerciales por versión y se seleccionan manualmente.
+
 ## Segunda capa: cotejo exploratorio por versión comercial (octubre de 2026)
 
-La página [Revisión por versión](./versiones.html) examina las 122 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
+La página [Revisión por versión](./versiones.html) examina las 127 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
 
 Se extraen únicamente rasgos **expresos** del nombre comercial: tecnología cuando se declara, cilindrada decimal, transmisión manual o categoría amplia automática, tracción y algunos códigos de generación. Se contrastan con tecnología, cilindrada, transmisión, tracción, combustible y modelo originales del 3CV.
 
@@ -122,13 +124,13 @@ Para reproducir el análisis ejecutar: `node scripts/audit-commercial-versions.c
 
 ## Expediente prioritario de revisión 3CV
 
-Desde la página [Revisión por versión](./versiones.html) se puede activar «Solo revisión prioritaria» para ver las dos versiones Volkswagen Tera 1.6 MSI MT con discrepancia entre fabricante y 3CV, junto con las 22 versiones que tienen un solo candidato preliminar. Esto no implica que existan 24 homologaciones verificadas.
+Desde la página [Revisión por versión](./versiones.html) se puede activar «Solo revisión prioritaria» para revisar **26 casos**, incluidos dos Volkswagen Tera MT contrastados con evidencias del fabricante, un Forester híbrido sin candidato compatible en el corte histórico de mayo y 23 versiones con un solo candidato preliminar. Esto no implica que existan 26 homologaciones verificadas.
 
-Los 22 candidatos únicos **no representan necesariamente 22 códigos 3CV exclusivos**: algunas terminaciones comerciales (equipamiento) comparten el mismo código técnico candidato. La aplicación muestra el código, si se reutiliza entre versiones comerciales, y mantiene la advertencia sobre falta de equivalencia certificada.
+Los 23 candidatos únicos **no representan necesariamente 23 códigos 3CV exclusivos**: algunas terminaciones comerciales (equipamiento) comparten el mismo código técnico candidato. La aplicación muestra el código, si se reutiliza entre versiones comerciales, y mantiene la advertencia sobre falta de equivalencia certificada.
 
 La discrepancia Tera se documenta en [review-notes-2026.json](./sii/review-notes-2026.json), con fuente oficial Volkswagen, código 3CV y diferencia de transmisión. Según el fabricante, Tera Trend MT y Comfort MT llevan caja manual de cinco velocidades, mientras la ficha 3CV «TERA 1.6 MT» código VW9988E60525S00-6 indica «A» en la columna de transmisión. No se modifica ningún registro de la fuente 3CV. El expediente sigue abierto para contrastar con la autoridad correspondiente.
 
-En cada ejecución de GitHub Actions, la etapa auditora genera `versions-audit.json`, `priority-review.json` y `priority-review.md`, y los publica como artefacto `rindelab-qa-3cv-prioridades` por 90 días, con las 24 prioridades y las evidencias para revisión. También se pueden generar localmente con `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`.
+En cada ejecución de GitHub Actions, la etapa auditora genera `versions-audit.json`, `priority-review.json` y `priority-review.md`, y los publica como artefacto `rindelab-qa-3cv-prioridades` por 90 días, con las 26 prioridades y las evidencias para revisión. La nueva Forester 2.5 HEV no tiene coincidencia técnica consistente frente a las fichas 3CV del corte de mayo; eso **no acredita un error del 3CV ni ausencia de una homologación más reciente**, porque la consulta oficial de octubre es un conjunto documental independiente. También se pueden generar localmente con `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`.
 
 ## Tercera capa: fichas técnicas oficiales de fabricantes
 
