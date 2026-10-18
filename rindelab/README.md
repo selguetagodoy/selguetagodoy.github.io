@@ -181,3 +181,15 @@ Los extractos congelados se encuentran en [mtt-sept-2026-code-index.json](./sii/
 **Regla crítica:** la nómina de septiembre **no** reemplaza la base de rendimientos de mayo; no proporciona por sí misma métricas comparables bajo los ciclos NEDC/WLTP de RINDELAB. Las homologaciones recientes se muestran con código, certificado, fecha y tecnología, **sin inventar rendimiento, consumo, autonomía, costo por kilómetro, precio o disponibilidad comercial**. Los 8.053 registros del buscador permanecen intactos.
 
 **Control automático:** `node scripts/audit-mtt-september-coverage.cjs --json=mtt-september-cross-audit.json` recalcula los totales y la presencia de códigos contra las 9 partes de la base energética original, valida el SHA256 del universo de códigos MTT, los 230 registros posteriores a mayo, 229 ausentes, 1 ya presente, 324 códigos anteriores y 1 sin fecha y las 12 diferencias técnicas. GitHub Actions ejecuta también pruebas de navegador de filtros, CSV y móvil.
+
+
+## Homologaciones MTT visibles desde el buscador principal
+
+A partir del cotejo MTT al 28/09/2026, la portada **ya permite buscar los 229 códigos de homologación posteriores al corte del 08/05/2026 que no figuran en la base energética 3CV**. Previamente los códigos se podían consultar únicamente en una página separada; esa desconexión se corrige.
+
+El buscador carga su catálogo energético existente de **8.053 registros** y en paralelo obtiene los 230 registros con fecha posterior de la nómina MTT, excluye el único que ya figuraba en mayo y presenta los 229 restantes como una **sección distinguible** en los resultados. Filtra por texto libre, marca, familia, tecnología oficialmente declarada y fecha. Las nuevas marcas, familias y sugerencias se incorporan a los selectores. También se puede buscar por código exacto y abrir el registro en la página de novedades a través de `?codigo=<código>`.
+
+La lista MTT muestra modelo, código, número de certificado, fecha y tecnología de origen; incluye paginación propia y no ofrece «Comparar» ni un costo inventado. **Las fichas que carecen de rendimientos no se introducen en el conjunto de vehículos comparables, ni en las estadísticas o rankings energéticos.** Los filtros de carrocería y ciclo WLTP/NEDC se consideran no aplicables al catálogo MTT porque ese archivo no ofrece la misma evidencia de eficiencia energética; al solicitarlos se muestran únicamente fichas con dichos atributos en la base de mayo. La clasificación de combustible y motorización para los filtros MTT deriva de los campos explícitos de su nómina, no de denominaciones comerciales.
+
+Un fallo transitorio al descargar el cruce MTT no bloquea el buscador de rendimientos: informa la incidencia por separado. La integración incluye regresiones en Chromium para Deepal S05 REEV, Leapmotor B03X, JIM RE-MAX, Kia Sportage HEV, enlaces directos, ausencia de acciones de comparación, paginación y móvil de 320 px.
+
