@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102a43">
+<meta name="author" content="Sebastián Elgueta Godoy">
+<meta name="description" content="RINDELAB: cruce documental de los códigos 3CV de mayo de 2026 con la nómina de homologaciones MTT de septiembre de 2026.">
+<link rel="canonical" href="https://selguetagodoy.github.io/rindelab/novedades-3cv.html">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./v6.css?v=20261017-sii12">
+<link rel="stylesheet" href="./cobertura.css?v=20261018-1">
+<link rel="stylesheet" href="./novedades-3cv.css?v=20261018-delta1">
+<title>Homologaciones recientes · RINDELAB</title>
+</head>
+<body>
+<header class="site-header"><div class="shell header-inner">
+<a href="./" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a>
+<nav class="coverage-nav" aria-label="Navegación">
+<a href="./">Buscador</a>
+<a href="./homologaciones.html">Control documental</a>
+<a href="./cobertura.html">Cobertura</a>
+</nav>
+</div></header>
+<main class="shell coverage-main">
+<section class="coverage-intro">
+<p class="eyebrow">TRAZABILIDAD DE HOMOLOGACIONES · CHILE</p>
+<h1>¿Qué cambió entre mayo y septiembre?</h1>
+<p>RINDELAB contrasta los códigos de la <strong>base de rendimientos 3CV al 8 de mayo</strong> con la <strong>nómina de homologaciones MTT al 28 de septiembre de 2026</strong>. El resultado distingue códigos posteriores a mayo, diferencias documentales y registros exclusivos de cada fuente. <strong>Homologación no significa disponibilidad comercial ni rendimiento verificable.</strong></p>
+</section>
+<section class="coverage-metrics" aria-label="Resumen del cruce documental">
+<div><small>Homologaciones posteriores a mayo sin ficha en la base anterior</small><strong id="metricRecentNew">—</strong></div>
+<div><small>Códigos presentes en ambas fuentes</small><strong id="metricCommon">—</strong></div>
+<div><small>Solo en nómina MTT septiembre</small><strong id="metricMttOnly">—</strong></div>
+<div><small>Diferencias técnicas que requieren revisión</small><strong id="metricDiffs">—</strong></div>
+</section>
+<p class="coverage-status" id="deltaStatus" role="status" aria-live="polite">Cargando el cruce documental…</p>
+<section class="delta-context" aria-label="Alcance de cifras">
+<div><strong>230</strong><span>Códigos con fecha posterior al 8 de mayo; 229 no aparecen en la base de rendimientos y uno ya figuraba.</span></div>
+<div><strong>562</strong><span>Códigos que aparecen solo en la base de rendimiento de mayo. No implica que hayan perdido homologación.</span></div>
+<div><strong>0</strong><span>Rendimientos añadidos, calculados o imputados a partir de la nómina MTT.</span></div>
+</section>
+<section class="coverage-panel" aria-labelledby="deltaTableTitle">
+<div class="coverage-panel-head">
+<div><p class="eyebrow">INCORPORACIONES DOCUMENTALES</p><h2 id="deltaTableTitle">Homologaciones fechadas después de mayo</h2></div>
+<button class="button secondary" id="deltaDownload" type="button" disabled>Exportar listado CSV</button>
+</div>
+<div class="delta-filters">
+<div class="field"><label for="deltaBrand">Marca</label><select id="deltaBrand"><option value="">Todas</option></select></div>
+<div class="field"><label for="deltaTech">Tecnología declarada</label><select id="deltaTech">
+<option value="">Todas</option><option value="ICE">Combustión interna</option><option value="BEV">Eléctrico BEV</option>
+<option value="HEV">Híbrido HEV</option><option value="PHEV">Híbrido enchufable PHEV</option><option value="REEV">Eléctrico rango extendido REEV</option>
+</select></div>
+<div class="field"><label for="deltaMonth">Mes</label><select id="deltaMonth"><option value="">Todos</option><option value="2026-09">Septiembre</option><option value="2026-08">Agosto</option><option value="2026-07">Julio</option><option value="2026-06">Junio</option><option value="2026-05">Mayo (9–31)</option></select></div>
+<div class="field"><label for="deltaSearch">Código o modelo</label><input id="deltaSearch" type="search" placeholder="Ej. Seltos, Deepal, Tesla"></div>
+<div class="field"><label for="deltaPresence">Cruce con la base de mayo</label><select id="deltaPresence"><option value="">Todos los resultados</option><option value="missing">No aparece en mayo</option><option value="present">Ya aparece en mayo</option></select></div>
+</div>
+<p class="coverage-result-count" id="deltaCount" aria-live="polite"></p>
+<div class="coverage-table-scroll" role="region" aria-label="Listado de homologaciones posteriores al corte de mayo" tabindex="0">
+<table class="coverage-table delta-table">
+<thead><tr><th scope="col">Modelo homologado</th><th scope="col">Código y certificado MTT</th><th scope="col">Fecha</th><th scope="col">Tecnología / transmisión</th><th scope="col">Situación frente a mayo</th></tr></thead>
+<tbody id="deltaRows"><tr><td colspan="5">Preparando registros…</td></tr></tbody>
+</table>
+</div>
+<p class="coverage-legend">El listado muestra los códigos y certificados de la nómina MTT. No se deduce que los vehículos estén a la venta ni se asignan kilómetros por litro, autonomía, costos de uso o ciclos NEDC/WLTP por semejanza con otro modelo.</p>
+</section>
+<section class="delta-bottom-grid">
+<section class="coverage-panel delta-review" aria-labelledby="differencesTitle">
+<div class="coverage-panel-head"><div><p class="eyebrow">REVISIÓN DE FUENTES</p><h2 id="differencesTitle">12 diferencias de atributos</h2></div></div>
+<p>En 12 códigos presentes en ambas fuentes, la transmisión o la cilindrada no coincide. Se exhibe el dato de cada documento, sin corregir uno usando el otro.</p>
+<div class="coverage-table-scroll" role="region" aria-label="Diferencias entre documentos" tabindex="0">
+<table class="coverage-table delta-conflicts-table"><thead><tr><th scope="col">Código / modelo</th><th scope="col">MTT septiembre</th><th scope="col">Rendimientos mayo</th></tr></thead>
+<tbody id="deltaConflicts"><tr><td colspan="3">Cargando diferencias…</td></tr></tbody></table>
+</div>
+<p class="delta-footnote">La discrepancia Volkswagen Tera 1.6 MT entre la denominación comercial y transmisión A de ambos archivos se documenta aparte en el <a href="./homologaciones.html">control de homologaciones</a>.</p>
+</section>
+<section class="delta-method" aria-labelledby="methodTitle">
+<h2 id="methodTitle">Criterio de comparación</h2>
+<p>El cruce es <strong>exacto por código de informe técnico</strong>, sin unir modelos por parecido de nombre. La nómina de septiembre contiene 8.093 filas con código, de las cuales 8.045 códigos son distintos; la base de mayo aporta 8.053 códigos válidos al corte.</p>
+<p>Otros 325 códigos figuran únicamente en la nómina MTT, pero tienen fecha anterior o igual al 8 de mayo. Están excluidos del listado de incorporaciones recientes: su ausencia en la base de rendimientos no demuestra que sean vehículos nuevos.</p>
+<p>Ambas fuentes se analizaron separadamente. El archivo XLS aportado y su versión descargada del sitio MTT tienen distinta huella binaria, pero coinciden en los 8.093 registros en código, marca, modelo, transmisión y fecha, así como en el conjunto de 230 códigos posteriores a mayo.</p>
+<p>La comparación se limita a la hoja «Livianos &amp; Medianos 2013 - 2026» de la nómina; las hojas históricas anteriores a 2013 se mantienen fuera del alcance por no corresponder al mismo universo de la base energética.</p>
+<p><a href="https://www.subtrans.gob.cl/3cv/homologacion-de-vehiculos-livianos-medianos-y-motocicletas/" target="_blank" rel="noopener noreferrer">Fuente oficial MTT ↗</a> · <a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Base de rendimientos de mayo ↗</a> · <a href="./homologaciones.html">Control de códigos 3CV</a></p>
+</section>
+</section>
+</main>
+<footer class="footer"><div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy</span><small>Consulta siempre las fuentes oficiales antes de decidir una compra.</small></div></footer>
+<script defer src="./novedades-3cv.js?v=20261018-delta1"></script>
+</body></html>
