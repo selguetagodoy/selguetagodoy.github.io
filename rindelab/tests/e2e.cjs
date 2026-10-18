@@ -1679,7 +1679,8 @@ for(const width of [320,390]){
 }
 
 await test('Lista comercial ampliada: Ford Ranger 8 y BMW X1 4 con fuente y versión exacta',async()=>{
- const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list155').then(r=>r.json()));
+ const {page:detailPage}=await open(1280,850);
+ const list=await detailPage.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list155').then(r=>r.json()));
  const ford=list.filter(x=>x.brand==='Ford'&&x.family==='Ranger');
  const bmw=list.filter(x=>x.brand==='BMW'&&x.family==='X1');
  assert.equal(ford.length,8);assert.equal(bmw.length,4);
@@ -1698,25 +1699,29 @@ await test('Lista comercial ampliada: Ford Ranger 8 y BMW X1 4 con fuente y vers
  await q.selectOption('#quoteBrand','BMW');await q.selectOption('#quoteFamily','X1');
  assert.equal(await q.locator('.quote-version').count(),4);
  await q.close();
+ await detailPage.close();
 });
 await test('Enel BT1 octubre: comuna, red, tramo y tarifa no homologada como final',async()=>{
- const beforeHomeRate=await page.locator('#homeChargeRate').inputValue();
- await page.locator('#homeTariffDirectory summary').click();
- await page.selectOption('#tariffDistributor','enel');
- await page.waitForFunction(()=>document.querySelector('#tariffCommune')?.options.length>20,{timeout:9000});
- assert.match(await page.locator('#tariffSourceLink').getAttribute('href'),/Octubre%20de%202026\.pdf/);
- await page.selectOption('#tariffCommune','La Reina');
- await page.selectOption('#tariffNetwork','BT_AA');
- await page.selectOption('#tariffEtr','T1');
- assert.match(await page.locator('#tariffEnelStatus').textContent(),/La Reina.*BT_AA.*T1/);
- assert.match(await page.locator('.tariff-component').textContent(),/162,041/);
- assert.match(await page.locator('.tariff-component').textContent(),/No es el precio completo/);
- assert.equal(await page.locator('#homeChargeRate').inputValue(),beforeHomeRate); // el pliego no sustituye la tarifa residencial
- const metadata=await page.evaluate(async()=>fetch('./data/tarifas-bt1-enel-oct2026.json').then(r=>r.json()));
+ const {page:enelPage,errors:enelErrors}=await open(1280,850);
+ const beforeHomeRate=await enelPage.locator('#homeChargeRate').inputValue();
+ await enelPage.locator('#homeTariffDirectory summary').click();
+ await enelPage.selectOption('#tariffDistributor','enel');
+ await enelPage.waitForFunction(()=>document.querySelector('#tariffCommune')?.options.length>20,{timeout:9000});
+ assert.match(await enelPage.locator('#tariffSourceLink').getAttribute('href'),/Octubre%20de%202026\.pdf/);
+ await enelPage.selectOption('#tariffCommune','La Reina');
+ await enelPage.selectOption('#tariffNetwork','BT_AA');
+ await enelPage.selectOption('#tariffEtr','T1');
+ assert.match(await enelPage.locator('#tariffEnelStatus').textContent(),/La Reina.*BT_AA.*T1/);
+ assert.match(await enelPage.locator('.tariff-component').textContent(),/162,041/);
+ assert.match(await enelPage.locator('.tariff-component').textContent(),/No es el precio completo/);
+ assert.equal(await enelPage.locator('#homeChargeRate').inputValue(),beforeHomeRate); // el pliego no sustituye la tarifa residencial
+ const metadata=await enelPage.evaluate(async()=>fetch('./data/tarifas-bt1-enel-oct2026.json').then(r=>r.json()));
  assert.equal(metadata.documentMonth,'2026-10');
  assert.equal(metadata.completeMarginalRateClpPerKwh,null);
  assert(metadata.coveredMunicipalities.includes('Peñalolén'));
- await page.locator('#homeTariffDirectory summary').click();
+ await enelPage.locator('#homeTariffDirectory summary').click();
+ assert.deepEqual(enelErrors,[]);
+ await enelPage.close();
 });
 await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
 if(failed)process.exit(1);
