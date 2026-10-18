@@ -1723,6 +1723,122 @@ await test('Enel BT1 octubre: comuna, red, tramo y tarifa no homologada como fin
  assert.deepEqual(enelErrors,[]);
  await enelPage.close();
 });
+
+await test('Jerarquía visual: gasto anual visible y fecha de homologación no duplicada',async()=>{
+ const {page:p,errors:issues}=await open(1250,900);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ const card=p.locator('.vehicle-card').first();
+ assert(await card.locator('.vehicle-annual').isVisible());
+ assert(await card.locator('.vehicle-five-year').isVisible());
+ const heading=await card.locator('.vehicle-heading').textContent();
+ assert.equal((heading.match(/Homologad/g)||[]).length,1,heading);
+ assert.match(heading,/código …/);
+ assert.match(await card.locator('.vehicle-annual span').textContent(),/15\.000 km/);
+ assert.equal(await card.locator('.vehicle-performance').count(),1);
+ assert.equal(await card.locator('.vehicle-cost').count(),1);
+ const styles=await card.evaluate(el=>{
+  const pick=s=>el.querySelector(s),size=s=>parseFloat(getComputedStyle(pick(s)).fontSize);
+  const actions=[...el.querySelectorAll('.vehicle-actions .button')].map(x=>({label:x.textContent,px:x.getBoundingClientRect().height}));
+  return {heading:size('.vehicle-heading h3'),value:size('.vehicle-annual-value'),note:size('.vehicle-meta'),button:size('.vehicle-actions .button'),actions,body:getComputedStyle(document.body).fontFamily};
+ });
+ assert(styles.heading>=18,JSON.stringify(styles));
+ assert(styles.value>=22,JSON.stringify(styles));
+ assert(styles.note>=13,JSON.stringify(styles));
+ assert(styles.button>=15,JSON.stringify(styles));
+ assert(styles.actions.every(x=>x.px>=44),JSON.stringify(styles.actions));
+ assert(styles.actions[0].label.includes('Ver ficha'));
+ assert(styles.body.includes('Inter'));
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+await test('Gasto anual destacado responde al kilometraje sin variar el rendimiento 3CV',async()=>{
+ const {page:p}=await open(1280,850);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ const a=await p.locator('.vehicle-card').first().locator('.vehicle-annual-value').textContent();
+ const performance=await p.locator('.vehicle-card').first().locator('.vehicle-performance strong').textContent();
+ await p.selectOption('#annualKm','20000');
+ const b=await p.locator('.vehicle-card').first().locator('.vehicle-annual-value').textContent();
+ assert.notEqual(a,b);
+ assert.match(await p.locator('.vehicle-card').first().locator('.vehicle-annual span').textContent(),/20\.000 km/);
+ assert.equal(await p.locator('.vehicle-card').first().locator('.vehicle-performance strong').textContent(),performance);
+ await p.close();
+});
+await test('Fuentes 3CV permanecen accesibles mediante aviso compacto',async()=>{
+ const {page:p}=await open(1280,850);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ assert(await p.locator('#sourceLegend').isVisible());
+ assert(!(await p.locator('#sourceLegend').evaluate(x=>x.open)));
+ assert(await p.locator('#sourceLegend summary').isVisible());
+ await p.locator('#sourceLegend summary').click();
+ assert(await p.locator('#sourceLegend').evaluate(x=>x.open));
+ assert.match(await p.locator('#sourceLegend').textContent(),/NEDC o WLTP/);
+ assert.match(await p.locator('#sourceLegend').textContent(),/Homologaciones MTT pendientes/);
+ assert.match(await p.locator('#sourceLegend').textContent(),/kilometraje seleccionado/);
+ assert.equal(await p.locator('#sourceLegend a[href="#fuentes"]').count(),1);
+ await p.close();
+});
+await test('Contraste de etiquetas secundarias y entradas de 16 píxeles',async()=>{
+ const {page:p,errors:issues}=await open(1220,830);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ const colors=await p.evaluate(()=>{
+  const ratio=(a,b)=>{
+   const parse=s=>[...s.matchAll(/[\d.]+/g)].slice(0,3).map(v=>Number(v[0])/255);
+   const luminosity=rgb=>rgb.map(c=>c<=0.04045?c/12.92:Math.pow((c+0.055)/1.055,2.4))
+     .reduce((sum,v,i)=>sum+v*[0.2126,0.7152,0.0722][i],0);
+   const x=luminosity(parse(a)),y=luminosity(parse(b));return (Math.max(x,y)+0.05)/(Math.min(x,y)+0.05);
+  };
+  const labels=['.search-card .search-spot','.vehicle-heading .vehicle-meta','.vehicle-annual small','.vehicle-five-year'];
+  return {ratios:labels.map(sel=>({selector:sel,ratio:ratio(getComputedStyle(document.querySelector(sel)).color,
+   sel==='.vehicle-annual small'?'rgb(240,248,250)':'rgb(255,255,255)')})),
+   querySize:parseFloat(getComputedStyle(document.querySelector('#query')).fontSize),
+   brandSize:parseFloat(getComputedStyle(document.querySelector('#brand')).fontSize)};
+ });
+ assert(colors.ratios.every(x=>x.ratio>=4.5),JSON.stringify(colors));
+ assert(colors.querySize>=16,JSON.stringify(colors));
+ assert(colors.brandSize>=16,JSON.stringify(colors));
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+for(const w of [320,390]){
+ await test('Nueva tarjeta y menú legibles en móvil '+w+' px',async()=>{
+  const {page:p,errors:issues}=await open(w,820);
+  await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+  const x=await p.evaluate(()=>{
+   const c=document.querySelector('.vehicle-card'),heading=c.querySelector('.vehicle-heading h3');
+   return {doc:document.documentElement.scrollWidth,screen:innerWidth,
+    heading:parseFloat(getComputedStyle(heading).fontSize),
+    annual:parseFloat(getComputedStyle(c.querySelector('.vehicle-annual-value')).fontSize),
+    input:parseFloat(getComputedStyle(document.querySelector('#query')).fontSize),
+    buttons:[...c.querySelectorAll('.vehicle-actions button')].map(b=>b.getBoundingClientRect().height),
+    navHeight:document.querySelector('.header-source').getBoundingClientRect().height,
+    annualBox:c.querySelector('.vehicle-annual').getBoundingClientRect().width};
+  });
+  assert(x.doc<=x.screen+3,JSON.stringify(x));
+  assert(x.heading>=18&&x.annual>=22&&x.input>=16,JSON.stringify(x));
+  assert(x.buttons.every(n=>n>=44)&&x.navHeight>=44,JSON.stringify(x));
+  assert(x.annualBox>100,JSON.stringify(x));
+  assert.deepEqual(issues,[]);
+  await p.close();
+ });
+}
+await test('Cotizador conserva legibilidad y presupuesto en móvil estrecho',async()=>{
+ const p=await browser.newPage({viewport:{width:320,height:820},isMobile:true,hasTouch:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelectorAll('.quote-version').length>0);
+ await p.selectOption('#quoteBrand','Toyota');await p.selectOption('#quoteFamily','Corolla Cross');await p.fill('#quoteSearch','XEI');
+ await p.locator('.quote-version button').click();
+ const m=await p.evaluate(()=>({
+  width:document.documentElement.scrollWidth,screen:innerWidth,
+  input:parseFloat(getComputedStyle(document.querySelector('#quoteSearch')).fontSize),
+  title:parseFloat(getComputedStyle(document.querySelector('.quote-version strong')).fontSize),
+  total:document.querySelector('#quoteTotal').textContent}));
+ assert(m.width<=m.screen+3,JSON.stringify(m));
+ assert(m.input>=16&&m.title>=17,JSON.stringify(m));
+ assert.equal(m.total,'$27.990.000');
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
 await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
 if(failed)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});
