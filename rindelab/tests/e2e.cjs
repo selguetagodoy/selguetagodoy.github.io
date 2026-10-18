@@ -22,7 +22,7 @@ async function open(width,height){
  await page.emulateMedia({reducedMotion:'reduce'});
  const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));page.on('console',m=>{if(m.type()==='error')errors.push('Console: '+m.text())});
  const r=await page.goto(base,{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
- await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:25000});
+ await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325' && document.querySelector('#searchButton')?.disabled===false,{timeout:25000});
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
@@ -54,6 +54,30 @@ await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
  assert.equal(await page.locator('.stats,.tech-overview,.manual-scenario,.chart,.guide-steps').count(),0);
  assert.equal(await page.locator('#results').isHidden(),true);
  assert.equal(await page.locator('#compareTray').isHidden(),true);
+});
+await test('RINDELAB 7 muestra escenarios y metadatos compartibles',async()=>{
+ assert(await page.locator('#annualKm').isVisible());
+ assert(await page.locator('#electricPrice').isVisible());
+ assert.equal(await page.locator('#annualKm').inputValue(),'15000');
+ assert.equal(await page.locator('#statsCycle').inputValue(),'WLTP');
+ assert.match(await page.locator('head meta[property="og:image"]').getAttribute('content'),/rindelab\/hero-foto-rindelab\.webp/);
+ assert.equal(await page.locator('script[type="application/ld+json"]').count(),1);
+ assert(await page.locator('.footer-data summary').isVisible());
+});
+await test('Costo anual y quinquenal responde al kilometraje sin extrapolar PHEV',async()=>{
+ await page.selectOption('#tech','Bencina');await page.click('#searchButton');
+ const row=page.locator('.vehicle-card').first();
+ const before=await row.locator('.annual-result').textContent();
+ assert.match(before,/año.*5 años/);
+ await page.selectOption('#annualKm','20000');
+ const after=await row.locator('.annual-result').textContent();
+ assert.notEqual(before,after);
+ await page.selectOption('#annualKm','15000');
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ assert.match(await page.locator('#detailContent').textContent(),/Gasto energético anual estimado/);
+ assert.equal(await page.locator('#detailContent dt').filter({hasText:'Conector AC'}).count(),0);
+ await page.locator('#detailClose').click();
+ await page.click('#resetButton');
 });
 await test('Carrocerías 3CV: ocho grupos exclusivos cubren todas las 8.053 fichas',async()=>{
  const audit=await page.evaluate(async()=>{
@@ -109,14 +133,15 @@ await test('Rankings separan Station Wagon de Jeep y mantienen carrocería origi
  assert.equal(await page.locator('#statsBodyHint').textContent(),'');
  await page.locator('#statsClose').click();
 });
-await test('Abrir ranking conjunto NEDC y WLTP y ordenar por menor costo',async()=>{
+await test('Ranking inicial WLTP ordena costos sin equiparar NEDC',async()=>{
  await page.locator('#statsOpen').click();
  assert(await page.locator('#statsDialog').evaluate(e=>e.open));
- assert.equal(await page.inputValue('#statsCycle'),'');
+ await page.selectOption('#statsCycle','WLTP');
+ assert.equal(await page.inputValue('#statsCycle'),'WLTP');
  assert.equal(await page.locator('.rank-item').count(),10);
  assert.equal(await page.locator('.rank-cycle').count(),10);
  const labels=await page.locator('.rank-cycle').allTextContents();
- assert(labels.every(x=>x==='WLTP'||x==='NEDC'||x==='Ciclo no informado'));
+ assert(labels.every(x=>x==='WLTP'));
  const first=await page.locator('.rank-value').allTextContents();
  const costs=first.map(x=>Number(x.replace(/\D/g,''))).filter(Number.isFinite);
  assert(costs.length===10);
@@ -305,7 +330,10 @@ await test('Comparar exactamente dos vehículos y limpiar selección',async()=>{
  await page.locator('.vehicle-card button[data-compare]').nth(1).click();
  assert(await page.locator('#compareOpen').isEnabled());await page.locator('#compareOpen').click();
  assert(await page.locator('#compareDialog').evaluate(x=>x.open));
- assert.equal(await page.locator('#compareContent .compare-row').count(),11);
+ assert.equal(await page.locator('#compareContent .compare-row').count(),13);
+ await page.locator('#shareCompare').click();
+ assert((await page.inputValue('#compareShareLink')).includes('comparar='));
+ assert(await page.locator('#compareShareLink').isVisible());
  await page.locator('#compareClose').click();await page.click('#compareClear');
  assert(await page.locator('#compareTray').isHidden());
 });
@@ -343,7 +371,7 @@ await test('Ventana de cinco columnas permite scroll, quitar uno y agregar otro'
  await page.click('#compareOpen');
  assert(await page.locator('#compareDialog').evaluate(e=>e.open));
  assert.equal(await page.locator('.comparison-table thead th').count(),6);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),10);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),12);
  assert.equal(await page.locator('.compare-model-cell').count(),5);
  const horizontal=await page.locator('.compare-scroller').evaluate(e=>({width:e.scrollWidth,visible:e.clientWidth,start:e.scrollLeft}));
  if(horizontal.width>horizontal.visible+2){
@@ -421,7 +449,7 @@ await test('Comparación enchufable y eléctrico desglosa rendimientos sin infer
  assert(labels.includes('Rendimiento eléctrico (km/kWh)'));
  assert(labels.includes('Rendimiento ponderado (km/L)'));
  assert.equal(await page.locator('.comparison-table thead th').count(),4);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),12);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),14);
  const note=await page.locator('#compareContent').textContent();
  assert.match(note,/Sin dato comparable/);
  await page.click('#compareClose');
@@ -485,7 +513,7 @@ await test('Tasación y permiso seleccionados aparecen en comparación de dos ve
  assert.match(data,/Permiso de circulación 2026/);
  assert(data.includes('Precio de lista nuevo (sin bonos)'));
  assert.match(data,/27\.990\.000/);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),10);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),12);
  assert.match(data,/22.354.806|23.139.460|21.570.147|18.775.083|20.189.698/);
  await page.locator('#compareClose').click();
  await page.click('#compareClear');
