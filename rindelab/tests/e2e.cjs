@@ -64,6 +64,50 @@ await test('RINDELAB 7 muestra escenarios y metadatos compartibles',async()=>{
  assert.equal(await page.locator('script[type="application/ld+json"]').count(),1);
  assert(await page.locator('.footer-data summary').isVisible());
 });
+await test('Carga publica: tarifas verificables por potencia, lugar y horario',async()=>{
+ assert.equal(await page.inputValue('#chargeScenario'),'public');
+ assert.equal(await page.inputValue('#electricPrice'),'340');
+ assert(await page.locator('#publicChargeField').isVisible());
+ assert(await page.locator('#homeChargeField').isHidden());
+ await page.selectOption('#publicChargeRate',{label:'DC ≥120 kW · ciudad punta · $495'});
+ assert.equal(await page.inputValue('#electricPrice'),'495');
+ assert.match(await page.locator('#chargeStatus').textContent(),/Copec Voltex/);
+ await page.selectOption('#publicChargeRate',{label:'AC ≤22 kW · ciudad valle · $340'});
+ assert.equal(await page.inputValue('#electricPrice'),'340');
+});
+await test('Carga en casa exige una tarifa manual y no inventa costo EV',async()=>{
+ await page.selectOption('#chargeScenario','home');
+ assert(await page.locator('#homeChargeField').isVisible());
+ assert(await page.locator('#publicChargeField').isHidden());
+ assert.equal(await page.inputValue('#electricPrice'),'');
+ assert.match(await page.locator('#chargeStatus').textContent(),/Introduce tu precio/);
+ await page.selectOption('#tech','EV');await page.click('#searchButton');
+ assert.match(await page.locator('.vehicle-card .no-data').first().textContent(),/Sin dato comparable/);
+ await page.fill('#homeChargeRate','200');
+ await page.locator('#homeChargeRate').dispatchEvent('change');
+ assert.equal(await page.inputValue('#electricPrice'),'200');
+ assert.match(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').first().textContent(),/\$/);
+ await page.click('#resetButton');
+});
+await test('Escenario mixto pondera precios sin imputar rendimiento o perdidas',async()=>{
+ await page.selectOption('#chargeScenario','mixed');
+ assert(await page.locator('#homeShareField').isVisible());
+ assert.equal(await page.inputValue('#homeChargeShare'),'80');
+ assert.equal(await page.inputValue('#electricPrice'),'228');
+ await page.selectOption('#publicChargeRate',{label:'DC ≥120 kW · ciudad punta · $495'});
+ assert.equal(await page.inputValue('#electricPrice'),'259');
+ await page.selectOption('#homeChargeShare','60');
+ assert.equal(await page.inputValue('#electricPrice'),'318');
+ await page.selectOption('#chargeScenario','manual');
+ assert(await page.locator('#publicChargeField').isHidden());
+ assert(await page.locator('#homeChargeField').isHidden());
+ await page.fill('#electricPrice','260');
+ await page.locator('#electricPrice').dispatchEvent('change');
+ assert.equal(await page.inputValue('#electricPrice'),'260');
+ await page.selectOption('#chargeScenario','public');
+ await page.selectOption('#publicChargeRate',{label:'AC ≤22 kW · ciudad valle · $340'});
+ assert.equal(await page.inputValue('#electricPrice'),'340');
+});
 await test('Costo anual y quinquenal responde al kilometraje sin extrapolar PHEV',async()=>{
  await page.selectOption('#tech','Bencina');await page.click('#searchButton');
  const row=page.locator('.vehicle-card').first();

@@ -366,3 +366,11 @@ html{scroll-padding-top:88px}
  .visual-hero{margin-top:0;padding-bottom:14px;gap:7px}
  .hero-image{height:76px}
 }
+
+
+/* Escenarios de carga: fuente identificable y campos condicionales. */
+.charge-status{padding:10px 12px;margin:12px 0 4px;border:1px solid #c2dde2;border-radius:9px;background:#eef8fa;color:#254f62;font-size:12px;font-weight:650;line-height:1.5}
+.assumptions-grid .field input[readonly]{background:#eff5f7;color:#244b60;font-weight:750;border-color:#b8d2dc}
+.assumptions-grid .field select{width:100%;max-width:100%;text-overflow:ellipsis}
+.assumptions-note{line-height:1.65}
+@media(max-width:600px){.charge-status{font-size:11px;padding:9px 10px}.assumptions-grid .field label{font-size:11px}}

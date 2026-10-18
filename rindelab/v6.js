@@ -179,6 +179,41 @@ function updateSuggestions(){
  }
  box.replaceChildren(...hit);
 }
+// Tarifas Copec Voltex de referencia verificadas el 18/10/2026; no se actualizan automáticamente.
+// La tarifa domiciliaria se introduce manualmente, sin medias supuestas.
+function updateChargeScenario(){
+ const mode=$('chargeScenario').value;
+ const publicRate=number($('publicChargeRate').value);
+ const homeRate=number($('homeChargeRate').value);
+ const homePart=Number($('homeChargeShare').value)/100;
+ const effective=$('electricPrice');
+ $('publicChargeField').hidden=mode==='home'||mode==='manual';
+ $('homeChargeField').hidden=mode==='public'||mode==='manual';
+ $('homeShareField').hidden=mode!=='mixed';
+ effective.readOnly=mode!=='manual';
+ let price=null,detail='';
+ if(mode==='public'){
+  price=publicRate;
+  detail='Copec Voltex · '+$('publicChargeRate').selectedOptions[0].textContent+'. Tarifa publicada, consulta 18/10/2026.';
+ }else if(mode==='home'){
+  price=homeRate;
+  detail=price?'Domicilio · tarifa ingresada por el usuario.':'Introduce tu precio de electricidad domiciliaria por kWh para calcular costos.';
+ }else if(mode==='mixed'){
+  if(homeRate&&publicRate)price=homeRate*homePart+publicRate*(1-homePart);
+  detail=price?'Escenario mixto: '+Math.round(homePart*100)+' % casa y '+Math.round((1-homePart)*100)+' % carga pública; promedio ponderado de tarifas, no de rendimientos.':
+   'Introduce tu tarifa de domicilio por kWh para calcular un escenario mixto.';
+ }else{
+  price=number(effective.value);
+  detail=price?'Tarifa manual elegida por el usuario.':'Introduce una tarifa manual positiva por kWh.';
+ }
+ if(mode!=='manual')effective.value=price===null?'':String(Math.round(price*100)/100);
+ $('chargeStatus').textContent=detail+(price!==null?' Tarifa efectiva: $'+Number(effective.value).toLocaleString('es-CL',{maximumFractionDigits:2})+'/kWh.':'');
+}
+function refreshEnergyViews(){
+ if(submitted)render();
+ if($('statsDialog').open)renderStatistics();
+ if($('compareDialog').open)renderComparisonContent();
+}
 function cost(row){
  const t=row[F.TECH];
  if(t==='PHEV'||t==='REEV')return null;
@@ -599,7 +634,14 @@ $('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «B
 $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
 $('sort').addEventListener('change',render);
 $('mttSearchMore').addEventListener('click',()=>{mttLimit+=10;renderMTT();});
-for(const id of ['gasPrice','dieselPrice','electricPrice','annualKm'])$(id).addEventListener('change',()=>{if(submitted)render();if($('statsDialog').open)renderStatistics();if($('compareDialog').open)renderComparisonContent();});
+for(const id of ['gasPrice','dieselPrice','annualKm'])$(id).addEventListener('change',refreshEnergyViews);
+for(const id of ['chargeScenario','publicChargeRate','homeChargeRate','homeChargeShare']){
+ $(id).addEventListener('change',()=>{updateChargeScenario();refreshEnergyViews();});
+}
+$('electricPrice').addEventListener('change',()=>{
+ if($('chargeScenario').value!=='manual')$('chargeScenario').value='manual';
+ updateChargeScenario();refreshEnergyViews();
+});
 $('resultList').addEventListener('click',event=>{
  const detail=event.target.closest('[data-detail]'),comparison=event.target.closest('[data-compare]');
  if(detail)showDetail(Number(detail.dataset.detail));
@@ -648,5 +690,6 @@ window.addEventListener('resize',syncCompareScrollControls);
 $('detailClose').addEventListener('click',()=>$('detailDialog').close());
 $('detailDialog').addEventListener('close',()=>{const url=new URL(location.href);if(url.searchParams.has('codigo')){url.searchParams.delete('codigo');history.replaceState(null,'',url.pathname+url.search+url.hash);}});
 if(window.RindelabSII)window.RindelabSII.family=family;
+updateChargeScenario();
 init();
 })();

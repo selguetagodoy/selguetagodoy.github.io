@@ -13,6 +13,18 @@ Web pública: https://selguetagodoy.github.io/rindelab/
 - **Navegación**: acceso rápido al buscador, supuestos y fuentes; módulos documentales en el pie de página.
 - **Difusión**: metadatos Open Graph, datos estructurados de aplicación/dataset y URLs de comparación con códigos de homologación.
 
+## Escenarios de carga eléctrica (octubre de 2026)
+
+El simulador aplica tarifas eléctricas **sin alterar** las fichas homologadas 3CV. La tarifa efectiva se utiliza exclusivamente para estimar costos de vehículos eléctricos EV con rendimiento eléctrico utilizable; los costos PHEV/REEV continúan sin calcularse automáticamente.
+
+- **Carga pública:** precios publicados por [Copec Voltex](https://copecvoltex.cl/pages/red-de-carga-publica), consultados el **18 de octubre de 2026**. Valores CLP/kWh: AC hasta 22 kW, ciudad valle 340 / punta 395 / carretera 395; DC 50 kW, ciudad valle 395 / punta 450 / carretera 450; DC 120 kW o superior, ciudad valle 440 / punta 495 / carretera 495. No son tarifas de todas las redes; no se suman cargos por tiempo, descuentos ni pérdidas.
+- **Casa:** la tarifa está **vacía por defecto** y debe ingresarla el usuario según su boleta. Si no está ingresada, el sistema **no calcula** costos EV para ese escenario.
+- **Mixta:** la tarifa efectiva resulta del promedio ponderado de las tarifas domiciliaria y pública según la participación de energía ingresada para casa (80 % inicial, editable). Este porcentaje es un **supuesto del usuario**, no una proporción medida ni un dato del 3CV.
+- **Manual:** permite introducir otra tarifa y la distingue de las referencias publicadas.
+- **Combustibles:** $1.535/L de bencina y $1.503/L de diésel se conservan como referencias **editables**; no equivalen a precios nacionales, por comuna o estación verificados al momento de uso. Fuente primaria para consultar estaciones: [Bencina en Línea CNE](https://www.bencinaenlinea.cl/).
+
+Se estiman costos con tarifas constantes y sin incluir pérdidas de carga, cargos por minuto, financiamiento, mantenimiento, impuestos o depreciación. Cambiar el escenario puede modificar el costo energético y los rankings, pero **no homogeneiza ensayos NEDC y WLTP**.
+
 ## Flujo principal
 
 1. Escribir marca o modelo, o seleccionar **Marca → Modelo → Motorización**.
