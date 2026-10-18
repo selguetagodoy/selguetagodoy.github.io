@@ -16,7 +16,7 @@ async function test(label,action){
   }
  }
 }
-const base='http://136.0.0.1:8765/rindelab/';
+const base='http://127.0.0.1:8765/rindelab/';
 async function open(width,height){
  const page=await browser.newPage({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,deviceScaleFactor:1});
  await page.emulateMedia({reducedMotion:'reduce'});
