@@ -1395,5 +1395,104 @@
     "checkedAt": "2026-10-17",
     "currency": "CLP",
     "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Great Wall",
+    "family": "Haval Jolion Max",
+    "version": "Haval Jolion Max Elite 1.5T 2WD AT",
+    "priceListClp": 21190000,
+    "source": "https://www.gwm.cl/vehiculo/haval/nuevo-jolion-max/",
+    "priceBasis": "Precio de lista con IVA publicado por GWM para la versión Elite 2WD AT; se excluyen bono marca, financiamiento y fletes. Condiciones publicadas para octubre de 2026.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "Great Wall",
+    "family": "ORA 03",
+    "version": "ORA 03 400 KM EV",
+    "priceListClp": 26490000,
+    "source": "https://www.gwm.cl/vehiculo/ora/ora-03/",
+    "priceBasis": "Precio de lista con IVA documentado en página oficial de GWM y bases comerciales; sin descuentos de marca ni financiamiento. Confirmar vigencia y versión exacta.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "BYD",
+    "family": "Yuan Pro DM-i",
+    "version": "Yuan Pro DM-i GL",
+    "priceListClp": 19990000,
+    "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+    "priceBasis": "Precio de lista oficial de BYD para Yuan Pro DM-i GL consignado en condiciones vigentes hasta el 31 de octubre de 2026, separado del financiamiento. No confundir con Yuan Pro eléctrico.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "BYD",
+    "family": "Yuan Pro DM-i",
+    "version": "Yuan Pro DM-i GS",
+    "priceListClp": 22990000,
+    "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+    "priceBasis": "Precio de lista oficial de BYD para Yuan Pro DM-i GS consignado en condiciones vigentes hasta el 31 de octubre de 2026. No confundir con Yuan Pro eléctrico.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "BYD",
+    "family": "Song Plus",
+    "version": "Song Plus DM-i GS",
+    "priceListClp": 31490000,
+    "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+    "priceBasis": "Precio de lista oficial de BYD para Song Plus GS, consignado en condiciones vigentes hasta el 31 de octubre de 2026. Sin bonos de marca ni financiamiento.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "Changan",
+    "family": "Deepal S05",
+    "version": "S05 REEV",
+    "priceListClp": 29990000,
+    "source": "https://www.changan.cl/catalogo",
+    "priceBasis": "Precio Lista explícito de la versión Deepal S05 REEV en catálogo oficial Changan, sin bono directo ni bono Amicar. Se presenta como precio comercial por versión, no homologación certificada.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "Changan",
+    "family": "Deepal S05",
+    "version": "S05 EV",
+    "priceListClp": 30990000,
+    "source": "https://www.changan.cl/catalogo",
+    "priceBasis": "Precio Lista explícito de Deepal S05 EV en catálogo oficial Changan, sin bono directo ni bono Amicar; no equiparar con S05 REEV.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "Changan",
+    "family": "CS35 Plus",
+    "version": "CS35 Plus Luxury AT",
+    "priceListClp": 17590000,
+    "source": "https://www.changan.cl/catalogo",
+    "priceBasis": "Precio Lista explícito en catálogo oficial Changan, separado de precio desde, bono directo y bono Amicar.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
+  },
+  {
+    "brand": "Changan",
+    "family": "CS35 Plus",
+    "version": "CS35 Plus Elite AT",
+    "priceListClp": 18890000,
+    "source": "https://www.changan.cl/catalogo",
+    "priceBasis": "Precio Lista explícito en catálogo oficial Changan, separado de precio desde, bono directo y bono Amicar.",
+    "modelYear": null,
+    "checkedAt": "2026-10-18",
+    "currency": "CLP"
   }
 ]
