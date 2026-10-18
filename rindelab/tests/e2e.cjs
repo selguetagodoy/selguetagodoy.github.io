@@ -536,7 +536,7 @@ await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar cic
   return ['Haval Jolion Max HP','Haval Jolion 7DCT','ORA 03 (ES11) EV GT','Song Plus DMI 1.5T','YUAN PRO GL','Yuan Pro DM-i GL','DEEPAL S05 REEV','New CS35 Plus 1.6']
     .map((name,i)=>f([i<3?'Great Wall':i<6?'BYD':'Changan',name]));
  });
- assert.deepEqual(mappings,['Haval Jolion Max','Haval Jolion','ORA 03','Song Plus','Yuan','Yuan Pro DM-i','Deepal S05','CS35 Plus']);
+ assert.deepEqual(mappings,['Haval Jolion Max','Haval Jolion','ORA 03','Song Plus','YUAN','Yuan Pro DM-i','DEEPAL S05','CS35 Plus']);
 });
 await test('Great Wall: modelos Jolion Max y ORA 03 exponen precio de lista con selección manual',async()=>{
  for(const [q,price] of [['Haval Jolion Max','21.190.000'],['ORA 03','26.490.000']]){
@@ -646,12 +646,12 @@ await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselec
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('#detailClose').click();
 });
-await test('Changan: 21 precios de lista oficiales en siete familias diferenciadas',async()=>{
+await test('Changan: 25 precios de lista oficiales en nueve familias diferenciadas',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list136').then(r=>r.json()));
  const v=list.filter(x=>x.brand==='Changan'),groups={};
  for(const x of v){groups[x.family]=(groups[x.family]||0)+1;assert(x.source.startsWith('https://www.changan.cl/'));}
- assert.equal(v.length,21);
- assert.deepEqual(groups,{'CS35 Max':4,Hunter:4,'X7 Plus':4,'CS75 Plus':2,'CS55 Plus':3,S07:2,'Avatr 07':2});
+ assert.equal(v.length,25);
+ assert.deepEqual(groups,{'CS35 Max':4,Hunter:4,'X7 Plus':4,'CS75 Plus':2,'CS55 Plus':3,S07:2,'Avatr 07':2,'Deepal S05':2,'CS35 Plus':2});
  assert.equal(v.find(x=>x.version==='CS35 Max Comfort MT').priceListClp,14490000);
  assert.equal(v.find(x=>x.version==='Hunter 2.0T 4X2 Comfort MT').priceListClp,20890000);
  assert.equal(v.find(x=>x.version==='Deepal S07 REEV').priceListClp,32990000);
