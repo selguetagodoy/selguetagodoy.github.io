@@ -360,3 +360,9 @@ html{scroll-padding-top:88px}
  .header-links a{font-size:10px;padding:6px 3px}
  .assumptions-grid{grid-template-columns:1fr}
 }
+
+/* Mantener el buscador al alcance visual en móviles de ancho medio. */
+@media (min-width:361px) and (max-width:600px){
+ .visual-hero{margin-top:0;padding-bottom:14px;gap:7px}
+ .hero-image{height:76px}
+}
