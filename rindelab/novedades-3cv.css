@@ -54,3 +54,17 @@
 .delta-variants li{font-size:10px;font-weight:500;color:#4a6b7b;margin:2px 0}
 @media(max-width:950px){.delta-context{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.delta-context{grid-template-columns:1fr}.delta-mode-wrap{padding:12px}.delta-mode-wrap select{font-size:11px}}
+
+/* Auditoría de atributos: expediente de fábrica distinto de rectificación 3CV. */
+.delta-review-controls{display:flex;align-items:end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:12px 0 6px}
+.delta-review-controls .field{flex:1 1 200px;max-width:420px;min-width:0}
+.delta-review-controls select{min-width:0;width:100%;height:42px}
+.delta-review-controls button{min-height:42px;font-size:11px;flex:0 1 auto}
+.delta-review-count{font-size:11px!important;font-weight:700;color:#376578!important;margin-bottom:12px!important}
+.delta-review-evidence{margin-top:10px;padding:9px 10px;border:1px solid #d4e5e9;background:#f5fafb;border-radius:7px;line-height:1.6}
+.delta-review-evidence summary{font-size:10px;font-weight:800;color:#125f76;cursor:pointer}
+.delta-review-evidence p{margin:9px 0 7px!important;font-size:11px!important;color:#426374}
+.delta-review-evidence a{font-size:11px;font-weight:750;overflow-wrap:anywhere}
+.delta-review-evidence small{display:block;font-size:10px;color:#617d8c;margin:7px 0 0}
+.delta-conflicts-table td{overflow-wrap:anywhere}
+@media(max-width:450px){.delta-review-controls{flex-direction:column;align-items:stretch}.delta-review-controls .field{width:100%;max-width:none;flex:0 0 auto}.delta-review-controls button{width:100%}}
