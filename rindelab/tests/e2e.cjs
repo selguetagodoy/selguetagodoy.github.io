@@ -1195,6 +1195,8 @@ await test('Leyenda distingue fuente histórica mayo de API oficial octubre',asy
  await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
  assert(await p.locator('#sourceLegend').isVisible());
  assert(await p.locator('#energyResultsHeading').isVisible());
+ assert.match(await p.locator('#energyResultsHeading small').textContent(),/mayo y de la consulta oficial de octubre de 2026/);
+ assert.doesNotMatch(await p.locator('#energyResultsHeading small').textContent(),/rendimientos al 8 de mayo/);
  assert.match(await p.locator('.vehicle-card .energy-source-line').first().textContent(),/octubre 2026/);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
  await p.fill('#query','Dolphin Mini');await p.click('#searchButton');
