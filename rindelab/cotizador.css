@@ -1,0 +1,52 @@
+/* RINDELAB | Cotizador independiente: coherente con la identidad visual v7 */
+.quote-page{padding-bottom:32px}
+.quote-intro{padding:38px 0 23px;max-width:870px}
+.quote-intro h1{font-size:clamp(29px,4vw,41px);line-height:1.16;letter-spacing:-.043em;color:#0e2f46;margin:5px 0 11px}
+.quote-intro p{font-size:14px;color:#587185;max-width:790px}
+.quote-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.9fr);align-items:start;gap:18px}
+.quote-catalog,.quote-aside,.quote-legal{border:1px solid #d5e4ea;background:white;border-radius:15px;padding:21px;box-shadow:0 5px 24px #051c310b}
+.quote-heading h2{font-size:18px;margin:0 0 5px;color:#153e57}.quote-heading p{font-size:12px;margin:0;color:#667f8f}
+.quote-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 10px}
+.quote-filters .field input,.quote-filters .field select,.quote-extra .field input,.quote-finance .field input,.quote-finance .field select{width:100%;height:44px;padding:8px 11px;border:1px solid #c0d4df;border-radius:8px;color:#193b51;background:white}
+.quote-note{font-size:11px;color:#577185;line-height:1.55;margin:8px 0 14px}
+.quote-results{display:flex;flex-direction:column;gap:9px}
+.quote-version{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(110px,.6fr);gap:9px 14px;align-items:center;border:1px solid #dae7ec;border-radius:11px;padding:13px 14px}
+.quote-version>div:first-child{display:flex;flex-direction:column;gap:2px;min-width:0}
+.quote-version>div:first-child strong{font-size:14px;color:#15384c}
+.quote-version>div:first-child span{font-size:12px;color:#455f71}
+.quote-version>div:first-child small{font-size:10px;color:#75899b}
+.quote-version-price{text-align:right}
+.quote-version-price strong{font-size:16px;color:#124b66;display:block;white-space:nowrap;font-variant-numeric:tabular-nums}
+.quote-version-price span{font-size:10px;color:#6c8190}
+.quote-version-actions{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.quote-version-actions .button{min-height:42px;padding:8px 12px}
+.quote-version-actions a{font-size:12px}
+#quoteMore{margin-top:15px;min-width:155px}
+.quote-aside{position:sticky;top:92px}
+.quote-selected{margin-top:15px;background:#f2f9fb;border:1px solid #d1e5ed;border-radius:10px;padding:14px}
+.quote-selected>small{font-size:10px;font-weight:760;letter-spacing:.06em;color:#14737b}
+.quote-selected h3{font-size:17px;margin:5px 0;color:#1d4155}
+.quote-selected p{font-size:11px;margin:3px 0 8px;color:#536f80}
+.quote-selected>strong{font-size:21px;color:#114c63}
+.quote-selected .quote-date{font-size:10px;margin-top:10px}
+.quote-extra{border-top:1px solid #e1e9ed;margin:15px 0 0;padding-top:12px}
+.quote-extra h3{font-size:14px;color:#244a60;margin:0 0 9px}
+.quote-extra h3 small{font-size:11px;color:#738996;font-weight:500}
+.quote-extra .field,.quote-finance .field{margin:0 0 10px}
+.quote-extra .field label,.quote-finance .field label,.quote-filters .field label{font-size:11px;font-weight:730;color:#31556e;display:block;margin:0 0 5px}
+.quote-total{display:flex;flex-direction:column;gap:5px;background:#0d3650;color:#e6f4fa;border-radius:10px;padding:16px}
+.quote-total>span{font-size:12px}.quote-total>strong{font-size:29px;color:#fff;font-variant-numeric:tabular-nums}
+.quote-total>small{font-size:10px;color:#c9dfe8;line-height:1.5}
+.quote-finance{border:1px solid #d9e6ee;border-radius:9px;padding:0 12px 12px;margin:12px 0}
+.quote-finance summary{padding:12px 0;font-size:12px;font-weight:730;color:#24586f;cursor:pointer;min-height:44px}
+.quote-finance #quoteFinanceOut{font-size:11px;line-height:1.6;color:#246172;font-weight:700}
+.quote-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.quote-actions .button{flex:1 1 148px;min-height:44px;text-align:center}
+.quote-feedback{font-size:11px;color:#246f72;margin:10px 0}.quote-feedback:empty{display:none}
+.quote-privacy{font-size:10px;color:#667e8b;line-height:1.55}
+.quote-legal{margin-top:22px}.quote-legal h2{font-size:17px}.quote-legal p{font-size:12px;color:#536c7e}
+.quote-empty{font-size:12px;padding:16px;background:#f1f6f8;color:#466678;border:1px dashed #ccdce3;border-radius:9px}
+@media(max-width:850px){.quote-layout{grid-template-columns:1fr}.quote-aside{position:static}.quote-page{padding-bottom:20px}}
+@media(max-width:600px){.quote-intro{padding:22px 0 15px}.quote-intro h1{font-size:29px}.quote-intro p{font-size:12px}.quote-catalog,.quote-aside,.quote-legal{padding:15px;border-radius:12px}.quote-filters{gap:9px}.quote-version{grid-template-columns:minmax(0,1fr) auto}.quote-version-price strong{font-size:14px}}
+@media(max-width:370px){.quote-filters{grid-template-columns:1fr}.quote-version-price strong{font-size:13px}.quote-version-actions .button{font-size:11px}}
+@media print{.site-header,.quote-filters,.quote-results,.quote-note,#quoteMore,.quote-actions,.quote-finance,.footer,.quote-legal{display:none!important}.quote-layout{display:block}.quote-catalog{display:none}.quote-aside{box-shadow:none;border:0;padding:5px}.quote-extra{display:block}.quote-total{background:white;color:black;border:2px solid black}.quote-total>strong,.quote-total>small{color:black}.quote-intro{padding:0}.quote-page{max-width:none;width:100%}}
