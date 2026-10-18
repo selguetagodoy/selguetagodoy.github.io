@@ -1494,5 +1494,82 @@
     "modelYear": null,
     "checkedAt": "2026-10-18",
     "currency": "CLP"
+  },
+  {
+    "brand": "Nissan",
+    "family": "Kait",
+    "version": "Sense CVT",
+    "modelYear": null,
+    "priceListClp": 20990000,
+    "source": "https://webstore.nissan.cl/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
+  },
+  {
+    "brand": "Nissan",
+    "family": "Kait",
+    "version": "Advance CVT",
+    "modelYear": null,
+    "priceListClp": 22490000,
+    "source": "https://webstore.nissan.cl/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
+  },
+  {
+    "brand": "Nissan",
+    "family": "Versa",
+    "version": "New Versa Sense MT",
+    "modelYear": null,
+    "priceListClp": 16990000,
+    "source": "https://webstore.nissan.cl/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
+  },
+  {
+    "brand": "Nissan",
+    "family": "Kicks",
+    "version": "New Kicks Sense CVT",
+    "modelYear": null,
+    "priceListClp": 24790000,
+    "source": "https://webstore.nissan.cl/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
+  },
+  {
+    "brand": "Nissan",
+    "family": "Sentra",
+    "version": "SR Platinum",
+    "modelYear": null,
+    "priceListClp": 28990000,
+    "source": "https://webstore.nissan.cl/",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
+  },
+  {
+    "brand": "Nissan",
+    "family": "X-Trail",
+    "version": "Sense CVT 3R",
+    "modelYear": null,
+    "priceListClp": 34401901,
+    "source": "https://webstore.nissan.cl/category/root",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
+  },
+  {
+    "brand": "Nissan",
+    "family": "Pathfinder",
+    "version": "Exclusive 7P 3.5 CVT",
+    "modelYear": null,
+    "priceListClp": 55668593,
+    "source": "https://webstore.nissan.cl/category/root",
+    "checkedAt": "2026-10-18",
+    "currency": "CLP",
+    "priceBasis": "Precio normal indicado en la tienda online oficial Nissan Chile antes del descuento porcentual y del precio «Desde» sujeto a financiamiento Santander Consumer. IVA incluido según oferta comercial; otros costos y vigencia sujetos a confirmación. La correspondencia con un código 3CV no está certificada."
   }
 ]
