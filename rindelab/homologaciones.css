@@ -1,0 +1,26 @@
+/* RINDELAB · control documental de códigos, no certificación automática. */
+.homologation-sources{margin:18px 0 25px}
+.homologation-sources h2{color:#173c55;font-size:18px;margin:0 0 12px}
+.homologation-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.homologation-source-grid>div{background:#f4f9fa;border:1px solid #dce8ea;border-radius:12px;padding:15px 17px;line-height:1.5}
+.homologation-source-grid small{display:block;font-size:11px;color:#58788c;margin-bottom:5px}
+.homologation-source-grid strong{display:block;font-size:15px;color:#173c55}
+.homologation-source-grid p{color:#526b7d;font-size:12px;margin:9px 0}
+.homologation-source-grid a{font-size:12px;font-weight:720}
+.homologation-table{table-layout:fixed;min-width:780px}
+.homologation-table th:first-child{width:34%}
+.homologation-table th:nth-child(2){width:38%}
+.homologation-table th:nth-child(3){width:28%}
+.reg-code{font-size:12px;font-weight:790;color:#0d5672;overflow-wrap:anywhere}
+.reg-code strong,.reg-code small{display:block}
+.reg-code strong{color:#214b62;margin:6px 0;font-size:11px}
+.reg-code small{font-size:10px;color:#5c7584;font-weight:500;margin:5px 0}
+.reg-versions p{font-size:12px;font-weight:650;color:#2b5269;margin:0 0 4px}
+.reg-versions a{display:block;font-size:10px;margin:0 0 12px}
+.reg-shared-note{display:block;color:#805f26;background:#fff8ea;padding:6px 8px;border-left:2px solid #d9aa53;border-radius:0 5px 5px 0;font-size:10px;line-height:1.5}
+.reg-status{font-size:12px;color:#664f34;font-weight:750}
+.reg-status small{display:block;font-size:11px;color:#5a7586;font-weight:500;line-height:1.5;margin-top:9px}
+.reg-conflict{font-size:12px;line-height:1.6;background:#fff9f1;border-left:3px solid #cb9540;padding:12px 15px;border-radius:0 8px 8px 0}
+.reg-conflict strong{display:block;color:#65451f}
+.reg-conflict a{display:block;font-size:11px;font-weight:720}
+@media(max-width:700px){.homologation-source-grid{grid-template-columns:1fr}.homologation-source-grid>div{padding:13px}}
