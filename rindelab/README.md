@@ -143,3 +143,19 @@ Se incluyen también las fichas oficiales de Hyundai Kona, Tucson; Changan Avatr
 El indicador `sourceReviewedVersions` refleja fichas comerciales con alguna especificación contrastada, **no vehículos con código 3CV certificado**. Las dos discrepancias Volkswagen Tera manual siguen abiertas. No se cambian precios, fechas de homologación, emisiones ni rendimientos oficiales.
 
 Ejecutar: `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`. El expediente sigue disponible como artefacto descargable desde GitHub Actions.
+
+## Cuarta capa: cotejo sobre nómina MTT del 28 de septiembre de 2026
+
+Se leyó directamente el archivo XLS de la nómina MTT con corte al **28/09/2026**, aportado para este proyecto, y se extrajeron exclusivamente las 15 filas pertinentes: 14 códigos candidatos presentes y la ficha Volkswagen Tera 1.6 MT con conflicto. El original se conserva sin modificaciones. El extracto [mtt-nomina-20260928-extract.json](./sii/mtt-nomina-20260928-extract.json) contiene código, modelo, marca, transmisión, tecnología, combustible, cilindrada, certificado, fecha y número de fila del XLS. La procedencia se fija mediante el SHA256 `6b013ee19be8e78757efa171a262badf793d0148aa35ca2154224858caaa5afa`.
+
+**Resultado:** los 14 de 14 códigos técnicos candidatos aparecen una vez cada uno en la nómina de septiembre. Los 22 precios comerciales siguen asociados solo como candidatos; ninguna correspondencia de SKU, equipamiento o generación individual está certificada por esta comprobación. La presencia del código y un número C.H. es evidencia registral, no prueba de la identidad comercial exacta.
+
+**Tera:** la ficha VW9988E60525S00-6, modelo 'TERA 1.6 MT', certificado C.H. 7304, homologación 2025-07-10, fila 7162 de Excel, vuelve a indicar transmisión A, pese a que la versión comercial del fabricante se denomina MT. La contradicción persiste entre la evidencia del fabricante, el registro de rendimiento de mayo y la nómina MTT de septiembre. No se sobrescribe la fuente ni se usa para atribuir rendimiento a Tera MT.
+
+**Fronx:** la nómina de septiembre describe SZ9173E60623S00-4 como 'Combustión Interna', mientras la base de rendimiento de mayo lo clasifica como MHEV y el fabricante señala Mild Hybrid. Se preservan y explican ambos criterios de clasificación sin equipararlos ni concluir que la diferencia sea un error.
+
+La página [Control documental de homologaciones](./homologaciones.html) muestra los 14 códigos con número de certificado y fila exacta, fuentes de fabricante, códigos compartidos y los dos registros comerciales con contradicción. El CSV añade el certificado y los campos de septiembre sin mezclar ambas fuentes.
+
+La CI ejecuta `node scripts/audit-homologation-register.cjs --json=homologation-ledger-audit.json`, verifica datos y hash, 14/14 códigos, certificado C.H. 7304, diferencias de transmisión y prohibición de certificar versiones por inferencia. Incluye pruebas negativas que deben fallar ante cambios artificiales de fila, transmisión, cilindrada, hash o confirmaciones manuales sin sustento.
+
+**Separación metodológica:** la base de rendimientos (08/05/2026) se mantiene como fuente principal del buscador; la nómina MTT (28/09/2026) se emplea como evidencia registral adicional. No se han incorporado sus rendimientos como reemplazo ni se ha declarado que refleje stock disponible.
