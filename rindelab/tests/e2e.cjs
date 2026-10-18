@@ -731,7 +731,7 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('.sii-price-item').first().locator('button').click();
  assert.match(await page.locator('.sii-selected-price').textContent(),/10\.990\.000/);
- const url=await page.locator('.sii-selected-price a').getAttribute('href');
+ const url=await page.locator('.sii-selected-price a[target="_blank"]').getAttribute('href');
  assert.equal(url,'https://www.kia.cl/promociones/kia-morning.html');
  await page.locator('.sii-selected-price button').click();
  assert.equal(await page.locator('.sii-selected-price').count(),0);
@@ -787,7 +787,7 @@ await test('Swift muestra cuatro precios de lista, con selección manual y fuent
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('.sii-price-item button').first().click();
  assert.match(await page.locator('.sii-selected-price').textContent(),/14\.090\.000/);
- assert.match(await page.locator('.sii-selected-price a').getAttribute('href'),/suzuki\.cl\/vehiculo\/swift-hybrid/);
+ assert.match(await page.locator('.sii-selected-price a[target="_blank"]').getAttribute('href'),/suzuki\.cl\/vehiculo\/swift-hybrid/);
  await page.locator('#detailClose').click();
 });
 await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselección',async()=>{
