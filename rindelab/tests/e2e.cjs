@@ -1691,10 +1691,16 @@ await test('Lista comercial ampliada: Ford Ranger 8 y BMW X1 4 con fuente y vers
  'X1 sDrive18i M Sport':51900000,'X1 xDrive25e Dynamic':53900000};
  for(const x of ford){assert.equal(x.priceListClp,expectedFord[x.version]);assert.equal(x.source,'https://www.ford.cl/pickups/ranger/comparar-modelos/');assert.equal(x.modelYear,null);}
  for(const x of bmw){assert.equal(x.priceListClp,expectedBmw[x.version]);assert.equal(x.source,'https://www.bmw.cl/modelos/x1');assert.equal(x.modelYear,null);}
- await page.click('#resetButton');await page.fill('#query','Ranger');await page.click('#searchButton');
- assert(await page.locator('.vehicle-card').count()>0);
+ const q=await browser.newPage({viewport:{width:1200,height:850}});
+ await q.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ await q.selectOption('#quoteBrand','Ford');await q.selectOption('#quoteFamily','Ranger');
+ assert.equal(await q.locator('.quote-version').count(),8);
+ await q.selectOption('#quoteBrand','BMW');await q.selectOption('#quoteFamily','X1');
+ assert.equal(await q.locator('.quote-version').count(),4);
+ await q.close();
 });
 await test('Enel BT1 octubre: comuna, red, tramo y tarifa no homologada como final',async()=>{
+ const beforeHomeRate=await page.locator('#homeChargeRate').inputValue();
  await page.locator('#homeTariffDirectory summary').click();
  await page.selectOption('#tariffDistributor','enel');
  await page.waitForFunction(()=>document.querySelector('#tariffCommune')?.options.length>20,{timeout:9000});
@@ -1705,7 +1711,7 @@ await test('Enel BT1 octubre: comuna, red, tramo y tarifa no homologada como fin
  assert.match(await page.locator('#tariffEnelStatus').textContent(),/La Reina.*BT_AA.*T1/);
  assert.match(await page.locator('.tariff-component').textContent(),/162,041/);
  assert.match(await page.locator('.tariff-component').textContent(),/No es el precio completo/);
- assert.equal(await page.locator('#homeChargeRate').inputValue(),'223.33'); // tarifa proveniente de la prueba previa de boleta, NO reemplazada por Enel
+ assert.equal(await page.locator('#homeChargeRate').inputValue(),beforeHomeRate); // el pliego no sustituye la tarifa residencial
  const metadata=await page.evaluate(async()=>fetch('./data/tarifas-bt1-enel-oct2026.json').then(r=>r.json()));
  assert.equal(metadata.documentMonth,'2026-10');
  assert.equal(metadata.completeMarginalRateClpPerKwh,null);
