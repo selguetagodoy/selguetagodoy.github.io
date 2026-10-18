@@ -243,6 +243,9 @@ function render(){
  if(!submitted)return;
  const costAvailable=syncSortAvailability();
  const sorted=sortRows(results,$('sort').value),visible=sorted.slice(0,limit),sort=$('sort').value;
+ $('sourceLegend').hidden=!(results.length||mttMatches.length);
+ $('energyResultsHeading').hidden=!results.length;
+ $('energyResultsCount').textContent=fmt(results.length)+' fichas en esta búsqueda';
  $('resultCount').textContent=fmt(results.length)+' '+(results.length===1?'versión encontrada':'versiones encontradas')+
   (mttMatches.length?' · '+fmt(mttMatches.length)+' homologaciones MTT sin rendimiento':'');
  $('emptyState').hidden=!!results.length||!!mttMatches.length;
@@ -262,7 +265,7 @@ function render(){
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
   const selectedNow=selected.includes(index);
   article.innerHTML='<div class="vehicle-heading"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div><p>Homologación '+safe(row[F.DATE]||'sin fecha')+'</p></div>'+
+   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado') +'</span></div><p>Homologación '+safe(row[F.DATE]||'sin fecha')+'</p><small class="energy-source-line">Ficha de rendimiento 3CV · corte mayo 2026</small></div>'+
    '<div class="vehicle-cell"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell"><small>Costo estimado /100 km</small><strong'+(cost(row)===null?' class="no-data"':'')+'>'+safe(money(cost(row)))+'</strong></div>'+
    '<div class="vehicle-actions"><button type="button" class="button secondary" data-detail="'+index+'">Ver ficha</button>'+
@@ -555,7 +558,7 @@ $('vehicleForm').addEventListener('submit',event=>{event.preventDefault();if(all
 $('resetButton').addEventListener('click',()=>{
  for(const id of ['query','brand','model','tech','bodytype','cycle','year'])$(id).value='';
  choices();$('sort').value='recent';submitted=false;results=[];mttMatches=[];mttLimit=6;compareUpdate();
- $('results').hidden=true;$('mttSearchSection').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
+ $('results').hidden=true;$('mttSearchSection').hidden=true;$('sourceLegend').hidden=true;$('energyResultsHeading').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
 });
 for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
  if(id==='brand')$('model').value='';
