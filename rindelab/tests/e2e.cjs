@@ -134,9 +134,9 @@ await test('Rankings separan Station Wagon de Jeep y mantienen carrocería origi
  await page.locator('#statsClose').click();
 });
 await test('Ranking inicial WLTP ordena costos sin equiparar NEDC',async()=>{
- await page.selectOption('#statsCycle','WLTP');
  await page.locator('#statsOpen').click();
  assert(await page.locator('#statsDialog').evaluate(e=>e.open));
+ await page.selectOption('#statsCycle','WLTP');
  assert.equal(await page.inputValue('#statsCycle'),'WLTP');
  assert.equal(await page.locator('.rank-item').count(),10);
  assert.equal(await page.locator('.rank-cycle').count(),10);
