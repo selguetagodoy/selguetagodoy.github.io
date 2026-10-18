@@ -1252,5 +1252,93 @@
     "checkedAt": "2026-10-17",
     "currency": "CLP",
     "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Tera",
+    "version": "Trend 1.6 MSI MT",
+    "modelYear": null,
+    "priceListClp": 16590000,
+    "source": "https://www.volkswagen.cl/tera/tera",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Tera",
+    "version": "Comfort 1.6 MSI MT",
+    "modelYear": null,
+    "priceListClp": 17490000,
+    "source": "https://www.volkswagen.cl/tera/tera",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Tera",
+    "version": "Comfort 1.0 TSI AT",
+    "modelYear": null,
+    "priceListClp": 18990000,
+    "source": "https://www.volkswagen.cl/tera/tera",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Tera",
+    "version": "High 1.0 TSI AT",
+    "modelYear": null,
+    "priceListClp": 20690000,
+    "source": "https://www.volkswagen.cl/tera/tera",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Tera",
+    "version": "Outfit 1.0 TSI AT",
+    "modelYear": null,
+    "priceListClp": 21090000,
+    "source": "https://www.volkswagen.cl/tera/tera",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Taos",
+    "version": "Comfortline 1.5 TSI AT",
+    "modelYear": null,
+    "priceListClp": 30590000,
+    "source": "https://www.volkswagen.cl/taos/nuevo-taos",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "ID.4",
+    "version": "Pro 82 kWh",
+    "modelYear": null,
+    "priceListClp": 49900000,
+    "source": "https://www.volkswagen.cl/id4/id4",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Polo",
+    "version": "Track 1.6 MSI MT",
+    "modelYear": null,
+    "priceListClp": 14490000,
+    "source": "https://www.volkswagen.cl/polo/polo-track",
+    "checkedAt": "2026-10-17",
+    "currency": "CLP",
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
   }
 ]
