@@ -56,6 +56,7 @@ assert.equal(get('Hyundai','Venue','Venue QU2i 1.0T MT GO').manufacturerEvidence
 assert.throws(()=>audit.specsFor({brand:'Suzuki',family:'Fronx',version:'1.5 GL AT'},{brand:'Suzuki',family:'Fronx',version:'1.5 GL AT',specifications:{transmission:'M'}}),/Contradicción en nombre comercial/);
 assert(get('Mazda','CX-30','CORE 2.0 2WD 6AT 7G').expressedSpecifications.engine===2);
 
+console.log('REVISION_SUBARU_20261018 '+JSON.stringify({counts:report.counts,caseItems:report.cases.filter(x=>x.brand==='Subaru'&&['Impreza','Forester','Crosstrek'].includes(x.family)).map(x=>({family:x.family,version:x.version,status:x.status,conflicts:x.conflictsExamples.map(c=>({code:c.code3cv,conflicts:c.conflicts})),reviewable:x.reviewableCandidates}))}));
 const notes=read('rindelab/sii/review-notes-2026.json');
 assert.equal(notes.schemaVersion,1);
 assert.equal(notes.cases.length,2);
