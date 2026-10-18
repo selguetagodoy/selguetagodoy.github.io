@@ -46,7 +46,7 @@ jobs:
       - name: Validar integridad y exportación del informe de precios
         run: |
           node scripts/audit-price-sources.cjs --report-json=price-audit.json
-          node -e "const r=require('./price-audit.json');if(r.schemaVersion!==1 || r.catalog.records<136 || r.catalog.brands<10 || !Array.isArray(r.staleRecords) || !Array.isArray(r.catalog.byBrand) || r.errors.length){process.exit(1)}"
+          node -e "const r=require('./price-audit.json');if(r.schemaVersion!==1 || r.catalog.records<143 || r.catalog.brands<10 || !Array.isArray(r.staleRecords) || !Array.isArray(r.catalog.byBrand) || r.errors.length){process.exit(1)}"
 
       - name: Auditar cruce comercial con familias 3CV y exclusiones
         run: node scripts/audit-commercial-3cv-coverage.cjs --json=coverage-audit.json
@@ -66,7 +66,7 @@ jobs:
       - name: Validar integración exhaustiva API oficial octubre, ciclos y 228 MTT reconciliados
         run: node scripts/audit-official-api-october-2026.cjs --json=official-api-october-audit.json
 
-      - name: Guardar expediente auditable de 27 revisiones
+      - name: Guardar expediente auditable de 28 revisiones
         uses: actions/upload-artifact@v4
         with:
           name: rindelab-qa-3cv-prioridades

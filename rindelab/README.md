@@ -96,7 +96,7 @@ Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Pl
 
 La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examinar el grado de **coincidencia nominal por marca y familia** entre el catálogo documental de precios de lista y las fichas de homologación disponibles en el corte oficial 3CV del 08/05/2026. No altera el buscador principal ni las bases oficiales.
 
-- **Denominador comercial:** 136 precios de lista asociados a 46 familias, correspondientes únicamente a las 10 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
+- **Denominador comercial:** 143 precios de lista asociados a 52 familias, correspondientes únicamente a las 13 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
 - **Resultado de cobertura nominal:** cada familia comercial registra la cantidad de fichas 3CV cuyo nombre y marca pueden corresponderle, bajo reglas explícitas y comprobables. Los filtros permiten revisar casos con y sin coincidencia y descargar la tabla filtrada como CSV.
 - **No hay emparejamiento automático de versiones.** Una coincidencia de familia puede mezclar generaciones, tracción, combustible, baterías, tecnología o transmisiones diferentes; en esta fase no se certifica ninguna equivalencia técnica entre versiones ni su disponibilidad comercial.
 - **Reglas de exclusión documentadas:** Mazda CX-3 no confunde CX-30; Creta no absorbe Creta Grand; Hunter diésel excluye Hunter E/EREV; Yaris no absorbe Yaris Cross; Corolla Sedán no absorbe Corolla Cross; CS55 Plus no se equipara a CS55 de otra generación.
@@ -108,9 +108,11 @@ El 18/10/2026 se incorporaron otras cinco versiones Subaru con precio de lista o
 
 La ampliación del 18/10/2026 suma nueve precios de lista documentados directamente en las plataformas oficiales de Great Wall (GWM), BYD y Changan. En Great Wall se identifica la marca conforme al registro 3CV y se mantienen separadas las familias Haval Jolion Max y ORA 03. En BYD no se fusiona Yuan Pro DM-i con Yuan Pro eléctrico; se excluyen valores contradictorios de Song Pro entre distintas condiciones promocionales oficiales. Para Changan, S05 EV/REEV y CS35 Plus conservan versiones distintas, sin equivalencia automática con códigos 3CV. El total documentado asciende a 136 precios de 12 marcas y 46 familias. La fecha de consulta es del 18/10/2026 y no acredita stock.
 
+El 18/10/2026 se añadieron siete precios normales publicados por la tienda online de Nissan Chile: Kait Sense y Advance, New Versa Sense MT, New Kicks Sense CVT, Sentra SR Platinum, X-Trail Sense CVT 3R y Pathfinder Exclusive 7P 3.5 CVT. Se diferencia el precio normal visible antes del descuento del precio «Desde» sujeto a financiamiento. La fuente identifica la versión comercial, no certifica el emparejamiento con códigos 3CV antiguos. Chevrolet y Renault quedan pendientes en esta fase por falta de valores de lista independientes de promociones suficientemente claros en sus páginas revisadas. Se mantiene fuera del catálogo cualquier precio «Desde» sin desglose de versión, bono e IVA.
+
 ## Segunda capa: cotejo exploratorio por versión comercial (octubre de 2026)
 
-La página [Revisión por versión](./versiones.html) examina las 136 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
+La página [Revisión por versión](./versiones.html) examina las 143 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
 
 Se extraen únicamente rasgos **expresos** del nombre comercial: tecnología cuando se declara, cilindrada decimal, transmisión manual o categoría amplia automática, tracción y algunos códigos de generación. Se contrastan con tecnología, cilindrada, transmisión, tracción, combustible y modelo originales del 3CV.
 
@@ -126,13 +128,15 @@ Para reproducir el análisis ejecutar: `node scripts/audit-commercial-versions.c
 
 ## Expediente prioritario de revisión 3CV
 
-Desde la página [Revisión por versión](./versiones.html) se puede activar «Solo revisión prioritaria» para revisar **27 casos**, incluidos dos Volkswagen Tera MT contrastados con evidencias del fabricante, un Forester híbrido y un Deepal S05 EV sin candidato compatible en el corte histórico de mayo, junto con 23 versiones con un solo candidato preliminar. Esto no implica que existan 27 homologaciones verificadas.
+Desde la página [Revisión por versión](./versiones.html) se puede activar «Solo revisión prioritaria» para revisar **28 casos**, incluidos dos Volkswagen Tera MT contrastados con evidencias del fabricante, un Forester híbrido, un Deepal S05 EV y una Nissan Kait Sense CVT con transmisión contradictoria frente al corte histórico de mayo, junto con 23 versiones con un solo candidato preliminar. Esto no implica que existan 28 homologaciones verificadas.
 
 Los 23 candidatos únicos **no representan necesariamente 23 códigos 3CV exclusivos**: algunas terminaciones comerciales (equipamiento) comparten el mismo código técnico candidato. La aplicación muestra el código, si se reutiliza entre versiones comerciales, y mantiene la advertencia sobre falta de equivalencia certificada.
 
 La discrepancia Tera se documenta en [review-notes-2026.json](./sii/review-notes-2026.json), con fuente oficial Volkswagen, código 3CV y diferencia de transmisión. Según el fabricante, Tera Trend MT y Comfort MT llevan caja manual de cinco velocidades, mientras la ficha 3CV «TERA 1.6 MT» código VW9988E60525S00-6 indica «A» en la columna de transmisión. No se modifica ningún registro de la fuente 3CV. El expediente sigue abierto para contrastar con la autoridad correspondiente.
 
-En cada ejecución de GitHub Actions, la etapa auditora genera `versions-audit.json`, `priority-review.json` y `priority-review.md`, y los publica como artefacto `rindelab-qa-3cv-prioridades` por 90 días, con las 27 prioridades y las evidencias para revisión. La nueva Forester 2.5 HEV no tiene coincidencia técnica consistente frente a las fichas 3CV del corte de mayo; eso **no acredita un error del 3CV ni ausencia de una homologación más reciente**, porque la consulta oficial de octubre es un conjunto documental independiente. También se pueden generar localmente con `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`.
+En cada ejecución de GitHub Actions, la etapa auditora genera `versions-audit.json`, `priority-review.json` y `priority-review.md`, y los publica como artefacto `rindelab-qa-3cv-prioridades` por 90 días, con las 28 prioridades y las evidencias para revisión. La nueva Forester 2.5 HEV no tiene coincidencia técnica consistente frente a las fichas 3CV del corte de mayo; eso **no acredita un error del 3CV ni ausencia de una homologación más reciente**, porque la consulta oficial de octubre es un conjunto documental independiente. También se pueden generar localmente con `node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md`.
+
+La alerta Nissan Kait Sense CVT no permite adjudicar la homologación `NS10421T3C0126S00-7` a la versión comercial: el registro histórico consigna transmisión `M`, en tanto la versión de la tienda Nissan es `CVT`. Esta diferencia coincide con el expediente de discrepancias ya detectado entre el archivo energético y la nómina MTT. Ningún valor 3CV se corrige sin rectificación documental oficial.
 
 ## Tercera capa: fichas técnicas oficiales de fabricantes
 
