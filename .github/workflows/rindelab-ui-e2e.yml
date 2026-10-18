@@ -8,6 +8,7 @@ on:
       - "scripts/audit-price-sources.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
+      - "scripts/audit-homologation-register.cjs"
   push:
     branches:
       - "main"
@@ -17,6 +18,7 @@ on:
       - "scripts/audit-price-sources.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
+      - "scripts/audit-homologation-register.cjs"
   workflow_dispatch:
 
 permissions:
@@ -46,6 +48,9 @@ jobs:
       - name: Auditar atributos técnicos y contradicciones por versión
         run: node scripts/audit-commercial-versions.cjs --json=versions-audit.json --priority-json=priority-review.json --priority-md=priority-review.md
 
+      - name: Validar registro documental MTT y bloquear homologaciones no acreditadas
+        run: node scripts/audit-homologation-register.cjs --json=homologation-ledger-audit.json
+
       - name: Guardar expediente auditable de 24 revisiones
         uses: actions/upload-artifact@v4
         with:
@@ -54,6 +59,7 @@ jobs:
             versions-audit.json
             priority-review.json
             priority-review.md
+            homologation-ledger-audit.json
           retention-days: 90
 
       - name: Install Playwright and Chromium
