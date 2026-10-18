@@ -16,11 +16,17 @@ Web pública: https://selguetagodoy.github.io/rindelab/
 ## Cotizador comercial y directorio de tarifas (18 de octubre de 2026)
 
 ### Cotizador de autos nuevos
-El módulo público `rindelab/cotizador.html` utiliza las **143 versiones comerciales documentadas de 13 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
+El módulo público `rindelab/cotizador.html` utiliza las **155 versiones comerciales documentadas de 14 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
 
 La opción de financiamiento es estrictamente matemática y optativa: no calcula una cuota si no se ingresa una tasa nominal anual; el cálculo usa tasa nominal/12, pie y meses de plazo, sin simular CAE, seguros ni gastos contractuales. No hay precotización del banco ni solicitud de datos personales. Únicamente se enlazan cotizadores de fabricante explícitamente comprobados (Hyundai y Changan); el resto dispone de enlace a su fuente oficial verificable. La elección de una versión comercial no adjudica un código 3CV ni un registro SII: ambos requieren evidencia y selección independientes.
 
 Los precios no tienen vigencia automática: a los 30 días de `checkedAt` el módulo advierte que la revisión es antigua; siempre debe confirmarse el valor antes de cerrar una operación. El costo de uso 3CV no se suma al precio de compra porque no existe correspondencia universal auditada entre fichas 3CV y versiones comerciales.
+
+### Ampliación de precios Ford y BMW
+El 18 de octubre de 2026 se agregaron **ocho versiones Ford Ranger** desde el [comparador oficial Ford Chile](https://www.ford.cl/pickups/ranger/comparar-modelos/), que distingue precio de lista y valor con financiamiento, y **cuatro versiones BMW X1** desde la [página oficial BMW Chile](https://www.bmw.cl/modelos/x1), que también identifica el bono del mes separado del precio de lista. En ambos casos se registra `modelYear: null` porque el precio no prueba por sí mismo el año modelo. Ninguna se adjudica automáticamente a una homologación 3CV. Resultado del catálogo: **155 registros, 14 marcas y 54 familias**.
+
+### Verificación documental Enel octubre 2026
+Se registró el [pliego oficial Enel Distribución BT1 octubre 2026](https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.htmlSi.html), con archivo de datos `data/tarifas-bt1-enel-oct2026.json`. El módulo ofrece **comuna, tipo de red BT_AA/BT_SA/BT_AS/BT_SS y tramo ETR T1–T6** para consultar el pliego, sin imputar una tarifa total por kWh. El documento señala cargo por energía de **$162,041/kWh IVA incluido**, que **solo es un componente**, no el costo marginal de recargar: faltan distribución por red/ETR, transporte, potencia y eventuales recargos por consumo. La tarifa domiciliaria del simulador sigue siendo ingresada por el usuario desde su boleta. Municipios documentados: 33 incluidos en la lista del PDF, como La Reina, Peñalolén, Ñuñoa, Santiago y Providencia; no se infiere cobertura de todos los suministros de esas comunas.
 
 ### Directorio de tarifa eléctrica residencial
 Bajo los escenarios de carga de la portada se agregó una consulta de **pliegos BT1** por distribuidora declarada desde la boleta. Se enlazan fuentes oficiales Enel, Saesa, Frontel o el directorio SEC para CGE, Chilquinta y otras, sin imputar valores numéricos por comuna. Los pliegos varían por mes, comuna, red, regulaciones y modalidad. El usuario ingresa a RINDELAB la tarifa real de su boleta o una estimación media explícitamente rotulada, sin confundir costo promedio total de cuenta con costo marginal de recarga.
@@ -142,7 +148,7 @@ Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Pl
 
 La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examinar el grado de **coincidencia nominal por marca y familia** entre el catálogo documental de precios de lista y las fichas de homologación disponibles en el corte oficial 3CV del 08/05/2026. No altera el buscador principal ni las bases oficiales.
 
-- **Denominador comercial:** 143 precios de lista asociados a 52 familias, correspondientes únicamente a las 13 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
+- **Denominador comercial:** 155 precios de lista asociados a 54 familias, correspondientes únicamente a las 14 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
 - **Resultado de cobertura nominal:** cada familia comercial registra la cantidad de fichas 3CV cuyo nombre y marca pueden corresponderle, bajo reglas explícitas y comprobables. Los filtros permiten revisar casos con y sin coincidencia y descargar la tabla filtrada como CSV.
 - **No hay emparejamiento automático de versiones.** Una coincidencia de familia puede mezclar generaciones, tracción, combustible, baterías, tecnología o transmisiones diferentes; en esta fase no se certifica ninguna equivalencia técnica entre versiones ni su disponibilidad comercial.
 - **Reglas de exclusión documentadas:** Mazda CX-3 no confunde CX-30; Creta no absorbe Creta Grand; Hunter diésel excluye Hunter E/EREV; Yaris no absorbe Yaris Cross; Corolla Sedán no absorbe Corolla Cross; CS55 Plus no se equipara a CS55 de otra generación.
@@ -158,7 +164,7 @@ El 18/10/2026 se añadieron siete precios normales publicados por la tienda onli
 
 ## Segunda capa: cotejo exploratorio por versión comercial (octubre de 2026)
 
-La página [Revisión por versión](./versiones.html) examina las 143 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
+La página [Revisión por versión](./versiones.html) examina las 155 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
 
 Se extraen únicamente rasgos **expresos** del nombre comercial: tecnología cuando se declara, cilindrada decimal, transmisión manual o categoría amplia automática, tracción y algunos códigos de generación. Se contrastan con tecnología, cilindrada, transmisión, tracción, combustible y modelo originales del 3CV.
 
