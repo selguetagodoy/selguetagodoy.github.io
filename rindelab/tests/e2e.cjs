@@ -513,6 +513,42 @@ await test('Catálogo de 136 precios de lista sin bonos con fuente oficial',asyn
   seen.add(key);
  }
 });
+await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar ciclos ni motorizaciones',async()=>{
+ const entries=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list136').then(r=>r.json()));
+ const fresh=entries.filter(x=>x.checkedAt==='2026-10-18'&&['Great Wall','BYD','Changan'].includes(x.brand));
+ assert.equal(fresh.length,9);
+ assert.deepEqual(fresh.reduce((o,x)=>(o[x.brand]=(o[x.brand]||0)+1,o),{}),{'Great Wall':2,'BYD':3,'Changan':4});
+ const lookup=(brand,version)=>fresh.find(x=>x.brand===brand&&x.version===version);
+ assert.equal(lookup('Great Wall','Haval Jolion Max Elite 1.5T 2WD AT').priceListClp,21190000);
+ assert.equal(lookup('Great Wall','ORA 03 400 KM EV').priceListClp,26490000);
+ assert.equal(lookup('BYD','Yuan Pro DM-i GL').priceListClp,19990000);
+ assert.equal(lookup('BYD','Yuan Pro DM-i GS').priceListClp,22990000);
+ assert.equal(lookup('BYD','Song Plus DM-i GS').priceListClp,31490000);
+ assert.equal(lookup('Changan','S05 REEV').priceListClp,29990000);
+ assert.equal(lookup('Changan','S05 EV').priceListClp,30990000);
+ assert.equal(lookup('Changan','CS35 Plus Luxury AT').priceListClp,17590000);
+ assert.equal(lookup('Changan','CS35 Plus Elite AT').priceListClp,18890000);
+ assert(fresh.every(p=>p.modelYear===null&&p.currency==='CLP'&&/Precio|precio/.test(p.priceBasis)));
+ assert.equal(fresh.filter(x=>x.family==='Yuan Pro DM-i').length,2);
+ assert(!fresh.some(x=>x.family==='Yuan Pro'), 'No mezclar enchufable con BEV');
+ const mappings=await page.evaluate(()=>{
+  const f=window.RindelabSII.family;
+  return ['Haval Jolion Max HP','Haval Jolion 7DCT','ORA 03 (ES11) EV GT','Song Plus DMI 1.5T','YUAN PRO GL','Yuan Pro DM-i GL','DEEPAL S05 REEV','New CS35 Plus 1.6']
+    .map((name,i)=>f([i<3?'Great Wall':i<6?'BYD':'Changan',name]));
+ });
+ assert.deepEqual(mappings,['Haval Jolion Max','Haval Jolion','ORA 03','Song Plus','Yuan','Yuan Pro DM-i','Deepal S05','CS35 Plus']);
+});
+await test('Great Wall: modelos Jolion Max y ORA 03 exponen precio de lista con selección manual',async()=>{
+ for(const [q,price] of [['Haval Jolion Max','21.190.000'],['ORA 03','26.490.000']]){
+  await page.click('#resetButton');await page.fill('#query',q);await page.click('#searchButton');
+  assert((await page.locator('.vehicle-card').count())>0,'Sin ficha 3CV '+q);
+  await page.locator('.vehicle-card button[data-detail]').first().click();
+  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===1);
+  assert((await page.locator('#siiCommercial').textContent()).includes(price),'Sin precio esperado '+q);
+  assert.equal(await page.locator('.sii-selected-price').count(),0);
+  await page.locator('#detailClose').click();
+ }
+});
 await test('No asigna precio de lista automáticamente y permite elegir o quitar versión',async()=>{
  await page.click('#resetButton');await page.fill('#query','Corolla Cross');await page.click('#searchButton');
  await page.locator('.vehicle-card button[data-detail]').nth(1).click();
