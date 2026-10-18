@@ -14,6 +14,18 @@ async function open(width,height){
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
+await test('Fotografía de portada WebP proporcionada por el usuario se carga sin errores',async()=>{
+ const img=page.locator('.hero-image img');
+ assert(await img.isVisible());
+ const src=await img.getAttribute('src');
+ assert.match(src,/^\.\/hero-foto-rindelab\.webp\?v=20261018-1$/);
+ const metrics=await img.evaluate(el=>({complete:el.complete,naturalWidth:el.naturalWidth,naturalHeight:el.naturalHeight,renderedWidth:el.getBoundingClientRect().width}));
+ assert(metrics.complete&&metrics.naturalWidth===450&&metrics.naturalHeight===253,JSON.stringify(metrics));
+ assert(metrics.renderedWidth>0);
+ assert.match(await img.getAttribute('alt'),/automóviles.*iluminado en azul/i);
+ assert.equal(await page.locator('.hero-image-caption').textContent(),'Imagen referencial de vehículos');
+});
+
 await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
  const manifest=await page.evaluate(async()=>fetch('../vehiculos/data/manifest.json').then(r=>r.json()));
  assert.equal(manifest.count,8056);
@@ -1041,6 +1053,17 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
   assert(size.doc<=size.view+3);
   await p.locator('#detailClose').click();
+ });
+ await test('Foto en portada visible sin recorte externo '+width+' px',async()=>{
+  const photo=p.locator('.hero-image img');
+  assert(await photo.isVisible());
+  const state=await photo.evaluate(el=>({
+   complete:el.complete,naturalWidth:el.naturalWidth,
+   photoWidth:el.getBoundingClientRect().width,
+   documentWidth:document.documentElement.scrollWidth,viewport:innerWidth
+  }));
+  assert(state.complete&&state.naturalWidth===450&&state.photoWidth>0,JSON.stringify(state));
+  assert(state.documentWidth<=state.viewport+3,JSON.stringify(state));
  });
  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
   const dimensions=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,search:document.querySelector('#searchButton').getBoundingClientRect().height,searchTop:document.querySelector('#searchButton').getBoundingClientRect().top+scrollY}));
