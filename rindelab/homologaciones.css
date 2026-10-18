@@ -24,3 +24,6 @@
 .reg-conflict strong{display:block;color:#65451f}
 .reg-conflict a{display:block;font-size:11px;font-weight:720}
 @media(max-width:700px){.homologation-source-grid{grid-template-columns:1fr}.homologation-source-grid>div{padding:13px}}
+
+.reg-certificate{color:#245f67!important;font-weight:750!important;background:#edf7f5;border-radius:5px;padding:5px 7px;display:inline-block!important;margin-top:6px!important}
+.reg-taxonomy{border-left:2px solid #aa9145;padding:7px 8px;background:#fff9e9;border-radius:0 5px 5px 0;color:#765a27!important}
