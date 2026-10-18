@@ -79,8 +79,8 @@ function render(){
    state.append(code);
   }
   if(x.manufacturerEvidence){
-   const evidence=document.createElement('div');evidence.className='manufacturer-evidence';
-   const h=document.createElement('strong');h.textContent='Atributos respaldados en ficha del fabricante';evidence.append(h);
+   const evidence=document.createElement('details');evidence.className='manufacturer-evidence';
+   const h=document.createElement('summary');h.textContent='Ver atributos respaldados por fabricante';evidence.append(h);
    const note=document.createElement('p');note.textContent=x.manufacturerEvidence.observation;evidence.append(note);
    const source=document.createElement('a');source.href=x.manufacturerEvidence.url;source.rel='noopener noreferrer';source.target='_blank';source.textContent='Consultar ficha oficial ↗';evidence.append(source);
    const warning=document.createElement('small');warning.textContent='No confirma que el código 3CV corresponda exactamente a esta versión.';evidence.append(warning);
