@@ -10,7 +10,7 @@
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="stylesheet" href="./v6.css?v=20261017-sii12">
 <link rel="stylesheet" href="./cobertura.css?v=20261018-1">
-<link rel="stylesheet" href="./novedades-3cv.css?v=20261018-evidence12">
+<link rel="stylesheet" href="./novedades-3cv.css?v=20261018-api3source">
 <title>Homologaciones recientes · RINDELAB</title>
 </head>
 <body>
@@ -80,18 +80,23 @@ Desde entonces, <strong>228 de los 229 códigos ausentes en mayo ya aparecen con
 </section>
 <section class="delta-bottom-grid">
 <section class="coverage-panel delta-review" aria-labelledby="differencesTitle">
-<div class="coverage-panel-head"><div><p class="eyebrow">EXPEDIENTE TÉCNICO · FUENTES PRIMARIAS</p><h2 id="differencesTitle">12 discrepancias pendientes de aclaración</h2></div></div>
+<div class="coverage-panel-head"><div><p class="eyebrow">EXPEDIENTE TÉCNICO · FUENTES PRIMARIAS</p><h2 id="differencesTitle">12 discrepancias · tres fuentes oficiales</h2></div></div>
 <div class="delta-review-controls">
  <div class="field"><label for="deltaReviewGroup">Familia o marca</label><select id="deltaReviewGroup"><option value="">Todos los casos</option></select></div>
  <button class="button secondary" type="button" id="deltaReviewDownload" disabled>Exportar expediente CSV</button>
 </div>
 <p id="deltaReviewCount" class="delta-review-count" aria-live="polite"></p>
-<p>En 12 códigos presentes en ambas fuentes, la transmisión o cilindrada no coincide. Cada caso conserva ambos valores, enlaza una ficha primaria del fabricante y señala el alcance de esa evidencia. <strong>Una ficha comercial no rectifica por sí sola una homologación 3CV.</strong></p>
-<div class="coverage-table-scroll" role="region" aria-label="Diferencias entre documentos" tabindex="0">
-<table class="coverage-table delta-conflicts-table"><thead><tr><th scope="col">Código, modelo y evidencia</th><th scope="col">MTT septiembre</th><th scope="col">3CV mayo</th></tr></thead>
-<tbody id="deltaConflicts"><tr><td colspan="3">Cargando diferencias…</td></tr></tbody></table>
+<p>En 12 códigos coincidentes, la transmisión o cilindrada difiere entre la nómina MTT y el archivo de rendimientos de mayo. Incorporamos una tercera fuente: la <strong>API de Consumo Vehicular consultada el 18/10/2026</strong>, con el código exacto. Su coincidencia con un archivo <strong>no equivale a una rectificación oficial</strong>; ninguna fila original se modifica.</p>
+<div class="delta-three-source-totals" aria-label="Concordancia de la API de octubre con las fuentes anteriores">
+ <div><strong id="deltaApiMatchesMay">—</strong><span>API coincide con mayo</span></div>
+ <div><strong id="deltaApiMatchesMtt">—</strong><span>API coincide con septiembre</span></div>
+ <div><strong id="deltaApiResolved">—</strong><span>Rectificaciones oficiales documentadas</span></div>
 </div>
-<p class="delta-footnote"><strong>Estado de los 12 casos: pendiente de aclaración documental con 3CV.</strong> No se reemplazaron transmisiones, cilindradas ni rendimientos. <a href="https://github.com/selguetagodoy/selguetagodoy.github.io/issues/53" target="_blank" rel="noopener noreferrer">Consultar expediente de revisión #53 ↗</a>. La contradicción Volkswagen Tera 1.6 MT entre el fabricante y ambas fuentes se documenta aparte en el <a href="./homologaciones.html">control de homologaciones</a>.</p>
+<div class="coverage-table-scroll" role="region" aria-label="Diferencias entre documentos" tabindex="0">
+<table class="coverage-table delta-conflicts-table"><thead><tr><th scope="col">Código, modelo y evidencia</th><th scope="col">MTT septiembre</th><th scope="col">3CV mayo</th><th scope="col">API oficial octubre</th></tr></thead>
+<tbody id="deltaConflicts"><tr><td colspan="4">Cargando diferencias…</td></tr></tbody></table>
+</div>
+<p class="delta-footnote"><strong>Estado de los 12 casos: pendiente de aclaración documental con 3CV.</strong> La API de octubre es una tercera publicación de datos del Ministerio de Energía, no un acto de rectificación de la nómina ni del archivo histórico. No se reemplazaron transmisiones, cilindradas ni rendimientos. <a href="https://github.com/selguetagodoy/selguetagodoy.github.io/issues/53" target="_blank" rel="noopener noreferrer">Consultar expediente de revisión #53 ↗</a>. La contradicción Volkswagen Tera 1.6 MT entre el fabricante y ambas fuentes se documenta aparte en el <a href="./homologaciones.html">control de homologaciones</a>.</p>
 </section>
 <section class="delta-method" aria-labelledby="methodTitle">
 <h2 id="methodTitle">Criterio de comparación</h2>
@@ -104,5 +109,6 @@ Desde entonces, <strong>228 de los 229 códigos ausentes en mayo ya aparecen con
 </section>
 </main>
 <footer class="footer"><div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy</span><small>Consulta siempre las fuentes oficiales antes de decidir una compra.</small></div></footer>
-<script defer src="./novedades-3cv.js?v=20261018-evidence12"></script>
+<script defer src="./sii/three-source-review.js?v=20261018-api3source"></script>
+<script defer src="./novedades-3cv.js?v=20261018-api3source"></script>
 </body></html>
