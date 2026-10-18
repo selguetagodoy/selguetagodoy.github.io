@@ -153,7 +153,7 @@ function renderDifferences(){
   addSub(may,'Rendimientos 08/05');
   tbody.append(tr);
  }
- if(!rows.length)td(document.createElement('tr'),'No hay discrepancias en esta categoría.');
+ if(!rows.length){const tr=document.createElement('tr');td(tr,'No hay discrepancias en esta categoría.').colSpan=3;tbody.append(tr);}
 }
 function downloadReview(){
  if(!review)return;
