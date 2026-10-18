@@ -10,6 +10,7 @@ const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
 const number=n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>0?Number(n):null;
 const fixed=n=>number(n)?Number(n).toLocaleString('es-CL',{maximumFractionDigits:2}):'N/D';
 let all=[],results=[],selected=[],submitted=false,limit=10,cut='2026-05-08';
+let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
 const searchIndex=new WeakMap();
 function cleanRow(row){
  const r=row.slice();
@@ -79,6 +80,66 @@ function matchesFilters(row,f){
   (!f.tech||row[F.TECH]===f.tech)&&(!f.body||row[F.BODY]===f.body)&&
   (!f.cycle||row[F.CYCLE]===f.cycle)&&(!f.year||row[F.DATE].slice(0,4)>=f.year);
 }
+
+/* Las homologaciones MTT no tienen rendimiento en la base energética de mayo.
+ * Se consultan como un universo documental separado; jamás ingresan a all[]. */
+function mttTechnology(source){
+ const tech=normalize(source.technology),fuel=normalize(source.fuel);
+ if(tech.includes('rango extendido'))return 'REEV';
+ if(tech.includes('electrico a bateria'))return 'EV';
+ if(tech.includes('hibrido con recarga exterior'))return 'PHEV';
+ if(tech.includes('hibrido sin recarga exterior'))return 'HEV';
+ if(tech==='combustion interna'&&fuel==='diesel')return 'Diésel';
+ if(tech==='combustion interna'&&fuel==='gasolina')return 'Bencina';
+ return '';
+}
+function prepareMTT(source){
+ if(source.schemaVersion!==1||source.counts?.afterMayNewCodes!==229||source.counts.afterMayRows!==230||
+   source.recentRecords?.length!==230)throw Error('Cotejo oficial de septiembre incompleto');
+ const unique=new Set();
+ const items=source.recentRecords.filter(item=>!item.inMaySource).map(item=>{
+  if(!item.code||!item.brand||!item.model||!item.date||!item.certificate||
+    item.date<=cut||item.date>'2026-09-28'||unique.has(item.code))throw Error('Registro MTT inválido o duplicado');
+  unique.add(item.code);
+  const branded=aliases[item.brand]||item.brand;
+  const row=[];
+  row[F.BRAND]=branded;row[F.MODEL]=item.model;
+  row[F.TECH]=mttTechnology(item);row[F.DATE]=item.date;row[F.CODE]=item.code;
+  row[F.BODY]='';row[F.CYCLE]='';
+  return {source:item,row};
+ });
+ if(items.length!==229||unique.size!==229)throw Error('Las 229 homologaciones MTT no cuadran con la fuente');
+ return items;
+}
+function filterMTT(f){
+ // La nómina MTT no informa carrocería ni ciclo de rendimiento equiparables.
+ if(f.body||f.cycle)return [];
+ return mttRecords.filter(item=>matchesText(item.row,f.q)&&matchesFilters(item.row,f));
+}
+function renderMTT(){
+ const container=$('mttSearchSection'),list=$('mttSearchList');list.replaceChildren();
+ container.hidden=!mttMatches.length;
+ $('mttSearchCount').textContent=fmt(mttMatches.length)+' '+(mttMatches.length===1?'homologación encontrada':'homologaciones encontradas')+' en la nómina MTT, sin rendimiento comparable.';
+ for(const item of mttMatches.slice(0,mttLimit)){
+  const record=item.source,card=document.createElement('article');card.className='mtt-result-card';
+  const heading=document.createElement('div');heading.className='mtt-result-name';
+  const small=document.createElement('small');small.textContent=item.row[F.BRAND];heading.append(small);
+  const title=document.createElement('strong');title.textContent=record.model;heading.append(title);
+  const tag=document.createElement('em');tag.textContent='Solo homologación MTT · sin consumo oficial de mayo';heading.append(tag);
+  const code=document.createElement('div');code.className='mtt-result-source';
+  code.append('Código 3CV: '+record.code);
+  const cert=document.createElement('small');cert.textContent=record.certificate+' · '+record.date;code.append(cert);
+  const link=document.createElement('a');link.href='./novedades-3cv.html?codigo='+encodeURIComponent(record.code);
+  link.textContent='Ver registro MTT y fuente ↗';code.append(link);
+  const status=document.createElement('div');status.className='mtt-result-metrics';
+  status.append(record.technology||'Tecnología no informada');
+  const note=document.createElement('small');note.textContent='Rendimiento: no disponible · Costo: no calculable';status.append(note);
+  card.append(heading,code,status);list.append(card);
+ }
+ const more=$('mttSearchMore');more.hidden=mttLimit>=mttMatches.length;
+ more.textContent='Mostrar más homologaciones MTT ('+fmt(mttMatches.length-mttLimit)+' pendientes)';
+}
+
 function setOptions(id,items,placeholder){
  const element=$(id),current=element.value;
  element.replaceChildren(new Option(placeholder,''),...items.map(item=>new Option(item.label||item.value,item.value)));
@@ -90,7 +151,8 @@ function choices(){
  // Only compatible brand/model options; never quietly invent or repeat empty entries.
  const t=$('tech').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value;
  const pool=all.filter(r=>(!t||r[F.TECH]===t)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
- const brands=[...new Set(pool.map(r=>r[F.BRAND]))].sort((a,b)=>a.localeCompare(b,'es')).map(x=>({value:x}));
+ const mtPool=!body&&!cycle?mttRecords.filter(item=>(!t||item.row[F.TECH]===t)&&(!year||item.row[F.DATE].slice(0,4)>=year)):[];
+ const brands=[...new Set([...pool.map(r=>r[F.BRAND]),...mtPool.map(item=>item.row[F.BRAND])])].sort((a,b)=>a.localeCompare(b,'es')).map(x=>({value:x}));
  const brandCleared=setOptions('brand',brands,'Todas las marcas');
  const activeBrand=$('brand').value;
  const modelSelect=$('model');
@@ -98,6 +160,7 @@ function choices(){
  else{
   const families=new Map();
   for(const r of pool){if(r[F.BRAND]!==activeBrand)continue;const label=family(r),k=normalize(label);if(!k)continue;families.set(k,label);}
+  for(const item of mtPool){const r=item.row;if(r[F.BRAND]!==activeBrand)continue;const label=family(r),k=normalize(label);if(k&&!families.has(k))families.set(k,label);}
   const items=[...families].sort((a,b)=>a[1].localeCompare(b[1],'es',{numeric:true})).map(([value,label])=>({value,label}));
   setOptions('model',items,'Todos los modelos');modelSelect.disabled=!items.length;
  }
@@ -107,7 +170,7 @@ function updateSuggestions(){
  const q=normalize($('query').value),box=$('suggestions');
  if(q.length<2){box.replaceChildren();return;}
  const hit=[],seen=new Set();
- for(const r of all){
+ for(const r of [...all,...mttRecords.map(item=>item.row)]){
   const label=r[F.BRAND]+' '+family(r),k=normalize(label);
   if((k.includes(q)||k.replace(/\s/g,'').includes(q.replace(/\s/g,'')))&&!seen.has(k)){
    hit.push(new Option('',label));seen.add(k);if(hit.length===12)break;
@@ -146,15 +209,15 @@ function sortRows(rows,sort){
 }
 function textSuggestions(criteria){
  const box=$('suggested');box.replaceChildren();box.hidden=true;
- if(!criteria.q||results.length)return;
+ if(!criteria.q||results.length||mttMatches.length)return;
  // If the query exists but another facet hides it, offer a one-click global query.
- const global=all.filter(r=>matchesText(r,criteria.q));
+ const global=all.filter(r=>matchesText(r,criteria.q)).concat(mttRecords.filter(item=>matchesText(item.row,criteria.q)).map(item=>item.row));
  if(global.length){
   const button=document.createElement('button');button.type='button';button.textContent='Buscar '+fmt(global.length)+' coincidencias sin filtros';button.dataset.global='true';
   box.append('Hay coincidencias fuera de tus filtros. ',button);box.hidden=false;return;
  }
  const options=new Map();
- for(const row of all){
+ for(const row of [...all,...mttRecords.map(item=>item.row)]){
   const name=family(row);
   for(const label of [name,row[F.BRAND]+' '+name]){const key=normalize(label);if(key&&!options.has(key))options.set(key,label);}
  }
@@ -180,9 +243,11 @@ function render(){
  if(!submitted)return;
  const costAvailable=syncSortAvailability();
  const sorted=sortRows(results,$('sort').value),visible=sorted.slice(0,limit),sort=$('sort').value;
- $('resultCount').textContent=fmt(results.length)+' '+(results.length===1?'versión encontrada':'versiones encontradas');
- $('emptyState').hidden=!!results.length;
- if(!results.length)$('emptyState').innerHTML='<strong>Sin coincidencias</strong>Prueba con otra marca, modelo o quita un filtro técnico.';
+ $('resultCount').textContent=fmt(results.length)+' '+(results.length===1?'versión encontrada':'versiones encontradas')+
+  (mttMatches.length?' · '+fmt(mttMatches.length)+' homologaciones MTT sin rendimiento':'');
+ $('emptyState').hidden=!!results.length||!!mttMatches.length;
+ if(!results.length&&!mttMatches.length)$('emptyState').innerHTML='<strong>Sin coincidencias</strong>Prueba con otra marca, modelo o quita un filtro técnico.';
+ renderMTT();
  $('sortNote').hidden=costAvailable&&!['cheapest','expensive'].includes(sort);
  if(!costAvailable&&results.length){
   $('sortNote').textContent='No hay costo energético combinado calculable con los datos 3CV para esta selección. Se muestran por fecha de homologación. Para PHEV/REEV, consulta los rendimientos eléctrico y ponderado en Estadísticas.';
@@ -209,7 +274,8 @@ function render(){
 function performSearch({scroll=true}={}){
  const criteria=inputCriteria();
  results=all.filter(r=>matchesText(r,criteria.q)&&matchesFilters(r,criteria));
- submitted=true;limit=10;
+ mttMatches=filterMTT(criteria);
+ submitted=true;limit=10;mttLimit=6;
  $('results').hidden=false;
  $('filterHint').textContent='';
  render();textSuggestions(criteria);
@@ -462,6 +528,17 @@ async function init(){
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
   $('statsOpen').disabled=false;
+  // La base MTT es opcional: un fallo de red nunca impide la búsqueda energética.
+  try{
+   const response=await fetch('./sii/mtt-sept-2026-may-2026-cross.json?v=20261018-mtt229-search');
+   if(!response.ok)throw Error('HTTP '+response.status);
+   mttRecords=prepareMTT(await response.json());
+   mttLoadError='';
+  }catch(e){
+   mttRecords=[];mttLoadError='No se pudo cargar la nómina MTT de septiembre. La búsqueda de rendimientos 3CV sigue disponible; revisa la fuente MTT o vuelve a intentarlo.';
+  }
+  $('mttLoadNotice').hidden=!mttLoadError;
+  $('mttLoadNotice').textContent=mttLoadError;
   const bodies=[...new Set(all.map(r=>r[F.BODY]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es')).map(value=>({value}));
   setOptions('bodytype',bodies,'Todas las carrocerías');choices();
   $('searchButton').disabled=false;
@@ -477,8 +554,8 @@ $('searchButton').disabled=true;
 $('vehicleForm').addEventListener('submit',event=>{event.preventDefault();if(all.length)performSearch();});
 $('resetButton').addEventListener('click',()=>{
  for(const id of ['query','brand','model','tech','bodytype','cycle','year'])$(id).value='';
- choices();$('sort').value='recent';submitted=false;results=[];compareUpdate();
- $('results').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
+ choices();$('sort').value='recent';submitted=false;results=[];mttMatches=[];mttLimit=6;compareUpdate();
+ $('results').hidden=true;$('mttSearchSection').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
 });
 for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
  if(id==='brand')$('model').value='';
@@ -488,6 +565,7 @@ for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListene
 $('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';});
 $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
 $('sort').addEventListener('change',render);
+$('mttSearchMore').addEventListener('click',()=>{mttLimit+=10;renderMTT();});
 for(const id of ['gasPrice','dieselPrice','electricPrice'])$(id).addEventListener('change',()=>{if(submitted)render();if($('statsDialog').open)renderStatistics();if($('compareDialog').open)renderComparisonContent();});
 $('resultList').addEventListener('click',event=>{
  const detail=event.target.closest('[data-detail]'),comparison=event.target.closest('[data-compare]');
