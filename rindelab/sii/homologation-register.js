@@ -28,16 +28,23 @@
    if(r.date>nomina.officialCut)throw Error('Fecha de homologación posterior al corte oficial: '+r.code);
    records.set(r.code,r);
   }
-  const candidates=new Map();
+  // Alcance: el extracto XLS congelado contiene únicamente 14 códigos candidatos y un Tera en conflicto.
+  // Nuevas versiones comerciales pueden introducir candidatos adicionales que requieren otro cotejo,
+  // sin volver incompleto el expediente original ni declarar ausentes esos códigos del MTT completo.
+  const candidates=new Map(),outsideExtract=new Map();
   for(const c of audit.cases){
    if(c.status!=='un_candidato_preliminar')continue;
    if(!c.singleCandidateCode)throw Error('Candidato sin código 3CV');
    const sample=c.examples.find(x=>x.code3cv===c.singleCandidateCode);
    if(!sample)throw Error('No se encontró la evidencia original de '+c.singleCandidateCode);
    const code=c.singleCandidateCode;
+   const record=records.get(code);
+   if(!record){
+    if(!outsideExtract.has(code))outsideExtract.set(code,{code,brand:c.brand,commercialVersions:[]});
+    outsideExtract.get(code).commercialVersions.push({brand:c.brand,family:c.family,version:c.version});
+    continue;
+   }
    if(!candidates.has(code)){
-    const record=records.get(code);
-    if(!record)throw Error('Código candidato ausente del XLS MTT de septiembre: '+code);
     if(N(record.brand)!==N(c.brand))throw Error('Discrepancia de marca con nómina MTT para '+code);
     if(record.date!==sample.date)throw Error('Fecha de homologación cambió entre fuentes para '+code);
     if(record.transmission!==sample.transmission)throw Error('Discrepancia de transmisión entre fuentes 3CV para '+code);
@@ -75,8 +82,10 @@
     status:'contradiccion_3cv_ratificada_por_nomina_septiembre'
    };
   });
-  if(cases.length!==audit.singleCandidateUniqueCodes||cases.length!==mtt.candidateCodesFound||cases.length!==mtt.candidateCodesChecked)throw Error('Total de códigos de la nómina MTT inconsistente');
-  if(cases.reduce((n,c)=>n+c.commercialVersions.length,0)!==audit.counts.un_candidato_preliminar)throw Error('Faltan versiones comerciales');
+  if(cases.length!==mtt.candidateCodesFound||cases.length!==mtt.candidateCodesChecked||cases.length+outsideExtract.size!==audit.singleCandidateUniqueCodes)throw Error('Total de códigos de la nómina MTT inconsistente');
+  const versionsInside=cases.reduce((n,c)=>n+c.commercialVersions.length,0);
+  const versionsOutside=[...outsideExtract.values()].reduce((n,c)=>n+c.commercialVersions.length,0);
+  if(versionsInside+versionsOutside!==audit.counts.un_candidato_preliminar)throw Error('Faltan versiones comerciales');
   if(conflicts.some(c=>cases.some(x=>x.code===c.code)))throw Error('Contradicción promovida a candidato validado');
   if(records.size!==cases.length+new Set(conflicts.map(c=>c.code)).size)throw Error('El extracto MTT contiene códigos ajenos al universo auditado');
   return {
@@ -85,7 +94,8 @@
    septemberSourceSha256:nomina.sourceFileSha256,septemberRegistryCrossChecked:true,
    septemberCodesFound:cases.length,septemberCodesNotFound:0,
    independentHomologationDocumentObtained:false,manualSkuCodeVerifications:0,
-   preliminaryCodes:cases.length,preliminaryCommercialVersions:audit.counts.un_candidato_preliminar,
+   preliminaryCodes:cases.length,preliminaryCommercialVersions:versionsInside,
+   preliminaryCodesOutsideExtract:[...outsideExtract.values()],preliminaryCommercialVersionsOutsideExtract:versionsOutside,
    duplicateCommercialVersions:cases.filter(x=>x.commercialVersions.length>1).reduce((sum,x)=>sum+x.commercialVersions.length,0),
    conflictVersions:conflicts.length,conflicts,cases
   };
