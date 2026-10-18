@@ -1346,7 +1346,7 @@ await test('Tercera fuente API octubre: 10 códigos coinciden con mayo y 2 con M
  const dlPromise=p.waitForEvent('download');await p.locator('#deltaReviewDownload').click();
  const dl=await dlPromise;
  const txt=require('node:fs').readFileSync(await dl.path(),'utf8');
- assert.match(txt,/api_octubre_valor;api_coincide_con;api_fecha_modificacion/);
+ assert.match(txt,/"api_octubre_valor";"api_coincide_con";"api_fecha_modificacion"/);
  assert.match(txt,/mtt/);
  assert.match(txt,/2026-10-15/);
  assert.match(txt,/NO DOCUMENTADA/);
