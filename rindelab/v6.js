@@ -689,9 +689,13 @@ $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').tex
 $('sort').addEventListener('change',render);
 $('mttSearchMore').addEventListener('click',()=>{mttLimit+=10;renderMTT();});
 for(const id of ['gasPrice','dieselPrice','annualKm'])$(id).addEventListener('change',refreshEnergyViews);
-for(const id of ['chargeScenario','publicChargeRate','homeChargeRate','homeChargeShare']){
+for(const id of ['chargeScenario','publicChargeRate','homeChargeShare']){
  $(id).addEventListener('change',()=>{updateChargeScenario();refreshEnergyViews();});
 }
+$('homeChargeRate').addEventListener('input',()=>{
+ updateChargeScenario();
+ refreshEnergyViews();
+});
 $('calcHomeFromBill').addEventListener('click',calculateHomeFromBill);
 $('chargeKwh').addEventListener('input',updateChargingExample);
 $('electricPrice').addEventListener('change',()=>{
