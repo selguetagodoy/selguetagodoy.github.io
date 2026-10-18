@@ -118,10 +118,9 @@
       "asOf": "2026-10-17",
       "specifications": {
         "engine": 1.5,
-        "technology": "HEV",
-        "transmission": "A"
+        "technology": "HEV"
       },
-      "observation": "MG3 1.5L HEV COM: Full Hybrid, transmisión automática de tres velocidades."
+      "observation": "MG3 1.5L HEV COM: Full Hybrid. El fabricante informa una caja de tres velocidades, sin homologar automáticamente la categoría 3CV a partir de ese dato."
     },
     {
       "brand": "Changan",
