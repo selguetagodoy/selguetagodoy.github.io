@@ -569,11 +569,11 @@ await test('Nissan Kait: dos versiones, sin asignación comercial automática',a
  assert((await page.locator('.vehicle-card').count())>0,'No aparece homologación oficial Nissan Kait');
  await page.locator('.vehicle-card button[data-detail]').first().click();
  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
- assert.match(await page.locator('#siiCommercial').textContent(),/20\\.990\\.000/);
- assert.match(await page.locator('#siiCommercial').textContent(),/22\\.490\\.000/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/20\.990\.000/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/22\.490\.000/);
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('.sii-price-item').first().locator('button').click();
- assert.match(await page.locator('.sii-selected-price').textContent(),/20\\.990\\.000/);
+ assert.match(await page.locator('.sii-selected-price').textContent(),/20\.990\.000/);
  await page.locator('.sii-selected-price button').click();
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('#detailClose').click();
