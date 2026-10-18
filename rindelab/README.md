@@ -159,3 +159,7 @@ La página [Control documental de homologaciones](./homologaciones.html) muestra
 La CI ejecuta `node scripts/audit-homologation-register.cjs --json=homologation-ledger-audit.json`, verifica datos y hash, 14/14 códigos, certificado C.H. 7304, diferencias de transmisión y prohibición de certificar versiones por inferencia. Incluye pruebas negativas que deben fallar ante cambios artificiales de fila, transmisión, cilindrada, hash o confirmaciones manuales sin sustento.
 
 **Separación metodológica:** la base de rendimientos (08/05/2026) se mantiene como fuente principal del buscador; la nómina MTT (28/09/2026) se emplea como evidencia registral adicional. No se han incorporado sus rendimientos como reemplazo ni se ha declarado que refleje stock disponible.
+
+## Portada fotográfica (octubre de 2026)
+
+La portada utiliza la imagen proporcionada para RINDELAB, con cuatro vehículos en una composición azul nocturna, en lugar de la ilustración inicial. Se entrega como archivo binario `hero-foto-rindelab.webp` (450 × 253 píxeles, ~6,8 KB), optimizado para el espacio de cabecera, con texto alternativo descriptivo, carga prioritaria y pruebas en Chromium en escritorio, tablet y móvil. La versión PNG original suministrada no se modifica. La imagen es ilustrativa, no una certificación de modelo ni una relación comercial con los fabricantes mostrados.
