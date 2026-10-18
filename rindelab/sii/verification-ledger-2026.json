@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "lastReviewed": "2026-10-18",
+  "evidencePolicy": "No asignar un código de homologación a una versión comercial sin cotejo documental explícito de código, generación, configuración y correspondencia por el 3CV o el importador. Solo la coincidencia de atributos no basta.",
+  "sources": [
+    {
+      "id": "energy-3cv-20260508",
+      "type": "rendimiento_energetico_3cv",
+      "date": "2026-05-08",
+      "url": "https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx",
+      "scope": "8.053 fichas de rendimiento energético al corte; base ya integrada en el buscador",
+      "inspected": true
+    },
+    {
+      "id": "mtt-homologados-20260928",
+      "type": "nomina_homologaciones_mtt",
+      "date": "2026-09-28",
+      "url": "https://www.subtrans.gob.cl/wp-content/uploads/2026/10/e1_Nomina-Vehiculos-Livianos-y-Medianos-Homologados_28_sep_2026.xls",
+      "landingPage": "https://www.subtrans.gob.cl/3cv/homologacion-de-vehiculos-livianos-medianos-y-motocicletas/",
+      "scope": "Nómina de vehículos homologados, documento oficial distinto del registro de rendimiento; no se ha contrastado su contenido código por código",
+      "inspected": false
+    },
+    {
+      "id": "mtt-procedimiento",
+      "type": "guia_institucional",
+      "url": "https://www.conaset.gov.cl/homologacion-de-vehiculos",
+      "scope": "Orientación MTT sobre documentos de homologación, coincidencia de características y CHI-e",
+      "inspected": true
+    }
+  ],
+  "codeChecks": [],
+  "manualValidations": [],
+  "unresolvedOfficialConflicts": [
+    "VW9988E60525S00-6"
+  ]
+}
