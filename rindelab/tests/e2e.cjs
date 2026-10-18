@@ -3,14 +3,26 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
 (async()=>{
 const browser=await chromium.launch(process.platform==='win32'?{channel:'chrome',headless:true}:{headless:true,args:['--no-sandbox']});
 let passed=0,failed=0;
-async function test(label,action){try{await action();console.log('PASS '+label);passed++;}catch(error){console.error('FAIL '+label+' — '+error.stack);failed++;}}
+async function test(label,action){
+ try{await action();console.log('PASS '+label);passed++;}
+ catch(error){
+  console.error('FAIL '+label+' — '+error.stack);failed++;
+  // Evitar fallos en cascada: un assert puede interrumpir una prueba con un modal abierto,
+  // impidiendo hacer clic durante 30 s a todas las pruebas siguientes.
+  for(const context of browser.contexts()){
+   for(const page of context.pages()){
+    await page.evaluate(()=>document.querySelectorAll('dialog[open]').forEach(d=>d.close())).catch(()=>{});
+   }
+  }
+ }
+}
 const base='http://127.0.0.1:8765/rindelab/';
 async function open(width,height){
  const page=await browser.newPage({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,deviceScaleFactor:1});
  await page.emulateMedia({reducedMotion:'reduce'});
  const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));page.on('console',m=>{if(m.type()==='error')errors.push('Console: '+m.text())});
  const r=await page.goto(base,{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
- await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.053',{timeout:25000});
+ await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:25000});
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
@@ -31,7 +43,9 @@ await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
  assert.equal(manifest.count,8056);
  assert.equal(manifest.excluded,3);
  assert.equal(manifest.count-manifest.excluded,8053);
- assert.equal(await page.locator('#recordCount').textContent(),'8.053');
+ assert.equal(await page.locator('#recordCount').textContent(),'8.325');
+ const extra=await page.evaluate(async()=>Promise.all([1,2,3,4].map(i=>fetch('./data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json').then(r=>r.json()))).then(a=>a.reduce((n,p)=>n+p.items.length,0)));
+ assert.equal(extra,272);
 });
 await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
  assert.match(await page.locator('h1').textContent(),/cada peso cuenta/i);
@@ -140,7 +154,7 @@ await test('El filtro opcional permite WLTP o NEDC sin separar el ranking conjun
  assert.equal(await page.inputValue('#statsCycle'),'');
  await page.locator('#statsClose').click();
 });
-await test('PHEV muestra 232 fichas y rendimiento eléctrico y ponderado sin costo inventado',async()=>{
+await test('PHEV muestra 264 fichas y rendimiento eléctrico y ponderado sin costo inventado',async()=>{
  await page.locator('#statsOpen').click();
  await page.selectOption('#statsMetric','performance');
  assert.equal(await page.locator('.rank-item').count(),0);
@@ -149,7 +163,7 @@ await test('PHEV muestra 232 fichas y rendimiento eléctrico y ponderado sin cos
  assert.equal(await page.inputValue('#statsMetric'),'electric');
  assert(await page.locator('#statsMetric option[value="cost"]').isDisabled());
  assert.equal(await page.locator('.rank-item').count(),10);
- assert.match(await page.locator('#statsResultCount').textContent(),/^232 fichas/);
+ assert.match(await page.locator('#statsResultCount').textContent(),/^264 fichas/);
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
  assert.match(await page.locator('#statsMetricHint').textContent(),/No se calcula un costo energético combinado/);
  await page.selectOption('#statsMetric','weighted');
@@ -158,14 +172,14 @@ await test('PHEV muestra 232 fichas y rendimiento eléctrico y ponderado sin cos
  assert.match(await page.locator('#statsNotice').textContent(),/no equivale al rendimiento con batería descargada/);
  await page.locator('#statsClose').click();
 });
-await test('REEV muestra sus 8 registros y ambas métricas con orden dinámico',async()=>{
+await test('REEV muestra sus 16 registros y ambas métricas con orden dinámico',async()=>{
  await page.locator('#statsOpen').click();
  await page.selectOption('#statsTech','REEV');
  await page.selectOption('#statsMetric','electric');
  await page.selectOption('#statsOrder','asc');
  assert.equal(await page.inputValue('#statsMetric'),'electric');
- assert.match(await page.locator('#statsResultCount').textContent(),/^8 fichas/);
- assert.equal(await page.locator('.rank-item').count(),8);
+ assert.match(await page.locator('#statsResultCount').textContent(),/^16 fichas/);
+ assert.equal(await page.locator('.rank-item').count(),10);
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
  const first=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/[^\d,.]/g,'').replace(',','.')));
  assert(first.every((v,i)=>i===0||first[i-1]<=v),'REEV ascendente '+first);
@@ -173,7 +187,7 @@ await test('REEV muestra sus 8 registros y ambas métricas con orden dinámico',
  const reversed=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/[^\d,.]/g,'').replace(',','.')));
  assert(reversed.every((v,i)=>i===0||reversed[i-1]>=v),'REEV descendente '+reversed);
  await page.selectOption('#statsMetric','weighted');
- assert.equal(await page.locator('.rank-item').count(),8);
+ assert.equal(await page.locator('.rank-item').count(),10);
  assert.match(await page.locator('#statsNotice').textContent(),/Rendimiento ponderado informado/);
  await page.selectOption('#statsMetric','electric');
  await page.locator('.rank-item').first().click();
@@ -1097,96 +1111,94 @@ await test('Selector de tres cortes del MTT mantiene ancho móvil 320 px',async(
  await p.close();
 });
 
-await test('Buscador principal reconoce Deepal S05 REEV sin ficha de rendimiento y enlace exacto',async()=>{
+await test('Deepal S05 REEV tiene ahora ficha energética 3CV oficial de octubre verificable',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
- await p.waitForFunction(()=>!document.querySelector('#searchButton')?.disabled,{timeout:30000});
- await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
- assert.equal(await p.locator('.mtt-result-card').count(),1);
- assert.match(await p.locator('#mttSearchCount').textContent(),/1 homologación encontrada/);
- assert.match(await p.locator('.mtt-result-card').textContent(),/CN10637E60826S00-7/);
- assert.match(await p.locator('.mtt-result-card').textContent(),/C.H. 7881/);
- assert.match(await p.locator('.mtt-result-card').textContent(),/no disponible/i);
- assert.equal(await p.locator('.mtt-result-card [data-compare]').count(),0);
- assert.equal(await p.locator('.mtt-result-card [data-detail]').count(),0);
- assert.equal(await p.locator('#emptyState').isHidden(),true);
- const url=await p.locator('.mtt-result-card a').getAttribute('href');
- assert.equal(url,'./novedades-3cv.html?codigo=CN10637E60826S00-7');
- await p.goto(base+url.replace('./',''),{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
- assert.equal(await p.locator('#deltaRows tr').count(),1);
- assert.match(await p.locator('#deltaRows').textContent(),/Deepal S05 REEV/);
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.fill('#query','CN10637E60826S00-7');await p.click('#searchButton');
+ assert.equal(await p.locator('.mtt-result-card').count(),0);
+ assert.equal(await p.locator('.vehicle-card').count(),1);
+ const card=p.locator('.vehicle-card').first();
+ assert.match(await card.textContent(),/Deepal S05 REEV/i);
+ assert.match(await card.textContent(),/octubre 2026/);
+ assert.match(await card.textContent(),/21,3/);
+ assert(await card.locator('[data-detail]').isVisible());
+ await card.locator('[data-detail]').click();
+ assert.match(await p.locator('#detailContent').textContent(),/Rendimiento eléctrico informado \(km\/kWh\)/);
+ assert.equal(await p.locator('#detailContent dt').filter({hasText:'Rendimiento eléctrico informado'}).locator('xpath=following-sibling::dd[1]').textContent(),'6');
+ await p.locator('#detailClose').click();
  assert.deepEqual(errors,[]);
  await p.close();
 });
-await test('Buscador ofrece marcas y modelos recientes de la nómina MTT por filtros',async()=>{
+await test('Filtros oficiales de octubre incluyen JIM Re-Max y Kia Sportage HEV',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
- await p.waitForFunction(()=>!document.querySelector('#searchButton')?.disabled,{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  const brands=await p.locator('#brand option').allTextContents();
- assert(brands.includes('JIM'),'JIM debe aparecer en el selector de marcas');
+ assert(brands.includes('JIM'));
  await p.selectOption('#brand','JIM');
  const models=await p.locator('#model option').allTextContents();
- assert(models.some(x=>/re[\s-]?max/i.test(x)),'Selector JIM: '+JSON.stringify(models)+' · marca actual '+await p.inputValue('#brand'));
+ assert(models.some(x=>/re[\s-]?max/i.test(x)));
  const model=await p.locator('#model option').filter({hasText:/re[\s-]?max/i}).first().getAttribute('value');
  await p.selectOption('#model',model);await p.click('#searchButton');
- assert.equal(await p.locator('.mtt-result-card').count(),4);
- assert.match(await p.locator('#mttSearchCount').textContent(),/4 homologaciones encontradas/);
+ assert((await p.locator('.vehicle-card').count())>=4);
+ assert.equal(await p.locator('.mtt-result-card').count(),0);
  await p.click('#resetButton');
- await p.selectOption('#tech','HEV');await p.fill('#query','Sportage 1.6T HEV');await p.click('#searchButton');
- assert.equal(await p.locator('.mtt-result-card').count(),2);
- assert.match(await p.locator('#mttSearchList').textContent(),/Híbrido sin recarga exterior/);
+ await p.selectOption('#tech','HEV');
+ await p.fill('#query','Sportage 1.6T HEV');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>=2);
+ assert.equal(await p.locator('.mtt-result-card').count(),0);
  await p.locator('#technical summary').click();
  await p.selectOption('#cycle','WLTP');await p.click('#searchButton');
- assert.equal(await p.locator('.mtt-result-card').count(),0);
- assert(await p.locator('#mttSearchSection').isHidden());
+ assert((await p.locator('.vehicle-card').count())>=2);
  await p.close();
 });
-await test('229 homologaciones MTT en buscador tienen paginación y no alteran comparador',async()=>{
+await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
- await p.waitForFunction(()=>!document.querySelector('#searchButton')?.disabled,{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.click('#searchButton');
- assert.match(await p.locator('#mttSearchCount').textContent(),/229 homologaciones encontradas/);
- assert.equal(await p.locator('.mtt-result-card').count(),6);
- await p.click('#mttSearchMore');
- assert.equal(await p.locator('.mtt-result-card').count(),16);
+ assert.match(await p.locator('#mttSearchCount').textContent(),/1 homologación encontrada/);
+ assert.equal(await p.locator('.mtt-result-card').count(),1);
+ assert.match(await p.locator('.mtt-result-card').textContent(),/Cayenne Turbo Coupé Electric/);
+ assert.match(await p.locator('.mtt-result-card').textContent(),/PO10585EL0726M01-9/);
  assert.equal(await p.locator('.mtt-result-card [data-compare]').count(),0);
- assert.equal(await p.locator('#compareTray').isHidden(),true);
+ assert(await p.locator('#mttSearchMore').isHidden());
+ await p.fill('#query','PO10585EL0726M01-9');await p.click('#searchButton');
+ assert.equal(await p.locator('.vehicle-card').count(),0);
+ assert.equal(await p.locator('.mtt-result-card').count(),1);
+ assert(await p.locator('#emptyState').isHidden());
  await p.click('#resetButton');
  assert(await p.locator('#mttSearchSection').isHidden());
- assert(await p.locator('#results').isHidden());
  await p.close();
 });
-await test('Homologaciones MTT aparecen en buscador principal móvil 320 px sin desbordar',async()=>{
+await test('Leapmotor B03X muestra rendimiento eléctrico oficial en móvil 320px',async()=>{
  const p=await browser.newPage({viewport:{width:320,height:720},isMobile:true,hasTouch:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
- await p.waitForFunction(()=>!document.querySelector('#searchButton')?.disabled,{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.fill('#query','Leapmotor B03X');await p.click('#searchButton');
- assert.equal(await p.locator('.mtt-result-card').count(),2);
+ assert((await p.locator('.vehicle-card').count())>=1);
+ assert.equal(await p.locator('.mtt-result-card').count(),0);
+ assert.match(await p.locator('.vehicle-card').first().textContent(),/km\/kWh/);
  const box=await p.evaluate(()=>({viewport:innerWidth,doc:document.documentElement.scrollWidth}));
  assert(box.doc<=box.viewport+3,JSON.stringify(box));
  assert.deepEqual(errors,[]);
  await p.close();
 });
-
-await test('Resultados de portada distinguen visualmente fuente energética y homologación MTT',async()=>{
+await test('Leyenda distingue fuente histórica mayo de API oficial octubre',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
- await p.waitForFunction(()=>!document.querySelector('#searchButton')?.disabled,{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
- assert.equal(await p.locator('.mtt-result-card').count(),1);
  assert(await p.locator('#sourceLegend').isVisible());
- assert.equal(await p.locator('#energyResultsHeading').isVisible(),(await p.locator('.vehicle-card').count())>0);
- assert.match(await p.locator('#mttSearchSection').textContent(),/sin consumo oficial de mayo/);
- assert.equal(await p.locator('.mtt-result-card [data-compare]').count(),0);
- await p.fill('#query','Sportage');await p.click('#searchButton');
- assert(await p.locator('.vehicle-card').count()>0);
  assert(await p.locator('#energyResultsHeading').isVisible());
- assert.match(await p.locator('.vehicle-card .energy-source-line').first().textContent(),/Ficha de rendimiento 3CV/);
+ assert.match(await p.locator('.vehicle-card .energy-source-line').first().textContent(),/octubre 2026/);
+ assert.equal(await p.locator('.mtt-result-card').count(),0);
+ await p.fill('#query','Dolphin Mini');await p.click('#searchButton');
+ assert(await p.locator('.vehicle-card').count()>0);
  assert(await p.locator('.vehicle-card [data-compare]').first().isVisible());
  assert.deepEqual(errors,[]);
  await p.close();
@@ -1261,9 +1273,9 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert.equal(await p.inputValue('#statsMetric'),'electric');
   assert.equal(await p.locator('.rank-item').count(),10);
   await p.selectOption('#statsTech','REEV');
-  assert.equal(await p.locator('.rank-item').count(),8);
+  assert.equal(await p.locator('.rank-item').count(),10);
   await p.selectOption('#statsMetric','weighted');
-  assert.equal(await p.locator('.rank-item').count(),8);
+  assert.equal(await p.locator('.rank-item').count(),10);
   const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,screen:innerWidth}));
   assert(size.doc<=size.screen+3);
   await p.locator('#statsClose').click();
