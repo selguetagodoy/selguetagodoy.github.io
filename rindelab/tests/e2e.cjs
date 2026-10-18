@@ -750,6 +750,40 @@ await test('Subaru Forester y Crosstrek separan familias y conservan cuatro vers
   await page.locator('#detailClose').click();
  }
 });
+await test('Cobertura 3CV: 39 familias auditadas sin equivalencia automática de 122 versiones',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900}});
+ const issues=[];p.on('pageerror',e=>issues.push(e.message));
+ const response=await p.goto(base+'cobertura.html',{waitUntil:'networkidle'});
+ assert.equal(response.status(),200);
+ await p.waitForFunction(()=>document.querySelector('#metricPrices')?.textContent==='122',{timeout:30000});
+ assert.equal(await p.locator('#metricFamilies').textContent(),'39');
+ assert.equal(await p.locator('#coverageRows tr').count(),39);
+ assert.match(await p.locator('#coverageStatus').textContent(),/8\.053/);
+ assert.match(await p.locator('.coverage-legend').textContent(),/no equivalencia de versión/i);
+ assert.match(await p.locator('main').textContent(),/ninguna versión comercial se vincula automáticamente/i);
+ assert.equal(issues.length,0,issues.join(' | '));
+ await p.selectOption('#brandFilter','Volkswagen');
+ assert.equal(await p.locator('#coverageRows tr').count(),4);
+ await p.fill('#familyFilter','Tera');
+ assert.equal(await p.locator('#coverageRows tr').count(),1);
+ assert.match(await p.locator('#coverageRows').textContent(),/Tera/);
+ const download=p.waitForEvent('download');
+ await p.locator('#downloadCoverage').click();
+ const file=await download;
+ assert.match(file.suggestedFilename(),/rindelab-cobertura-nominal-3cv\.csv/);
+ await p.close();
+});
+await test('Cobertura 3CV en móvil 320 px sin desbordamiento ni confusión de indicadores',async()=>{
+ const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
+ const issues=[];p.on('pageerror',e=>issues.push(e.message));
+ await p.goto(base+'cobertura.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricFamilies')?.textContent==='39',{timeout:30000});
+ const dims=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,viewport:innerWidth,table:document.querySelector('.coverage-table-scroll').scrollWidth,area:document.querySelector('.coverage-table-scroll').clientWidth}));
+ assert(dims.doc<=dims.viewport+3,JSON.stringify(dims));
+ assert(dims.table>dims.area,JSON.stringify(dims));
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){
