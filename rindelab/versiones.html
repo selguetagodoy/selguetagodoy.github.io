@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102a43">
+<meta name="author" content="Sebastián Elgueta Godoy">
+<meta name="description" content="RINDELAB: auditoría documental de versiones comerciales y posibles fichas de homologación 3CV, con atributos y contradicciones explícitas.">
+<link rel="canonical" href="https://selguetagodoy.github.io/rindelab/versiones.html">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./v6.css?v=20261017-sii12">
+<link rel="stylesheet" href="./cobertura.css?v=20261018-1">
+<link rel="stylesheet" href="./versiones.css?v=20261018-1">
+<title>Revisión técnica por versión | RINDELAB</title>
+</head>
+<body>
+<header class="site-header"><div class="shell header-inner">
+<a href="./" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a>
+<nav class="coverage-nav" aria-label="Navegación"><a href="./">Buscador</a><a href="./cobertura.html">Cobertura por familias</a></nav>
+</div></header>
+<main class="shell coverage-main">
+<section class="coverage-intro">
+<p class="eyebrow">SEGUNDA ETAPA · AUDITORÍA DOCUMENTAL</p>
+<h1>Cotejo de versiones comerciales y fichas 3CV</h1>
+<p>Se comparan <strong>únicamente los atributos expresos</strong> en la denominación comercial con las columnas oficiales 3CV, sin inventar especificaciones. Una coincidencia preliminar <strong>no confirma equivalencia de versión, generación ni disponibilidad comercial</strong>. No se asignan automáticamente códigos de homologación.</p>
+</section>
+<section class="coverage-metrics" aria-label="Resumen de cotejo">
+<div><small>Versiones comerciales revisadas</small><strong id="versionTotal">—</strong></div>
+<div><small>Un candidato preliminar</small><strong id="versionSingle">—</strong></div>
+<div><small>Varios candidatos preliminares</small><strong id="versionMultiple">—</strong></div>
+<div><small>Sin preselección suficiente</small><strong id="versionUnresolved">—</strong></div>
+</section>
+<p id="versionsStatus" class="coverage-status" role="status" aria-live="polite">Cargando versiones comerciales y registros 3CV…</p>
+<section class="coverage-panel" aria-labelledby="versionsTableTitle">
+<div class="coverage-panel-head">
+<div><p class="eyebrow">EVIDENCIA POR REGISTRO</p><h2 id="versionsTableTitle">Revisar cada versión</h2></div>
+<button id="versionsDownload" class="button secondary" type="button" disabled>Exportar revisión CSV</button>
+</div>
+<div class="coverage-filters">
+<div class="field"><label for="versionsBrand">Marca</label><select id="versionsBrand"><option value="">Todas las marcas</option></select></div>
+<div class="field"><label for="versionsFilter">Resultado preliminar</label><select id="versionsFilter">
+<option value="">Todos los estados</option>
+<option value="un_candidato_preliminar">Un candidato preliminar</option>
+<option value="varios_candidatos_preliminares">Varios candidatos preliminares</option>
+<option value="informacion_insuficiente">Información insuficiente</option>
+<option value="solo_contradicciones">Solo candidatos contradictorios</option>
+<option value="sin_familia_3cv">Sin familia nominal en 3CV</option>
+</select></div>
+<div class="field"><label for="versionsSearch">Modelo o versión</label><input type="search" id="versionsSearch" placeholder="Ej. Tera, Hunter, Crosstrek"></div>
+</div>
+<p id="versionsCount" class="coverage-result-count" aria-live="polite"></p>
+<div class="coverage-table-scroll" role="region" aria-label="Tabla de versiones y evidencias técnicas" tabindex="0">
+<table class="coverage-table versions-table">
+<thead><tr><th scope="col">Versión comercial</th><th scope="col">Atributos declarados</th><th scope="col">Candidatos 3CV</th><th scope="col">Revisión / evidencia</th></tr></thead>
+<tbody id="versionsRows"><tr><td colspan="4">Calculando cotejo documental…</td></tr></tbody>
+</table>
+</div>
+<p class="coverage-legend">La cifra «candidatos preliminares» exige al menos dos atributos expresos coincidentes y ninguna contradicción en los campos cotejados. Puede haber distintos códigos, años, versiones y generaciones en ese grupo. Los errores o vacíos en datos de origen se mantienen visibles; esta herramienta no corrige ni certifica registros 3CV.</p>
+</section>
+<section class="coverage-method">
+<h2>Alcance y límites</h2>
+<p>La búsqueda de familias evita confusiones conocidas entre CX-3/CX-30, Creta/Creta Grand y Hunter diésel/REEV. Los atributos se obtienen del nombre de la versión y se contrastan con tecnología, cilindrada, transmisión manual/automática, tracción y códigos de generación cuando aparecen expresamente. No se presumen capacidades de batería, equipamiento ni homologaciones no documentadas. Los años comerciales son distintos de la fecha de homologación.</p>
+<p>Cuando una fuente indica «MT» y otra «A», se muestra la discrepancia. Una transmisión marcada «A» en 3CV identifica una categoría amplia; el algoritmo no presume si corresponde exactamente a una caja CVT, DCT o de convertidor.</p>
+<p>En esta fase <strong>ninguna correspondencia técnica está certificada</strong>. La confirmación posterior requeriría revisar documentación oficial por versión y código. Los precios de lista siguen separados de tasación fiscal, permiso de circulación y promociones.</p>
+<p><a href="./cobertura.html">Volver a cobertura de familias</a> · <a href="./sii/commercial-2026.json" target="_blank" rel="noopener noreferrer">Catálogo comercial</a> · <a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Planilla oficial 3CV</a></p>
+</section>
+</main>
+<footer class="footer"><div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy</span><small>Consulta los datos originales antes de decidir una compra.</small></div></footer>
+<script defer src="./sii/coverage-matcher.js?v=20261018-1"></script>
+<script defer src="./sii/version-audit.js?v=20261018-1"></script>
+<script defer src="./versiones.js?v=20261018-1"></script>
+</body></html>
