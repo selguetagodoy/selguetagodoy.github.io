@@ -25,3 +25,16 @@ node scripts/build-sii-2026.cjs ruta/al/liv2026.xlsx
 ```
 
 Regla editorial: nunca comparar como equivalentes tasación fiscal, permiso de circulación, precio de lista, precio promocional y valor comercial de reventa.
+
+## Control semanal de vigencia comercial
+
+La revisión automática corre los **lunes a las 12:15 UTC** y también puede iniciarse manualmente desde **GitHub Actions → RINDELAB — vigencia de precios de lista → Run workflow**. La ejecución:
+
+- Evalúa registros duplicados, validez de precio/versión, dominios oficiales, antigüedad de `checkedAt` y estado HTTP de cada enlace oficial único.
+- Deja el JSON **`price-audit.json`** como artefacto descargable por 90 días, con conteos por marca, fichas con 30 días o más de antigüedad y enlaces que requieren revisión.
+- Abre o actualiza **una sola incidencia de GitHub** cuando existen precios pendientes de revalidación documental, enlaces inciertos o errores de datos. La cierra al desaparecer las incidencias automáticas.
+- **No** considera un HTTP 200 como corroboración de un precio. Tampoco interpreta un HTTP 403, 429 o una página con JavaScript como prueba de cambio de precio.
+
+**Actualización manual:** contrastar el monto y versión exacta con el campo «precio de lista» del fabricante, excluir todos los bonos, comprobar año comercial cuando conste, guardar URL y monto de la fuente y entonces actualizar `checkedAt`. Si no es verificable, mantener el registro sin nueva fecha o retirarlo tras revisión justificada. Nunca completar la revisión modificando las fechas en bloque sin cotejar cada versión. El flujo **no cambia automáticamente ninguno de los 114 importes** ni los datos 3CV/SII.
+
+La auditoría se puede ejecutar localmente con `node scripts/audit-price-sources.cjs --online --report-json=price-audit.json`. Las restricciones antibot de fabricantes pueden producir alertas de acceso, que exigen interpretación humana.
