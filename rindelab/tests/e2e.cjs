@@ -104,8 +104,8 @@ await test('Escenario mixto pondera precios sin imputar rendimiento o perdidas',
  await page.fill('#electricPrice','260');
  await page.locator('#electricPrice').dispatchEvent('change');
  assert.equal(await page.inputValue('#electricPrice'),'260');
- await page.selectOption('#publicChargeRate',{label:'AC ≤22 kW · ciudad valle · $340'});
  await page.selectOption('#chargeScenario','public');
+ await page.selectOption('#publicChargeRate',{label:'AC ≤22 kW · ciudad valle · $340'});
  assert.equal(await page.inputValue('#electricPrice'),'340');
  await page.selectOption('#homeChargeShare','80');
 });
