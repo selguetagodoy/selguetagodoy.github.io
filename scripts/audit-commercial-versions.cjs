@@ -56,11 +56,14 @@ assert.equal(get('Hyundai','Venue','Venue QU2i 1.0T MT GO').manufacturerEvidence
 assert.throws(()=>audit.specsFor({brand:'Suzuki',family:'Fronx',version:'1.5 GL AT'},{brand:'Suzuki',family:'Fronx',version:'1.5 GL AT',specifications:{transmission:'M'}}),/Contradicción en nombre comercial/);
 assert(get('Mazda','CX-30','CORE 2.0 2WD 6AT 7G').expressedSpecifications.engine===2);
 
-console.log('NISSAN_DIAGNOSTIC_20261018 '+JSON.stringify({counts:report.counts,codes:report.singleCandidateUniqueCodes,cases:report.cases.filter(x=>x.brand==='Nissan').map(x=>({family:x.family,version:x.version,status:x.status,reviewable:x.reviewableCandidates,spec:x.expressedSpecifications,code:x.singleCandidateCode,conflicts:x.conflictsExamples?.map(z=>({code:z.code3cv,conflicts:z.conflicts}))}))}));
 const notes=read('rindelab/sii/review-notes-2026.json');
 assert.equal(notes.schemaVersion,1);
 assert.equal(notes.cases.length,2);
-assert.equal(report.counts.solo_contradicciones,4);
+assert.equal(report.counts.solo_contradicciones,5);
+const kaitSense=get('Nissan','Kait','Sense CVT');
+assert.equal(kaitSense.status,'solo_contradicciones','No homologar automáticamente CVT cuando la ficha histórica Nissan Kait consigna transmisión M');
+assert.equal(kaitSense.reviewableCandidates,0);
+assert(kaitSense.conflictsExamples.some(x=>x.code3cv==='NS10421T3C0126S00-7'&&x.conflicts.some(y=>y.field==='transmission'&&y.expected==='A'&&y.observed==='M')));
 const s05ev=get('Changan','Deepal S05','S05 EV');
 assert.equal(s05ev.status,'solo_contradicciones','No asignar versión comercial S05 EV a la ficha S05 REEV del corte de mayo');
 assert.equal(s05ev.reviewableCandidates,0);
@@ -83,10 +86,10 @@ for(const note of notes.cases){
  assert(note.manufacturerEvidenceUrl.startsWith('https://www.volkswagen.cl/'));
 }
 const priority=report.cases.filter(x=>x.status==='solo_contradicciones'||x.status==='un_candidato_preliminar');
-assert.equal(priority.length,27);
+assert.equal(priority.length,28);
 const priorityPayload={
  schemaVersion:1,sourceCut:manifest.published,catalogCount:report.catalogCount,
- scope:'27 prioridades documentales, incluidas dos Tera MT revisadas, Forester HEV y S05 EV frente al corte histórico de mayo. No certifica correspondencias comerciales.',
+ scope:'28 prioridades documentales, incluidas Tera MT, Forester HEV, S05 EV y Nissan Kait Sense CVT (transmisión oficial histórica M). No certifica correspondencias comerciales.',
  priorities:priority.map(c=>({
   brand:c.brand,family:c.family,version:c.version,priceListClp:c.priceListClp,
   source:c.source,status:c.status,expressedSpecifications:c.expressedSpecifications,manufacturerEvidence:c.manufacturerEvidence,
@@ -105,7 +108,7 @@ if(priorityJson)writeFile(priorityJson.slice('--priority-json='.length),JSON.str
 const priorityMd=outputArg('--priority-md=');
 if(priorityMd){
  const lines=[
- '# RINDELAB — 27 revisiones técnicas pendientes','',
+ '# RINDELAB — 28 revisiones técnicas pendientes','',
  'Fuente 3CV al '+manifest.published+'. Ninguna de las correspondencias está certificada.',
  '',
  '| Estado | Marca y versión comercial | Código candidato | Uso del código | Fuente |',
@@ -126,7 +129,10 @@ if(priorityMd){
  '','Fuente comercial: https://www.subaru.cl/vehiculos/all-new-forester-hibrido/',
  '','## Changan Deepal S05 EV y corte histórico de mayo',
  'La nueva versión comercial S05 EV no se corresponde con la única ficha Deepal S05 de la base histórica de mayo, identificada como REEV. Se mantienen fuentes y tecnologías separadas; el snapshot oficial energético de octubre puede incluir ambas y debe consultarse de forma independiente.',
- '','Fuente comercial: https://www.changan.cl/catalogo','');
+ '','Fuente comercial: https://www.changan.cl/catalogo',
+ '','## Nissan Kait Sense CVT frente al código 3CV histórico',
+ 'La tienda oficial Nissan ofrece la versión Kait Sense CVT, mientras que el código NS10421T3C0126S00-7 en la planilla energética histórica presenta M como transmisión. El cruce es una alerta documental, no autorización para modificar la homologación ni para afirmar que el código corresponde a esta variante comercial.',
+ '','Fuentes: https://webstore.nissan.cl/ y https://www.nissan.cl/vehiculos/nuevos/kait.html','');
  writeFile(priorityMd.slice('--priority-md='.length),lines.join('\n'));
 }
 console.log('PRIORIDADES '+JSON.stringify({total:priority.length,contradictions:report.counts.solo_contradicciones,documentedVW:notes.cases.length,single:report.counts.un_candidato_preliminar,uniqueCodes:report.singleCandidateUniqueCodes,sharedVersionCandidates:report.sharedCandidateVersions}));
