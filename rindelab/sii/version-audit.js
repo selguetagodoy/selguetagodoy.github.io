@@ -103,11 +103,30 @@
     conflictsExamples:contradicted.slice(0,4)
    };
   });
+  // La preselección es una ficha técnica, no un SKU. Diversos niveles de equipamiento
+  // pueden remitir al mismo código de homologación. Hacer visible esa reutilización.
+  const codeUsers=new Map();
+  for(const item of cases){
+   if(item.status!=='un_candidato_preliminar')continue;
+   const candidate=item.examples.find(e=>e.agrees.length>=2);
+   if(!candidate||!candidate.code3cv)throw Error('Candidato individual sin código 3CV documentado');
+   item.singleCandidateCode=candidate.code3cv;
+   if(!codeUsers.has(candidate.code3cv))codeUsers.set(candidate.code3cv,[]);
+   codeUsers.get(candidate.code3cv).push(item.id);
+  }
+  for(const item of cases){
+   if(!item.singleCandidateCode){item.sharedPreliminaryCandidate=false;item.sharedWithOtherVersions=0;continue;}
+   const userIds=codeUsers.get(item.singleCandidateCode);
+   item.sharedWithOtherVersions=userIds.length-1;
+   item.sharedPreliminaryCandidate=userIds.length>1;
+  }
   const statuses={};
   for(const item of cases)statuses[item.status]=(statuses[item.status]||0)+1;
   return {schemaVersion:1,sourceCut:published,threeCvRecords:active.length,
    catalogCount:prices.length,certifiedTechnicalMatches:0,certificationPerformed:false,
    scope:'Filtro exploratorio de rasgos declarados en nombres de versiones y columnas 3CV. No verifica identidad comercial, generación ni disponibilidad.',
+   singleCandidateUniqueCodes:codeUsers.size,
+   sharedCandidateVersions:cases.filter(x=>x.sharedPreliminaryCandidate).length,
    counts:statuses,cases};
  }
  return {specsFor,compare,audit};

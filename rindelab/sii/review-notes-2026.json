@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "scope": "Notas sobre discrepancias de fuentes, no equivalencias 3CV confirmadas.",
+  "createdAt": "2026-10-17",
+  "cases": [
+    {
+      "brand": "Volkswagen",
+      "family": "Tera",
+      "version": "Trend 1.6 MSI MT",
+      "reviewStatus": "discrepancia_documentada_pendiente_3cv",
+      "reviewDate": "2026-10-17",
+      "commercialTransmission": "M",
+      "manufacturerEvidenceUrl": "https://www.volkswagen.cl/tera/tera",
+      "manufacturerEvidenceSummary": "Volkswagen Chile identifica las versiones Trend MT y Comfort MT con motor 1.6 MSI y transmisión Manual 5 Vel.",
+      "source3cvManifest": "https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx",
+      "candidateCode3cv": "VW9988E60525S00-6",
+      "model3cv": "TERA 1.6 MT",
+      "source3cvTransmission": "A",
+      "resolution": "No resuelta: el fabricante respalda la versión manual, pero el registro 3CV mantiene A. No equiparar ni corregir sin pronunciamiento/documento oficial 3CV.",
+      "nextAction": "Contrastar la ficha 3CV de la variante 1.6 MSI MT con la autoridad responsable y conservar el dato original hasta confirmación."
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Tera",
+      "version": "Comfort 1.6 MSI MT",
+      "reviewStatus": "discrepancia_documentada_pendiente_3cv",
+      "reviewDate": "2026-10-17",
+      "commercialTransmission": "M",
+      "manufacturerEvidenceUrl": "https://www.volkswagen.cl/tera/tera",
+      "manufacturerEvidenceSummary": "Volkswagen Chile identifica las versiones Trend MT y Comfort MT con motor 1.6 MSI y transmisión Manual 5 Vel.",
+      "source3cvManifest": "https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx",
+      "candidateCode3cv": "VW9988E60525S00-6",
+      "model3cv": "TERA 1.6 MT",
+      "source3cvTransmission": "A",
+      "resolution": "No resuelta: el fabricante respalda la versión manual, pero el registro 3CV mantiene A. No equiparar ni corregir sin pronunciamiento/documento oficial 3CV.",
+      "nextAction": "Contrastar la ficha 3CV de la variante 1.6 MSI MT con la autoridad responsable y conservar el dato original hasta confirmación."
+    }
+  ]
+}

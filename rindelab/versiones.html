@@ -10,7 +10,7 @@
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="stylesheet" href="./v6.css?v=20261017-sii12">
 <link rel="stylesheet" href="./cobertura.css?v=20261018-1">
-<link rel="stylesheet" href="./versiones.css?v=20261018-1">
+<link rel="stylesheet" href="./versiones.css?v=20261018-qa24">
 <title>Revisión técnica por versión | RINDELAB</title>
 </head>
 <body>
@@ -48,6 +48,10 @@
 </select></div>
 <div class="field"><label for="versionsSearch">Modelo o versión</label><input type="search" id="versionsSearch" placeholder="Ej. Tera, Hunter, Crosstrek"></div>
 </div>
+<div class="priority-tools">
+<label class="priority-toggle"><input type="checkbox" id="versionsPriorityOnly"> Solo revisión prioritaria (contradicciones y candidatos únicos)</label>
+<span id="versionsPrioritySummary" aria-live="polite">Evaluando casos prioritarios…</span>
+</div>
 <p id="versionsCount" class="coverage-result-count" aria-live="polite"></p>
 <div class="coverage-table-scroll" role="region" aria-label="Tabla de versiones y evidencias técnicas" tabindex="0">
 <table class="coverage-table versions-table">
@@ -55,7 +59,7 @@
 <tbody id="versionsRows"><tr><td colspan="4">Calculando cotejo documental…</td></tr></tbody>
 </table>
 </div>
-<p class="coverage-legend">La cifra «candidatos preliminares» exige al menos dos atributos expresos coincidentes y ninguna contradicción en los campos cotejados. Puede haber distintos códigos, años, versiones y generaciones en ese grupo. Los errores o vacíos en datos de origen se mantienen visibles; esta herramienta no corrige ni certifica registros 3CV.</p>
+<p class="coverage-legend">La cifra «candidatos preliminares» exige al menos dos atributos expresos coincidentes y ninguna contradicción en los campos cotejados. Puede haber distintos códigos, años, versiones y generaciones en ese grupo. Los errores o vacíos en datos de origen se mantienen visibles; esta herramienta no corrige ni certifica registros 3CV. Un mismo código candidato puede corresponder a varias versiones de equipamiento y no demuestra identidad comercial.</p>
 </section>
 <section class="coverage-method">
 <h2>Alcance y límites</h2>
@@ -67,6 +71,6 @@
 </main>
 <footer class="footer"><div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy</span><small>Consulta los datos originales antes de decidir una compra.</small></div></footer>
 <script defer src="./sii/coverage-matcher.js?v=20261018-1"></script>
-<script defer src="./sii/version-audit.js?v=20261018-1"></script>
-<script defer src="./versiones.js?v=20261018-1"></script>
+<script defer src="./sii/version-audit.js?v=20261018-qa24"></script>
+<script defer src="./versiones.js?v=20261018-qa24"></script>
 </body></html>

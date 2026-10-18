@@ -822,6 +822,43 @@ await test('Cotejo técnico versión 320 px no desborda y mantiene tabla desplaz
  assert.deepEqual(errors,[]);
  await p.close();
 });
+await test('Revisión prioritaria muestra 24 casos y los dos conflictos VW documentados',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ const errs=[];p.on('pageerror',e=>errs.push(e.message));
+ await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='122',{timeout:30000});
+ assert.match(await p.locator('#versionsPrioritySummary').textContent(),/2 discrepancias · 22 candidatos únicos/);
+ await p.locator('#versionsPriorityOnly').check();
+ assert.equal(await p.locator('#versionsRows tr').count(),24);
+ const tera=p.locator('#versionsRows tr').filter({hasText:'Trend 1.6 MSI MT'});
+ assert.equal(await tera.count(),1);
+ assert.match(await tera.textContent(),/Discrepancia contrastada con fabricante/);
+ assert.match(await tera.textContent(),/VW9988E60525S00-6/);
+ assert.match(await tera.textContent(),/pendiente aclaración 3CV/i);
+ assert.match(await tera.locator('.reviewed-discrepancy a').getAttribute('href'),/volkswagen.cl\/tera\/tera/);
+ const second=p.locator('#versionsRows tr').filter({hasText:'Comfort 1.6 MSI MT'});
+ assert.match(await second.textContent(),/discrepancia contrastada con fabricante/i);
+ assert.deepEqual(errs,[]);
+ const dl=p.waitForEvent('download');
+ await p.locator('#versionsDownload').click();
+ assert.match((await dl).suggestedFilename(),/rindelab-cotejo-versiones-preliminar\.csv/);
+ await p.close();
+});
+await test('Código compartido se distingue de versión comercial individual',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900}});
+ await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='122',{timeout:30000});
+ await p.selectOption('#versionsBrand','Hyundai');
+ await p.fill('#versionsSearch','Venue QU2i');
+ const items=p.locator('#versionsRows tr');
+ assert.equal(await items.count(),4);
+ const first=items.filter({hasText:'Venue QU2i 1.0T MT GO'});
+ assert.equal(await first.count(),1);
+ assert.match(await first.textContent(),/mismo código candidato usado por 1 otra/);
+ const next=items.filter({hasText:'Venue QU2i 1.0T MT PLUS'});
+ assert.match(await next.textContent(),/mismo código candidato usado por 1 otra/);
+ await p.close();
+});
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){

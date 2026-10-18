@@ -12,6 +12,7 @@ const names={
 };
 const labels={technology:'Tecnología',engine:'Cilindrada (L)',transmission:'Transmisión 3CV',drive:'Tracción',generation:'Código generación',fuel:'Combustible'};
 let report=null;
+let reviewNotes=[];
 const formatSpecs=s=>Object.entries(s).map(([k,v])=>(labels[k]||k)+': '+v).join(' · ')||'Sin atributos explícitos utilizables';
 const norm=s=>window.RindelabCoverage.normalized(s);
 function td(tr,value){
@@ -52,7 +53,7 @@ function showCandidates(x,container){
 function visible(){
  if(!report)return [];
  const brand=$('versionsBrand').value,status=$('versionsFilter').value,q=norm($('versionsSearch').value);
- return report.cases.filter(x=>(!brand||x.brand===brand)&&(!status||x.status===status)&&(!q||norm(x.brand+' '+x.family+' '+x.version).includes(q)));
+ return report.cases.filter(x=>(!brand||x.brand===brand)&&(!status||x.status===status)&&(!q||norm(x.brand+' '+x.family+' '+x.version).includes(q))&&(!$('versionsPriorityOnly').checked||x.status==='un_candidato_preliminar'||x.status==='solo_contradicciones'));
 }
 function render(){
  if(!report)return;
@@ -72,6 +73,26 @@ function render(){
   counts.className='version-numbers';
   const state=td(tr,names[x.status]||'Pendiente');
   state.className='version-status';
+  if(x.singleCandidateCode){
+   const code=document.createElement('p');code.className='candidate-identity';
+   code.textContent='Código 3CV candidato: '+x.singleCandidateCode;
+   state.append(code);
+  }
+  if(x.sharedPreliminaryCandidate){
+   const shared=document.createElement('p');shared.className='candidate-shared';
+   shared.textContent='Atención: mismo código candidato usado por '+x.sharedWithOtherVersions+' otra(s) versión(es) comerciales. No demuestra equivalencia de equipamiento.';
+   state.append(shared);
+  }
+  const manual=reviewNotes.find(note=>note.brand===x.brand&&note.family===x.family&&note.version===x.version);
+  if(manual){
+   const note=document.createElement('div');note.className='reviewed-discrepancy';
+   const lead=document.createElement('strong');lead.textContent='Discrepancia contrastada con fabricante · pendiente aclaración 3CV';
+   note.append(lead);
+   const p=document.createElement('p');p.textContent=manual.manufacturerEvidenceSummary+' La ficha 3CV '+manual.candidateCode3cv+' registra transmisión '+manual.source3cvTransmission+'. No se ha resuelto la discrepancia con la fuente 3CV.';
+   note.append(p);
+   const manufacturer=document.createElement('a');manufacturer.href=manual.manufacturerEvidenceUrl;manufacturer.rel='noopener noreferrer';manufacturer.target='_blank';manufacturer.textContent='Ver especificación Volkswagen ↗';note.append(manufacturer);
+   state.append(note);
+  }
   if(x.familyCandidates)showCandidates(x,state);
   tbody.append(tr);
  }
@@ -90,10 +111,13 @@ function download(){
 async function load(){
  try{
   if(!window.RindelabVersionAudit||!window.RindelabCoverage)throw Error('Cotejo de versiones no disponible');
-  const [prices,manifest]=await Promise.all([
+  const [prices,manifest,notes]=await Promise.all([
    fetch('./sii/commercial-2026.json?v=20261018-cotejo1').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}),
-   fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('Manifiesto 3CV no disponible');return r.json();})
+   fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('Manifiesto 3CV no disponible');return r.json();}),
+   fetch('./sii/review-notes-2026.json?v=20261018-qa1').then(r=>{if(!r.ok)throw Error('Registro de discrepancias no disponible');return r.json();})
   ]);
+  if(notes.schemaVersion!==1||!Array.isArray(notes.cases))throw Error('Notas de auditoría inválidas');
+  reviewNotes=notes.cases;
   const files=await Promise.all(manifest.files.map(p=>fetch('../vehiculos/'+p).then(r=>{if(!r.ok)throw Error('Falta archivo 3CV: '+p);return r.json();})));
   report=window.RindelabVersionAudit.audit(prices,files.flat(),manifest.published);
   $('versionTotal').textContent=number.format(report.catalogCount);
@@ -103,6 +127,7 @@ async function load(){
   $('versionsStatus').textContent='Corte 3CV '+report.sourceCut+' · '+number.format(report.threeCvRecords)+' homologaciones al corte. Equivalencias técnicas certificadas: ninguna.';
   const brands=[...new Set(report.cases.map(x=>x.brand))].sort((a,b)=>a.localeCompare(b,'es'));
   for(const b of brands)$('versionsBrand').add(new Option(b,b));
+  $('versionsPrioritySummary').textContent=(report.counts.solo_contradicciones||0)+' discrepancias · '+(report.counts.un_candidato_preliminar||0)+' candidatos únicos · '+report.singleCandidateUniqueCodes+' códigos 3CV distintos entre estos últimos';
   $('versionsDownload').disabled=false;render();
  }catch(err){
   $('versionsStatus').textContent='No fue posible completar el cotejo: '+err.message+'. Reintenta actualizando la página.';
@@ -110,7 +135,7 @@ async function load(){
   const tr=document.createElement('tr');td(tr,'Auditoría no disponible.').colSpan=4;$('versionsRows').append(tr);
  }
 }
-for(const id of ['versionsBrand','versionsFilter','versionsSearch'])$(id).addEventListener(id==='versionsSearch'?'input':'change',render);
+for(const id of ['versionsBrand','versionsFilter','versionsSearch','versionsPriorityOnly'])$(id).addEventListener(id==='versionsSearch'?'input':'change',render);
 $('versionsDownload').addEventListener('click',download);
 load();
 })();
