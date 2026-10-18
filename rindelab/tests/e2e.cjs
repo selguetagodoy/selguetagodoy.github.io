@@ -114,7 +114,8 @@ await test('La calculadora distingue el precio de carga residencial y pública p
  await page.selectOption('#chargeScenario','home');
  assert(await page.locator('#homeBillHelper').isVisible());
  await page.fill('#homeChargeRate','240');
- await page.locator('#homeChargeRate').dispatchEvent('change');
+ assert.equal(await page.inputValue('#homeChargeRate'),'240');
+ await page.waitForFunction(()=>document.querySelector('#homeSessionCost')?.textContent==='$4.800',{timeout:4000});
  assert.equal(await page.locator('#homeSessionCost').textContent(),'$4.800');
  assert.equal(await page.locator('#publicSessionCost').textContent(),'$6.800');
  assert.match(await page.locator('#chargeDifference').textContent(),/2.000.*menos/);
