@@ -108,6 +108,59 @@ await test('Escenario mixto pondera precios sin imputar rendimiento o perdidas',
  await page.selectOption('#publicChargeRate',{label:'AC ≤22 kW · ciudad valle · $340'});
  assert.equal(await page.inputValue('#electricPrice'),'340');
 });
+await test('La calculadora distingue el precio de carga residencial y pública para una misma energía',async()=>{
+ assert.equal(await page.inputValue('#chargeKwh'),'20');
+ assert.equal(await page.locator('#publicSessionCost').textContent(),'$6.800');
+ await page.selectOption('#chargeScenario','home');
+ assert(await page.locator('#homeBillHelper').isVisible());
+ await page.fill('#homeChargeRate','240');
+ assert.equal(await page.inputValue('#homeChargeRate'),'240');
+ await page.waitForFunction(()=>document.querySelector('#homeSessionCost')?.textContent==='$4.800',{timeout:4000});
+ assert.equal(await page.locator('#homeSessionCost').textContent(),'$4.800');
+ assert.equal(await page.locator('#publicSessionCost').textContent(),'$6.800');
+ assert.match(await page.locator('#chargeDifference').textContent(),/2.000.*menos/);
+ await page.fill('#chargeKwh','40');
+ assert.equal(await page.locator('#homeSessionCost').textContent(),'$9.600');
+ assert.equal(await page.locator('#publicSessionCost').textContent(),'$13.600');
+ await page.fill('#chargeKwh','20');
+});
+await test('La boleta produce un precio medio explícito, sin equipararlo al cargo marginal',async()=>{
+ await page.selectOption('#chargeScenario','home');
+ if(!(await page.locator('#homeBillHelper').evaluate(el=>el.open)))await page.locator('#homeBillHelper summary').click();
+ await page.fill('#homeBillAmount','35000');
+ await page.fill('#homeBillKwh','150');
+ await page.fill('#homeBillFixed','1500');
+ await page.locator('#calcHomeFromBill').click();
+ assert.equal(await page.inputValue('#homeChargeRate'),'223.33');
+ assert.equal(await page.inputValue('#electricPrice'),'223.33');
+ assert.equal(await page.locator('#homeSessionCost').textContent(),'$4.467');
+ assert.match(await page.locator('#homeBillStatus').textContent(),/Precio medio aproximado/);
+ assert.match(await page.locator('#homeBillStatus').textContent(),/No equivale necesariamente/);
+});
+await test('No acepta boleta inconsistente ni atribuye tarifa residencial a una comuna',async()=>{
+ await page.selectOption('#chargeScenario','home');
+ if(!(await page.locator('#homeBillHelper').evaluate(el=>el.open)))await page.locator('#homeBillHelper summary').click();
+ await page.fill('#homeBillAmount','1000');
+ await page.fill('#homeBillFixed','2000');
+ await page.locator('#calcHomeFromBill').click();
+ assert.match(await page.locator('#homeBillStatus').textContent(),/Verifica/);
+ assert.equal(await page.inputValue('#homeChargeRate'),'223.33');
+ assert.match(await page.locator('.assumptions-note').textContent(),/comuna, distribuidora/);
+});
+await test('La ficha EV muestra costos diferenciados de casa y electrolinera',async()=>{
+ await page.click('#resetButton');
+ await page.selectOption('#tech','EV');
+ await page.click('#searchButton');
+ await page.locator('.vehicle-card button[data-detail]').first().click();
+ const labels=await page.locator('#detailContent dt').allTextContents();
+ assert(labels.includes('Costo de 100 km cargando en casa'));
+ assert(labels.includes('Costo de 100 km en electrolinera seleccionada'));
+ assert(labels.some(x=>x.startsWith('Costo de recarga en casa (20 kWh)')));
+ assert(labels.some(x=>x.startsWith('Costo de recarga pública (20 kWh)')));
+ await page.locator('#detailClose').click();
+ await page.click('#resetButton');
+ await page.selectOption('#chargeScenario','public');
+});
 await test('Costo anual y quinquenal responde al kilometraje sin extrapolar PHEV',async()=>{
  await page.selectOption('#tech','Bencina');await page.click('#searchButton');
  const row=page.locator('.vehicle-card').first();

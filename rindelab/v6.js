@@ -179,6 +179,52 @@ function updateSuggestions(){
  }
  box.replaceChildren(...hit);
 }
+
+function evCostForTariff(row,rate){
+ const perf=row[F.TECH]==='EV'?number(row[F.EL]):null;
+ return perf&&rate?100/perf*rate:null;
+}
+function sessionCost(rate){
+ const kwh=number($('chargeKwh').value);
+ return kwh&&kwh<=200&&rate?kwh*rate:null;
+}
+function fixedNumber(n){return Number(n).toLocaleString('es-CL',{maximumFractionDigits:2});}
+function updateChargingExample(){
+ const home=number($('homeChargeRate').value),publicRate=number($('publicChargeRate').value);
+ const homePrice=sessionCost(home),publicPrice=sessionCost(publicRate);
+ $('homeSessionCost').textContent=homePrice===null?'Ingresa tu tarifa':money(homePrice);
+ $('homeSessionRate').textContent=home?'Tarifa residencial elegida: '+money(home)+'/kWh':'Revisa tu boleta para conocer el precio';
+ $('publicSessionCost').textContent=publicPrice===null?'Ingresa kWh':money(publicPrice);
+ $('publicSessionRate').textContent='Copec Voltex · '+$('publicChargeRate').selectedOptions[0].textContent;
+ if(homePrice===null||publicPrice===null){
+  $('chargeDifference').textContent=(!number($('chargeKwh').value)||number($('chargeKwh').value)>200)?'Ingresa una cantidad válida de energía (1 a 200 kWh).':'Agrega tu tarifa domiciliaria para comparar.';
+ }else if(homePrice<publicPrice){
+  $('chargeDifference').textContent='Para esta energía, cargar en casa costaría '+money(publicPrice-homePrice)+' menos que la tarifa pública seleccionada.';
+ }else if(homePrice>publicPrice){
+  $('chargeDifference').textContent='Para esta energía, cargar en casa costaría '+money(homePrice-publicPrice)+' más que la tarifa pública seleccionada.';
+ }else{
+  $('chargeDifference').textContent='Ambas modalidades cuestan lo mismo para esta cantidad de energía.';
+ }
+}
+function calculateHomeFromBill(){
+ const total=number($('homeBillAmount').value),used=number($('homeBillKwh').value);
+ const fixedText=$('homeBillFixed').value.trim(),fixed=fixedText===''?0:Number(fixedText);
+ const result=$('homeBillStatus');
+ if(!total||!used||!Number.isFinite(fixed)||fixed<0||total<=fixed){
+  result.textContent='Verifica que el total y los kWh sean mayores que cero, y que los cargos fijos no superen el total.';
+  return;
+ }
+ const tariff=(total-fixed)/used;
+ if(tariff<1||tariff>10000){
+  result.textContent='La tarifa estimada está fuera del rango permitido. Revisa los montos y el consumo.';
+  return;
+ }
+ const approx=Math.round(tariff*100)/100;
+ $('homeChargeRate').value=String(approx);
+ result.textContent='Precio medio aproximado: $'+fixedNumber(approx)+'/kWh ('+money(total-fixed)+' ÷ '+fixedNumber(used)+' kWh). No equivale necesariamente al costo de añadir más consumo: revisa tramo, descuentos y cargos variables.';
+ updateChargeScenario();
+ refreshEnergyViews();
+}
 // Tarifas Copec Voltex de referencia verificadas el 18/10/2026; no se actualizan automáticamente.
 // La tarifa domiciliaria se introduce manualmente, sin medias supuestas.
 function updateChargeScenario(){
@@ -190,7 +236,9 @@ function updateChargeScenario(){
  $('publicChargeField').hidden=mode==='home'||mode==='manual';
  $('homeChargeField').hidden=mode==='public'||mode==='manual';
  $('homeShareField').hidden=mode!=='mixed';
+ $('homeBillHelper').hidden=mode!=='home'&&mode!=='mixed';
  effective.readOnly=mode!=='manual';
+ if(mode!=='manual'&&document.activeElement===effective)effective.blur();
  let price=null,detail='';
  if(mode==='public'){
   price=publicRate;
@@ -208,6 +256,7 @@ function updateChargeScenario(){
  }
  if(mode!=='manual')effective.value=price===null?'':String(Math.round(price*100)/100);
  $('chargeStatus').textContent=detail+(price!==null?' Tarifa efectiva: $'+Number(effective.value).toLocaleString('es-CL',{maximumFractionDigits:2})+'/kWh.':'');
+ updateChargingExample();
 }
 function refreshEnergyViews(){
  if(submitted)render();
@@ -347,6 +396,12 @@ function showDetail(i){
   ['Costo energético estimado/100 km',isPlugInTechnology(r[F.TECH])?'No calculable sin supuestos de uso eléctrico y combustible':money(cost(r))],
   ['Gasto energético anual estimado ('+fmt(Number($('annualKm').value))+' km)',money(annualEnergy(r))],
   ['Gasto energético estimado a 5 años',money(annualEnergy(r,5))],
+  ...(r[F.TECH]==='EV'?[
+    ['Costo de 100 km cargando en casa',money(evCostForTariff(r,number($('homeChargeRate').value)))],
+    ['Costo de 100 km en electrolinera seleccionada',money(evCostForTariff(r,number($('publicChargeRate').value)))],
+    ['Costo de recarga en casa ('+fixedNumber(Number($('chargeKwh').value))+' kWh)',money(sessionCost(number($('homeChargeRate').value)))],
+    ['Costo de recarga pública ('+fixedNumber(Number($('chargeKwh').value))+' kWh)',money(sessionCost(number($('publicChargeRate').value)))]
+  ]:[]),
   ...(r[F.TECH]==='EV'||isPlugInTechnology(r[F.TECH])?
     [['Batería (kWh)',r[F.BAT]],['Conector AC',r[F.AC]],['Conector DC',r[F.DC]]].filter(([,v])=>v!==null&&v!==''&&v!=='N/D'):[]),
   ['CO₂ (g/km)',r[F.CO2]],['Norma de emisiones',r[F.NORM]]
@@ -635,11 +690,22 @@ $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').tex
 $('sort').addEventListener('change',render);
 $('mttSearchMore').addEventListener('click',()=>{mttLimit+=10;renderMTT();});
 for(const id of ['gasPrice','dieselPrice','annualKm'])$(id).addEventListener('change',refreshEnergyViews);
-for(const id of ['chargeScenario','publicChargeRate','homeChargeRate','homeChargeShare']){
+for(const id of ['chargeScenario','publicChargeRate','homeChargeShare']){
  $(id).addEventListener('change',()=>{updateChargeScenario();refreshEnergyViews();});
 }
+$('homeChargeRate').addEventListener('input',()=>{
+ updateChargeScenario();
+ refreshEnergyViews();
+});
+$('calcHomeFromBill').addEventListener('click',calculateHomeFromBill);
+$('chargeKwh').addEventListener('input',updateChargingExample);
 $('electricPrice').addEventListener('change',()=>{
- if($('chargeScenario').value!=='manual')$('chargeScenario').value='manual';
+ // Un change diferido al perder foco no debe reactivar tarifa manual después de
+ // seleccionar casa/mixto/público. El campo es editable solo en modo manual.
+ if($('chargeScenario').value!=='manual'){
+  updateChargeScenario();
+  return;
+ }
  updateChargeScenario();refreshEnergyViews();
 });
 $('resultList').addEventListener('click',event=>{

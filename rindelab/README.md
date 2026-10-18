@@ -13,6 +13,18 @@ Web pública: https://selguetagodoy.github.io/rindelab/
 - **Navegación**: acceso rápido al buscador, supuestos y fuentes; módulos documentales en el pie de página.
 - **Difusión**: metadatos Open Graph, datos estructurados de aplicación/dataset y URLs de comparación con códigos de homologación.
 
+## Cómo estimar el costo de carga en casa (18 de octubre de 2026)
+
+RINDELAB distingue **carga residencial** y **electrolinera pública** con resultados monetarios separados para una cantidad de energía elegida por el usuario (20 kWh por defecto, de 1 a 200 kWh). También muestra el costo por 100 km bajo ambas tarifas en la ficha de vehículos EV cuyo rendimiento 3CV permite calcularlo.
+
+**Tarifa residencial:** la opción preferida es copiar el valor de los cargos variables por kWh aplicables de la boleta o pliego del suministro. No existe un precio residencial universal para Chile. Se ofrecen enlaces a las [tarifas residenciales SEC](https://www.sec.cl/area-ciudadana/tarifas-electricas/) y los [pliegos Enel 2026](https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.html), que dependen de comuna, tipo de suministro y tramo.
+
+Si el usuario no conoce el valor por kWh, la sección **«Calcúlalo con tu boleta»** divide el total pagado menos cargos fijos/no proporcionales al consumo especificados manualmente entre los kWh facturados. Muestra explícitamente que el resultado es un **precio promedio aproximado, no necesariamente el costo marginal de cargar el vehículo**; puede incorporar otros conceptos, impuestos, subsidios, descuentos o tramos. Si no se restan los cargos fijos, el resultado incluye esos cargos y puede sobreestimar el costo incremental.
+
+**Ejemplo meramente ilustrativo, no cotización residencial**: si el usuario ingresa $240/kWh y una sesión de 20 kWh, el costo de energía en casa es $4.800. Con una referencia pública Copec Voltex de $340/kWh, la misma energía cuesta $6.800, una diferencia de $2.000. El sitio no presume pérdidas, costos por tiempo, energía efectivamente utilizable, ni que los 20 kWh equivalen a una carga completa del vehículo.
+
+No se suben ni guardan boletas: solo se efectúan cálculos con campos introducidos localmente en la página.
+
 ## Escenarios de carga eléctrica (octubre de 2026)
 
 El simulador aplica tarifas eléctricas **sin alterar** las fichas homologadas 3CV. La tarifa efectiva se utiliza exclusivamente para estimar costos de vehículos eléctricos EV con rendimiento eléctrico utilizable; los costos PHEV/REEV continúan sin calcularse automáticamente.
