@@ -22,7 +22,7 @@ async function open(width,height){
  await page.emulateMedia({reducedMotion:'reduce'});
  const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));page.on('console',m=>{if(m.type()==='error')errors.push('Console: '+m.text())});
  const r=await page.goto(base,{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
- await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:25000});
+ await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325' && document.querySelector('#searchButton')?.disabled===false,{timeout:25000});
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
