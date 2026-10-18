@@ -114,6 +114,7 @@ await test('La calculadora distingue el precio de carga residencial y pública p
  await page.selectOption('#chargeScenario','home');
  assert(await page.locator('#homeBillHelper').isVisible());
  await page.fill('#homeChargeRate','240');
+ console.log('RINDELAB HOME DEBUG',JSON.stringify(await page.evaluate(()=>({mode:document.querySelector('#chargeScenario').value,rate:document.querySelector('#homeChargeRate').value,effective:document.querySelector('#electricPrice').value,session:document.querySelector('#homeSessionCost').textContent}))));
  assert.equal(await page.inputValue('#homeChargeRate'),'240');
  await page.waitForFunction(()=>document.querySelector('#homeSessionCost')?.textContent==='$4.800',{timeout:4000});
  assert.equal(await page.locator('#homeSessionCost').textContent(),'$4.800');
@@ -125,7 +126,8 @@ await test('La calculadora distingue el precio de carga residencial y pública p
  await page.fill('#chargeKwh','20');
 });
 await test('La boleta produce un precio medio explícito, sin equipararlo al cargo marginal',async()=>{
- await page.locator('#homeBillHelper summary').click();
+ await page.selectOption('#chargeScenario','home');
+ if(!(await page.locator('#homeBillHelper').getAttribute('open')))await page.locator('#homeBillHelper summary').click();
  await page.fill('#homeBillAmount','35000');
  await page.fill('#homeBillKwh','150');
  await page.fill('#homeBillFixed','1500');
@@ -137,6 +139,8 @@ await test('La boleta produce un precio medio explícito, sin equipararlo al car
  assert.match(await page.locator('#homeBillStatus').textContent(),/No equivale necesariamente/);
 });
 await test('No acepta boleta inconsistente ni atribuye tarifa residencial a una comuna',async()=>{
+ await page.selectOption('#chargeScenario','home');
+ if(!(await page.locator('#homeBillHelper').getAttribute('open')))await page.locator('#homeBillHelper summary').click();
  await page.fill('#homeBillAmount','1000');
  await page.fill('#homeBillFixed','2000');
  await page.locator('#calcHomeFromBill').click();
