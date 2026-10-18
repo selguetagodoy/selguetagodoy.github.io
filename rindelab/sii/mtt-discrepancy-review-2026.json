@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "sourceMayCut": "2026-05-08",
+  "sourceMttCut": "2026-09-28",
+  "reviewedOn": "2026-10-18",
+  "scope": "12 diferencias documentales exactas por código, agrupadas para revisión; fabricante puede describir configuración sin certificar la relación con cada código MTT. NO corregir los archivos oficiales sin rectificación 3CV.",
+  "groups": {
+    "JMC Vigus": 4,
+    "Kia Sportage": 2,
+    "Karry Q22": 3,
+    "MAN TGE": 1,
+    "Mercedes-Benz GLE": 1,
+    "Nissan Kait": 1
+  },
+  "cases": [
+    {
+      "code3cv": "JM10011E60525M00-7",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "JMC Vigus",
+      "officialModel": "All New Vigus Plus MT 4x4",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "excelRow": 7143,
+        "transmission": "M",
+        "engineL": 2.5
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": "2.5"
+      },
+      "manufacturer": {
+        "url": "https://jmcchile.cl/modelos/vigus-plus/",
+        "observation": "Vigus Plus 2.5 turbodiésel 4x4: JMC Chile informa caja manual de seis velocidades. Coincide con denominación MT y nómina MTT, no con transmisión A de mayo.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "JM10011E60525M01-1",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "JMC Vigus",
+      "officialModel": "All New Vigus Work MT 4x4",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "excelRow": 7144,
+        "transmission": "M",
+        "engineL": 2.5
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": "2.5"
+      },
+      "manufacturer": {
+        "url": "https://jmcchile.cl/modelos/vigus-work/",
+        "observation": "Vigus Work 2.5 turbodiésel 4x4: JMC Chile informa caja manual de seis velocidades. Coincide con denominación MT y nómina MTT, no con transmisión A de mayo.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "JM10011E60525M02-6",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "JMC Vigus",
+      "officialModel": "All New Vigus Plus MT 4x2",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "excelRow": 7145,
+        "transmission": "M",
+        "engineL": 2.5
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": "2.5"
+      },
+      "manufacturer": {
+        "url": "https://jmcchile.cl/modelos/vigus-plus/",
+        "observation": "Vigus Plus 2.5 turbodiésel 4x2: JMC Chile informa caja manual de seis velocidades. Coincide con denominación MT y nómina MTT, no con transmisión A de mayo.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "JM10011E60525M03-0",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "JMC Vigus",
+      "officialModel": "All New Vigus Work MT 4x2",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "excelRow": 7146,
+        "transmission": "M",
+        "engineL": 2.5
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": "2.5"
+      },
+      "manufacturer": {
+        "url": "https://jmcchile.cl/modelos/vigus-work/",
+        "observation": "Vigus Work 2.5 turbodiésel 4x2: JMC Chile informa caja manual de seis velocidades. Coincide con denominación MT y nómina MTT, no con transmisión A de mayo.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "KI9911E60325S00-5",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "Kia Sportage",
+      "officialModel": "Sportage 2.0 6MT 2WD",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "excelRow": 7085,
+        "transmission": "M",
+        "engineL": 2
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": "2.0"
+      },
+      "manufacturer": {
+        "url": "https://www.kia.cl/content/dam/indumotora/general/ficha-eficiencia-energetica/Ficha-Eficiencia-Energetica-Nuevo-Sportage.pdf",
+        "observation": "Etiqueta de eficiencia de Kia Chile identifica exactamente el código KI9911E60325S00-5 para Sportage 2.0 6MT 2WD. Nombre y configuración manual están documentados; mayo consigna transmisión A.",
+        "scope": "etiqueta_código_exactamente"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "KI9911E60325S01-9",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "Kia Sportage",
+      "officialModel": "Sportage 2.0 6MT AWD",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "excelRow": 7086,
+        "transmission": "M",
+        "engineL": 2
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": "2.0"
+      },
+      "manufacturer": {
+        "url": "https://www.kia.cl/content/dam/indumotora/general/fichas-tecnicas/2025/Ficha-Tecnica-Nuevo-Sportage.pdf",
+        "observation": "Kia Chile publica la variante Sportage 2.0 GSL 6MT como manual. La ficha consultada no demuestra que la configuración AWD específica corresponda a este código; pendiente.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "KR8299E50421S00-7",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "Karry Q22",
+      "officialModel": "Q22 1.3",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "excelRow": 4470,
+        "transmission": "A",
+        "engineL": 1.3
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": "1.3"
+      },
+      "manufacturer": {
+        "url": "https://karrychile.cl/w/q22-cabina-doble",
+        "observation": "Karry Chile publica Q22 1.3L MT con caja manual de cinco velocidades. No se ha vinculado el certificado específico de la nómina a esta versión comercial.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "KR8299E50421S01-0",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "Karry Q22",
+      "officialModel": "Q22 1.3 Cabina Simple",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "excelRow": 4471,
+        "transmission": "A",
+        "engineL": 1.3
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": "1.3"
+      },
+      "manufacturer": {
+        "url": "https://karrychile.cl/documents/7434381/7893565/FT_KARRYQ22-CS-Web.pdf/ac783678-e21f-13c8-7d2f-356afd31020d?t=1687358999163",
+        "observation": "Ficha Karry Q22 cabina simple 1.3L MT especifica transmisión manual de cinco velocidades. El código MTT figura A; correspondencia exacta sigue pendiente.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "KR8299E50421S02-4",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "Karry Q22",
+      "officialModel": "Q22 1.3 Cargo Box",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "excelRow": 4472,
+        "transmission": "A",
+        "engineL": 1.3
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": "1.3"
+      },
+      "manufacturer": {
+        "url": "https://karrychile.cl/documents/7434381/7893537/FT_KARRYQ22%2BCB.pdf/ca61be36-cf5b-bc25-53e4-ddaf50389e77?t=1737392352186",
+        "observation": "Ficha Karry Q22 Cargo Box 1.3L MT especifica transmisión manual de cinco velocidades. El código MTT figura A; correspondencia exacta sigue pendiente.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "MA9923E60425M00-6",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "MAN TGE",
+      "officialModel": "TGE 3.180 4x2",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "excelRow": 7274,
+        "transmission": "M",
+        "engineL": 2
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": "2.0"
+      },
+      "manufacturer": {
+        "url": "https://www.man.eu/content/dam/man/countries/doc/bw-master/van/datenblaetter/tge/man-tge-technical-data-en.pdf/_jcr_content/renditions/original./man-tge-technical-data-en.pdf",
+        "observation": "MAN documenta transmisiones manuales de seis velocidades y automáticas de ocho en la familia TGE. Sin ficha local específica del código no es posible dirimir A frente a M.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "MB6988E60517M00-3",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "Mercedes-Benz GLE",
+      "officialModel": "GLE 500e 4 Matic 3,0 Lts. Station Wagon 5P. T/A 4x4 Híbrido",
+      "kind": "engine",
+      "mtt": {
+        "value": "3",
+        "excelRow": 2670,
+        "transmission": "A",
+        "engineL": 3
+      },
+      "may": {
+        "value": "2.0",
+        "transmission": "A",
+        "engineL": "2.0"
+      },
+      "manufacturer": {
+        "url": "https://group.mercedes-benz.com/documents/sustainability/product/daimler-umweltzertifikat-mb-gle.pdf",
+        "observation": "Mercedes-Benz documenta GLE 500 e 4MATIC con motor térmico de 2.996 cm³ (aprox. 3.0 L). La base de mayo consigna 2.0 L; aclaración oficial 3CV pendiente.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    },
+    {
+      "code3cv": "NS10421T3C0126S00-7",
+      "group": {
+        "JMC Vigus": 4,
+        "Kia Sportage": 2,
+        "Karry Q22": 3,
+        "MAN TGE": 1,
+        "Mercedes-Benz GLE": 1,
+        "Nissan Kait": 1
+      },
+      "family": "Nissan Kait",
+      "officialModel": "Nissan Kait",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "excelRow": 7825,
+        "transmission": "A",
+        "engineL": 1.6
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": "1.6"
+      },
+      "manufacturer": {
+        "url": "https://www.nissan.cl/vehiculos/nuevos/kait.html",
+        "observation": "Nissan Chile indica para Kait 1.6 transmisión automática Xtronic CVT. La nómina MTT indica A y la base de mayo M; falta vínculo del certificado para rectificar.",
+        "scope": "familia_modelo_no_identidad_codigo"
+      },
+      "verificationStatus": "evidencia_fabricante_consultada_pendiente_rectificacion_3cv",
+      "official3cvRectification": null,
+      "certifiedResolved": false
+    }
+  ]
+}
