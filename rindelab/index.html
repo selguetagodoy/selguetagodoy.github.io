@@ -17,7 +17,10 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"RINDELAB","url":"https://selguetagodoy.github.io/rindelab/","description":"Consulta homologaciones 3CV y compara costos energéticos estimados de vehículos en Chile.","applicationCategory":"ReferenceApplication","operatingSystem":"Web","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}},{"@type":"Dataset","name":"RINDELAB: rendimientos vehiculares homologados en Chile","description":"Integración independiente de fichas 3CV de mayo 2026 y nuevos códigos de la consulta oficial de octubre 2026. No equivale a un catálogo de vehículos disponibles para venta.","url":"https://selguetagodoy.github.io/rindelab/","isBasedOn":["https://www.consumovehicular.cl/","https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx"],"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}}]}</script>
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="stylesheet" href="./v6.css?v=20261018-list155"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="./v6.css?v=20261018-visual8"><link rel="stylesheet" href="./sii/sii.css?v=20261017-kia25">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
@@ -172,10 +175,14 @@
    </select></div>
   </div>
   <p id="sortNote" class="sort-note" role="note" hidden></p>
-  <div id="sourceLegend" class="source-legend" aria-label="Cómo interpretar los resultados" hidden>
-   <div><span class="source-guide-mark source-guide-energy" aria-hidden="true"></span><strong>Rendimientos oficiales · mayo y octubre</strong><small>Base histórica 3CV y 272 registros adicionales de la API oficial del 18/10/2026. Revisa el ciclo y las métricas disponibles.</small></div>
-   <div><span class="source-guide-mark source-guide-mtt" aria-hidden="true"></span><strong>Homologación MTT pendiente</strong><small>Solo un código de septiembre permanece sin ficha energética en la consulta oficial de octubre.</small></div>
-  </div>
+  <details id="sourceLegend" class="source-legend" aria-label="Cómo interpretar los resultados" hidden>
+   <summary><span>Datos oficiales 3CV · mayo y octubre de 2026</span><span class="source-legend-link">¿Cómo se calculan y qué está pendiente? <span aria-hidden="true">⌄</span></span></summary>
+   <div class="source-legend-details">
+    <p><strong>Rendimientos oficiales.</strong> Base histórica 3CV de mayo y 272 registros adicionales de la API oficial de octubre de 2026. Cada ficha muestra su ciclo NEDC o WLTP; sus valores no son directamente equivalentes.</p>
+    <p><strong>Homologaciones MTT pendientes.</strong> Un código de septiembre continúa sin ficha energética en la consulta de octubre. No recibe costos estimados ni se mezcla con fichas con rendimiento.</p>
+    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="#fuentes">Metodología completa ↗</a></p>
+   </div>
+  </details>
   <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
    <div class="mtt-search-heading">
     <div><p class="mtt-search-eyebrow">NÓMINA MTT · 28 DE SEPTIEMBRE DE 2026</p><h3 id="mttSearchTitle">Homologaciones recientes sin ficha de rendimiento</h3>
@@ -272,6 +279,6 @@
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
 <script src="./sii/prices.js?v=20261017-list122" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261018-list155" defer></script>
+<script src="./v6.js?v=20261018-visual8" defer></script>
 </body>
 </html>
