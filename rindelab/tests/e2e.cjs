@@ -59,6 +59,7 @@ await test('RINDELAB 7 muestra escenarios y metadatos compartibles',async()=>{
  assert(await page.locator('#annualKm').isVisible());
  assert(await page.locator('#electricPrice').isVisible());
  assert.equal(await page.locator('#annualKm').inputValue(),'15000');
+ assert.equal(await page.locator('#statsCycle').inputValue(),'WLTP');
  assert.match(await page.locator('head meta[property="og:image"]').getAttribute('content'),/rindelab\/hero-foto-rindelab\.webp/);
  assert.equal(await page.locator('script[type="application/ld+json"]').count(),1);
  assert(await page.locator('.footer-data summary').isVisible());
@@ -133,6 +134,7 @@ await test('Rankings separan Station Wagon de Jeep y mantienen carrocería origi
  await page.locator('#statsClose').click();
 });
 await test('Ranking inicial WLTP ordena costos sin equiparar NEDC',async()=>{
+ await page.selectOption('#statsCycle','WLTP');
  await page.locator('#statsOpen').click();
  assert(await page.locator('#statsDialog').evaluate(e=>e.open));
  assert.equal(await page.inputValue('#statsCycle'),'WLTP');
@@ -511,7 +513,7 @@ await test('Tasación y permiso seleccionados aparecen en comparación de dos ve
  assert.match(data,/Permiso de circulación 2026/);
  assert(data.includes('Precio de lista nuevo (sin bonos)'));
  assert.match(data,/27\.990\.000/);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),10);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),12);
  assert.match(data,/22.354.806|23.139.460|21.570.147|18.775.083|20.189.698/);
  await page.locator('#compareClose').click();
  await page.click('#compareClear');
