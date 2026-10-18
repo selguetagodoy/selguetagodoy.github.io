@@ -864,14 +864,14 @@ await test('Cotejo técnico versión 320 px no desborda y mantiene tabla desplaz
  assert.deepEqual(errors,[]);
  await p.close();
 });
-await test('Revisión prioritaria muestra 24 casos y los dos conflictos VW documentados',async()=>{
+await test('Revisión prioritaria contiene 26 casos, dos VW contrastados y Forester híbrido sin equivalente mayo',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
  const errs=[];p.on('pageerror',e=>errs.push(e.message));
  await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='127',{timeout:30000});
- assert.match(await p.locator('#versionsPrioritySummary').textContent(),/2 discrepancias · 22 candidatos únicos/);
+ assert.match(await p.locator('#versionsPrioritySummary').textContent(),/3 discrepancias · 23 candidatos únicos/);
  await p.locator('#versionsPriorityOnly').check();
- assert.equal(await p.locator('#versionsRows tr').count(),24);
+ assert.equal(await p.locator('#versionsRows tr').count(),26);
  const tera=p.locator('#versionsRows tr').filter({hasText:'Trend 1.6 MSI MT'});
  assert.equal(await tera.count(),1);
  assert.match(await tera.textContent(),/Discrepancia contrastada con fabricante/);
@@ -880,6 +880,10 @@ await test('Revisión prioritaria muestra 24 casos y los dos conflictos VW docum
  assert.match(await tera.locator('.reviewed-discrepancy a').getAttribute('href'),/volkswagen.cl\/tera\/tera/);
  const second=p.locator('#versionsRows tr').filter({hasText:'Comfort 1.6 MSI MT'});
  assert.match(await second.textContent(),/discrepancia contrastada con fabricante/i);
+ const forester=p.locator('#versionsRows tr').filter({hasText:'2.5 HEV AWD CVT SPORT ES'});
+ assert.equal(await forester.count(),1);
+ assert.match(await forester.textContent(),/Solo candidatos contradictorios/);
+ assert.equal(await forester.locator('.reviewed-discrepancy').count(),0,'No afirmar que existe rectificación o contraste formal de la autoridad 3CV');
  assert.deepEqual(errs,[]);
  const dl=p.waitForEvent('download');
  await p.locator('#versionsDownload').click();
