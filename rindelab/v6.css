@@ -374,3 +374,26 @@ html{scroll-padding-top:88px}
 .assumptions-grid .field select{width:100%;max-width:100%;text-overflow:ellipsis}
 .assumptions-note{line-height:1.65}
 @media(max-width:600px){.charge-status{font-size:11px;padding:9px 10px}.assumptions-grid .field label{font-size:11px}}
+
+
+/* Diferenciación entre tarifa de boleta, carga domiciliaria y electrolinera. */
+.home-bill-helper{margin:12px 0 4px;padding:0 14px 12px;border:1px solid #cfdee5;border-radius:12px;background:#fbfdfe}
+.home-bill-helper summary{padding:13px 0;cursor:pointer;color:#16536b;font-size:13px;font-weight:780;min-height:44px}
+.bill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:11px 0}
+.bill-grid .field input{width:100%;min-width:0;min-height:44px;padding:8px 11px;border:1px solid #bdcedb;border-radius:8px}
+.bill-help,.bill-result{font-size:11px;color:#526d80;line-height:1.6;margin:8px 0}
+.bill-result:not(:empty){font-weight:700;color:#146b75;padding:8px;background:#e8f7f6;border-radius:7px}
+.charge-example{margin-top:16px;border:1px solid #bcd9e2;border-radius:12px;background:#f7fbfc;padding:15px 16px}
+.charge-example-title{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:12px}
+.charge-example-title h3{font-size:16px;color:#153a51;margin:0}
+.charge-example-title .field{min-width:130px;max-width:175px}
+.charge-example-title .field input{width:100%;height:44px;border:1px solid #c6d8df;border-radius:8px;padding:8px 12px}
+.charge-example-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.charge-example-value{background:white;border:1px solid #dae9ee;border-radius:9px;padding:12px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.charge-example-value small{font-weight:760;color:#4c7485;font-size:11px}
+.charge-example-value strong{color:#15455e;font-size:21px;line-height:1.2;font-variant-numeric:tabular-nums}
+.charge-example-value span{color:#587589;font-size:10px}
+.charge-difference{font-size:12px;color:#165b66;font-weight:750;margin:10px 0 0}
+.charge-disclaimer{font-size:10px;color:#668092;margin:7px 0 0;line-height:1.5}
+@media(max-width:650px){.bill-grid{grid-template-columns:1fr}.charge-example{padding:12px}.charge-example-title h3{font-size:14px}.charge-example-value strong{font-size:17px}}
+@media(max-width:360px){.charge-example-title{display:block}.charge-example-title .field{max-width:none;margin-top:12px}.charge-example-grid{grid-template-columns:1fr}}
