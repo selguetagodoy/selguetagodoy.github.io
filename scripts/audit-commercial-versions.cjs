@@ -31,14 +31,14 @@ assert(!matcher.matches('Mazda','CX-3',row('Mazda','CX30 2.0','Bencina','4x2','A
 assert(!matcher.matches('Hyundai','Creta',row('Hyundai','Creta Grand 2.0','Bencina','4x2','M','2.0')));
 const report=audit.audit(commercial,records,manifest.published,official);
 assert.equal(report.schemaVersion,1);
-assert.equal(report.catalogCount,127);
-assert.equal(report.cases.length,127);
+assert.equal(report.catalogCount,136);
+assert.equal(report.cases.length,136);
 assert.equal(report.threeCvRecords,8053);
 assert.equal(report.certificationPerformed,false);
 assert.equal(report.certifiedTechnicalMatches,0);
 assert.equal(report.sourceReviewedVersions,22);
 assert.equal(report.manufacturerCertifiedMatches,0);
-assert.equal(Object.values(report.counts).reduce((a,b)=>a+b,0),127);
+assert.equal(Object.values(report.counts).reduce((a,b)=>a+b,0),136);
 assert(report.cases.every(x=>x.familyCandidates===x.consistentCandidates+x.conflictingCandidates));
 assert(report.cases.every(x=>x.reviewableCandidates<=x.consistentCandidates));
 const get=(brand,family,version)=>report.cases.find(x=>x.brand===brand&&x.family===family&&x.version===version);
@@ -59,7 +59,12 @@ assert(get('Mazda','CX-30','CORE 2.0 2WD 6AT 7G').expressedSpecifications.engine
 const notes=read('rindelab/sii/review-notes-2026.json');
 assert.equal(notes.schemaVersion,1);
 assert.equal(notes.cases.length,2);
-assert.equal(report.counts.solo_contradicciones,3);
+assert.equal(report.counts.solo_contradicciones,4);
+const s05ev=get('Changan','Deepal S05','S05 EV');
+assert.equal(s05ev.status,'solo_contradicciones','No asignar versión comercial S05 EV a la ficha S05 REEV del corte de mayo');
+assert.equal(s05ev.reviewableCandidates,0);
+assert(s05ev.conflictsExamples.some(x=>x.conflicts.some(y=>y.field==='technology'&&y.expected==='EV'&&y.observed==='REEV')));
+assert.equal(get('Changan','Deepal S05','S05 REEV').status,'informacion_insuficiente');
 const foresterHybrid=get('Subaru','Forester','2.5 HEV AWD CVT SPORT ES');
 assert.equal(foresterHybrid.status,'solo_contradicciones','No atribuir a un Forester HEV 2026 una ficha histórica contradictoria de 3CV mayo');
 assert.equal(foresterHybrid.reviewableCandidates,0);
@@ -77,10 +82,10 @@ for(const note of notes.cases){
  assert(note.manufacturerEvidenceUrl.startsWith('https://www.volkswagen.cl/'));
 }
 const priority=report.cases.filter(x=>x.status==='solo_contradicciones'||x.status==='un_candidato_preliminar');
-assert.equal(priority.length,26);
+assert.equal(priority.length,27);
 const priorityPayload={
  schemaVersion:1,sourceCut:manifest.published,catalogCount:report.catalogCount,
- scope:'26 prioridades documentales, incluidas dos contradicciones Tera revisadas y una Forester HEV frente al corte histórico de mayo. Ninguna correspondencia comercial certificada.',
+ scope:'27 prioridades documentales, incluidas dos Tera MT revisadas, Forester HEV y S05 EV frente al corte histórico de mayo. No certifica correspondencias comerciales.',
  priorities:priority.map(c=>({
   brand:c.brand,family:c.family,version:c.version,priceListClp:c.priceListClp,
   source:c.source,status:c.status,expressedSpecifications:c.expressedSpecifications,manufacturerEvidence:c.manufacturerEvidence,
@@ -99,7 +104,7 @@ if(priorityJson)writeFile(priorityJson.slice('--priority-json='.length),JSON.str
 const priorityMd=outputArg('--priority-md=');
 if(priorityMd){
  const lines=[
- '# RINDELAB — 26 revisiones técnicas pendientes','',
+ '# RINDELAB — 27 revisiones técnicas pendientes','',
  'Fuente 3CV al '+manifest.published+'. Ninguna de las correspondencias está certificada.',
  '',
  '| Estado | Marca y versión comercial | Código candidato | Uso del código | Fuente |',
@@ -117,7 +122,10 @@ if(priorityMd){
  '','Fuentes: https://www.volkswagen.cl/tera/tera y '+manifest.source,
  '','## Subaru Forester HEV frente a registros históricos',
  'El precio comercial 2026 corresponde a Forester 2.5 HEV AWD CVT Sport ES, pero no tiene candidato compatible entre fichas de mayo. Las coincidencias por familia muestran discrepancias de tecnología, cilindrada o tracción. Esto no equivale a una rectificación ni implica que falte homologación posterior; ver la consulta oficial de octubre por separado.',
- '','Fuente comercial: https://www.subaru.cl/vehiculos/all-new-forester-hibrido/','');
+ '','Fuente comercial: https://www.subaru.cl/vehiculos/all-new-forester-hibrido/',
+ '','## Changan Deepal S05 EV y corte histórico de mayo',
+ 'La nueva versión comercial S05 EV no se corresponde con la única ficha Deepal S05 de la base histórica de mayo, identificada como REEV. Se mantienen fuentes y tecnologías separadas; el snapshot oficial energético de octubre puede incluir ambas y debe consultarse de forma independiente.',
+ '','Fuente comercial: https://www.changan.cl/catalogo','');
  writeFile(priorityMd.slice('--priority-md='.length),lines.join('\n'));
 }
 console.log('PRIORIDADES '+JSON.stringify({total:priority.length,contradictions:report.counts.solo_contradicciones,documentedVW:notes.cases.length,single:report.counts.un_candidato_preliminar,uniqueCodes:report.singleCandidateUniqueCodes,sharedVersionCandidates:report.sharedCandidateVersions}));

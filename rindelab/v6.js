@@ -29,7 +29,7 @@ function family(row){
  if(!name)return row[F.MODEL];
  const patterns=[
   // Subfamilias declaradas explícitamente, sin equiparar generaciones comerciales distintas.
-  [/^CS35\s+MAX\b/i,'CS35 Max'],[/^CS75\s+Plus\b/i,'CS75 Plus'],
+  [/^CS35\s+MAX\b/i,'CS35 Max'],[/^CS35\s+Plus\b/i,'CS35 Plus'],[/^CS75\s+Plus\b/i,'CS75 Plus'],
   [/^CS\s*55\s+Plus\b/i,'CS55 Plus'],[/^X7\s+Plus\b/i,'X7 Plus'],
   [/^Hunter\s+(?:EREV|E-?REEV|REEV)\b/i,'Hunter REEV'],
   [/^Hunter\s+E\b/i,'Hunter eléctrico'],
@@ -42,9 +42,9 @@ function family(row){
   [/^Defender\s+(90|110|130)\b/i,null],[/^Grand\s+Vitara\b/i,'Grand Vitara'],
   [/^LPM\s+(?:B10|C10)\b/i,null],[/^Avatr\s+\d+\b/i,null],
   [/^RAV4\b/i,'RAV4'],[/^Evoque\b/i,'Range Rover Evoque'],
-  [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],
+  [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],[/^Yuan\s+Pro\s+DM[-\s]?i\b/i,'Yuan Pro DM-i'],[/^Yuan\s+Plus\b/i,'Yuan Plus'],[/^Song\s+Plus\b/i,'Song Plus'],[/^Song\s+Pro\b/i,'Song Pro'],
   [/^Deepal\s+[A-Z0-9-]+\b/i,null],
-  [/^Haval\s+(H6|H9|Jolion(?:\s+Pro)?|Dargo)\b/i,null],
+  [/^Haval\s+Jolion\s+Max\b/i,'Haval Jolion Max'],[/^Haval\s+(H6|H9|Jolion(?:\s+Pro)?|Dargo)\b/i,null],[/^ORA\s*0?3\b/i,'ORA 03'],
   [/^Tiggo\s+\d+\b/i,null],[/^ATTO\s+\d+\b/i,null],
   [/^Model\s+[3SYX]\b/i,null],[/^F[\s-]?(150|250|350)\b/i,null],
   [/^e[\s-]?Vitara\b/i,'e Vitara'],[/^e[\s-]?208\b/i,'e-208'],[/^e[\s-]?2008\b/i,'e-2008']
