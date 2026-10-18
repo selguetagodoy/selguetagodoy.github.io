@@ -590,7 +590,7 @@ await test('Swift muestra cuatro precios de lista, con selección manual y fuent
  await page.fill('#query','Swift');await page.click('#searchButton');
  assert((await page.locator('.vehicle-card').count())>0);
  await page.locator('.vehicle-card button[data-detail]').first().click();
- await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===5);
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
  assert.equal(await page.locator('.sii-price-item').count(),4);
  assert.match(await page.locator('#siiCommercial').textContent(),/14\.090\.000/);
  assert.match(await page.locator('#siiCommercial').textContent(),/17\.490\.000/);
@@ -691,7 +691,7 @@ await test('Ford Territory muestra cuatro listas con versión y fuente diferenci
  await page.click('#resetButton');await page.fill('#query','Territory FHEV');await page.click('#searchButton');
  assert((await page.locator('.vehicle-card').count())>0);
  await page.locator('.vehicle-card button[data-detail]').first().click();
- await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===5);
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  assert.match(await page.locator('#siiCommercial').textContent(),/21\.290\.000/);
  assert.match(await page.locator('#siiCommercial').textContent(),/32\.190\.000/);
@@ -705,7 +705,7 @@ await test('Ford Maverick ofrece cuatro versiones sin atribuir precio por coinci
  await page.click('#resetButton');await page.fill('#query','Maverick');await page.click('#searchButton');
  assert((await page.locator('.vehicle-card').count())>0);
  await page.locator('.vehicle-card button[data-detail]').first().click();
- await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===5);
+ await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===4);
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  assert.match(await page.locator('#siiCommercial').textContent(),/31\.285\.100/);
  assert.match(await page.locator('#siiCommercial').textContent(),/40\.210\.100/);
