@@ -45,6 +45,66 @@ assert(get('Changan','Hunter','Hunter 2.0T 4X2 Comfort MT').examples.every(x=>!x
 assert.equal(get('Subaru','Outback','Premium').status,'informacion_insuficiente','No completar atributos de Premium');
 assert.equal(get('MG','S5','MG S5 EV 49kW COM').expressedSpecifications.technology,'EV');
 assert(get('Mazda','CX-30','CORE 2.0 2WD 6AT 7G').expressedSpecifications.engine===2);
+
+const notes=read('rindelab/sii/review-notes-2026.json');
+assert.equal(notes.schemaVersion,1);
+assert.equal(notes.cases.length,2);
+assert.equal(report.counts.solo_contradicciones,2);
+assert.equal(report.counts.un_candidato_preliminar,22);
+assert(report.singleCandidateUniqueCodes>=1&&report.singleCandidateUniqueCodes<=22);
+assert(report.sharedCandidateVersions>0,'Algunas versiones distintas deben compartir el candidato 3CV');
+for(const note of notes.cases){
+ const item=get(note.brand,note.family,note.version);
+ assert(item,'Nota asociada a una versión comercial existente');
+ assert.equal(item.status,'solo_contradicciones');
+ assert(item.conflictsExamples.some(x=>x.code3cv===note.candidateCode3cv&&x.conflicts.some(y=>y.field==='transmission'&&y.observed===note.source3cvTransmission)));
+ assert.equal(note.commercialTransmission,'M');
+ assert(note.manufacturerEvidenceUrl.startsWith('https://www.volkswagen.cl/'));
+}
+const priority=report.cases.filter(x=>x.status==='solo_contradicciones'||x.status==='un_candidato_preliminar');
+assert.equal(priority.length,24);
+const priorityPayload={
+ schemaVersion:1,sourceCut:manifest.published,catalogCount:report.catalogCount,
+ scope:'24 prioridades documentales, no homologaciones certificadas ni asignación comercial automática',
+ priorities:priority.map(c=>({
+  brand:c.brand,family:c.family,version:c.version,priceListClp:c.priceListClp,
+  source:c.source,status:c.status,expressedSpecifications:c.expressedSpecifications,
+  candidates:c.reviewableCandidates,code3cv:c.singleCandidateCode||null,
+  sharedWithOtherVersions:c.sharedWithOtherVersions||0,
+  evidence:c.status==='solo_contradicciones'?c.conflictsExamples:c.examples.filter(e=>e.code3cv===c.singleCandidateCode).slice(0,1),
+  note:notes.cases.find(n=>n.brand===c.brand&&n.family===c.family&&n.version===c.version)||null
+ }))
+};
+function outputArg(prefix){return process.argv.find(x=>x.startsWith(prefix));}
+function writeFile(name,content){
+ const dst=path.resolve(name);fs.mkdirSync(path.dirname(dst),{recursive:true});fs.writeFileSync(dst,content);
+}
+const priorityJson=outputArg('--priority-json=');
+if(priorityJson)writeFile(priorityJson.slice('--priority-json='.length),JSON.stringify(priorityPayload,null,2)+'\n');
+const priorityMd=outputArg('--priority-md=');
+if(priorityMd){
+ const lines=[
+ '# RINDELAB — 24 revisiones técnicas pendientes','',
+ 'Fuente 3CV al '+manifest.published+'. Ninguna de las correspondencias está certificada.',
+ '',
+ '| Estado | Marca y versión comercial | Código candidato | Uso del código | Fuente |',
+ '|---|---|---|---|---|'
+ ];
+ for(const p of priorityPayload.priorities){
+  const state=p.status==='solo_contradicciones'?'Contradicción documentada':'Preselección pendiente de validar';
+  const name=(p.brand+' '+p.family+' '+p.version).replace(/\|/g,' ');
+  lines.push('| '+state+' | '+name+' | '+(p.code3cv||'No asociar; contradicción')+
+   ' | '+(p.code3cv?'Compartido con '+p.sharedWithOtherVersions+' otra(s) versión(es)':'Revisar fuente 3CV')+
+   ' | '+p.source+' |');
+ }
+ lines.push('','## Discrepancia Volkswagen Tera',
+ 'La web oficial registra transmisión manual de 5 velocidades para Tera 1.6 MSI MT. La ficha 3CV VW9988E60525S00-6 dice TERA 1.6 MT, pero registra A en transmisión. Revisar con 3CV antes de asociar o modificar.',
+ '','Fuentes: https://www.volkswagen.cl/tera/tera y '+manifest.source,'');
+ writeFile(priorityMd.slice('--priority-md='.length),lines.join('\n'));
+}
+console.log('PRIORIDADES '+JSON.stringify({total:priority.length,contradictions:notes.cases.length,single:report.counts.un_candidato_preliminar,uniqueCodes:report.singleCandidateUniqueCodes,sharedVersionCandidates:report.sharedCandidateVersions}));
+for(const x of priorityPayload.priorities)console.log('PRIORIDAD '+JSON.stringify({brand:x.brand,family:x.family,version:x.version,status:x.status,code:x.code3cv,shared:x.sharedWithOtherVersions}));
+
 const out=process.argv.find(s=>s.startsWith('--json='));
 if(out){
  const file=path.resolve(out.slice('--json='.length));
