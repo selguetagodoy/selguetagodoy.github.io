@@ -897,6 +897,58 @@ await test('Hunter diésel y Avatr REEV muestran fichas oficiales sin cruzar tec
  assert.deepEqual(errors,[]);
  await p.close();
 });
+
+await test('Registro oficial documental 3CV muestra 14 códigos, 22 versiones y cero verificaciones',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ const response=await p.goto(base+'homologaciones.html',{waitUntil:'networkidle'});
+ assert.equal(response.status(),200);
+ await p.waitForFunction(()=>document.querySelector('#regCodes')?.textContent==='14',{timeout:30000});
+ assert.equal(await p.locator('#regVersions').textContent(),'22');
+ assert.equal(await p.locator('#regConflicts').textContent(),'2');
+ assert.equal(await p.locator('#regCertified').textContent(),'0');
+ assert.equal(await p.locator('#regRows tr').count(),14);
+ assert.match(await p.locator('#regStatus').textContent(),/aún no cotejada/);
+ assert.match(await p.locator('#regMttSource').getAttribute('href'),/subtrans.gob.cl\/3cv\/homologacion/);
+ assert.equal(await p.locator('.reg-conflict').count(),2);
+ assert.match(await p.locator('#regConflictsList').textContent(),/VW9988E60525S00-6/);
+ assert.equal(await p.locator('#regRows tr').filter({hasText:'VW9988E60525S00-6'}).count(),0);
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
+await test('Registro 3CV filtra códigos compartidos, permite buscar y exportar CSV',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ await p.goto(base+'homologaciones.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#regCodes')?.textContent==='14',{timeout:30000});
+ await p.selectOption('#regBrand','Hyundai');
+ assert.equal(await p.locator('#regRows tr').count(),4);
+ await p.selectOption('#regShared','multiple');
+ assert.equal(await p.locator('#regRows tr').count(),2);
+ await p.fill('#regSearch','HY10456E60226S00-5');
+ assert.equal(await p.locator('#regRows tr').count(),1);
+ assert.match(await p.locator('#regRows tr').first().textContent(),/MT GO/);
+ assert.match(await p.locator('#regRows tr').first().textContent(),/MT PLUS/);
+ assert.match(await p.locator('#regRows tr').first().textContent(),/no son homologaciones exclusivas/);
+ const started=p.waitForEvent('download');await p.locator('#regDownload').click();
+ const dl=await started;
+ assert.equal(dl.suggestedFilename(),'rindelab-control-documental-3cv.csv');
+ await p.close();
+});
+await test('Registro 3CV en 320 px sin desbordamiento horizontal del documento',async()=>{
+ const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'homologaciones.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#regCodes')?.textContent==='14',{timeout:30000});
+ const geometry=await p.evaluate(()=>({
+  doc:document.documentElement.scrollWidth,view:innerWidth,
+  table:document.querySelector('.coverage-table-scroll').scrollWidth,
+  tableView:document.querySelector('.coverage-table-scroll').clientWidth
+ }));
+ assert(geometry.doc<=geometry.view+3,JSON.stringify(geometry));
+ assert(geometry.table>geometry.tableView,JSON.stringify(geometry));
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){
