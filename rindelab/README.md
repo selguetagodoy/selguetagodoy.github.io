@@ -1,8 +1,17 @@
 # RINDELAB · Con las alzas, cada peso cuenta
 
-**RINDELAB v6** es un buscador independiente de vehículos homologados en Chile, creado por **Sebastián Elgueta Godoy**.
+**RINDELAB v7** es un buscador independiente de vehículos homologados en Chile, creado por **Sebastián Elgueta Godoy**.
 
 Web pública: https://selguetagodoy.github.io/rindelab/
+
+## Cambios de experiencia (18 de octubre de 2026)
+
+- **Costos proyectados**: `costo CLP/100 km × km anuales ÷ 100`, con horizonte anual y cinco años a precios constantes. No se calculan TCO, depreciación ni punto de equilibrio comercial sin correspondencia acreditada entre precio de lista y homologación.
+- **Referencias energéticas editables**: CLP 1.535/L bencina, CLP 1.503/L diésel y CLP 340/kWh (escenario de carga pública AC). El usuario puede introducir su tarifa residencial. No son cotizaciones actuales verificadas por ubicación.
+- **Rankings**: WLTP por defecto y opción de explorar NEDC separadamente.
+- **Trazabilidad**: etiquetas visibles de año y sufijo del código técnico en tarjetas; solo se muestran campos de batería y conectores cuando corresponden a la tecnología y poseen un dato.
+- **Navegación**: acceso rápido al buscador, supuestos y fuentes; módulos documentales en el pie de página.
+- **Difusión**: metadatos Open Graph, datos estructurados de aplicación/dataset y URLs de comparación con códigos de homologación.
 
 ## Flujo principal
 
@@ -12,10 +21,11 @@ Web pública: https://selguetagodoy.github.io/rindelab/
 4. Elegir **Ver ficha** para revisar los datos 3CV o pulsar **Comparar +** para seleccionar **entre dos y cinco vehículos**. La bandeja conserva modelos al hacer una nueva búsqueda, incluso al usar «Limpiar» (que solo restablece filtros).
 5. Desde la bandeja o la ventana de comparación, utilizar **«+ Agregar otro»** para buscar otra marca o modelo. Cada vehículo puede retirarse individualmente con «×», sin vaciar la lista. Con cinco modelos se puede reemplazar uno quitándolo primero.
 6. Pulsar **«Comparar N vehículos»** para abrir la tabla lateral. En pantallas estrechas se desplaza horizontalmente con el dedo o las flechas; cuando caben todas las columnas no se muestran controles de desplazamiento.
-7. Ampliar los **Filtros técnicos adicionales** cuando se requiera ciclo, fecha o carrocería.
-8. Consultar la metodología o editar los precios referenciales en **Metodología y fuentes**.
+7. Ajustar **kilómetros por año** y precios de energía desde **Tu escenario**, visible sobre el buscador: el buscador, la ficha y el comparador muestran gasto anual y a cinco años únicamente para consumos energéticos calculables.
+8. Ampliar los **Filtros técnicos adicionales** cuando se requiera ciclo, fecha o carrocería, y consultar **Metodología y fuentes** para conocer los límites de los cálculos.
+9. En el comparador utilizar **Copiar enlace de comparación**; los códigos 3CV se almacenan en el parámetro `?comparar=` y pueden volver a abrir los vehículos seleccionados.
 
-La interfaz principal no incluye contadores de marcas, rankings de extremos, simuladores híbridos independientes, banners educativos ni comparador vacío. Tiene un único formulario, resultados y comparación opcional.
+La interfaz principal tiene un formulario, resultados, costos estimados para escenarios de uso y comparación opcional. No asigna equivalencias entre precios de lista y homologaciones 3CV, ni modelos híbridos enchufables sin datos suficientes. Los módulos documentales se mantienen fuera de la navegación principal.
 
 ## Fuente, datos y límites
 
@@ -23,7 +33,7 @@ La base combina **8.053 fichas** del archivo 3CV con corte al **8 de mayo de 202
 
 - El orden por costo utiliza supuestos iniciales editables: bencina 93 CLP 1.535/L, diésel CLP 1.503/L y electricidad CLP 340/kWh. No son precios en tiempo real ni especifican el octanaje exigido por el fabricante.
 - Combustible: **100 ÷ rendimiento mixto km/L × precio CLP/L**. Eléctrico: **100 ÷ rendimiento km/kWh × tarifa CLP/kWh**, sin pérdidas de carga ni cobros adicionales.
-- Los resultados y rankings muestran **NEDC y WLTP en una sola lista** de menor a mayor o mayor a menor costo, con el ciclo visible en cada ficha. Este orden conjunto es **orientativo**, ya que ambos procedimientos de ensayo no son directamente equivalentes. Se puede filtrar por ciclo cuando se requiera una comparación más homogénea.
+- El buscador permite **NEDC y WLTP** en los resultados, claramente identificados. El ranking se abre **solo WLTP por defecto**; el usuario puede elegir solo NEDC o activar explícitamente la exploración conjunta orientativa. Los ciclos no se consideran directamente equivalentes.
 - Para PHEV/REEV se muestran los rendimientos homologados eléctricos y ponderados; **no se calcula costo energético combinado** a partir de esos valores. No se generan categorías híbridas inferidas.
 - La ficha conserva marca y motorización **de origen** separadas de los ajustes interpretativos para navegación.
 - Para validación final consultar https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx
@@ -70,14 +80,14 @@ Al seleccionar **PHEV** o **REEV**, la medida se ajusta explícitamente a «Rend
 
 ## Renovación visual y ventana de estadísticas (v7)
 
-La portada incorpora la ilustración original de vehículos y cordillera (`hero-rindelab.svg`), un tratamiento visual más trabajado y un acceso a **Ver rankings y estadísticas**. Se conserva **una sola búsqueda** y la lista de resultados aparece únicamente al pulsar «Buscar». Las fichas de resultados tienen una jerarquía visual más clara, sin añadir cifras no respaldadas.
+La portada conserva la fotografía referencial de vehículos (`hero-foto-rindelab.webp`), un tratamiento visual trabajado y un acceso a **Ver rankings y estadísticas**. Se conserva **una sola búsqueda** y la lista de resultados aparece únicamente al pulsar «Buscar». Las fichas de resultados tienen una jerarquía visual más clara, sin añadir cifras no respaldadas.
 
 Las estadísticas se muestran en un **diálogo independiente y accesible**, no en el flujo principal. Permiten consultar **top 10** con controles dinámicos de:
 - Métrica: costo energético estimado en CLP/100 km o rendimiento homologado.
 - Orden: menor a mayor y mayor a menor.
 - Motorización: bencina, diésel, MHEV, HEV, PHEV, REEV, EV u otras categorías según fuente.
 - Carrocería: SUV/Station Wagon, sedán, hatchback, camioneta, coupé, furgón o bus.
-- Ciclo: **Todos (WLTP + NEDC) por defecto**, o bien solo WLTP o solo NEDC. Cada posición del top 10 señala su ciclo mediante una etiqueta visible.
+- Ciclo: **solo WLTP por defecto**, con opción solo NEDC o exploración conjunta solicitada expresamente. Cada posición del top 10 señala su ciclo mediante una etiqueta visible.
 
 Los rankings están calculados a partir de las fichas reales que cumplen los filtros; cada fila permite abrir la ficha técnica. Los costos de PHEV y REEV sin valores comparables no se modelan ni sustituyen con proxies. Para rendimiento es necesario seleccionar una motorización con unidades homogéneas (km/L o km/kWh). Sin filas elegibles, el panel informa la limitación en vez de inventar valores. Las tarifas son las mismas que utiliza el buscador y pueden editarse en «Metodología y fuentes».
 
