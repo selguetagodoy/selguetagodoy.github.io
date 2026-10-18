@@ -9,6 +9,7 @@ on:
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
       - "scripts/audit-homologation-register.cjs"
+      - "scripts/audit-mtt-september-coverage.cjs"
   push:
     branches:
       - "main"
@@ -19,6 +20,7 @@ on:
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
       - "scripts/audit-homologation-register.cjs"
+      - "scripts/audit-mtt-september-coverage.cjs"
   workflow_dispatch:
 
 permissions:
@@ -51,6 +53,9 @@ jobs:
       - name: Validar registro documental MTT y bloquear homologaciones no acreditadas
         run: node scripts/audit-homologation-register.cjs --json=homologation-ledger-audit.json
 
+      - name: Auditar cruce completo nómina MTT septiembre y 3CV mayo
+        run: node scripts/audit-mtt-september-coverage.cjs --json=mtt-september-cross-audit.json
+
       - name: Guardar expediente auditable de 24 revisiones
         uses: actions/upload-artifact@v4
         with:
@@ -60,6 +65,7 @@ jobs:
             priority-review.json
             priority-review.md
             homologation-ledger-audit.json
+            mtt-september-cross-audit.json
           retention-days: 90
 
       - name: Install Playwright and Chromium
