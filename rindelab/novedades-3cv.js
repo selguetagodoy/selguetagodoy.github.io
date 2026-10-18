@@ -4,6 +4,7 @@ const $=id=>document.getElementById(id);
 const countFmt=new Intl.NumberFormat('es-CL');
 let report=null;
 let review=null;
+let thirdSource=null;
 let historicGroups=[];
 let undatedGroups=[];
 function normalized(s){return String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim();}
@@ -131,7 +132,7 @@ function renderDifferences(){
  const tbody=$('deltaConflicts');tbody.replaceChildren();
  if(!review)return;
  const rows=visibleReview();
- $('deltaReviewCount').textContent=rows.length+' de 12 discrepancias documentales · ninguna rectificación oficial confirmada.';
+ $('deltaReviewCount').textContent=rows.length+' de 12 discrepancias documentales · 3 fuentes públicas contrastadas por código · ninguna rectificación oficial confirmada.';
  for(const x of rows){
   const tr=document.createElement('tr');
   tr.dataset.code=x.code3cv;
@@ -151,16 +152,27 @@ function renderDifferences(){
   addSub(mtt,'MTT 28/09 · fila '+x.mtt.excelRow);
   const may=td(tr,x.kind==='engine'?x.may.value+' L':'Transmisión '+x.may.value);
   addSub(may,'Rendimientos 08/05');
+  const api=td(tr,x.kind==='engine'?x.octoberApi.value+' L':'Transmisión '+x.octoberApi.value,'delta-api-value');
+  const agrees=addSub(api,x.octoberApi.alignedWith==='may'?'Coincide con mayo':
+   x.octoberApi.alignedWith==='mtt'?'Coincide con MTT septiembre':'No coincide con ambos');
+  agrees.className='delta-api-agreement';
+  addSub(api,'API consultada: '+x.octoberApi.checkDate);
+  const source=document.createElement('a');
+  source.href='https://www.consumovehicular.cl/';source.rel='noopener noreferrer';source.target='_blank';
+  source.textContent='Consultar portal oficial ↗';
+  api.append(source);
   tbody.append(tr);
  }
- if(!rows.length){const tr=document.createElement('tr');td(tr,'No hay discrepancias en esta categoría.').colSpan=3;tbody.append(tr);}
+ if(!rows.length){const tr=document.createElement('tr');td(tr,'No hay discrepancias en esta categoría.').colSpan=4;tbody.append(tr);}
 }
 function downloadReview(){
  if(!review)return;
  const headers=['codigo_3cv','familia','modelo_mtt','tipo_diferencia','mtt_valor','mtt_fila',
-  'mayo_valor','fuente_fabricante','alcance_fabricante','observacion','estado','rectificacion_3cv'];
+  'mayo_valor','api_octubre_valor','api_coincide_con','api_fecha_modificacion','api_id_registro','url_api',
+  'fuente_fabricante','alcance_fabricante','observacion','estado','rectificacion_3cv'];
  const rows=visibleReview().map(x=>[x.code3cv,x.group,x.officialModel,x.kind,x.mtt.value,
-  x.mtt.excelRow,x.may.value,x.manufacturer.url,x.manufacturer.scope,
+  x.mtt.excelRow,x.may.value,x.octoberApi.value,x.octoberApi.alignedWith,x.octoberApi.modified,
+  x.octoberApi.recordId,x.octoberApi.url,x.manufacturer.url,x.manufacturer.scope,
   x.manufacturer.observation,x.verificationStatus,'NO DOCUMENTADA']);
  const content='\ufeff'+[headers,...rows].map(x=>x.map(csvCell).join(';')).join('\r\n')+'\r\n';
  const blob=new Blob([content],{type:'text/csv;charset=utf-8'});
@@ -188,12 +200,13 @@ function download(){
 }
 async function load(){
  try{
-  const [res,reviewRes]=await Promise.all([
+  const [res,reviewRes,apiRes]=await Promise.all([
    fetch('./sii/mtt-sept-2026-may-2026-cross.json?v=20261018-delta1'),
-   fetch('./sii/mtt-discrepancy-review-2026.json?v=20261018-evidence12')
+   fetch('./sii/mtt-discrepancy-review-2026.json?v=20261018-evidence12'),
+   fetch('./sii/mtt-discrepancy-api-20261018.json?v=20261018-api3source')
   ]);
-  if(!res.ok||!reviewRes.ok)throw Error('Archivo de cotejo o expediente documental no disponible');
-  const [data,reviewed]=await Promise.all([res.json(),reviewRes.json()]);
+  if(!res.ok||!reviewRes.ok||!apiRes.ok)throw Error('Archivo de cotejo o una de las fuentes no disponible');
+  const [data,reviewed,snapshot]=await Promise.all([res.json(),reviewRes.json(),apiRes.json()]);
   if(data.schemaVersion!==1||data.counts?.afterMayRows!==230||data.counts.afterMayNewCodes!==229||
     data.counts.codesInBoth!==7491||data.counts.matchedCodeTransmissionOrEngineConflicts!==12||
     data.recentRecords?.length!==230||data.historicMissingRecords?.length!==373||
@@ -205,7 +218,10 @@ async function load(){
    reviewed.cases.some(x=>!data.matchedCodeTechnicalDifferences.some(y=>y.code===x.code3cv&&y.kind===x.kind)||
     x.certifiedResolved!==false||x.official3cvRectification!==null||
     !x.manufacturer?.url?.startsWith('https://')))throw Error('Expediente documental incompleto o sin respaldo');
-  report=data;review=reviewed;
+  if(!window.RindelabThreeSourceReview)throw Error('Comparador de las tres fuentes no disponible');
+  thirdSource=window.RindelabThreeSourceReview.compare(reviewed,snapshot);
+  if(thirdSource.counts.found!==12||thirdSource.counts.may!==10||thirdSource.counts.mtt!==2||thirdSource.counts.neither!==0||thirdSource.counts.rectifications!==0)throw Error('Concordancia de la API no validada');
+  report=data;review={...reviewed,cases:thirdSource.cases};
   historicGroups=groupMissing(data.historicMissingRecords,'historical');
   undatedGroups=groupMissing(data.historicMissingRecords,'undated');
   $('metricRecentNew').textContent=countFmt.format(report.counts.afterMayNewCodes);
@@ -220,6 +236,9 @@ async function load(){
   for(const group of Object.keys(review.groups).sort((a,b)=>a.localeCompare(b,'es'))){
    $('deltaReviewGroup').add(new Option(group+' ('+review.groups[group]+')',group));
   }
+  $('deltaApiMatchesMay').textContent=thirdSource.counts.may;
+  $('deltaApiMatchesMtt').textContent=thirdSource.counts.mtt;
+  $('deltaApiResolved').textContent=thirdSource.counts.rectifications;
   $('deltaReviewDownload').disabled=false;renderDifferences();
  }catch(error){
   $('deltaStatus').textContent='No fue posible completar el análisis: '+error.message+'. No se publican resultados parciales.';

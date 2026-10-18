@@ -68,3 +68,17 @@
 .delta-review-evidence small{display:block;font-size:10px;color:#617d8c;margin:7px 0 0}
 .delta-conflicts-table td{overflow-wrap:anywhere}
 @media(max-width:450px){.delta-review-controls{flex-direction:column;align-items:stretch}.delta-review-controls .field{width:100%;max-width:none;flex:0 0 auto}.delta-review-controls button{width:100%}}
+
+/* Tercera fuente oficial por código, sin convertir coincidencias en rectificaciones. */
+.delta-three-source-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:13px 0 17px}
+.delta-three-source-totals>div{display:flex;align-items:center;gap:9px;border:1px solid #d3e4e9;background:#f3f9fa;border-radius:9px;padding:10px 11px}
+.delta-three-source-totals strong{font-size:22px;color:#1a657a;font-variant-numeric:tabular-nums}
+.delta-three-source-totals span{font-size:10px;color:#426477;line-height:1.4}
+.delta-conflicts-table{min-width:790px}
+.delta-conflicts-table th:nth-child(1){width:37%}
+.delta-conflicts-table th:nth-child(2),.delta-conflicts-table th:nth-child(3){width:18%}
+.delta-conflicts-table th:nth-child(4){width:27%}
+.delta-api-value{font-size:12px;font-weight:740;color:#19566a}
+.delta-api-value .delta-api-agreement{color:#29737c;font-weight:800}
+.delta-api-value a{display:block;font-size:10px;font-weight:700;margin-top:7px;overflow-wrap:anywhere}
+@media(max-width:600px){.delta-three-source-totals{grid-template-columns:1fr}.delta-three-source-totals strong{min-width:24px}}

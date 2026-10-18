@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "source": "https://api-consumovehicular.minenergia.cl/vehiculos/listar?pageSize=10000",
+  "checkedDate": "2026-10-18",
+  "sourceRawSha256": "8afd3c284d7435aa5f47d94021ad21b41a340d677c360aeb0961fc4c6872ebf8",
+  "sourceTotalCount": 8315,
+  "sourceRows": 8315,
+  "sourceExtractScope": "Solo los 12 codigos con discrepancia documental mayo-septiembre; cotejo por codigo exacto.",
+  "note": "La coincidencia API no es una rectificacion formal 3CV, no sobrescribir datos historicos.",
+  "summary": {
+    "count": 12,
+    "apiFound": 12,
+    "apiAbsent": 0,
+    "duplicateCodes": 0
+  },
+  "records": [
+    {
+      "code": "JM10011E60525M00-7",
+      "brand": "JMC",
+      "model": "All New Vigus Plus MT 4x4",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 2.5,
+        "excelRow": 7143
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 2.5
+      },
+      "api": [
+        {
+          "id": 7327,
+          "model": "All New Vigus Plus MT 4x4",
+          "date": "2025-07-23",
+          "transmission": "A",
+          "engineL": 2.5,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:32:32.2054481",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "JM10011E60525M01-1",
+      "brand": "JMC",
+      "model": "All New Vigus Work MT 4x4",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 2.5,
+        "excelRow": 7144
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 2.5
+      },
+      "api": [
+        {
+          "id": 7328,
+          "model": "All New Vigus Work MT 4x4",
+          "date": "2025-07-23",
+          "transmission": "A",
+          "engineL": 2.5,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:32:32.2884421",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "JM10011E60525M02-6",
+      "brand": "JMC",
+      "model": "All New Vigus Plus MT 4x2",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 2.5,
+        "excelRow": 7145
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 2.5
+      },
+      "api": [
+        {
+          "id": 7329,
+          "model": "All New Vigus Plus MT 4x2",
+          "date": "2025-07-23",
+          "transmission": "A",
+          "engineL": 2.5,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:32:32.3800737",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "JM10011E60525M03-0",
+      "brand": "JMC",
+      "model": "All New Vigus Work MT 4x2",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 2.5,
+        "excelRow": 7146
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 2.5
+      },
+      "api": [
+        {
+          "id": 7330,
+          "model": "All New Vigus Work MT 4x2",
+          "date": "2025-07-23",
+          "transmission": "A",
+          "engineL": 2.5,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:32:32.4665964",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "KI9911E60325S00-5",
+      "brand": "Kia",
+      "model": "Sportage 2.0 6MT 2WD",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 2,
+        "excelRow": 7085
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 2
+      },
+      "api": [
+        {
+          "id": 7236,
+          "model": "Sportage 2.0 6MT 2WD",
+          "date": "2025-06-16",
+          "transmission": "A",
+          "engineL": 2,
+          "propulsion": "Combustión",
+          "cycleHint": "WLTP",
+          "modified": "2026-10-15T11:32:24.1300071",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "KI9911E60325S01-9",
+      "brand": "Kia",
+      "model": "Sportage 2.0 6MT AWD",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 2,
+        "excelRow": 7086
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 2
+      },
+      "api": [
+        {
+          "id": 7237,
+          "model": "Sportage 2.0 6MT AWD",
+          "date": "2025-06-16",
+          "transmission": "A",
+          "engineL": 2,
+          "propulsion": "Combustión",
+          "cycleHint": "WLTP",
+          "modified": "2026-10-15T11:32:24.2095502",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "KR8299E50421S00-7",
+      "brand": "Karry",
+      "model": "Q22 1.3",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 1.3,
+        "excelRow": 4470
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 1.3
+      },
+      "api": [
+        {
+          "id": 4663,
+          "model": "Q22 1.3",
+          "date": "2021-05-20",
+          "transmission": "M",
+          "engineL": 1.3,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:29:08.8254118",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "KR8299E50421S01-0",
+      "brand": "Karry",
+      "model": "Q22 1.3 Cabina Simple",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 1.3,
+        "excelRow": 4471
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 1.3
+      },
+      "api": [
+        {
+          "id": 4664,
+          "model": "Q22 1.3 Cabina Simple",
+          "date": "2021-09-03",
+          "transmission": "M",
+          "engineL": 1.3,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:29:08.8907807",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "KR8299E50421S02-4",
+      "brand": "Karry",
+      "model": "Q22 1.3 Cargo Box",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 1.3,
+        "excelRow": 4472
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 1.3
+      },
+      "api": [
+        {
+          "id": 4665,
+          "model": "Q22 1.3 Cargo Box",
+          "date": "2021-09-03",
+          "transmission": "M",
+          "engineL": 1.3,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:29:08.9492105",
+          "matchMttTransmission": false,
+          "matchMayTransmission": true,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "MA9923E60425M00-6",
+      "brand": "MAN",
+      "model": "TGE 3.180 4x2",
+      "kind": "transmission",
+      "mtt": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 2,
+        "excelRow": 7274
+      },
+      "may": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 2
+      },
+      "api": [
+        {
+          "id": 7410,
+          "model": "TGE 3.180 4x2",
+          "date": "2025-08-12",
+          "transmission": "M",
+          "engineL": 2,
+          "propulsion": "Combustión",
+          "cycleHint": "NEDC",
+          "modified": "2026-10-15T11:32:39.85389",
+          "matchMttTransmission": true,
+          "matchMayTransmission": false,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "MB6988E60517M00-3",
+      "brand": "M. Benz",
+      "model": "GLE 500e 4 Matic 3,0 Lts. Station Wagon 5P. T/A 4x4 Híbrido",
+      "kind": "engine",
+      "mtt": {
+        "value": 3,
+        "transmission": "A",
+        "engineL": 3,
+        "excelRow": 2670
+      },
+      "may": {
+        "value": 2,
+        "transmission": "A",
+        "engineL": 2
+      },
+      "api": [
+        {
+          "id": 2868,
+          "model": "GLE 500e 4 Matic 3,0 Lts. Station Wagon 5P. T/A 4x4 Híbrido",
+          "date": "2017-09-15",
+          "transmission": "A",
+          "engineL": 2,
+          "propulsion": "Híbrido con recarga exterior",
+          "cycleHint": null,
+          "modified": "2026-10-15T11:27:30.5865732",
+          "matchMttTransmission": true,
+          "matchMayTransmission": true,
+          "matchMttEngine": false,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    },
+    {
+      "code": "NS10421T3C0126S00-7",
+      "brand": "Nissan",
+      "model": "Nissan Kait",
+      "kind": "transmission",
+      "mtt": {
+        "value": "A",
+        "transmission": "A",
+        "engineL": 1.6,
+        "excelRow": 7825
+      },
+      "may": {
+        "value": "M",
+        "transmission": "M",
+        "engineL": 1.6
+      },
+      "api": [
+        {
+          "id": 22160,
+          "model": "Nissan Kait",
+          "date": "2026-03-10",
+          "transmission": "A",
+          "engineL": 1.6,
+          "propulsion": "Combustión",
+          "cycleHint": "WLTP",
+          "modified": "2026-10-15T11:33:31.8946902",
+          "matchMttTransmission": true,
+          "matchMayTransmission": false,
+          "matchMttEngine": true,
+          "matchMayEngine": true
+        }
+      ],
+      "apiRecords": 1
+    }
+  ]
+}

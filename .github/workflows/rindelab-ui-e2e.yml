@@ -11,6 +11,7 @@ on:
       - "scripts/audit-homologation-register.cjs"
       - "scripts/audit-mtt-september-coverage.cjs"
       - "scripts/audit-mtt-discrepancy-review.cjs"
+      - "scripts/audit-three-source-mtt-3cv.cjs"
       - "scripts/audit-official-api-october-2026.cjs"
   push:
     branches:
@@ -24,6 +25,7 @@ on:
       - "scripts/audit-homologation-register.cjs"
       - "scripts/audit-mtt-september-coverage.cjs"
       - "scripts/audit-mtt-discrepancy-review.cjs"
+      - "scripts/audit-three-source-mtt-3cv.cjs"
       - "scripts/audit-official-api-october-2026.cjs"
   workflow_dispatch:
 
@@ -63,6 +65,9 @@ jobs:
       - name: Auditar fuentes primarias de 12 discrepancias sin rectificaciones ficticias
         run: node scripts/audit-mtt-discrepancy-review.cjs --json=mtt-discrepancies-audit.json
 
+      - name: Cotejar 12 discrepancias contra tercera fuente API oficial de octubre
+        run: node scripts/audit-three-source-mtt-3cv.cjs --json=mtt-three-source-audit.json
+
       - name: Validar integración exhaustiva API oficial octubre, ciclos y 228 MTT reconciliados
         run: node scripts/audit-official-api-october-2026.cjs --json=official-api-october-audit.json
 
@@ -77,6 +82,7 @@ jobs:
             homologation-ledger-audit.json
             mtt-september-cross-audit.json
             mtt-discrepancies-audit.json
+            mtt-three-source-audit.json
             official-api-october-audit.json
           retention-days: 90
 
