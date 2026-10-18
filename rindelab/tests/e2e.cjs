@@ -1113,7 +1113,8 @@ await test('Deepal S05 REEV tiene ahora ficha energética 3CV oficial de octubre
  assert.match(await card.textContent(),/21,3/);
  assert(await card.locator('[data-detail]').isVisible());
  await card.locator('[data-detail]').click();
- assert.match(await p.locator('#detailContent').textContent(),/6([,.]0)? km\/kWh/i);
+ assert.match(await p.locator('#detailContent').textContent(),/Rendimiento eléctrico informado \(km\/kWh\)/);
+ assert.equal(await p.locator('#detailContent dt').filter({hasText:'Rendimiento eléctrico informado'}).locator('xpath=following-sibling::dd[1]').textContent(),'6');
  await p.locator('#detailClose').click();
  assert.deepEqual(errors,[]);
  await p.close();
