@@ -1128,7 +1128,7 @@ await test('Buscador ofrece marcas y modelos recientes de la nómina MTT por fil
  assert(brands.includes('JIM'),'JIM debe aparecer en el selector de marcas');
  await p.selectOption('#brand','JIM');
  const models=await p.locator('#model option').allTextContents();
- assert(models.some(x=>x.includes('RE-MAX')));
+ assert(models.some(x=>x.includes('RE-MAX')),'Selector JIM: '+JSON.stringify(models)+' · marca actual '+await p.inputValue('#brand'));
  const model=await p.locator('#model option').filter({hasText:'RE-MAX'}).first().getAttribute('value');
  await p.selectOption('#model',model);await p.click('#searchButton');
  assert.equal(await p.locator('.mtt-result-card').count(),4);
