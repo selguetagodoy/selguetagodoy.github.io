@@ -40,3 +40,6 @@
 .coverage-method p{font-size:13px;line-height:1.7;color:#4a6577;margin-bottom:12px}
 @media(max-width:790px){.coverage-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.coverage-filters{grid-template-columns:1fr 1fr}.coverage-filters .field:last-child{grid-column:1/-1}}
 @media(max-width:600px){.coverage-nav{gap:9px}.coverage-nav a{font-size:10px}.coverage-main{padding-block:16px 28px}.coverage-intro{padding:26px 21px;border-radius:13px}.coverage-intro p:last-child{font-size:12px}.coverage-metrics{gap:8px;margin:11px 0}.coverage-metrics>div{padding:13px 11px}.coverage-metrics strong{font-size:27px}.coverage-metrics small{min-height:43px;font-size:10px}.coverage-panel{padding:16px 11px}.coverage-panel-head{align-items:flex-start;flex-direction:column}.coverage-panel-head h2{font-size:20px}.coverage-filters{grid-template-columns:1fr;gap:10px;padding:12px}.coverage-filters .field:last-child{grid-column:auto}.coverage-status{font-size:11px}}
+
+.coverage-next{margin:17px 0 0;padding:15px 19px;border-left:3px solid #0d8492;background:#eef7f9;border-radius:0 10px 10px 0;color:#244c61;font-size:13px;line-height:1.65}
+.coverage-next a{font-weight:750}

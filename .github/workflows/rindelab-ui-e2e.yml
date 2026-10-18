@@ -7,6 +7,7 @@ on:
       - ".github/workflows/rindelab-ui-e2e.yml"
       - "scripts/audit-price-sources.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
+      - "scripts/audit-commercial-versions.cjs"
   push:
     branches:
       - "main"
@@ -39,6 +40,9 @@ jobs:
 
       - name: Auditar cruce comercial con familias 3CV y exclusiones
         run: node scripts/audit-commercial-3cv-coverage.cjs --json=coverage-audit.json
+
+      - name: Auditar atributos técnicos y contradicciones por versión
+        run: node scripts/audit-commercial-versions.cjs --json=versions-audit.json
 
       - name: Install Playwright and Chromium
         run: |

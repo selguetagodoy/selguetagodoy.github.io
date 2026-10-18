@@ -784,6 +784,44 @@ await test('Cobertura 3CV en móvil 320 px sin desbordamiento ni confusión de i
  assert.deepEqual(issues,[]);
  await p.close();
 });
+await test('Cotejo técnico: 122 versiones, filtros y conflicto Tera manual versus 3CV',async()=>{
+ const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ const r=await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
+ assert.equal(r.status(),200);
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='122',{timeout:30000});
+ assert.equal(await p.locator('#versionsRows tr').count(),122);
+ assert.match(await p.locator('#versionsStatus').textContent(),/Equivalencias técnicas certificadas: ninguna/);
+ assert.deepEqual(errors,[]);
+ await p.selectOption('#versionsBrand','Volkswagen');
+ assert.equal(await p.locator('#versionsRows tr').count(),8);
+ await p.fill('#versionsSearch','Tera');
+ assert.equal(await p.locator('#versionsRows tr').count(),5);
+ const conflict=p.locator('#versionsRows tr').filter({hasText:'Trend 1.6 MSI MT'});
+ assert.equal(await conflict.count(),1);
+ assert.match(await conflict.textContent(),/Solo candidatos contradictorios/);
+ await conflict.locator('details summary').click();
+ assert.match(await conflict.textContent(),/transmisión: comercial M \/ 3CV A/i);
+ const download=p.waitForEvent('download');
+ await p.locator('#versionsDownload').click();
+ assert.match((await download).suggestedFilename(),/rindelab-cotejo-versiones-preliminar\.csv/);
+ await p.close();
+});
+await test('Cotejo técnico versión 320 px no desborda y mantiene tabla desplazable',async()=>{
+ const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='122',{timeout:30000});
+ const size=await p.evaluate(()=>({
+  doc:document.documentElement.scrollWidth,screen:innerWidth,
+  table:document.querySelector('.coverage-table-scroll').scrollWidth,
+  client:document.querySelector('.coverage-table-scroll').clientWidth
+ }));
+ assert(size.doc<=size.screen+3,JSON.stringify(size));
+ assert(size.table>size.client,JSON.stringify(size));
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
 await test('JavaScript escritorio sin errores',async()=>assert.deepEqual(errors,[]));
 await page.close();
 for(const [width,height] of [[768,1024],[390,844],[320,700]]){

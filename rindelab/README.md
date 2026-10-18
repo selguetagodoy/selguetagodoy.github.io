@@ -103,3 +103,19 @@ La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examin
 - **Reproducibilidad:** `node scripts/audit-commercial-3cv-coverage.cjs --json=coverage-audit.json` produce un informe estructurado y ejecuta aserciones sobre familias que no deben confundirse. La CI lo revisa antes de Playwright, que comprueba filtros, descarga CSV y tamaños de escritorio/móvil.
 
 El 3CV registra homologaciones **históricas**, no una nómina de automóviles nuevos disponibles hoy. La fecha de una homologación no equivale al año comercial de una versión. La tasación SII y el permiso de circulación se mantienen separados.
+
+## Segunda capa: cotejo exploratorio por versión comercial (octubre de 2026)
+
+La página [Revisión por versión](./versiones.html) examina las 122 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
+
+Se extraen únicamente rasgos **expresos** del nombre comercial: tecnología cuando se declara, cilindrada decimal, transmisión manual o categoría amplia automática, tracción y algunos códigos de generación. Se contrastan con tecnología, cilindrada, transmisión, tracción, combustible y modelo originales del 3CV.
+
+Cada versión puede tener **un candidato preliminar**, **varios candidatos preliminares**, **información insuficiente**, **solo contradicciones** o **sin familia nominal**. Un candidato preliminar exige al menos dos atributos comerciales coincidentes y ninguna contradicción en esos rasgos; esto NO certifica identidad técnica, generación ni venta vigente.
+
+Ejemplo real de discrepancia: Volkswagen Tera 1.6 MT presenta una ficha 3CV con modelo Tera 1.6 MT y transmisión A; el cotejo conserva el conflicto documental en vez de asociar el código automáticamente.
+
+La tabla ofrece filtros, enlace directo a la fuente comercial, ejemplos 3CV con su código y fecha, y exportación CSV. Los conteos incluyen todas las fichas pero las muestras visuales pueden estar truncadas.
+
+Para reproducir el análisis ejecutar: `node scripts/audit-commercial-versions.cjs --json=versions-audit.json`. GitHub Actions ejecuta esta auditoría y sus casos de regresión antes de Playwright.
+
+**Límites:** no se certifica ninguna homologación individual. No se inventan años comerciales, generación, batería, equipamiento, stock ni identidad entre códigos. NEDC/WLTP, tasación fiscal SII, permiso de circulación y precio comercial siguen como conceptos independientes.
