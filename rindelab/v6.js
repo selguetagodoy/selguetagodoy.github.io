@@ -238,6 +238,7 @@ function updateChargeScenario(){
  $('homeShareField').hidden=mode!=='mixed';
  $('homeBillHelper').hidden=mode!=='home'&&mode!=='mixed';
  effective.readOnly=mode!=='manual';
+ if(mode!=='manual'&&document.activeElement===effective)effective.blur();
  let price=null,detail='';
  if(mode==='public'){
   price=publicRate;
@@ -699,7 +700,12 @@ $('homeChargeRate').addEventListener('input',()=>{
 $('calcHomeFromBill').addEventListener('click',calculateHomeFromBill);
 $('chargeKwh').addEventListener('input',updateChargingExample);
 $('electricPrice').addEventListener('change',()=>{
- if($('chargeScenario').value!=='manual')$('chargeScenario').value='manual';
+ // Un change diferido al perder foco no debe reactivar tarifa manual después de
+ // seleccionar casa/mixto/público. El campo es editable solo en modo manual.
+ if($('chargeScenario').value!=='manual'){
+  updateChargeScenario();
+  return;
+ }
  updateChargeScenario();refreshEnergyViews();
 });
 $('resultList').addEventListener('click',event=>{
