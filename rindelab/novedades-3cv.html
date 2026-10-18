@@ -37,8 +37,9 @@
 <p class="coverage-status" id="deltaStatus" role="status" aria-live="polite">Cargando el cruce documental…</p>
 <section class="delta-context" aria-label="Alcance de cifras">
 <div><strong>230</strong><span>Códigos con fecha posterior al 8 de mayo; 229 no aparecen en la base de rendimientos y uno ya figuraba.</span></div>
-<div><strong>325</strong><span>Códigos MTT con fecha hasta el 8 de mayo que no aparecen en la base de rendimientos. Corresponden a 373 filas, no a altas nuevas.</span></div>
-<div><strong>562</strong><span>Códigos que aparecen solo en la base de rendimiento de mayo. No implica que hayan perdido homologación.</span></div>
+<div><strong>324</strong><span>Códigos de la nómina MTT fechados hasta mayo, ausentes de la base de rendimientos (372 filas).</span></div>
+<div><strong>1</strong><span>Código MTT sin fecha declarada: no corresponde clasificarlo como anterior o posterior.</span></div>
+
 <div><strong>0</strong><span>Rendimientos añadidos, calculados o imputados a partir de la nómina MTT.</span></div>
 </section>
 <section class="coverage-panel" aria-labelledby="deltaTableTitle">
@@ -50,7 +51,8 @@
  <label for="deltaGroup">Grupo de registros que deseas revisar</label>
  <select id="deltaGroup" aria-describedby="deltaGroupDescription">
   <option value="recent">Fechados después de mayo · 230 registros (229 ausentes en mayo)</option>
-  <option value="historical">Anteriores o iguales a mayo · 325 códigos ausentes (373 filas)</option>
+  <option value="historical">Hasta mayo · 324 códigos MTT ausentes (372 filas)</option>
+  <option value="undated">Sin fecha declarada · 1 código MTT ausente</option>
  </select>
  <p id="deltaGroupDescription">Un registro con fecha reciente no demuestra comercialización ni que su código se incorporara por primera vez.</p>
 </div>
@@ -86,7 +88,7 @@
 <section class="delta-method" aria-labelledby="methodTitle">
 <h2 id="methodTitle">Criterio de comparación</h2>
 <p>El cruce es <strong>exacto por código de informe técnico</strong>, sin unir modelos por parecido de nombre. La nómina de septiembre contiene 8.093 filas con código, de las cuales 8.045 códigos son distintos; la base de mayo aporta 8.053 códigos válidos al corte.</p>
-<p>Otros 325 códigos figuran únicamente en la nómina MTT, pero tienen fecha anterior o igual al 8 de mayo. Están excluidos del listado de incorporaciones recientes: su ausencia en la base de rendimientos no demuestra que sean vehículos nuevos. Ahora puedes consultarlos en el grupo «Anteriores o iguales a mayo», donde se agrupan las 373 filas documentales por sus 325 códigos únicos, sin perder las variantes registradas.</p>
+<p>Otros 324 códigos figuran únicamente en la nómina MTT con fecha anterior o igual al 8 de mayo, distribuidos en 372 filas. Además, hay un código sin fecha consignada en la nómina; se presenta aparte y no se presume su antigüedad. Ambos grupos se pueden consultar de manera independiente, sin perder las variantes de un código repetido. La ausencia en la base de rendimientos no demuestra que un vehículo sea nuevo o haya perdido vigencia.</p>
 <p>Ambas fuentes se analizaron separadamente. El archivo XLS aportado y su versión descargada del sitio MTT tienen distinta huella binaria, pero coinciden en los 8.093 registros en código, marca, modelo, transmisión y fecha, así como en el conjunto de 230 códigos posteriores a mayo.</p>
 <p>La comparación se limita a la hoja «Livianos &amp; Medianos 2013 - 2026» de la nómina; las hojas históricas anteriores a 2013 se mantienen fuera del alcance por no corresponder al mismo universo de la base energética.</p>
 <p><a href="https://www.subtrans.gob.cl/3cv/homologacion-de-vehiculos-livianos-medianos-y-motocicletas/" target="_blank" rel="noopener noreferrer">Fuente oficial MTT ↗</a> · <a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Base de rendimientos de mayo ↗</a> · <a href="./homologaciones.html">Control de códigos 3CV</a></p>
