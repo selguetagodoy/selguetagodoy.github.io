@@ -43,16 +43,6 @@
     <span class="hero-image-caption">Imagen referencial de vehículos</span>
    </div>
   </section>
- <section id="supuestos" class="energy-assumptions" aria-labelledby="energyTitle">
-    <div class="assumptions-heading"><div><span class="search-spot">TU ESCENARIO</span><h2 id="energyTitle">Calcula según tus kilómetros y tarifas</h2></div><p>Modifica los valores para acercarlos a tu situación. No son cotizaciones en tiempo real.</p></div>
-    <div class="assumptions-grid">
-      <div class="field"><label for="annualKm">Kilómetros al año</label><select id="annualKm"><option value="5000">5.000 km</option><option value="10000">10.000 km</option><option value="15000" selected>15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000 km</option><option value="30000">30.000 km</option></select></div>
-      <div class="field"><label for="gasPrice">Bencina ($/L)</label><input id="gasPrice" type="number" min="1" max="10000" step="1" value="1535"></div>
-      <div class="field"><label for="dieselPrice">Diésel ($/L)</label><input id="dieselPrice" type="number" min="1" max="10000" step="1" value="1503"></div>
-      <div class="field"><label for="electricPrice">Electricidad ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="340"></div>
-    </div>
-    <p class="assumptions-note">Supuestos editables: bencina $1.535/L, diésel $1.503/L y electricidad $340/kWh como referencia de carga pública AC. Para cargar en casa, ingresa tu tarifa efectiva. No se incorporan pérdidas de carga ni cobros por tiempo. Las proyecciones mantienen las tarifas constantes y no incluyen otros costos de propiedad. <a href="#fuentes">Revisar metodología</a>.</p>
-  </section>
   <section id="buscador" class="search-card" aria-label="Buscador de vehículos">
   <div class="search-card-heading"><div><span class="search-spot">01 / BUSCADOR</span><h2>Busca tu vehículo</h2></div><p>Rendimientos 3CV y nuevas homologaciones MTT, identificadas por fuente.</p></div>
   <form id="vehicleForm" role="search">
@@ -96,6 +86,16 @@
    </div>
   </form>
  </section>
+ <section id="supuestos" class="energy-assumptions" aria-labelledby="energyTitle">
+    <div class="assumptions-heading"><div><span class="search-spot">TU ESCENARIO</span><h2 id="energyTitle">Calcula según tus kilómetros y tarifas</h2></div><p>Modifica los valores para acercarlos a tu situación. No son cotizaciones en tiempo real.</p></div>
+    <div class="assumptions-grid">
+      <div class="field"><label for="annualKm">Kilómetros al año</label><select id="annualKm"><option value="5000">5.000 km</option><option value="10000">10.000 km</option><option value="15000" selected>15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000 km</option><option value="30000">30.000 km</option></select></div>
+      <div class="field"><label for="gasPrice">Bencina ($/L)</label><input id="gasPrice" type="number" min="1" max="10000" step="1" value="1535"></div>
+      <div class="field"><label for="dieselPrice">Diésel ($/L)</label><input id="dieselPrice" type="number" min="1" max="10000" step="1" value="1503"></div>
+      <div class="field"><label for="electricPrice">Electricidad ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="340"></div>
+    </div>
+    <p class="assumptions-note">Supuestos editables: bencina $1.535/L, diésel $1.503/L y electricidad $340/kWh como referencia de carga pública AC. Para cargar en casa, ingresa tu tarifa efectiva. No se incorporan pérdidas de carga ni cobros por tiempo. Las proyecciones mantienen las tarifas constantes y no incluyen otros costos de propiedad. <a href="#fuentes">Revisar metodología</a>.</p>
+  </section>
  <section id="results" class="results" aria-labelledby="resultsTitle" hidden>
   <div class="results-head">
    <div><h2 id="resultsTitle">Resultados de búsqueda</h2><p id="resultCount" role="status" aria-live="polite"></p></div>
@@ -145,7 +145,7 @@
     <p><a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Descargar planilla oficial 3CV ↗</a></p>
     <details class="prices" id="priceSettings">
       <summary>Supuestos de precios y kilometraje</summary>
-      <p>Los campos editables están visibles sobre el buscador, en <a href="#supuestos">Tu escenario</a>. No son precios oficiales universales ni actualizaciones automáticas. Para combustible debe verificarse el octanaje; la tarifa residencial depende de la cuenta eléctrica y la carga pública depende del proveedor y horario. El rendimiento de laboratorio no garantiza consumo en ruta.</p>
+      <p>Los campos editables están junto al buscador, en <a href="#supuestos">Tu escenario</a>. No son precios oficiales universales ni actualizaciones automáticas. Para combustible debe verificarse el octanaje; la tarifa residencial depende de la cuenta eléctrica y la carga pública depende del proveedor y horario. El rendimiento de laboratorio no garantiza consumo en ruta.</p>
      </details>
    </div>
   </details>
