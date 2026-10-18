@@ -230,3 +230,17 @@ Los [cuatro archivos de captura API](./data/) contienen los 272 registros origin
 Ejemplos comprobados: **Changan Deepal S05 REEV** (`CN10637E60826S00-7`) ofrece 21,3 km/L y 6,0 km/kWh; Mazda CX-5 2.5 AWD (`MZ10672T3C0926S00-9`) tiene 12,3 km/L bajo WLTP y homologación del 13/10; Chery Tiggo 7 CSH (`CY10666E60926S00-9`) tiene 17,5 km/L al mismo corte. Los cálculos de PHEV/REEV no producen costo energético combinado, puesto que requieren proporción verificable de uso de combustible y electricidad.
 
 El control `node scripts/audit-official-api-october-2026.cjs --json=official-api-october-audit.json` valida integración íntegra, 254 + 18 ciclos, códigos únicos, antigüedad, dimensiones, métricas oficiales, correspondencia de 228 casos MTT, la excepción pendiente y ninguna modificación de las fichas de mayo. La interfaz continúa mostrando las fuentes de ambas épocas y el ciclo por vehículo para evitar comparaciones erróneas.
+
+## Sexta capa: tercera fuente oficial para las 12 discrepancias técnicas
+
+Se recuperó la consulta pública de https://api-consumovehicular.minenergia.cl/vehiculos/listar?pageSize=10000 el **18/10/2026**, con **8.315 registros** y SHA256 del cuerpo completo **8afd3c284d7435aa5f47d94021ad21b41a340d677c360aeb0961fc4c6872ebf8**. Se extrajeron exclusivamente los doce códigos con diferencias documentales entre la base energética de mayo y la nómina MTT de septiembre. El archivo [mtt-discrepancy-api-20261018.json](./sii/mtt-discrepancy-api-20261018.json) incluye identificador API, código exacto, modelo, fecha de homologación, transmisión, cilindrada, fecha de modificación y concordancia con ambas fuentes.
+
+**Los 12 códigos están presentes, sin duplicados:** la API coincide con **la base de mayo en diez casos** y con **la nómina MTT de septiembre en dos casos**. Estos últimos son **MAN TGE 3.180 4x2** (`MA9923E60425M00-6`, transmisión M) y **Nissan Kait** (`NS10421T3C0126S00-7`, transmisión A). Para cuatro JMC Vigus, dos Kia Sportage, tres Karry Q22 y Mercedes-Benz GLE 500e, la API reproduce el dato de mayo.
+
+En el Mercedes-Benz GLE 500e, MTT septiembre indica **3,0 L** y mayo/API de octubre **2,0 L**. La concordancia API-mayo **no equivale a rectificación administrativa** y no elimina la discrepancia con el MTT y la ficha del fabricante. De igual modo, la fecha de modificación técnica de la API no acredita por sí sola una rectificación específica.
+
+La [tabla de discrepancias](./novedades-3cv.html) ahora tiene **cuatro columnas**: código/modelo, MTT septiembre, 3CV mayo y API octubre. El CSV añade valor API, coincidencia de fuente, identificador y fecha de modificación. Todos los casos siguen pendientes de aclaración formal.
+
+El módulo [three-source-review.js](./sii/three-source-review.js) funciona en navegador y Node, compara código exacto, modelo y atributo y falla ante información inconsistente. El control `node scripts/audit-three-source-mtt-3cv.cjs --json=mtt-three-source-audit.json` verifica los 12 casos, la clasificación 10/2 y rechaza certificaciones inventadas. Los datos originales y sus rendimientos siguen sin alteración.
+
+Los doce casos del [Issue #53](https://github.com/selguetagodoy/selguetagodoy.github.io/issues/53) permanecen abiertos: **ninguna rectificación formal del 3CV ha sido acreditada**.
