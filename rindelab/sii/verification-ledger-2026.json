@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "lastReviewed": "2026-10-18",
-  "evidencePolicy": "No asignar un código de homologación a una versión comercial sin cotejo documental explícito de código, generación, configuración y correspondencia por el 3CV o el importador. Solo la coincidencia de atributos no basta.",
+  "evidencePolicy": "La presencia del código en la nómina oficial acredita existencia registral del código en el documento de 28/09/2026, NO identidad con una versión comercial. No certificar un SKU sin documento de vínculo de versión/configuración con el código.",
   "sources": [
     {
       "id": "energy-3cv-20260508",
@@ -18,7 +18,14 @@
       "url": "https://www.subtrans.gob.cl/wp-content/uploads/2026/10/e1_Nomina-Vehiculos-Livianos-y-Medianos-Homologados_28_sep_2026.xls",
       "landingPage": "https://www.subtrans.gob.cl/3cv/homologacion-de-vehiculos-livianos-medianos-y-motocicletas/",
       "scope": "Nómina de vehículos homologados, documento oficial distinto del registro de rendimiento; no se ha contrastado su contenido código por código",
-      "inspected": false
+      "inspected": true,
+      "inspectionDate": "2026-10-18",
+      "inspectionMethod": "Inspección de registros BIFF8/XLS por columna código e identificador de fila exactos (14 candidatos + 1 conflicto)",
+      "sourceSha256": "6b013ee19be8e78757efa171a262badf793d0148aa35ca2154224858caaa5afa",
+      "extractedRowsPath": "./mtt-nomina-20260928-extract.json",
+      "verifiedRows": 15,
+      "candidateCodesFound": 14,
+      "candidateCodesChecked": 14
     },
     {
       "id": "mtt-procedimiento",
