@@ -3,21 +3,101 @@ name: RINDELAB — vigencia de precios de lista
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 12 * * 1' # Lunes; hora UTC, independiente de zona horaria
+    - cron: '15 12 * * 1' # Lunes, 12:15 UTC
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   audit:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
-      - name: Revisar catálogo y fuentes oficiales
+      - name: Obtener catálogo
         uses: actions/checkout@v4
       - name: Preparar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Auditar formato, antigüedad y URLs de origen
-        run: node scripts/audit-price-sources.cjs --online
+      - name: Revisar integridad, antigüedad y enlaces oficiales
+        id: audit
+        continue-on-error: true
+        run: node scripts/audit-price-sources.cjs --online --report-json=price-audit.json
+      - name: Conservar informe auditable
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rindelab-precios-auditoria
+          path: price-audit.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Abrir o actualizar una incidencia consolidada
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            if (!fs.existsSync('price-audit.json')) {
+              core.setFailed('No se generó el informe de auditoría; revisar los logs del workflow.');
+              return;
+            }
+            const report = JSON.parse(fs.readFileSync('price-audit.json', 'utf8'));
+            const { owner, repo } = context.repo;
+            const title = 'RINDELAB — revisión de precios de lista pendiente';
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'open', per_page: 100,
+            });
+            const previous = issues.find(item => !item.pull_request && item.title === title);
+            const errors = report.errors || [];
+            const stale = report.staleRecords || [];
+            const broken = report.inaccessible || [];
+            const needsReview = errors.length > 0 || stale.length > 0 || broken.length > 0;
+            if (!needsReview) {
+              if (previous) {
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: previous.number,
+                  body: 'La última auditoría ya no presenta registros vencidos ni fallos de estructura o acceso. Se cierra esta incidencia. Esto no certifica los importes comerciales.',
+                });
+                await github.rest.issues.update({ owner, repo, issue_number: previous.number, state: 'closed' });
+              }
+              core.info('Sin incidencias automáticas; los precios no se certifican mediante este control.');
+              return;
+            }
+            const link = `https://github.com/${owner}/${repo}/actions/runs/${context.runId}`;
+            const show = (items, toLine, max=35) => [
+              ...items.slice(0,max).map(toLine),
+              ...(items.length>max ? [`- … y ${items.length-max} registros adicionales en el JSON adjunto al workflow.`] : [])
+            ];
+            const body = [
+              '## Auditoría semanal de precios de lista',
+              '',
+              `Informe de ${report.generatedAt}. **No implica que los importes se hayan revalidado automáticamente.**`,
+              '',
+              `- Catálogo: **${report.catalog.records} versiones**, **${report.catalog.brands} marcas**.`,
+              `- Registros sin revalidación humana en 30 días o más: **${stale.length}**.`,
+              `- Errores estructurales: **${errors.length}**.`,
+              `- Enlaces de acceso incierto: **${broken.length}** (403/429 pueden ser antibot, no un cambio de precio).`,
+              `- [Informe completo y descarga del JSON](${link})`,
+              '',
+              '### Precios que requieren revisión documental',
+              ...(stale.length ? show(stale, x => `- ${x.brand} ${x.family} — ${x.version}: ${x.ageDays} días desde ${x.checkedAt} · [Fuente](${x.source})`) : ['- Ninguno por antigüedad']),
+              '',
+              '### Problemas de estructura',
+              ...(errors.length ? show(errors, x => '- '+x) : ['- Ninguno']),
+              '',
+              '### Acceso a fuentes',
+              ...(broken.length ? show(broken, x => `- HTTP ${x.status}: ${x.url}`) : ['- Sin advertencias']),
+              '',
+              '**Procedimiento:** revisar la versión y el valor bajo la etiqueta «precio de lista» en el fabricante; excluir bonos, descuentos y cuotas de financiamiento; corregir el importe solo con respaldo oficial; actualizar `checkedAt` únicamente después de comprobarlo manualmente. No mezclar con SII 2026 ni con 3CV.',
+            ].join('\\n');
+            if (previous) {
+              await github.rest.issues.update({ owner, repo, issue_number: previous.number, body });
+              core.info('Incidencia actualizada: #'+previous.number);
+            } else {
+              const result = await github.rest.issues.create({ owner, repo, title, body });
+              core.info('Incidencia creada: #'+result.data.number);
+            }
+      - name: Mantener error si falla la integridad del catálogo
+        if: steps.audit.outcome == 'failure'
+        run: exit 1
