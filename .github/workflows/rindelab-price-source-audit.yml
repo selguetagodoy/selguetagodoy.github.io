@@ -90,7 +90,7 @@ jobs:
               ...(broken.length ? show(broken, x => `- HTTP ${x.status}: ${x.url}`) : ['- Sin advertencias']),
               '',
               '**Procedimiento:** revisar la versión y el valor bajo la etiqueta «precio de lista» en el fabricante; excluir bonos, descuentos y cuotas de financiamiento; corregir el importe solo con respaldo oficial; actualizar `checkedAt` únicamente después de comprobarlo manualmente. No mezclar con SII 2026 ni con 3CV.',
-            ].join('\\n');
+            ].join('\n');
             if (previous) {
               await github.rest.issues.update({ owner, repo, issue_number: previous.number, body });
               core.info('Incidencia actualizada: #'+previous.number);
