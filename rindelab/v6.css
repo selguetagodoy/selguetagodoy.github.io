@@ -312,3 +312,51 @@ body.has-tray{padding-bottom:150px}
 @media(max-width:620px){.source-legend{grid-template-columns:1fr}.energy-results-heading{flex-direction:column;gap:3px}.source-legend>div{padding-top:9px;padding-bottom:9px}}
 
 .source-legend[hidden],.energy-results-heading[hidden]{display:none!important}
+
+
+/* RINDELAB 7.0: costos de uso, trazabilidad de versión y navegación accesible */
+html{scroll-padding-top:88px}
+.site-header{position:sticky;top:0;z-index:40}
+.header-links{gap:8px}
+.header-source{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 11px;border-radius:7px}
+.header-source:hover,.header-source:focus-visible{background:#1c4158}
+#inicio,#buscador,#supuestos,#fuentes{scroll-margin-top:94px}
+.energy-assumptions{margin:0 0 20px;padding:20px 24px 14px;background:#fff;border:1px solid #bcd8e0;border-radius:15px;box-shadow:0 5px 25px #08283a0d}
+.assumptions-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:15px}
+.assumptions-heading h2{font-size:20px;letter-spacing:-.035em;color:#123a51;margin:3px 0 0}
+.assumptions-heading p{font-size:12px;color:#547184;max-width:320px;margin:0}
+.assumptions-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.assumptions-grid .field input,.assumptions-grid .field select{height:44px}
+.assumptions-note{font-size:11px;color:#526e81;line-height:1.55;margin:13px 0 0}
+.vehicle-heading .variant-id{display:block;margin-top:4px;font-size:11px;letter-spacing:0;color:#437186;font-weight:700}
+.vehicle-cell .annual-result{display:block;margin-top:4px;line-height:1.5;color:#35717e;font-size:11px;font-weight:700}
+.compare-share{border-top:1px solid #dce9ed;padding:10px 17px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.compare-share input{flex:1 1 250px;min-width:0;font-size:12px;padding:10px;border:1px solid #c2d5dd;border-radius:8px}
+.compare-share p{font-size:11px;flex:1 1 100%;margin:0;color:#426c7b}
+.compare-share p:empty{display:none}
+.footer-data{position:relative;min-width:165px}
+.footer-data summary{cursor:pointer;min-height:44px;padding:9px 8px;color:#c7eeee;font-size:12px;font-weight:700}
+.footer-data[open]{display:flex;flex-wrap:wrap;gap:8px}
+.footer-data a{font-size:12px;padding:6px 8px;min-height:34px}
+@media(max-width:790px){
+ .assumptions-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .assumptions-heading{display:block}
+ .assumptions-heading p{max-width:none;margin-top:4px}
+}
+@media(max-width:600px){
+ html{scroll-padding-top:115px}
+ .header-inner{flex-wrap:wrap;gap:0;padding:8px 0 6px}
+ .header-links{width:100%;justify-content:space-between;gap:4px;flex-wrap:nowrap}
+ .header-links a{font-size:11px;min-height:40px;padding:6px 8px}
+ #inicio,#buscador,#supuestos,#fuentes{scroll-margin-top:120px}
+ .energy-assumptions{padding:15px 13px;margin-bottom:13px;border-radius:12px}
+ .assumptions-heading h2{font-size:18px}
+ .assumptions-grid{gap:8px 10px}
+ .assumptions-grid .field label{font-size:11px}
+ .assumptions-grid .field input,.assumptions-grid .field select{height:44px;padding:8px;font-size:13px}
+ .compare-share{padding:10px}
+}
+@media(max-width:360px){
+ .header-links a{font-size:10px;padding:6px 3px}
+ .assumptions-grid{grid-template-columns:1fr}
+}
