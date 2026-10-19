@@ -205,3 +205,39 @@ body,button,input,select{font-family:Inter,system-ui,-apple-system,BlinkMacSyste
  .hero-image img{max-height:160px}
  .search-card{margin-top:-17px}
 }
+
+/* V2.2 — fotografías verificadas, atribución visible y controles simples de carga. */
+.vehicle-photo{background:#edf2f7;gap:0;padding:0;overflow:hidden}
+.vehicle-photo img{width:100%;height:178px;max-height:none;display:block;object-fit:cover;object-position:center center;background:#e2e8f0;transition:transform .25s ease}
+.vehicle-card:hover .vehicle-photo img{transform:scale(1.02)}
+.vehicle-photo-credit{width:100%;padding:9px 12px 10px;display:flex;gap:4px;justify-content:center;flex-wrap:wrap;align-items:baseline;color:#526477;background:#f8fafc;font-size:10px;line-height:1.3;text-align:center}
+.vehicle-photo-credit a{color:#334155;text-decoration:underline;text-decoration-color:#94a3b8;text-underline-offset:2px;font-size:10px}
+.vehicle-photo-credit a:hover{color:#1d4ed8}
+.energy-assumptions{padding:25px 27px 21px;border-color:#e2e8f0;background:#fff}
+.energy-assumptions .assumptions-heading{padding-bottom:13px;border-bottom:1px solid #e2e8f0;margin-bottom:14px}
+.energy-assumptions .assumptions-heading h2{font-size:25px;font-weight:760;letter-spacing:-.04em;color:#102a43}
+.energy-assumptions .assumptions-heading p{font-size:13px;color:#64748b}
+.scenario-shortcuts{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 17px}
+.scenario-shortcuts span{font-size:13px;color:#475569;font-weight:700;margin-right:5px}
+.scenario-shortcuts button{appearance:none;background:#fff;border:1px solid #cbd5e1;border-radius:99px;color:#334155;min-height:39px;padding:7px 14px;font-weight:650;font-size:12px;cursor:pointer}
+.scenario-shortcuts button[aria-pressed="true"]{color:white;border-color:#102a43;background:#102a43}
+.scenario-shortcuts button:not([aria-pressed="true"]):hover{border-color:#93c5fd;color:#1d4ed8;background:#eff6ff}
+.energy-assumptions .assumptions-grid{gap:14px 12px}
+.energy-assumptions .assumptions-grid .field label{font-size:12px;color:#475569;font-weight:650}
+.energy-assumptions .assumptions-grid .field input,.energy-assumptions .assumptions-grid .field select{border-color:#cbd5e1;border-radius:9px;background:#fff;height:47px}
+.energy-assumptions .assumptions-grid .field input[readonly]{background:#f1f5f9;color:#334155}
+.charge-example{background:#f8fafc;border-color:#e2e8f0;box-shadow:none}
+.charge-example-title h3{color:#102a43}
+.charge-example-value{border-color:#e2e8f0}
+.home-bill-helper,.home-tariff-directory{background:#fff;border-color:#e2e8f0;box-shadow:none}
+.home-bill-helper summary,.home-tariff-directory summary,.scenario-method summary{color:#1e40af}
+@media(max-width:600px){
+ .vehicle-photo img{height:174px}
+ .vehicle-photo-credit{font-size:9px;line-height:1.35}
+ .energy-assumptions{padding:18px 15px}
+ .energy-assumptions .assumptions-heading h2{font-size:22px}
+ .scenario-shortcuts{gap:7px}
+ .scenario-shortcuts span{width:100%;font-size:12px;margin:0 0 1px}
+ .scenario-shortcuts button{min-height:38px;font-size:11px;padding:7px 12px}
+}
+@media(prefers-reduced-motion:reduce){.vehicle-photo img{transform:none!important;transition:none!important}}

@@ -49,3 +49,15 @@
 - Pruebas específicas de la nueva interfaz: **10 aprobadas y 0 fallidas** (`tests/v2-visual.cjs`).
 - En siete anchos (320, 360, 390, 768, 1024, 1440 y 1920 px), el documento no presentó desbordamiento horizontal significativo, el hero cargó correctamente y el costo mensual se mostró desde el catálogo real.
 - Las capturas comparativas se conservaron en `qa-v2/`, con imágenes de la publicación previa y de la versión candidata.
+
+## Extensión V2.2 — fotografías, escenarios y submódulos (18 de octubre de 2026)
+
+La segunda iteración incorpora cuatro fotografías referenciales reales de Toyota Corolla Cross 1.8 HEV (2022), Toyota Corolla Cross 2.0 SEG (2022), Leapmotor B10 (2025) y BYD Dolphin Mini (2024), con comprobación de licencia, autor y origen en Wikimedia Commons. Se conservan como JPG locales en `images/`; sus atribuciones y enlaces a las licencias aparecen junto a las fotografías. Los archivos se asignan con coincidencia explícita de marca, denominación, tipo de motor y un intervalo acotado de años de homologación. Una fotografía referencial **no certifica** la configuración exacta de una ficha.
+
+Se incorporaron botones rápidos de escenario eléctrico (carga pública, casa o mixta) vinculados al selector preexistente, sin reemplazar cálculos, tarifas, supuestos, precios ni las opciones técnicas.
+
+Se unificó la presentación visual de `cotizador.html`, `marcas.html`, `cobertura.html`, `versiones.html`, `homologaciones.html` y `novedades-3cv.html`, con archivo compartido `v2-secondary.css`, contrastes de navegación y tipografía Inter local. En móvil, el cotizador presenta sus filtros en una columna y Marcas conserva la explicación completa dentro de un apartado desplegable.
+
+**Validaciones adicionales:** 23 pruebas específicas de la segunda etapa aprobadas y 10 pruebas de la primera capa V2 nuevamente aprobadas, sin fallas, incluyendo tres anchos por cada una de las seis páginas secundarias (320, 390 y 1440 px), imágenes, atribuciones, filtros y escenarios. La regresión integral adicional se ejecuta contra la rama antes de publicar.
+
+**Pendiente:** la biblioteca fotográfica aún cubre solamente un subconjunto de modelos. La incorporación de nuevas imágenes exige comprobar licencia, correspondencia visual y generación del vehículo antes de asociarlas al registro. No reemplazar modelos con imágenes inventadas.

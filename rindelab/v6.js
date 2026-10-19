@@ -379,7 +379,7 @@ function render(){
    '<span>'+(annual===null?'Faltan datos de rendimiento o tarifa para calcularlo':'Con '+safe(fmt(annualKm))+' km al año · tarifas constantes')+'</span></div>'+
    '<div class="vehicle-foot"><span class="vehicle-five-year">'+(fiveYears===null?'Sin proyección a 5 años':'5 años: '+safe(money(fiveYears))+' · tarifas constantes')+'</span>'+
    '<small class="energy-source-line">Fuente: '+safe(source)+'</small></div>'+
-   '<div class="vehicle-visual" aria-label="Fotografía de este vehículo no disponible"><svg viewBox="0 0 120 48" aria-hidden="true"><path d="M8 32h104l-3-12-17-4-13-10H38L22 20l-12 3z"/><path d="M37 19h48M12 32v6h13m70 0h13v-6"/><circle cx="31" cy="35" r="8"/><circle cx="89" cy="35" r="8"/></svg><small>Fotografía no disponible</small></div>';
+   (window.RindelabPhotos?.render(row,F,safe)||'<div class="vehicle-visual" aria-label="Fotografía de este vehículo no disponible"><svg viewBox="0 0 120 48" aria-hidden="true"><path d="M8 32h104l-3-12-17-4-13-10H38L22 20l-12 3z"/><path d="M37 19h48M12 32v6h13m70 0h13v-6"/><circle cx="31" cy="35" r="8"/><circle cx="89" cy="35" r="8"/></svg><small>Fotografía no disponible</small></div>');
   list.append(article);
  }
  $('more').hidden=limit>=results.length;

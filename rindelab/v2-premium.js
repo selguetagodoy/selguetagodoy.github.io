@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded',()=>{
  }));
  tech.addEventListener('change',update);
  document.getElementById('resetButton')?.addEventListener('click',update);
+ const chargeScenario=document.getElementById('chargeScenario');
+ const shortcuts=[...document.querySelectorAll('[data-scenario-mode]')];
+ const syncShortcuts=()=>shortcuts.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.scenarioMode===chargeScenario?.value)));
+ shortcuts.forEach(b=>b.addEventListener('click',()=>{
+  chargeScenario.value=b.dataset.scenarioMode;
+  chargeScenario.dispatchEvent(new Event('change',{bubbles:true}));
+  syncShortcuts();
+ }));
+ chargeScenario?.addEventListener('change',syncShortcuts);
+ syncShortcuts();
  document.querySelectorAll('[data-open-rankings]').forEach(link=>link.addEventListener('click',event=>{
   event.preventDefault();
   document.getElementById('mobileNav')?.removeAttribute('open');

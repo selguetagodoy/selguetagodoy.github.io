@@ -1,0 +1,113 @@
+/* RINDELAB V2 — unificación visual progresiva de cotizador, marcas y expedientes 3CV. */
+@font-face{font-family:Inter;src:url('./fonts/inter-latin-wght-normal.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+:root{--r-ink:#102a43;--r-primary:#1d4ed8;--r-muted:#64748b;--r-line:#e2e8f0;--r-base:#f8fafc}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--r-base);color:#0f172a}
+button,input,select,textarea{font-family:inherit}
+button,.button{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
+a{color:#1d4ed8}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #93c5fd;outline-offset:3px}
+.site-header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.97);color:var(--r-ink);border-bottom:1px solid var(--r-line);box-shadow:0 1px 0 #e2e8f0;backdrop-filter:blur(14px)}
+.site-header .logo{font-size:27px;color:var(--r-ink);letter-spacing:-.06em}
+.site-header .logo span{color:#14b8a6}
+.site-header .header-note{color:var(--r-muted);font-size:12px}
+.site-header .header-source,.site-header .header-links a,.site-header .coverage-nav a{color:#334155;font-weight:650;font-size:12px;text-decoration:none;letter-spacing:-.01em}
+.site-header .header-source:hover,.site-header .header-links a:hover,.site-header .coverage-nav a:hover{color:var(--r-primary)}
+.coverage-nav{gap:clamp(8px,1.4vw,21px)}
+.coverage-main,.quote-page{padding-bottom:55px}
+.coverage-intro{background:#102a43;border-radius:18px;box-shadow:0 13px 30px #102a4314;padding:32px 36px}
+.coverage-intro h1{font-size:clamp(28px,3.6vw,41px);font-weight:780;letter-spacing:-.047em;color:#fff}
+.coverage-intro p:last-child{font-size:14px;color:#d5e4f0;line-height:1.7}
+.coverage-intro .eyebrow{color:#93c5fd}
+.coverage-metrics>div,.coverage-panel,.delta-method,.homologation-source-grid>div{background:#fff;border:1px solid var(--r-line);box-shadow:none;border-radius:13px}
+.coverage-metrics small{color:#475569}
+.coverage-metrics strong{color:var(--r-ink);font-variant-numeric:tabular-nums}
+.coverage-panel-head h2,.homologation-sources h2{color:var(--r-ink);letter-spacing:-.035em}
+.coverage-filters,.delta-filters{background:#f8fafc;border-color:var(--r-line)}
+.coverage-filters input,.coverage-filters select,.delta-filters input,.delta-filters select{border-radius:9px;background:#fff;border-color:#cbd5e1;color:#0f172a}
+.coverage-table-scroll,.coverage-panel .scroller{border-color:var(--r-line);border-radius:10px;max-width:100%;overflow-x:auto}
+.coverage-table th,.delta-table th,.versions-table th,.homologation-table th{background:#eff4f9;color:#334155;border-color:var(--r-line)}
+.coverage-table td,.delta-table td,.versions-table td,.homologation-table td{color:#334155}
+.coverage-family,.version-name,.delta-model,.reg-code{color:var(--r-ink)}
+.quote-intro{padding-top:31px}
+.quote-intro .eyebrow{color:#1d4ed8}
+.quote-intro h1{font-size:clamp(30px,3.9vw,46px);font-weight:800;color:var(--r-ink);letter-spacing:-.05em}
+.quote-intro p{color:#475569;font-size:15px}
+.quote-catalog,.quote-aside,.quote-legal{background:#fff;border-color:var(--r-line);border-radius:16px;box-shadow:0 7px 25px #0f172a08}
+.quote-heading h2{color:var(--r-ink);font-size:20px}
+.quote-heading p{color:var(--r-muted)}
+.quote-filters .field input,.quote-filters .field select,.quote-extra .field input,.quote-finance .field input,.quote-finance .field select{border-color:#cbd5e1;border-radius:9px;background:#fff;color:var(--r-ink)}
+.quote-version{border-color:var(--r-line);border-radius:11px}
+.quote-version:hover{border-color:#cbd5e1;background:#f8fafc}
+.quote-version>div:first-child strong{color:var(--r-ink)}
+.quote-version-price strong{color:var(--r-ink);font-weight:800}
+.quote-selected{background:#eff6ff;border-color:#bfdbfe}
+.quote-selected h3,.quote-selected>strong{color:var(--r-ink)}
+.quote-total{border-radius:12px}
+.button.primary,button.primary{background:#1d4ed8;border-color:#1d4ed8;color:#fff;box-shadow:none}
+.button.primary:hover,button.primary:hover{background:#1e40af}
+.button.secondary{border-color:#cbd5e1;background:#fff;color:#334155}
+.button.secondary:hover{background:#f1f5f9;color:#0f172a;border-color:#94a3b8}
+.rindelab-brand-directory header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.97);border-bottom:1px solid var(--r-line);color:var(--r-ink);box-shadow:0 1px 0 #e2e8f0;backdrop-filter:blur(14px)}
+.rindelab-brand-directory .head-inner{padding-block:18px}
+.rindelab-brand-directory header nav a{color:var(--r-ink);font-size:13px}
+.rindelab-brand-directory header nav a:hover{color:var(--r-primary)}
+.rindelab-brand-directory .logo{font-size:27px;color:var(--r-ink)}
+.rindelab-brand-directory .logo span{color:#14b8a6}
+.rindelab-brand-directory main h1{font-weight:790;color:var(--r-ink)}
+.rindelab-brand-directory .metric,.rindelab-brand-directory .panel{border-color:var(--r-line);box-shadow:none}
+.rindelab-brand-directory .metric strong{color:var(--r-ink)}
+.rindelab-brand-directory .controls{background:#f8fafc;border-bottom:1px solid var(--r-line)}
+.rindelab-brand-directory input,.rindelab-brand-directory select,.rindelab-brand-directory button{border-color:#cbd5e1;background:#fff;border-radius:9px}
+.rindelab-brand-directory button:hover{background:#eff6ff}
+.rindelab-brand-directory thead{background:#eff4f9}
+.rindelab-brand-directory th{color:#334155}
+.rindelab-brand-directory td{color:#334155}
+.rindelab-brand-directory .ready{color:#15803d}
+.rindelab-brand-directory footer{border-top:1px solid var(--r-line)}
+@media(max-width:900px){
+ .site-header .coverage-nav{gap:10px;flex-wrap:wrap}
+ .site-header .coverage-nav a{font-size:11px}
+ .quote-layout{grid-template-columns:1fr}
+ .quote-aside{position:static}
+}
+@media(max-width:700px){
+ .coverage-intro{padding:26px 22px;border-radius:13px}
+ .coverage-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .coverage-panel{padding:16px}
+ .coverage-filters,.delta-filters{grid-template-columns:1fr}
+ .coverage-panel-head{flex-wrap:wrap;align-items:flex-start}
+ .quote-intro{padding-top:24px}
+ .quote-catalog,.quote-aside{padding:17px}
+ .rindelab-brand-directory .metrics{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:390px){
+ .site-header .header-inner{gap:9px}
+ .site-header .coverage-nav{gap:8px}
+ .site-header .coverage-nav a{font-size:10px}
+ .coverage-intro h1{font-size:27px}
+ .coverage-metrics>div{padding:13px}
+ .coverage-metrics strong{font-size:26px}
+ .rindelab-brand-directory .metrics{grid-template-columns:1fr 1fr}
+ .rindelab-brand-directory .metric:last-child{grid-column:1/-1}
+ .rindelab-brand-directory .head-inner{padding:14px}
+ .rindelab-brand-directory header nav{gap:12px}
+ .rindelab-brand-directory header nav a{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* QA móvil: menú visible sobre cabecera clara y filtros sin recortes. */
+.site-header .mobile-nav summary{color:#102a43;background:#fff;border-color:#cbd5e1;min-height:44px}
+.site-header .mobile-nav summary span{color:#102a43}
+.site-header .mobile-nav nav{background:#fff;border-color:#e2e8f0;box-shadow:0 10px 25px #102a4320}
+.site-header .mobile-nav nav a{color:#334155;border-color:#e2e8f0}
+.site-header .mobile-nav nav a:hover{color:#1d4ed8;background:#eff6ff}
+.rindelab-brand-directory .brand-about{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:0 14px;margin:12px 0 22px}
+.rindelab-brand-directory .brand-about summary{cursor:pointer;font-size:13px;font-weight:700;color:#1d4ed8;padding:13px 0;min-height:44px}
+.rindelab-brand-directory .brand-about p{font-size:13px;margin:0 0 14px;line-height:1.6;color:#475569}
+@media(max-width:600px){
+ .quote-filters{grid-template-columns:1fr;gap:11px}
+ .quote-filters .field input,.quote-filters .field select{font-size:16px;height:46px}
+ .quote-version{grid-template-columns:minmax(0,1.1fr) minmax(110px,.9fr)}
+ .quote-version-price strong{font-size:15px}
+ .rindelab-brand-directory main>p:not(.muted){font-size:14px;line-height:1.58}
+}

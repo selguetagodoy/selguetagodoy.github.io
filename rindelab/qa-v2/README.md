@@ -23,3 +23,21 @@ Capturas de escritorio (1440 × 900) y móvil (390 × 900), obtenidas el 18 de o
 ![RINDELAB V2 — móvil](despues-390.jpg)
 
 La versión de prueba todavía no está desplegada en GitHub Pages; las capturas «después» proceden del servidor local de validación. Las pruebas automatizadas se ejecutaron además en anchos de 320, 360, 390, 768, 1024, 1440 y 1920 px.
+
+## Segunda etapa — imágenes reales y páginas secundarias
+
+**Resultados automotrices con fotografías verificadas**
+
+![Fichas de modelos con foto — escritorio](resultados-1440.jpg)
+
+![Fichas de modelos con foto — móvil](resultados-390.jpg)
+
+**Cotizador — móvil**
+
+![Cotizador V2 — móvil](cotizador-390.jpg)
+
+**Marcas y cobertura — móvil**
+
+![Marcas V2 — móvil](marcas-390.jpg)
+
+Se mantienen las referencias y autoría originales de los vehículos; estas capturas provienen de la rama candidata. Las fotografías se muestran como imágenes referenciales del modelo y cada ficha enlaza autor y licencia, no como prueba de que una versión comercial concreta corresponda a la homologación consultada.
