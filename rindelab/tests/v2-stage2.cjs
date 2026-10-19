@@ -14,6 +14,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert((await p.locator('.vehicle-card').count())>0);
   const pictures=p.locator('.vehicle-photo img');
   assert((await pictures.count())>=2,'Sin foto verificable para dos motorizaciones Corolla Cross');
+  for(const image of await pictures.all()){await image.scrollIntoViewIfNeeded();await image.evaluate(el=>el.decode());}
   const sizes=await pictures.evaluateAll(xs=>xs.map(x=>({src:x.src,complete:x.complete,naturalWidth:x.naturalWidth,alt:x.alt})));
   for(const x of sizes){assert(x.src.includes('/images/'));assert(x.naturalWidth>0,JSON.stringify(x));assert(x.alt.includes('referencial'))}
   assert((await p.locator('.vehicle-photo-credit a').count())>=4);

@@ -1,4 +1,4 @@
-name: RINDELAB v6 UI E2E
+name: RINDELAB UI V2 QA
 
 on:
   pull_request:
@@ -96,3 +96,8 @@ jobs:
 
       - name: Verify explicit search, cost sorting, comparison and responsive layout
         run: node rindelab/tests/e2e.cjs
+
+      - name: Verify RINDELAB V2 design and licensed photographs
+        run: |
+          node rindelab/tests/v2-visual.cjs
+          node rindelab/tests/v2-stage2.cjs
