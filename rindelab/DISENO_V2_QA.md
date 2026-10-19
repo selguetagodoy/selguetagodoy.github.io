@@ -1,0 +1,63 @@
+# RINDELAB V2 — Registro de implementación y controles
+
+**Fecha:** 18 de octubre de 2026
+**Rama de trabajo:** `design/rindelab-v2-premium-20261018`
+**Ámbito:** exclusivamente `/rindelab/`. La web publicada permanece sin cambios hasta integrar la propuesta.
+
+## Protección y auditoría inicial (Fase 0)
+
+- Se tomó como base el commit `ce41d85` y se creó una rama de trabajo independiente.
+- Se conservaron las bases oficiales 3CV, la integración de los 272 registros adicionales de octubre, la nómina MTT y los recursos de precios comerciales y SII.
+- La aplicación identifica 8.325 fichas energéticas al corte de la versión base (8.053 de la planilla histórica y 272 adicionales de la consulta oficial).
+- No se reescribieron los cálculos de energía, la clasificación tecnológica, los supuestos de tarifas ni las estructuras de datos.
+- Se mantuvo la fotografía existente `hero-foto-rindelab.webp`, de 450 × 253 píxeles, sin sustituirla por una ilustración generada.
+
+## Rediseño aplicado
+
+**Fase 1 — Cabecera, portada y buscador.** Se reorganizó la navegación en Inicio, Comparar, Rankings y Fuentes, manteniendo acceso a Cotizador y Marcas. La portada prioriza una pregunta comprensible, la fotografía conservada y un buscador visible. Se incorporaron filtros rápidos funcionales para vehículos eléctricos, híbridos HEV, híbridos enchufables PHEV, bencina y diésel; las categorías MHEV y REEV continúan disponibles en el selector completo.
+
+**Fase 2 — Fichas de resultados.** La presentación es de tres columnas en escritorio, dos en tablet y una en móvil. El gasto energético mensual estimado tiene protagonismo, seguido del anual, costo cada 100 km, rendimiento homologado, ciclo y fuente. Se mantuvieron los botones de ficha y comparación. Cuando no existe una fotografía específica verificada, se muestra un recurso neutral que declara expresamente la ausencia de imagen, sin atribuir fotografías de modelos o versiones incorrectos.
+
+**Fase 3 — Comparador.** Se conservaron todas las funciones de selección, incorporación y retiro de hasta cinco vehículos, así como la comparación y el cambio de referencia. Se homogeneizaron elementos visuales sin modificar los cálculos ni mezclar ciclos como equivalentes.
+
+**Fase 4 — Escenarios.** Se conservó íntegramente la configuración energética editable, con precios, carga pública y domiciliaria, calculadora de boletas y parámetros existentes. Las modificaciones del escenario se reflejan en las cifras mensuales y anuales de las tarjetas.
+
+**Fase 5 — Rankings.** Se armonizaron tipografía, barras, contrastes y navegación a estadísticas, conservando las reglas metodológicas y los filtros por categoría/ciclo.
+
+**Fase 6 — Verificación.** Se mantuvo el conjunto de regresión `tests/e2e.cjs` actualizando únicamente las expectativas de texto/navegación que cambiaron en V2. Se añadió `tests/v2-visual.cjs` para validar la nueva capa visual en siete anchos, la disponibilidad de la portada, las fichas monetarias y la sincronización de filtros rápidos.
+
+## Decisiones de seguridad y rigor
+
+1. No se incorporaron fotografías comerciales de terceros sin verificar modelo, autorización o licencia.
+2. No se presentaron ahorros ficticios ni se completaron datos faltantes con cero.
+3. Las cifras son estimaciones con tarifas editables; no representan costos de propiedad ni precios energéticos vigentes garantizados.
+4. Las fichas WLTP/NEDC se identifican sin declarar comparabilidad directa.
+5. Los valores PHEV/REEV siguen respetando las limitaciones del conjunto 3CV original.
+
+## Pendientes antes de considerar finalizada toda la visión V2
+
+- Crear una biblioteca verificable de fotografías por modelo/generación, con licencias y autoría trazables.
+- Simplificar progresivamente la sección avanzada de escenarios sin ocultar capacidades esenciales.
+- Completar la reorganización visual profunda de todos los submódulos y páginas secundarias.
+- Evaluar accesibilidad y rendimiento de la versión candidata en dispositivos reales, además de las pruebas automatizadas.
+
+**Política de publicación:** presentar como pull request para revisión; no fusionar automáticamente a `main` ni afirmar que las fotografías faltantes están resueltas.
+
+## Resultado de QA ejecutado
+
+- Pruebas de regresión integrales: **155 aprobadas y 0 fallidas** (`tests/e2e.cjs`, ejecutadas contra el servidor de la rama V2).
+- Pruebas específicas de la nueva interfaz: **10 aprobadas y 0 fallidas** (`tests/v2-visual.cjs`).
+- En siete anchos (320, 360, 390, 768, 1024, 1440 y 1920 px), el documento no presentó desbordamiento horizontal significativo, el hero cargó correctamente y el costo mensual se mostró desde el catálogo real.
+- Las capturas comparativas se conservaron en `qa-v2/`, con imágenes de la publicación previa y de la versión candidata.
+
+## Extensión V2.2 — fotografías, escenarios y submódulos (18 de octubre de 2026)
+
+La segunda iteración incorpora cuatro fotografías referenciales reales de Toyota Corolla Cross 1.8 HEV (2022), Toyota Corolla Cross 2.0 SEG (2022), Leapmotor B10 (2025) y BYD Dolphin Mini (2024), con comprobación de licencia, autor y origen en Wikimedia Commons. Se conservan como JPG locales en `images/`; sus atribuciones y enlaces a las licencias aparecen junto a las fotografías. Los archivos se asignan con coincidencia explícita de marca, denominación, tipo de motor y un intervalo acotado de años de homologación. Una fotografía referencial **no certifica** la configuración exacta de una ficha.
+
+Se incorporaron botones rápidos de escenario eléctrico (carga pública, casa o mixta) vinculados al selector preexistente, sin reemplazar cálculos, tarifas, supuestos, precios ni las opciones técnicas.
+
+Se unificó la presentación visual de `cotizador.html`, `marcas.html`, `cobertura.html`, `versiones.html`, `homologaciones.html` y `novedades-3cv.html`, con archivo compartido `v2-secondary.css`, contrastes de navegación y tipografía Inter local. En móvil, el cotizador presenta sus filtros en una columna y Marcas conserva la explicación completa dentro de un apartado desplegable.
+
+**Validaciones adicionales:** 23 pruebas específicas de la segunda etapa aprobadas y 10 pruebas de la primera capa V2 nuevamente aprobadas, sin fallas, incluyendo tres anchos por cada una de las seis páginas secundarias (320, 390 y 1440 px), imágenes, atribuciones, filtros y escenarios. La regresión integral adicional se ejecuta contra la rama antes de publicar.
+
+**Pendiente:** la biblioteca fotográfica aún cubre solamente un subconjunto de modelos. La incorporación de nuevas imágenes exige comprobar licencia, correspondencia visual y generación del vehículo antes de asociarlas al registro. No reemplazar modelos con imágenes inventadas.

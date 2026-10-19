@@ -375,10 +375,11 @@ function render(){
    '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
    '<div class="vehicle-actions"><button type="button" class="button primary" data-detail="'+index+'">Ver ficha</button>'+
    '<button type="button" class="button secondary" data-compare="'+index+'" aria-pressed="'+selectedNow+'">'+(selectedNow?'Quitar':'Comparar +')+'</button></div>'+
-   '<div class="vehicle-annual"><small>Gasto energético anual estimado</small><strong class="vehicle-annual-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual)))+'</strong>'+
+   '<div class="vehicle-annual"><div class="vehicle-monthly"><small>Gasto mensual estimado</small><strong class="vehicle-monthly-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual/12)))+'</strong></div><small>Gasto energético anual estimado</small><strong class="vehicle-annual-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual)))+'</strong>'+
    '<span>'+(annual===null?'Faltan datos de rendimiento o tarifa para calcularlo':'Con '+safe(fmt(annualKm))+' km al año · tarifas constantes')+'</span></div>'+
    '<div class="vehicle-foot"><span class="vehicle-five-year">'+(fiveYears===null?'Sin proyección a 5 años':'5 años: '+safe(money(fiveYears))+' · tarifas constantes')+'</span>'+
-   '<small class="energy-source-line">Fuente: '+safe(source)+'</small></div>';
+   '<small class="energy-source-line">Fuente: '+safe(source)+'</small></div>'+
+   (window.RindelabPhotos?.render(row,F,safe)||'<div class="vehicle-visual" aria-label="Fotografía de este vehículo no disponible"><svg viewBox="0 0 120 48" aria-hidden="true"><path d="M8 32h104l-3-12-17-4-13-10H38L22 20l-12 3z"/><path d="M37 19h48M12 32v6h13m70 0h13v-6"/><circle cx="31" cy="35" r="8"/><circle cx="89" cy="35" r="8"/></svg><small>Fotografía no disponible</small></div>');
   list.append(article);
  }
  $('more').hidden=limit>=results.length;
