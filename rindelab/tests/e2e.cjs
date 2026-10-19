@@ -2184,6 +2184,33 @@ await test('Detalle de compra prioriza indicadores, sin CO₂ N/D ni precio de c
  assert.deepEqual(issues,[]);
  await p.close();
 });
+await test('Bandeja maestra de electromovilidad: 988 filas 3CV, prioridades y búsqueda móvil',async()=>{
+ const p=await browser.newPage({viewport:{width:320,height:780},isMobile:true,hasTouch:true});
+ const issues=[];p.on('pageerror',e=>issues.push(e.message));
+ const r=await p.goto(base+'pendientes-electromovilidad.html',{waitUntil:'networkidle',timeout:30000});
+ assert.equal(r.status(),200);
+ await p.waitForFunction(()=>document.querySelector('#total')?.textContent==='988',{timeout:15000});
+ assert.equal(await p.locator('#priority').textContent(),'66');
+ assert.equal(await p.locator('#ready').textContent(),'0');
+ assert.equal(await p.locator('#rows tr').count(),50);
+ await p.selectOption('#brand','GWM');
+ assert.equal(await p.locator('#rows tr').count(),12);
+ await p.selectOption('#brand','Leapmotor');
+ assert.equal(await p.locator('#rows tr').count(),7);
+ await p.selectOption('#brand','');
+ await p.fill('#q','Nammi');
+ assert((await p.locator('#rows tr').count())>0,'Nammi debe figurar si está en registros 3CV');
+ await p.fill('#q','');
+ assert.equal(await p.locator('#rows tr').count(),50);
+ await p.locator('#more').click();
+ assert.equal(await p.locator('#rows tr').count(),100);
+ assert.match(await p.locator('#download').getAttribute('href'),/bandeja-precios-electromovilidad\.csv/);
+ const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,viewport:innerWidth,scroll:document.querySelector('.scroll').scrollWidth,area:document.querySelector('.scroll').clientWidth}));
+ assert(size.doc<=size.viewport+3,JSON.stringify(size));
+ assert(size.scroll>size.area,JSON.stringify(size));
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
 for(const pageName of ['index.html','cotizador.html']){
  await test('Menú móvil simple y visible en '+pageName,async()=>{
   const p=await browser.newPage({viewport:{width:320,height:820},isMobile:true,hasTouch:true});

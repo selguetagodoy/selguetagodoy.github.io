@@ -6,6 +6,7 @@ on:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
       - "scripts/audit-price-sources.cjs"
+      - "scripts/rindelab-price-queue.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
       - "scripts/audit-homologation-register.cjs"
@@ -19,6 +20,7 @@ on:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
       - "scripts/audit-price-sources.cjs"
+      - "scripts/rindelab-price-queue.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
       - "scripts/audit-homologation-register.cjs"
@@ -47,6 +49,12 @@ jobs:
         run: |
           node scripts/audit-price-sources.cjs --report-json=price-audit.json
           node -e "const r=require('./price-audit.json');if(r.schemaVersion!==1 || r.catalog.records<185 || r.catalog.brands<10 || !Array.isArray(r.staleRecords) || !Array.isArray(r.catalog.byBrand) || r.errors.length){process.exit(1)}"
+
+      - name: Validar bandeja maestra de electromovilidad e importación en seco
+        run: |
+          node scripts/rindelab-price-queue.cjs --check
+          node scripts/rindelab-price-queue.cjs --dry-run
+          node scripts/tests/rindelab-price-queue.test.cjs
 
       - name: Auditar cruce comercial con familias 3CV y exclusiones
         run: node scripts/audit-commercial-3cv-coverage.cjs --json=coverage-audit.json
