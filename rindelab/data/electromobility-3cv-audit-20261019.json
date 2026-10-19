@@ -1,0 +1,1075 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-19",
+  "baseCutoff": "2026-05-08",
+  "source": "https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx",
+  "scope": "Homologaciones 3CV con fecha nominal 2025-01-01 a 2026-10-19; NO equivalen a modelos vigentes ni a vehículos disponibles para venta.",
+  "exclusions": "Se excluyen fechas futuras y registros fuera del rango; se mantiene distinción EV/HEV/PHEV/REEV/MHEV.",
+  "records": 384,
+  "technologyCounts": {
+    "EV": 130,
+    "HEV": 32,
+    "PHEV": 84,
+    "REEV": 8,
+    "MHEV": 130
+  },
+  "brands": [
+    {
+      "brand": "Land Rover",
+      "records": 123,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 17,
+        "REEV": 0,
+        "MHEV": 106
+      },
+      "latestRecord": "2026-03-18",
+      "examples": [
+        "Defender 130 3.0iD S MHEV",
+        "Defender 130 3.0iD X-Dynamic SE MHEV",
+        "Defender 130 3.0iD X-Dynamic HSE MHEV",
+        "Defender 130 3.0iD X MHEV"
+      ]
+    },
+    {
+      "brand": "Audi",
+      "records": 18,
+      "technologies": {
+        "EV": 12,
+        "HEV": 0,
+        "PHEV": 2,
+        "REEV": 0,
+        "MHEV": 4
+      },
+      "latestRecord": "2026-02-27",
+      "examples": [
+        "New Q3 Sportback TFSI MHEV",
+        "New Q3 TFSI MHEV",
+        "A6 e-tron",
+        "A6 e-tron Avant"
+      ]
+    },
+    {
+      "brand": "Volvo",
+      "records": 16,
+      "technologies": {
+        "EV": 9,
+        "HEV": 0,
+        "PHEV": 7,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-03-20",
+      "examples": [
+        "EC40 P6 CORE",
+        "EC40 P6 PLUS",
+        "XC90 T8 AWD Ultra Dark",
+        "EX40 P8 ULTRA"
+      ]
+    },
+    {
+      "brand": "BMW",
+      "records": 15,
+      "technologies": {
+        "EV": 3,
+        "HEV": 0,
+        "PHEV": 12,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-25",
+      "examples": [
+        "330e Sedán",
+        "330e Berlina",
+        "X3 xDrive 30e",
+        "M5 Berlina"
+      ]
+    },
+    {
+      "brand": "Changan",
+      "records": 13,
+      "technologies": {
+        "EV": 4,
+        "HEV": 0,
+        "PHEV": 3,
+        "REEV": 6,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-13",
+      "examples": [
+        "Nevo Q05 EV",
+        "Avatr 07 REEV AWD",
+        "Avatr 07 REEV RWD",
+        "AVATR 11"
+      ]
+    },
+    {
+      "brand": "Porsche",
+      "records": 11,
+      "technologies": {
+        "EV": 7,
+        "HEV": 0,
+        "PHEV": 4,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-24",
+      "examples": [
+        "Macan GTS Electric",
+        "Panamera Turbo E-Hybrid G3",
+        "Cayenne E-Hybrid Coupe E3 II Black Edition",
+        "Cayenne V6 E-Hybrid E3 II Black Edition"
+      ]
+    },
+    {
+      "brand": "Toyota",
+      "records": 10,
+      "technologies": {
+        "EV": 3,
+        "HEV": 7,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-10",
+      "examples": [
+        "Hilux BEV",
+        "RAV4 2.5 HEV AWD",
+        "RAV4 2.5 HEV",
+        "Yaris SD 1.5 HEV"
+      ]
+    },
+    {
+      "brand": "Smart",
+      "records": 9,
+      "technologies": {
+        "EV": 9,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-15",
+      "examples": [
+        "Smart 5 Brabus",
+        "Smart 5 Pulse",
+        "Smart 5 Pro Plus",
+        "Smart 3 Pro Plus"
+      ]
+    },
+    {
+      "brand": "MG",
+      "records": 8,
+      "technologies": {
+        "EV": 5,
+        "HEV": 3,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-01-30",
+      "examples": [
+        "MG ZS Hybrid Lux",
+        "MG S5 EV",
+        "MG ZS Hybrid",
+        "Cyberster 77KWH 2WD"
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "records": 8,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 6
+      },
+      "latestRecord": "2026-03-10",
+      "examples": [
+        "Swift 1.2 ISG CVT",
+        "Swift 1.2 ISG MT",
+        "Across 1.5 ISG MT 2WD",
+        "Across 1.5 ISG AT 2WD"
+      ]
+    },
+    {
+      "brand": "BYD",
+      "records": 7,
+      "technologies": {
+        "EV": 4,
+        "HEV": 0,
+        "PHEV": 3,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-17",
+      "examples": [
+        "Dolphin Mini 5S GS",
+        "Dolphin Mini 5S GL",
+        "BYD ATTO 8 DM-i",
+        "BYD SEALION 7 GL"
+      ]
+    },
+    {
+      "brand": "Kia",
+      "records": 7,
+      "technologies": {
+        "EV": 2,
+        "HEV": 5,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-10",
+      "examples": [
+        "Carnival 1.6T 6AT HEV",
+        "Sportage 1.6T AT HEV",
+        "Sportage 1.6T AT HEV 2WD",
+        "Sorento 1.6T 6AT HEV AWD"
+      ]
+    },
+    {
+      "brand": "Chery",
+      "records": 6,
+      "technologies": {
+        "EV": 0,
+        "HEV": 2,
+        "PHEV": 4,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-04",
+      "examples": [
+        "Tiggo 8 Pro Max 1,5T GLX DHT PHEV",
+        "Tiggo 7 Pro Max 1,5T GLX DHT PHEV",
+        "Tiggo 9 1.5T DHT PHEV",
+        "Tiggo 9 1.5T DHT PHEV GLX"
+      ]
+    },
+    {
+      "brand": "Chevrolet",
+      "records": 6,
+      "technologies": {
+        "EV": 5,
+        "HEV": 0,
+        "PHEV": 1,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-11-04",
+      "examples": [
+        "Blazer EV eAWD",
+        "Captiva PHEV",
+        "Captiva EV",
+        "Spark EUV"
+      ]
+    },
+    {
+      "brand": "Mitsubishi",
+      "records": 6,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 6,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-11-25",
+      "examples": [
+        "New Outlander 2.4 PHEV 4X4 AT GLS Limited",
+        "New Outlander 2.4 PHEV 4X4 AT GLS",
+        "New Outlander 2.4 PHEV 4X4 AT GLX",
+        "Outlander PHEV 4x4 AT GLS Limited"
+      ]
+    },
+    {
+      "brand": "Tesla",
+      "records": 6,
+      "technologies": {
+        "EV": 6,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-08",
+      "examples": [
+        "Model 3 AWD Premium",
+        "Model Y RWD Premium",
+        "Model Y AWD Premium",
+        "Model 3 RWD Premium"
+      ]
+    },
+    {
+      "brand": "Great Wall",
+      "records": 5,
+      "technologies": {
+        "EV": 0,
+        "HEV": 2,
+        "PHEV": 3,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-04",
+      "examples": [
+        "New Haval H6 PHEV 4WD",
+        "New Haval H6 PHEV",
+        "P500 PHEV",
+        "New Haval H6 HEV"
+      ]
+    },
+    {
+      "brand": "Opel",
+      "records": 5,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 3
+      },
+      "latestRecord": "2025-12-26",
+      "examples": [
+        "New Mokka Electric GS",
+        "OPEL MOKKA MHEV 136 eDCT",
+        "Corsa Hybrid MHEV 100 eDCT",
+        "Corsa GS Hybrid MHEV 100 eDCT"
+      ]
+    },
+    {
+      "brand": "Skoda",
+      "records": 5,
+      "technologies": {
+        "EV": 3,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 2
+      },
+      "latestRecord": "2025-08-13",
+      "examples": [
+        "New Octavia 1.5 MHEV",
+        "Elroq 85",
+        "Enyaq 85",
+        "Enyaq Coupe 85"
+      ]
+    },
+    {
+      "brand": "Dongfeng",
+      "records": 4,
+      "technologies": {
+        "EV": 4,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-01-05",
+      "examples": [
+        "Vigo 51,9 kWh LR",
+        "Vigo EV 45,0 kWh SR",
+        "Vigo EV 45,0 kWh SR FULL",
+        "E70 EV 52.9KWH EU"
+      ]
+    },
+    {
+      "brand": "Geely",
+      "records": 4,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 2,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-10",
+      "examples": [
+        "EX5 eMi",
+        "EX5 EM-i 30Kw",
+        "EX2 EV",
+        "EX5 EV"
+      ]
+    },
+    {
+      "brand": "Hyundai",
+      "records": 4,
+      "technologies": {
+        "EV": 2,
+        "HEV": 2,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-03",
+      "examples": [
+        "Palisade LX3 2.5T-GDI HEV 6AT 8P 4WD E6c",
+        "Palisade LX3 2.5T-GDI HEV 6AT 7P 4WD E6c",
+        "Inster AX1 EV AT (Batería extendida)",
+        "Inster AX1 EV AT (Batería estándar)"
+      ]
+    },
+    {
+      "brand": "Jac",
+      "records": 4,
+      "technologies": {
+        "EV": 3,
+        "HEV": 0,
+        "PHEV": 1,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-17",
+      "examples": [
+        "Refine M3 EV AT",
+        "JS6 1.5 PHEV 5P DCT E6d",
+        "T9 EV 4WD",
+        "IGNITE30X"
+      ]
+    },
+    {
+      "brand": "Jaecoo",
+      "records": 4,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 3,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-01-07",
+      "examples": [
+        "Jaecoo8 1,5T AWD PHEV",
+        "Jaecoo8 1,5T AWD PHEV 6 Asientos",
+        "Jaecco5 EV",
+        "Jaecoo7 1,5T PHEV"
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "records": 4,
+      "technologies": {
+        "EV": 2,
+        "HEV": 2,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-03-13",
+      "examples": [
+        "RZ550e BEV",
+        "IS300h HEV",
+        "ES300h HEV",
+        "RZ450e BEV"
+      ]
+    },
+    {
+      "brand": "Mini",
+      "records": 4,
+      "technologies": {
+        "EV": 4,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-01-21",
+      "examples": [
+        "Cooper JCW E",
+        "Aceman JCW E",
+        "Aceman SE",
+        "Aceman E"
+      ]
+    },
+    {
+      "brand": "Peugeot",
+      "records": 4,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 2
+      },
+      "latestRecord": "2026-04-17",
+      "examples": [
+        "E3008 DUAL MOTOR",
+        "208 MHEV 100 eDCT",
+        "e-Traveller 8P 75 kW",
+        "308 MCA Hybrid MHEV eDCT"
+      ]
+    },
+    {
+      "brand": "Baic",
+      "records": 3,
+      "technologies": {
+        "EV": 2,
+        "HEV": 1,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-05",
+      "examples": [
+        "Beijing EU5 BS",
+        "BJ30 HEV",
+        "Baic EU5"
+      ]
+    },
+    {
+      "brand": "Bentley",
+      "records": 3,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 3,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-15",
+      "examples": [
+        "Continental GT PHEV",
+        "Continental GTC PHEV",
+        "Bentayga Hybrid"
+      ]
+    },
+    {
+      "brand": "Cupra",
+      "records": 3,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 1,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-08-06",
+      "examples": [
+        "Tavascan 82 kWh 286 CV RWD",
+        "Formentor PA 1.5 AT E-Hybrid 204 CV"
+      ]
+    },
+    {
+      "brand": "DFSK",
+      "records": 3,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 2,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-04",
+      "examples": [
+        "E5 Plus PHEV",
+        "EC75 EV AT",
+        "600 1,5L PHEV"
+      ]
+    },
+    {
+      "brand": "Honda",
+      "records": 3,
+      "technologies": {
+        "EV": 1,
+        "HEV": 2,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-15",
+      "examples": [
+        "ZR-V Hybrid",
+        "eNy1 Advance",
+        "CR-V Hybrid"
+      ]
+    },
+    {
+      "brand": "Leapmotor",
+      "records": 3,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 1,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-02",
+      "examples": [
+        "LPM B10 BEV - Life",
+        "LPM B10 BEV - Design",
+        "LPM C10 REEV"
+      ]
+    },
+    {
+      "brand": "Lynk Co",
+      "records": 3,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 2,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-11-05",
+      "examples": [
+        "01 PHEV",
+        "LYNK CO 02",
+        "08 PHEV"
+      ]
+    },
+    {
+      "brand": "M. Benz",
+      "records": 3,
+      "technologies": {
+        "EV": 3,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-12",
+      "examples": [
+        "eSprinter 320",
+        "EQE 350 PLUS",
+        "eVito 112"
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "records": 3,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 1,
+        "REEV": 0,
+        "MHEV": 2
+      },
+      "latestRecord": "2025-12-19",
+      "examples": [
+        "CX-60 2.5 PHEV AT AWD",
+        "CX-60 3.3 MHEV AT AWD",
+        "Mazda CX-90 MHEV"
+      ]
+    },
+    {
+      "brand": "Omoda",
+      "records": 3,
+      "technologies": {
+        "EV": 1,
+        "HEV": 1,
+        "PHEV": 1,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-29",
+      "examples": [
+        "C5 1.5T HEV",
+        "C7 1.5T PHEV",
+        "Omoda E5 EV"
+      ]
+    },
+    {
+      "brand": "DFM",
+      "records": 2,
+      "technologies": {
+        "EV": 1,
+        "HEV": 1,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-01-22",
+      "examples": [
+        "MAGE EV",
+        "T5 EVO HEV"
+      ]
+    },
+    {
+      "brand": "DS",
+      "records": 2,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 2
+      },
+      "latestRecord": "2025-09-12",
+      "examples": [
+        "DS3 MHEV eDCT",
+        "DS4 Hybrid MHEV eDCT"
+      ]
+    },
+    {
+      "brand": "Eveasy",
+      "records": 2,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-04-13",
+      "examples": [
+        "NEW EV3",
+        "EV3 SE"
+      ]
+    },
+    {
+      "brand": "Farizon",
+      "records": 2,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-07-23",
+      "examples": [
+        "Supervan",
+        "SuperVan 3A"
+      ]
+    },
+    {
+      "brand": "Ferrari",
+      "records": 2,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 2,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-04",
+      "examples": [
+        "296 GTS",
+        "296 GTB"
+      ]
+    },
+    {
+      "brand": "Foton",
+      "records": 2,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-16",
+      "examples": [
+        "G7 EV PLUS",
+        "G7 EV Pro"
+      ]
+    },
+    {
+      "brand": "Jeep",
+      "records": 2,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-08-11",
+      "examples": [
+        "AVENGER SUMMIT BEV",
+        "Avenger e"
+      ]
+    },
+    {
+      "brand": "Jetour",
+      "records": 2,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 2,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-29",
+      "examples": [
+        "T1 iDM 1.5T PHEV",
+        "T2 1.5T PHEV"
+      ]
+    },
+    {
+      "brand": "Renault",
+      "records": 2,
+      "technologies": {
+        "EV": 1,
+        "HEV": 1,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-05-27",
+      "examples": [
+        "Koleos 1.5T HEV",
+        "KWID E-TECH"
+      ]
+    },
+    {
+      "brand": "Riddara",
+      "records": 2,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 1,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-12-03",
+      "examples": [
+        "RD6 Pick Up 73kWh",
+        "RD6 Pick Up PHEV"
+      ]
+    },
+    {
+      "brand": "Subaru",
+      "records": 2,
+      "technologies": {
+        "EV": 0,
+        "HEV": 2,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-09-23",
+      "examples": [
+        "Crosstrek",
+        "Forester 2.5 HEV"
+      ]
+    },
+    {
+      "brand": "ZNA",
+      "records": 2,
+      "technologies": {
+        "EV": 2,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-01-03",
+      "examples": [
+        "R7 EV 4x4",
+        "R7 EV 2WD"
+      ]
+    },
+    {
+      "brand": "Alfa Romeo",
+      "records": 1,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 1
+      },
+      "latestRecord": "2025-07-02",
+      "examples": [
+        "Tonale MHEV"
+      ]
+    },
+    {
+      "brand": "Citroen",
+      "records": 1,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 1
+      },
+      "latestRecord": "2025-05-12",
+      "examples": [
+        "C4 Hybrid MHEV eDCT"
+      ]
+    },
+    {
+      "brand": "Exeed Born For More",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-02-10",
+      "examples": [
+        "EXLANTIX ES BEV AWD"
+      ]
+    },
+    {
+      "brand": "Fiat",
+      "records": 1,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 1
+      },
+      "latestRecord": "2026-04-09",
+      "examples": [
+        "600 ICON MHEV"
+      ]
+    },
+    {
+      "brand": "Ford",
+      "records": 1,
+      "technologies": {
+        "EV": 0,
+        "HEV": 1,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-09-01",
+      "examples": [
+        "Territory FHEV (CX743) 1.5 AT"
+      ]
+    },
+    {
+      "brand": "KGM",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-08-25",
+      "examples": [
+        "Torres EVX"
+      ]
+    },
+    {
+      "brand": "Landking",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-01-03",
+      "examples": [
+        "LK5 EV"
+      ]
+    },
+    {
+      "brand": "Livan",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-01-02",
+      "examples": [
+        "RL7 T0"
+      ]
+    },
+    {
+      "brand": "Maserati",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-06-04",
+      "examples": [
+        "Grecale Folgore"
+      ]
+    },
+    {
+      "brand": "Maxus",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-07-21",
+      "examples": [
+        "T90 EV 4x4 AT DC"
+      ]
+    },
+    {
+      "brand": "Neta",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-05-26",
+      "examples": [
+        "Neta X"
+      ]
+    },
+    {
+      "brand": "Soueast",
+      "records": 1,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 1,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2026-03-12",
+      "examples": [
+        "S06 DM"
+      ]
+    },
+    {
+      "brand": "SWM",
+      "records": 1,
+      "technologies": {
+        "EV": 0,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 1,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-08-13",
+      "examples": [
+        "G03F EDI 1.5 REEV AT E6e"
+      ]
+    },
+    {
+      "brand": "Volkswagen",
+      "records": 1,
+      "technologies": {
+        "EV": 1,
+        "HEV": 0,
+        "PHEV": 0,
+        "REEV": 0,
+        "MHEV": 0
+      },
+      "latestRecord": "2025-06-23",
+      "examples": [
+        "ID.4 Pro 77kWh"
+      ]
+    }
+  ]
+}
