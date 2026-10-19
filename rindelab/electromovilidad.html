@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="RINDELAB Electromovilidad: consulta precios de lista documentados de autos eléctricos, híbridos y de autonomía extendida en Chile, con fuentes y brechas de cobertura transparentes.">
+<meta name="author" content="Sebastián Elgueta Godoy">
+<link rel="canonical" href="https://selguetagodoy.github.io/rindelab/electromovilidad.html">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./electromovilidad.css?v=20261019-electro1">
+<script src="./electromovilidad.js?v=20261019-electro1" defer></script>
+<title>Electromovilidad en Chile | RINDELAB</title>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./index.html">RINDE<span>LAB</span></a><nav aria-label="Secciones de RINDELAB"><a href="./index.html#buscador">Buscar</a><a href="./cotizador.html">Cotizador</a><a href="./marcas.html">Marcas</a><a aria-current="page" href="./electromovilidad.html">Electromovilidad</a></nav></div></header>
+<main class="wrap">
+<section class="intro">
+<p class="eyebrow">RINDELAB · INTELIGENCIA VEHICULAR</p>
+<h1>Electromovilidad en Chile</h1>
+<p>Compara precios de lista documentados por versión de vehículos eléctricos e híbridos. Los importes son valores publicados sin bonos; <strong>no garantizan precio de venta ni stock</strong>.</p>
+</section>
+<section class="metrics" aria-label="Cobertura documental">
+<div><strong id="mPrices">—</strong><span>Precios electrificados documentados</span></div>
+<div><strong id="mBrands">—</strong><span>Marcas con precios electrificados</span></div>
+<div><strong id="mRecords">—</strong><span>Homologaciones 3CV recientes*</span></div>
+</section>
+<section class="panel" aria-labelledby="pricesTitle">
+<div class="section-head"><div><p class="eyebrow">COTIZACIÓN DOCUMENTAL</p><h2 id="pricesTitle">Precios de lista por tecnología</h2></div><p class="status" id="electroStatus" role="status">Cargando precios…</p></div>
+<div class="filters">
+<div class="field"><label for="eSearch">Marca, modelo o versión</label><input id="eSearch" type="search" placeholder="Ej. B10, EV5, EX30, Yaris Cross"></div>
+<div class="field"><label for="eTech">Tecnología</label><select id="eTech"><option value="">Todas las electrificadas</option><option value="EV">100 % eléctricos</option><option value="HEV">Híbridos no enchufables</option><option value="PHEV">Híbridos enchufables</option><option value="REEV">Eléctricos con extensor</option><option value="MHEV">Híbridos suaves</option></select></div>
+<div class="field"><label for="eBrand">Marca</label><select id="eBrand"><option value="">Todas las marcas</option></select></div>
+<div class="field"><label for="eSort">Ordenar por</label><select id="eSort"><option value="low">Precio menor</option><option value="high">Precio mayor</option><option value="brand">Marca</option><option value="recent">Fecha de revisión</option></select></div>
+</div>
+<div class="table-wrap"><table aria-label="Precios de lista electrificados"><thead><tr><th>Vehículo / versión</th><th>Tecnología</th><th>Precio lista</th><th>Fuente y fecha</th></tr></thead><tbody id="electroRows"><tr><td colspan="4">Consultando datos…</td></tr></tbody></table></div>
+<div class="table-foot"><span id="electroShowing" aria-live="polite">—</span><button id="eMore" type="button" hidden>Ver más</button></div>
+</section>
+<section class="method" aria-labelledby="methodTitle">
+<h2 id="methodTitle">Qué mide esta cobertura</h2>
+<p>*El registro 3CV corresponde a fichas con fecha nominal entre el 1 de enero de 2025 y el 19 de octubre de 2026, extraídas del archivo oficial de mayo de 2026. No es un censo de modelos comercializados ni certifica equivalencias de versiones.</p>
+<p>Los precios comerciales se vinculan únicamente a la versión que figura en la fuente. La tecnología fue clasificada cuando existe identificación documental; las versiones sin clasificación comprobada se mantienen fuera de esta lista y siguen disponibles en el <a href="./cotizador.html">cotizador general</a>. <strong>No calculamos porcentaje de cobertura del mercado</strong> sin un padrón verificable de la oferta activa.</p>
+<p><a href="./data/electromobility-3cv-audit-20261019.json" target="_blank" rel="noopener noreferrer">Revisar auditoría de homologaciones ↗</a> · <a href="./sii/commercial-2026.json" target="_blank" rel="noopener noreferrer">Revisar catálogo de precios y fuentes ↗</a></p>
+</section>
+<section class="panel gap-table" aria-labelledby="gapTitle">
+<div class="section-head"><div><p class="eyebrow">BRECHAS DOCUMENTALES</p><h2 id="gapTitle">Homologaciones electrificadas por marca</h2></div><p class="status" id="gapStatus" role="status">Cargando auditoría…</p></div>
+<p class="gap-note">La tabla permite priorizar investigación. Una marca sin precios electrificados en RINDELAB no implica falta de vehículos a la venta. Tampoco supone que todas las versiones homologadas sigan vigentes.</p>
+<div class="table-wrap"><table aria-label="Brechas documentales por marca"><thead><tr><th>Marca 3CV</th><th>Homologaciones recientes</th><th>Precios electrificados</th><th>Estado</th></tr></thead><tbody id="gapRows"><tr><td colspan="4">Calculando…</td></tr></tbody></table></div>
+<div class="table-foot"><span>Revisión histórica, no equivalencia técnica individual.</span><button id="gapMore" type="button" hidden>Mostrar todas las marcas</button></div>
+</section>
+<footer>RINDELAB · Investigación independiente de Sebastián Elgueta Godoy · <a href="./metodologia.html">Metodología</a></footer>
+</main>
+</body>
+</html>
