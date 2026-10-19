@@ -49,7 +49,7 @@ const frag=document.createDocumentFragment();for(const b of visible){
  const tr=document.createElement('tr');tr.append(td(b.brand),td(num(b.homologationRecords),'num'),td(num(b.priceCount),'num'),td(b.priceCount?'Precio documentado':'Sin precio documentado',b.priceCount?'ready':'pending'));frag.append(tr);
 }
 if(!visible.length){const tr=document.createElement('tr'),cell=td('No hay marcas con esos filtros.');cell.colSpan=4;tr.append(cell);frag.append(tr);}
-$('brandRows').append(frag);$('brandCount').textContent=num(visible.length)+' de '+num(all.length)+' marcas del corte 3CV';
+$('brandRows').append(frag);$('brandCount').textContent=num(visible.length)+' de '+num(all.length)+' marcas agrupadas del corte 3CV';
 }
 $('brandSearch').addEventListener('input',render);$('brandStatus').addEventListener('change',render);
 $('exportBrands').addEventListener('click',()=>{
@@ -60,10 +60,17 @@ $('exportBrands').addEventListener('click',()=>{
 Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261019-list252').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
  if(!m||m.records!==8053||!Array.isArray(m.brands)||!Array.isArray(prices))throw Error('Fuentes incompletas');
  const by=new Map();for(const p of prices){const k=norm(p.brand);by.set(k,(by.get(k)||0)+1);}
- const known=new Set(m.brands.map(x=>norm(x.brand)));all=m.brands.map(b=>({...b,priceCount:by.get(norm(b.brand))||0}));
+ const canonical=new Map();
+ for(const item of m.brands){
+  const k=norm(item.brand),old=canonical.get(k);
+  if(old){old.homologationRecords+=item.homologationRecords;if(item.brand==='Leapmotor')old.brand='Leapmotor';}
+  else canonical.set(k,{...item});
+ }
+ const known=new Set(canonical.keys());
+ all=[...canonical.values()].map(b=>({...b,priceCount:by.get(norm(b.brand))||0}));
  for(const p of prices)if(!known.has(norm(p.brand))){known.add(norm(p.brand));all.push({brand:p.brand,homologationRecords:0,priceCount:by.get(norm(p.brand))||0});}
  all.sort((a,b)=>a.brand.localeCompare(b.brand,'es'));
- $('metricBrands').textContent=num(m.brands.length);$('metricCovered').textContent=num(all.filter(x=>x.priceCount>0).length);$('metricPrices').textContent=num(prices.length);render();
+ $('metricBrands').textContent=num(canonical.size);$('metricCovered').textContent=num(all.filter(x=>x.priceCount>0).length);$('metricPrices').textContent=num(prices.length);render();
 }).catch(e=>{$('brandRows').replaceChildren();const tr=document.createElement('tr'),t=td('No fue posible cargar el inventario: '+e.message);t.colSpan=4;tr.append(t);$('brandRows').append(tr);$('brandCount').textContent='Consulta las fuentes originales para verificar cobertura';});
 })();
 </script></body></html>
