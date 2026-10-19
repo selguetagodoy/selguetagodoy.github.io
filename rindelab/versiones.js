@@ -120,7 +120,7 @@ async function load(){
  try{
   if(!window.RindelabVersionAudit||!window.RindelabCoverage)throw Error('Cotejo de versiones no disponible');
   const [prices,manifest,notes,manufacturer]=await Promise.all([
-   fetch('./sii/commercial-2026.json?v=20261019-cotejo280').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}),
+   fetch('./sii/commercial-2026.json?v=20261019-cotejo347').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}),
    fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('Manifiesto 3CV no disponible');return r.json();}),
    fetch('./sii/review-notes-2026.json?v=20261018-qa1').then(r=>{if(!r.ok)throw Error('Registro de discrepancias no disponible');return r.json();}),
    fetch('./sii/manufacturer-evidence-2026.json?v=20261018-sources1').then(r=>{if(!r.ok)throw Error('Evidencia de fabricantes no disponible');return r.json();})
