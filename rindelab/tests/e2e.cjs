@@ -660,6 +660,20 @@ await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercia
  assert.equal(list.find(x=>x.brand==='Mitsubishi'&&x.family==='Outlander PHEV')?.priceListClp,42990000);
  assert.equal(list.find(x=>x.brand==='KGM'&&x.family==='Torres HEV')?.priceListClp,32990000);
 });
+await test('Modelos nuevos: familias Outlander PHEV/Sport y Torres HEV independientes',async()=>{
+ const grouped=await page.evaluate(()=>{
+  const family=window.RindelabSII.family;
+  const models=[['Mitsubishi','Outlander PHEV 2.4'],['Mitsubishi','Outlander Sport GLX'],['Mitsubishi','Outlander GL'],['Mitsubishi','Eclipse Cross RX'],['KGM','Torres HEV'],['KGM','Actyon DLX']];
+  return models.map(x=>family(x));
+ });
+ assert.deepEqual(grouped,['Outlander PHEV','Outlander Sport','Outlander','Eclipse Cross','Torres HEV','Actyon']);
+ const matches=await page.evaluate(()=>{
+  const m=window.RindelabCoverage?.matches;
+  return m?[m('Mitsubishi','Outlander',['Mitsubishi','Outlander PHEV 2.4']),m('Mitsubishi','Outlander Sport',['Mitsubishi','Outlander Sport GLX']),m('KGM','Torres HEV',['KGM','Torres HEV'])]:null;
+ });
+ // El motor de cobertura puede cargarse en una página separada, nunca se infiere equivalencia 3CV.
+ if(matches!==null)assert.deepEqual(matches,[false,true,true]);
+});
 await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar ciclos ni motorizaciones',async()=>{
  const entries=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list212').then(r=>r.json()));
  const fresh=entries.filter(x=>x.checkedAt==='2026-10-18'&&['Great Wall','BYD','Changan'].includes(x.brand));
