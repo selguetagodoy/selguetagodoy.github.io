@@ -1,0 +1,113 @@
+[
+  {
+    "brand": "BMW",
+    "family": "Serie 4 Gran Coupé",
+    "version": "420i Gran Coupé Dynamic LCI II",
+    "modelYear": null,
+    "priceListClp": 52900000,
+    "source": "https://www.bmw.cl/modelos/4-gran-coupe",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 7",
+    "version": "750e Berlina Pure Excellence",
+    "modelYear": null,
+    "priceListClp": 175900000,
+    "source": "https://www.bmw.cl/modelos/7",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "technology": "PHEV",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 4 Convertible",
+    "version": "420i Cabriolet Dynamic LCI II",
+    "modelYear": null,
+    "priceListClp": 59900000,
+    "source": "https://www.bmw.cl/modelos/4-convertible",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 4 Convertible",
+    "version": "M440i xDrive Cabriolet LCI II",
+    "modelYear": null,
+    "priceListClp": 89900000,
+    "source": "https://www.bmw.cl/modelos/4-convertible",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 3",
+    "version": "330e Berlina Dynamic LCI II",
+    "modelYear": null,
+    "priceListClp": 65900000,
+    "source": "https://www.bmw.cl/modelos/3-hibrido",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "technology": "PHEV",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "X3",
+    "version": "X3 30e xDrive Heritage",
+    "modelYear": null,
+    "priceListClp": 78900000,
+    "source": "https://www.bmw.cl/modelos/x3-hibrido",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "technology": "PHEV",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "X5 M",
+    "version": "X5 M Competition LCI",
+    "modelYear": null,
+    "priceListClp": 185900000,
+    "source": "https://www.bmw.cl/modelos/x5-m",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "M240i",
+    "version": "M240i xDrive Coupé LCI",
+    "modelYear": null,
+    "priceListClp": 70900000,
+    "source": "https://www.bmw.cl/modelos/m240i",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "BMW",
+    "family": "M135i",
+    "version": "M135 xDrive Hatch",
+    "modelYear": null,
+    "priceListClp": 59900000,
+    "source": "https://www.bmw.cl/modelos/m135i",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio lista literal BMW Chile distinto de bono/financiamiento, revisado 19/10/2026; campaña 2026-10-31",
+    "sourceOfferEnd": "2026-10-31"
+  }
+]
