@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es-CL"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<meta name="description" content="Matriz de trabajo RINDELAB para investigar y documentar precios oficiales de electromovilidad a partir de fichas 3CV. No es el catálogo comercial.">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./pendientes-electromovilidad.css?v=20261019-matriz1">
+<script src="./pendientes-electromovilidad.js?v=20261019-matriz1" defer></script>
+<title>Matriz de pendientes | RINDELAB</title>
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./index.html">RINDE<span>LAB</span></a><nav><a href="./electromovilidad.html">Electromovilidad</a><a href="./cotizador.html">Cotizador</a><a href="./marcas.html">Marcas</a></nav></div></header>
+<main class="wrap">
+<p class="eyebrow">RINDELAB · TABLA DE TRABAJO DOCUMENTAL</p>
+<h1>Matriz de revisión de precios</h1>
+<p class="lead">Un solo listado para investigar, registrar la fuente y validar precios por versión antes de integrarlos al catálogo. Los nombres proceden del archivo histórico oficial 3CV; <strong>no representan necesariamente vehículos hoy a la venta ni precios faltantes confirmados</strong>.</p>
+<section class="stats" aria-label="Estado de trabajo"><div><strong id="total">—</strong><span>Denominaciones por revisar</span></div><div><strong id="priority">—</strong><span>Prioridad de marcas solicitadas</span></div><div><strong id="ready">—</strong><span>Listas para migración</span></div><div><strong id="loaded">—</strong><span>Ya migradas</span></div></section>
+<section class="panel">
+<div class="controls">
+<label>Buscar marca o modelo<input type="search" id="q" placeholder="Ej. ORA, B10, JAC, MG4, Nammi"></label>
+<label>Marca / grupo<select id="brand"><option value="">Todas</option></select></label>
+<label>Tecnología<select id="tech"><option value="">Todas</option><option>EV</option><option>HEV</option><option>MHEV</option><option>PHEV</option><option>REEV</option></select></label>
+<label>Estado<select id="state"><option value="">Todos</option><option value="pendiente_revision">Pendiente</option><option value="en_busqueda">En búsqueda</option><option value="fuente_encontrada">Fuente encontrada</option><option value="sin_precio_publicado">Sin precio publicado</option><option value="listo_para_importar">Listo para importar</option><option value="ya_importado">Importado</option><option value="fuera_de_alcance">Fuera de alcance</option></select></label>
+<label>Prioridad<select id="level"><option value="">Todas</option><option value="A">Marcas solicitadas</option><option value="B">Eléctricos recientes</option><option value="C">Híbridos recientes</option><option value="D">Eléctricos históricos</option><option value="E">Híbridos históricos</option><option value="F">Fechas futuras</option></select></label>
+</div>
+<div class="actions"><span id="status" role="status" aria-live="polite">Cargando matriz…</span><a id="download" href="./sii/bandeja-precios-electromovilidad.csv" download="rindelab-bandeja-precios-electromovilidad.csv">Descargar tabla CSV ↗</a></div>
+<div class="scroll"><table><thead><tr><th>Prioridad</th><th>Marca 3CV / grupo</th><th>Denominación técnica 3CV</th><th>Motorización</th><th>Última ficha</th><th>Estado de búsqueda</th><th>Precio oficial</th></tr></thead><tbody id="rows"><tr><td colspan="7">Cargando…</td></tr></tbody></table></div>
+<div class="foot"><span id="shown"></span><button type="button" id="more" hidden>Mostrar 50 más</button></div>
+</section>
+<section class="method">
+<h2>Cómo se completa</h2>
+<p>Se revisa la marca y el modelo en su fuente oficial; se identifica la versión comercial exacta y el precio explícito de lista, sin bonos, y se registran URL, fecha de consulta y evidencia. Solo después de verificar la ficha se cambia su estado a <strong>listo_para_importar</strong>. La migración valida campos, fuentes y duplicados antes de actualizar el catálogo público.</p>
+<p>Esta matriz funciona como herramienta editorial, no como listado de precios disponibles. Un modelo puede tener un precio publicado en el cotizador y seguir pendiente de cotejo con una ficha 3CV. Por eso el estado inicial de las fichas es «pendiente», incluso cuando la marca ya tenga precios comerciales.</p>
+<p><a href="./sii/commercial-2026.json" target="_blank" rel="noopener noreferrer">Catálogo público documentado ↗</a> · <a href="./metodologia.html">Metodología ↗</a></p>
+</section>
+<footer>RINDELAB · Investigación independiente · Registro 3CV, corte mayo 2026</footer>
+</main></body></html>
