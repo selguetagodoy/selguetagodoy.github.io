@@ -7,6 +7,11 @@
  'use strict';
  const normalized=value=>String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').replace(/\s+/g,' ').trim();
  const special={
+  'Mitsubishi|Outlander':/^OUTLANDER(?! (?:SPORT|P ?HEV))(?= |$)/,
+  'Mitsubishi|Outlander Sport':/^OUTLANDER SPORT(?= |$)/,
+  'Mitsubishi|Outlander PHEV':/^OUTLANDER P ?HEV(?= |$)/,
+  'Mitsubishi|Eclipse Cross':/^ECLIPSE CROSS(?= |$)/,
+  'KGM|Torres HEV':/^TORRES (?:HEV|HYBRID)(?= |$)/,
   'Toyota|Corolla Cross':/^COROLLA CROSS(?= |$)/,
   'Toyota|Corolla Sedán':/^COROLLA (?:SD|SEDAN)(?= |$)/,
   'Toyota|Yaris':/^YARIS(?! CROSS)(?= |$)/,

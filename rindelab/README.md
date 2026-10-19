@@ -29,7 +29,7 @@ Se normalizaron fuentes tipográficas y pesos en las vistas documentales `sii/si
 ## Cotizador comercial y directorio de tarifas (18 de octubre de 2026)
 
 ### Cotizador de autos nuevos
-El módulo público `rindelab/cotizador.html` utiliza las **185 versiones comerciales documentadas de 17 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
+El módulo público `rindelab/cotizador.html` utiliza las **212 versiones comerciales documentadas de 22 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
 
 La opción de financiamiento es estrictamente matemática y optativa: no calcula una cuota si no se ingresa una tasa nominal anual; el cálculo usa tasa nominal/12, pie y meses de plazo, sin simular CAE, seguros ni gastos contractuales. No hay precotización del banco ni solicitud de datos personales. Únicamente se enlazan cotizadores de fabricante explícitamente comprobados (Hyundai y Changan); el resto dispone de enlace a su fuente oficial verificable. La elección de una versión comercial no adjudica un código 3CV ni un registro SII: ambos requieren evidencia y selección independientes.
 
@@ -161,7 +161,7 @@ Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Pl
 
 La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examinar el grado de **coincidencia nominal por marca y familia** entre el catálogo documental de precios de lista y las fichas de homologación disponibles en el corte oficial 3CV del 08/05/2026. No altera el buscador principal ni las bases oficiales.
 
-- **Denominador comercial:** 185 precios de lista asociados a 66 familias, correspondientes únicamente a las 17 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
+- **Denominador comercial:** 212 precios de lista asociados a 75 familias, correspondientes únicamente a las 22 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
 - **Resultado de cobertura nominal:** cada familia comercial registra la cantidad de fichas 3CV cuyo nombre y marca pueden corresponderle, bajo reglas explícitas y comprobables. Los filtros permiten revisar casos con y sin coincidencia y descargar la tabla filtrada como CSV.
 - **No hay emparejamiento automático de versiones.** Una coincidencia de familia puede mezclar generaciones, tracción, combustible, baterías, tecnología o transmisiones diferentes; en esta fase no se certifica ninguna equivalencia técnica entre versiones ni su disponibilidad comercial.
 - **Reglas de exclusión documentadas:** Mazda CX-3 no confunde CX-30; Creta no absorbe Creta Grand; Hunter diésel excluye Hunter E/EREV; Yaris no absorbe Yaris Cross; Corolla Sedán no absorbe Corolla Cross; CS55 Plus no se equipara a CS55 de otra generación.
@@ -179,7 +179,7 @@ La ampliación multimarca del 18/10/2026 agrega **30 precios de lista separados 
 
 ## Segunda capa: cotejo exploratorio por versión comercial (octubre de 2026)
 
-La página [Revisión por versión](./versiones.html) examina las 185 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
+La página [Revisión por versión](./versiones.html) examina las 212 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
 
 Se extraen únicamente rasgos **expresos** del nombre comercial: tecnología cuando se declara, cilindrada decimal, transmisión manual o categoría amplia automática, tracción y algunos códigos de generación. Se contrastan con tecnología, cilindrada, transmisión, tracción, combustible y modelo originales del 3CV.
 
@@ -297,3 +297,7 @@ Los [cuatro archivos de captura API](./data/) contienen los 272 registros origin
 Ejemplos comprobados: **Changan Deepal S05 REEV** (`CN10637E60826S00-7`) ofrece 21,3 km/L y 6,0 km/kWh; Mazda CX-5 2.5 AWD (`MZ10672T3C0926S00-9`) tiene 12,3 km/L bajo WLTP y homologación del 13/10; Chery Tiggo 7 CSH (`CY10666E60926S00-9`) tiene 17,5 km/L al mismo corte. Los cálculos de PHEV/REEV no producen costo energético combinado, puesto que requieren proporción verificable de uso de combustible y electricidad.
 
 El control `node scripts/audit-official-api-october-2026.cjs --json=official-api-october-audit.json` valida integración íntegra, 254 + 18 ciclos, códigos únicos, antigüedad, dimensiones, métricas oficiales, correspondencia de 228 casos MTT, la excepción pendiente y ninguna modificación de las fichas de mayo. La interfaz continúa mostrando las fuentes de ambas épocas y el ciclo por vehículo para evitar comparaciones erróneas.
+
+
+### Ampliación de precios — 18/10/2026
+Se añadieron 27 versiones comerciales de cinco marcas sin cobertura previa: Mitsubishi (13, Outlander, Outlander Sport, Eclipse Cross y Outlander PHEV); Peugeot (3, 208); Fiat (4, Pulse); Jeep (2, Renegade) y KGM (5, Actyon y Torres HEV). Los precios de lista nuevos, sin bonos, se documentan con fecha y enlace a la ficha publicada por el fabricante o distribuidor oficial. Los modelos y versiones se eligen manualmente; no se cruzan de manera automática con homologaciones 3CV ni con tasaciones fiscales de usados. Catálogo actual: 212 precios, 22 marcas y 75 familias. Vigencia y disponibilidad deben reconfirmarse antes de comprar.
