@@ -1,0 +1,52 @@
+/* La portada comienza como buscador, sin abrumar con tarifas o metodología. */
+const {chromium}=require('playwright'),assert=require('node:assert/strict');
+(async()=>{
+ const base=process.env.RINDELAB_BASE_URL||'http://127.0.0.1:8765/rindelab/';
+ const browser=await chromium.launch(process.platform==='win32'?{channel:'chrome',headless:true}:{headless:true,args:['--no-sandbox']});
+ let passed=0;
+ for(const width of [320,390,768,1440]){
+  const page=await browser.newPage({viewport:{width,height:850},isMobile:width<=390,hasTouch:width<=390});
+  const failures=[];page.on('pageerror',e=>failures.push(e.message));
+  const resp=await page.goto(base,{waitUntil:'domcontentloaded',timeout:30000});
+  assert.equal(resp.status(),200);
+  await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325'&&document.querySelector('#searchButton')?.disabled===false,{timeout:30000});
+  assert.equal(await page.locator('#supuestos').evaluate(el=>el.open),false,'Scenario initially expanded');
+  assert.equal(await page.locator('#scenarioAdvanced').evaluate(el=>el.open),false,'Advanced initially expanded');
+  assert.equal(await page.locator('#annualKm').isVisible(),false,'Controls clutter the initial page');
+  assert.equal(await page.locator('#fuentes .source-body').count(),0,'Full methodology still in homepage');
+  assert(await page.locator('#fuentes a[href="./metodologia.html"]').isVisible());
+  assert(await page.locator('#buscador').isVisible());
+  const m=await page.evaluate(()=>({doc:document.documentElement.scrollWidth,width:innerWidth,drawerHeight:Math.round(document.querySelector('#supuestos').getBoundingClientRect().height),sourceHeight:Math.round(document.querySelector('#fuentes').getBoundingClientRect().height)}));
+  assert(m.doc<=m.width+3,JSON.stringify(m));
+  assert(m.drawerHeight<130&&m.sourceHeight<200,'Scenario still too tall '+JSON.stringify(m));
+  await page.locator('#scenarioAdjust').click();
+  assert.equal(await page.locator('#supuestos').evaluate(el=>el.open),true,'Anchor failed to open scenario');
+  assert(await page.locator('#annualKm').isVisible());
+  assert(await page.locator('#chargeScenario').isVisible());
+  assert.equal(await page.locator('#scenarioAdvanced').evaluate(el=>el.open),false,'Advanced should remain collapsed');
+  await page.selectOption('#annualKm','20000');
+  assert.match(await page.locator('#scenarioSummaryText').textContent(),/20\.000 km al año/);
+  await page.selectOption('#chargeScenario','home');
+  assert(await page.locator('#scenarioAdvanced').evaluate(el=>el.open),'Home mode advanced settings not revealed');
+  assert(await page.locator('#homeChargeField').isVisible());
+  assert.deepEqual(failures,[]);
+  console.log('PASS '+width+'px — inicio limpio, navegación progresiva, cálculo y enlaces');
+  passed++;
+  await page.close();
+ }
+ const deep=await browser.newPage({viewport:{width:1280,height:850}});
+ await deep.goto(base+'#supuestos',{waitUntil:'domcontentloaded'});
+ await deep.waitForFunction(()=>document.querySelector('#supuestos')?.open,{timeout:8000});
+ console.log('PASS enlace directo a #supuestos abre controles');passed++;
+ await deep.close();
+ const method=await browser.newPage({viewport:{width:1280,height:850}});
+ const doc=await method.goto(base+'metodologia.html',{waitUntil:'domcontentloaded'});
+ assert.equal(doc.status(),200);
+ const content=await method.locator('#fuentes').textContent();
+ for(const term of ['Datos oficiales.','Estimación energética.','Comparabilidad.','Tasación fiscal y permiso.','Precios de lista.','Nómina MTT septiembre 2026.','Trazabilidad.'])assert(content.includes(term),'Missing '+term);
+ assert(await method.locator('a[href="./index.html#supuestos"]').count()>0);
+ console.log('PASS metodología completa trasladada a página propia');passed++;
+ await method.close();
+ await browser.close();
+ console.log(passed+' pruebas de claridad aprobadas');
+})().catch(e=>{console.error('FAIL '+e.stack);process.exit(1)});

@@ -25,17 +25,16 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert.match(credit,/CC BY/);
   assert((await p.locator('.vehicle-photo img').first().getAttribute('alt')).includes('no acredita'));
  });
- await check('Cambiar carga pública, en casa y mixta usa el cálculo existente',async()=>{
-  await p.locator('[data-scenario-mode="home"]').click();
+ await check('El escenario desplegable mantiene las tarifas y cálculos originales',async()=>{
+  await p.locator('#supuestos').evaluate(el=>el.open=true);
+  await p.selectOption('#chargeScenario','home');
   assert.equal(await p.inputValue('#chargeScenario'),'home');
+  assert(await p.locator('#scenarioAdvanced').evaluate(el=>el.open));
   assert(await p.locator('#homeChargeField').isVisible());
   assert.equal(await p.inputValue('#electricPrice'),'');
-  assert.equal(await p.locator('[data-scenario-mode="home"]').getAttribute('aria-pressed'),'true');
-  await p.locator('[data-scenario-mode="mixed"]').click();
-  assert.equal(await p.inputValue('#chargeScenario'),'mixed');
+  await p.selectOption('#chargeScenario','mixed');
   assert(await p.locator('#homeShareField').isVisible());
-  await p.locator('[data-scenario-mode="public"]').click();
-  assert.equal(await p.inputValue('#chargeScenario'),'public');
+  await p.selectOption('#chargeScenario','public');
   assert.equal(await p.inputValue('#electricPrice'),'340');
  });
  await check('BYD Dolphin Mini muestra imagen local con atribución',async()=>{

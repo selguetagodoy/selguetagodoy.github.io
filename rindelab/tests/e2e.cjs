@@ -23,6 +23,9 @@ async function open(width,height){
  const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));page.on('console',m=>{if(m.type()==='error')errors.push('Console: '+m.text())});
  const r=await page.goto(base,{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
  await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325' && document.querySelector('#searchButton')?.disabled===false,{timeout:25000});
+ // Los tests del motor abren explícitamente los ajustes; la interfaz real comienza plegada.
+ await page.locator('#supuestos').evaluate(el=>el.open=true);
+ await page.locator('#scenarioAdvanced').evaluate(el=>el.open=true);
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
@@ -561,8 +564,7 @@ await test('Comparación enchufable y eléctrico desglosa rendimientos sin infer
 await test('Edición de precios modifica costos, sin bloquear el ordenamiento',async()=>{
  await page.click('#resetButton');await page.selectOption('#tech','Diésel');await page.click('#searchButton');
  let first=(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').first().textContent());
- await page.locator('#methodology summary').first().click();
- await page.locator('#priceSettings summary').click();
+  assert(await page.locator('#fuentes a[href="./metodologia.html"]').isVisible());
  await page.fill('#dieselPrice','2500');await page.locator('#dieselPrice').dispatchEvent('change');
  let second=(await page.locator('.vehicle-card .vehicle-cell:nth-child(3) strong').first().textContent());
  assert.notEqual(first,second);

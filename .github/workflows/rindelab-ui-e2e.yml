@@ -101,3 +101,4 @@ jobs:
         run: |
           node rindelab/tests/v2-visual.cjs
           node rindelab/tests/v2-stage2.cjs
+          node rindelab/tests/v2-claridad.cjs
