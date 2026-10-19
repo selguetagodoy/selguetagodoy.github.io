@@ -10,7 +10,7 @@
 La bandeja se generó desde 1.108 fichas electrificadas del registro histórico 3CV de 08/05/2026, que produjeron 988 combinaciones distintas marca–denominación técnica–tecnología en 80 agrupaciones de marca. Es un inventario de **revisión editorial**, NO de 988 vehículos comercializados ni 988 precios faltantes confirmados. Incluye modelos históricos y anomalías de fecha; no atribuir venta vigente por su sola presencia en 3CV. Se conserva el nombre original del 3CV, código de referencia y última fecha.
 
 ## Orden de revisión
-A_marcas_prioritarias: 64 denominaciones de GWM (Great Wall y Haval; incluye ORA), Leapmotor, JMC, JAC, BAIC, Dongfeng/DFM/Nammi y MG.
+A_marcas_prioritarias: 66 denominaciones de GWM (Great Wall y Haval; incluye ORA), Leapmotor, JMC, JAC, BAIC, Dongfeng/DFM/Nammi y MG.
 B_electrificados_recientes: EV/REEV/PHEV con fecha 2025+ de otros grupos.
 C_hibridos_recientes: HEV/MHEV recientes de otros grupos.
 D_electricos_historicos / E_hibridos_historicos: homologaciones anteriores a 2025; investigar sin asumir oferta comercial.
