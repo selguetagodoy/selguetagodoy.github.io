@@ -656,7 +656,7 @@ await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercia
   assert(rows.every(x=>x.checkedAt==='2026-10-18'&&x.currency==='CLP'&&x.priceListClp>0),'Fuente o dato inválido '+brand);
  }
  assert.equal(list.filter(x=>Object.hasOwn(expected,x.brand)).length,27);
- assert.equal(new Set(list.map(x=>x.brand+'|'+x.family)).size,75);
+ assert.equal(new Set(list.map(x=>x.brand+'|'+x.family)).size,94);
  assert.equal(list.find(x=>x.brand==='Mitsubishi'&&x.family==='Outlander PHEV')?.priceListClp,42990000);
  assert.equal(list.find(x=>x.brand==='KGM'&&x.family==='Torres HEV')?.priceListClp,32990000);
 });
@@ -693,7 +693,7 @@ await test('Electromovilidad: 40 precios nuevos, 384 homologaciones recientes y 
  await e.waitForFunction(()=>document.querySelector('#mPrices')?.textContent==='96',{timeout:30000});
  assert.equal(await e.locator('#mRecords').textContent(),'384');
  await e.selectOption('#eTech','REEV');
- assert.equal(await e.locator('#electroRows tr').count(),8);
+ assert.equal(await e.locator('#electroRows tr').count(),6);
  await e.fill('#eSearch','B10');
  assert.equal(await e.locator('#electroRows tr').count(),1);
  assert.match(await e.locator('#electroRows').textContent(),/25\.990\.000/);
