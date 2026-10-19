@@ -8,7 +8,8 @@
     "source": "https://tienda.toyota.cl/index.php?controller=product&id_product=533&rewrite=corolla-cross",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Toyota",
@@ -19,7 +20,8 @@
     "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Toyota",
@@ -85,7 +87,8 @@
     "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-H%26iacute%3Bbrido",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Hyundai",
@@ -151,7 +154,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Hyundai",
@@ -162,7 +166,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Hyundai",
@@ -173,7 +178,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "EV"
   },
   {
     "brand": "Hyundai",
@@ -184,7 +190,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "EV"
   },
   {
     "brand": "Hyundai",
@@ -195,7 +202,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Hyundai",
@@ -206,7 +214,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Hyundai",
@@ -217,7 +226,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "HEV"
   },
   {
     "brand": "Kia",
@@ -393,7 +403,8 @@
     "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-electrico/precios-y-financiamiento/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial."
+    "priceBasis": "Precio de lista sin descuentos de marca ni financiamiento; otros cargos y vigencia deben confirmarse en fuente oficial.",
+    "technology": "EV"
   },
   {
     "brand": "Suzuki",
@@ -448,7 +459,8 @@
     "source": "https://suzuki.cl/vehiculo/fronx/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "MHEV"
   },
   {
     "brand": "Suzuki",
@@ -459,7 +471,8 @@
     "source": "https://suzuki.cl/vehiculo/fronx/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "MHEV"
   },
   {
     "brand": "Suzuki",
@@ -470,7 +483,8 @@
     "source": "https://suzuki.cl/vehiculo/fronx/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "MHEV"
   },
   {
     "brand": "Suzuki",
@@ -481,7 +495,8 @@
     "source": "https://suzuki.cl/vehiculo/fronx/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "MHEV"
   },
   {
     "brand": "Suzuki",
@@ -580,7 +595,8 @@
     "source": "https://www.mgmotor.cl/model/MG-3-HEV",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "MG",
@@ -646,7 +662,8 @@
     "source": "https://www.mgmotor.cl/model/MG-ZS-HEV",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "MG",
@@ -657,7 +674,8 @@
     "source": "https://www.mgmotor.cl/model/MG-ZS-HEV",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "MG",
@@ -668,7 +686,8 @@
     "source": "https://www.mgmotor.cl/model/MGS5-EV",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "EV"
   },
   {
     "brand": "MG",
@@ -679,7 +698,8 @@
     "source": "https://www.mgmotor.cl/model/MGS5-EV",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "EV"
   },
   {
     "brand": "MG",
@@ -690,7 +710,8 @@
     "source": "https://www.mgmotor.cl/model/MGS5-EV",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar."
+    "priceBasis": "Precio de lista publicado por sitio oficial, antes de bonos y financiamiento; otros cargos y vigencia por confirmar.",
+    "technology": "EV"
   },
   {
     "brand": "Changan",
@@ -888,7 +909,8 @@
     "source": "https://www.changan.cl/vehiculo/deepal/s07/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente."
+    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente.",
+    "technology": "EV"
   },
   {
     "brand": "Changan",
@@ -899,7 +921,8 @@
     "source": "https://www.changan.cl/vehiculo/deepal/s07/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente."
+    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente.",
+    "technology": "REEV"
   },
   {
     "brand": "Changan",
@@ -910,7 +933,8 @@
     "source": "https://www.changan.cl/vehiculo/avatr/avatr-07/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente."
+    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente.",
+    "technology": "REEV"
   },
   {
     "brand": "Changan",
@@ -921,7 +945,8 @@
     "source": "https://www.changan.cl/vehiculo/avatr/avatr-07/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente."
+    "priceBasis": "Precio Lista publicado por Changan Chile, sin bonos directos ni de financiamiento. Disponibilidad y vigencia por confirmar; modelo/año comercial no especificado en fuente.",
+    "technology": "REEV"
   },
   {
     "brand": "Ford",
@@ -954,7 +979,8 @@
     "source": "https://www.ford.cl/hibridos/territory-hibrida/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente.",
+    "technology": "HEV"
   },
   {
     "brand": "Ford",
@@ -965,7 +991,8 @@
     "source": "https://www.ford.cl/hibridos/territory-hibrida/versiones/platinum/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente.",
+    "technology": "HEV"
   },
   {
     "brand": "Ford",
@@ -998,7 +1025,8 @@
     "source": "https://www.ford.cl/pickups/maverick/comparar-modelos/",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente."
+    "priceBasis": "Precio de lista / precio sugerido publicado por Ford Chile, distinto del precio con financiamiento Forum. Importe con IVA incluido; confirmar condiciones y vigencia en fuente.",
+    "technology": "HEV"
   },
   {
     "brand": "Ford",
@@ -1152,7 +1180,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-crosstrek",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1163,7 +1192,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-crosstrek",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1174,7 +1204,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-crosstrek",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1185,7 +1216,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-crosstrek",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1196,7 +1228,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-forester",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1207,7 +1240,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-forester",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1218,7 +1252,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-forester",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1229,7 +1264,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-forester",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar."
+    "priceBasis": "Precio Lista publicado en sitio oficial, antes de bonos directos y de financiamiento; IVA incluido según fabricante, otros cargos y disponibilidad por confirmar.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1295,7 +1331,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-crosstrek-hibrido/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante."
+    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante.",
+    "technology": "HEV"
   },
   {
     "brand": "Subaru",
@@ -1306,7 +1343,8 @@
     "source": "https://www.subaru.cl/vehiculos/all-new-forester-hibrido/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante."
+    "priceBasis": "Precio Lista publicado en sitio oficial Subaru Chile, sin bonos de marca ni descuentos por financiamiento; IVA incluido, impuesto verde y cargos adicionales no incluidos. Valor y disponibilidad sujetos a confirmación en fabricante.",
+    "technology": "HEV"
   },
   {
     "brand": "Volkswagen",
@@ -1383,7 +1421,8 @@
     "source": "https://www.volkswagen.cl/id4/id4",
     "checkedAt": "2026-10-17",
     "currency": "CLP",
-    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante."
+    "priceBasis": "Precio lista sugerido oficial de octubre de 2026, sin bono directo ni descuentos de financiamiento. No incluye impuesto verde ni patente; cargos y disponibilidad a verificar con fabricante.",
+    "technology": "EV"
   },
   {
     "brand": "Volkswagen",
@@ -1416,7 +1455,8 @@
     "priceBasis": "Precio de lista con IVA documentado en página oficial de GWM y bases comerciales; sin descuentos de marca ni financiamiento. Confirmar vigencia y versión exacta.",
     "modelYear": null,
     "checkedAt": "2026-10-18",
-    "currency": "CLP"
+    "currency": "CLP",
+    "technology": "EV"
   },
   {
     "brand": "BYD",
@@ -1427,7 +1467,8 @@
     "priceBasis": "Precio de lista oficial de BYD para Yuan Pro DM-i GL consignado en condiciones vigentes hasta el 31 de octubre de 2026, separado del financiamiento. No confundir con Yuan Pro eléctrico.",
     "modelYear": null,
     "checkedAt": "2026-10-18",
-    "currency": "CLP"
+    "currency": "CLP",
+    "technology": "PHEV"
   },
   {
     "brand": "BYD",
@@ -1438,7 +1479,8 @@
     "priceBasis": "Precio de lista oficial de BYD para Yuan Pro DM-i GS consignado en condiciones vigentes hasta el 31 de octubre de 2026. No confundir con Yuan Pro eléctrico.",
     "modelYear": null,
     "checkedAt": "2026-10-18",
-    "currency": "CLP"
+    "currency": "CLP",
+    "technology": "PHEV"
   },
   {
     "brand": "BYD",
@@ -1449,7 +1491,8 @@
     "priceBasis": "Precio de lista oficial de BYD para Song Plus GS, consignado en condiciones vigentes hasta el 31 de octubre de 2026. Sin bonos de marca ni financiamiento.",
     "modelYear": null,
     "checkedAt": "2026-10-18",
-    "currency": "CLP"
+    "currency": "CLP",
+    "technology": "PHEV"
   },
   {
     "brand": "Changan",
@@ -1460,7 +1503,8 @@
     "priceBasis": "Precio Lista explícito de la versión Deepal S05 REEV en catálogo oficial Changan, sin bono directo ni bono Amicar. Se presenta como precio comercial por versión, no homologación certificada.",
     "modelYear": null,
     "checkedAt": "2026-10-18",
-    "currency": "CLP"
+    "currency": "CLP",
+    "technology": "REEV"
   },
   {
     "brand": "Changan",
@@ -1471,7 +1515,8 @@
     "priceBasis": "Precio Lista explícito de Deepal S05 EV en catálogo oficial Changan, sin bono directo ni bono Amicar; no equiparar con S05 REEV.",
     "modelYear": null,
     "checkedAt": "2026-10-18",
-    "currency": "CLP"
+    "currency": "CLP",
+    "technology": "EV"
   },
   {
     "brand": "Changan",
@@ -1702,7 +1747,8 @@
     "source": "https://www.bmw.cl/modelos/x1",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista por versión publicado por BMW Chile, separado del bono del mes. La promoción de octubre 2026 tiene condiciones; confirmar precio vigente sin financiación."
+    "priceBasis": "Precio de lista por versión publicado por BMW Chile, separado del bono del mes. La promoción de octubre 2026 tiene condiciones; confirmar precio vigente sin financiación.",
+    "technology": "PHEV"
   },
   {
     "brand": "Chery",
@@ -1768,7 +1814,8 @@
     "source": "https://aventuramotors.chery.cl/tiggo-4-hev/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual."
+    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual.",
+    "technology": "HEV"
   },
   {
     "brand": "Chery",
@@ -1801,7 +1848,8 @@
     "source": "https://chery.cl/tiggo-7-pro-max-phev/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual."
+    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual.",
+    "technology": "PHEV"
   },
   {
     "brand": "Chery",
@@ -1856,7 +1904,8 @@
     "source": "https://piamonte.chery.cl/tiggo-8-pro-max-phev/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual."
+    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual.",
+    "technology": "PHEV"
   },
   {
     "brand": "Chery",
@@ -1867,7 +1916,8 @@
     "source": "https://rosselot.chery.cl/tiggo-9-phev/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual."
+    "priceBasis": "Precio de lista informado en la ficha de versiones de Chery Chile, distinto de bonos marca, financiación Santander Consumer y precio de campaña. La identidad con código 3CV requiere verificación manual.",
+    "technology": "PHEV"
   },
   {
     "brand": "Gac",
@@ -1988,7 +2038,8 @@
     "source": "https://gacmotor.cl/modelos/emkoo-hibrido/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio Lista publicado en la tabla oficial GAC Motor de versiones, separado de bono marca, GAC Store, bono financiero Santander y precio final promocional. Los datos de precio no acreditan equiparación técnica 3CV."
+    "priceBasis": "Precio Lista publicado en la tabla oficial GAC Motor de versiones, separado de bono marca, GAC Store, bono financiero Santander y precio final promocional. Los datos de precio no acreditan equiparación técnica 3CV.",
+    "technology": "HEV"
   },
   {
     "brand": "Gac",
@@ -2175,7 +2226,8 @@
     "source": "https://mitsubishi-motors.cl/modelos/outlander-phev/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse."
+    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse.",
+    "technology": "PHEV"
   },
   {
     "brand": "Peugeot",
@@ -2197,7 +2249,8 @@
     "source": "https://www.rosselot.cl/nuevos/peugeot/new-208-mca",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse."
+    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse.",
+    "technology": "MHEV"
   },
   {
     "brand": "Peugeot",
@@ -2208,7 +2261,8 @@
     "source": "https://www.rosselot.cl/nuevos/peugeot/new-208-mca",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse."
+    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse.",
+    "technology": "EV"
   },
   {
     "brand": "Fiat",
@@ -2318,7 +2372,8 @@
     "source": "https://astararetail.cl/kgm-actyon/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse."
+    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse.",
+    "technology": "HEV"
   },
   {
     "brand": "KGM",
@@ -2329,6 +2384,547 @@
     "source": "https://astararetail.cl/kgm-torres-hev/",
     "checkedAt": "2026-10-18",
     "currency": "CLP",
-    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse."
+    "priceBasis": "Precio de lista sin bonos, IVA incluido conforme a la fuente; vigencia comercial octubre de 2026. Otros cargos deben confirmarse.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Kia",
+    "family": "EV5",
+    "version": "EV5 EV LIGHT 64.2KWH",
+    "modelYear": null,
+    "priceListClp": 31990000,
+    "source": "https://www.kia.cl/promociones/kia-ev5.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Kia",
+    "family": "EV5",
+    "version": "EV5 EV WAVE 88.1KWH AWD",
+    "modelYear": null,
+    "priceListClp": 41990000,
+    "source": "https://www.kia.cl/promociones/kia-ev5.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Kia",
+    "family": "EV6",
+    "version": "EV6 EV GT-LINE 84.0KWH AWD",
+    "modelYear": null,
+    "priceListClp": 59990000,
+    "source": "https://www.kia.cl/promociones/kia-ev6.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Kia",
+    "family": "EV9",
+    "version": "EV9 GT-LINE 99.8KWH AWD 6P1",
+    "modelYear": null,
+    "priceListClp": 99990000,
+    "source": "https://www.kia.cl/promociones/kia-ev9.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Kia",
+    "family": "EV9",
+    "version": "EV9 GT-LINE 99.8KWH AWD 6P2",
+    "modelYear": null,
+    "priceListClp": 99990000,
+    "source": "https://www.kia.cl/promociones/kia-ev9.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Kia",
+    "family": "Sportage",
+    "version": "SPORTAGE LX 1.6T HEV 6AT",
+    "modelYear": null,
+    "priceListClp": 31990000,
+    "source": "https://www.kia.cl/promociones/kia-sportage-hibrido.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Kia",
+    "family": "Sportage",
+    "version": "SPORTAGE EX 1.6T HEV 6AT HIGH",
+    "modelYear": null,
+    "priceListClp": 34990000,
+    "source": "https://www.kia.cl/promociones/kia-sportage-hibrido.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Kia",
+    "family": "Sportage",
+    "version": "SPORTAGE X-LINE 1.6T HEV 6AT AWD FULL",
+    "modelYear": null,
+    "priceListClp": 42990000,
+    "source": "https://www.kia.cl/promociones/kia-sportage-hibrido.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Kia",
+    "family": "Sorento",
+    "version": "SORENTO EX 1.6T HEV 6AT 2WD",
+    "modelYear": null,
+    "priceListClp": 43990000,
+    "source": "https://www.kia.cl/promociones/kia-sorento-hibrido.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Kia",
+    "family": "Sorento",
+    "version": "SORENTO EX 1.6T HEV 6AT AWD HIGH",
+    "modelYear": null,
+    "priceListClp": 47990000,
+    "source": "https://www.kia.cl/promociones/kia-sorento-hibrido.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Kia",
+    "family": "Sorento",
+    "version": "SORENTO EX 1.6T HEV 6AT AWD FULL",
+    "modelYear": null,
+    "priceListClp": 51990000,
+    "source": "https://www.kia.cl/promociones/kia-sorento-hibrido.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Kia",
+    "family": "Carnival",
+    "version": "CARNIVAL EX 1.6T HEV 6AT LTD",
+    "modelYear": null,
+    "priceListClp": 54990000,
+    "source": "https://www.kia.cl/promociones/kia-carnival-hibrido.html",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "MG",
+    "family": "MG4",
+    "version": "MG 4 STANDARD",
+    "modelYear": null,
+    "priceListClp": 26990000,
+    "source": "https://www.mgmotor.cl/model/MG-4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "MG",
+    "family": "MG4",
+    "version": "MG 4 DELUXE",
+    "modelYear": null,
+    "priceListClp": 29990000,
+    "source": "https://www.mgmotor.cl/model/MG-4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "MG",
+    "family": "MG4",
+    "version": "MG 4 DELUXE LR",
+    "modelYear": null,
+    "priceListClp": 31990000,
+    "source": "https://www.mgmotor.cl/model/MG-4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "MG",
+    "family": "MG4",
+    "version": "MG 4 XPOWER AWD",
+    "modelYear": null,
+    "priceListClp": 34990000,
+    "source": "https://www.mgmotor.cl/model/MG-4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "MG",
+    "family": "MG4 Urban",
+    "version": "MG 4 Urban EV 43kW COM",
+    "modelYear": null,
+    "priceListClp": 18490000,
+    "source": "https://www.mgmotor.cl/model/MG-4-URBAN-EV",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "MG",
+    "family": "MG4 Urban",
+    "version": "MG 4 Urban EV 43kW LUX",
+    "modelYear": null,
+    "priceListClp": 19490000,
+    "source": "https://www.mgmotor.cl/model/MG-4-URBAN-EV",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Geely",
+    "family": "EX2",
+    "version": "EX2 Pro",
+    "modelYear": null,
+    "priceListClp": 18990000,
+    "source": "https://www.geely.cl/modelos/geely-ex2/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Geely",
+    "family": "EX2",
+    "version": "EX2 Max",
+    "modelYear": null,
+    "priceListClp": 20490000,
+    "source": "https://www.geely.cl/modelos/geely-ex2/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Geely",
+    "family": "EX5",
+    "version": "EX5 Pro",
+    "modelYear": null,
+    "priceListClp": 30990000,
+    "source": "https://www.geely.cl/modelos/ex5/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Geely",
+    "family": "EX5",
+    "version": "EX5 Max",
+    "modelYear": null,
+    "priceListClp": 33990000,
+    "source": "https://www.geely.cl/modelos/ex5/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Geely",
+    "family": "EX5 EM-i",
+    "version": "EX5 EM-i Pro",
+    "modelYear": null,
+    "priceListClp": 23990000,
+    "source": "https://www.geely.cl/modelos/geely-ex5-em-i/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Geely",
+    "family": "EX5 EM-i",
+    "version": "EX5 EM-i Max",
+    "modelYear": null,
+    "priceListClp": 26490000,
+    "source": "https://www.geely.cl/modelos/geely-ex5-em-i/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Geely",
+    "family": "EX5 EM-i",
+    "version": "EX5 EM-i Max+",
+    "modelYear": null,
+    "priceListClp": 28990000,
+    "source": "https://www.geely.cl/modelos/geely-ex5-em-i/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Leapmotor",
+    "family": "B10",
+    "version": "B10 BEV LIFE",
+    "modelYear": null,
+    "priceListClp": 24990000,
+    "source": "https://guillermomorales.cl/autos-nuevos/leapmotor/b10",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Leapmotor",
+    "family": "B10",
+    "version": "B10 REEV DESIGN",
+    "modelYear": null,
+    "priceListClp": 25990000,
+    "source": "https://guillermomorales.cl/autos-nuevos/leapmotor/b10/b10-reev-design",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "REEV"
+  },
+  {
+    "brand": "Leapmotor",
+    "family": "C10",
+    "version": "C10 BEV Design",
+    "modelYear": null,
+    "priceListClp": 29490000,
+    "source": "https://callegari.cl/nuevos/c10/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Leapmotor",
+    "family": "C10",
+    "version": "C10 REEV Design",
+    "modelYear": null,
+    "priceListClp": 30990000,
+    "source": "https://callegari.cl/nuevos/c10/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "REEV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Tucson",
+    "version": "TUCSON NX4 1.6T HEV AT PLUS FL",
+    "modelYear": null,
+    "priceListClp": 31890000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Tucson",
+    "version": "TUCSON NX4 1.6T HEV AT DESIGN FL",
+    "modelYear": null,
+    "priceListClp": 37590000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Tucson",
+    "version": "TUCSON NX4 1.6T HEV AT 4WD LIMITED FL",
+    "modelYear": null,
+    "priceListClp": 42390000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Santa Fe",
+    "version": "SANTA FE MX5 1.6T HEV AT DESIGN",
+    "modelYear": null,
+    "priceListClp": 41590000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Santa Fe",
+    "version": "SANTA FE MX5 1.6T HEV AT 4WD PREMIUM",
+    "modelYear": null,
+    "priceListClp": 46990000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Santa Fe",
+    "version": "SANTA FE MX5 1.6T HEV AT 4WD LIMITED",
+    "modelYear": null,
+    "priceListClp": 50590000,
+    "source": "https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Toyota",
+    "family": "Yaris Cross",
+    "version": "Yaris Cross Híbrido XI 1.5 HEV CVT",
+    "modelYear": null,
+    "priceListClp": 24590000,
+    "source": "https://tienda.toyota.cl/index.php?controller=product&id_product=783&rewrite=yaris-cross",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "BMW",
+    "family": "i4",
+    "version": "i4 eDrive40 Gran Coupé M Sport LCI II",
+    "modelYear": null,
+    "priceListClp": 87900000,
+    "source": "https://www.bmw.cl/modelos/i4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "BMW",
+    "family": "i5",
+    "version": "i5 eDrive40 Berlina M Sport",
+    "modelYear": null,
+    "priceListClp": 104900000,
+    "source": "https://www.bmw.cl/modelos/i5",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "BMW",
+    "family": "iX1",
+    "version": "iX1 eDrive 20 Comfort",
+    "modelYear": null,
+    "priceListClp": 56900000,
+    "source": "https://www.bmw.cl/modelos/ix1",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "BMW",
+    "family": "iX2",
+    "version": "iX2 xDrive30 M Sport",
+    "modelYear": null,
+    "priceListClp": 75900000,
+    "source": "https://www.bmw.cl/modelos/ix2",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Omoda",
+    "family": "E5",
+    "version": "OMODA E5 EV",
+    "priceListClp": 30990000,
+    "technology": "EV",
+    "source": "https://www.omodajaecoo.cl/modelos/omoda-e5/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Omoda",
+    "family": "C5 SHS-H",
+    "version": "COMFORT 1.5T DHT SHS-H",
+    "priceListClp": 19490000,
+    "technology": "HEV",
+    "source": "https://www.omodajaecoo.cl/modelos/omoda-c5-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Omoda",
+    "family": "C5 SHS-H",
+    "version": "LUXURY 1.5T DHT SHS-H",
+    "priceListClp": 21490000,
+    "technology": "HEV",
+    "source": "https://www.omodajaecoo.cl/modelos/omoda-c5-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Jaecoo",
+    "family": "7 SHS",
+    "version": "JAECOO 7 SHS ANDES",
+    "priceListClp": 26990000,
+    "technology": "PHEV",
+    "source": "https://www.omodajaecoo.cl/modelos/jaecoo-7-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Jaecoo",
+    "family": "7 SHS",
+    "version": "JAECOO 7 SHS PATAGONIA",
+    "priceListClp": 28990000,
+    "technology": "PHEV",
+    "source": "https://www.omodajaecoo.cl/modelos/jaecoo-7-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
   }
 ]
