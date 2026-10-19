@@ -643,12 +643,12 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
 await test('Catálogo de precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
  assert.equal(list.length,priceTotal);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Audi','BMW','BYD','Baic','Changan','Chery','Citroen','Cupra','DFSK','Dongfeng','Fiat','Ford','Gac','Geely','Great Wall','Hyundai','JAC','JMC','Jaecoo','Jeep','KGM','Kia','Leapmotor','MG','Mazda','Mitsubishi','Nissan','Omoda','Peugeot','Seres','Skoda','Subaru','Suzuki','Toyota','Volkswagen','Volvo']);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Audi','BMW','BYD','Baic','Changan','Chery','Citroen','Cupra','DFSK','Dongfeng','Fiat','Ford','Gac','Geely','Great Wall','Hyundai','JAC','JMC','Jaecoo','Jeep','KGM','Kia','Leapmotor','MG','Mazda','Mini','Mitsubishi','Nissan','Omoda','Peugeot','Seres','Skoda','Subaru','Suzuki','Toyota','Volkswagen','Volvo']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl|www\.mini\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -816,7 +816,7 @@ await test('JAC, Baic, Nammi, MG, Suzuki y Changan: fichas electrificadas por ma
  const brands=['JAC','Dongfeng','Baic','MG','Suzuki','Changan','Great Wall'];
  const recent=a.filter(p=>brands.includes(p.brand)&&p.checkedAt==='2026-10-19'&&p.source!=='https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf');
  const counts=Object.fromEntries(brands.map(b=>[b,recent.filter(p=>p.brand===b).length]));
- assert.equal(counts.JAC,3);assert(counts.Dongfeng>=2);assert.equal(counts.Baic,5);
+ assert(counts.JAC>=3);assert(counts.Dongfeng>=2);assert.equal(counts.Baic,5);
  assert(counts.MG>=8);assert.equal(counts.Suzuki,4);assert.equal(counts.Changan,1);assert(counts['Great Wall']>=1);
  assert.equal(a.find(p=>p.brand==='Dongfeng'&&p.family==='Nammi 001'&&p.version==='NAMMI EV 42.3KWH LR')?.priceListClp,18490000);
 });
@@ -2235,6 +2235,19 @@ for(const pageName of ['index.html','cotizador.html']){
   await p.close();
  });
 }
+await test('Lote 36: comprobar JAC, Dongfeng EV y MINI eléctricos',async()=>{
+ const testPage=await browser.newPage({viewport:{width:1280,height:800}});
+ await testPage.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ const list=await testPage.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert.equal(list.length,406);
+ assert.equal(list.filter(x=>x.brand==='Mini'&&x.technology==='EV').length,7);
+ assert.equal(list.filter(x=>x.brand==='JAC'&&x.checkedAt==='2026-10-19').length,31);
+ assert.equal(list.find(x=>x.brand==='Dongfeng'&&x.family==='MAGE EV')?.priceListClp,21990000);
+ assert.equal(list.find(x=>x.brand==='Dongfeng'&&x.family==='MAGE EV')?.technology,'EV');
+ assert.equal(list.find(x=>x.brand==='JAC'&&x.family==='JS8 Pro'&&x.version==='JS8 PRO DCT LUXURY')?.priceListClp,20990000);
+ assert.equal(list.find(x=>x.brand==='Mini'&&x.family==='Aceman'&&x.version==='JCW E 4x2')?.priceListClp,46900000);
+ await testPage.close();
+});
 await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
 if(failed)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});
