@@ -2866,5 +2866,65 @@
     "currency": "CLP",
     "priceBasis": "Precio de lista documentado por versión, separado de bonos y financiamiento. La fecha corresponde a comprobación de la fuente y no garantiza precio o stock al momento de compra.",
     "technology": "EV"
+  },
+  {
+    "brand": "Omoda",
+    "family": "E5",
+    "version": "OMODA E5 EV",
+    "priceListClp": 30990000,
+    "technology": "EV",
+    "source": "https://www.omodajaecoo.cl/modelos/omoda-e5/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Omoda",
+    "family": "C5 SHS-H",
+    "version": "COMFORT 1.5T DHT SHS-H",
+    "priceListClp": 19490000,
+    "technology": "HEV",
+    "source": "https://www.omodajaecoo.cl/modelos/omoda-c5-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Omoda",
+    "family": "C5 SHS-H",
+    "version": "LUXURY 1.5T DHT SHS-H",
+    "priceListClp": 21490000,
+    "technology": "HEV",
+    "source": "https://www.omodajaecoo.cl/modelos/omoda-c5-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Jaecoo",
+    "family": "7 SHS",
+    "version": "JAECOO 7 SHS ANDES",
+    "priceListClp": 26990000,
+    "technology": "PHEV",
+    "source": "https://www.omodajaecoo.cl/modelos/jaecoo-7-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
+  },
+  {
+    "brand": "Jaecoo",
+    "family": "7 SHS",
+    "version": "JAECOO 7 SHS PATAGONIA",
+    "priceListClp": 28990000,
+    "technology": "PHEV",
+    "source": "https://www.omodajaecoo.cl/modelos/jaecoo-7-shs/",
+    "modelYear": null,
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista separado explícitamente de descuentos y bonos de financiamiento por el fabricante oficial de Omoda Jaecoo Chile. Confirmar vigencia, stock y cargos con la marca."
   }
 ]
