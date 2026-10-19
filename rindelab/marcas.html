@@ -16,7 +16,7 @@ p{color:#435169;line-height:1.65;max-width:86ch}small{color:#526176}
 table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}thead{background:#eaf0f7}th,td{padding:13px 15px;border-bottom:1px solid #e8edf4}th{font-size:12px;color:#3b4b63}td.num{text-align:right;font-variant-numeric:tabular-nums}tr:last-child td{border-bottom:none}tbody tr:hover{background:#fafbfd}.ready{font-weight:700;color:#09664c}.pending{color:#687486}.muted{color:#687486;font-size:12px}.scroller{overflow-x:auto}.scroller table{min-width:620px}.foot{padding:15px 20px;color:#526176;font-size:13px}footer{color:#516178;font-size:12px}
 @media(max-width:600px){main,.head-inner,footer{padding:16px}.metrics{gap:7px}.metric{padding:13px}.metric strong{font-size:24px}.controls{padding:14px}}
 </style><link rel="stylesheet" href="./v2-secondary.css?v=20261019-v2a"></head><body class="rindelab-brand-directory">
-<header><div class="head-inner"><nav><a class="logo" href="./index.html">RINDE<span>LAB</span></a><a href="./cotizador.html">Cotizar auto ↗</a></nav></div></header>
+<header><div class="head-inner"><nav><a class="logo" href="./index.html">RINDE<span>LAB</span></a><a href="./electromovilidad.html">Electromovilidad</a><a href="./cotizador.html">Cotizar auto ↗</a></nav></div></header>
 <main>
 <p class="muted">TRANSPARENCIA DE DATOS · CHILE</p><h1>Marcas y cobertura documental</h1>
 <p class="brand-summary">Explora las marcas presentes en el registro 3CV y cuáles tienen precios de lista documentados por versión.</p><details class="brand-about"><summary>¿Qué significa esta cobertura?</summary><p>Consulta todas las marcas del registro energético 3CV de mayo de 2026 y distingue cuáles tienen precios de lista comerciales documentados. <strong>Una marca sin precio no significa que no venda vehículos en Chile</strong>: significa que RINDELAB todavía no cuenta con un valor de lista por versión verificable. Las cifras de homologación son históricas, no stock ni catálogo comercial.</p></details>
@@ -57,7 +57,7 @@ $('exportBrands').addEventListener('click',()=>{
  const body=['Marca,Homologaciones 3CV mayo 2026,Precios comerciales documentados,Estado',...visible.map(b=>[b.brand,b.homologationRecords,b.priceCount,b.priceCount?'Precio documentado':'Sin precio documentado'].map(esc).join(','))].join('\r\n');
  const url=URL.createObjectURL(new Blob(['\ufeff'+body],{type:'text/csv;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='rindelab-cobertura-marcas-20261018.csv';document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
 });
-Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261018-list212').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
+Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261019-list252').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
  if(!m||m.records!==8053||!Array.isArray(m.brands)||!Array.isArray(prices))throw Error('Fuentes incompletas');
  const by=new Map();for(const p of prices){const k=norm(p.brand);by.set(k,(by.get(k)||0)+1);}
  const known=new Set(m.brands.map(x=>norm(x.brand)));all=m.brands.map(b=>({...b,priceCount:by.get(norm(b.brand))||0}));
