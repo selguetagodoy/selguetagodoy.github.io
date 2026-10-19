@@ -3,6 +3,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
 const priceCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/commercial-2026.json'),'utf8'));
 const priceTotal=priceCatalog.length;
+const catalogBrandTotal=new Set(priceCatalog.map(x=>x.brand)).size;
 const electrifiedTotal=priceCatalog.filter(x=>x.technology).length;
 const familyTotal=new Set(priceCatalog.map(x=>x.brand+'|'+x.family)).size;
 const checkedTodayTotal=priceCatalog.filter(x=>x.checkedAt==='2026-10-19').length;
@@ -1834,13 +1835,13 @@ await test('Directorio de pliegos BT1 conserva fuente sin inventar precios',asyn
  assert.deepEqual(e,[]);
  await p.close();
 });
-await test('Cotizador separado carga 347 precios de 34 marcas con fuente oficial',async()=>{
+await test('Cotizador separado muestra precios y marcas reales del catálogo',async()=>{
  const p=await browser.newPage({viewport:{width:1360,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  const r=await p.goto(base+'cotizador.html',{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
- await p.waitForFunction(()=>document.querySelector('#quoteCatalogNumber')?.textContent?.includes('347 registros'),{timeout:10000});
- assert.match(await p.locator('#quoteCatalogNumber').textContent(),/34 marcas/);
- assert((await p.locator('#quoteBrand option').count())===35);
+ await p.waitForFunction(expected=>document.querySelector('#quoteCatalogNumber')?.textContent?.includes(String(expected)+' registros'),priceTotal,{timeout:10000});
+ assert.match(await p.locator('#quoteCatalogNumber').textContent(),new RegExp(catalogBrandTotal+' marcas'));
+ assert.equal(await p.locator('#quoteBrand option').count(),catalogBrandTotal+1);
  assert(await p.locator('#quoteCopy').isDisabled());
  assert.equal(await p.locator('.quote-version').count(),24);
  assert.deepEqual(errors,[]);
