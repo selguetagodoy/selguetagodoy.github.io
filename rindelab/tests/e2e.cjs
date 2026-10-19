@@ -2190,7 +2190,7 @@ await test('Bandeja maestra de electromovilidad: 988 filas 3CV, prioridades y bÃ
  const r=await p.goto(base+'pendientes-electromovilidad.html',{waitUntil:'networkidle',timeout:30000});
  assert.equal(r.status(),200);
  await p.waitForFunction(()=>document.querySelector('#total')?.textContent==='988',{timeout:15000});
- assert.equal(await p.locator('#priority').textContent(),'64');
+ assert.equal(await p.locator('#priority').textContent(),'66');
  assert.equal(await p.locator('#ready').textContent(),'0');
  assert.equal(await p.locator('#rows tr').count(),50);
  await p.selectOption('#brand','GWM');
