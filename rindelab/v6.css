@@ -704,3 +704,11 @@ input,select,textarea{font-size:16px}
  .visual-hero .hero-image{max-width:100%}
  .visual-hero h1{font-size:27px}
 }
+
+/* Mantener foto completa y botón Buscar cerca del primer pantallazo en teléfonos. */
+@media(max-width:700px){
+ .visual-hero{margin-top:7px;padding:9px 12px 6px;gap:4px}
+ .visual-hero .hero-image{max-width:300px}
+ .visual-hero .hero-copy>p:last-of-type{line-height:1.35}
+ .search-card{margin-top:6px}
+}
