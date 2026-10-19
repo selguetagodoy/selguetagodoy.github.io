@@ -11,7 +11,8 @@ const dealerPages={Hyundai:'https://www.hyundai.cl/cotizador/',Changan:'https://
 function ageDays(s){const n=Date.parse(String(s||'')+'T00:00:00Z');return Number.isFinite(n)?Math.max(0,Math.floor((Date.now()-n)/86400000)):null}
 function statusText(rec){
  const days=ageDays(rec.checkedAt);
- return days===null?'Fecha no indicada':days>=30?'Revisión antigua ('+days+' días); confirma la vigencia':'Revisado el '+rec.checkedAt;
+ const label=days===null?'Fecha no indicada':days>=30?'Revisión documental antigua ('+days+' días)':'Fuente consultada '+rec.checkedAt;
+ return label+(rec.sourceOfferEnd?' · campaña publicada hasta '+rec.sourceOfferEnd:'');
 }
 function options(node,values,placeholder){
  const selected=node.value;
@@ -142,7 +143,7 @@ $('quotePrint').addEventListener('click',()=>{if(amount()!==null)window.print();
 async function init(){
  for(const id of ['quoteCopy','quotePrint'])$(id).disabled=true;
  try{
-  const resp=await fetch('./sii/commercial-2026.json?v=20261019-list257');
+  const resp=await fetch('./sii/commercial-2026.json?v=20261019-list273');
   if(!resp.ok)throw Error('No disponible');
   const data=await resp.json();if(!Array.isArray(data))throw Error('Formato incorrecto');
   catalog=data.filter(x=>x&&x.currency==='CLP'&&Number.isInteger(x.priceListClp)&&x.priceListClp>0&&
