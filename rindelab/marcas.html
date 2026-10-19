@@ -57,7 +57,7 @@ $('exportBrands').addEventListener('click',()=>{
  const body=['Marca,Homologaciones 3CV mayo 2026,Precios comerciales documentados,Estado',...visible.map(b=>[b.brand,b.homologationRecords,b.priceCount,b.priceCount?'Precio documentado':'Sin precio documentado'].map(esc).join(','))].join('\r\n');
  const url=URL.createObjectURL(new Blob(['\ufeff'+body],{type:'text/csv;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='rindelab-cobertura-marcas-20261018.csv';document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
 });
-Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261019-list280').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
+Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261019-list298').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
  if(!m||m.records!==8053||!Array.isArray(m.brands)||!Array.isArray(prices))throw Error('Fuentes incompletas');
  const by=new Map();for(const p of prices){const k=norm(p.brand);by.set(k,(by.get(k)||0)+1);}
  const canonical=new Map();
