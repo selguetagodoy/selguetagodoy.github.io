@@ -5,6 +5,12 @@ const F={BRAND:0,MODEL:1,TECH:2,FUEL:3,BODY:4,DRIVE:5,TRANS:6,ENGINE:7,DATE:8,CO
 const aliases={'M. Benz':'Mercedes-Benz','Ram':'RAM','LEAPMOTOR':'Leapmotor','Faw':'FAW'};
 const money=n=>n===null||!Number.isFinite(n)?'Sin dato comparable':'$'+Math.round(n).toLocaleString('es-CL');
 const fmt=n=>Number(n).toLocaleString('es-CL');
+const techHuman={EV:'Eléctrico',HEV:'Híbrido',MHEV:'Híbrido suave',PHEV:'Híbrido enchufable',REEV:'Eléctrico con extensor',Bencina:'Bencina',Diésel:'Diésel'};
+function updateScenarioSummary(){
+ const km=Number($('annualKm').value)||15000,gas=number($('gasPrice').value),diesel=number($('dieselPrice').value),electric=number($('electricPrice').value);
+ const mode=$('chargeScenario').value,place=mode==='home'?'carga en casa':mode==='mixed'?'carga mixta':mode==='manual'?'tarifa elegida':'carga pública';
+ $('scenarioSummaryText').textContent='Calculado para '+fmt(km)+' km al año · bencina '+(gas?'$'+fmt(gas)+'/L':'sin tarifa')+' · diésel '+(diesel?'$'+fmt(diesel)+'/L':'sin tarifa')+' · '+place+' '+(electric?'$'+fmt(electric)+'/kWh':'sin tarifa');
+}
 const safe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
 const number=n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>0?Number(n):null;
@@ -260,6 +266,7 @@ function updateChargeScenario(){
  updateChargingExample();
 }
 function refreshEnergyViews(){
+ updateScenarioSummary();
  if(submitted)render();
  if($('statsDialog').open)renderStatistics();
  if($('compareDialog').open)renderComparisonContent();
@@ -351,6 +358,7 @@ function render(){
   $('sortNote').textContent='Orden único por costo estimado. Cada ficha indica WLTP o NEDC: son ensayos distintos y sus resultados no son directamente equivalentes. Los precios de energía son referenciales.';
  }
  const list=$('resultList');list.replaceChildren();
+ $('resultsTitle').textContent=results.length===1?'1 versión encontrada':fmt(results.length)+' versiones para comparar';
  for(const row of visible){
   const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
   const selectedNow=selected.includes(index);
@@ -362,7 +370,7 @@ function render(){
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
   article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
    '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p></div>'+
-   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'">'+safe(row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
+   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'" title="Categoría declarada en 3CV: '+safe(row[F.TECH])+'">'+safe(techHuman[row[F.TECH]]||row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'" title="'+safe(row[F.CYCLE]==='NEDC'?'Ensayo NEDC; no es directamente comparable con WLTP':row[F.CYCLE]==='WLTP'?'Ensayo WLTP; no es directamente comparable con NEDC':'Ciclo no informado')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
    '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
    '<div class="vehicle-actions"><button type="button" class="button primary" data-detail="'+index+'">Ver ficha</button>'+
@@ -417,12 +425,28 @@ function showDetail(i){
     [['Batería (kWh)',r[F.BAT]],['Conector AC',r[F.AC]],['Conector DC',r[F.DC]]].filter(([,v])=>v!==null&&v!==''&&v!=='N/D'):[]),
   ['CO₂ (g/km)',r[F.CO2]],['Norma de emisiones',r[F.NORM]]
  ];
- $('detailContent').innerHTML='<p class="note">'+
-  (isPlugInTechnology(r[F.TECH])?
-   'Los rendimientos eléctrico (km/kWh) y ponderado (km/L) son datos registrados en 3CV, bajo condiciones de ensayo. No corresponden al costo combinado real ni acreditan consumo de combustible con batería descargada.':
-   'Datos de homologación, no un rendimiento medido en ruta ni una oferta de venta. Los costos usan los precios editables de Metodología y fuentes.')+
-  '</p>'+
-  '<dl class="details-list">'+items.map(([k,v])=>'<dt>'+safe(k)+'</dt><dd>'+safe(v===null||v===''?'N/D':v)+'</dd>').join('')+'</dl>';
+ const displayItems=items.filter(([k,v])=>{
+   const val=String(v??'').trim();
+   if(!val||val==='N/D'||val==='No aplica'||val==='0.0'||val==='0')return false;
+   if(r[F.TECH]==='EV'&&['Combustible','Cilindrada','CO₂ (g/km)'].includes(k))return false;
+   return true;
+  });
+  const annually=annualEnergy(r),km=Number($('annualKm').value),co2=number(r[F.CO2]);
+  const primary=[
+   ['Gasto energético anual estimado',annually===null?'No estimable':money(annually)],
+   ['Cada 100 km',cost(r)===null?'No estimable':money(cost(r))],
+   ['Rendimiento oficial',metric(r)],
+   ...(co2!==null&&r[F.TECH]!=='EV'?[['CO₂ homologado',fmt(co2)+' g/km']]:[])
+  ];
+  $('detailContent').innerHTML='<div class="detail-kpis">'+primary.map(([name,value],i)=>
+   '<div class="detail-kpi'+(i===0?' highlight':'')+'"><small>'+safe(name)+'</small><strong>'+safe(value)+'</strong></div>').join('')+'</div>'+
+   '<p class="detail-cost-context">Estimación con '+safe(fmt(km))+' km al año y tarifas editables; no es gasto medido. Gasto energético a cinco años, manteniendo precios constantes: <strong>'+safe(money(annualEnergy(r,5)))+'</strong>.</p>'+
+   '<div class="detail-purchase"><strong>¿Cuánto pagarías por comprarlo?</strong><p>El precio de lista depende de la versión comercial exacta. La homologación 3CV no demuestra esa correspondencia, por lo que RINDELAB no suma un precio de compra a esta ficha sin acreditarla.</p><a href="./cotizador.html?marca='+encodeURIComponent(r[F.BRAND])+'" class="button secondary">Consultar precios de lista por versión ↗</a></div>'+
+   '<details class="detail-technical"><summary>Datos técnicos y homologación oficial</summary><p class="note">'+
+   (isPlugInTechnology(r[F.TECH])?
+    'Los rendimientos eléctrico (km/kWh) y ponderado (km/L) son datos registrados en 3CV, bajo condiciones de ensayo. No se infiere un costo combinado.':
+    'Datos de homologación, no consumo garantizado en ruta. WLTP y NEDC corresponden a ensayos distintos.')+
+   '</p><dl class="details-list">'+displayItems.map(([k,v])=>'<dt>'+safe(k)+'</dt><dd>'+safe(v)+'</dd>').join('')+'</dl></details>';
  $('detailDialog').showModal();
  if(window.RindelabSII)window.RindelabSII.show(r,family(r));
 }
@@ -804,8 +828,10 @@ $('shareCompare').addEventListener('click',async()=>{
 });
 window.addEventListener('resize',syncCompareScrollControls);
 $('detailClose').addEventListener('click',()=>$('detailDialog').close());
+$('mobileNav').querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{$('mobileNav').open=false;}));
 $('detailDialog').addEventListener('close',()=>{const url=new URL(location.href);if(url.searchParams.has('codigo')){url.searchParams.delete('codigo');history.replaceState(null,'',url.pathname+url.search+url.hash);}});
 if(window.RindelabSII)window.RindelabSII.family=family;
 updateChargeScenario();
+updateScenarioSummary();
 init();
 })();

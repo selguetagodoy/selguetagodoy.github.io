@@ -18,34 +18,35 @@
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./v6.css?v=20261018-interlocal-10"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
+<link rel="stylesheet" href="./v6.css?v=20261018-comprador1"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
 <header class="site-header">
  <div class="shell header-inner">
   <a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a>
-  <nav class="header-links" aria-label="Navegación principal"><a href="#buscador" class="header-source">Buscar vehículos</a><a href="#supuestos" class="header-source">Costos de energía</a><a href="./cotizador.html" class="header-source">Cotizar auto</a><a href="./marcas.html" class="header-source">Marcas y cobertura</a><a href="#fuentes" class="header-source">Fuentes</a></nav>
+  <nav class="header-links" aria-label="Navegación principal"><a href="#buscador" class="header-source">Buscar autos</a><a href="#supuestos" class="header-source">Ajustar costos</a><a href="./cotizador.html" class="header-source">Cotizar auto</a><a href="./marcas.html" class="header-source">Marcas</a><a href="#fuentes" class="header-source">Fuentes</a></nav>
+  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#buscador">Buscar autos</a><a href="#supuestos">Ajustar costos</a><a href="./cotizador.html">Cotizar auto</a><a href="./marcas.html">Marcas y cobertura</a><a href="#fuentes">Fuentes y metodología</a></nav></details>
  </div>
 </header>
 <main id="inicio" class="shell">
  <section class="intro visual-hero" aria-labelledby="title">
    <div class="hero-copy">
     <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> RENDIMIENTO VEHICULAR EN CHILE</p>
-    <h1 id="title">Con las alzas,<br><span>cada peso cuenta.</span></h1>
-    <p>Busca vehículos y compara cuánto gastarías.</p>
+    <h1 id="title">¿Cuánto gastarías con tu próximo auto?</h1>
+    <p>Busca un modelo y compara su gasto en energía, según tus kilómetros.</p>
     <button class="statistics-entry" id="statsOpen" type="button" aria-haspopup="dialog" aria-controls="statsDialog">
      <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V12M10 20V6M16 20v-9M22 20V3" stroke-linecap="round"/></svg>
      Ver rankings y estadísticas <span aria-hidden="true">↗</span>
     </button>
    </div>
-   <div class="hero-image">
+   <div class="hero-image" hidden>
     <img src="./hero-foto-rindelab.webp?v=20261018-1" width="450" height="253" alt="Cuatro automóviles en un estudio iluminado en azul: hatchback rojo, SUV plateado, crossover amarillo y camioneta pickup azul" loading="eager" decoding="async" fetchpriority="high">
     <span class="hero-image-caption">Imagen referencial de vehículos</span>
    </div>
   </section>
   <section id="buscador" class="search-card" aria-label="Buscador de vehículos">
-  <div class="search-card-heading"><div><span class="search-spot">01 / BUSCADOR</span><h2>Busca tu vehículo</h2></div><p>Rendimientos 3CV y nuevas homologaciones MTT, identificadas por fuente.</p></div>
+  <div class="search-card-heading"><div><h2>Busca un auto</h2></div><p>Compara gasto anual y rendimiento de vehículos homologados.</p></div>
   <form id="vehicleForm" role="search">
    <div class="fields">
     <div class="field wide">
@@ -62,7 +63,7 @@
      <select id="model" disabled><option value="">Primero selecciona una marca</option></select>
     </div>
     <div class="field">
-     <label for="tech">Motorización</label>
+     <label for="tech">Tipo de motor</label>
      <select id="tech">
       <option value="">Todas las motorizaciones</option>
       <option value="Bencina">Bencina</option><option value="Diésel">Diésel</option>
@@ -87,8 +88,51 @@
    </div>
   </form>
  </section>
+ <div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
+   <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
+   <a href="#supuestos" id="scenarioAdjust" class="button secondary">Ajustar a mi caso →</a>
+  </div>
+ <section id="results" class="results" aria-labelledby="resultsTitle" hidden>
+  <div class="results-head">
+   <div><h2 id="resultsTitle">Resultados de búsqueda</h2><p id="resultCount" role="status" aria-live="polite"></p></div>
+   <div class="field sort-field"><label for="sort">Ordenar por</label><select id="sort">
+    <option value="recent">Homologación más reciente</option>
+    <option value="cheapest">Menor costo estimado</option>
+    <option value="expensive">Mayor costo estimado</option>
+    <option value="name">Marca y modelo</option>
+   </select></div>
+  </div>
+  <p id="sortNote" class="sort-note" role="note" hidden></p>
+  <details id="sourceLegend" class="source-legend" aria-label="Cómo interpretar los resultados" hidden>
+   <summary><span>Datos oficiales 3CV · mayo y octubre de 2026</span><span class="source-legend-link">¿Cómo se calculan y qué está pendiente? <span aria-hidden="true">⌄</span></span></summary>
+   <div class="source-legend-details">
+    <p><strong>Rendimientos oficiales.</strong> Base histórica 3CV de mayo y 272 registros adicionales de la API oficial de octubre de 2026. Cada ficha muestra su ciclo NEDC o WLTP; sus valores no son directamente equivalentes.</p>
+    <p><strong>Homologaciones MTT pendientes.</strong> Un código de septiembre continúa sin ficha energética en la consulta de octubre. No recibe costos estimados ni se mezcla con fichas con rendimiento.</p>
+    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="#fuentes">Metodología completa ↗</a></p>
+   </div>
+  </details>
+  <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
+   <div class="mtt-search-heading">
+    <div><p class="mtt-search-eyebrow">NÓMINA MTT · 28 DE SEPTIEMBRE DE 2026</p><h3 id="mttSearchTitle">Homologaciones recientes sin ficha de rendimiento</h3>
+    <p id="mttSearchCount" role="status" aria-live="polite"></p></div>
+    <a href="./novedades-3cv.html" class="mtt-search-all">Ver nómina completa ↗</a>
+   </div>
+   <p class="mtt-search-explainer">Este registro aparece en la nómina MTT de septiembre pero no se encuentra en la consulta energética oficial del 18 de octubre. Conservamos código, certificado y fecha, <strong>sin inventar rendimiento ni costo por kilómetro</strong>. No se puede incorporar a una comparación energética.</p>
+   <div id="mttSearchList" class="mtt-search-list"></div>
+   <button id="mttSearchMore" type="button" class="button secondary" hidden>Mostrar más homologaciones MTT</button>
+  </section>
+  <p id="mttLoadNotice" class="mtt-load-notice" role="status" hidden></p>
+  <div id="emptyState" class="empty" hidden></div>
+  <div id="suggested" class="suggested" hidden></div>
+  <div id="energyResultsHeading" class="energy-results-heading" hidden>
+    <div><strong>Fichas energéticas 3CV</strong><span id="energyResultsCount"></span></div>
+    <small>Fichas energéticas del 3CV de mayo y de la consulta oficial de octubre de 2026 · cada vehículo indica la fuente, el ciclo y los datos disponibles.</small>
+  </div>
+  <div id="resultList" class="result-list"></div>
+  <div class="load-more"><button type="button" id="more" class="button secondary" hidden>Mostrar 10 vehículos más</button></div>
+ </section>
  <section id="supuestos" class="energy-assumptions" aria-labelledby="energyTitle">
-    <div class="assumptions-heading"><div><span class="search-spot">TU ESCENARIO</span><h2 id="energyTitle">Compara cuánto cuesta cargar en casa y en electrolinera</h2></div><p>Modifica los valores para acercarlos a tu situación. No son cotizaciones en tiempo real.</p></div>
+    <div class="assumptions-heading"><div><span class="search-spot">TU ESCENARIO</span><h2 id="energyTitle">Ajusta los costos a tu caso</h2></div><p>Elige tus kilómetros y precios de energía. Son supuestos, no tarifas garantizadas.</p></div>
     <div class="assumptions-grid">
       <div class="field"><label for="annualKm">Kilómetros al año</label><select id="annualKm"><option value="5000">5.000 km</option><option value="10000">10.000 km</option><option value="15000" selected>15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000 km</option><option value="30000">30.000 km</option></select></div>
       <div class="field"><label for="gasPrice">Bencina ($/L)</label><input id="gasPrice" type="number" min="1" max="10000" step="1" value="1535"></div>
@@ -160,47 +204,8 @@
       </div>
     </details>
     <p id="chargeStatus" class="charge-status" role="status" aria-live="polite">Copec Voltex · AC hasta 22 kW · ciudad, horario valle. Tarifa aplicada: $340/kWh.</p>
-    <p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa una tarifa introducida desde tu boleta o estimada con el formulario local, sin un precio residencial nacional por defecto. Si falta, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="#fuentes">Revisar metodología</a>.</p>
+    <details class="scenario-method"><summary>Cómo se calculan estos costos y cuáles son sus límites</summary><p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa una tarifa introducida desde tu boleta o estimada con el formulario local, sin un precio residencial nacional por defecto. Si falta, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="#fuentes">Revisar metodología</a>.</p></details>
   </section>
- <section id="results" class="results" aria-labelledby="resultsTitle" hidden>
-  <div class="results-head">
-   <div><h2 id="resultsTitle">Resultados de búsqueda</h2><p id="resultCount" role="status" aria-live="polite"></p></div>
-   <div class="field sort-field"><label for="sort">Ordenar por</label><select id="sort">
-    <option value="recent">Homologación más reciente</option>
-    <option value="cheapest">Menor costo estimado</option>
-    <option value="expensive">Mayor costo estimado</option>
-    <option value="name">Marca y modelo</option>
-   </select></div>
-  </div>
-  <p id="sortNote" class="sort-note" role="note" hidden></p>
-  <details id="sourceLegend" class="source-legend" aria-label="Cómo interpretar los resultados" hidden>
-   <summary><span>Datos oficiales 3CV · mayo y octubre de 2026</span><span class="source-legend-link">¿Cómo se calculan y qué está pendiente? <span aria-hidden="true">⌄</span></span></summary>
-   <div class="source-legend-details">
-    <p><strong>Rendimientos oficiales.</strong> Base histórica 3CV de mayo y 272 registros adicionales de la API oficial de octubre de 2026. Cada ficha muestra su ciclo NEDC o WLTP; sus valores no son directamente equivalentes.</p>
-    <p><strong>Homologaciones MTT pendientes.</strong> Un código de septiembre continúa sin ficha energética en la consulta de octubre. No recibe costos estimados ni se mezcla con fichas con rendimiento.</p>
-    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="#fuentes">Metodología completa ↗</a></p>
-   </div>
-  </details>
-  <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
-   <div class="mtt-search-heading">
-    <div><p class="mtt-search-eyebrow">NÓMINA MTT · 28 DE SEPTIEMBRE DE 2026</p><h3 id="mttSearchTitle">Homologaciones recientes sin ficha de rendimiento</h3>
-    <p id="mttSearchCount" role="status" aria-live="polite"></p></div>
-    <a href="./novedades-3cv.html" class="mtt-search-all">Ver nómina completa ↗</a>
-   </div>
-   <p class="mtt-search-explainer">Este registro aparece en la nómina MTT de septiembre pero no se encuentra en la consulta energética oficial del 18 de octubre. Conservamos código, certificado y fecha, <strong>sin inventar rendimiento ni costo por kilómetro</strong>. No se puede incorporar a una comparación energética.</p>
-   <div id="mttSearchList" class="mtt-search-list"></div>
-   <button id="mttSearchMore" type="button" class="button secondary" hidden>Mostrar más homologaciones MTT</button>
-  </section>
-  <p id="mttLoadNotice" class="mtt-load-notice" role="status" hidden></p>
-  <div id="emptyState" class="empty" hidden></div>
-  <div id="suggested" class="suggested" hidden></div>
-  <div id="energyResultsHeading" class="energy-results-heading" hidden>
-    <div><strong>Fichas energéticas 3CV</strong><span id="energyResultsCount"></span></div>
-    <small>Fichas energéticas del 3CV de mayo y de la consulta oficial de octubre de 2026 · cada vehículo indica la fuente, el ciclo y los datos disponibles.</small>
-  </div>
-  <div id="resultList" class="result-list"></div>
-  <div class="load-more"><button type="button" id="more" class="button secondary" hidden>Mostrar 10 vehículos más</button></div>
- </section>
  <section id="fuentes" class="sources">
   <details id="methodology">
    <summary>Metodología y fuentes <span aria-hidden="true">⌄</span></summary>
@@ -277,6 +282,6 @@
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
 <script src="./sii/prices.js?v=20261018-list185" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261018-visual8" defer></script>
+<script src="./v6.js?v=20261018-comprador1" defer></script>
 </body>
 </html>

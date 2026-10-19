@@ -582,3 +582,86 @@ input,select,textarea{font-size:16px}
  .search-card{padding-top:9px;padding-bottom:9px}
  .fields{row-gap:7px}
 }
+
+
+/* RINDELAB 7.7 · lectura para compradores, prioriza buscar y ver el gasto. */
+.visual-hero{display:block;min-height:0;padding:24px 28px;background:#f5f8fa;color:#17364c;border:1px solid #dae6ec;border-radius:13px;margin:15px 0 0;box-shadow:none}
+.visual-hero:before,.visual-hero:after{display:none}
+.visual-hero .hero-copy{max-width:950px;width:100%}
+.visual-hero .eyebrow{display:none}
+.visual-hero h1{color:#13384f!important;font-size:clamp(32px,3.4vw,46px);line-height:1.16;font-weight:800;letter-spacing:-.025em;max-width:760px;margin:0 0 9px}
+.visual-hero .hero-copy>p:last-of-type{color:#435d70;font-size:16px;max-width:68ch;line-height:1.5;margin:0 0 10px}
+.visual-hero .statistics-entry{background:transparent;color:#13566c;border:0;box-shadow:none;padding:6px 10px 6px 0;font-weight:600;min-height:44px}
+.visual-hero .statistics-entry:hover{background:transparent;text-decoration:underline}
+.hero-image[hidden]{display:none!important}
+.search-card{margin-top:12px;padding:18px 22px 15px;box-shadow:0 6px 22px #123d510a;border-radius:12px}
+.search-card-heading{margin-bottom:12px;padding-bottom:11px;display:flex;align-items:center}
+.search-card-heading h2{font-size:22px;color:#143e54}
+.search-card-heading p{font-size:14px;color:#455f73}
+.scenario-strip{display:flex;align-items:center;justify-content:space-between;gap:10px 20px;flex-wrap:wrap;padding:11px 16px;background:#f5f9fb;border:1px solid #d8e6eb;border-radius:10px;margin:12px 0 18px}
+.scenario-strip p{font-size:14px;color:#36576a;margin:0;line-height:1.55;flex:1 1 420px}
+.scenario-strip .button{font-size:14px;min-height:44px;white-space:nowrap;font-weight:700}
+.results{margin-top:10px}
+.results-head h2{font-size:24px}
+.results-head p{font-size:14px}
+.energy-assumptions{margin-top:20px}
+.energy-assumptions .assumptions-heading h2{font-size:23px;letter-spacing:-.02em}
+.scenario-method{margin:11px 0 0;padding:0 12px;border:1px solid #d7e5ea;border-radius:9px;background:#f7fafb}
+.scenario-method summary{font-size:13px;font-weight:600;color:#22586b;cursor:pointer;min-height:44px;padding:12px 0}
+.scenario-method .assumptions-note{font-size:13px;max-width:76ch;line-height:1.65}
+.vehicle-card{border-color:#e2eaf0;border-left:1px solid #e2eaf0;background:#fff;box-shadow:0 2px 8px #163a5010}
+.vehicle-card:before{display:none}
+.vehicle-annual{background:#f7fafb;border-color:#e0e9ed}
+.vehicle-annual .vehicle-annual-value{font-size:clamp(24px,2.6vw,32px)}
+.vehicle-cell small{font-size:14px}
+.vehicle-badges .vehicle-tech,.vehicle-badges .cycle-badge{font-size:13px;font-weight:600}
+.detail-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 10px}
+.detail-kpi{display:flex;flex-direction:column;justify-content:center;min-width:0;gap:6px;padding:14px;border:1px solid #dae8ee;background:#f8fbfc;border-radius:10px}
+.detail-kpi.highlight{background:#eef8f9;border-color:#cce5e8}
+.detail-kpi small{font-size:13px;color:#456477}
+.detail-kpi strong{font-size:clamp(19px,2.5vw,27px);font-weight:700;font-variant-numeric:tabular-nums;color:#124b63;overflow-wrap:anywhere;line-height:1.25}
+.detail-kpi.highlight strong{font-size:clamp(23px,3vw,34px);color:#09687b}
+.detail-cost-context{font-size:13px;color:#455f73;line-height:1.6;margin:9px 0 15px}
+.detail-purchase{padding:14px 15px;border:1px solid #d4e3ea;border-radius:10px;background:#fff;margin:0 0 13px}
+.detail-purchase>strong{font-size:17px;color:#143e56}
+.detail-purchase p{font-size:13px;color:#455f73;line-height:1.55;margin:7px 0 12px;max-width:68ch}
+.detail-purchase>a{font-size:14px;min-height:44px}
+.detail-technical{margin-top:13px;border-top:1px solid #d9e7ec;padding-top:5px}
+.detail-technical summary{font-size:15px;font-weight:700;color:#164e68;min-height:44px;display:flex;align-items:center;cursor:pointer}
+.detail-technical .details-list{margin-top:8px}
+.detail-technical .note{font-size:13px;color:#455f73;line-height:1.55}
+.mobile-nav{display:none}
+@media(max-width:600px){
+ .header-inner{flex-wrap:nowrap;align-items:center;justify-content:space-between;min-height:60px;padding:7px 0}
+ .header-links{display:none!important}
+ .mobile-nav{display:block;position:relative;color:#eef6fb}
+ .mobile-nav summary{min-height:44px;min-width:95px;display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;cursor:pointer;padding:10px 12px;border:1px solid #537188;border-radius:8px;font-size:15px;font-weight:700}
+ .mobile-nav summary::-webkit-details-marker{display:none}
+ .mobile-nav[open] nav{display:flex;flex-direction:column;position:absolute;top:calc(100% + 6px);right:0;background:#123850;border:1px solid #476d83;min-width:215px;max-width:min(275px,calc(100vw - 30px));border-radius:10px;box-shadow:0 10px 35px #081e2d33;z-index:90;padding:5px}
+ .mobile-nav nav a{display:flex;align-items:center;min-height:44px;color:#f1faff;font-size:15px;padding:8px 12px;border-radius:6px;text-decoration:none}
+ .mobile-nav nav a:focus-visible,.mobile-nav nav a:hover{background:#245c77}
+ .visual-hero{padding:13px 14px 10px;margin:9px 0 0;gap:0}
+ .visual-hero h1{font-size:clamp(27px,7.1vw,34px);line-height:1.17;letter-spacing:-.02em;margin-bottom:4px}
+ .visual-hero .hero-copy>p:last-of-type{font-size:13px;line-height:1.45;margin:0 0 4px}
+ .visual-hero .statistics-entry{font-size:13px;min-height:44px;margin:0}
+ .search-card{margin:8px 0 0;padding:12px 12px 11px}
+ .search-card-heading{margin:0 0 8px;padding:0 0 7px}
+ .search-card-heading h2{font-size:20px}
+ .search-card-heading p{display:none}
+ .scenario-strip{padding:9px 11px;margin:8px 0 13px;gap:6px}
+ .scenario-strip p{font-size:13px}
+ .scenario-strip .button{font-size:14px;min-height:44px}
+ .results{margin-top:8px}
+ .vehicle-card{padding:14px}
+ .vehicle-annual .vehicle-annual-value{font-size:29px}
+ .detail-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .detail-kpi{padding:10px}
+ .detail-kpi strong{font-size:19px}
+ .detail-kpi.highlight strong{font-size:23px}
+ .detail-technical summary{font-size:14px}
+}
+@media(max-width:365px){
+ .detail-kpis{grid-template-columns:1fr}
+ .visual-hero h1{font-size:27px}
+ .scenario-strip .button{width:100%}
+}

@@ -26,14 +26,14 @@ async function open(width,height){
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
-await test('Fotografía de portada WebP proporcionada por el usuario se carga sin errores',async()=>{
+await test('Foto elegida por el usuario se conserva sin invadir la búsqueda principal',async()=>{
  const img=page.locator('.hero-image img');
- assert(await img.isVisible());
+ assert(await img.isHidden());
  const src=await img.getAttribute('src');
  assert.match(src,/^\.\/hero-foto-rindelab\.webp\?v=20261018-1$/);
  const metrics=await img.evaluate(el=>({complete:el.complete,naturalWidth:el.naturalWidth,naturalHeight:el.naturalHeight,renderedWidth:el.getBoundingClientRect().width}));
  assert(metrics.complete&&metrics.naturalWidth===450&&metrics.naturalHeight===253,JSON.stringify(metrics));
- assert(metrics.renderedWidth>0);
+ assert.equal(metrics.renderedWidth,0);
  assert.match(await img.getAttribute('alt'),/automóviles.*iluminado en azul/i);
  assert.equal(await page.locator('.hero-image-caption').textContent(),'Imagen referencial de vehículos');
 });
@@ -48,9 +48,9 @@ await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
  assert.equal(extra,272);
 });
 await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
- assert.match(await page.locator('h1').textContent(),/cada peso cuenta/i);
- assert.equal(await page.locator('.search-card-heading h2').textContent(),'Busca tu vehículo');
- assert(await page.locator('.hero-image img').isVisible());
+ assert.match(await page.locator('h1').textContent(),/cuánto gastarías/i);
+ assert.equal(await page.locator('.search-card-heading h2').textContent(),'Busca un auto');
+ assert(await page.locator('.hero-image img').isHidden());
  assert.equal(await page.locator('.stats,.tech-overview,.manual-scenario,.chart,.guide-steps').count(),0);
  assert.equal(await page.locator('#results').isHidden(),true);
  assert.equal(await page.locator('#compareTray').isHidden(),true);
@@ -1585,15 +1585,15 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert(size.doc<=size.view+3);
   await p.locator('#detailClose').click();
  });
- await test('Foto en portada visible sin recorte externo '+width+' px',async()=>{
+ await test('Foto de portada se conserva sin ocupar la vista móvil '+width+' px',async()=>{
   const photo=p.locator('.hero-image img');
-  assert(await photo.isVisible());
+  assert(await photo.isHidden());
   const state=await photo.evaluate(el=>({
    complete:el.complete,naturalWidth:el.naturalWidth,
    photoWidth:el.getBoundingClientRect().width,
    documentWidth:document.documentElement.scrollWidth,viewport:innerWidth
   }));
-  assert(state.complete&&state.naturalWidth===450&&state.photoWidth>0,JSON.stringify(state));
+  assert(state.complete&&state.naturalWidth===450&&state.photoWidth===0,JSON.stringify(state));
   assert(state.documentWidth<=state.viewport+3,JSON.stringify(state));
  });
  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
@@ -1828,7 +1828,7 @@ await test('Contraste de etiquetas secundarias y entradas de 16 píxeles',async(
      .reduce((sum,v,i)=>sum+v*[0.2126,0.7152,0.0722][i],0);
    const x=luminosity(parse(a)),y=luminosity(parse(b));return (Math.max(x,y)+0.05)/(Math.min(x,y)+0.05);
   };
-  const labels=['.search-card .search-spot','.vehicle-heading .vehicle-meta','.vehicle-annual small','.vehicle-five-year'];
+  const labels=['#scenarioSummaryText','.vehicle-heading .vehicle-meta','.vehicle-annual small','.vehicle-five-year'];
   return {ratios:labels.map(sel=>({selector:sel,ratio:ratio(getComputedStyle(document.querySelector(sel)).color,
    sel==='.vehicle-annual small'?'rgb(240,248,250)':'rgb(255,255,255)')})),
    querySize:parseFloat(getComputedStyle(document.querySelector('#query')).fontSize),
@@ -1851,7 +1851,7 @@ for(const w of [320,390]){
     annual:parseFloat(getComputedStyle(c.querySelector('.vehicle-annual-value')).fontSize),
     input:parseFloat(getComputedStyle(document.querySelector('#query')).fontSize),
     buttons:[...c.querySelectorAll('.vehicle-actions button')].map(b=>b.getBoundingClientRect().height),
-    navHeight:document.querySelector('.header-source').getBoundingClientRect().height,
+    navHeight:document.querySelector('.mobile-nav summary').getBoundingClientRect().height,
     annualBox:c.querySelector('.vehicle-annual').getBoundingClientRect().width};
   });
   assert(x.doc<=x.screen+3,JSON.stringify(x));
@@ -1965,6 +1965,59 @@ await test('Submódulos Inter no usan servicios de Google Fonts',async()=>{
  assert.deepEqual(external,[]);
  await p.close();
 });
+
+await test('Búsqueda como primera tarea: escenario breve y resultados antes de ajustes',async()=>{
+ const {page:p,errors:issues}=await open(1280,830);
+ assert.match(await p.locator('#title').textContent(),/cuánto gastarías/i);
+ assert(await p.locator('.scenario-method').evaluate(x=>!x.open));
+ assert.match(await p.locator('#scenarioSummaryText').textContent(),/15\.000 km al año/);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ const layout=await p.evaluate(()=>{
+  const r=id=>document.getElementById(id).getBoundingClientRect().top+scrollY;
+  return {search:r('buscador'),summary:r('scenarioSummary'),results:r('results'),scenario:r('supuestos')};
+ });
+ assert(layout.search<layout.summary&&layout.summary<layout.results&&layout.results<layout.scenario,JSON.stringify(layout));
+ assert.match(await p.locator('#resultsTitle').textContent(),/versiones para comparar/);
+ await p.selectOption('#annualKm','20000');
+ assert.match(await p.locator('#scenarioSummaryText').textContent(),/20\.000 km al año/);
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+await test('Detalle de compra prioriza indicadores, sin CO₂ N/D ni precio de compra inventado',async()=>{
+ const {page:p,errors:issues}=await open(1240,850);
+ await p.fill('#query','Dolphin Mini');await p.click('#searchButton');
+ await p.locator('.vehicle-card button[data-detail]').first().click();
+ assert(await p.locator('#detailContent .detail-kpis').isVisible());
+ const kpis=await p.locator('#detailContent .detail-kpi').allTextContents();
+ assert(kpis[0].includes('Gasto energético anual estimado'));
+ assert(kpis.some(x=>x.includes('Cada 100 km')));
+ assert(kpis.some(x=>x.includes('Rendimiento oficial')));
+ assert(kpis.every(x=>!x.includes('CO₂ homologado')));
+ assert.equal(await p.locator('#detailContent .detail-technical').evaluate(x=>x.open),false);
+ const technical=await p.locator('#detailContent .details-list').textContent();
+ assert(!/Combustible\s+N\/D|Cilindrada\s+0(?:\.0)?|CO₂\s+N\/D/.test(technical),technical);
+ assert.match(await p.locator('#detailContent .detail-purchase').textContent(),/no suma un precio de compra/i);
+ assert.match(await p.locator('#detailContent .detail-purchase a').getAttribute('href'),/cotizador\.html\?marca=BYD/);
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+for(const pageName of ['index.html','cotizador.html']){
+ await test('Menú móvil simple y visible en '+pageName,async()=>{
+  const p=await browser.newPage({viewport:{width:320,height:820},isMobile:true,hasTouch:true});
+  await p.goto(base+pageName,{waitUntil:'networkidle'});
+  assert(await p.locator('#mobileNav summary').isVisible());
+  assert(await p.locator('.header-links').isHidden());
+  await p.locator('#mobileNav summary').click();
+  const nav=p.locator('#mobileNav nav');
+  assert(await nav.isVisible());
+  assert.equal(await nav.locator('a').count(),5);
+  const targets=await nav.locator('a').allTextContents();
+  assert(targets.some(x=>x.includes('Cotizar auto')));
+  const bounds=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+  assert(bounds.doc<=bounds.view+3,JSON.stringify(bounds));
+  await p.close();
+ });
+}
 await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
 if(failed)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});

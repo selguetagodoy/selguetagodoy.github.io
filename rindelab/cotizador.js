@@ -123,6 +123,7 @@ function quoteText(){
  'No es una oferta vinculante ni disponibilidad confirmada. Los gastos deben verificarse con la marca. No se asume correspondencia con una ficha 3CV.'
  ];return parts.join('\n');
 }
+$('mobileNav').querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{$('mobileNav').open=false;}));
 $('quoteBrand').addEventListener('change',()=>{updateFamilies();filter();});
 $('quoteFamily').addEventListener('change',filter);
 $('quoteSearch').addEventListener('input',filter);

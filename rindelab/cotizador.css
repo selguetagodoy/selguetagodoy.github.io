@@ -88,3 +88,27 @@
  .quote-total>strong{font-size:27px}
 }
 @media(max-width:370px){.quote-version-actions{flex-wrap:wrap}.quote-version-actions .button{width:100%}}
+
+
+/* Vista comercial simplificada: primero la versión y el presupuesto. */
+.quote-intro{padding:23px 0 17px;max-width:870px}
+.quote-intro h1{font-size:clamp(29px,3.4vw,39px);line-height:1.18}
+.quote-intro p{font-size:15px;max-width:68ch;margin:7px 0 0}
+.quote-heading h2{font-size:22px}
+.quote-catalog,.quote-aside{padding:18px}
+.quote-filters{margin:13px 0 8px}
+.quote-note{font-size:13px;margin:8px 0 12px}
+.quote-results{gap:12px}
+.quote-legal{margin-top:15px;padding:0 16px;background:#f8fafb;box-shadow:none}
+.quote-legal summary{display:flex;align-items:center;min-height:44px;cursor:pointer;font-size:14px;font-weight:700;color:#1b536b}
+.quote-legal h2{font-size:16px;margin:5px 0 8px}
+.quote-legal p{line-height:1.65;max-width:76ch}
+@media(max-width:600px){
+ .quote-intro{padding:16px 0 10px}
+ .quote-intro h1{font-size:clamp(27px,7.1vw,34px)}
+ .quote-intro p{font-size:14px}
+ .quote-catalog,.quote-aside{padding:13px}
+ .quote-heading h2{font-size:20px}
+ .quote-results{gap:11px}
+ .quote-legal{padding:0 12px}
+}
