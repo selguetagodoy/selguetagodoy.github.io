@@ -43,6 +43,7 @@ async function init(){
   const response=await fetch('./sii/bandeja-precios-electromovilidad.csv?v=20261019-988');
   if(!response.ok)throw Error('No se pudo abrir matriz CSV');
   rows=readCsv(await response.text());
+  rows.sort((a,b)=>a.prioridad.localeCompare(b.prioridad)||a.marca_grupo.localeCompare(b.marca_grupo,'es')||b.fecha_ultima_ficha_3cv.localeCompare(a.fecha_ultima_ficha_3cv));
   $('total').textContent=fmt(rows.length);
   $('priority').textContent=fmt(rows.filter(x=>x.prioridad.startsWith('A_')).length);
   $('ready').textContent=fmt(rows.filter(x=>x.estado==='listo_para_importar').length);
