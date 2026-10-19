@@ -1650,7 +1650,7 @@ await test('Cotizador separado carga 185 precios de 17 marcas con fuente oficial
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  const r=await p.goto(base+'cotizador.html',{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
  await p.waitForFunction(()=>document.querySelector('#quoteCatalogNumber')?.textContent?.includes('185 registros'),{timeout:10000});
- assert.match(await p.locator('#quoteCatalogNumber').textContent(),/14 marcas/);
+ assert.match(await p.locator('#quoteCatalogNumber').textContent(),/17 marcas/);
  assert((await p.locator('#quoteBrand option').count())===15);
  assert(await p.locator('#quoteCopy').isDisabled());
  assert.equal(await p.locator('.quote-version').count(),24);
