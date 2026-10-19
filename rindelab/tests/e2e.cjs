@@ -54,7 +54,7 @@ await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
  assert.equal(extra,272);
 });
 await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
- assert.match(await page.locator('h1').textContent(),/cuánto gastarías/i);
+ assert.match(await page.locator('h1').textContent(),/cuánto te costará/i);
  assert.equal(await page.locator('.search-card-heading h2').textContent(),'Busca un auto');
  assert(await page.locator('.hero-image img').isVisible());
  assert.equal(await page.locator('.stats,.tech-overview,.manual-scenario,.chart,.guide-steps').count(),0);
@@ -1979,7 +1979,7 @@ await test('Submódulos Inter no usan servicios de Google Fonts',async()=>{
 
 await test('Búsqueda como primera tarea: escenario breve y resultados antes de ajustes',async()=>{
  const {page:p,errors:issues}=await open(1280,830);
- assert.match(await p.locator('#title').textContent(),/cuánto gastarías/i);
+ assert.match(await p.locator('#title').textContent(),/cuánto te costará/i);
  assert(await p.locator('.scenario-method').evaluate(x=>!x.open));
  assert.match(await p.locator('#scenarioSummaryText').textContent(),/15\.000 km al año/);
  await p.fill('#query','Corolla Cross');await p.click('#searchButton');
@@ -2021,7 +2021,7 @@ for(const pageName of ['index.html','cotizador.html']){
   await p.locator('#mobileNav summary').click();
   const nav=p.locator('#mobileNav nav');
   assert(await nav.isVisible());
-  assert.equal(await nav.locator('a').count(),5);
+  assert.equal(await nav.locator('a').count(),pageName==='index.html'?7:5);
   const targets=await nav.locator('a').allTextContents();
   assert(targets.some(x=>x.includes('Cotizar auto')));
   const bounds=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));

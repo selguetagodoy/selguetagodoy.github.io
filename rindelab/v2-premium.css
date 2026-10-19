@@ -1,0 +1,191 @@
+/* RINDELAB V2 — dirección visual premium; capa progresiva sin alterar el motor 3CV. */
+:root{--v2-ink:#0f172a;--v2-navy:#102a43;--v2-blue:#1d4ed8;--v2-muted:#64748b;--v2-line:#e2e8f0;--v2-bg:#f8fafc;--v2-white:#fff;--v2-green:#15803d}
+html{scroll-padding-top:88px}
+body{background:var(--v2-bg);color:var(--v2-ink)}
+body,button,input,select{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.site-header{background:rgba(255,255,255,.97);box-shadow:0 1px 0 #e2e8f0;position:sticky;top:0;z-index:50;backdrop-filter:blur(16px)}
+.site-header .header-inner{min-height:76px;gap:24px}
+.site-header .logo{font-size:28px;letter-spacing:-.065em;line-height:1;display:inline-block;color:var(--v2-navy)}
+.brand-lockup{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
+.brand-tagline{font-size:10px;color:var(--v2-muted);font-weight:520;letter-spacing:.005em}
+.site-header .header-links{align-items:center;gap:22px}
+.site-header .header-links a{font-size:13px;letter-spacing:-.01em;color:#334155;font-weight:650;text-decoration:none}
+.site-header .header-links a:hover,.site-header .header-links a:focus-visible{color:var(--v2-blue)}
+.site-header .header-links .nav-secondary{color:#64748b;font-weight:520}
+.site-header .mobile-nav summary{color:var(--v2-navy)}
+.shell{max-width:1320px}
+.visual-hero{margin:27px 0 0;min-height:340px;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:20px;padding:49px 44px 56px;border-radius:20px;background:linear-gradient(118deg,#081e31,#123c5c);box-shadow:0 20px 50px rgba(16,42,67,.13);color:#fff}
+.visual-hero:before{background:none;opacity:0}
+.visual-hero .eyebrow{color:#9cc8e4;letter-spacing:.13em;font-weight:720;font-size:11px}
+.signal-dot{background:#7dd3fc;box-shadow:0 0 0 4px #7dd3fc27}
+.visual-hero h1{font-size:clamp(36px,4.5vw,64px);font-weight:790;letter-spacing:-.057em;line-height:1.05;max-width:640px;margin:0 0 20px;color:#fff}
+.visual-hero .hero-copy>p:last-of-type{font-size:16px;color:#dce8f2;line-height:1.65;max-width:480px;margin:0 0 19px}
+.visual-hero .hero-support{display:block;color:#9ebacf;font-size:12px;letter-spacing:.015em;margin-top:14px}
+.visual-hero .statistics-entry{background:transparent;color:white;border:1px solid #ffffff64;box-shadow:none;border-radius:9px;padding:10px 13px;min-height:42px;font-size:12px;font-weight:650;transition:background .18s ease,border-color .18s ease}
+.visual-hero .statistics-entry:hover{background:#ffffff18;transform:none;border-color:white}
+.hero-image{border:0;border-radius:14px;box-shadow:none;background:rgba(255,255,255,.035);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;max-width:100%;isolation:auto}
+.hero-image img{display:block;width:100%;height:auto;max-height:314px;object-fit:contain;object-position:center;background:transparent;filter:none}
+.hero-image:after{display:none}
+.hero-image-caption{position:static;color:#b3c8d8;border:0;background:none;padding:0;text-align:center;font-size:10px;font-weight:520}
+.search-card{margin-top:-27px;padding:28px 30px 25px;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 14px 42px rgba(16,42,67,.09);background:#fff}
+.search-card-heading{padding:0;margin:0 0 17px;border:0;align-items:center}
+.search-card-heading h2{font-size:24px;font-weight:770;color:var(--v2-navy)}
+.search-card-heading p{font-size:13px;color:var(--v2-muted)}
+.quick-filters{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 21px;padding:0;border:0}
+.quick-filters button{min-height:34px;border:1px solid #dce4ee;border-radius:999px;padding:7px 13px;background:#fff;color:#475569;font-size:12px;font-weight:650;line-height:1.2;cursor:pointer;transition:background .16s ease,color .16s ease,border-color .16s ease}
+.quick-filters button[aria-pressed="true"]{background:var(--v2-navy);border-color:var(--v2-navy);color:#fff}
+.quick-filters button:not([aria-pressed="true"]):hover{background:#eff6ff;border-color:#a5b4fc;color:var(--v2-blue)}
+.search-card .fields{gap:14px}
+.search-card .field input,.search-card .field select{height:52px;background:#fff;border:1px solid #cbd5e1;border-radius:9px;font-size:13px;box-shadow:none}
+.search-card .field label{font-size:12px;font-weight:700;color:#334155}
+.search-card .field input:focus,.search-card .field select:focus{outline:0;border-color:var(--v2-blue);box-shadow:0 0 0 3px rgba(29,78,216,.11)}
+.search-card .field.wide input{font-size:15px;padding-left:16px}
+.search-card .button.primary,.button.primary{background:var(--v2-blue);border:1px solid var(--v2-blue);color:white;border-radius:9px;box-shadow:none;font-weight:730}
+.search-card .button.primary:hover,.button.primary:hover{background:#1e40af;border-color:#1e40af}
+.button.secondary{background:#fff;border-color:#cbd5e1;color:#334155}
+.button.secondary:hover{background:#f1f5f9;border-color:#94a3b8;color:#0f172a}
+.search-card .technical{border-color:#e2e8f0}
+.search-card .technical summary{color:#64748b;font-weight:640;font-size:12px}
+.scenario-strip{background:#edf3f8;border-color:#d9e4ec;border-radius:12px;box-shadow:none}
+.scenario-strip p{color:#334155;font-size:12px}
+.results{background:transparent;border:0;box-shadow:none;padding:0;margin-top:36px}
+.results-head{padding:0 1px 15px;border-bottom:1px solid var(--v2-line);margin-bottom:19px}
+.results-head h2{color:var(--v2-navy);font-size:27px;font-weight:760}
+.results-head p{color:var(--v2-muted)}
+.results .sort-field select{background:white}
+.energy-results-heading{margin:20px 0 15px}
+.result-list{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:18px!important}
+.vehicle-card{display:flex!important;flex-direction:column;gap:0!important;min-width:0;min-height:440px;padding:0!important;border:1px solid #dfe6ee;border-radius:15px;background:#fff;box-shadow:0 4px 15px rgba(16,42,67,.055);overflow:hidden;transform:none!important;transition:box-shadow .2s ease,border-color .2s ease}
+.vehicle-card::before{display:none!important}
+.vehicle-card:hover{border-color:#bacbdd;box-shadow:0 14px 38px rgba(16,42,67,.11)}
+.vehicle-visual{order:-5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:144px;background:linear-gradient(135deg,#eef3f8 0%,#f8fafc 100%);border-bottom:1px solid #e5edf3;color:#64748b}
+.vehicle-visual svg{width:114px;height:45px;fill:none;stroke:#a4b6c9;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.vehicle-visual small{font-size:10px;color:#8795a6}
+.vehicle-visual img{width:100%;height:170px;object-fit:contain}
+.vehicle-card .vehicle-heading{order:-4;display:flex;flex-wrap:wrap;flex-direction:column;align-items:flex-start;gap:12px;padding:19px 20px 12px;margin:0;min-width:0}
+.vehicle-card .vehicle-heading h3{font-size:17px;font-weight:790;line-height:1.28;color:#102a43;letter-spacing:-.026em;overflow-wrap:anywhere}
+.vehicle-card .vehicle-title{min-width:0;width:100%}
+.vehicle-card .vehicle-meta{font-size:10px;color:#64748b;line-height:1.55}
+.vehicle-card .vehicle-badges{display:flex;gap:7px;flex-wrap:wrap}
+.vehicle-card .vehicle-tech,.vehicle-card .cycle-badge{font-size:10px;border-radius:6px;padding:5px 8px;line-height:1.2;box-shadow:none}
+.vehicle-card .vehicle-annual{order:-3;display:flex!important;flex-direction:column;align-items:flex-start;gap:5px;padding:7px 20px 13px!important;margin:0;background:none!important;border:0!important;min-width:0}
+.vehicle-card .vehicle-annual small{font-size:11px;color:#64748b;font-weight:650;line-height:1.5}
+.vehicle-card .vehicle-annual strong{font-size:clamp(27px,2.3vw,34px);font-weight:810;line-height:1.12;letter-spacing:-.065em;color:#102a43;font-variant-numeric:tabular-nums}
+.vehicle-card .vehicle-annual span{font-size:11px;line-height:1.45;color:#8795a6}
+.vehicle-card .vehicle-cost{order:-2;padding:9px 20px 8px!important;margin:0;border:0!important;background:transparent!important}
+.vehicle-card .vehicle-performance{order:-1;padding:9px 20px 13px!important;margin:0;border:0!important;background:transparent!important}
+.vehicle-card .vehicle-cost small:first-child,.vehicle-card .vehicle-performance small:first-child{display:block;font-size:10px;color:#64748b}
+.vehicle-card .vehicle-cost strong,.vehicle-card .vehicle-performance strong{font-size:15px;color:#334155;font-weight:730;line-height:1.4}
+.vehicle-card .vehicle-cost .annual-result{display:none!important}
+.vehicle-card .vehicle-foot{order:1;padding:12px 20px 8px!important;margin-top:auto!important;border-top:1px solid #eff3f8;background:transparent!important;display:flex;flex-direction:column;gap:5px}
+.vehicle-card .vehicle-foot small,.vehicle-card .vehicle-five-year{font-size:10px;color:#64748b;line-height:1.5}
+.vehicle-card .vehicle-actions{order:2;padding:11px 20px 19px!important;display:grid!important;grid-template-columns:1fr 1fr;gap:9px;margin:0!important;min-width:0;width:100%}
+.vehicle-card .vehicle-actions .button{min-width:0;min-height:42px;line-height:1.25;border-radius:8px;font-size:12px;padding:9px 7px;white-space:normal;flex:auto!important}
+.vehicle-card .vehicle-actions .button.secondary:hover{background:#eff6ff;border-color:#93c5fd;color:var(--v2-blue)}
+.results .load-more{margin:25px auto}
+.compare-tray{border:1px solid #cfdae5;background:#fff;box-shadow:0 12px 40px #102a4324}
+.compare-inner{gap:14px}
+.compare-tray .button.primary{background:var(--v2-blue)}
+.compare-modal,.stats-modal{border-radius:16px;border:1px solid #dce5ee}
+.stats-modal-head{background:#102a43}
+.stats-body{background:#fff}
+.rank-fill{background:#1d4ed8}
+.rank-number,.rank-value{color:#1e40af}
+.energy-assumptions{background:#fff;border:1px solid #e2e8f0;box-shadow:none;border-radius:15px}
+.energy-assumptions .assumptions-heading h2{color:#102a43}
+.sources summary{color:#102a43}
+:focus-visible{outline:3px solid rgba(29,78,216,.5);outline-offset:3px}
+@media(max-width:1080px){
+ .site-header .header-links{gap:13px}
+ .site-header .header-links a{font-size:12px}
+ .result-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .visual-hero{padding:34px 30px 52px;min-height:300px}
+}
+@media(max-width:790px){
+ .site-header .header-links{display:none}
+ .brand-tagline{font-size:9px}
+ .visual-hero{grid-template-columns:1fr;gap:7px;padding:30px 25px 42px;margin-top:15px;min-height:0}
+ .visual-hero h1{font-size:clamp(30px,6vw,42px);max-width:640px}
+ .visual-hero .hero-copy>p:last-of-type{font-size:14px}
+ .hero-image{padding:0 8px}
+ .hero-image img{max-height:205px}
+ .search-card{padding:22px}
+ .search-card-heading{align-items:flex-start;flex-direction:column;gap:5px}
+ .search-card-heading p{font-size:12px}
+}
+@media(max-width:600px){
+ .shell{width:calc(100% - 28px)}
+ .site-header .header-inner{min-height:64px}
+ .brand-tagline{max-width:205px;font-size:9px;line-height:1.3}
+ .visual-hero{padding:28px 21px 38px;border-radius:14px}
+ .visual-hero h1{font-size:clamp(31px,8.1vw,41px)}
+ .visual-hero .hero-copy>p:last-of-type{font-size:13px;margin-bottom:10px}
+ .visual-hero .statistics-entry{min-height:38px;padding:8px 10px;font-size:11px}
+ .visual-hero .hero-support{margin-top:10px}
+ .hero-image img{max-height:172px}
+ .hero-image-caption{font-size:9px}
+ .search-card{padding:20px 15px;margin-top:-18px;border-radius:13px}
+ .quick-filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding-bottom:8px;margin-bottom:13px}
+ .quick-filters button{flex:0 0 auto;font-size:11px;white-space:nowrap;min-height:34px}
+ .search-card .fields{gap:10px}
+ .search-card .field input,.search-card .field select{height:47px}
+ .search-card .field.wide input{font-size:13px}
+ .results-head h2{font-size:22px}
+ .result-list{grid-template-columns:minmax(0,1fr);gap:14px!important}
+ .vehicle-card{min-height:0}
+ .vehicle-visual{min-height:115px}
+ .vehicle-visual svg{width:94px}
+ .vehicle-card .vehicle-annual strong{font-size:32px}
+ .vehicle-card .vehicle-heading{padding:18px 17px 11px}
+ .vehicle-card .vehicle-annual,.vehicle-card .vehicle-cost,.vehicle-card .vehicle-performance,.vehicle-card .vehicle-foot,.vehicle-card .vehicle-actions{padding-left:17px!important;padding-right:17px!important}
+ .compare-tray{max-height:35dvh;overflow-y:auto}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Ajustes QA de jerarquía, accesibilidad y unidades monetarias */
+.vehicle-card .vehicle-heading h3{font-size:18px}
+.vehicle-card .vehicle-meta{font-size:13px;line-height:1.5}
+.vehicle-card .vehicle-actions .button{font-size:15px;min-height:44px}
+.search-card .field input,.search-card .field select{font-size:16px}
+.search-card .field.wide input{font-size:16px}
+.vehicle-monthly{display:flex;flex-direction:column;gap:2px;margin-bottom:11px;width:100%}
+.vehicle-card .vehicle-annual .vehicle-monthly small{font-size:12px;color:#475569;font-weight:680}
+.vehicle-card .vehicle-annual .vehicle-monthly strong{font-size:clamp(30px,2.6vw,37px);line-height:1.12;font-weight:800;letter-spacing:-.055em;color:#102a43;font-variant-numeric:tabular-nums}
+.vehicle-card .vehicle-annual>.vehicle-annual-value{font-size:23px;line-height:1.15;color:#334155;letter-spacing:-.035em;font-weight:710}
+.vehicle-card .vehicle-five-year{font-size:12px}
+.vehicle-card .vehicle-annual>span{font-size:12px;color:#475569}
+@media(max-width:600px){.vehicle-card .vehicle-heading h3{font-size:18px}.vehicle-card .vehicle-annual>.vehicle-annual-value{font-size:23px}.vehicle-card .vehicle-annual .vehicle-monthly strong{font-size:34px}}
+
+/* Corrección visual de la portada: neutralizar el relleno degradado heredado. */
+.visual-hero h1,.visual-hero .hero-copy h1{color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;background-image:none!important;filter:none!important}
+.vehicle-card .vehicle-cost,.vehicle-card .vehicle-performance{display:flex!important;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;text-align:left!important}
+.vehicle-card .vehicle-cost strong{color:#1d4ed8}
+.vehicle-card .vehicle-cost small:first-child,.vehicle-card .vehicle-performance small:first-child{font-size:12px;color:#475569}
+.vehicle-card .vehicle-annual small{color:#475569}
+
+/* Compactación móvil: el botón Buscar permanece cerca de la primera pantalla. */
+@media(max-width:600px){
+ .visual-hero{padding:18px 18px 21px;gap:2px}
+ .visual-hero h1{font-size:clamp(27px,7.2vw,34px);line-height:1.03;margin-bottom:9px}
+ .visual-hero .hero-copy>p:last-of-type{font-size:12px;line-height:1.4;margin:0 0 5px}
+ .visual-hero .hero-support{display:block;font-size:10px;line-height:1.25;margin:4px 0 7px}
+ .visual-hero .statistics-entry{min-height:34px;font-size:10px;padding:7px 9px}
+ .hero-image{padding:0;gap:1px}
+ .hero-image img{height:106px;max-height:106px;width:100%;object-fit:contain}
+ .hero-image-caption{font-size:8px;line-height:1.15}
+ .search-card{padding:15px 13px 14px;margin-top:-13px}
+ .search-card-heading{gap:2px;margin-bottom:7px}
+ .search-card-heading h2{font-size:20px}
+ .search-card-heading p{font-size:10px}
+ .quick-filters{margin-bottom:4px;padding-bottom:3px}
+ .quick-filters button{min-height:30px;font-size:10px;padding:5px 11px}
+ .search-card .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7px}
+ .search-card .fields .wide{grid-column:1 / -1}
+ .search-card .fields .field:last-child{grid-column:1 / -1}
+ .search-card .field label{font-size:10px;margin-bottom:3px}
+ .search-card .field input,.search-card .field select{height:43px;padding:8px;font-size:14px}
+ .search-card #query{font-size:16px}
+ .search-card #brand{font-size:16px}
+ .search-card .technical{margin-top:6px}
+ .search-card .form-actions{margin-top:6px}
+}

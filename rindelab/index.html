@@ -19,22 +19,24 @@
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./v6.css?v=20261018-imagen-v78"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
+<link rel="stylesheet" href="./v2-premium.css?v=20261018-rc1">
+<script src="./v2-premium.js?v=20261018-rc1" defer></script>
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 </head>
 <body>
 <header class="site-header">
  <div class="shell header-inner">
-  <a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a>
-  <nav class="header-links" aria-label="Navegación principal"><a href="#buscador" class="header-source">Buscar autos</a><a href="#supuestos" class="header-source">Ajustar costos</a><a href="./cotizador.html" class="header-source">Cotizar auto</a><a href="./marcas.html" class="header-source">Marcas</a><a href="#fuentes" class="header-source">Fuentes</a></nav>
-  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#buscador">Buscar autos</a><a href="#supuestos">Ajustar costos</a><a href="./cotizador.html">Cotizar auto</a><a href="./marcas.html">Marcas y cobertura</a><a href="#fuentes">Fuentes y metodología</a></nav></details>
+  <div class="brand-lockup"><a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a><small class="brand-tagline">Inteligencia energética vehicular para Chile</small></div>
+  <nav class="header-links" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#buscador">Comparar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="#fuentes">Fuentes</a><a href="./cotizador.html" class="nav-secondary">Cotizar</a><a href="./marcas.html" class="nav-secondary">Marcas</a></nav>
+  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#inicio">Inicio</a><a href="#buscador">Comparar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="#supuestos">Ajustar costos</a><a href="./cotizador.html">Cotizar auto</a><a href="./marcas.html">Marcas y cobertura</a><a href="#fuentes">Fuentes y metodología</a></nav></details>
  </div>
 </header>
 <main id="inicio" class="shell">
  <section class="intro visual-hero" aria-labelledby="title">
    <div class="hero-copy">
     <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> RENDIMIENTO VEHICULAR EN CHILE</p>
-    <h1 id="title">¿Cuánto gastarías con tu próximo auto?</h1>
-    <p>Busca un modelo y compara su gasto en energía, según tus kilómetros.</p>
+    <h1 id="title">¿Cuánto te costará usar tu próximo auto?</h1>
+    <p>Compara vehículos eléctricos, híbridos y a combustión según su rendimiento y cuánto gastarías en energía.</p><small class="hero-support">Con datos oficiales de homologación vehicular en Chile.</small>
     <button class="statistics-entry" id="statsOpen" type="button" aria-haspopup="dialog" aria-controls="statsDialog">
      <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V12M10 20V6M16 20v-9M22 20V3" stroke-linecap="round"/></svg>
      Ver rankings y estadísticas <span aria-hidden="true">↗</span>
@@ -48,10 +50,11 @@
   <section id="buscador" class="search-card" aria-label="Buscador de vehículos">
   <div class="search-card-heading"><div><h2>Busca un auto</h2></div><p>Compara gasto anual y rendimiento de vehículos homologados.</p></div>
   <form id="vehicleForm" role="search">
+   <div class="quick-filters" role="group" aria-label="Filtrar por motorización"><button type="button" data-quick-tech="" aria-pressed="true">Todos</button><button type="button" data-quick-tech="EV" aria-pressed="false">Eléctricos</button><button type="button" data-quick-tech="HEV" aria-pressed="false">Híbridos</button><button type="button" data-quick-tech="PHEV" aria-pressed="false">Híbridos enchufables</button><button type="button" data-quick-tech="Bencina" aria-pressed="false">Bencina</button><button type="button" data-quick-tech="Diésel" aria-pressed="false">Diésel</button></div>
    <div class="fields">
     <div class="field wide">
      <label for="query">Nombre del vehículo <span class="optional">(opcional)</span></label>
-     <input id="query" type="search" autocomplete="off" placeholder="Ej. Corolla Cross, Hilux, B10" list="suggestions" spellcheck="false">
+     <input id="query" type="search" autocomplete="off" placeholder="Busca por marca, modelo o versión. Ej.: Corolla Cross, Hilux, B10" list="suggestions" spellcheck="false">
      <datalist id="suggestions"></datalist>
     </div>
     <div class="field">
