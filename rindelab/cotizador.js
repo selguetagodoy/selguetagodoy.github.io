@@ -142,7 +142,7 @@ $('quotePrint').addEventListener('click',()=>{if(amount()!==null)window.print();
 async function init(){
  for(const id of ['quoteCopy','quotePrint'])$(id).disabled=true;
  try{
-  const resp=await fetch('./sii/commercial-2026.json?v=20261019-list252');
+  const resp=await fetch('./sii/commercial-2026.json?v=20261019-list257');
   if(!resp.ok)throw Error('No disponible');
   const data=await resp.json();if(!Array.isArray(data))throw Error('Formato incorrecto');
   catalog=data.filter(x=>x&&x.currency==='CLP'&&Number.isInteger(x.priceListClp)&&x.priceListClp>0&&
