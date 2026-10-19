@@ -665,3 +665,50 @@ input,select,textarea{font-size:16px}
  .visual-hero h1{font-size:27px}
  .scenario-strip .button{width:100%}
 }
+
+/* RINDELAB 7.8 · Restaurar la imagen de portada elegida por el autor.
+   Foto completa sin recorte, sin sobreposición del pie y con buscador prioritario. */
+.visual-hero{
+ display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.78fr);
+ align-items:center;gap:14px 20px;padding:18px 22px;
+}
+.visual-hero .hero-copy{min-width:0;max-width:700px}
+.visual-hero h1{font-size:clamp(29px,3.5vw,43px);line-height:1.16;margin-bottom:6px}
+.visual-hero .hero-copy>p:last-of-type{margin-bottom:5px}
+.visual-hero .hero-image{
+ display:block;position:relative;width:100%;max-width:450px;min-width:0;
+ height:auto;border-radius:11px;border:1px solid #d5e3e9;
+ background:#edf3f6;overflow:hidden;box-shadow:0 6px 17px #0b365018;
+ justify-self:end;isolation:auto
+}
+.visual-hero .hero-image:after{display:none}
+.visual-hero .hero-image img{
+ display:block;width:100%;height:auto;aspect-ratio:450/253;object-fit:contain;
+ object-position:center;max-width:100%
+}
+.visual-hero .hero-image-caption{
+ display:block;position:static;bottom:auto;right:auto;background:transparent;
+ border:0;border-radius:0;box-shadow:none;z-index:auto;letter-spacing:0;
+ font-size:11px;line-height:1.35;font-weight:500;color:#486578;
+ text-align:right;padding:5px 8px
+}
+@media(max-width:700px){
+ .visual-hero{grid-template-columns:minmax(0,1fr);padding:13px 14px 10px;gap:8px}
+ .visual-hero .hero-image{justify-self:center;max-width:355px}
+ .visual-hero h1{font-size:clamp(27px,7.2vw,35px);margin-bottom:4px}
+ .visual-hero .hero-copy>p:last-of-type{margin-bottom:1px}
+ .visual-hero .hero-image-caption{font-size:11px}
+}
+@media(max-width:360px){
+ .visual-hero{padding:10px 12px 8px;gap:6px}
+ .visual-hero .hero-image{max-width:100%}
+ .visual-hero h1{font-size:27px}
+}
+
+/* Mantener foto completa y botón Buscar cerca del primer pantallazo en teléfonos. */
+@media(max-width:700px){
+ .visual-hero{margin-top:7px;padding:9px 12px 6px;gap:4px}
+ .visual-hero .hero-image{max-width:300px}
+ .visual-hero .hero-copy>p:last-of-type{line-height:1.35}
+ .search-card{margin-top:6px}
+}

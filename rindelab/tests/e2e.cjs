@@ -26,16 +26,22 @@ async function open(width,height){
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
-await test('Foto elegida por el usuario se conserva sin invadir la búsqueda principal',async()=>{
+await test('Fotografía original restaurada, visible y sin pie superpuesto',async()=>{
  const img=page.locator('.hero-image img');
- assert(await img.isHidden());
+ assert(await img.isVisible());
  const src=await img.getAttribute('src');
  assert.match(src,/^\.\/hero-foto-rindelab\.webp\?v=20261018-1$/);
  const metrics=await img.evaluate(el=>({complete:el.complete,naturalWidth:el.naturalWidth,naturalHeight:el.naturalHeight,renderedWidth:el.getBoundingClientRect().width}));
  assert(metrics.complete&&metrics.naturalWidth===450&&metrics.naturalHeight===253,JSON.stringify(metrics));
- assert.equal(metrics.renderedWidth,0);
+ assert(metrics.renderedWidth>180,JSON.stringify(metrics));
  assert.match(await img.getAttribute('alt'),/automóviles.*iluminado en azul/i);
  assert.equal(await page.locator('.hero-image-caption').textContent(),'Imagen referencial de vehículos');
+ const positions=await page.evaluate(()=>{
+  const image=document.querySelector('.hero-image img').getBoundingClientRect();
+  const caption=document.querySelector('.hero-image-caption').getBoundingClientRect();
+  return {imageBottom:image.bottom,captionTop:caption.top,fit:getComputedStyle(document.querySelector('.hero-image img')).objectFit};
+ });
+ assert(positions.captionTop>=positions.imageBottom-2&&positions.fit==='contain',JSON.stringify(positions));
 });
 
 await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
@@ -50,7 +56,7 @@ await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
 await test('Una sola interfaz sin estadísticas ni simuladores',async()=>{
  assert.match(await page.locator('h1').textContent(),/cuánto gastarías/i);
  assert.equal(await page.locator('.search-card-heading h2').textContent(),'Busca un auto');
- assert(await page.locator('.hero-image img').isHidden());
+ assert(await page.locator('.hero-image img').isVisible());
  assert.equal(await page.locator('.stats,.tech-overview,.manual-scenario,.chart,.guide-steps').count(),0);
  assert.equal(await page.locator('#results').isHidden(),true);
  assert.equal(await page.locator('#compareTray').isHidden(),true);
@@ -1585,15 +1591,20 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert(size.doc<=size.view+3);
   await p.locator('#detailClose').click();
  });
- await test('Foto de portada se conserva sin ocupar la vista móvil '+width+' px',async()=>{
+ await test('Foto elegida por el autor reaparece entera y sin superposición en móvil '+width+' px',async()=>{
   const photo=p.locator('.hero-image img');
-  assert(await photo.isHidden());
+  assert(await photo.isVisible());
   const state=await photo.evaluate(el=>({
    complete:el.complete,naturalWidth:el.naturalWidth,
    photoWidth:el.getBoundingClientRect().width,
+   photoHeight:el.getBoundingClientRect().height,
+   imageBottom:el.getBoundingClientRect().bottom,
+   captionTop:document.querySelector('.hero-image-caption').getBoundingClientRect().top,
+   fit:getComputedStyle(el).objectFit,
    documentWidth:document.documentElement.scrollWidth,viewport:innerWidth
   }));
-  assert(state.complete&&state.naturalWidth===450&&state.photoWidth===0,JSON.stringify(state));
+  assert(state.complete&&state.naturalWidth===450&&state.photoWidth>180&&state.photoHeight>90,JSON.stringify(state));
+  assert(state.captionTop>=state.imageBottom-2&&state.fit==='contain',JSON.stringify(state));
   assert(state.documentWidth<=state.viewport+3,JSON.stringify(state));
  });
  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
