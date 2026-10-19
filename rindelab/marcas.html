@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marcas y cobertura | RINDELAB</title>
+<meta name="description" content="Estado de cobertura por marca: registros históricos 3CV y precios de lista efectivamente documentados, sin inventar precios faltantes.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{color-scheme:light;font-family:Inter,Arial,sans-serif;background:#f5f7fb;color:#17243b}
+*{box-sizing:border-box}body{margin:0}header{background:#092647;color:white}main,.head-inner,footer{max-width:1140px;margin:auto;padding:24px}nav{display:flex;justify-content:space-between;gap:20px;align-items:center}nav a{color:white;text-decoration:none;font-weight:600;font-size:14px}.logo{font-size:23px;font-weight:800;letter-spacing:-.06em}.logo span{color:#8fdbf7}
+h1{font-size:clamp(26px,4vw,40px);line-height:1.16;letter-spacing:-.045em;margin:22px 0 12px}
+p{color:#435169;line-height:1.65;max-width:86ch}small{color:#526176}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0}
+.metric{background:white;border:1px solid #e0e5ee;border-radius:14px;padding:18px}.metric strong{font-size:30px;display:block;letter-spacing:-.04em}.metric span{font-size:12px;color:#566781}
+.panel{border:1px solid #dce4ef;background:#fff;border-radius:16px;overflow:hidden;margin-top:16px}
+.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:end;padding:20px}
+.field{display:grid;gap:7px;flex:1 1 190px}.field label{font-size:12px;font-weight:700}input,select,button{font:inherit;font-size:14px;padding:11px;border:1px solid #cbd5e1;border-radius:8px;background:white;color:#14223a}button{cursor:pointer;font-weight:700}button:hover{background:#eef4fc}
+table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}thead{background:#eaf0f7}th,td{padding:13px 15px;border-bottom:1px solid #e8edf4}th{font-size:12px;color:#3b4b63}td.num{text-align:right;font-variant-numeric:tabular-nums}tr:last-child td{border-bottom:none}tbody tr:hover{background:#fafbfd}.ready{font-weight:700;color:#09664c}.pending{color:#687486}.muted{color:#687486;font-size:12px}.scroller{overflow-x:auto}.scroller table{min-width:620px}.foot{padding:15px 20px;color:#526176;font-size:13px}footer{color:#516178;font-size:12px}
+@media(max-width:600px){main,.head-inner,footer{padding:16px}.metrics{gap:7px}.metric{padding:13px}.metric strong{font-size:24px}.controls{padding:14px}}
+</style></head><body>
+<header><div class="head-inner"><nav><a class="logo" href="./index.html">RINDE<span>LAB</span></a><a href="./cotizador.html">Cotizar auto ↗</a></nav></div></header>
+<main>
+<p class="muted">TRANSPARENCIA DE DATOS · CHILE</p><h1>Marcas y cobertura documental</h1>
+<p>Consulta todas las marcas del registro energético 3CV de mayo de 2026 y distingue cuáles tienen precios de lista comerciales documentados. <strong>Una marca sin precio no significa que no venda vehículos en Chile</strong>: significa que RINDELAB todavía no cuenta con un valor de lista por versión verificable. Las cifras de homologación son históricas, no stock ni catálogo comercial.</p>
+<section class="metrics" aria-label="Indicadores de cobertura">
+<div class="metric"><strong id="metricBrands">—</strong><span>Marcas en 3CV histórico</span></div>
+<div class="metric"><strong id="metricCovered">—</strong><span>Marcas con precio documentado</span></div>
+<div class="metric"><strong id="metricPrices">—</strong><span>Precios por versión</span></div>
+</section>
+<section class="panel" aria-label="Buscador de cobertura de marcas">
+<div class="controls">
+<div class="field"><label for="brandSearch">Buscar marca</label><input id="brandSearch" type="search" placeholder="Ej. Chery, Chevrolet, Renault"></div>
+<div class="field"><label for="brandStatus">Cobertura de precios</label><select id="brandStatus"><option value="all">Todas las marcas</option><option value="available">Con precios verificados</option><option value="pending">Sin precio documentado</option></select></div>
+<button type="button" id="exportBrands">Exportar CSV</button>
+</div>
+<div class="scroller"><table><thead><tr><th>Marca según 3CV</th><th style="text-align:right">Fichas 3CV mayo</th><th style="text-align:right">Precios comerciales</th><th>Estado</th></tr></thead><tbody id="brandRows"><tr><td colspan="4">Cargando fuentes documentales…</td></tr></tbody></table></div>
+<div class="foot"><span id="brandCount" aria-live="polite">Cargando marcas…</span> · <a href="./cotizador.html">Consultar versiones y precios</a></div>
+</section>
+<p><small>Fuentes: <a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">archivo 3CV 08/05/2026</a> y catálogo comercial de RINDELAB con URLs por versión. No se certifica ninguna equivalencia técnica entre códigos de homologación y versiones comerciales. Esta tabla comprende el corte histórico de mayo; las fichas adicionales de la API de octubre se consultan en el buscador principal.</small></p>
+</main><footer>RINDELAB · Creada por Sebastián Elgueta Godoy. Comprueba siempre los importes en el fabricante.</footer>
+<script>
+(()=>{'use strict';
+const $=x=>document.getElementById(x),norm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(),num=x=>Number(x).toLocaleString('es-CL');
+let all=[],visible=[];
+function td(text,className){const el=document.createElement('td');el.textContent=String(text);if(className)el.className=className;return el;}
+function render(){
+const q=norm($('brandSearch').value).trim(),status=$('brandStatus').value;
+visible=all.filter(x=>norm(x.brand).includes(q)&&(status==='all'||(status==='available'?x.priceCount>0:x.priceCount===0)));
+$('brandRows').replaceChildren();
+const frag=document.createDocumentFragment();for(const b of visible){
+ const tr=document.createElement('tr');tr.append(td(b.brand),td(num(b.homologationRecords),'num'),td(num(b.priceCount),'num'),td(b.priceCount?'Precio documentado':'Sin precio documentado',b.priceCount?'ready':'pending'));frag.append(tr);
+}
+if(!visible.length){const tr=document.createElement('tr'),cell=td('No hay marcas con esos filtros.');cell.colSpan=4;tr.append(cell);frag.append(tr);}
+$('brandRows').append(frag);$('brandCount').textContent=num(visible.length)+' de '+num(all.length)+' marcas del corte 3CV';
+}
+$('brandSearch').addEventListener('input',render);$('brandStatus').addEventListener('change',render);
+$('exportBrands').addEventListener('click',()=>{
+ const esc=x=>'"'+String(x).replace(/"/g,'""')+'"';
+ const body=['Marca,Homologaciones 3CV mayo 2026,Precios comerciales documentados,Estado',...visible.map(b=>[b.brand,b.homologationRecords,b.priceCount,b.priceCount?'Precio documentado':'Sin precio documentado'].map(esc).join(','))].join('\r\n');
+ const url=URL.createObjectURL(new Blob(['\ufeff'+body],{type:'text/csv;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='rindelab-cobertura-marcas-20261018.csv';document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
+});
+Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261018-list185').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
+ if(!m||m.records!==8053||!Array.isArray(m.brands)||!Array.isArray(prices))throw Error('Fuentes incompletas');
+ const by=new Map();for(const p of prices){const k=norm(p.brand);by.set(k,(by.get(k)||0)+1);}
+ const known=new Set(m.brands.map(x=>norm(x.brand)));all=m.brands.map(b=>({...b,priceCount:by.get(norm(b.brand))||0}));
+ for(const p of prices)if(!known.has(norm(p.brand))){known.add(norm(p.brand));all.push({brand:p.brand,homologationRecords:0,priceCount:by.get(norm(p.brand))||0});}
+ all.sort((a,b)=>a.brand.localeCompare(b.brand,'es'));
+ $('metricBrands').textContent=num(m.brands.length);$('metricCovered').textContent=num(all.filter(x=>x.priceCount>0).length);$('metricPrices').textContent=num(prices.length);render();
+}).catch(e=>{$('brandRows').replaceChildren();const tr=document.createElement('tr'),t=td('No fue posible cargar el inventario: '+e.message);t.colSpan=4;tr.append(t);$('brandRows').append(tr);$('brandCount').textContent='Consulta las fuentes originales para verificar cobertura';});
+})();
+</script></body></html>
