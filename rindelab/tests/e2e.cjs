@@ -1839,6 +1839,91 @@ await test('Cotizador conserva legibilidad y presupuesto en móvil estrecho',asy
  assert.deepEqual(errors,[]);
  await p.close();
 });
+
+await test('Inter autoalojada: WOFF2 real disponible, sin solicitudes a Google Fonts',async()=>{
+ const p=await browser.newPage({viewport:{width:1280,height:850}});
+ const external=[],errors=[];
+ p.on('request',r=>{if(/fonts\\.(?:googleapis|gstatic)\\.com/.test(r.url()))external.push(r.url())});
+ p.on('pageerror',e=>errors.push(e.message));
+ const response=await p.goto(base,{waitUntil:'networkidle'});
+ assert.equal(response.status(),200);
+ const result=await p.evaluate(async()=>{
+  await document.fonts.ready;
+  const r=await fetch('./fonts/inter-latin-wght-normal.woff2');
+  const buf=await r.arrayBuffer(),b=new Uint8Array(buf);
+  return {font:getComputedStyle(document.body).fontFamily,loaded:document.fonts.check('400 16px Inter'),
+   status:r.status,length:b.length,magic:String.fromCharCode(...b.slice(0,4)),
+   hasLocal:[...document.styleSheets].filter(x=>x.href?.includes('v6.css')).length>0};
+ });
+ assert.deepEqual(external,[]);
+ assert.equal(result.status,200);assert.equal(result.magic,'wOF2');assert.equal(result.length,48256);
+ assert(result.font.startsWith('Inter'),JSON.stringify(result));
+ assert(result.loaded,JSON.stringify(result));
+ assert(result.hasLocal);
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
+await test('Ficha SII y precios comerciales mantienen textos legibles en pantalla de 320 px',async()=>{
+ const {page:p,errors}=await open(320,820);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ await p.locator('.vehicle-card button[data-detail]').first().click();
+ await p.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===2);
+ const measured=await p.evaluate(()=>{
+  const size=s=>{const el=document.querySelector(s);return el?parseFloat(getComputedStyle(el).fontSize):null};
+  return {price:size('.sii-price-amount'),source:size('.sii-price-item span'),
+   vehicleName:size('.sii-price-item strong'),action:size('.sii-price-actions .button'),
+   kpiLabel:size('.sii-kpis small'),
+   doc:document.documentElement.scrollWidth,viewport:innerWidth};
+ });
+ assert(measured.price>=14&&measured.source>=13&&measured.vehicleName>=15&&measured.action>=15,JSON.stringify(measured));
+ assert(measured.kpiLabel>=13,JSON.stringify(measured));
+ assert(measured.doc<=measured.viewport+3,JSON.stringify(measured));
+ await p.locator('#siiShowLookup').click();
+ await p.waitForFunction(()=>document.querySelector('#siiModelQuery')?.offsetParent!==null);
+ const inputSize=await p.locator('#siiModelQuery').evaluate(e=>parseFloat(getComputedStyle(e).fontSize));
+ assert(inputSize>=16,'El campo SII debe evitar zoom iOS: '+inputSize);
+ assert.deepEqual(errors,[]);
+ await p.close();
+});
+for(const pageName of ['cobertura.html','versiones.html','homologaciones.html','novedades-3cv.html']){
+ await test('Auditoría '+pageName+' mantiene lectura y tablas sin desbordar 320 px',async()=>{
+  const p=await browser.newPage({viewport:{width:320,height:800},isMobile:true,hasTouch:true});
+  const errors=[];p.on('pageerror',e=>errors.push(e.message));
+  const r=await p.goto(base+pageName,{waitUntil:'networkidle'});
+  assert.equal(r.status(),200);
+  await p.waitForFunction(()=>!!document.querySelector('.coverage-table tbody tr'),{timeout:25000});
+  const m=await p.evaluate(()=>{
+   const read=s=>{const x=document.querySelector(s);return x?parseFloat(getComputedStyle(x).fontSize):null};
+   const nav=[...document.querySelectorAll('.coverage-nav a')].map(x=>({label:x.textContent,height:x.getBoundingClientRect().height}));
+   return {w:document.documentElement.scrollWidth,viewport:innerWidth,nav,
+     table:read('.coverage-table'),th:read('.coverage-table th'),
+     metric:read('.coverage-metrics small'),inputs:[...document.querySelectorAll('.coverage-filters input,.coverage-filters select,.delta-filters input,.delta-filters select')].map(x=>parseFloat(getComputedStyle(x).fontSize))};
+  });
+  assert(m.w<=m.viewport+3,JSON.stringify(m));
+  assert(m.nav.every(x=>x.height>=44),JSON.stringify(m.nav));
+  assert(m.table>=13&&m.th>=13&&m.metric>=13,JSON.stringify(m));
+  assert(m.inputs.every(x=>x>=16),JSON.stringify(m));
+  assert.deepEqual(errors,[]);
+  await p.close();
+ });
+}
+await test('Submódulos Inter no usan servicios de Google Fonts',async()=>{
+ const pages=['cotizador.html','cobertura.html','versiones.html','homologaciones.html','novedades-3cv.html'];
+ const p=await browser.newPage({viewport:{width:1200,height:850}});
+ const external=[];
+ p.on('request',r=>{if(/fonts\\.(?:googleapis|gstatic)\\.com/.test(r.url()))external.push(r.url())});
+ for(const name of pages){
+  const res=await p.goto(base+name,{waitUntil:'networkidle'});
+  assert.equal(res.status(),200);
+  const loaded=await p.evaluate(async()=>{
+   await document.fonts.ready;
+   return {font:getComputedStyle(document.body).fontFamily,valid:document.fonts.check('500 16px Inter')};
+  });
+  assert(loaded.font.startsWith('Inter')&&loaded.valid,name+': '+JSON.stringify(loaded));
+ }
+ assert.deepEqual(external,[]);
+ await p.close();
+});
 await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
 if(failed)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});
