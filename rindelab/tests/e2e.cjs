@@ -1969,14 +1969,14 @@ await test('Submódulos Inter no usan servicios de Google Fonts',async()=>{
 await test('Búsqueda como primera tarea: escenario breve y resultados antes de ajustes',async()=>{
  const {page:p,errors:issues}=await open(1280,830);
  assert.match(await p.locator('#title').textContent(),/cuánto gastarías/i);
+ assert(await p.locator('.scenario-method').evaluate(x=>!x.open));
+ assert.match(await p.locator('#scenarioSummaryText').textContent(),/15\.000 km al año/);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
  const layout=await p.evaluate(()=>{
   const r=id=>document.getElementById(id).getBoundingClientRect().top+scrollY;
   return {search:r('buscador'),summary:r('scenarioSummary'),results:r('results'),scenario:r('supuestos')};
  });
  assert(layout.search<layout.summary&&layout.summary<layout.results&&layout.results<layout.scenario,JSON.stringify(layout));
- assert(await p.locator('.scenario-method').evaluate(x=>!x.open));
- assert.match(await p.locator('#scenarioSummaryText').textContent(),/15\.000 km al año/);
- await p.fill('#query','Corolla Cross');await p.click('#searchButton');
  assert.match(await p.locator('#resultsTitle').textContent(),/versiones para comparar/);
  await p.selectOption('#annualKm','20000');
  assert.match(await p.locator('#scenarioSummaryText').textContent(),/20\.000 km al año/);
