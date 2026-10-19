@@ -2236,7 +2236,9 @@ for(const pageName of ['index.html','cotizador.html']){
  });
 }
 await test('Lote 36: comprobar JAC, Dongfeng EV y MINI eléctricos',async()=>{
- const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ const testPage=await browser.newPage({viewport:{width:1280,height:800}});
+ await testPage.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ const list=await testPage.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
  assert.equal(list.length,406);
  assert.equal(list.filter(x=>x.brand==='Mini'&&x.technology==='EV').length,7);
  assert.equal(list.filter(x=>x.brand==='JAC'&&x.checkedAt==='2026-10-19').length,31);
@@ -2244,6 +2246,7 @@ await test('Lote 36: comprobar JAC, Dongfeng EV y MINI eléctricos',async()=>{
  assert.equal(list.find(x=>x.brand==='Dongfeng'&&x.family==='MAGE EV')?.technology,'EV');
  assert.equal(list.find(x=>x.brand==='JAC'&&x.family==='JS8 Pro'&&x.version==='JS8 PRO DCT LUXURY')?.priceListClp,20990000);
  assert.equal(list.find(x=>x.brand==='Mini'&&x.family==='Aceman'&&x.version==='JCW E 4x2')?.priceListClp,46900000);
+ await testPage.close();
 });
 await browser.close();console.log('\n'+passed+' aprobadas · '+failed+' fallidas');
 if(failed)process.exit(1);
