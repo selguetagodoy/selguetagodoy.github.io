@@ -49,7 +49,7 @@ async function load(){
  try{
   if(!window.RindelabCoverage)throw Error('Motor de auditoría no disponible');
   const [prices,manifest]=await Promise.all([
-   fetch('./sii/commercial-2026.json?v=20261019-coverage257').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}),
+   fetch('./sii/commercial-2026.json?v=20261019-coverage273').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}),
    fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json();})
   ]);
   const files=await Promise.all(manifest.files.map(name=>fetch('../vehiculos/'+name).then(r=>{
