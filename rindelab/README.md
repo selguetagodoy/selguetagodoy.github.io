@@ -29,7 +29,7 @@ Se normalizaron fuentes tipográficas y pesos en las vistas documentales `sii/si
 ## Cotizador comercial y directorio de tarifas (18 de octubre de 2026)
 
 ### Cotizador de autos nuevos
-El módulo público `rindelab/cotizador.html` utiliza las **155 versiones comerciales documentadas de 14 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
+El módulo público `rindelab/cotizador.html` utiliza las **185 versiones comerciales documentadas de 17 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
 
 La opción de financiamiento es estrictamente matemática y optativa: no calcula una cuota si no se ingresa una tasa nominal anual; el cálculo usa tasa nominal/12, pie y meses de plazo, sin simular CAE, seguros ni gastos contractuales. No hay precotización del banco ni solicitud de datos personales. Únicamente se enlazan cotizadores de fabricante explícitamente comprobados (Hyundai y Changan); el resto dispone de enlace a su fuente oficial verificable. La elección de una versión comercial no adjudica un código 3CV ni un registro SII: ambos requieren evidencia y selección independientes.
 
@@ -161,7 +161,7 @@ Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Pl
 
 La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examinar el grado de **coincidencia nominal por marca y familia** entre el catálogo documental de precios de lista y las fichas de homologación disponibles en el corte oficial 3CV del 08/05/2026. No altera el buscador principal ni las bases oficiales.
 
-- **Denominador comercial:** 155 precios de lista asociados a 54 familias, correspondientes únicamente a las 14 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
+- **Denominador comercial:** 185 precios de lista asociados a 66 familias, correspondientes únicamente a las 17 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
 - **Resultado de cobertura nominal:** cada familia comercial registra la cantidad de fichas 3CV cuyo nombre y marca pueden corresponderle, bajo reglas explícitas y comprobables. Los filtros permiten revisar casos con y sin coincidencia y descargar la tabla filtrada como CSV.
 - **No hay emparejamiento automático de versiones.** Una coincidencia de familia puede mezclar generaciones, tracción, combustible, baterías, tecnología o transmisiones diferentes; en esta fase no se certifica ninguna equivalencia técnica entre versiones ni su disponibilidad comercial.
 - **Reglas de exclusión documentadas:** Mazda CX-3 no confunde CX-30; Creta no absorbe Creta Grand; Hunter diésel excluye Hunter E/EREV; Yaris no absorbe Yaris Cross; Corolla Sedán no absorbe Corolla Cross; CS55 Plus no se equipara a CS55 de otra generación.
@@ -175,9 +175,11 @@ La ampliación del 18/10/2026 suma nueve precios de lista documentados directame
 
 El 18/10/2026 se añadieron siete precios normales publicados por la tienda online de Nissan Chile: Kait Sense y Advance, New Versa Sense MT, New Kicks Sense CVT, Sentra SR Platinum, X-Trail Sense CVT 3R y Pathfinder Exclusive 7P 3.5 CVT. Se diferencia el precio normal visible antes del descuento del precio «Desde» sujeto a financiamiento. La fuente identifica la versión comercial, no certifica el emparejamiento con códigos 3CV antiguos. Chevrolet y Renault quedan pendientes en esta fase por falta de valores de lista independientes de promociones suficientemente claros en sus páginas revisadas. Se mantiene fuera del catálogo cualquier precio «Desde» sin desglose de versión, bono e IVA.
 
+La ampliación multimarca del 18/10/2026 agrega **30 precios de lista separados de los bonos**: Chery (15, entre Tiggo 2/4/7/8/9 y versiones HEV/PHEV), Gac (14, familias GS3 Power, Emzoom, Emkoo y GS8) y Citroen (una, C3 Aircross Feel Pack). Las versiones se identifican por denominación comercial, fuente oficial exacta y fecha de consulta. Se usan marcas tal como aparecen en 3CV (Gac y Citroen sin acento), sin alterar el archivo original. Los datos no representan inventario de vehículos disponibles, ni verifican una equivalencia automática con una homologación histórica. Chevrolet, Renault, Peugeot, Jeep y otras marcas con precio solo promocional siguen sin cifras inventadas; la nueva vista de cobertura muestra todas las marcas técnicas, incluidas las que aún carecen de precios verificados.
+
 ## Segunda capa: cotejo exploratorio por versión comercial (octubre de 2026)
 
-La página [Revisión por versión](./versiones.html) examina las 155 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
+La página [Revisión por versión](./versiones.html) examina las 185 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
 
 Se extraen únicamente rasgos **expresos** del nombre comercial: tecnología cuando se declara, cilindrada decimal, transmisión manual o categoría amplia automática, tracción y algunos códigos de generación. Se contrastan con tecnología, cilindrada, transmisión, tracción, combustible y modelo originales del 3CV.
 

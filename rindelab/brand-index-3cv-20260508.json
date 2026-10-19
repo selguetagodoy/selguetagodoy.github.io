@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "sourceDate": "2026-05-08",
+  "source": "https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx",
+  "scope": "Marcas y registros del corte histórico 3CV mayo 2026. No equivalen a marcas o vehículos actualmente en venta ni a las nuevas fichas de octubre.",
+  "records": 8053,
+  "brands": [
+    {
+      "brand": "Alfa Romeo",
+      "homologationRecords": 21
+    },
+    {
+      "brand": "Aston Martin",
+      "homologationRecords": 24
+    },
+    {
+      "brand": "Audi",
+      "homologationRecords": 287
+    },
+    {
+      "brand": "Baic",
+      "homologationRecords": 39
+    },
+    {
+      "brand": "Bentley",
+      "homologationRecords": 19
+    },
+    {
+      "brand": "BMW",
+      "homologationRecords": 458
+    },
+    {
+      "brand": "Borgward",
+      "homologationRecords": 6
+    },
+    {
+      "brand": "Brilliance",
+      "homologationRecords": 27
+    },
+    {
+      "brand": "BYD",
+      "homologationRecords": 43
+    },
+    {
+      "brand": "Changan",
+      "homologationRecords": 97
+    },
+    {
+      "brand": "Chery",
+      "homologationRecords": 124
+    },
+    {
+      "brand": "Chevrolet",
+      "homologationRecords": 219
+    },
+    {
+      "brand": "Chrysler",
+      "homologationRecords": 5
+    },
+    {
+      "brand": "Citroen",
+      "homologationRecords": 172
+    },
+    {
+      "brand": "Cupra",
+      "homologationRecords": 18
+    },
+    {
+      "brand": "Daihatsu",
+      "homologationRecords": 4
+    },
+    {
+      "brand": "DFLM",
+      "homologationRecords": 29
+    },
+    {
+      "brand": "DFLZ",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "DFM",
+      "homologationRecords": 45
+    },
+    {
+      "brand": "DFSK",
+      "homologationRecords": 65
+    },
+    {
+      "brand": "Dodge",
+      "homologationRecords": 22
+    },
+    {
+      "brand": "Dongfeng",
+      "homologationRecords": 20
+    },
+    {
+      "brand": "DS",
+      "homologationRecords": 28
+    },
+    {
+      "brand": "Eveasy",
+      "homologationRecords": 3
+    },
+    {
+      "brand": "Exeed",
+      "homologationRecords": 4
+    },
+    {
+      "brand": "Exeed Born For More",
+      "homologationRecords": 14
+    },
+    {
+      "brand": "Farizon",
+      "homologationRecords": 14
+    },
+    {
+      "brand": "Faw",
+      "homologationRecords": 18
+    },
+    {
+      "brand": "FAW",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Ferrari",
+      "homologationRecords": 32
+    },
+    {
+      "brand": "Fest",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Fiat",
+      "homologationRecords": 125
+    },
+    {
+      "brand": "Ford",
+      "homologationRecords": 249
+    },
+    {
+      "brand": "Foton",
+      "homologationRecords": 143
+    },
+    {
+      "brand": "Fuso",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Gac",
+      "homologationRecords": 54
+    },
+    {
+      "brand": "Gac Gonow",
+      "homologationRecords": 8
+    },
+    {
+      "brand": "Gecko",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Geely",
+      "homologationRecords": 43
+    },
+    {
+      "brand": "Genesis",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Great Wall",
+      "homologationRecords": 89
+    },
+    {
+      "brand": "Haval",
+      "homologationRecords": 33
+    },
+    {
+      "brand": "Hino",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "Honda",
+      "homologationRecords": 118
+    },
+    {
+      "brand": "Hyundai",
+      "homologationRecords": 300
+    },
+    {
+      "brand": "INEOS",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "Infiniti",
+      "homologationRecords": 36
+    },
+    {
+      "brand": "Isuzu",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Iveco",
+      "homologationRecords": 8
+    },
+    {
+      "brand": "Jac",
+      "homologationRecords": 117
+    },
+    {
+      "brand": "Jaecoo",
+      "homologationRecords": 13
+    },
+    {
+      "brand": "Jaguar",
+      "homologationRecords": 128
+    },
+    {
+      "brand": "Jeep",
+      "homologationRecords": 138
+    },
+    {
+      "brand": "Jetour",
+      "homologationRecords": 31
+    },
+    {
+      "brand": "JIM",
+      "homologationRecords": 4
+    },
+    {
+      "brand": "JMC",
+      "homologationRecords": 40
+    },
+    {
+      "brand": "Kaiyi",
+      "homologationRecords": 14
+    },
+    {
+      "brand": "Karry",
+      "homologationRecords": 20
+    },
+    {
+      "brand": "Kenbo",
+      "homologationRecords": 8
+    },
+    {
+      "brand": "KGM",
+      "homologationRecords": 49
+    },
+    {
+      "brand": "Kia",
+      "homologationRecords": 283
+    },
+    {
+      "brand": "KYC",
+      "homologationRecords": 38
+    },
+    {
+      "brand": "Lada",
+      "homologationRecords": 6
+    },
+    {
+      "brand": "Lamborghini",
+      "homologationRecords": 6
+    },
+    {
+      "brand": "Land Rover",
+      "homologationRecords": 511
+    },
+    {
+      "brand": "Landking",
+      "homologationRecords": 9
+    },
+    {
+      "brand": "Landwind",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Leapmotor",
+      "homologationRecords": 4
+    },
+    {
+      "brand": "LEAPMOTOR",
+      "homologationRecords": 3
+    },
+    {
+      "brand": "Lexus",
+      "homologationRecords": 70
+    },
+    {
+      "brand": "Lifan",
+      "homologationRecords": 16
+    },
+    {
+      "brand": "Livan",
+      "homologationRecords": 7
+    },
+    {
+      "brand": "Lotus",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "Lynk Co",
+      "homologationRecords": 6
+    },
+    {
+      "brand": "M. Benz",
+      "homologationRecords": 565
+    },
+    {
+      "brand": "Mahindra",
+      "homologationRecords": 30
+    },
+    {
+      "brand": "MAN",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Maple",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "Maserati",
+      "homologationRecords": 30
+    },
+    {
+      "brand": "Maxus",
+      "homologationRecords": 111
+    },
+    {
+      "brand": "Mazda",
+      "homologationRecords": 138
+    },
+    {
+      "brand": "McLaren",
+      "homologationRecords": 16
+    },
+    {
+      "brand": "MG",
+      "homologationRecords": 91
+    },
+    {
+      "brand": "Mini",
+      "homologationRecords": 146
+    },
+    {
+      "brand": "Mitsubishi",
+      "homologationRecords": 109
+    },
+    {
+      "brand": "Mitsubishi Fuso",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "Nammi",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "Neta",
+      "homologationRecords": 4
+    },
+    {
+      "brand": "Nissan",
+      "homologationRecords": 164
+    },
+    {
+      "brand": "Omoda",
+      "homologationRecords": 13
+    },
+    {
+      "brand": "Opel",
+      "homologationRecords": 124
+    },
+    {
+      "brand": "Peugeot",
+      "homologationRecords": 243
+    },
+    {
+      "brand": "Piaggio",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Porsche",
+      "homologationRecords": 299
+    },
+    {
+      "brand": "Proton",
+      "homologationRecords": 4
+    },
+    {
+      "brand": "Ram",
+      "homologationRecords": 109
+    },
+    {
+      "brand": "RAM",
+      "homologationRecords": 8
+    },
+    {
+      "brand": "Renault",
+      "homologationRecords": 92
+    },
+    {
+      "brand": "Riddara",
+      "homologationRecords": 6
+    },
+    {
+      "brand": "Rolls-Royce",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "Seat",
+      "homologationRecords": 24
+    },
+    {
+      "brand": "Seres",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Shineray",
+      "homologationRecords": 15
+    },
+    {
+      "brand": "Sinotruk",
+      "homologationRecords": 10
+    },
+    {
+      "brand": "Skoda",
+      "homologationRecords": 108
+    },
+    {
+      "brand": "Skywell",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "Smart",
+      "homologationRecords": 11
+    },
+    {
+      "brand": "Soueast",
+      "homologationRecords": 7
+    },
+    {
+      "brand": "Ssangyong",
+      "homologationRecords": 102
+    },
+    {
+      "brand": "Subaru",
+      "homologationRecords": 103
+    },
+    {
+      "brand": "Suzuki",
+      "homologationRecords": 161
+    },
+    {
+      "brand": "SWM",
+      "homologationRecords": 9
+    },
+    {
+      "brand": "Tesla",
+      "homologationRecords": 12
+    },
+    {
+      "brand": "Toyota",
+      "homologationRecords": 185
+    },
+    {
+      "brand": "Uaz",
+      "homologationRecords": 14
+    },
+    {
+      "brand": "Volkswagen",
+      "homologationRecords": 163
+    },
+    {
+      "brand": "Volvo",
+      "homologationRecords": 163
+    },
+    {
+      "brand": "Weltmeister",
+      "homologationRecords": 2
+    },
+    {
+      "brand": "ZNA",
+      "homologationRecords": 10
+    },
+    {
+      "brand": "ZNA Dongfeng",
+      "homologationRecords": 21
+    },
+    {
+      "brand": "Zotye",
+      "homologationRecords": 1
+    },
+    {
+      "brand": "ZX Auto",
+      "homologationRecords": 19
+    }
+  ]
+}

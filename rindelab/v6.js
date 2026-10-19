@@ -45,7 +45,8 @@ function family(row){
   [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],[/^Yuan\s+Pro\s+DM[-\s]?i\b/i,'Yuan Pro DM-i'],[/^Yuan\s+Plus\b/i,'Yuan Plus'],[/^Song\s+Plus\b/i,'Song Plus'],[/^Song\s+Pro\b/i,'Song Pro'],
   [/^Deepal\s+[A-Z0-9-]+\b/i,null],
   [/^Haval\s+Jolion\s+Max\b/i,'Haval Jolion Max'],[/^Haval\s+(H6|H9|Jolion(?:\s+Pro)?|Dargo)\b/i,null],[/^ORA\s*0?3\b/i,'ORA 03'],
-  [/^Tiggo\s+\d+\b/i,null],[/^ATTO\s+\d+\b/i,null],
+  [/^Tiggo\s+2\s+Pro\s+Max\b/i,'Tiggo 2 Pro Max'],[/^Tiggo\s+4\s+Pro\s+Max\b/i,'Tiggo 4 Pro Max'],[/^Tiggo\s+7\s+Pro\s+Max\b/i,'Tiggo 7 Pro Max'],[/^Tiggo\s+8\s+Pro\s+Max\b/i,'Tiggo 8 Pro Max'],[/^Tiggo\s+\d+\b/i,null],
+  [/^GS3\s+Power\b/i,'GS3 Power'],[/^Emzoom\b/i,'Emzoom'],[/^Emkoo\b/i,'Emkoo'],[/^GS8\b/i,'GS8'],[/^C3\s+Aircross\b/i,'C3 Aircross'],[/^ATTO\s+\d+\b/i,null],
   [/^Model\s+[3SYX]\b/i,null],[/^F[\s-]?(150|250|350)\b/i,null],
   [/^e[\s-]?Vitara\b/i,'e Vitara'],[/^e[\s-]?208\b/i,'e-208'],[/^e[\s-]?2008\b/i,'e-2008']
  ];
