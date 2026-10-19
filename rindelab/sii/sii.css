@@ -98,3 +98,5 @@
  .sii-item-values{grid-template-columns:1fr auto;gap:4px}
  .sii-item>.button{min-height:44px}
 }
+
+.sii-overline{color:#0b5d6c}.sii-small,.sii-kpis small,.sii-selected p,.sii-commercial>small,.sii-commercial>strong span,.sii-price-item span,.sii-price-age{color:#455f73}
