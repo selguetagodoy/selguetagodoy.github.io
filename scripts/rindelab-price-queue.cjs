@@ -75,6 +75,40 @@ function readyRecord(row,hosts,errors){
   ...(row.fin_campana?{sourceOfferEnd:row.fin_campana}:{})
  };
 }
+function groupCommercialBrand(brand){
+ const v=norm(brand);
+ if(v==='GREAT WALL'||v==='HAVAL')return 'GWM';
+ if(v==='DONGFENG'||v==='DFM'||v==='NAMMI')return 'Dongfeng/DFM';
+ if(v==='BAIC')return 'BAIC';
+ if(v==='JAC')return 'JAC';
+ return brand;
+}
+function summaryCsv(queue,catalog){
+ const by={},prices={};
+ for(const r of queue){
+  const b=r.marca_grupo;
+  let x=by[b]??={records:0,priorities:0,pending:0,tech:{EV:0,HEV:0,PHEV:0,REEV:0,MHEV:0}};
+  x.records++;if(r.prioridad.startsWith('A_'))x.priorities++;
+  if(!['ya_importado','fuera_de_alcance'].includes(r.estado))x.pending++;
+  if(technologies.has(r.tecnologia_3cv))x.tech[r.tecnologia_3cv]++;
+ }
+ for(const p of catalog){if(!technologies.has(p.technology))continue;
+  const b=groupCommercialBrand(p.brand),x=prices[b]??={count:0,families:new Set()};
+  x.count++;x.families.add(p.family);
+ }
+ const header=['marca_grupo','denominaciones_3cv_en_bandeja','prioridad_alta','pendientes_de_cotejo','ev_3cv','hev_3cv','phev_3cv','reev_3cv','mhev_3cv','precios_electrificados_documentados_en_marca','familias_comerciales_con_precios_en_marca','estado','nota'];
+ const q=x=>{const v=String(x??'');return /[,"\r\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;};
+ const brands=Object.keys(by).sort((a,b)=>Number(by[b].priorities>0)-Number(by[a].priorities>0)||a.localeCompare(b,'es'));
+ const lines=brands.map(b=>{
+  const x=by[b],p=prices[b]??{count:0,families:new Set()};
+  return [b,x.records,x.priorities,x.pending,x.tech.EV,x.tech.HEV,x.tech.PHEV,x.tech.REEV,x.tech.MHEV,p.count,p.families.size,x.pending?'en_revision':'sin_pendientes','La presencia 3CV no certifica oferta o correspondencia comercial.'].map(q).join(',');
+ });
+ return '\uFEFF'+header.join(',')+'\n'+lines.join('\n')+'\n';
+}
+function writeReports(data,queue,catalog){
+ fs.writeFileSync(reportFile,JSON.stringify(data,null,2)+'\n');
+ fs.writeFileSync(path.join(root,'rindelab/sii/avance-marcas-electromovilidad.csv'),summaryCsv(queue,catalog));
+}
 function main(){
  const args=new Set(process.argv.slice(2));
  if(args.has('--apply')&&args.has('--dry-run'))throw Error('Elegir --apply o --dry-run, nunca ambos');
@@ -109,7 +143,7 @@ function main(){
   statuses:states,priorities,readyNew:candidates.length,readyAlreadyInCatalog:repeated.length,
   errors,byGroup:Object.values(groups).sort((a,b)=>b.pendientes-a.pendientes||a.marca.localeCompare(b.marca,'es'))
  };
- if(args.has('--report')&& !errors.length){fs.writeFileSync(reportFile,JSON.stringify(result,null,2)+'\n');}
+ if(args.has('--report')&& !errors.length){writeReports(result,queue,catalog);}
  process.stdout.write(JSON.stringify(result,null,2)+'\n');
  if(errors.length)process.exitCode=1;
  if(args.has('--apply')&& !errors.length){
@@ -119,7 +153,7 @@ function main(){
   fs.writeFileSync(catalogFile,JSON.stringify(updated,null,2)+'\n');
   fs.writeFileSync(queueFile,csv(queue));
   result.appliedNew=candidates.length;
-  fs.writeFileSync(reportFile,JSON.stringify(result,null,2)+'\n');
+  writeReports(result,queue,updated);
   process.stdout.write('Importación aplicada: '+candidates.length+' fichas; '+repeated.length+' duplicados idénticos ya existentes. Ejecuta auditor y pruebas antes de publicar.\n');
  }else if(args.has('--dry-run'))process.stdout.write('Simulación: no se modificó ningún archivo.\n');
 }
