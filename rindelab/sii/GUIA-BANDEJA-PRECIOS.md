@@ -45,3 +45,11 @@ La opción --report genera/actualiza resumen de marcas y estadísticas. La opci�
 El importador valida dominios contra la lista oficial del auditor, importes literales, fecha y tipo de precio; no pisa registros con cifras discrepantes. Al migrar marca las filas como ya_importado. No ejecutar --apply para filas simplemente investigadas.
 
 El objetivo es reproducir información oficial y reducir tiempo de investigación, no certificar stock, campañas vigentes o una cobertura porcentual artificial del mercado.
+
+## Lote adicional: 200 candidatos investigables (19/10/2026)
+
+- [Inventario Markdown de 200 modelos 3CV y resultado del cruce](./LOTE-200-FALTANTES-CRUCE-20261019.md).
+- [CSV de trabajo editable por marca, versión, fuentes y precio](./lote-200-cruce-precios-20261019.csv).
+
+Este lote amplía las 66 prioridades anteriores. El cruce se hizo contra 359 precios de una rama todavía pendiente de integrar (PR #85); el catálogo publicado en `main` contiene 347. No equivale a 200 precios faltantes verificados en el mercado: son 200 denominaciones técnicas adicionales candidatas a investigación. Solo migrar al catálogo comercial valores literales respaldados y versiones comprobadas, sin inferir relaciones 3CV ni reusar precios por similitud de nombre.
+
