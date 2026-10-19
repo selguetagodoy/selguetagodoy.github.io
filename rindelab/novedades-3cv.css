@@ -84,3 +84,5 @@
 .delta-context strong{font-weight:700}
 .delta-review-evidence summary,.delta-variants summary{min-height:44px;display:flex;align-items:center}
 .delta-method p{max-width:68ch}
+
+.delta-code small,.delta-code a,.delta-technology small,.delta-status small,.delta-conflicts-table small,.delta-mode-wrap p,.delta-review-evidence small{color:#455f73}
