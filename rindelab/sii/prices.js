@@ -18,7 +18,7 @@ function ageWarning(record){
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[];
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261019-list273').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261019-list280').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
   return loaded;
@@ -52,7 +52,7 @@ function render(section,row,family){
   const summary=document.createElement('div');summary.className='sii-selected-price';
   summary.innerHTML='<small>VERSIÓN COMERCIAL SELECCIONADA</small><strong>'+clp(chosen.priceListClp)+'</strong>'+
    '<p>'+esc(chosen.brand+' '+chosen.family+' · '+chosen.version)+(chosen.modelYear?' · modelo '+chosen.modelYear:' · año de modelo no informado')+'</p>'+
-   '<p class="sii-small">Fecha de consulta: '+esc(chosen.checkedAt)+'. El fabricante puede modificar el precio sin previo aviso.</p>'+
+   '<p class="sii-small">Fuente consultada: '+esc(chosen.checkedAt)+(chosen.sourceOfferEnd?' · Campaña documentada hasta '+esc(chosen.sourceOfferEnd):'')+'. El fabricante puede modificar el precio sin previo aviso.</p>'+
    (ageWarning(chosen)?'<p class="sii-price-age" role="status">'+esc(ageWarning(chosen))+'</p>':'')+
    '<a href="'+esc(chosen.source)+'" target="_blank" rel="noopener noreferrer">Ver precio en sitio oficial ↗</a>';
   const remove=document.createElement('button');remove.type='button';remove.className='button secondary';remove.textContent='Quitar versión comercial';
@@ -74,7 +74,7 @@ function render(section,row,family){
  const list=document.createElement('div');list.className='sii-price-list';
  for(const p of available){
   const item=document.createElement('article');item.className='sii-price-item';
-  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>Lista sin bonos · consultado '+esc(p.checkedAt)+'</span>'+
+  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>Lista sin bonos · fuente consultada '+esc(p.checkedAt)+'</span>'+ (p.sourceOfferEnd?'<span class="sii-price-age">Campaña documentada hasta '+esc(p.sourceOfferEnd)+'</span>':'')+
     (ageWarning(p)?'<span class="sii-price-age">'+esc(ageWarning(p))+'</span>':'')+
     '</div><div class="sii-price-amount">'+clp(p.priceListClp)+'</div>';
   const actions=document.createElement('div');actions.className='sii-price-actions';

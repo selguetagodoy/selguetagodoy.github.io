@@ -52,7 +52,7 @@ function gapRows(){
 async function init(){
  try{
   const [p,a]=await Promise.all([
-   fetch('./sii/commercial-2026.json?v=20261019-electro273').then(r=>{if(!r.ok)throw Error('catálogo inaccesible');return r.json();}),
+   fetch('./sii/commercial-2026.json?v=20261019-electro280').then(r=>{if(!r.ok)throw Error('catálogo inaccesible');return r.json();}),
    fetch('./data/electromobility-3cv-audit-20261019.json').then(r=>{if(!r.ok)throw Error('auditoría no disponible');return r.json();})
   ]);
   if(!Array.isArray(p)||!a||!Array.isArray(a.brands))throw Error('estructura no válida');
