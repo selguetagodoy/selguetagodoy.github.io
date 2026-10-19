@@ -54,6 +54,7 @@ jobs:
         run: |
           node scripts/rindelab-price-queue.cjs --check
           node scripts/rindelab-price-queue.cjs --dry-run
+          node scripts/tests/rindelab-price-queue.test.cjs
 
       - name: Auditar cruce comercial con familias 3CV y exclusiones
         run: node scripts/audit-commercial-3cv-coverage.cjs --json=coverage-audit.json
