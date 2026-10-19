@@ -643,12 +643,12 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
 await test('Catálogo de precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
  assert.equal(list.length,priceTotal);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['BMW','BYD','Baic','Changan','Chery','Citroen','DFSK','Dongfeng','Fiat','Ford','Gac','Geely','Great Wall','Hyundai','JAC','JMC','Jaecoo','Jeep','KGM','Kia','Leapmotor','MG','Mazda','Mitsubishi','Nissan','Omoda','Peugeot','Seres','Skoda','Subaru','Suzuki','Toyota','Volkswagen','Volvo']);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Audi','BMW','BYD','Baic','Changan','Chery','Citroen','Cupra','DFSK','Dongfeng','Fiat','Ford','Gac','Geely','Great Wall','Hyundai','JAC','JMC','Jaecoo','Jeep','KGM','Kia','Leapmotor','MG','Mazda','Mitsubishi','Nissan','Omoda','Peugeot','Seres','Skoda','Subaru','Suzuki','Toyota','Volkswagen','Volvo']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -1187,7 +1187,7 @@ await test('Marcas: 134 marcas del 3CV histórico, filtro transparente y CSV',as
  await p.goto(base+'marcas.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#metricBrands')?.textContent==='119',{timeout:30000});
  assert.equal(await p.locator('#metricPrices').textContent(),String(priceTotal));
- assert.equal(await p.locator('#metricCovered').textContent(),'34');
+ assert.equal(await p.locator('#metricCovered').textContent(),String(catalogBrandTotal));
  assert.equal(await p.locator('#brandRows tr').count(),119);
  await p.fill('#brandSearch','Chevrolet');
  assert.equal(await p.locator('#brandRows tr').count(),1);
@@ -1197,7 +1197,7 @@ await test('Marcas: 134 marcas del 3CV histórico, filtro transparente y CSV',as
  assert.match(await p.locator('#brandRows tr').first().textContent(),/15.*Precio documentado/);
  await p.fill('#brandSearch','');
  await p.selectOption('#brandStatus','available');
- assert.equal(await p.locator('#brandRows tr').count(),34);
+ assert.equal(await p.locator('#brandRows tr').count(),catalogBrandTotal);
  const download=p.waitForEvent('download');
  await p.locator('#exportBrands').click();
  assert.match((await download).suggestedFilename(),/rindelab-cobertura-marcas/);
