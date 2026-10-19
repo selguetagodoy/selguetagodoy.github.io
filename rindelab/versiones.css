@@ -4,41 +4,58 @@
 .versions-table th:nth-child(2){width:22%}
 .versions-table th:nth-child(3){width:18%}
 .versions-table th:nth-child(4){width:31%}
-.version-name{font-weight:750;color:#163d55}
+.version-name{font-weight:800;color:#163d55}
 .version-name strong,.version-name small,.version-name a{display:block}
-.version-name strong{margin-top:5px;color:#315b74;font-size:12px}
-.version-name small{font-weight:500;color:#637d8e;font-size:11px;margin:7px 0}
-.version-name a{font-size:11px}
+.version-name strong{margin-top:5px;color:#315b74;font-size:13px}
+.version-name small{font-weight:500;color:#637d8e;font-size:13px;margin:7px 0}
+.version-name a{font-size:13px}
 .version-numbers{font-variant-numeric:tabular-nums;color:#43657a}
-.version-status{color:#264c65;font-weight:750}
+.version-status{color:#264c65;font-weight:800}
 .version-details{margin-top:10px;font-weight:400;max-width:100%}
-.version-details summary{cursor:pointer;color:#096c83;font-weight:750;font-size:11px;padding:8px 0;list-style:revert}
+.version-details summary{cursor:pointer;color:#096c83;font-weight:800;font-size:13px;padding:8px 0;list-style:revert}
 .version-details[open]{background:#f4f9fb;border:1px solid #dce9ee;border-radius:8px;padding:8px}
-.version-evidence{font-size:11px;color:#385469;line-height:1.5;overflow-wrap:anywhere}
+.version-evidence{font-size:13px;color:#385469;line-height:1.5;overflow-wrap:anywhere}
 .version-evidence p{margin:9px 0}
-.version-evidence strong{display:block;font-size:11px;color:#193e56}
+.version-evidence strong{display:block;font-size:13px;color:#193e56}
 .version-evidence ul{margin:6px 0 12px;padding-left:17px}
 .version-evidence li{margin-bottom:10px}
 .version-evidence b{color:#173c55}
-.version-evidence small{display:block;font-size:10px;color:#617f91;margin-top:3px}
-@media(max-width:600px){.versions-table{min-width:800px}.coverage-panel-head .button{font-size:12px}}
+.version-evidence small{display:block;font-size:13px;color:#617f91;margin-top:3px}
+@media(max-width:600px){.versions-table{min-width:800px}.coverage-panel-head .button{font-size:13px}}
 
 /* Revisión prioritaria y advertencias técnicas: no equivalencia comercial. */
 .priority-tools{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:14px 0 5px}
-.priority-toggle{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:740;color:#194c61;cursor:pointer}
+.priority-toggle{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:#194c61;cursor:pointer}
 .priority-toggle input{height:18px;width:18px;accent-color:#067a85}
-#versionsPrioritySummary{font-size:11px;color:#55788b;line-height:1.5}
-.candidate-identity{font-weight:620;font-size:10px;color:#4a6980;overflow-wrap:anywhere;margin:7px 0 0}
-.candidate-shared{font-weight:600;font-size:11px;line-height:1.5;color:#7a5b26;padding:7px 9px;border-left:2px solid #c29b45;background:#fffaec;border-radius:0 5px 5px 0;margin:8px 0}
-.reviewed-discrepancy{margin:10px 0;padding:10px;border:1px solid #efd9b6;background:#fff9f0;border-radius:8px;font-size:11px;font-weight:500;line-height:1.6}
-.reviewed-discrepancy strong{display:block;font-size:11px;color:#664927}
+#versionsPrioritySummary{font-size:13px;color:#55788b;line-height:1.5}
+.candidate-identity{font-weight:600;font-size:13px;color:#4a6980;overflow-wrap:anywhere;margin:7px 0 0}
+.candidate-shared{font-weight:600;font-size:13px;line-height:1.5;color:#7a5b26;padding:7px 9px;border-left:2px solid #c29b45;background:#fffaec;border-radius:0 5px 5px 0;margin:8px 0}
+.reviewed-discrepancy{margin:10px 0;padding:10px;border:1px solid #efd9b6;background:#fff9f0;border-radius:8px;font-size:13px;font-weight:500;line-height:1.6}
+.reviewed-discrepancy strong{display:block;font-size:13px;color:#664927}
 .reviewed-discrepancy p{margin:6px 0}
-.reviewed-discrepancy a{font-size:11px;font-weight:750;overflow-wrap:anywhere}
-@media(max-width:600px){.priority-tools{align-items:flex-start;flex-direction:column}.priority-toggle{font-size:11px}}
+.reviewed-discrepancy a{font-size:13px;font-weight:800;overflow-wrap:anywhere}
+@media(max-width:600px){.priority-tools{align-items:flex-start;flex-direction:column}.priority-toggle{font-size:13px}}
 
 /* Respaldo de fabricante: discreto, plegable y sin certificar códigos 3CV. */
-.manufacturer-evidence{margin-top:9px;padding:8px 10px;background:#f0f9f9;border:1px solid #cde6e5;border-radius:7px;font-size:11px;font-weight:500;line-height:1.5;color:#305766}
-.manufacturer-evidence summary{font-weight:750;cursor:pointer;color:#126378}
+.manufacturer-evidence{margin-top:9px;padding:8px 10px;background:#f0f9f9;border:1px solid #cde6e5;border-radius:7px;font-size:13px;font-weight:500;line-height:1.5;color:#305766}
+.manufacturer-evidence summary{font-weight:800;cursor:pointer;color:#126378}
 .manufacturer-evidence p{margin:9px 0 6px}
-.manufacturer-evidence a{display:block;font-weight:750;margin:3px 0 6px;overflow-wrap:anywhere}
-.manufacturer-evidence small{font-size:10px;color:#557582;display:block}
+.manufacturer-evidence a{display:block;font-weight:800;margin:3px 0 6px;overflow-wrap:anywhere}
+.manufacturer-evidence small{font-size:13px;color:#557582;display:block}
+
+
+/* Evidencia técnica de versiones: mínimo tipográfico y enlaces claros */
+.version-name{font-weight:700}
+.version-name strong{font-size:14px;font-weight:700}
+.version-name small,.version-name a,.version-details summary{font-size:13px;color:#455f73}
+.version-details summary{min-height:44px;display:list-item;font-weight:600;color:#125c75}
+.version-evidence,.version-evidence strong,.version-evidence small,
+.candidate-identity,.candidate-shared,.reviewed-discrepancy,.reviewed-discrepancy strong,
+.reviewed-discrepancy a,.manufacturer-evidence,.manufacturer-evidence small{font-size:13px;line-height:1.65}
+.reviewed-discrepancy a,.manufacturer-evidence a{font-weight:600}
+.priority-toggle{font-size:14px;min-height:44px;font-weight:600}
+#versionsPrioritySummary{font-size:13px;color:#455f73}
+.manufacturer-evidence summary{min-height:44px;font-weight:600;display:flex;align-items:center}
+@media(max-width:600px){.priority-toggle,.coverage-panel-head .button{font-size:14px}}
+
+.version-name small,.version-evidence small,.candidate-identity,.manufacturer-evidence small,#versionsPrioritySummary{color:#455f73}

@@ -4,9 +4,13 @@
 
 Web pública: https://selguetagodoy.github.io/rindelab/
 
+## Segunda pasada de accesibilidad y tipografía
+
+Se normalizaron fuentes tipográficas y pesos en las vistas documentales `sii/sii.css`, `cobertura.css`, `versiones.css`, `homologaciones.css` y `novedades-3cv.css`: etiquetas de 13 px como mínimo, campos y selectores de 16 px, enlaces de navegación y acciones con superficie táctil de 44 px y cifras con tabulares. Esta revisión no modifica los códigos 3CV, el cotejo preliminar por versión, los importes del SII o de las marcas, ni los pliegos de electricidad. Las tablas extensas mantienen su desplazamiento horizontal dentro del contenedor en pantallas reducidas.
+
 ## Legibilidad y jerarquía de resultados (18 de octubre de 2026)
 
-- **Fuente Inter:** se carga gratuitamente desde Google Fonts (400, 500, 600, 700 y 800), con fuentes de sistema como fallback. Esta versión usa el servicio externo de Google Fonts, por lo que no se debe afirmar que está autoalojada ni que no realiza peticiones externas. La incorporación de un fichero WOFF2 autoalojado queda sujeta a disponer de una vía de carga binaria fiable.
+- **Fuente Inter:** se aloja directamente en `rindelab/fonts/inter-latin-wght-normal.woff2` (fuente variable pesos 400–800, alfabeto latino y acentos españoles). Se precarga en las seis páginas principales desde el mismo dominio, sin llamadas a Google Fonts. La licencia libre SIL OFL 1.1 y la procedencia de Inter están en `rindelab/fonts/OFL-LICENSE.txt`; se conserva la fuente del sistema como respaldo si no descarga. La localización elimina una dependencia externa de tipografía, sin implicar que las fuentes oficiales enlazadas del proyecto sean internas.
 - **Escala y contraste:** la nueva capa `v6.css` prioriza cuerpo de 16 px, texto secundario de 13–15 px, enlaces y controles de al menos 44 px, títulos de tarjeta 18 px y montos anuales de 22–24 px; contrasta los grises sobre blanco y sobre el azul claro. El cotizador utiliza el mismo criterio con `cotizador.css`.
 - **Tarjeta 3CV:** el monto energético **anual estimado** es la cifra principal, siempre acompañado del kilometraje seleccionado; al lado se muestran rendimiento homologado y costo por 100 km, y bajo ellos la proyección a cinco años con tarifas constantes. No se deduce costo para PHEV/REEV si no existe una base comparable o tarifa suficiente; se indica `No estimable`.
 - **Trazabilidad:** una sola fecha de homologación, sufijo del código, tecnología, ciclo y enlace a ficha. La fuente 3CV sigue visible en cada resultado. NEDC y WLTP no se homologan entre sí; la API de octubre no sustituye arbitrariamente la histórica de mayo.

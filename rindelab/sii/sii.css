@@ -2,39 +2,39 @@
 /* Valores tributarios 2026, seleccionados por código y año SII. */
 .sii-section{margin-top:22px;background:linear-gradient(145deg,#f5fafc,#fff);border:1px solid #cadfe9;border-radius:13px;padding:17px 18px}
 .sii-section-head{display:flex;justify-content:space-between;align-items:start;gap:10px}
-.sii-overline{display:block;color:#16828d;font-size:10px;letter-spacing:.11em;font-weight:800}
+.sii-overline{display:block;color:#16828d;font-size:13px;letter-spacing:.11em;font-weight:800}
 .sii-section h3{margin:4px 0 9px;color:#173f57;font-size:18px}
-.sii-origin{color:#155a77;background:#e3f0f5;border-radius:6px;padding:5px 8px;font-size:10px;font-weight:800;white-space:nowrap}
-.sii-small{color:#607b8c;font-size:11px;line-height:1.6}
-.sii-pending{padding:13px;background:#f1f5f8;border:1px dashed #c5d9e3;border-radius:8px;color:#58778a;font-size:12px}
+.sii-origin{color:#155a77;background:#e3f0f5;border-radius:6px;padding:5px 8px;font-size:13px;font-weight:800;white-space:nowrap}
+.sii-small{color:#607b8c;font-size:13px;line-height:1.6}
+.sii-pending{padding:13px;background:#f1f5f8;border:1px dashed #c5d9e3;border-radius:8px;color:#58778a;font-size:13px}
 .sii-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .sii-lookup{background:white;border:1px solid #d3e3e9;border-radius:10px;padding:14px;margin:12px 0}
 .sii-lookup-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .sii-lookup-grid .sii-model-search{grid-column:1/-1}
 .sii-lookup .field select,.sii-lookup .field input{width:100%;min-width:0;height:45px}
 .sii-lookup #siiSearch{margin:5px 0 13px}
-.sii-error{font-size:12px;color:#99412a;padding:13px 10px;background:#fff5ef;border-radius:8px}
-.sii-found{font-size:12px;font-weight:730;color:#2d637b;margin:0 0 8px}
+.sii-error{font-size:13px;color:#99412a;padding:13px 10px;background:#fff5ef;border-radius:8px}
+.sii-found{font-size:13px;font-weight:700;color:#2d637b;margin:0 0 8px}
 .sii-results{display:flex;flex-direction:column;gap:9px;max-height:420px;overflow:auto;padding:3px}
 .sii-item{padding:11px 12px;border:1px solid #d8e7ed;border-radius:9px;background:#fcfeff;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(105px,.8fr) auto;align-items:center;gap:9px}
-.sii-item strong{font-size:12px;color:#21485f;display:block;overflow-wrap:anywhere}
-.sii-item span{display:block;color:#648095;font-size:10px;margin-top:5px}
+.sii-item strong{font-size:13px;color:#21485f;display:block;overflow-wrap:anywhere}
+.sii-item span{display:block;color:#648095;font-size:13px;margin-top:5px}
 .sii-item-values{display:grid;grid-template-columns:1fr auto;gap:2px 7px;font-variant-numeric:tabular-nums}
-.sii-item-values small{font-size:10px;color:#6f8695}
-.sii-item-values b{font-size:11px;color:#18576d}
-.sii-item .button{font-size:11px;min-height:43px}
+.sii-item-values small{font-size:13px;color:#6f8695}
+.sii-item-values b{font-size:13px;color:#18576d}
+.sii-item .button{font-size:13px;min-height:43px}
 .sii-selected{border:1px solid #b5deda;background:#f0fbf8;border-radius:9px;padding:11px 12px}
-.sii-selected p{font-size:11px;line-height:1.5;margin:8px 0 0}
+.sii-selected p{font-size:13px;line-height:1.5;margin:8px 0 0}
 .sii-kpis{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .sii-kpis>div{padding:10px;background:white;border:1px solid #d1e5e5;border-radius:8px}
-.sii-kpis small{font-size:10px;color:#638292;display:block}
+.sii-kpis small{font-size:13px;color:#638292;display:block}
 .sii-kpis strong{font-size:17px;color:#116679;display:block;margin-top:2px}
 .sii-commercial{margin:14px 0;padding:12px 13px;border-radius:10px;background:#eef5fa;border:1px solid #d2e4ee}
-.sii-commercial>small{display:block;font-weight:820;letter-spacing:.045em;font-size:10px;color:#516e87}
+.sii-commercial>small{display:block;font-weight:800;letter-spacing:.045em;font-size:13px;color:#516e87}
 .sii-commercial>strong{display:block;font-size:21px;color:#155774;margin:5px 0}
-.sii-commercial>strong span{font-size:11px;color:#6a8390;font-weight:650}
-.sii-commercial p{font-size:11px;color:#496b7c;line-height:1.5;margin:8px 0}
-.sii-commercial a,.sii-links a{font-size:11px;font-weight:730}
+.sii-commercial>strong span{font-size:13px;color:#6a8390;font-weight:700}
+.sii-commercial p{font-size:13px;color:#496b7c;line-height:1.5;margin:8px 0}
+.sii-commercial a,.sii-links a{font-size:13px;font-weight:700}
 .sii-links{display:flex;gap:15px;flex-wrap:wrap;border-top:1px solid #d7e5ec;padding-top:12px}
 @media(max-width:600px){
  .sii-section{padding:12px 10px}.sii-lookup{padding:10px}.sii-lookup-grid{grid-template-columns:1fr}
@@ -43,37 +43,60 @@
  .sii-item>div:first-child{grid-column:1/-1}
  .sii-item .button{grid-column:1/-1;width:100%}
  .sii-kpis strong{font-size:14px}
- .sii-kpis small{font-size:9px}
- .sii-lookup .field select,.sii-lookup .field input{font-size:12px}
+ .sii-kpis small{font-size:13px}
+ .sii-lookup .field select,.sii-lookup .field input{font-size:13px}
 }
 
 
 /* Precios de lista: selección de versión comercial independiente del SII/3CV. */
-.sii-price-head small{font-weight:850;letter-spacing:.075em;color:#0d6979}
-.sii-price-head p{font-size:11px;line-height:1.55;color:#486c7c;margin:8px 0 12px}
+.sii-price-head small{font-weight:800;letter-spacing:.075em;color:#0d6979}
+.sii-price-head p{font-size:13px;line-height:1.55;color:#486c7c;margin:8px 0 12px}
 .sii-price-list{display:flex;flex-direction:column;gap:9px;max-height:390px;overflow-y:auto;overscroll-behavior:contain}
 .sii-price-item{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:11px;padding:11px;border:1px solid #d4e6eb;border-radius:8px;background:#fff}
-.sii-price-item strong{display:block;font-size:12px;color:#20465c;line-height:1.35}
-.sii-price-item span{display:block;color:#668698;font-size:10px;margin-top:4px}
-.sii-price-amount{font-size:16px;font-weight:880;color:#076c78;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sii-price-item strong{display:block;font-size:13px;color:#20465c;line-height:1.35}
+.sii-price-item span{display:block;color:#668698;font-size:13px;margin-top:4px}
+.sii-price-amount{font-size:16px;font-weight:800;color:#076c78;font-variant-numeric:tabular-nums;white-space:nowrap}
 .sii-price-actions{display:flex;gap:7px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.sii-price-actions .button{font-size:11px;min-height:44px;padding:7px 9px}
-.sii-price-actions a{font-size:10px;white-space:nowrap;font-weight:720}
+.sii-price-actions .button{font-size:13px;min-height:44px;padding:7px 9px}
+.sii-price-actions a{font-size:13px;white-space:nowrap;font-weight:700}
 .sii-selected-price{background:#e9faf3;border:1px solid #bde5d4;border-radius:9px;padding:12px;margin-bottom:12px}
-.sii-selected-price small{display:block;color:#286959;font-size:10px;font-weight:820}
+.sii-selected-price small{display:block;color:#286959;font-size:13px;font-weight:800}
 .sii-selected-price strong{display:block;margin:5px 0;color:#075b53;font-size:22px}
-.sii-selected-price p{font-size:11px;color:#33675f;line-height:1.5}
-.sii-selected-price>a{display:block;font-size:11px;margin:9px 0}
-.sii-selected-price .button{min-height:42px;font-size:11px}
+.sii-selected-price p{font-size:13px;color:#33675f;line-height:1.5}
+.sii-selected-price>a{display:block;font-size:13px;margin:9px 0}
+.sii-selected-price .button{min-height:42px;font-size:13px}
 @media(max-width:760px){
  .sii-price-item{grid-template-columns:minmax(0,1fr) auto;gap:8px}
  .sii-price-actions{grid-column:1/-1;justify-content:flex-start}
  .sii-price-amount{font-size:14px}
- .sii-price-item strong{font-size:11px}
+ .sii-price-item strong{font-size:13px}
 }
 @media(max-width:390px){
  .sii-price-item{display:flex;flex-direction:column;align-items:stretch}
  .sii-price-actions .button{flex:1}
 }
 
-.sii-price-age{display:block;margin:7px 0;color:#864d18;font-size:11px;font-weight:700;line-height:1.45}
+.sii-price-age{display:block;margin:7px 0;color:#864d18;font-size:13px;font-weight:700;line-height:1.45}
+
+
+/* Segunda pasada de lectura: modal SII, selección comercial y cifras verificables */
+.sii-item strong,.sii-price-item strong{font-size:15px;font-weight:700}
+.sii-item-values b{font-size:14px}
+.sii-kpis strong{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums}
+.sii-commercial>strong,.sii-selected-price strong{font-variant-numeric:tabular-nums}
+.sii-section-head,.sii-price-item,.sii-item{min-width:0}
+.sii-lookup .field select,.sii-lookup .field input{font-size:16px;min-height:44px}
+.sii-section .button,.sii-price-actions .button,.sii-selected-price .button{font-size:15px;min-height:44px;font-weight:600}
+.sii-price-actions a,.sii-links a,.sii-selected-price>a{font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.sii-item span,.sii-item-values small,.sii-small,.sii-commercial p,.sii-price-item span{color:#435e71}
+.sii-item-values{min-width:0}
+@media(max-width:760px){
+ .sii-price-item strong{font-size:15px}
+ .sii-price-amount{font-size:17px}
+}
+@media(max-width:390px){
+ .sii-item-values{grid-template-columns:1fr auto;gap:4px}
+ .sii-item>.button{min-height:44px}
+}
+
+.sii-overline{color:#0b5d6c}.sii-small,.sii-kpis small,.sii-selected p,.sii-commercial>small,.sii-commercial>strong span,.sii-price-item span,.sii-price-age{color:#455f73}

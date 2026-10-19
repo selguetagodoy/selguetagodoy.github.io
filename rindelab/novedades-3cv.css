@@ -1,11 +1,11 @@
 /* Diferencias entre MTT septiembre y 3CV mayo: sin mezclar métricas de rendimiento. */
 .delta-context{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:23px}
 .delta-context>div{display:flex;gap:12px;align-items:flex-start;background:#f1f8fa;border:1px solid #d6e8eb;border-radius:9px;padding:13px 15px}
-.delta-context strong{font-size:25px;font-weight:850;line-height:1;color:#155f73;letter-spacing:-.045em;flex:none}
-.delta-context span{font-size:11px;line-height:1.55;color:#4a677a}
+.delta-context strong{font-size:25px;font-weight:800;line-height:1;color:#155f73;letter-spacing:-.045em;flex:none}
+.delta-context span{font-size:13px;line-height:1.55;color:#4a677a}
 .delta-filters{display:grid;grid-template-columns:1fr 1.1fr 0.75fr 1.35fr 1.1fr;gap:11px;padding:16px;background:#f5f9fb;border:1px solid #e4edf1;border-radius:10px}
 .delta-filters .field{min-width:0}
-.delta-filters .field label{font-size:11px}
+.delta-filters .field label{font-size:13px}
 .delta-filters select,.delta-filters input{width:100%;height:43px;min-width:0}
 .delta-table{min-width:950px;table-layout:fixed}
 .delta-table th:nth-child(1){width:24%}
@@ -13,29 +13,29 @@
 .delta-table th:nth-child(3){width:13%}
 .delta-table th:nth-child(4){width:19%}
 .delta-table th:nth-child(5){width:18%}
-.delta-model{font-weight:800;color:#163f56;font-size:12px}
-.delta-model small{display:block;color:#57758a;font-weight:580;margin-bottom:4px}
-.delta-code{font-size:11px;color:#1a5c76;font-weight:730;overflow-wrap:anywhere}
-.delta-code small,.delta-code a{display:block;font-size:10px;font-weight:500;margin-top:6px;color:#668191}
+.delta-model{font-weight:800;color:#163f56;font-size:13px}
+.delta-model small{display:block;color:#57758a;font-weight:600;margin-bottom:4px}
+.delta-code{font-size:13px;color:#1a5c76;font-weight:700;overflow-wrap:anywhere}
+.delta-code small,.delta-code a{display:block;font-size:13px;font-weight:500;margin-top:6px;color:#668191}
 .delta-date{font-variant-numeric:tabular-nums;color:#385b73}
 .delta-technology{font-weight:700;color:#295467}
-.delta-technology small{display:block;color:#617a8c;font-weight:500;font-size:10px;margin-top:6px}
-.delta-status{font-size:11px;font-weight:750;color:#8a6329}
+.delta-technology small{display:block;color:#617a8c;font-weight:500;font-size:13px;margin-top:6px}
+.delta-status{font-size:13px;font-weight:800;color:#8a6329}
 .delta-status.present{color:#226772}
 .delta-status small{display:block;font-weight:500;color:#60798b;margin-top:5px;line-height:1.5}
 .delta-bottom-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:17px;margin-top:19px;align-items:start}
 .delta-review{min-width:0}
-.delta-review>p{font-size:12px;color:#526b7c;line-height:1.6}
+.delta-review>p{font-size:13px;color:#526b7c;line-height:1.6}
 .delta-review .coverage-panel-head{margin-bottom:8px}
 .delta-conflicts-table{min-width:550px}
 .delta-conflicts-table th:nth-child(1){width:43%}
 .delta-conflicts-table th:nth-child(2),.delta-conflicts-table th:nth-child(3){width:28.5%}
-.delta-conflicts-table strong{display:block;font-size:11px;color:#1c566c}
-.delta-conflicts-table small{display:block;font-size:10px;color:#627b8b;font-weight:500;margin-top:4px}
+.delta-conflicts-table strong{display:block;font-size:13px;color:#1c566c}
+.delta-conflicts-table small{display:block;font-size:13px;color:#627b8b;font-weight:500;margin-top:4px}
 .delta-footnote{border-left:3px solid #d1a052;background:#fffbf2;border-radius:0 6px 6px 0;padding:10px 12px;margin-top:14px!important}
 .delta-method{background:#fff;border:1px solid #d8e5ed;border-radius:15px;padding:24px;min-width:0}
 .delta-method h2{font-size:21px;letter-spacing:-.04em;color:#133d57;margin:0 0 13px}
-.delta-method p{font-size:12px;line-height:1.75;color:#4a6477;margin:0 0 14px}
+.delta-method p{font-size:13px;line-height:1.75;color:#4a6477;margin:0 0 14px}
 .delta-method p:last-child{margin-bottom:0}
 @media(max-width:1050px){.delta-filters{grid-template-columns:repeat(3,minmax(0,1fr))}.delta-bottom-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.delta-context{grid-template-columns:1fr}.delta-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:11px}.delta-filters .field:nth-child(4),.delta-filters .field:nth-child(5){grid-column:1/-1}.delta-table{min-width:820px}.delta-method,.delta-review{padding:16px}.coverage-panel-head{align-items:flex-start;flex-wrap:wrap}}
@@ -44,27 +44,45 @@
 /* Separación de registros posteriores e históricos. Un código puede figurar en varias filas. */
 .delta-context{grid-template-columns:repeat(4,minmax(0,1fr))}
 .delta-mode-wrap{margin:0 0 14px;padding:14px 18px;background:#eef6f8;border:1px solid #d3e6eb;border-radius:10px}
-.delta-mode-wrap label{display:block;font-size:12px;font-weight:800;color:#204e64;margin-bottom:7px}
-.delta-mode-wrap select{display:block;max-width:100%;width:100%;height:43px;border:1px solid #aacbd4;border-radius:7px;background:#fff;color:#19455c;padding:0 11px;font-size:12px;font-weight:700}
-.delta-mode-wrap p{font-size:11px;line-height:1.55;color:#587386;margin:9px 0 0}
+.delta-mode-wrap label{display:block;font-size:13px;font-weight:800;color:#204e64;margin-bottom:7px}
+.delta-mode-wrap select{display:block;max-width:100%;width:100%;height:43px;border:1px solid #aacbd4;border-radius:7px;background:#fff;color:#19455c;padding:0 11px;font-size:13px;font-weight:700}
+.delta-mode-wrap p{font-size:13px;line-height:1.55;color:#587386;margin:9px 0 0}
 .delta-disabled{opacity:.48}
 .delta-variants{margin-top:8px;border-top:1px solid #d8e8ed;padding-top:7px}
-.delta-variants summary{cursor:pointer;font-size:10px;color:#176179;font-weight:700}
+.delta-variants summary{cursor:pointer;font-size:13px;color:#176179;font-weight:700}
 .delta-variants ul{padding-left:17px;margin:6px 0 0}
-.delta-variants li{font-size:10px;font-weight:500;color:#4a6b7b;margin:2px 0}
+.delta-variants li{font-size:13px;font-weight:500;color:#4a6b7b;margin:2px 0}
 @media(max-width:950px){.delta-context{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){.delta-context{grid-template-columns:1fr}.delta-mode-wrap{padding:12px}.delta-mode-wrap select{font-size:11px}}
+@media(max-width:700px){.delta-context{grid-template-columns:1fr}.delta-mode-wrap{padding:12px}.delta-mode-wrap select{font-size:13px}}
 
 /* Auditoría de atributos: expediente de fábrica distinto de rectificación 3CV. */
 .delta-review-controls{display:flex;align-items:end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:12px 0 6px}
 .delta-review-controls .field{flex:1 1 200px;max-width:420px;min-width:0}
 .delta-review-controls select{min-width:0;width:100%;height:42px}
-.delta-review-controls button{min-height:42px;font-size:11px;flex:0 1 auto}
-.delta-review-count{font-size:11px!important;font-weight:700;color:#376578!important;margin-bottom:12px!important}
+.delta-review-controls button{min-height:42px;font-size:13px;flex:0 1 auto}
+.delta-review-count{font-size:13px!important;font-weight:700;color:#376578!important;margin-bottom:12px!important}
 .delta-review-evidence{margin-top:10px;padding:9px 10px;border:1px solid #d4e5e9;background:#f5fafb;border-radius:7px;line-height:1.6}
-.delta-review-evidence summary{font-size:10px;font-weight:800;color:#125f76;cursor:pointer}
-.delta-review-evidence p{margin:9px 0 7px!important;font-size:11px!important;color:#426374}
-.delta-review-evidence a{font-size:11px;font-weight:750;overflow-wrap:anywhere}
-.delta-review-evidence small{display:block;font-size:10px;color:#617d8c;margin:7px 0 0}
+.delta-review-evidence summary{font-size:13px;font-weight:800;color:#125f76;cursor:pointer}
+.delta-review-evidence p{margin:9px 0 7px!important;font-size:13px!important;color:#426374}
+.delta-review-evidence a{font-size:13px;font-weight:800;overflow-wrap:anywhere}
+.delta-review-evidence small{display:block;font-size:13px;color:#617d8c;margin:7px 0 0}
 .delta-conflicts-table td{overflow-wrap:anywhere}
 @media(max-width:450px){.delta-review-controls{flex-direction:column;align-items:stretch}.delta-review-controls .field{width:100%;max-width:none;flex:0 0 auto}.delta-review-controls button{width:100%}}
+
+
+/* Trazabilidad MTT 2026: lectura en pantallas pequeñas y tablas desplazables */
+.delta-context span,.delta-filters .field label,.delta-model,.delta-model small,
+.delta-code,.delta-code small,.delta-code a,.delta-technology small,.delta-status,
+.delta-status small,.delta-review>p,.delta-conflicts-table strong,.delta-conflicts-table small,
+.delta-method p,.delta-mode-wrap label,.delta-mode-wrap p,.delta-variants summary,
+.delta-variants li,.delta-review-count,.delta-review-evidence summary,
+.delta-review-evidence p,.delta-review-evidence a,.delta-review-evidence small{font-size:13px;line-height:1.6}
+.delta-mode-wrap select,.delta-filters select,.delta-filters input,.delta-review-controls select{font-size:16px;min-height:44px}
+.delta-review-controls button{font-size:15px;min-height:44px;font-weight:600}
+.delta-review-count,.delta-review-evidence p{font-size:13px!important}
+.delta-mode-wrap label,.delta-review-evidence summary{font-weight:600}
+.delta-context strong{font-weight:700}
+.delta-review-evidence summary,.delta-variants summary{min-height:44px;display:flex;align-items:center}
+.delta-method p{max-width:68ch}
+
+.delta-code small,.delta-code a,.delta-technology small,.delta-status small,.delta-conflicts-table small,.delta-mode-wrap p,.delta-review-evidence small{color:#455f73}
