@@ -1182,7 +1182,7 @@ await test('Cobertura 3CV en móvil 320 px sin desbordamiento ni confusión de i
  const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
  const issues=[];p.on('pageerror',e=>issues.push(e.message));
  await p.goto(base+'cobertura.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#metricFamilies')?.textContent==='106',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#metricFamilies')?.textContent==='112',{timeout:30000});
  const dims=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,viewport:innerWidth,table:document.querySelector('.coverage-table-scroll').scrollWidth,area:document.querySelector('.coverage-table-scroll').clientWidth}));
  assert(dims.doc<=dims.viewport+3,JSON.stringify(dims));
  assert(dims.table>dims.area,JSON.stringify(dims));
