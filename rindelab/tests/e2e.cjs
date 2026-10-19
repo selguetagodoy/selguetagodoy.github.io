@@ -624,15 +624,15 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
  assert(m.buckets.length>=20);
  assert(m.brands.length>=260);
 });
-await test('Catálogo de 155 precios de lista sin bonos con fuente oficial',async()=>{
+await test('Catálogo de 185 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,155);
+ assert.equal(list.length,185);
  assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['BMW','BYD','Changan','Ford','Great Wall','Hyundai','Kia','MG','Mazda','Nissan','Subaru','Suzuki','Toyota','Volkswagen']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -703,6 +703,24 @@ await test('Nissan Kait: dos versiones, sin asignación comercial automática',a
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('#detailClose').click();
 });
+await test('Lote multimarca: 15 Chery, 14 Gac y 1 Citroen documentados sin bonos',async()=>{
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list185').then(r=>r.json()));
+ const latest=list.filter(x=>['Chery','Gac','Citroen'].includes(x.brand));
+ assert.equal(latest.length,30);
+ assert.equal(latest.filter(x=>x.brand==='Chery').length,15);
+ assert.equal(latest.filter(x=>x.brand==='Gac').length,14);
+ assert.equal(latest.filter(x=>x.brand==='Citroen').length,1);
+ assert(latest.every(x=>x.checkedAt==='2026-10-18'&&x.modelYear===null&&x.currency==='CLP'));
+ assert.equal(latest.find(x=>x.brand==='Gac'&&x.version==='EMKOO 2.0 AT HEV GL')?.priceListClp,22990000);
+ assert.equal(latest.find(x=>x.brand==='Chery'&&x.version==='TIGGO 7 PRO MAX 1.5 DHT PHEV')?.priceListClp,25990000);
+ assert.equal(latest.find(x=>x.brand==='Citroen')?.priceListClp,16190000);
+ const mappings=await page.evaluate(()=>{
+   const fam=window.RindelabSII.family;
+   return [['Chery','Tiggo 4 Pro Max 1.5 CVT GLS'],['Chery','Tiggo 4 Pro Max 1.5 DHT HEV'],['Chery','Tiggo 8 Pro Max 1.6 DCT GLX'],['Gac','GS3 Power MT 1.5T GS'],['Gac','New GS8 2.0T AT GT 2WD'],['Citroen','C3 Aircross VTI FEEL']]
+     .map(x=>fam(x));
+ });
+ assert.deepEqual(mappings,['Tiggo 4 Pro Max','Tiggo 4 Pro Max','Tiggo 8 Pro Max','GS3 Power','GS8','C3 Aircross']);
+});
 await test('No asigna precio de lista automáticamente y permite elegir o quitar versión',async()=>{
  await page.click('#resetButton');await page.fill('#query','Corolla Cross');await page.click('#searchButton');
  await page.locator('.vehicle-card button[data-detail]').nth(1).click();
@@ -740,7 +758,7 @@ await test('Kia Morning: cinco precios de lista distintos y fuente verificable',
 await test('Ampliación Hyundai: once precios de lista con fuentes oficiales',async()=>{
  const p=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list155').then(r=>r.json()));
  const hyundai=p.filter(x=>x.brand==='Hyundai');
- assert.equal(p.length,155);
+ assert.equal(p.length,185);
  assert.equal(hyundai.filter(x=>x.family==='Tucson').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Venue').length,4);
  assert.equal(hyundai.filter(x=>x.family==='Creta Grand').length,2);
@@ -982,14 +1000,14 @@ await test('Subaru Impreza: tres versiones con precio de lista y selección manu
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('#detailClose').click();
 });
-await test('Cobertura 3CV: 54 familias auditadas sin equivalencia automática de 155 versiones',async()=>{
+await test('Cobertura 3CV: 66 familias auditadas sin equivalencia automática de 185 versiones',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const issues=[];p.on('pageerror',e=>issues.push(e.message));
  const response=await p.goto(base+'cobertura.html',{waitUntil:'networkidle'});
  assert.equal(response.status(),200);
- await p.waitForFunction(()=>document.querySelector('#metricPrices')?.textContent==='155',{timeout:30000});
- assert.equal(await p.locator('#metricFamilies').textContent(),'54');
- assert.equal(await p.locator('#coverageRows tr').count(),54);
+ await p.waitForFunction(()=>document.querySelector('#metricPrices')?.textContent==='185',{timeout:30000});
+ assert.equal(await p.locator('#metricFamilies').textContent(),'66');
+ assert.equal(await p.locator('#coverageRows tr').count(),66);
  assert.match(await p.locator('#coverageStatus').textContent(),/8\.053/);
  assert.match(await p.locator('.coverage-legend').textContent(),/no equivalencia de versión/i);
  assert.match(await p.locator('main').textContent(),/ninguna versión comercial se vincula automáticamente/i);
@@ -1009,20 +1027,20 @@ await test('Cobertura 3CV en móvil 320 px sin desbordamiento ni confusión de i
  const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
  const issues=[];p.on('pageerror',e=>issues.push(e.message));
  await p.goto(base+'cobertura.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#metricFamilies')?.textContent==='54',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#metricFamilies')?.textContent==='66',{timeout:30000});
  const dims=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,viewport:innerWidth,table:document.querySelector('.coverage-table-scroll').scrollWidth,area:document.querySelector('.coverage-table-scroll').clientWidth}));
  assert(dims.doc<=dims.viewport+3,JSON.stringify(dims));
  assert(dims.table>dims.area,JSON.stringify(dims));
  assert.deepEqual(issues,[]);
  await p.close();
 });
-await test('Cotejo técnico: 155 versiones, filtros y conflicto Tera manual versus 3CV',async()=>{
+await test('Cotejo técnico: 185 versiones, filtros y conflicto Tera manual versus 3CV',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  const r=await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
  assert.equal(r.status(),200);
- await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='155',{timeout:30000});
- assert.equal(await p.locator('#versionsRows tr').count(),155);
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='185',{timeout:30000});
+ assert.equal(await p.locator('#versionsRows tr').count(),185);
  assert.match(await p.locator('#versionsStatus').textContent(),/Equivalencias técnicas certificadas: ninguna/);
  assert.deepEqual(errors,[]);
  await p.selectOption('#versionsBrand','Volkswagen');
@@ -1043,7 +1061,7 @@ await test('Cotejo técnico versión 320 px no desborda y mantiene tabla desplaz
  const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='155',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='185',{timeout:30000});
  const size=await p.evaluate(()=>({
   doc:document.documentElement.scrollWidth,screen:innerWidth,
   table:document.querySelector('.coverage-table-scroll').scrollWidth,
@@ -1058,7 +1076,7 @@ await test('Revisión prioritaria contiene 28 casos; Nissan Kait CVT no altera t
  const p=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
  const errs=[];p.on('pageerror',e=>errs.push(e.message));
  await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='155',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='185',{timeout:30000});
  const summary=await p.locator('#versionsPrioritySummary').textContent();
  const found=summary.match(/(\d+) discrepancias · (\d+) candidatos únicos/);
  assert(found && Number(found[1])>=5 && Number(found[2])>=23,'No se deben perder las revisiones históricas');
@@ -1092,7 +1110,7 @@ await test('Revisión prioritaria contiene 28 casos; Nissan Kait CVT no altera t
 await test('Código compartido se distingue de versión comercial individual',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='155',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='185',{timeout:30000});
  await p.selectOption('#versionsBrand','Hyundai');
  await p.fill('#versionsSearch','Venue QU2i');
  const items=p.locator('#versionsRows tr');
@@ -1109,7 +1127,7 @@ await test('Fronx MHEV respaldado por fabricante sin certificar equivalencia com
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='155',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='185',{timeout:30000});
  assert.match(await p.locator('#versionsStatus').textContent(),/22 versiones contrastadas con ficha de fabricante/);
  await p.selectOption('#versionsBrand','Suzuki');await p.fill('#versionsSearch','Fronx');
  const gl=p.locator('#versionsRows tr').filter({hasText:'1.5 GL AT'});
@@ -1126,7 +1144,7 @@ await test('Hunter diésel y Avatr REEV muestran fichas oficiales sin cruzar tec
  const p=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base+'versiones.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='155',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#versionTotal')?.textContent==='185',{timeout:30000});
  await p.selectOption('#versionsBrand','Changan');await p.fill('#versionsSearch','Hunter 2.0T 4X2 Comfort MT');
  const hunter=p.locator('#versionsRows tr').first();
  assert.match(await hunter.textContent(),/Tecnología: DIESEL/);
@@ -1604,11 +1622,11 @@ await test('Directorio de pliegos BT1 conserva fuente sin inventar precios',asyn
  assert.deepEqual(e,[]);
  await p.close();
 });
-await test('Cotizador separado carga 155 precios de 14 marcas con fuente oficial',async()=>{
+await test('Cotizador separado carga 185 precios de 17 marcas con fuente oficial',async()=>{
  const p=await browser.newPage({viewport:{width:1360,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  const r=await p.goto(base+'cotizador.html',{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
- await p.waitForFunction(()=>document.querySelector('#quoteCatalogNumber')?.textContent?.includes('155 registros'),{timeout:10000});
+ await p.waitForFunction(()=>document.querySelector('#quoteCatalogNumber')?.textContent?.includes('185 registros'),{timeout:10000});
  assert.match(await p.locator('#quoteCatalogNumber').textContent(),/14 marcas/);
  assert((await p.locator('#quoteBrand option').count())===15);
  assert(await p.locator('#quoteCopy').isDisabled());
