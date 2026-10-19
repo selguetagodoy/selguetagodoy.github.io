@@ -61,3 +61,17 @@ La página principal ahora separa búsqueda, ajustes y metodología. Los detalle
 **Documentación independiente**
 
 ![Metodología y fuentes en página propia](claridad-metodologia.jpg)
+
+## Revisión editorial final para LinkedIn
+
+**Portada depurada — escritorio y celular**
+
+![Portada depurada en escritorio](claridad-1440.jpg)
+
+![Portada depurada en móvil](claridad-390.jpg)
+
+**Vista previa social**
+
+![Tarjeta social de RINDELAB](../linkedin-preview.png)
+
+La portada ya no muestra el bloque de 8.325 fichas, el segundo acceso a ajustes ni las explicaciones repetidas. Todos los datos y advertencias técnicas permanecen disponibles desde «Fuentes» o desde la ficha correspondiente.

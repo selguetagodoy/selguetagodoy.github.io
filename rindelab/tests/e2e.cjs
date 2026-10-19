@@ -26,6 +26,7 @@ async function open(width,height){
  // Los tests del motor abren explícitamente los ajustes; la interfaz real comienza plegada.
  await page.locator('#supuestos').evaluate(el=>el.open=true);
  await page.locator('#scenarioAdvanced').evaluate(el=>el.open=true);
+ await page.locator('#technical').evaluate(el=>el.open=true);
  return {page,errors};
 }
 const {page,errors}=await open(1440,900);
@@ -69,7 +70,7 @@ await test('RINDELAB 7 muestra escenarios y metadatos compartibles',async()=>{
  assert(await page.locator('#electricPrice').isVisible());
  assert.equal(await page.locator('#annualKm').inputValue(),'15000');
  assert.equal(await page.locator('#statsCycle').inputValue(),'WLTP');
- assert.match(await page.locator('head meta[property="og:image"]').getAttribute('content'),/rindelab\/hero-foto-rindelab\.webp/);
+ assert.match(await page.locator('head meta[property="og:image"]').getAttribute('content'),/rindelab\/linkedin-preview\.png/);
  assert.equal(await page.locator('script[type="application/ld+json"]').count(),1);
  assert(await page.locator('.footer-data summary').isVisible());
 });
@@ -374,7 +375,7 @@ await test('Marca Toyota despliega solo modelos de Toyota',async()=>{
 await test('Filtros técnicos mantienen ciclo sin modificar la base',async()=>{
  await page.click('#resetButton');
  await page.selectOption('#brand',{label:'Toyota'});
- await page.locator('#technical summary').click();
+ if(!(await page.locator('#technical').evaluate(el=>el.open)))await page.locator('#technical summary').click();
  await page.selectOption('#cycle','WLTP');
  await page.selectOption('#model','');
  await page.click('#searchButton');
@@ -1413,11 +1414,12 @@ await test('Filtros oficiales de octubre incluyen JIM Re-Max y Kia Sportage HEV'
  assert((await p.locator('.vehicle-card').count())>=4);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
  await p.click('#resetButton');
+ await p.locator('#technical').evaluate(el=>el.open=true);
  await p.selectOption('#tech','HEV');
  await p.fill('#query','Sportage 1.6T HEV');await p.click('#searchButton');
  assert((await p.locator('.vehicle-card').count())>=2);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
- await p.locator('#technical summary').click();
+ if(!(await p.locator('#technical').evaluate(el=>el.open)))await p.locator('#technical summary').click();
  await p.selectOption('#cycle','WLTP');await p.click('#searchButton');
  assert((await p.locator('.vehicle-card').count())>=2);
  await p.close();
@@ -1463,8 +1465,8 @@ await test('Leyenda distingue fuente histórica mayo de API oficial octubre',asy
  await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
  assert(await p.locator('#sourceLegend').isVisible());
  assert(await p.locator('#energyResultsHeading').isVisible());
- assert.match(await p.locator('#energyResultsHeading small').textContent(),/mayo y de la consulta oficial de octubre de 2026/);
- assert.doesNotMatch(await p.locator('#energyResultsHeading small').textContent(),/rendimientos al 8 de mayo/);
+ assert.match(await p.locator('#sourceLegend').textContent(),/Base histórica 3CV de mayo/);
+ assert.match(await p.locator('#sourceLegend').textContent(),/API oficial de octubre de 2026/);
  assert.match(await p.locator('.vehicle-card .energy-source-line').first().textContent(),/octubre 2026/);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
  await p.fill('#query','Dolphin Mini');await p.click('#searchButton');
@@ -1610,10 +1612,12 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   assert(state.documentWidth<=state.viewport+3,JSON.stringify(state));
  });
  await test('Diseño responsivo '+width+' px sin desbordamiento',async()=>{
+   await p.locator('#technical').evaluate(el=>el.open=false);
   const dimensions=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,search:document.querySelector('#searchButton').getBoundingClientRect().height,searchTop:document.querySelector('#searchButton').getBoundingClientRect().top+scrollY}));
   assert(dimensions.doc<=dimensions.view+3,JSON.stringify(dimensions));
   assert(dimensions.search>=44);
-  if(width<=390)assert(dimensions.searchTop<900,'Buscador excesivamente bajo: '+dimensions.searchTop);
+  if(width<=390)assert(dimensions.searchTop<900,'Buscador excesivamente bajo: '+dimensions.searchTop)
+   await p.locator('#technical').evaluate(el=>el.open=true);;
  });
  await test('Cinco columnas desplazables en pantalla '+width+' px',async()=>{
   await p.fill('#query','Toyota');await p.click('#searchButton');
@@ -2023,7 +2027,7 @@ for(const pageName of ['index.html','cotizador.html']){
   await p.locator('#mobileNav summary').click();
   const nav=p.locator('#mobileNav nav');
   assert(await nav.isVisible());
-  assert.equal(await nav.locator('a').count(),pageName==='index.html'?7:5);
+  assert.equal(await nav.locator('a').count(),5);
   const targets=await nav.locator('a').allTextContents();
   assert(targets.some(x=>x.includes('Cotizar auto')));
   const bounds=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
