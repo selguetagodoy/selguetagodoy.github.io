@@ -60,3 +60,8 @@ Este lote amplía las 66 prioridades anteriores. El cruce se hizo contra 359 pre
 - [11 versiones Audi/CUPRA con precios de lista oficiales y fecha de campaña](./LOTE-FUENTES-OFICIALES-20261019.md) y [CSV de incorporación documental](./lote-11-precios-verificados-20261019.csv).
 
 El CSV de 11 conserva `modelo_fuente_3cv`, `codigo_3cv_referencia` y otros campos técnicos vacíos para evitar asignaciones no acreditadas. La actualización documental original no insertó valores. El PR #85 ya incorporó 12 precios (359 en main) y el PR #88 incorpora las 11 versiones oficiales de Audi/CUPRA (370 al fusionarse), manteniendo códigos 3CV vacíos. Las versiones siguen requiriendo QA de fuentes y navegador.
+
+## Lote adicional de 36 precios comerciales (19/10/2026)
+
+- [Informe Markdown de JAC, Dongfeng y MINI](./LOTE-36-PRECIOS-20261019.md).
+- Se incorpora al JSON comercial un único lote documentado, con 28 versiones JAC convencionales, 1 Dongfeng EV y 7 eléctricos MINI. Los precios están separados de los bonos y no suponen equivalencia 3CV.
