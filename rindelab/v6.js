@@ -47,6 +47,8 @@ function family(row){
   [/^Range\s+Rover\b/i,'Range Rover'],[/^Discovery\s+Sport\b/i,'Discovery Sport'],
   [/^Defender\s+(90|110|130)\b/i,null],[/^Grand\s+Vitara\b/i,'Grand Vitara'],
   [/^LPM\s+(?:B10|C10)\b/i,null],[/^Avatr\s+\d+\b/i,null],
+  [/^Outlander\s+P(?:\s|-)?HEV\b/i,'Outlander PHEV'],[/^Outlander\s+Sport\b/i,'Outlander Sport'],[/^Outlander\b/i,'Outlander'],
+  [/^Eclipse\s+Cross\b/i,'Eclipse Cross'],[/^Torres\s+(?:HEV|Hybrid)\b/i,'Torres HEV'],
   [/^RAV4\b/i,'RAV4'],[/^Evoque\b/i,'Range Rover Evoque'],
   [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],[/^Yuan\s+Pro\s+DM[-\s]?i\b/i,'Yuan Pro DM-i'],[/^Yuan\s+Plus\b/i,'Yuan Plus'],[/^Song\s+Plus\b/i,'Song Plus'],[/^Song\s+Pro\b/i,'Song Pro'],
   [/^Deepal\s+[A-Z0-9-]+\b/i,null],
