@@ -1,0 +1,78 @@
+/* RINDELAB — portada clara: un buscador, ajustes opcionales y documentación aparte. */
+html{scroll-padding-top:86px}
+.scenario-drawer{margin-top:32px!important;margin-bottom:16px!important;padding:0!important;border:1px solid #dce5ef!important;background:#fff!important;border-radius:14px!important;overflow:hidden;box-shadow:none!important}
+.scenario-drawer-toggle{list-style:none;display:flex;align-items:center;gap:14px;cursor:pointer;padding:21px 23px;min-height:88px}
+.scenario-drawer-toggle::-webkit-details-marker{display:none}
+.scenario-drawer-toggle::marker{content:""}
+.scenario-drawer-toggle:hover{background:#f8fafc}
+.scenario-drawer-toggle:focus-visible{outline:3px solid #93c5fd;outline-offset:-4px}
+.scenario-icon{width:44px;height:44px;display:grid;place-items:center;flex:0 0 44px;background:#eff6ff;border-radius:12px;color:#1d4ed8;font-size:21px}
+.scenario-drawer-heading{display:flex;flex-direction:column;gap:5px;min-width:0;flex:1}
+.scenario-drawer-heading strong{font-size:18px;letter-spacing:-.035em;line-height:1.2;font-weight:780;color:#102a43}
+.scenario-drawer-heading small{font-size:12px;color:#64748b;line-height:1.45}
+.scenario-drawer-action{color:#1d4ed8;font-size:12px;font-weight:740;white-space:nowrap}
+.scenario-drawer-action span{display:inline-block;transition:transform .17s ease}
+.scenario-drawer[open] .scenario-drawer-action span{transform:rotate(180deg)}
+.scenario-drawer-body{padding:5px 24px 23px;border-top:1px solid #e2e8f0}
+.scenario-edit-caption{font-size:12px;color:#64748b;line-height:1.5;margin:14px 0 17px}
+.scenario-drawer .assumptions-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.scenario-drawer .assumptions-grid .field label{font-size:12px;color:#334155;line-height:1.3;margin:0 0 6px}
+.scenario-drawer .assumptions-grid .field input,.scenario-drawer .assumptions-grid .field select{height:46px;font-size:14px;border-color:#cbd5e1;background:#fff}
+.scenario-advanced{margin-top:18px;border:1px solid #e2e8f0;border-radius:10px;background:#fbfcfe;overflow:hidden}
+.scenario-advanced>summary{cursor:pointer;min-height:46px;padding:14px 16px;color:#1d4ed8;font-weight:700;font-size:12px;line-height:1.4}
+.scenario-advanced>summary:hover{background:#eff6ff}
+.scenario-advanced[open]{padding-bottom:14px}
+.scenario-advanced>.advanced-grid{padding:11px 16px 12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.scenario-advanced .home-bill-helper,.scenario-advanced .charge-example,.scenario-advanced .home-tariff-directory,.scenario-advanced .charge-status,.scenario-advanced .scenario-method{margin-left:16px;margin-right:16px}
+.scenario-advanced .charge-example{margin-top:14px}
+.scenario-advanced .scenario-method{margin-top:14px}
+.source-teaser{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid #e2e8f0;margin:18px 0 38px;padding:23px 2px 0}
+.source-teaser h2{font-size:15px;color:#102a43;line-height:1.35;letter-spacing:-.025em;margin:0 0 6px}
+.source-teaser p{color:#64748b;font-size:12px;line-height:1.5;margin:0;max-width:650px}
+.source-teaser p strong{color:#475569}
+.source-teaser>.button{white-space:nowrap;font-size:12px;font-weight:700;min-height:42px;display:inline-flex;align-items:center;justify-content:center}
+.methodology-page{background:#f8fafc}
+.method-page-main{max-width:1080px;padding:36px 0 55px}
+.method-page-intro{padding:30px 33px;border:1px solid #e2e8f0;border-radius:17px;background:#fff}
+.method-page-intro .eyebrow{color:#1d4ed8;font-size:11px;font-weight:760;letter-spacing:.11em}
+.method-page-intro h1{color:#102a43;font-size:clamp(30px,4vw,46px);margin:10px 0 10px;letter-spacing:-.05em;line-height:1.1}
+.method-page-intro p:not(.eyebrow){color:#475569;font-size:15px;line-height:1.65;max-width:670px;margin:0 0 18px}
+.method-quick-nav{display:flex;gap:9px;flex-wrap:wrap;padding:20px 0 13px}
+.method-quick-nav a{padding:10px 12px;min-height:42px;background:#fff;border:1px solid #e2e8f0;border-radius:8px;color:#334155;font-size:12px;font-weight:680;text-decoration:none}
+.method-quick-nav a:hover{border-color:#93c5fd;color:#1d4ed8}
+.methodology-page .sources{margin:0;border:1px solid #e2e8f0;background:white;border-radius:14px;padding:17px 23px 20px;box-shadow:none}
+.methodology-page #methodology>summary{font-size:18px;font-weight:780;color:#102a43;padding:8px 0 18px}
+.methodology-page #methodology .source-body{font-size:14px;line-height:1.75;color:#334155}
+.methodology-page #methodology .source-body p{max-width:92ch;padding-bottom:15px;border-bottom:1px solid #eef2f7}
+.methodology-page .method-footer{font-size:12px;color:#64748b;padding:0 0 40px}
+@media(max-width:850px){.scenario-drawer .assumptions-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scenario-drawer .advanced-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+ .scenario-drawer{margin-top:22px!important}
+ .scenario-drawer-toggle{padding:16px 14px;gap:10px;min-height:79px}
+ .scenario-icon{width:37px;height:37px;flex-basis:37px;font-size:18px}
+ .scenario-drawer-heading strong{font-size:16px}
+ .scenario-drawer-heading small{font-size:11px}
+ .scenario-drawer-action{font-size:0;white-space:normal}
+ .scenario-drawer-action span{font-size:15px}
+ .scenario-drawer-body{padding:4px 14px 15px}
+ .scenario-drawer .assumptions-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .scenario-drawer .assumptions-grid .field{min-width:0}
+ .scenario-drawer .assumptions-grid .field label{font-size:11px}
+ .scenario-drawer .assumptions-grid .field input,.scenario-drawer .assumptions-grid .field select{font-size:16px;height:45px}
+ .scenario-advanced>.advanced-grid{padding:10px;grid-template-columns:1fr}
+ .scenario-advanced .home-bill-helper,.scenario-advanced .charge-example,.scenario-advanced .home-tariff-directory,.scenario-advanced .charge-status,.scenario-advanced .scenario-method{margin-left:10px;margin-right:10px}
+ .source-teaser{padding-top:16px;flex-direction:column;align-items:flex-start;gap:11px}
+ .source-teaser>.button{width:100%}
+ .method-page-main{padding:16px 0 32px}
+ .method-page-intro{padding:25px 20px}
+ .methodology-page .sources{padding:15px}
+}
+@media(max-width:380px){.scenario-drawer .assumptions-grid{grid-template-columns:1fr}.scenario-drawer .advanced-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.scenario-drawer-action span{transition:none}}
+
+/* Página metodológica separada: navegación y columna de lectura accesibles. */
+.methodology-page .coverage-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:18px}
+.methodology-page .source-body{width:100%;max-width:none;padding:0 2px 16px}
+.methodology-page .source-body p{max-width:88ch;line-height:1.76}
+.methodology-page .source-body a{overflow-wrap:anywhere}
+@media(max-width:750px){.methodology-page .site-header .header-inner{align-items:flex-start;flex-wrap:wrap}.methodology-page .coverage-nav{justify-content:flex-start;gap:12px}.methodology-page .source-body{padding:0 1px 12px}.methodology-page .source-body p{font-size:13px;line-height:1.7}}

@@ -41,3 +41,23 @@ La versión de prueba todavía no está desplegada en GitHub Pages; las capturas
 ![Marcas V2 — móvil](marcas-390.jpg)
 
 Se mantienen las referencias y autoría originales de los vehículos; estas capturas provienen de la rama candidata. Las fotografías se muestran como imágenes referenciales del modelo y cada ficha enlaza autor y licencia, no como prueba de que una versión comercial concreta corresponda a la homologación consultada.
+
+## Portada simplificada (V2.3)
+
+La página principal ahora separa búsqueda, ajustes y metodología. Los detalles avanzados se abren únicamente cuando se solicitan; los textos oficiales completos se conservaron en `metodologia.html`.
+
+**Portada, escritorio**
+
+![Inicio sin saturación — 1440 px](claridad-1440.jpg)
+
+**Portada, celular**
+
+![Inicio sin saturación — 390 px](claridad-390.jpg)
+
+**Ajustes básicos abiertos**
+
+![Personalizar costos, cuatro campos iniciales](claridad-ajustes-1440.jpg)
+
+**Documentación independiente**
+
+![Metodología y fuentes en página propia](claridad-metodologia.jpg)
