@@ -636,16 +636,29 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
 await test('Catálogo de 212 precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
  assert.equal(list.length,212);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['BMW','BYD','Changan','Chery','Citroen','Ford','Gac','Great Wall','Hyundai','Kia','MG','Mazda','Nissan','Subaru','Suzuki','Toyota','Volkswagen']);
+ assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['BMW','BYD','Changan','Chery','Citroen','Fiat','Ford','Gac','Great Wall','Hyundai','Jeep','KGM','Kia','MG','Mazda','Mitsubishi','Nissan','Peugeot','Subaru','Suzuki','Toyota','Volkswagen']);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
  }
+});
+await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercial identificada',async()=>{
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list212').then(r=>r.json()));
+ const expected={Mitsubishi:13,Peugeot:3,Fiat:4,Jeep:2,KGM:5};
+ for(const [brand,count] of Object.entries(expected)){
+  const rows=list.filter(x=>x.brand===brand);
+  assert.equal(rows.length,count,'Cobertura incorrecta '+brand);
+  assert(rows.every(x=>x.checkedAt==='2026-10-18'&&x.currency==='CLP'&&x.priceListClp>0),'Fuente o dato inválido '+brand);
+ }
+ assert.equal(list.filter(x=>Object.hasOwn(expected,x.brand)).length,27);
+ assert.equal(new Set(list.map(x=>x.brand+'|'+x.family)).size,75);
+ assert.equal(list.find(x=>x.brand==='Mitsubishi'&&x.family==='Outlander PHEV')?.priceListClp,42990000);
+ assert.equal(list.find(x=>x.brand==='KGM'&&x.family==='Torres HEV')?.priceListClp,32990000);
 });
 await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar ciclos ni motorizaciones',async()=>{
  const entries=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261018-list212').then(r=>r.json()));
@@ -1014,7 +1027,7 @@ await test('Marcas: 122 marcas del 3CV histórico, filtro transparente y CSV',as
  await p.goto(base+'marcas.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#metricBrands')?.textContent==='122',{timeout:30000});
  assert.equal(await p.locator('#metricPrices').textContent(),'212');
- assert.equal(await p.locator('#metricCovered').textContent(),'17');
+ assert.equal(await p.locator('#metricCovered').textContent(),'22');
  assert.equal(await p.locator('#brandRows tr').count(),122);
  await p.fill('#brandSearch','Chevrolet');
  assert.equal(await p.locator('#brandRows tr').count(),1);
@@ -1024,7 +1037,7 @@ await test('Marcas: 122 marcas del 3CV histórico, filtro transparente y CSV',as
  assert.match(await p.locator('#brandRows tr').first().textContent(),/15.*Precio documentado/);
  await p.fill('#brandSearch','');
  await p.selectOption('#brandStatus','available');
- assert.equal(await p.locator('#brandRows tr').count(),17);
+ assert.equal(await p.locator('#brandRows tr').count(),22);
  const download=p.waitForEvent('download');
  await p.locator('#exportBrands').click();
  assert.match((await download).suggestedFilename(),/rindelab-cobertura-marcas/);
@@ -1038,8 +1051,8 @@ await test('Cobertura 3CV: 75 familias auditadas sin equivalencia automática de
  const response=await p.goto(base+'cobertura.html',{waitUntil:'networkidle'});
  assert.equal(response.status(),200);
  await p.waitForFunction(()=>document.querySelector('#metricPrices')?.textContent==='212',{timeout:30000});
- assert.equal(await p.locator('#metricFamilies').textContent(),'66');
- assert.equal(await p.locator('#coverageRows tr').count(),66);
+ assert.equal(await p.locator('#metricFamilies').textContent(),'75');
+ assert.equal(await p.locator('#coverageRows tr').count(),75);
  assert.match(await p.locator('#coverageStatus').textContent(),/8\.053/);
  assert.match(await p.locator('.coverage-legend').textContent(),/no equivalencia de versión/i);
  assert.match(await p.locator('main').textContent(),/ninguna versión comercial se vincula automáticamente/i);
@@ -1059,7 +1072,7 @@ await test('Cobertura 3CV en móvil 320 px sin desbordamiento ni confusión de i
  const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
  const issues=[];p.on('pageerror',e=>issues.push(e.message));
  await p.goto(base+'cobertura.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#metricFamilies')?.textContent==='66',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#metricFamilies')?.textContent==='75',{timeout:30000});
  const dims=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,viewport:innerWidth,table:document.querySelector('.coverage-table-scroll').scrollWidth,area:document.querySelector('.coverage-table-scroll').clientWidth}));
  assert(dims.doc<=dims.viewport+3,JSON.stringify(dims));
  assert(dims.table>dims.area,JSON.stringify(dims));
@@ -1668,7 +1681,7 @@ await test('Cotizador separado carga 212 precios de 22 marcas con fuente oficial
  const r=await p.goto(base+'cotizador.html',{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
  await p.waitForFunction(()=>document.querySelector('#quoteCatalogNumber')?.textContent?.includes('212 registros'),{timeout:10000});
  assert.match(await p.locator('#quoteCatalogNumber').textContent(),/22 marcas/);
- assert((await p.locator('#quoteBrand option').count())===18);
+ assert((await p.locator('#quoteBrand option').count())===23);
  assert(await p.locator('#quoteCopy').isDisabled());
  assert.equal(await p.locator('.quote-version').count(),24);
  assert.deepEqual(errors,[]);
