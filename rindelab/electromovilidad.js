@@ -26,7 +26,7 @@ function priceRows(){
   name.append(title,description);
   const t=td(tr,'');const badge=document.createElement('span');badge.className='tag';badge.textContent=techNames[p.technology]||p.technology;t.append(badge);
   const cost=td(tr,money(p.priceListClp));cost.className='price';
-  const src=td(tr,'');const link=document.createElement('a');link.href=p.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Ver fuente oficial ↗';const date=document.createElement('small');date.textContent='Consultado: '+p.checkedAt;src.append(link,date);
+  const src=td(tr,'');const link=document.createElement('a');link.href=p.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Ver fuente oficial ↗';const date=document.createElement('small');date.textContent='Consultado: '+p.checkedAt+(p.sourceOfferEnd?' · campaña informada hasta '+p.sourceOfferEnd:'');src.append(link,date);
   $('electroRows').append(tr);
  }
  if(!result.length){const tr=document.createElement('tr');td(tr,'Sin precios documentados para los filtros seleccionados.').colSpan=4;$('electroRows').append(tr);}
@@ -52,7 +52,7 @@ function gapRows(){
 async function init(){
  try{
   const [p,a]=await Promise.all([
-   fetch('./sii/commercial-2026.json?v=20261019-electro257').then(r=>{if(!r.ok)throw Error('catálogo inaccesible');return r.json();}),
+   fetch('./sii/commercial-2026.json?v=20261019-electro273').then(r=>{if(!r.ok)throw Error('catálogo inaccesible');return r.json();}),
    fetch('./data/electromobility-3cv-audit-20261019.json').then(r=>{if(!r.ok)throw Error('auditoría no disponible');return r.json();})
   ]);
   if(!Array.isArray(p)||!a||!Array.isArray(a.brands))throw Error('estructura no válida');
