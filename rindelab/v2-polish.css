@@ -1,0 +1,59 @@
+/* RINDELAB — revisión editorial para compartir: resultados primero, sin recuadros explicativos duplicados. */
+.search-card .fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.search-card .fields .field.wide{grid-column:1/-1}
+.search-card .search-card-heading{margin-bottom:14px}
+.search-card .search-card-heading h2{margin:0}
+.search-card .technical{margin-top:12px;border-top:1px solid #e2e8f0;padding-top:0}
+.search-card .technical summary{min-height:37px;font-size:12px;color:#64748b;font-weight:650}
+.search-card .technical[open] .technical-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;padding:12px 0 5px}
+.search-card .technical-fields .field select{min-width:0;max-width:100%}
+.visual-hero .hero-copy{display:flex;flex-direction:column;justify-content:center}
+.visual-hero h1{margin-top:0}
+.scenario-strip{background:transparent!important;border:none!important;box-shadow:none!important;min-height:52px;margin:3px 0 4px!important;padding:8px 2px!important;border-bottom:1px solid #e2e8f0!important;border-radius:0!important}
+.scenario-strip p{font-size:12px!important;color:#64748b!important;font-weight:560;line-height:1.45}
+.scenario-strip .button{min-height:37px!important;font-size:12px!important;border-radius:8px}
+.js-polished .scenario-drawer:not([open]){display:none!important}
+.js-polished .scenario-drawer[open]{margin:8px 0 20px!important}
+.js-polished .scenario-drawer[open] .scenario-drawer-toggle{min-height:61px;padding:12px 18px}
+.js-polished .scenario-drawer[open] .scenario-drawer-heading strong{font-size:16px}
+.js-polished .scenario-drawer[open] .scenario-drawer-heading small{font-size:11px}
+.js-polished .scenario-drawer[open] .scenario-icon{height:34px;width:34px;flex-basis:34px}
+.result-list{scroll-margin-top:85px}
+.source-legend{background:transparent!important;border:0!important;border-radius:0!important;border-bottom:1px solid #e2e8f0!important;margin:0 0 11px!important;box-shadow:none!important}
+.source-legend summary{min-height:35px!important;font-size:11px!important;font-weight:620!important;padding:5px 2px 7px!important;color:#64748b!important}
+.source-legend .source-legend-link{font-weight:620!important;color:#64748b!important}
+.source-legend[open] .source-legend-details{border:1px solid #e2e8f0;border-radius:8px;padding:13px!important;margin-bottom:10px;background:#f8fafc}
+.energy-results-heading{margin:10px 0 12px!important;padding-bottom:9px!important}
+.energy-results-heading strong{font-weight:730;color:#102a43;font-size:13px}
+.footer{background:#102a43;padding:17px 0 19px}
+.footer>.shell.footer-minimal{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.footer-minimal .footer-credit{font-size:12px;color:#dbeafe;font-weight:580}
+.footer-minimal .footer-credit span{opacity:.58}
+.footer-links{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}
+.footer-links>a{font-size:12px;color:#dbeafe;text-decoration:none}
+.footer-links>a:hover{color:#fff;text-decoration:underline}
+.footer-links .footer-data{min-width:0}
+.footer-links .footer-data summary{font-size:12px;font-weight:570;color:#dbeafe;min-height:36px;padding:9px 4px}
+.footer-links .footer-data[open]{max-width:530px}
+.footer-links .footer-data a{color:#e2e8f0}
+.footer-minimal [hidden]{display:none!important}
+@media(max-width:860px){
+ .search-card .technical[open] .technical-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .visual-hero .hero-copy>p:last-of-type{font-size:13px;max-width:100%;line-height:1.46}
+ .search-card .fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .search-card .fields .field:last-child{grid-column:auto}
+ .search-card .technical[open] .technical-fields{grid-template-columns:1fr}
+ .scenario-strip{flex-direction:row;align-items:center;justify-content:space-between;gap:5px 10px;padding:7px 0!important}
+ .scenario-strip p{flex:1 1 165px!important;font-size:11px!important}
+ .scenario-strip .button{width:auto!important;min-height:38px!important;font-size:11px!important;padding:8px 11px}
+ .footer>.shell.footer-minimal{gap:8px;align-items:flex-start;flex-direction:column}
+ .footer-links{gap:6px 18px;justify-content:flex-start}
+ .footer-links .footer-data summary{min-height:40px}
+}
+@media(max-width:350px){.search-card .technical[open] .technical-fields{grid-template-columns:1fr}}
+
+/* El enlace a rankings no debe ocupar todo el ancho del hero. */
+.visual-hero .statistics-entry{align-self:flex-start;width:auto!important;max-width:100%;display:inline-flex;justify-content:center;align-items:center;gap:8px}
+@media(max-width:600px){.visual-hero .statistics-entry{min-width:0;width:auto!important;font-size:11px}}

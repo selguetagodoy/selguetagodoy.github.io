@@ -7,9 +7,9 @@ const money=n=>n===null||!Number.isFinite(n)?'Sin dato comparable':'$'+Math.roun
 const fmt=n=>Number(n).toLocaleString('es-CL');
 const techHuman={EV:'Eléctrico',HEV:'Híbrido',MHEV:'Híbrido suave',PHEV:'Híbrido enchufable',REEV:'Eléctrico con extensor',Bencina:'Bencina',Diésel:'Diésel'};
 function updateScenarioSummary(){
- const km=Number($('annualKm').value)||15000,gas=number($('gasPrice').value),diesel=number($('dieselPrice').value),electric=number($('electricPrice').value);
- const mode=$('chargeScenario').value,place=mode==='home'?'carga en casa':mode==='mixed'?'carga mixta':mode==='manual'?'tarifa elegida':'carga pública';
- $('scenarioSummaryText').textContent='Calculado para '+fmt(km)+' km al año · bencina '+(gas?'$'+fmt(gas)+'/L':'sin tarifa')+' · diésel '+(diesel?'$'+fmt(diesel)+'/L':'sin tarifa')+' · '+place+' '+(electric?'$'+fmt(electric)+'/kWh':'sin tarifa');
+ const km=Number($('annualKm').value)||15000;
+ const mode=$('chargeScenario').value,place=mode==='home'?'carga en casa':mode==='mixed'?'carga mixta':mode==='manual'?'tarifa manual':'carga pública';
+ $('scenarioSummaryText').textContent='Calculado para '+fmt(km)+' km al año · '+place+' · precios editables';
 }
 const safe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
