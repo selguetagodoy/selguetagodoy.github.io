@@ -1,6 +1,6 @@
 # RINDELAB — 11 precios de lista verificados en fuentes oficiales
 
-**Corte de consulta:** 19/10/2026. **Campaña documentada:** septiembre de 2026 (finalizada 30/09/2026). **Estado:** comprobado documentalmente, todavía NO incorporado a `commercial-2026.json`. No atribuir vigencia comercial hoy.
+**Corte de consulta:** 19/10/2026. **Campaña documentada:** septiembre de 2026 (finalizada 30/09/2026). **Estado:** comprobado documentalmente y **incorporado en el PR #88** a `commercial-2026.json`; en el sitio público sólo estará disponible tras aprobar QA y fusionar el PR. No atribuir vigencia comercial hoy.
 
 Estos importes proceden de los campos **Precio Lista** / **Precio Lista Sugerido** de las páginas oficiales de Audi Chile y CUPRA Chile, separados de los descuentos, bonos financieros y mensualidades. CUPRA explicita IVA incluido. Audi señala que no incluye impuesto verde ni patente. Las denominaciones reproducen versiones comerciales y **no** constituyen equivalencia automática con registros 3CV.
 
@@ -28,4 +28,4 @@ Estos importes proceden de los campos **Precio Lista** / **Precio Lista Sugerido
 
 ## Siguiente operación de migración
 
-Integrar las filas del CSV comercial siguiente a la bandeja maestra, conservando los campos 3CV vacíos hasta cotejo expreso. Luego `node scripts/rindelab-price-queue.cjs --check`, `--dry-run` y `--apply` con auditoría de precios, validación de duplicados y E2E. Precios históricos no se presentan como cotización del 19/10.
+Se incorporaron mediante el PR #88 a una rama GitHub sobre el catálogo de 359 precios. Los campos 3CV permanecieron vacíos y se ejecutan auditoría de fuentes, validación de duplicados y E2E antes de fusionar. Los precios históricos no se presentan como cotización del 19/10.
