@@ -29,7 +29,7 @@ Se normalizaron fuentes tipográficas y pesos en las vistas documentales `sii/si
 ## Cotizador comercial y directorio de tarifas (18 de octubre de 2026)
 
 ### Cotizador de autos nuevos
-El módulo público `rindelab/cotizador.html` utiliza las **252 versiones comerciales documentadas de 24 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
+El módulo público `rindelab/cotizador.html` utiliza las **257 versiones comerciales documentadas de 26 marcas**, almacenadas en `sii/commercial-2026.json`. Permite filtrar por marca, modelo y versión, revisar la fecha `checkedAt`, abrir la fuente oficial, seleccionar una **versión exacta**, sumar **gastos ingresados por el usuario** (impuesto verde, patente e inscripción, otros cargos) y copiar/imprimir un **presupuesto de compra referencial al contado**. No modifica ni mezcla precios de lista con descuentos, financiamiento, bonos de marca o promociones online.
 
 La opción de financiamiento es estrictamente matemática y optativa: no calcula una cuota si no se ingresa una tasa nominal anual; el cálculo usa tasa nominal/12, pie y meses de plazo, sin simular CAE, seguros ni gastos contractuales. No hay precotización del banco ni solicitud de datos personales. Únicamente se enlazan cotizadores de fabricante explícitamente comprobados (Hyundai y Changan); el resto dispone de enlace a su fuente oficial verificable. La elección de una versión comercial no adjudica un código 3CV ni un registro SII: ambos requieren evidencia y selección independientes.
 
@@ -161,7 +161,7 @@ Para pruebas locales servir la raíz del repositorio en puerto 8765, instalar Pl
 
 La página separada [Cobertura comercial y 3CV](./cobertura.html) permite examinar el grado de **coincidencia nominal por marca y familia** entre el catálogo documental de precios de lista y las fichas de homologación disponibles en el corte oficial 3CV del 08/05/2026. No altera el buscador principal ni las bases oficiales.
 
-- **Denominador comercial:** 252 precios de lista asociados a 94 familias, correspondientes únicamente a las 24 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
+- **Denominador comercial:** 257 precios de lista asociados a 97 familias, correspondientes únicamente a las 26 marcas cargadas. No es una encuesta exhaustiva del mercado chileno.
 - **Resultado de cobertura nominal:** cada familia comercial registra la cantidad de fichas 3CV cuyo nombre y marca pueden corresponderle, bajo reglas explícitas y comprobables. Los filtros permiten revisar casos con y sin coincidencia y descargar la tabla filtrada como CSV.
 - **No hay emparejamiento automático de versiones.** Una coincidencia de familia puede mezclar generaciones, tracción, combustible, baterías, tecnología o transmisiones diferentes; en esta fase no se certifica ninguna equivalencia técnica entre versiones ni su disponibilidad comercial.
 - **Reglas de exclusión documentadas:** Mazda CX-3 no confunde CX-30; Creta no absorbe Creta Grand; Hunter diésel excluye Hunter E/EREV; Yaris no absorbe Yaris Cross; Corolla Sedán no absorbe Corolla Cross; CS55 Plus no se equipara a CS55 de otra generación.
@@ -179,7 +179,7 @@ La ampliación multimarca del 18/10/2026 agrega **30 precios de lista separados 
 
 ## Segunda capa: cotejo exploratorio por versión comercial (octubre de 2026)
 
-La página [Revisión por versión](./versiones.html) examina las 252 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
+La página [Revisión por versión](./versiones.html) examina las 257 fichas comerciales frente a homologaciones 3CV. Es una **auditoría preliminar**, no una base de equivalencias homologadas.
 
 Se extraen únicamente rasgos **expresos** del nombre comercial: tecnología cuando se declara, cilindrada decimal, transmisión manual o categoría amplia automática, tracción y algunos códigos de generación. Se contrastan con tecnología, cilindrada, transmisión, tracción, combustible y modelo originales del 3CV.
 
@@ -304,6 +304,8 @@ Se añadieron 27 versiones comerciales de cinco marcas sin cobertura previa: Mit
 
 
 ### Electromovilidad — auditoría y precios de lista al 19/10/2026
-La página [Electromovilidad](./electromovilidad.html) presenta 96 versiones comerciales etiquetadas documentalmente como EV (32), HEV (42), PHEV (11), REEV (6) o MHEV (5), de 19 marcas, sobre un catálogo total de **252 precios de lista de 24 marcas y 94 familias**. Se añadieron 40 precios de lista electrificados el 19/10/2026 de Kia (12), MG (6), Geely (7), Leapmotor (4), Hyundai (6), Toyota (1) y BMW (4). Los enlaces conducen a fabricantes o distribuidores oficiales; promociones y financiamiento no reemplazan el precio de lista. Las promociones en ciertas fichas comerciales vencieron antes del corte y su vigencia debe confirmarse, incluso cuando el precio de lista siga publicado. La ficha documental no garantiza existencia de inventario.
+La página [Electromovilidad](./electromovilidad.html) presenta 101 versiones comerciales etiquetadas documentalmente como EV (33), HEV (44), PHEV (13), REEV (6) o MHEV (5), de 21 marcas, sobre un catálogo total de **257 precios de lista de 26 marcas y 97 familias**. Se añadieron 40 precios de lista electrificados el 19/10/2026 de Kia (12), MG (6), Geely (7), Leapmotor (4), Hyundai (6), Toyota (1) y BMW (4). Los enlaces conducen a fabricantes o distribuidores oficiales; promociones y financiamiento no reemplazan el precio de lista. Las promociones en ciertas fichas comerciales vencieron antes del corte y su vigencia debe confirmarse, incluso cuando el precio de lista siga publicado. La ficha documental no garantiza existencia de inventario.
 
 El archivo [auditoría 3CV reciente](./data/electromobility-3cv-audit-20261019.json) cuenta **384 homologaciones** con fecha nominal entre 01/01/2025 y 19/10/2026 (EV 130, HEV 32, PHEV 84, REEV 8 y MHEV 130; 63 marcas normalizando LEAPMOTOR). Se excluyen fechas futuras. Estos registros **no** constituyen el universo comercial de ofertas vigentes y, por tanto, no permiten reclamar un porcentaje de cobertura del mercado ni asociar homologaciones a un precio comercial por similitud nominal. Continúan pendientes fabricantes sin precio público inequívoco y verificaciones de versiones.
+
+**Extensión adicional 19/10:** cinco precios fabricante Omoda/Jaecoo: Omoda E5 EV (1), Omoda C5 SHS-H autocarga (2 HEV) y Jaecoo 7 SHS enchufable (2 PHEV), todos separados de bonos en `https://www.omodajaecoo.cl/`. Los 40 registros de la primera tanda se conservan: incremento electrificado total +45.
