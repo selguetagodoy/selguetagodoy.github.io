@@ -189,3 +189,19 @@ body,button,input,select{font-family:Inter,system-ui,-apple-system,BlinkMacSyste
  .search-card .technical{margin-top:6px}
  .search-card .form-actions{margin-top:6px}
 }
+
+/* Primer resultado y botón de búsqueda más cerca del primer pantallazo en pantallas grandes. */
+@media(min-width:1081px){
+ .visual-hero{padding:32px 38px 40px;min-height:336px}
+ .visual-hero h1{font-size:clamp(39px,3.65vw,54px);margin-bottom:13px;max-width:580px}
+ .visual-hero .hero-copy>p:last-of-type{margin-bottom:13px;font-size:15px}
+ .visual-hero .hero-support{margin-top:9px}
+}
+@media(min-width:601px) and (max-width:790px){
+ .visual-hero{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:13px;padding:25px 23px 36px;min-height:280px}
+ .visual-hero h1{font-size:clamp(31px,4.6vw,37px);line-height:1.06;margin-bottom:10px}
+ .visual-hero .hero-copy>p:last-of-type{font-size:12px;line-height:1.45;margin-bottom:8px}
+ .visual-hero .hero-support{font-size:10px;margin-top:7px}
+ .hero-image img{max-height:160px}
+ .search-card{margin-top:-17px}
+}

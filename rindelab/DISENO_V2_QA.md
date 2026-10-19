@@ -42,3 +42,10 @@
 - Evaluar accesibilidad y rendimiento de la versión candidata en dispositivos reales, además de las pruebas automatizadas.
 
 **Política de publicación:** presentar como pull request para revisión; no fusionar automáticamente a `main` ni afirmar que las fotografías faltantes están resueltas.
+
+## Resultado de QA ejecutado
+
+- Pruebas de regresión integrales: **155 aprobadas y 0 fallidas** (`tests/e2e.cjs`, ejecutadas contra el servidor de la rama V2).
+- Pruebas específicas de la nueva interfaz: **10 aprobadas y 0 fallidas** (`tests/v2-visual.cjs`).
+- En siete anchos (320, 360, 390, 768, 1024, 1440 y 1920 px), el documento no presentó desbordamiento horizontal significativo, el hero cargó correctamente y el costo mensual se mostró desde el catálogo real.
+- Las capturas comparativas se conservaron en `qa-v2/`, con imágenes de la publicación previa y de la versión candidata.
