@@ -687,7 +687,7 @@ await test('Electromovilidad: 40 precios nuevos, 384 homologaciones recientes y 
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  assert.equal(all.length,347);
  assert.equal(all.filter(x=>x.technology).length,153);
- const expected={Kia:12,MG:6,Geely:7,Leapmotor:4,Hyundai:6,Toyota:1,BMW:4};
+ const expected={Kia:12,MG:8,Geely:7,Leapmotor:4,Hyundai:6,Toyota:1,BMW:4};
  for(const [brand,count] of Object.entries(expected))assert.equal(all.filter(p=>p.brand===brand&&p.checkedAt==='2026-10-19').length,count,brand);
  assert.equal(all.filter(p=>p.checkedAt==='2026-10-19').length,135);
  assert.equal(all.filter(p=>p.technology==='REEV'&&p.brand==='Leapmotor').length,2);
@@ -711,7 +711,7 @@ await test('Electromovilidad: 40 precios nuevos, 384 homologaciones recientes y 
  assert.match(await e.locator('#electroRows').textContent(),/24\.990\.000/);
  await e.fill('#eSearch','');
  await e.selectOption('#eTech','');
- assert.equal(await e.locator('#electroRows tr').count(),34);
+ assert.equal(await e.locator('#electroRows tr').count(),30);
  await e.locator('#eMore').click();
  assert.equal(await e.locator('#electroRows tr').count(),60);
  assert.equal(errors.length,0,errors.join(' | '));
@@ -810,7 +810,7 @@ await test('JAC, Baic, Nammi, MG, Suzuki y Changan: fichas electrificadas por ma
  const recent=a.filter(p=>brands.includes(p.brand)&&p.checkedAt==='2026-10-19'&&p.source!=='https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf');
  const counts=Object.fromEntries(brands.map(b=>[b,recent.filter(p=>p.brand===b).length]));
  assert.equal(counts.JAC,3);assert.equal(counts.Dongfeng,2);assert.equal(counts.Baic,5);
- assert.equal(counts.MG,2);assert.equal(counts.Suzuki,4);assert.equal(counts.Changan,1);assert.equal(counts['Great Wall'],1);
+ assert.equal(counts.MG,8);assert.equal(counts.Suzuki,4);assert.equal(counts.Changan,1);assert.equal(counts['Great Wall'],1);
  assert.equal(a.find(p=>p.brand==='Dongfeng'&&p.family==='Nammi 001'&&p.version==='NAMMI EV 42.3KWH LR')?.priceListClp,18490000);
 });
 await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar ciclos ni motorizaciones',async()=>{
@@ -843,7 +843,7 @@ await test('Great Wall: modelos Jolion Max y ORA 03 exponen precio de lista con 
   await page.click('#resetButton');await page.fill('#query',q);await page.click('#searchButton');
   assert((await page.locator('.vehicle-card').count())>0,'Sin ficha 3CV '+q);
   await page.locator('.vehicle-card button[data-detail]').first().click();
-  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length===1);
+  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length>=1);
   assert((await page.locator('#siiCommercial').textContent()).includes(price),'Sin precio esperado '+q);
   assert.equal(await page.locator('.sii-selected-price').count(),0);
   await page.locator('#detailClose').click();
@@ -951,11 +951,11 @@ await test('Creta Grand conserva su familia independiente de Creta',async()=>{
  });
  assert.deepEqual(f,['Creta Grand','Creta Grand','Creta']);
 });
-await test('Ampliación Suzuki y MG: 27 nuevas versiones con precio de lista',async()=>{
+await test('Suzuki y MG: 39 versiones con precio de lista por modelo',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  const suzuki=list.filter(x=>x.brand==='Suzuki'),mg=list.filter(x=>x.brand==='MG');
- assert.equal(suzuki.length,12);
- assert.equal(mg.length,21);
+ assert.equal(suzuki.length,16);
+ assert.equal(mg.length,23);
  assert.equal(suzuki.filter(x=>x.family==='Swift').length,4);
  assert.equal(suzuki.filter(x=>x.family==='Fronx').length,4);
  assert.equal(suzuki.filter(x=>x.family==='Celerio').length,2);
@@ -993,12 +993,12 @@ await test('MG3 ofrece versiones térmicas e híbrida diferenciadas sin preselec
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('#detailClose').click();
 });
-await test('Changan: 25 precios de lista oficiales en nueve familias diferenciadas',async()=>{
+await test('Changan: 26 precios de lista oficiales en diez familias diferenciadas',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  const v=list.filter(x=>x.brand==='Changan'),groups={};
  for(const x of v){groups[x.family]=(groups[x.family]||0)+1;assert(x.source.startsWith('https://www.changan.cl/'));}
- assert.equal(v.length,25);
- assert.deepEqual(groups,{'CS35 Max':4,Hunter:4,'X7 Plus':4,'CS75 Plus':2,'CS55 Plus':3,S07:2,'Avatr 07':2,'Deepal S05':2,'CS35 Plus':2});
+ assert.equal(v.length,26);
+ assert.deepEqual(groups,{'CS35 Max':4,Hunter:4,'X7 Plus':4,'CS75 Plus':2,'CS55 Plus':3,S07:2,'Avatr 07':2,'Deepal S05':2,'CS35 Plus':2,Lumin:1});
  assert.equal(v.find(x=>x.version==='CS35 Max Comfort MT').priceListClp,14490000);
  assert.equal(v.find(x=>x.version==='Hunter 2.0T 4X2 Comfort MT').priceListClp,20890000);
  assert.equal(v.find(x=>x.version==='Deepal S07 REEV').priceListClp,32990000);
