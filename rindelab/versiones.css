@@ -57,3 +57,5 @@
 #versionsPrioritySummary{font-size:13px;color:#455f73}
 .manufacturer-evidence summary{min-height:44px;font-weight:600;display:flex;align-items:center}
 @media(max-width:600px){.priority-toggle,.coverage-panel-head .button{font-size:14px}}
+
+.version-name small,.version-evidence small,.candidate-identity,.manufacturer-evidence small,#versionsPrioritySummary{color:#455f73}
