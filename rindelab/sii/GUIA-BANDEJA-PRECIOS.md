@@ -53,3 +53,10 @@ El objetivo es reproducir información oficial y reducir tiempo de investigació
 
 Este lote amplía las 66 prioridades anteriores. El cruce se hizo contra 359 precios de una rama todavía pendiente de integrar (PR #85); el catálogo publicado en `main` contiene 347. No equivale a 200 precios faltantes verificados en el mercado: son 200 denominaciones técnicas adicionales candidatas a investigación. Solo migrar al catálogo comercial valores literales respaldados y versiones comprobadas, sin inferir relaciones 3CV ni reusar precios por similitud de nombre.
 
+
+## Cierre de universo B/C y lote documental de 11 precios (19/10/2026)
+
+- [Lote 104 restante, Markdown](./LOTE-104-RESTANTES-CRUCE-20261019.md) y [CSV editable](./lote-104-cruce-precios-20261019.csv): junto con el primer lote de 200 cubren las 304 denominaciones recientes sin coincidencia literal de versión y tecnología. No son 304 precios faltantes certificados.
+- [11 versiones Audi/CUPRA con precios de lista oficiales y fecha de campaña](./LOTE-FUENTES-OFICIALES-20261019.md) y [CSV de incorporación documental](./lote-11-precios-verificados-20261019.csv).
+
+El CSV de 11 conserva `modelo_fuente_3cv`, `codigo_3cv_referencia` y otros campos técnicos vacíos para evitar asignaciones no acreditadas. En el catálogo público no se inserta nada mediante esta actualización documental. La importación exige cotejar primero la situación de la migración pendiente de 12 versiones del PR #85, revisar duplicados y ejecutar la QA de fuentes, versiones y navegador.
