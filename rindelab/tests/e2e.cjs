@@ -736,7 +736,7 @@ await test('Segunda ola: 100 precios en MD comercial con origen para quince marc
  assert(rows.some(x=>x.brand==='Avatr'&&x.technology==='EV'));
  assert(rows.some(x=>x.brand==='Riddara'&&x.technology==='EV'));
  const master=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
- assert(master.includes('1504')&&master.includes('74'));
+ assert(master.includes('1504')&&master.includes('80'));
 });
 await test('161 precios desde por modelo: MD, origen, buscador y cotizador',async()=>{
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
@@ -1327,7 +1327,7 @@ await test('Integración 20/10: 1504 precios, 80 marcas, Nammi y +IVA sin total 
  assert.match(await m.locator('#brandRows').textContent(),/Precio documentado/);
  await m.close();
 });
-await test('Marcas: 134 marcas del 3CV histórico, filtro transparente y CSV',async()=>{
+await test('Marcas: denominaciones 3CV consolidadas, filtro transparente y CSV',async()=>{
  const p=await browser.newPage({viewport:{width:390,height:844},acceptDownloads:true});
  await p.goto(base+'marcas.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>Number(document.querySelector('#metricBrands')?.textContent)>100,{timeout:30000});
