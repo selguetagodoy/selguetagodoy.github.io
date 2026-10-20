@@ -101,44 +101,44 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | M3 | M3 Competition xDrive Berlina LCI II | No clasificada | $126.900.000 | [bmw.cl](https://www.bmw.cl/modelos/m3) | 2026-10-19 |
 | M4 | M4 xDrive Coupé LCI II | No clasificada | $132.900.000 | [bmw.cl](https://www.bmw.cl/modelos/m4) | 2026-10-19 |
 | M5 | M5 Berlina | PHEV | $173.900.000 | [bmw.cl](https://www.bmw.cl/modelos/m5) | 2026-10-19 |
-| Serie 1 | 120 Hatch Dynamic HEA | No clasificada | $35.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/serie1) | 2026-10-19 |
-| Serie 2 | M240i xDrive Coupé LCI | No clasificada | $69.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/serie2) | 2026-10-19 |
+| Serie 1 | 120 Hatch Dynamic HEA | No clasificada | $35.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/serie1) | 2026-10-19 |
+| Serie 2 | M240i xDrive Coupé LCI | No clasificada | $69.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/serie2) | 2026-10-19 |
 | Serie 3 | 330e Berlina Dynamic LCI II | PHEV | $65.900.000 | [bmw.cl](https://www.bmw.cl/modelos/3) | 2026-10-19 |
 | Serie 3 | M340i xDrive Berlina 50th LCI II | No clasificada | $79.900.000 | [bmw.cl](https://www.bmw.cl/modelos/3) | 2026-10-19 |
-| Serie 4 | 420i Cabriolet Dynamic LCI II | No clasificada | $59.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/serie4) | 2026-10-19 |
-| Serie 4 | 420i Gran Coupé Dynamic LCI II | No clasificada | $52.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/serie4) | 2026-10-19 |
+| Serie 4 | 420i Cabriolet Dynamic LCI II | No clasificada | $59.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/serie4) | 2026-10-19 |
+| Serie 4 | 420i Gran Coupé Dynamic LCI II | No clasificada | $52.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/serie4) | 2026-10-19 |
 | Serie 4 Convertible | 420i Cabriolet Dynamic LCI II | No clasificada | $59.900.000 | [bmw.cl](https://www.bmw.cl/modelos/4-convertible) | 2026-10-19 |
 | Serie 4 Convertible | M440i xDrive Cabriolet LCI II | No clasificada | $89.900.000 | [bmw.cl](https://www.bmw.cl/modelos/4-convertible) | 2026-10-19 |
 | Serie 4 Gran Coupé | 420i Gran Coupé Dynamic LCI II | No clasificada | $52.900.000 | [bmw.cl](https://www.bmw.cl/modelos/4-gran-coupe) | 2026-10-19 |
 | Serie 5 | 520i Berlina Heritage | No clasificada | $68.900.000 | [bmw.cl](https://www.bmw.cl/modelos/5) | 2026-10-19 |
-| Serie 5 | 520i Berlina Heritage | No clasificada | $68.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/serie5) | 2026-10-19 |
+| Serie 5 | 520i Berlina Heritage | No clasificada | $68.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/serie5) | 2026-10-19 |
 | Serie 5 | 530e Berlina M Sport | No clasificada | $84.900.000 | [bmw.cl](https://www.bmw.cl/modelos/5) | 2026-10-19 |
 | Serie 7 | 750e Berlina Pure Excellence | PHEV | $175.900.000 | [bmw.cl](https://www.bmw.cl/modelos/7) | 2026-10-19 |
 | Serie 8 Coupe | Precio desde (versión no especificada) | No clasificada | $144.000.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
-| Serie M | M240i RWD Coupe M Performance | No clasificada | $70.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | M240i xDrive Coupé LCI | No clasificada | $70.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | M340i xdrive M Performance LCI | No clasificada | $79.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | M440i xDrive Cabriolet New | No clasificada | $89.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | M440i xDrive Gran Coupé LCI II | No clasificada | $86.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | X2 M35i xDrive | No clasificada | $65.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | X3 M50 xDrive HEA | No clasificada | $89.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | X5 M60i LCI | No clasificada | $129.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| Serie M | X6 M60 LCI | No clasificada | $144.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
-| X1 | sDrive 18d Dynamic | No clasificada | $48.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
-| X1 | sDrive18i Comfort | No clasificada | $44.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
-| X1 | sDrive18i Comfort | No clasificada | $41.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
-| X1 | sDrive18i Dynamic | No clasificada | $46.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
-| X1 | sDrive18i M Sport | No clasificada | $51.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
-| X1 | sDrive18i M Sport | No clasificada | $51.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
+| Serie M | M240i RWD Coupe M Performance | No clasificada | $70.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | M240i xDrive Coupé LCI | No clasificada | $70.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | M340i xdrive M Performance LCI | No clasificada | $79.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | M440i xDrive Cabriolet New | No clasificada | $89.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | M440i xDrive Gran Coupé LCI II | No clasificada | $86.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | X2 M35i xDrive | No clasificada | $65.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | X3 M50 xDrive HEA | No clasificada | $89.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | X5 M60i LCI | No clasificada | $129.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| Serie M | X6 M60 LCI | No clasificada | $144.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/seriem) | 2026-10-19 |
+| X1 | sDrive 18d Dynamic | No clasificada | $48.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
+| X1 | sDrive18i Comfort | No clasificada | $44.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
+| X1 | sDrive18i Comfort | No clasificada | $41.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
+| X1 | sDrive18i Dynamic | No clasificada | $46.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
+| X1 | sDrive18i M Sport | No clasificada | $51.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
+| X1 | sDrive18i M Sport | No clasificada | $51.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x1) | 2026-10-19 |
 | X1 | X1 sDrive18d Dynamic | No clasificada | $48.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x1) | 2026-10-18 |
 | X1 | X1 sDrive18i Comfort S | No clasificada | $44.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x1) | 2026-10-18 |
 | X1 | X1 sDrive18i M Sport | No clasificada | $51.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x1) | 2026-10-18 |
 | X1 | X1 xDrive25e Dynamic | PHEV | $53.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x1) | 2026-10-18 |
-| X2 | sDrive20i M Sport | No clasificada | $55.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x2) | 2026-10-19 |
+| X2 | sDrive20i M Sport | No clasificada | $55.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x2) | 2026-10-19 |
 | X2 | X2 sDrive20i Dynamic S | No clasificada | $52.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x2) | 2026-10-19 |
 | X2 | X2 sDrive20i M Sport | No clasificada | $55.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x2) | 2026-10-19 |
 | X2 | X2 xDrive20d M Sport | No clasificada | $58.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x2) | 2026-10-19 |
-| X2 | xDrive20d M Sport | No clasificada | $58.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x2) | 2026-10-19 |
+| X2 | xDrive20d M Sport | No clasificada | $58.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x2) | 2026-10-19 |
 | X3 | X3 30e xDrive Heritage | PHEV | $78.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x3-hibrido) | 2026-10-19 |
 | X4 | Precio desde (versión no especificada) | No clasificada | $57.900.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
 | X5 M | X5 M Competition LCI | No clasificada | $185.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x5-m) | 2026-10-19 |
@@ -146,7 +146,7 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | X5 | X5 xDrive30d M Sport LCI | No clasificada | $105.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x5) | 2026-10-19 |
 | X5 | X5 xDrive30d xLine LCI | No clasificada | $88.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x5) | 2026-10-19 |
 | X5 | X5 xDrive40i xLine LCI | No clasificada | $86.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x5) | 2026-10-19 |
-| X5 | xDrive 30d M sport LCI | No clasificada | $105.900.000 | [portillosur.cl](https://www.portillosur.cl/bmw/x5) | 2026-10-19 |
+| X5 | xDrive 30d M sport LCI | No clasificada | $105.900.000 | [Portillo Sur](https://www.portillosur.cl/bmw/x5) | 2026-10-19 |
 | X6 | X6 M60i xDrive LCI | No clasificada | $144.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x6) | 2026-10-19 |
 | X6 | X6 xDrive30d M Sport LCI | No clasificada | $112.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x6) | 2026-10-19 |
 | X6 | X6 xDrive40i M Sport LCI | No clasificada | $109.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x6) | 2026-10-19 |
@@ -225,37 +225,37 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 |---|---|---|---:|---|---|
 | cl-tiggo-2-pro | Precio desde (versión no especificada) | No clasificada | $10.990.000 | [auto.cl](https://www.auto.cl/nuevos/chery) | 2026-10-20 |
 | cl-tiggo-3-pro | Precio desde (versión no especificada) | No clasificada | $13.990.000 | [auto.cl](https://www.auto.cl/nuevos/chery) | 2026-10-20 |
-| HIMLA | 2.3T AT 4x4 (Original, solo stock red) | No clasificada | $25.288.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
-| HIMLA | 2.3T AT 4x4 ADVENTURE | No clasificada | $25.288.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
-| HIMLA | 2.3T AT 4x4 EVEREST | No clasificada | $26.478.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
-| HIMLA | 2.3T MT 4x2 ADVENTURE | No clasificada | $19.338.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
-| HIMLA | 2.3T MT 4x2 FORCE (Original) | No clasificada | $19.338.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
-| HIMLA | 2.3T MT 4x4 (Original, solo stock red) | No clasificada | $21.718.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
-| HIMLA | 2.3T MT 4x4 ADVENTURE | No clasificada | $21.718.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
-| HIMLA | 2.3T MT 4x4 EVEREST | No clasificada | $22.908.100 | [portillosur.cl](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T AT 4x4 (Original, solo stock red) | No clasificada | $25.288.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T AT 4x4 ADVENTURE | No clasificada | $25.288.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T AT 4x4 EVEREST | No clasificada | $26.478.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T MT 4x2 ADVENTURE | No clasificada | $19.338.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T MT 4x2 FORCE (Original) | No clasificada | $19.338.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T MT 4x4 (Original, solo stock red) | No clasificada | $21.718.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T MT 4x4 ADVENTURE | No clasificada | $21.718.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
+| HIMLA | 2.3T MT 4x4 EVEREST | No clasificada | $22.908.100 | [Portillo Sur](https://www.portillosur.cl/chery/himla) | 2026-10-19 |
 | himla | HIMLA 2.3T AT 4x4 | No clasificada | $25.288.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/himla) | 2026-10-19 |
 | Himla | HIMLA 2.3T MT 4×2 ADVENTURE | No clasificada | $19.338.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/chery/himla) | 2026-10-19 |
 | Himla | HIMLA 2.3T MT 4×2 FORCE (Original) | No clasificada | $19.338.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/chery/himla) | 2026-10-19 |
 | Himla | HIMLA 2.3T MT 4×4 (Original) | No clasificada | $21.718.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/chery/himla) | 2026-10-19 |
 | himla | HIMLA 2.3T MT 4x2 | No clasificada | $19.338.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/himla) | 2026-10-19 |
-| TIGGO 2 PRO MAX | 1.5 CVT GLX | No clasificada | $13.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo2promax) | 2026-10-19 |
-| TIGGO 2 PRO MAX | 1.5 MT GL | No clasificada | $11.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo2promax) | 2026-10-19 |
-| TIGGO 2 PRO MAX | 1.5 MT GLX | No clasificada | $12.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo2promax) | 2026-10-19 |
+| TIGGO 2 PRO MAX | 1.5 CVT GLX | No clasificada | $13.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo2promax) | 2026-10-19 |
+| TIGGO 2 PRO MAX | 1.5 MT GL | No clasificada | $11.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo2promax) | 2026-10-19 |
+| TIGGO 2 PRO MAX | 1.5 MT GLX | No clasificada | $12.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo2promax) | 2026-10-19 |
 | tiggo 2 pro max | TIGGO 2 PRO MAX 1.5 CVT GLX NEW 6C | No clasificada | $13.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-2-pro-max) | 2026-10-19 |
 | tiggo 2 pro max | TIGGO 2 PRO MAX 1.5 MT GL NEW 6C | No clasificada | $11.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-2-pro-max) | 2026-10-19 |
 | tiggo 2 pro max | TIGGO 2 PRO MAX 1.5 MT GLX NEW 6 | No clasificada | $12.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-2-pro-max) | 2026-10-19 |
 | Tiggo 2 Pro Max | TIGGO 2 PRO MAX GL MT | No clasificada | $11.990.000 | [chery.cl](https://chery.cl/tiggo-2-pro-max/) | 2026-10-18 |
 | Tiggo 2 Pro Max | TIGGO 2 PRO MAX GLX CVT | No clasificada | $13.990.000 | [chery.cl](https://chery.cl/tiggo-2-pro-max/) | 2026-10-18 |
 | Tiggo 2 Pro Max | TIGGO 2 PRO MAX GLX MT | No clasificada | $12.990.000 | [chery.cl](https://chery.cl/tiggo-2-pro-max/) | 2026-10-18 |
-| TIGGO 4 PRO MAX | 1.5 CVT GLS | No clasificada | $15.490.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo4promax) | 2026-10-19 |
-| TIGGO 4 PRO MAX | 1.5 DHT HEV | HEV | $19.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo4promax) | 2026-10-19 |
-| TIGGO 4 PRO MAX | 1.5 MT GLS | No clasificada | $14.490.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo4promax) | 2026-10-19 |
+| TIGGO 4 PRO MAX | 1.5 CVT GLS | No clasificada | $15.490.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo4promax) | 2026-10-19 |
+| TIGGO 4 PRO MAX | 1.5 DHT HEV | HEV | $19.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo4promax) | 2026-10-19 |
+| TIGGO 4 PRO MAX | 1.5 MT GLS | No clasificada | $14.490.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo4promax) | 2026-10-19 |
 | Tiggo 4 Pro Max | TIGGO 4 PRO MAX 1.5 CVT GLS | No clasificada | $15.490.000 | [chery.cl](https://chery.cl/tiggo-4-pro-max/) | 2026-10-18 |
 | Tiggo 4 Pro Max | TIGGO 4 PRO MAX 1.5 DHT HEV | HEV | $19.990.000 | [aventuramotors.chery.cl](https://aventuramotors.chery.cl/tiggo-4-hev/) | 2026-10-18 |
 | Tiggo 4 Pro Max | TIGGO 4 PRO MAX 1.5 MT GLS | No clasificada | $14.490.000 | [chery.cl](https://chery.cl/tiggo-4-pro-max/) | 2026-10-18 |
-| TIGGO 7 HÍBRIDO | 1.5T DHT PHEV | PHEV | $25.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo7hibrido) | 2026-10-19 |
-| TIGGO 7 PRO MAX | 1.5T CVT LIMITED | No clasificada | $15.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo7promax) | 2026-10-19 |
-| TIGGO 7 PRO MAX | 1.5T DCT GLX | No clasificada | $19.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo7promax) | 2026-10-19 |
+| TIGGO 7 HÍBRIDO | 1.5T DHT PHEV | PHEV | $25.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo7hibrido) | 2026-10-19 |
+| TIGGO 7 PRO MAX | 1.5T CVT LIMITED | No clasificada | $15.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo7promax) | 2026-10-19 |
+| TIGGO 7 PRO MAX | 1.5T DCT GLX | No clasificada | $19.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo7promax) | 2026-10-19 |
 | tiggo 7 pro max hybrid | TIGGO 7 PRO MAX 1.5T DHT PHEV EURO 6C | PHEV | $25.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-7-pro-max-hybrid) | 2026-10-19 |
 | Tiggo 7 Pro Max | TIGGO 7 PRO MAX 1.5 DHT PHEV | PHEV | $25.990.000 | [chery.cl](https://chery.cl/tiggo-7-pro-max-phev/) | 2026-10-18 |
 | Tiggo 7 Pro Max | TIGGO 7 PRO MAX DCT GLX | No clasificada | $19.990.000 | [callegari.chery.cl](https://callegari.chery.cl/tiggo-7/) | 2026-10-18 |
@@ -264,11 +264,11 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Tiggo 7 | TIGGO 7 CVT LIMITED EDITION | No clasificada | $15.990.000 | [callegari.chery.cl](https://callegari.chery.cl/tiggo-7/) | 2026-10-18 |
 | Tiggo 7 | TIGGO 7 PRO MAX 1.5T DCT GLX | No clasificada | $19.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/chery/tiggo-7) | 2026-10-19 |
 | tiggo 7 | TIGGO 7 PRO MAX 1.5T DCT GLX EURO 6C | No clasificada | $19.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-7) | 2026-10-19 |
-| TIGGO 8 | 1.5T DCT LIMITED | No clasificada | $17.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo8) | 2026-10-19 |
-| TIGGO 8 | 1.5T MT LIMITED | No clasificada | $16.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo8) | 2026-10-19 |
-| TIGGO 8 PRO MAX | 1.6T DCT GLS | No clasificada | $22.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo8promax) | 2026-10-19 |
-| TIGGO 8 PRO MAX | 1.6T DCT GLX | No clasificada | $25.490.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo8promax) | 2026-10-19 |
-| TIGGO 8 PRO MAX HÍBRIDO | 1.5T DHT PHEV | PHEV | $28.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo8promaxhibrido) | 2026-10-19 |
+| TIGGO 8 | 1.5T DCT LIMITED | No clasificada | $17.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo8) | 2026-10-19 |
+| TIGGO 8 | 1.5T MT LIMITED | No clasificada | $16.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo8) | 2026-10-19 |
+| TIGGO 8 PRO MAX | 1.6T DCT GLS | No clasificada | $22.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo8promax) | 2026-10-19 |
+| TIGGO 8 PRO MAX | 1.6T DCT GLX | No clasificada | $25.490.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo8promax) | 2026-10-19 |
+| TIGGO 8 PRO MAX HÍBRIDO | 1.5T DHT PHEV | PHEV | $28.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo8promaxhibrido) | 2026-10-19 |
 | tiggo 8 pro max phev | TIGGO 8 PRO MAX 1.5T DHT PHEV EURO 6C | PHEV | $28.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-8-pro-max-phev) | 2026-10-19 |
 | Tiggo 8 Pro Max | TIGGO 8 PRO MAX 1.5T DHT PHEV | PHEV | $28.990.000 | [piamonte.chery.cl](https://piamonte.chery.cl/tiggo-8-pro-max-phev/) | 2026-10-18 |
 | Tiggo 8 Pro Max | TIGGO 8 PRO MAX DCT GLS | No clasificada | $22.990.000 | [chery.cl](https://chery.cl/tiggo-8/) | 2026-10-18 |
@@ -277,8 +277,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Tiggo 8 | TIGGO 8 1.5T MT LIMITED | No clasificada | $16.990.000 | [chery.cl](https://chery.cl/tiggo-8/) | 2026-10-18 |
 | tiggo 8 | TIGGO 8 PRO MAX 1.6T DCT GLS EURO 6C | No clasificada | $22.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-8) | 2026-10-19 |
 | tiggo 8 | TIGGO 8 PRO MAX 1.6T DCT GLX EURO 6C | No clasificada | $25.490.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-8) | 2026-10-19 |
-| TIGGO 9 | 2.0T AT GLX AWD | No clasificada | $29.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo9) | 2026-10-19 |
-| TIGGO 9 HÍBRIDO | 1.5T DHT PHEV | PHEV | $31.990.000 | [portillosur.cl](https://www.portillosur.cl/chery/tiggo9hibrido) | 2026-10-19 |
+| TIGGO 9 | 2.0T AT GLX AWD | No clasificada | $29.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo9) | 2026-10-19 |
+| TIGGO 9 HÍBRIDO | 1.5T DHT PHEV | PHEV | $31.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo9hibrido) | 2026-10-19 |
 | Tiggo 9 | TIGGO 9 1.5T DHT PHEV | PHEV | $31.990.000 | [rosselot.chery.cl](https://rosselot.chery.cl/tiggo-9-phev/) | 2026-10-18 |
 | tiggo 9 | TIGGO 9 2.0T DCT GLX AWD | No clasificada | $29.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/chery/tiggo-9) | 2026-10-19 |
 
@@ -376,7 +376,7 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| AEOLUS GS | AEOLUS GS CROSS | No clasificada | $13.990.000 | [portillosur.cl](https://www.portillosur.cl/dong-feng/aeolusgs) | 2026-10-19 |
+| AEOLUS GS | AEOLUS GS CROSS | No clasificada | $13.990.000 | [Portillo Sur](https://www.portillosur.cl/dong-feng/aeolusgs) | 2026-10-19 |
 | aeolus y3 | AEOLUS Y3 AT COMFORT | No clasificada | $12.590.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/dongfeng/aeolus-y3) | 2026-10-19 |
 | aeolus y3 | AEOLUS Y3 AT LUXURY | No clasificada | $13.290.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/dongfeng/aeolus-y3) | 2026-10-19 |
 | aeolus y3 | AEOLUS Y3 MT | No clasificada | $11.490.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/dongfeng/aeolus-y3) | 2026-10-19 |
@@ -384,13 +384,13 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Huge | HUGE ICE E2 1.5T | No clasificada | $19.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/dongfeng/huge) | 2026-10-19 |
 | L7 | L7 1.5T PHEV | PHEV | $26.490.000 | [dongfengindumotora.cl](https://dongfengindumotora.cl/terminos-y-condiciones.html) | 2026-10-19 |
 | L7 | L7 1.5T PHEV ELITE | PHEV | $28.990.000 | [dongfengindumotora.cl](https://dongfengindumotora.cl/terminos-y-condiciones.html) | 2026-10-19 |
-| MAGE EV | MAGE EV | EV | $21.990.000 | [portillosur.cl](https://www.portillosur.cl/dong-feng/mageev) | 2026-10-19 |
+| MAGE EV | MAGE EV | EV | $21.990.000 | [Portillo Sur](https://www.portillosur.cl/dong-feng/mageev) | 2026-10-19 |
 | MAGE | MAGE 1.5T E1 | No clasificada | $15.590.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/dongfeng/mage) | 2026-10-19 |
 | MAGE | MAGE 1.5T E2 | No clasificada | $16.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/dongfeng/mage) | 2026-10-19 |
 | MAGE | MAGE 1.5T E2 BICOLOR | No clasificada | $17.290.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/dongfeng/mage) | 2026-10-19 |
 | new sx6 | NEW SX6 1.6 | No clasificada | $11.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/dongfeng/new-sx6) | 2026-10-19 |
 | s50 eve | S50EVE | No clasificada | $26.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/dongfeng/s50-eve) | 2026-10-19 |
-| T5 EVO | 1.5 HEV | No clasificada | $23.990.000 | [portillosur.cl](https://www.portillosur.cl/dong-feng/t5evo) | 2026-10-19 |
+| T5 EVO | 1.5 HEV | No clasificada | $23.990.000 | [Portillo Sur](https://www.portillosur.cl/dong-feng/t5evo) | 2026-10-19 |
 | t5 evo hev | T5 EVO 1.5 HEV | No clasificada | $23.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/dongfeng/t5-evo-hev) | 2026-10-19 |
 | t5 evo | T5 EVO 1.5 TURBO LUXURY Euro VI | No clasificada | $19.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/dongfeng/t5-evo) | 2026-10-19 |
 | T5 EVO | T5 EVO 1.5 TURBO MT LUXURY Euro VI | No clasificada | $15.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/dongfeng/t5-evo) | 2026-10-19 |
@@ -523,7 +523,7 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| FT | CREW PASAJEROS Euro | No clasificada | $32.118.100 | [portillosur.cl](https://www.portillosur.cl/foton/ft) | 2026-10-19 |
+| FT | CREW PASAJEROS Euro | No clasificada | $32.118.100 | [Portillo Sur](https://www.portillosur.cl/foton/ft) | 2026-10-19 |
 | FT Crew | Precio desde (versión no especificada) | No clasificada | $30.618.100 | [auto.cl](https://www.auto.cl/nuevos/foton) | 2026-10-20 |
 | g7 ev | G7 EV 4x2 | EV | $37.961.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/g7-ev) | 2026-10-19 |
 | g7 | G7 4X2 EURO VI | No clasificada | $18.552.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/g7) | 2026-10-19 |
@@ -531,31 +531,31 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | G7 | G7 Lite 4X4 EURO VI | No clasificada | $18.433.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/g7) | 2026-10-19 |
 | g7 | G7 ULTIMATE 4x4 Euro 6 AT | No clasificada | $23.312.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/g7) | 2026-10-19 |
 | g7 | G7 ULTIMATE 4X4 EURO VI MT | No clasificada | $20.813.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/g7) | 2026-10-19 |
-| G7 | LITE 4X2 EURO VI | No clasificada | $17.243.100 | [portillosur.cl](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
-| G7 | LITE 4X4 EURO VI | No clasificada | $18.433.100 | [portillosur.cl](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
-| G7 | ULTIMATE 4X4 EURO VI | No clasificada | $20.813.100 | [portillosur.cl](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
-| G7 | ULTIMATE 4X4 EURO VI AT | No clasificada | $23.312.100 | [portillosur.cl](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
-| G7 | ULTIMATE AT 4X4 | No clasificada | $22.003.100 | [portillosur.cl](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
+| G7 | LITE 4X2 EURO VI | No clasificada | $17.243.100 | [Portillo Sur](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
+| G7 | LITE 4X4 EURO VI | No clasificada | $18.433.100 | [Portillo Sur](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
+| G7 | ULTIMATE 4X4 EURO VI | No clasificada | $20.813.100 | [Portillo Sur](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
+| G7 | ULTIMATE 4X4 EURO VI AT | No clasificada | $23.312.100 | [Portillo Sur](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
+| G7 | ULTIMATE AT 4X4 | No clasificada | $22.003.100 | [Portillo Sur](https://www.portillosur.cl/foton/g7) | 2026-10-19 |
 | g9 | G9 4X2 MT | No clasificada | $19.028.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/g9) | 2026-10-19 |
 | G9 | G9 4X4 AT | No clasificada | $25.335.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/g9) | 2026-10-19 |
 | G9 | G9 4X4 MT | No clasificada | $20.813.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/g9) | 2026-10-19 |
 | K1 Cargo | Precio desde (versión no especificada) | No clasificada | $16.490.000 | [auto.cl](https://www.auto.cl/nuevos/foton) | 2026-10-20 |
-| MIDI | Cabina Simple / 1.2 | No clasificada | $9.508.100 | [portillosur.cl](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
-| MIDI | CARGO BOX | No clasificada | $11.650.100 | [portillosur.cl](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
+| MIDI | Cabina Simple / 1.2 | No clasificada | $9.508.100 | [Portillo Sur](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
+| MIDI | CARGO BOX | No clasificada | $11.650.100 | [Portillo Sur](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
 | midi cargo box | MIDI CARGO BOX 1.2 Euro VI | No clasificada | $11.650.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/midi-cargo-box) | 2026-10-19 |
-| MIDI | CARGO BOX REF 1.2 Euro VI | No clasificada | $15.339.100 | [portillosur.cl](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
+| MIDI | CARGO BOX REF 1.2 Euro VI | No clasificada | $15.339.100 | [Portillo Sur](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
 | Midi Chasis | Precio desde (versión no especificada) | No clasificada | $8.508.100 | [auto.cl](https://www.auto.cl/nuevos/foton) | 2026-10-20 |
 | tm cabina doble | TM3 CABINA DOBLE 1.6 Euro VI 2 AirBag | No clasificada | $13.078.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/tm-cabina-doble) | 2026-10-19 |
 | tm cabina simple | TM3 CABINA SIMPLE 1.6 Euro VI 2 AirBag | No clasificada | $11.888.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/tm-cabina-simple) | 2026-10-19 |
 | tm cargo box | TM3 CARGO BOX Euro VI | No clasificada | $13.066.200 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/tm-cargo-box) | 2026-10-19 |
-| TM3 | CABINA DOBLE 1.6 Euro VI | No clasificada | $13.078.100 | [portillosur.cl](https://www.portillosur.cl/foton/tm3) | 2026-10-19 |
-| TM3 | CARGO BOX | No clasificada | $13.066.200 | [portillosur.cl](https://www.portillosur.cl/foton/tm3) | 2026-10-19 |
+| TM3 | CABINA DOBLE 1.6 Euro VI | No clasificada | $13.078.100 | [Portillo Sur](https://www.portillosur.cl/foton/tm3) | 2026-10-19 |
+| TM3 | CARGO BOX | No clasificada | $13.066.200 | [Portillo Sur](https://www.portillosur.cl/foton/tm3) | 2026-10-19 |
 | tm3 refrigerado | TM3 REFRIGERADO | No clasificada | $16.648.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/tm3-refrigerado) | 2026-10-19 |
-| TM5 | CABINA DOBLE 1.6 Euro VI | No clasificada | $14.268.100 | [portillosur.cl](https://www.portillosur.cl/foton/tm5) | 2026-10-19 |
-| TM5 | CABINA SIMPLE 1.6 Euro VI | No clasificada | $13.078.100 | [portillosur.cl](https://www.portillosur.cl/foton/tm5) | 2026-10-19 |
+| TM5 | CABINA DOBLE 1.6 Euro VI | No clasificada | $14.268.100 | [Portillo Sur](https://www.portillosur.cl/foton/tm5) | 2026-10-19 |
+| TM5 | CABINA SIMPLE 1.6 Euro VI | No clasificada | $13.078.100 | [Portillo Sur](https://www.portillosur.cl/foton/tm5) | 2026-10-19 |
 | tm5 cabina simple | TM5 CABINA SIMPLE 1.6 Euro VI | No clasificada | $12.840.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/tm5-cabina-simple) | 2026-10-19 |
 | tm5 cargo box | TM5 CARGO BOX 2 AirBag | No clasificada | $14.625.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/tm5-cargo-box) | 2026-10-19 |
-| V7 | LUXURY AT 4X4 | No clasificada | $33.308.100 | [portillosur.cl](https://www.portillosur.cl/foton/v7) | 2026-10-19 |
+| V7 | LUXURY AT 4X4 | No clasificada | $33.308.100 | [Portillo Sur](https://www.portillosur.cl/foton/v7) | 2026-10-19 |
 | V7 | V7 ELITE AT 4X4 EURO6 | No clasificada | $27.358.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/v7) | 2026-10-19 |
 | V7 | V7 LUXURY AT 4X4 EURO6 | No clasificada | $33.308.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/v7) | 2026-10-19 |
 | V7 | V7 LUXURY MT 4X4 EURO6 | No clasificada | $24.978.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/v7) | 2026-10-19 |
@@ -563,7 +563,7 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | V9 | V9 ULTIMATE AT 4X4 EURO6 | No clasificada | $35.688.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/v9) | 2026-10-19 |
 | view grand pasajero | VIEW GRAND PASAJERO L2H2 AT | No clasificada | $29.738.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/view-grand-pasajero) | 2026-10-19 |
 | view grand pasajero | VIEW GRAND PASAJERO L2H2 MT | No clasificada | $28.548.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/foton/view-grand-pasajero) | 2026-10-19 |
-| WONDER | CARGO BOX 1.6 E6 | No clasificada | $14.625.100 | [portillosur.cl](https://www.portillosur.cl/foton/wonder) | 2026-10-19 |
+| WONDER | CARGO BOX 1.6 E6 | No clasificada | $14.625.100 | [Portillo Sur](https://www.portillosur.cl/foton/wonder) | 2026-10-19 |
 | WONDER | WONDER CABINA DOBLE 1.6 E6 | No clasificada | $13.435.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/wonder) | 2026-10-19 |
 | WONDER | WONDER CABINA SIMPLE 1.6 E6 | No clasificada | $12.483.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/wonder) | 2026-10-19 |
 | WONDER | WONDER CARGO BOX 1.6 E6 | No clasificada | $14.625.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/foton/wonder) | 2026-10-19 |
@@ -613,7 +613,7 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| CITYRAY | \| Crédito inteligente \| $17.890.000 \| | No clasificada | $20.890.000 | [portillosur.cl](https://www.portillosur.cl/geely/cityray) | 2026-10-19 |
+| CITYRAY | \| Crédito inteligente \| $17.890.000 \| | No clasificada | $20.890.000 | [Portillo Sur](https://www.portillosur.cl/geely/cityray) | 2026-10-19 |
 | EX2 | EX2 Max | EV | $20.490.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex2/) | 2026-10-19 |
 | EX2 | EX2 Pro | EV | $18.990.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex2/) | 2026-10-19 |
 | EX5 EM-i | EX5 EM-i Max | PHEV | $26.490.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
@@ -621,10 +621,10 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | EX5 EM-i | EX5 EM-i Pro | PHEV | $23.990.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
 | EX5 | EX5 Max | EV | $33.990.000 | [geely.cl](https://www.geely.cl/modelos/ex5/) | 2026-10-19 |
 | EX5 | EX5 Pro | EV | $30.990.000 | [geely.cl](https://www.geely.cl/modelos/ex5/) | 2026-10-19 |
-| EX5-EMi | MAX+ | No clasificada | $28.990.000 | [portillosur.cl](https://www.portillosur.cl/geely/ex5emi) | 2026-10-19 |
-| GX3 PRO | GF ELITE | No clasificada | $12.990.000 | [portillosur.cl](https://www.portillosur.cl/geely/gx3pro) | 2026-10-19 |
+| EX5-EMi | MAX+ | No clasificada | $28.990.000 | [Portillo Sur](https://www.portillosur.cl/geely/ex5emi) | 2026-10-19 |
+| GX3 PRO | GF ELITE | No clasificada | $12.990.000 | [Portillo Sur](https://www.portillosur.cl/geely/gx3pro) | 2026-10-19 |
 | NEW Coolray | Precio desde (versión no especificada) | No clasificada | $15.490.000 | [auto.cl](https://www.auto.cl/nuevos/geely) | 2026-10-20 |
-| OKAVANGO | SIGNATURE 2.0T 7DCT | No clasificada | $26.690.000 | [portillosur.cl](https://www.portillosur.cl/geely/okavango) | 2026-10-19 |
+| OKAVANGO | SIGNATURE 2.0T 7DCT | No clasificada | $26.690.000 | [Portillo Sur](https://www.portillosur.cl/geely/okavango) | 2026-10-19 |
 | Starray | Precio desde (versión no especificada) | No clasificada | $23.990.000 | [auto.cl](https://www.auto.cl/nuevos/geely) | 2026-10-20 |
 
 ### Great Wall — 40 registros
@@ -703,25 +703,25 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 |---|---|---|---:|---|---|
 | Accent | ACCENT BN7i 1.5 MT BLACK | No clasificada | $15.690.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
 | Accent | ACCENT BN7i 1.5 MT PLUS | No clasificada | $15.890.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
-| ACCENT BN7i | 1.5 AT DESIGN | No clasificada | $20.290.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
-| ACCENT BN7i | 1.5 AT PLUS | No clasificada | $17.290.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
-| ACCENT BN7i | 1.5 MT DESIGN | No clasificada | $18.790.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
+| ACCENT BN7i | 1.5 AT DESIGN | No clasificada | $20.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
+| ACCENT BN7i | 1.5 AT PLUS | No clasificada | $17.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
+| ACCENT BN7i | 1.5 MT DESIGN | No clasificada | $18.790.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
 | Creta Grand | CRETA GRAND SU2i 2.0 AT PLUS FL | No clasificada | $24.290.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/) | 2026-10-17 |
 | Creta Grand | CRETA GRAND SU2i 2.0 MT GO FL | No clasificada | $21.790.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/) | 2026-10-17 |
 | Creta | SU2id 1.5 CVT DESIGN FL | No clasificada | $22.790.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
-| Creta SU2id | 1.5 CVT DESIGN FL | No clasificada | $22.790.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/cretasu2id) | 2026-10-19 |
+| Creta SU2id | 1.5 CVT DESIGN FL | No clasificada | $22.790.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/cretasu2id) | 2026-10-19 |
 | Creta | SU2id 1.5 CVT PLUS FL | No clasificada | $20.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
-| Creta SU2id | 1.5 CVT PLUS FL | No clasificada | $20.590.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/cretasu2id) | 2026-10-19 |
+| Creta SU2id | 1.5 CVT PLUS FL | No clasificada | $20.590.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/cretasu2id) | 2026-10-19 |
 | Creta | SU2id 1.5 MT GO FL | No clasificada | $18.290.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
 | Creta | SU2id 1.5 MT PLUS FL | No clasificada | $19.090.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
-| GRAND I-10 AI3 SEDAN | 1.2 AT PLUS FL | No clasificada | $14.190.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/grandi10ai3sedan) | 2026-10-19 |
-| GRAND I,10 AI3 HB | 1.2 AT PLUS FL | No clasificada | $13.290.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/grandi10ai3hb) | 2026-10-19 |
-| GRAND I,10 AI3 HB | 1.2 MT DESIGN FL | No clasificada | $12.990.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/grandi10ai3hb) | 2026-10-19 |
+| GRAND I-10 AI3 SEDAN | 1.2 AT PLUS FL | No clasificada | $14.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/grandi10ai3sedan) | 2026-10-19 |
+| GRAND I,10 AI3 HB | 1.2 AT PLUS FL | No clasificada | $13.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/grandi10ai3hb) | 2026-10-19 |
+| GRAND I,10 AI3 HB | 1.2 MT DESIGN FL | No clasificada | $12.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/grandi10ai3hb) | 2026-10-19 |
 | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT GO FL | No clasificada | $10.690.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | 2026-10-20 |
 | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT PLUS FL | No clasificada | $11.790.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | 2026-10-20 |
 | Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 MT PLUS FL | No clasificada | $12.490.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | 2026-10-20 |
-| I20 BI3 FL | 1.0T AT DESIGN | No clasificada | $19.690.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
-| I20 BI3 FL | 1.4 AT PLUS | No clasificada | $17.190.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
+| I20 BI3 FL | 1.0T AT DESIGN | No clasificada | $19.690.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
+| I20 BI3 FL | 1.4 AT PLUS | No clasificada | $17.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
 | i20 | I20 BI3 1.4 MT GO FL | No clasificada | $14.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | 2026-10-20 |
 | i20 | I20 BI3 1.4 MT PLUS FL | No clasificada | $16.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | 2026-10-20 |
 | Inster | AX EV DESIGN LR | EV | $24.490.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/) | 2026-10-17 |
@@ -733,27 +733,27 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Kona | SX2 1.6 AT HEV DESIGN | HEV | $30.190.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
 | Kona | SX2 1.6 AT HEV PLUS | HEV | $27.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
 | Kona | SX2 1.6T AT 4WD N-LINE | No clasificada | $35.790.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-kona/precios-y-financiamiento/) | 2026-10-17 |
-| KONA SX2 ICE | 1.6T AT 4WD N-LINE | No clasificada | $35.790.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/konasx2ice) | 2026-10-19 |
+| KONA SX2 ICE | 1.6T AT 4WD N-LINE | No clasificada | $35.790.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/konasx2ice) | 2026-10-19 |
 | Palisade | LX3 2.5T HEV AT AWD 7P CALLIGRAPHY | HEV | $66.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
-| PALISADE LX3 | 2.5T HEV AT AWD 7P CALLIGRAPHY | No clasificada | $66.990.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/palisadelx3) | 2026-10-19 |
+| PALISADE LX3 | 2.5T HEV AT AWD 7P CALLIGRAPHY | No clasificada | $66.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/palisadelx3) | 2026-10-19 |
 | Palisade | LX3 2.5T HEV AT AWD CALLIGRAPHY | HEV | $65.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
 | Palisade | LX3 2.5T HEV AT AWD LIMITED | HEV | $59.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
 | Palisade | Palisade LX2 2.2 CRDI AT AWD Limited FL | No clasificada | $57.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
 | Palisade | Palisade LX2 2.2 CRDI AT AWD Premium FL | No clasificada | $52.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
 | Palisade | Palisade LX2 3.5 AT AWD Premium FL | No clasificada | $48.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
 | Porter | Precio desde (versión no especificada) | No clasificada | $22.955.100 | [auto.cl](https://www.auto.cl/nuevos/hyundai) | 2026-10-20 |
-| SANTA FE MX5 | 1.6T HEV AT 4WD LIMITED | No clasificada | $50.590.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
-| SANTA FE MX5 | 2.5T AT 4WD CALLIGRAPHY | No clasificada | $55.090.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
-| SANTA FE MX5 | 2.5T AT 4WD LIMITED | No clasificada | $50.090.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
+| SANTA FE MX5 | 1.6T HEV AT 4WD LIMITED | No clasificada | $50.590.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
+| SANTA FE MX5 | 2.5T AT 4WD CALLIGRAPHY | No clasificada | $55.090.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
+| SANTA FE MX5 | 2.5T AT 4WD LIMITED | No clasificada | $50.090.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
 | Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD LIMITED | HEV | $50.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
 | Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD PREMIUM | HEV | $46.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
 | Santa Fe | SANTA FE MX5 1.6T HEV AT DESIGN | HEV | $41.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
 | Staria | STARIA US4 MB 2.2 CRDI AT 4WD 7P LUXURY | No clasificada | $48.897.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | 2026-10-20 |
 | Staria | STARIA US4 MB 2.2 CRDI AT 4WD 9P LUXURY | No clasificada | $49.373.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | 2026-10-20 |
-| STARIA US4 MB | 2.2 CRDI AT 9P FL | No clasificada | $38.544.100 | [portillosur.cl](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
-| STARIA US4 MB | 2.2 CRDI MT 11P FL | No clasificada | $37.711.100 | [portillosur.cl](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
-| TUCSON NX4 HEV | 1.6T HEV AT 4WD LIMITED FL | No clasificada | $42.390.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/tucsonnx4hev) | 2026-10-19 |
-| TUCSON NX4c | 1.5T AT 4WD PLUS FL | No clasificada | $30.190.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/tucsonnx4c) | 2026-10-19 |
+| STARIA US4 MB | 2.2 CRDI AT 9P FL | No clasificada | $38.544.100 | [Portillo Sur](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
+| STARIA US4 MB | 2.2 CRDI MT 11P FL | No clasificada | $37.711.100 | [Portillo Sur](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
+| TUCSON NX4 HEV | 1.6T HEV AT 4WD LIMITED FL | No clasificada | $42.390.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/tucsonnx4hev) | 2026-10-19 |
+| TUCSON NX4c | 1.5T AT 4WD PLUS FL | No clasificada | $30.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/tucsonnx4c) | 2026-10-19 |
 | Tucson | TUCSON NX4 1.6T HEV AT 4WD LIMITED FL | HEV | $42.390.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
 | Tucson | TUCSON NX4 1.6T HEV AT DESIGN FL | HEV | $37.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
 | Tucson | TUCSON NX4 1.6T HEV AT PLUS FL | HEV | $31.890.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
@@ -761,8 +761,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Tucson | TUCSON NX4c 2.0 AT BLACKLINE FL | No clasificada | $30.190.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
 | Tucson | TUCSON NX4c 2.0 AT PLUS FL | No clasificada | $25.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
 | Tucson | TUCSON NX4c 2.0 MT GO FL | No clasificada | $24.390.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
-| VENUE QU2I | Venue QU2i 1.0T AT DESIGN | No clasificada | $20.490.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
-| VENUE QU2I | Venue QU2i 1.0T AT PLUS | No clasificada | $18.990.000 | [portillosur.cl](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
+| VENUE QU2I | Venue QU2i 1.0T AT DESIGN | No clasificada | $20.490.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
+| VENUE QU2I | Venue QU2i 1.0T AT PLUS | No clasificada | $18.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
 | Venue | Venue QU2i 1.0T AT DESIGN | No clasificada | $20.490.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
 | Venue | Venue QU2i 1.0T AT PLUS | No clasificada | $18.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
 | Venue | Venue QU2i 1.0T MT GO | No clasificada | $16.490.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
@@ -782,8 +782,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Ignite30X | IGNITE30X CCS2 LUXURY | EV | $19.490.000 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/) | 2026-10-19 |
 | JS2 Pro | JS2 PRO CVT ADVANCE | No clasificada | $14.290.000 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/suv/jac-js2-pro/) | 2026-10-19 |
 | JS2 Pro | JS2 PRO MT LUXURY | No clasificada | $13.290.000 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/suv/jac-js2-pro/) | 2026-10-19 |
-| JS2 | PRO MT LUXURY 6C | No clasificada | $13.290.000 | [portillosur.cl](https://www.portillosur.cl/jac/js2) | 2026-10-19 |
-| JS4 | 1.5T CVT ADVANCE | No clasificada | $17.690.000 | [portillosur.cl](https://www.portillosur.cl/jac/js4) | 2026-10-19 |
+| JS2 | PRO MT LUXURY 6C | No clasificada | $13.290.000 | [Portillo Sur](https://www.portillosur.cl/jac/js2) | 2026-10-19 |
+| JS4 | 1.5T CVT ADVANCE | No clasificada | $17.690.000 | [Portillo Sur](https://www.portillosur.cl/jac/js4) | 2026-10-19 |
 | JS4 | JS4 ADVANCE CVT | No clasificada | $17.690.000 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
 | JS4 | JS4 COMFORT CVT | No clasificada | $15.390.000 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
 | JS4 | JS4 LUXURY CVT | No clasificada | $16.190.000 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
@@ -793,37 +793,37 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | JS8 Pro | JS8 PRO DCT LUXURY | No clasificada | $20.990.000 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/suv/jac-js8-pro/) | 2026-10-19 |
 | Refine Cargo EV | REFINE CARGO EV | EV | $26.168.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/refine-cargo-ev/) | 2026-10-19 |
 | Refine Cargo | REFINE CARGO | No clasificada | $26.168.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/) | 2026-10-19 |
-| REFINE PASAJEROS | 10+1 PASAJEROS | No clasificada | $29.738.100 | [portillosur.cl](https://www.portillosur.cl/jac/refinepasajeros) | 2026-10-19 |
-| REFINE PASAJEROS | 8+1 PASAJEROS | No clasificada | $28.786.100 | [portillosur.cl](https://www.portillosur.cl/jac/refinepasajeros) | 2026-10-19 |
+| REFINE PASAJEROS | 10+1 PASAJEROS | No clasificada | $29.738.100 | [Portillo Sur](https://www.portillosur.cl/jac/refinepasajeros) | 2026-10-19 |
+| REFINE PASAJEROS | 8+1 PASAJEROS | No clasificada | $28.786.100 | [Portillo Sur](https://www.portillosur.cl/jac/refinepasajeros) | 2026-10-19 |
 | Refine Pasajeros | REFINE 10+1 | No clasificada | $29.738.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/refine-pasajeros/) | 2026-10-19 |
 | Refine Pasajeros | REFINE 8+1 | No clasificada | $28.786.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/refine-pasajeros/) | 2026-10-19 |
-| SUNRAY | 2.5 DSL MT 13+1 PASAJEROS E6 | No clasificada | $34.736.100 | [portillosur.cl](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
-| SUNRAY | 2.5 DSL MT 14+1 PASAJEROS E6 | No clasificada | $35.926.100 | [portillosur.cl](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
-| SUNRAY | 2.7T DSL MT 16+1 PASAJEROS | No clasificada | $37.711.100 | [portillosur.cl](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
-| SUNRAY | 2.7T DSL MT 17+1 PASAJEROS | No clasificada | $38.901.100 | [portillosur.cl](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
-| SUNRAY | 2.7T DSL MT 27+1 PASAJEROS ESCOLAR | No clasificada | $36.521.100 | [portillosur.cl](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
+| SUNRAY | 2.5 DSL MT 13+1 PASAJEROS E6 | No clasificada | $34.736.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
+| SUNRAY | 2.5 DSL MT 14+1 PASAJEROS E6 | No clasificada | $35.926.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
+| SUNRAY | 2.7T DSL MT 16+1 PASAJEROS | No clasificada | $37.711.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
+| SUNRAY | 2.7T DSL MT 17+1 PASAJEROS | No clasificada | $38.901.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
+| SUNRAY | 2.7T DSL MT 27+1 PASAJEROS ESCOLAR | No clasificada | $36.521.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
 | Sunray Euro 6 | SUNRAY 13+1 E6 | No clasificada | $34.736.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
 | Sunray Euro 6 | SUNRAY 14+1 E6 | No clasificada | $35.926.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
 | Sunray Euro 6 | SUNRAY 16+1 E6 | No clasificada | $40.091.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
 | Sunray Euro 6 | SUNRAY 17+1 E6 | No clasificada | $41.281.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
 | Sunray Euro 6 | SUNRAY 28PAS | No clasificada | $38.068.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
-| T8 | 2.0T 4X4 DSL MT COMFORT SMART | No clasificada | $21.408.100 | [portillosur.cl](https://www.portillosur.cl/jac/t8) | 2026-10-19 |
-| T8 | 2.5T 4X4 DSL MT COMFORT SMART | No clasificada | $22.598.100 | [portillosur.cl](https://www.portillosur.cl/jac/t8) | 2026-10-19 |
-| T8 PRO | 2.0T 4X4 DSL AT ADVANCE | No clasificada | $26.644.100 | [portillosur.cl](https://www.portillosur.cl/jac/t8pro) | 2026-10-19 |
+| T8 | 2.0T 4X4 DSL MT COMFORT SMART | No clasificada | $21.408.100 | [Portillo Sur](https://www.portillosur.cl/jac/t8) | 2026-10-19 |
+| T8 | 2.5T 4X4 DSL MT COMFORT SMART | No clasificada | $22.598.100 | [Portillo Sur](https://www.portillosur.cl/jac/t8) | 2026-10-19 |
+| T8 PRO | 2.0T 4X4 DSL AT ADVANCE | No clasificada | $26.644.100 | [Portillo Sur](https://www.portillosur.cl/jac/t8pro) | 2026-10-19 |
 | T8 Pro | T8P 4X4 LUXURY 2.5 | No clasificada | $24.621.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/jac-t8-pro-2-5/) | 2026-10-19 |
 | T8 | T8 4X2 COMFORT | No clasificada | $20.218.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
 | T8 | T8 4X2 COMFORT SMART | No clasificada | $20.218.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
 | T8 | T8 4X4 COMFORT SMART | No clasificada | $21.408.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
-| T9 | 4X4 KIT OFF ROAD | No clasificada | $31.880.100 | [portillosur.cl](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
-| T9 | 4X4 TEAM CHILE | No clasificada | $31.166.100 | [portillosur.cl](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
-| T9 | EV AWD AT ADVANCE | No clasificada | $54.728.100 | [portillosur.cl](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
+| T9 | 4X4 KIT OFF ROAD | No clasificada | $31.880.100 | [Portillo Sur](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
+| T9 | 4X4 TEAM CHILE | No clasificada | $31.166.100 | [Portillo Sur](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
+| T9 | EV AWD AT ADVANCE | No clasificada | $54.728.100 | [Portillo Sur](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
 | T9 EV | JAC EV AWD AT ADVANCE | EV | $54.728.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/electricos/jac-t9-ev/) | 2026-10-19 |
 | T9 | T9 4x4 AT Advance | No clasificada | $28.786.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
 | T9 | T9 4X4 KIT OFF ROAD | No clasificada | $31.880.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
 | T9 | T9 4x4 MT Luxury | No clasificada | $27.001.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
 | T9 | T9 4x4 TEAM CHILE | No clasificada | $31.166.100 | [jacautoschile.cl](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
-| X200 | 2.0T DSL MT C S JAULA GAS | No clasificada | $24.390.076 | [portillosur.cl](https://www.portillosur.cl/jac/x200) | 2026-10-19 |
-| X200 | 2.0T DSL MT D C | No clasificada | $24.621.100 | [portillosur.cl](https://www.portillosur.cl/jac/x200) | 2026-10-19 |
+| X200 | 2.0T DSL MT C S JAULA GAS | No clasificada | $24.390.076 | [Portillo Sur](https://www.portillosur.cl/jac/x200) | 2026-10-19 |
+| X200 | 2.0T DSL MT D C | No clasificada | $24.621.100 | [Portillo Sur](https://www.portillosur.cl/jac/x200) | 2026-10-19 |
 | X200 | X200 2.0T DSL MT CABINA DOBLE LUXURY | No clasificada | $24.621.100 | [Callegari](https://callegari.cl/nuevos/x200/) | 2026-10-19 |
 | X200 | X200 2.0T DSL MT CABINA SIMPLE JAULA GAS | No clasificada | $24.390.076 | [Callegari](https://callegari.cl/nuevos/x200/) | 2026-10-19 |
 | X200 | X200 2.0T DSL MT CABINA SIMPLE LUXURY | No clasificada | $22.717.100 | [Callegari](https://callegari.cl/nuevos/x200/) | 2026-10-19 |
@@ -912,10 +912,10 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| RE-MAX | 4X2 AT DLX | No clasificada | $22.836.100 | [portillosur.cl](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
-| RE-MAX | 4X4 AT DLX | No clasificada | $24.026.100 | [portillosur.cl](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
-| RE-MAX | 4X4 MT DLX | No clasificada | $22.598.100 | [portillosur.cl](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
-| RE-MAX | 4X4 MT STD | No clasificada | $20.694.100 | [portillosur.cl](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
+| RE-MAX | 4X2 AT DLX | No clasificada | $22.836.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
+| RE-MAX | 4X4 AT DLX | No clasificada | $24.026.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
+| RE-MAX | 4X4 MT DLX | No clasificada | $22.598.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
+| RE-MAX | 4X4 MT STD | No clasificada | $20.694.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
 
 ### JMC — 23 registros
 
@@ -928,8 +928,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | All New Vigus Work | Vigus Work 4x4 MT | No clasificada | $21.408.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 | EV3 | EV3 | No clasificada | $14.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/jmc/ev3) | 2026-10-19 |
 | EV3 | EV3 eléctrico automático | EV | $14.990.000 | [jmcchile.cl](https://jmcchile.cl/modelos/ev3/) | 2026-10-19 |
-| GRAND AVENUE | 4X2 AT | No clasificada | $22.990.000 | [portillosur.cl](https://www.portillosur.cl/jmc/grandavenue) | 2026-10-19 |
-| GRAND AVENUE | 4X4 AT | No clasificada | $24.990.000 | [portillosur.cl](https://www.portillosur.cl/jmc/grandavenue) | 2026-10-19 |
+| GRAND AVENUE | 4X2 AT | No clasificada | $22.990.000 | [Portillo Sur](https://www.portillosur.cl/jmc/grandavenue) | 2026-10-19 |
+| GRAND AVENUE | 4X4 AT | No clasificada | $24.990.000 | [Portillo Sur](https://www.portillosur.cl/jmc/grandavenue) | 2026-10-19 |
 | Grand Avenue EV | Grand Avenue EV | EV | $52.348.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 | Grand Avenue | Grand Avenue 4×2 AT | No clasificada | $27.358.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/jmc/grand-avenue) | 2026-10-19 |
 | Grand Avenue | Grand Avenue 4×4 AT | No clasificada | $29.738.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/jmc/grand-avenue) | 2026-10-19 |
@@ -941,7 +941,7 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Grand Avenue Pro | Grand Avenue Pro | No clasificada | $40.448.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 | Touring Cargo | Touring Cargo L1H2 | No clasificada | $27.953.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 | Touring Cargo | Touring Cargo L2H2 | No clasificada | $30.333.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
-| TOURING | PASAJEROS | No clasificada | $30.990.000 | [portillosur.cl](https://www.portillosur.cl/jmc/touring) | 2026-10-19 |
+| TOURING | PASAJEROS | No clasificada | $30.990.000 | [Portillo Sur](https://www.portillosur.cl/jmc/touring) | 2026-10-19 |
 | Touring | Touring Minibús | No clasificada | $36.878.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 | Vigus EV | Vigus EV 4x2 | EV | $30.928.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 
@@ -977,24 +977,24 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Actyon | ACTYON GLX Euro 6D – KAY112 | No clasificada | $30.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/actyon) | 2026-10-19 |
 | Actyon | ACTYON LIMITED Euro 6D – KAY223 | No clasificada | $32.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/actyon) | 2026-10-19 |
 | Actyon | DLX | No clasificada | $34.990.000 | [Astara Retail](https://astararetail.cl/kgm-actyon/) | 2026-10-18 |
-| ACTYON | GLX | No clasificada | $30.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/actyon) | 2026-10-19 |
+| ACTYON | GLX | No clasificada | $30.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/actyon) | 2026-10-19 |
 | Actyon | GLX 1.5T 2WD 6AT | No clasificada | $30.990.000 | [Astara Retail](https://astararetail.cl/kgm-actyon/) | 2026-10-18 |
 | Actyon | HEV DLX | HEV | $36.990.000 | [Astara Retail](https://astararetail.cl/kgm-actyon/) | 2026-10-18 |
 | Actyon | Limited | No clasificada | $32.990.000 | [Astara Retail](https://astararetail.cl/kgm-actyon/) | 2026-10-18 |
 | All New Actyon | Actyon DLX | No clasificada | $34.990.000 | [Callegari](https://callegari.cl/nuevos/all-new-actyon/) | 2026-10-19 |
 | All New Actyon | Actyon GLX | No clasificada | $30.990.000 | [Callegari](https://callegari.cl/nuevos/all-new-actyon/) | 2026-10-19 |
 | All New Actyon | Actyon Limited | No clasificada | $32.990.000 | [Callegari](https://callegari.cl/nuevos/all-new-actyon/) | 2026-10-19 |
-| MUSSO | GLX 2.2 TD 6MT 4WD (Euro 6B) | No clasificada | $36.283.100 | [portillosur.cl](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
-| MUSSO GRAND | GLX 2.2TD 6AT 2WD (Euro 6B) | No clasificada | $34.855.100 | [portillosur.cl](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
-| MUSSO GRAND | GLX 2.2TD 6AT 2WD (Euro 6D) | No clasificada | $35.688.100 | [portillosur.cl](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
-| MUSSO GRAND | GLX 2.2TD 6MT 2WD (Euro 6B) | No clasificada | $33.308.100 | [portillosur.cl](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
-| MUSSO GRAND | LIMITED 2.2TD 6AT 4WD (Euro 6D) | No clasificada | $38.663.100 | [portillosur.cl](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
-| MUSSO GRAND | LIMITED PLUS 2.2TD 6AT 4WD (Euro 6D) | No clasificada | $42.828.100 | [portillosur.cl](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
-| MUSSO GRAND | LX 2.2TD 6MT 2WD (Euro 6B) | No clasificada | $29.738.100 | [portillosur.cl](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
-| MUSSO | LIMITED 2.2 TD 6AT 4WD (Euro 6B) | No clasificada | $38.663.100 | [portillosur.cl](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
-| MUSSO | LIMITED 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $39.853.100 | [portillosur.cl](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
-| MUSSO | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6B) | No clasificada | $42.233.100 | [portillosur.cl](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
-| MUSSO | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $43.423.100 | [portillosur.cl](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
+| MUSSO | GLX 2.2 TD 6MT 4WD (Euro 6B) | No clasificada | $36.283.100 | [Portillo Sur](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
+| MUSSO GRAND | GLX 2.2TD 6AT 2WD (Euro 6B) | No clasificada | $34.855.100 | [Portillo Sur](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
+| MUSSO GRAND | GLX 2.2TD 6AT 2WD (Euro 6D) | No clasificada | $35.688.100 | [Portillo Sur](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
+| MUSSO GRAND | GLX 2.2TD 6MT 2WD (Euro 6B) | No clasificada | $33.308.100 | [Portillo Sur](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
+| MUSSO GRAND | LIMITED 2.2TD 6AT 4WD (Euro 6D) | No clasificada | $38.663.100 | [Portillo Sur](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
+| MUSSO GRAND | LIMITED PLUS 2.2TD 6AT 4WD (Euro 6D) | No clasificada | $42.828.100 | [Portillo Sur](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
+| MUSSO GRAND | LX 2.2TD 6MT 2WD (Euro 6B) | No clasificada | $29.738.100 | [Portillo Sur](https://www.portillosur.cl/kgm/mussogrand) | 2026-10-19 |
+| MUSSO | LIMITED 2.2 TD 6AT 4WD (Euro 6B) | No clasificada | $38.663.100 | [Portillo Sur](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
+| MUSSO | LIMITED 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $39.853.100 | [Portillo Sur](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
+| MUSSO | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6B) | No clasificada | $42.233.100 | [Portillo Sur](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
+| MUSSO | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $43.423.100 | [Portillo Sur](https://www.portillosur.cl/kgm/musso) | 2026-10-19 |
 | Musso | MUSSO GLX 2.2 TD 6MT 4WD Euro 6B – QS712 | No clasificada | $36.283.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/musso) | 2026-10-19 |
 | Musso | MUSSO GRAND LIMITED PLUS 2.2TD 6AT 4WD Euro 6D – KQL723 | No clasificada | $42.828.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/musso) | 2026-10-19 |
 | Musso | MUSSO GRAND LX 2.2TD 6MT 2WD Euro 6B – QL610 | No clasificada | $29.738.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/musso) | 2026-10-19 |
@@ -1002,21 +1002,21 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Musso | MUSSO LIMITED 2.2 TD 6AT 4WD Euro 6D – KQS722 | No clasificada | $39.853.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/musso) | 2026-10-19 |
 | Musso | MUSSO LIMITED PLUS 2.2 TD 6AT 4WD Euro 6B – QS723 | No clasificada | $42.233.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/musso) | 2026-10-19 |
 | Musso | MUSSO LIMITED PLUS 2.2 TD 6AT 4WD Euro 6D – KQS723 | No clasificada | $43.423.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/musso) | 2026-10-19 |
-| NEW MUSSO GRAND | GLX 2.2TD 6AT 2WD (Euro 6D) \[KML622\] | No clasificada | $35.688.100 | [portillosur.cl](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
-| NEW MUSSO GRAND | GLX 2.2TD 6MT 2WD (Euro 6D) \[KML612\] | No clasificada | $33.308.100 | [portillosur.cl](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
-| NEW MUSSO GRAND | GLX 2.2TD 6MT 4WD (Euro 6D) | No clasificada | $35.688.100 | [portillosur.cl](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
-| NEW MUSSO GRAND | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $45.208.100 | [portillosur.cl](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
-| NEW MUSSO | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $45.208.100 | [portillosur.cl](https://www.portillosur.cl/kgm/newmusso) | 2026-10-19 |
+| NEW MUSSO GRAND | GLX 2.2TD 6AT 2WD (Euro 6D) \[KML622\] | No clasificada | $35.688.100 | [Portillo Sur](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
+| NEW MUSSO GRAND | GLX 2.2TD 6MT 2WD (Euro 6D) \[KML612\] | No clasificada | $33.308.100 | [Portillo Sur](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
+| NEW MUSSO GRAND | GLX 2.2TD 6MT 4WD (Euro 6D) | No clasificada | $35.688.100 | [Portillo Sur](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
+| NEW MUSSO GRAND | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $45.208.100 | [Portillo Sur](https://www.portillosur.cl/kgm/newmussogrand) | 2026-10-19 |
+| NEW MUSSO | LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D) | No clasificada | $45.208.100 | [Portillo Sur](https://www.portillosur.cl/kgm/newmusso) | 2026-10-19 |
 | New Musso | NEW MUSSO GRAND GLX 2.2TD 6AT 2WD Euro 6D – KML622 | No clasificada | $35.688.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/new-musso) | 2026-10-19 |
 | New Musso | NEW MUSSO GRAND GLX 2.2TD 6MT 4WD Euro 6D – KML712 | No clasificada | $35.688.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/new-musso) | 2026-10-19 |
-| REXTON | BLACK EDITION (Euro 6B) | No clasificada | $49.190.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
-| REXTON | GLX 2.2TD 8AT 2WD 6AB (Euro 6B) | No clasificada | $36.190.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
-| REXTON | GLX 2.2TD 8AT 2WD 6AB (Euro 6D) | No clasificada | $36.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
-| REXTON | GLX 2.2TD 8AT 4WD 6AB (Euro 6B) | No clasificada | $38.190.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
-| REXTON | GLX 2.2TD 8AT 4WD 6AB (Euro 6D) | No clasificada | $37.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
-| REXTON | LIMITED PLUS 2.2 TD 8AT (Euro 6D) | No clasificada | $45.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
-| REXTON | LIMITED PLUS 2.2TD 8AT 4WD 9AB (Euro 6B) | No clasificada | $48.190.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
-| REXTON | LX 2.2TD 8AT 2WD 2AB (Euro 6D) | No clasificada | $32.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | BLACK EDITION (Euro 6B) | No clasificada | $49.190.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | GLX 2.2TD 8AT 2WD 6AB (Euro 6B) | No clasificada | $36.190.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | GLX 2.2TD 8AT 2WD 6AB (Euro 6D) | No clasificada | $36.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | GLX 2.2TD 8AT 4WD 6AB (Euro 6B) | No clasificada | $38.190.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | GLX 2.2TD 8AT 4WD 6AB (Euro 6D) | No clasificada | $37.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | LIMITED PLUS 2.2 TD 8AT (Euro 6D) | No clasificada | $45.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | LIMITED PLUS 2.2TD 8AT 4WD 9AB (Euro 6B) | No clasificada | $48.190.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
+| REXTON | LX 2.2TD 8AT 2WD 2AB (Euro 6D) | No clasificada | $32.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/rexton) | 2026-10-19 |
 | rexton | REXTON BLACK EDITION EURO 6B | No clasificada | $49.190.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/kgm/rexton) | 2026-10-19 |
 | rexton | REXTON GLX 2.2TD 8AT 2WD 6AB EURO 6B | No clasificada | $36.190.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/kgm/rexton) | 2026-10-19 |
 | Rexton | REXTON GLX 2.2TD 8AT 2WD 6AB Euro 6B – YRX201 | No clasificada | $36.190.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/rexton) | 2026-10-19 |
@@ -1026,12 +1026,12 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | rexton | REXTON LIMITED PLUS 2.2TD 8AT 4WD 9AB EURO 6B | No clasificada | $48.190.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/kgm/rexton) | 2026-10-19 |
 | Rexton | REXTON LIMITED PLUS 2.2TD 8AT 4WD 9AB Euro 6B – YRX223 | No clasificada | $48.190.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/rexton) | 2026-10-19 |
 | rexton | REXTON LX 2.2TD 8AT 2WD 2AB EURO 6D | No clasificada | $32.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/kgm/rexton) | 2026-10-19 |
-| TORRES | DLX | No clasificada | $29.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
+| TORRES | DLX | No clasificada | $29.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
 | torres evx | TORRES EVX LIMITED | No clasificada | $43.490.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/kgm/torres-evx) | 2026-10-19 |
-| TORRES | GLX 1.5T 2WD 6AT | No clasificada | $26.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
-| TORRES | GLX 1.5T 2WD 6MT | No clasificada | $23.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
+| TORRES | GLX 1.5T 2WD 6AT | No clasificada | $26.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
+| TORRES | GLX 1.5T 2WD 6MT | No clasificada | $23.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
 | Torres HEV | DLX | HEV | $32.990.000 | [Astara Retail](https://astararetail.cl/kgm-torres-hev/) | 2026-10-18 |
-| TORRES | HEV DLX | HEV | $32.990.000 | [portillosur.cl](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
+| TORRES | HEV DLX | HEV | $32.990.000 | [Portillo Sur](https://www.portillosur.cl/kgm/torres) | 2026-10-19 |
 | torres | TORRES DLX | No clasificada | $29.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/kgm/torres) | 2026-10-19 |
 | torres | TORRES GLX 1.5T 2WD 6AT | No clasificada | $26.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/kgm/torres) | 2026-10-19 |
 | Torres | TORRES GLX 1.5T 2WD 6AT Euro 6D – KTR111 | No clasificada | $26.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/kgm/torres) | 2026-10-19 |
@@ -1202,8 +1202,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| XUV 3XO | AT DELUXE | No clasificada | $17.990.000 | [portillosur.cl](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
-| XUV 3XO | MT LUXURY | No clasificada | $14.990.000 | [portillosur.cl](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
+| XUV 3XO | AT DELUXE | No clasificada | $17.990.000 | [Portillo Sur](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
+| XUV 3XO | MT LUXURY | No clasificada | $14.990.000 | [Portillo Sur](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
 | XUV 3XO | XUV3X0 AT ELITE | No clasificada | $14.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/) | 2026-10-19 |
 | XUV 3XO | XUV3X0 MT COMFORT | No clasificada | $12.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/xuv3x0-mt-comfort/) | 2026-10-19 |
 
@@ -1301,11 +1301,11 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 5 Sedan | Precio desde (versión no especificada) | No clasificada | $12.990.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
-| ALL NEW MG ZS EV | NEW MG ZS EV DLX 72KWh | EV | $33.990.000 | [portillosur.cl](https://www.portillosur.cl/mg/allnewmgzsev) | 2026-10-19 |
+| ALL NEW MG ZS EV | NEW MG ZS EV DLX 72KWh | EV | $33.990.000 | [Portillo Sur](https://www.portillosur.cl/mg/allnewmgzsev) | 2026-10-19 |
 | Cyberster | CYBERSTER 77 KHw | EV | $59.990.000 | [mgmotors-prod-s3.s3.us-east-2.amazonaws.com](https://mgmotors-prod-s3.s3.us-east-2.amazonaws.com/CL/menu/2026/03/cl_20260305_124230_menu_lista-de-precios_menu.pdf) | 2026-10-19 |
 | Cyberster | CYBERSTER 77 KHw AWD | EV | $67.990.000 | [mgmotors-prod-s3.s3.us-east-2.amazonaws.com](https://mgmotors-prod-s3.s3.us-east-2.amazonaws.com/CL/menu/2026/03/cl_20260305_124230_menu_lista-de-precios_menu.pdf) | 2026-10-19 |
-| CYBERSTER | CYBERSTER 77 KWh | EV | $59.990.000 | [portillosur.cl](https://www.portillosur.cl/mg/cyberster) | 2026-10-19 |
-| CYBERSTER | CYBERSTER 77 KWh AWD | EV | $67.990.000 | [portillosur.cl](https://www.portillosur.cl/mg/cyberster) | 2026-10-19 |
+| CYBERSTER | CYBERSTER 77 KWh | EV | $59.990.000 | [Portillo Sur](https://www.portillosur.cl/mg/cyberster) | 2026-10-19 |
+| CYBERSTER | CYBERSTER 77 KWh AWD | EV | $67.990.000 | [Portillo Sur](https://www.portillosur.cl/mg/cyberster) | 2026-10-19 |
 | GT | Precio desde (versión no especificada) | No clasificada | $14.790.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
 | HS Hybrid | MG HS HEV Luxury | HEV | $24.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-HS-HEV) | 2026-10-19 |
 | HS | Precio desde (versión no especificada) | No clasificada | $17.990.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
@@ -1340,34 +1340,34 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| Aceman | JCW E 4x2 | EV | $46.900.000 | [portillosur.cl](https://www.portillosur.cl/mini/aceman) | 2026-10-19 |
-| Aceman | SE Favoured 4x2 | EV | $41.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/aceman) | 2026-10-19 |
-| COOPER | 5P Classic Premium Package 4x2 | No clasificada | $38.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | C 3P Classic Premium Package 4x2 | No clasificada | $37.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | C 3P Essential 4x2 | No clasificada | $32.900.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | C 3P Favoured 4x2 | No clasificada | $36.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | E Classic 4x2 | EV | $35.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| Aceman | JCW E 4x2 | EV | $46.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/aceman) | 2026-10-19 |
+| Aceman | SE Favoured 4x2 | EV | $41.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/aceman) | 2026-10-19 |
+| COOPER | 5P Classic Premium Package 4x2 | No clasificada | $38.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | C 3P Classic Premium Package 4x2 | No clasificada | $37.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | C 3P Essential 4x2 | No clasificada | $32.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | C 3P Favoured 4x2 | No clasificada | $36.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | E Classic 4x2 | EV | $35.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
 | Cooper Eléctrico | COOPER E CLASSIC | EV | $35.990.000 | [mini.cl](https://www.mini.cl/modelos/mini-cooper-electrico) | 2026-10-19 |
 | Cooper Eléctrico | COOPER SE FAVOURED | EV | $40.990.000 | [mini.cl](https://www.mini.cl/modelos/mini-cooper-electrico) | 2026-10-19 |
-| COOPER | JCW 4x2 | No clasificada | $48.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | JCW Cabrio 4x2 | No clasificada | $51.900.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | JCW Cabrio Spitfire 4x2 | No clasificada | $48.900.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | JCW E 4x2 | EV | $48.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | JCW E HEA 4x2 | EV | $46.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | JCW Spitfire 4x2 | No clasificada | $44.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | S 3P Favoured 4x2 | No clasificada | $39.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | S 3P Favoured Premium Package 4x2 | No clasificada | $42.900.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | S 5P Favoured Premium Package 4x2 | No clasificada | $42.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | S Cabrio Favoured 4x2 | No clasificada | $45.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | S Cabrio Favoured Premium Package 4x2 | No clasificada | $46.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COOPER | SE Favoured 4x2 | EV | $40.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
-| COUNTRYMAN | C 1.5 FAVOURED | No clasificada | $38.900.000 | [portillosur.cl](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
-| COUNTRYMAN | C Classic 4x2 | No clasificada | $38.900.000 | [portillosur.cl](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
-| COUNTRYMAN | D C. Premium Package 4x2 | No clasificada | $44.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
-| COUNTRYMAN | JCW ALL4 4x4 | No clasificada | $54.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
-| COUNTRYMAN JCW ALL4 | JCW | No clasificada | $54.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/countrymanjcwall4) | 2026-10-19 |
-| COUNTRYMAN | S All4 C. Premium Package 4x4 | No clasificada | $49.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
-| Countryman | SE ALL4 C. Premium Package 4x4 | EV | $58.990.000 | [portillosur.cl](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
+| COOPER | JCW 4x2 | No clasificada | $48.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | JCW Cabrio 4x2 | No clasificada | $51.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | JCW Cabrio Spitfire 4x2 | No clasificada | $48.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | JCW E 4x2 | EV | $48.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | JCW E HEA 4x2 | EV | $46.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | JCW Spitfire 4x2 | No clasificada | $44.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | S 3P Favoured 4x2 | No clasificada | $39.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | S 3P Favoured Premium Package 4x2 | No clasificada | $42.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | S 5P Favoured Premium Package 4x2 | No clasificada | $42.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | S Cabrio Favoured 4x2 | No clasificada | $45.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | S Cabrio Favoured Premium Package 4x2 | No clasificada | $46.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COOPER | SE Favoured 4x2 | EV | $40.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/cooper) | 2026-10-19 |
+| COUNTRYMAN | C 1.5 FAVOURED | No clasificada | $38.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
+| COUNTRYMAN | C Classic 4x2 | No clasificada | $38.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
+| COUNTRYMAN | D C. Premium Package 4x2 | No clasificada | $44.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
+| COUNTRYMAN | JCW ALL4 4x4 | No clasificada | $54.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
+| COUNTRYMAN JCW ALL4 | JCW | No clasificada | $54.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/countrymanjcwall4) | 2026-10-19 |
+| COUNTRYMAN | S All4 C. Premium Package 4x4 | No clasificada | $49.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
+| Countryman | SE ALL4 C. Premium Package 4x4 | EV | $58.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/countryman) | 2026-10-19 |
 | JCW Eléctrico | Cooper JCWE | EV | $48.990.000 | [mini.cl](https://www.mini.cl/mini-jcw-electrico) | 2026-10-19 |
 | JCW Eléctrico | Cooper JCWE HEA | EV | $46.990.000 | [mini.cl](https://www.mini.cl/mini-jcw-electrico) | 2026-10-19 |
 
@@ -1381,24 +1381,24 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | destinator | Destinator GLS EURO 6C | No clasificada | $31.490.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/destinator) | 2026-10-19 |
 | Destinator | DESTINATOR GLX (NUEVO) | No clasificada | $25.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/mitsubishi/destinator) | 2026-10-19 |
 | destinator | Destinator GLX EURO 6C | No clasificada | $25.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/destinator) | 2026-10-19 |
-| DESTINATOR | GL | No clasificada | $23.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/destinator) | 2026-10-19 |
-| DESTINATOR | GLS | No clasificada | $31.490.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/destinator) | 2026-10-19 |
-| DESTINATOR | GLX | No clasificada | $25.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/destinator) | 2026-10-19 |
-| ECLIPSE CROSS | RS 1.5 4X2 AT | No clasificada | $26.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/eclipsecross) | 2026-10-19 |
+| DESTINATOR | GL | No clasificada | $23.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/destinator) | 2026-10-19 |
+| DESTINATOR | GLS | No clasificada | $31.490.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/destinator) | 2026-10-19 |
+| DESTINATOR | GLX | No clasificada | $25.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/destinator) | 2026-10-19 |
+| ECLIPSE CROSS | RS 1.5 4X2 AT | No clasificada | $26.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/eclipsecross) | 2026-10-19 |
 | Eclipse Cross | RS 1.5 4x2 AT Euro 6C | No clasificada | $26.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/eclipse-cross/) | 2026-10-18 |
-| ECLIPSE CROSS | RT 1.5 4X2 AT | No clasificada | $24.490.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/eclipsecross) | 2026-10-19 |
+| ECLIPSE CROSS | RT 1.5 4X2 AT | No clasificada | $24.490.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/eclipsecross) | 2026-10-19 |
 | Eclipse Cross | RT 1.5 4x2 AT Euro 6C | No clasificada | $24.490.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/eclipse-cross/) | 2026-10-18 |
-| ECLIPSE CROSS | RX 1.5 4X2 AT | No clasificada | $22.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/eclipsecross) | 2026-10-19 |
+| ECLIPSE CROSS | RX 1.5 4X2 AT | No clasificada | $22.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/eclipsecross) | 2026-10-19 |
 | Eclipse Cross | RX 1.5 4x2 AT Euro 6C | No clasificada | $22.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/eclipse-cross/) | 2026-10-18 |
-| L200 | DAKAR XR AT | No clasificada | $48.778.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | DAKAR XR AT GLS PLUS | No clasificada | $50.563.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | DAKAR XR MT | No clasificada | $45.803.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | DAKAR XR MT RALLY PACK | No clasificada | $45.803.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | DAKAR XRL AT | No clasificada | $46.398.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | KATANA XM | No clasificada | $34.498.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | KATANA XR | No clasificada | $36.878.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | KATANA XRM | No clasificada | $40.448.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
-| L200 | KATANA XRT | No clasificada | $41.638.100 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | DAKAR XR AT | No clasificada | $48.778.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | DAKAR XR AT GLS PLUS | No clasificada | $50.563.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | DAKAR XR MT | No clasificada | $45.803.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | DAKAR XR MT RALLY PACK | No clasificada | $45.803.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | DAKAR XRL AT | No clasificada | $46.398.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | KATANA XM | No clasificada | $34.498.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | KATANA XR | No clasificada | $36.878.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | KATANA XRM | No clasificada | $40.448.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
+| L200 | KATANA XRT | No clasificada | $41.638.100 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/l200) | 2026-10-19 |
 | New L200 4×4 | L200 DAKAR XR AT GLS PLUS | No clasificada | $50.563.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/mitsubishi/new-l200-4x4) | 2026-10-19 |
 | new l200 4x2 | L200 KATANA XM EURO 6c | No clasificada | $29.738.100 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/new-l200-4x2) | 2026-10-19 |
 | new l200 4x2 | L200 KATANA XR | No clasificada | $33.308.100 | [rosselot.cl](https://www.rosselot.cl/nuevos/mitsubishi/new-l200-4x2) | 2026-10-19 |
@@ -1411,14 +1411,14 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | nuevo eclipse cross | Eclipse Cross RS 1.5 4X2 AT EURO 6c | No clasificada | $26.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/nuevo-eclipse-cross) | 2026-10-19 |
 | nuevo eclipse cross | Eclipse Cross RT 1.5 4X2 AT EURO 6c | No clasificada | $24.490.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/nuevo-eclipse-cross) | 2026-10-19 |
 | nuevo eclipse cross | Eclipse Cross RX 1.5 4X2 AT EURO 6c | No clasificada | $22.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/nuevo-eclipse-cross) | 2026-10-19 |
-| OUTLANDER | 4X2 AT GL | No clasificada | $28.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
+| OUTLANDER | 4X2 AT GL | No clasificada | $28.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
 | Outlander | 4x2 AT GL Euro 6C | No clasificada | $28.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander/) | 2026-10-18 |
-| OUTLANDER | 4X2 AT GLX | No clasificada | $31.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
+| OUTLANDER | 4X2 AT GLX | No clasificada | $31.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
 | Outlander | 4x2 AT GLX Euro 6C | No clasificada | $31.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander/) | 2026-10-18 |
-| OUTLANDER | 4X4 AT GLS | No clasificada | $35.490.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
-| OUTLANDER | 4X4 AT GLS (MY27 | No clasificada | $35.490.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
+| OUTLANDER | 4X4 AT GLS | No clasificada | $35.490.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
+| OUTLANDER | 4X4 AT GLS (MY27 | No clasificada | $35.490.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
 | Outlander | 4x4 AT GLS Euro 6C | No clasificada | $35.490.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander/) | 2026-10-18 |
-| OUTLANDER | 4X4 AT GLS LIMITED | No clasificada | $39.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
+| OUTLANDER | 4X4 AT GLS LIMITED | No clasificada | $39.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlander) | 2026-10-19 |
 | Outlander | 4x4 AT GLS Limited Euro 6C | No clasificada | $39.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander/) | 2026-10-18 |
 | Outlander | 4x4 AT GLS MY27 Euro 6C | No clasificada | $35.490.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander/) | 2026-10-18 |
 | Outlander | OUTLANDER 4X2 AT GL | No clasificada | $28.990.000 | [rosselot.cl](https://www.rosselot.cl/nuevos/mitsubishi/outlander) | 2026-10-19 |
@@ -1427,15 +1427,15 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | outlander | OUTLANDER 4X2 AT GLX EURO 6c | No clasificada | $31.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/outlander) | 2026-10-19 |
 | outlander | OUTLANDER 4X4 AT GLS EURO 6c | No clasificada | $35.490.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/outlander) | 2026-10-19 |
 | outlander | OUTLANDER 4X4 AT GLS LIMITED EURO 6c | No clasificada | $39.990.000 | [rosselot.cl](https://www.rosselot.cl/public/nuevos/mitsubishi/outlander) | 2026-10-19 |
-| OUTLANDER PHEV | 4X4 AT GLS | PHEV | $42.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlanderphev) | 2026-10-19 |
+| OUTLANDER PHEV | 4X4 AT GLS | PHEV | $42.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlanderphev) | 2026-10-19 |
 | Outlander PHEV | 4x4 AT GLS Euro 6C | PHEV | $42.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander-phev/) | 2026-10-18 |
-| OUTLANDER SPORT | GL | No clasificada | $21.490.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
+| OUTLANDER SPORT | GL | No clasificada | $21.490.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
 | Outlander Sport | GL Euro 6C | No clasificada | $21.490.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander-sport/) | 2026-10-18 |
-| OUTLANDER SPORT | GLS | No clasificada | $24.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
-| OUTLANDER SPORT | GLS (NUEVO) (MY27) | No clasificada | $24.990.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
+| OUTLANDER SPORT | GLS | No clasificada | $24.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
+| OUTLANDER SPORT | GLS (NUEVO) (MY27) | No clasificada | $24.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
 | Outlander Sport | GLS Euro 6C | No clasificada | $24.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander-sport/) | 2026-10-18 |
 | Outlander Sport | GLS MY27 Euro 6C | No clasificada | $24.990.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander-sport/) | 2026-10-18 |
-| OUTLANDER SPORT | GLX | No clasificada | $23.490.000 | [portillosur.cl](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
+| OUTLANDER SPORT | GLX | No clasificada | $23.490.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
 | Outlander Sport | GLX Euro 6C | No clasificada | $23.490.000 | [mitsubishi-motors.cl](https://mitsubishi-motors.cl/modelos/outlander-sport/) | 2026-10-18 |
 
 ### Nammi — 4 registros
@@ -1452,22 +1452,22 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Kait | Advance | No clasificada | $22.490.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
-| KAIT | ADVANCE CVT 1.6 | No clasificada | $22.490.000 | [portillosur.cl](https://www.portillosur.cl/nissan/kait) | 2026-10-19 |
+| KAIT | ADVANCE CVT 1.6 | No clasificada | $22.490.000 | [Portillo Sur](https://www.portillosur.cl/nissan/kait) | 2026-10-19 |
 | Kait | Exclusive | No clasificada | $23.990.000 | [Astara Retail](https://astararetail.cl/nissan-kait) | 2026-10-19 |
 | Kait | Sense CVT | No clasificada | $20.990.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
-| KAIT | SENSE CVT 1.6 | No clasificada | $20.990.000 | [portillosur.cl](https://www.portillosur.cl/nissan/kait) | 2026-10-19 |
+| KAIT | SENSE CVT 1.6 | No clasificada | $20.990.000 | [Portillo Sur](https://www.portillosur.cl/nissan/kait) | 2026-10-19 |
 | Kicks | New Kicks Sense CVT | No clasificada | $24.790.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
 | NEW Navara Cabina Doble | Precio desde (versión no especificada) | No clasificada | $28.768.023 | [auto.cl](https://www.auto.cl/nuevos/nissan) | 2026-10-20 |
-| NEW PATHFINDER | ADVANCE 3.5 AT 4WD | No clasificada | $50.668.593 | [portillosur.cl](https://www.portillosur.cl/nissan/newpathfinder) | 2026-10-19 |
-| NEW QASHQAI | Exclusive CVT 4WD | No clasificada | $35.710.000 | [portillosur.cl](https://www.portillosur.cl/nissan/newqashqai) | 2026-10-19 |
-| New Versa | Sense MT | No clasificada | $16.990.000 | [portillosur.cl](https://www.portillosur.cl/nissan/newversa) | 2026-10-19 |
-| NEW X-TRAIL | Advance CVT 3Row | No clasificada | $36.698.577 | [portillosur.cl](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
-| NEW X-TRAIL | Exclusive CVT 3Row AWD | No clasificada | $38.994.143 | [portillosur.cl](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
-| NEW X-TRAIL | Sense CVT 2Row | No clasificada | $32.395.585 | [portillosur.cl](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
-| NEW X-TRAIL | Sense CVT 3Row | No clasificada | $34.401.901 | [portillosur.cl](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
-| NEW X-TRAIL | Sense CVT 3Row (Amazon Music) | No clasificada | $34.521.901 | [portillosur.cl](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
+| NEW PATHFINDER | ADVANCE 3.5 AT 4WD | No clasificada | $50.668.593 | [Portillo Sur](https://www.portillosur.cl/nissan/newpathfinder) | 2026-10-19 |
+| NEW QASHQAI | Exclusive CVT 4WD | No clasificada | $35.710.000 | [Portillo Sur](https://www.portillosur.cl/nissan/newqashqai) | 2026-10-19 |
+| New Versa | Sense MT | No clasificada | $16.990.000 | [Portillo Sur](https://www.portillosur.cl/nissan/newversa) | 2026-10-19 |
+| NEW X-TRAIL | Advance CVT 3Row | No clasificada | $36.698.577 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
+| NEW X-TRAIL | Exclusive CVT 3Row AWD | No clasificada | $38.994.143 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
+| NEW X-TRAIL | Sense CVT 2Row | No clasificada | $32.395.585 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
+| NEW X-TRAIL | Sense CVT 3Row | No clasificada | $34.401.901 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
+| NEW X-TRAIL | Sense CVT 3Row (Amazon Music) | No clasificada | $34.521.901 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
 | Pathfinder | Exclusive 7P 3.5 CVT | No clasificada | $55.668.593 | [webstore.nissan.cl](https://webstore.nissan.cl/category/root) | 2026-10-18 |
-| SENTRA EURO 6 | Exclusive CVT | No clasificada | $26.970.177 | [portillosur.cl](https://www.portillosur.cl/nissan/sentraeuro6) | 2026-10-19 |
+| SENTRA EURO 6 | Exclusive CVT | No clasificada | $26.970.177 | [Portillo Sur](https://www.portillosur.cl/nissan/sentraeuro6) | 2026-10-19 |
 | Sentra | SR Platinum | No clasificada | $28.990.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
 | Versa | New Versa Sense MT | No clasificada | $16.990.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
 | X-Trail e-POWER | EXCLUSIVE | HEV | $47.296.472 | [Astara Retail](https://astararetail.cl/nissan-x-trail-e-power/) | 2026-10-19 |
@@ -1649,7 +1649,7 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| ARKANA HYBRID | 1.3 4X2 AT INTENS ALPINE MHEV | No clasificada | $28.490.000 | [portillosur.cl](https://www.portillosur.cl/renault/arkanahybrid) | 2026-10-19 |
+| ARKANA HYBRID | 1.3 4X2 AT INTENS ALPINE MHEV | No clasificada | $28.490.000 | [Portillo Sur](https://www.portillosur.cl/renault/arkanahybrid) | 2026-10-19 |
 | Duster | Precio desde (versión no especificada) | No clasificada | $15.690.000 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
 | Koleos | Precio desde (versión no especificada) | No clasificada | $21.890.000 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
 | Kwid E -Tech | Precio desde (versión no especificada) | EV | $13.990.000 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
@@ -1689,10 +1689,10 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| T30 CS | 1.6 5MT ELT | No clasificada | $11.055.100 | [portillosur.cl](https://www.portillosur.cl/shineray/t30cs) | 2026-10-19 |
-| T32 CD | 1.6 5MT ELT | No clasificada | $12.245.100 | [portillosur.cl](https://www.portillosur.cl/shineray/t32cd) | 2026-10-19 |
+| T30 CS | 1.6 5MT ELT | No clasificada | $11.055.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t30cs) | 2026-10-19 |
+| T32 CD | 1.6 5MT ELT | No clasificada | $12.245.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t32cd) | 2026-10-19 |
 | T50 CS | T50 Mini Truck CS 1.6 5MT STD | No clasificada | $12.007.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/shineray/shineray-t50-con-a-c/) | 2026-10-19 |
-| T52 CD | 1.6 5MT STD | No clasificada | $14.030.100 | [portillosur.cl](https://www.portillosur.cl/shineray/t52cd) | 2026-10-19 |
+| T52 CD | 1.6 5MT STD | No clasificada | $14.030.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t52cd) | 2026-10-19 |
 | X30 con A/C | X30 1.5 5MT ELT | No clasificada | $10.936.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/shineray/shineray-x30-con-a-c/x30-1-5-5mt-elt/) | 2026-10-19 |
 
 ### Skoda — 8 registros
@@ -1802,8 +1802,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| 4RUNNER | 4R24T8ATLTD | No clasificada | $59.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/4runner) | 2026-10-19 |
-| 4RUNNER | 4R24T8ATSR5 | No clasificada | $53.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/4runner) | 2026-10-19 |
+| 4RUNNER | 4R24T8ATLTD | No clasificada | $59.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/4runner) | 2026-10-19 |
+| 4RUNNER | 4R24T8ATSR5 | No clasificada | $53.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/4runner) | 2026-10-19 |
 | 4Runner | 4x4 SR5 | No clasificada | $53.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=1018&id_product_attribute=6907&rewrite=4runner&controller=product#/29-combustible-gasolina/41-modelo-4runner) | 2026-10-19 |
 | All New Rav4 Híbrido | LE 2.5 4x2 HEV | HEV | $33.490.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=990&id_product_attribute=6442&rewrite=all-new-rav4&controller=product#/31-combustible-hibrido/169-modelo-all_new_rav4) | 2026-10-19 |
 | All New Rav4 | LE 2.0 4x2 | No clasificada | $28.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=967&id_product_attribute=6419&rewrite=all-new-rav4&controller=product#/29-combustible-gasolina/169-modelo-all_new_rav4) | 2026-10-19 |
@@ -1813,12 +1813,12 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Corolla Cross | SEG 1.8 HEV | HEV | $29.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3) | 2026-10-17 |
 | Corolla Cross | XEI 1.8 HEV CVT | HEV | $27.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=product&id_product=533&rewrite=corolla-cross) | 2026-10-17 |
 | Corolla Sedan Híbrido | SEG 1.8 CVT HEV | HEV | $28.490.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=200&id_product_attribute=5181&rewrite=corolla-hibrido&controller=product#/31-combustible-hibrido/142-modelo-corolla_sedan_hibrido) | 2026-10-19 |
-| COROLLA SEDAN HV | 18CVTHVSEG-01 | No clasificada | $28.490.000 | [portillosur.cl](https://www.portillosur.cl/toyota/corollasedanhv) | 2026-10-19 |
+| COROLLA SEDAN HV | 18CVTHVSEG-01 | No clasificada | $28.490.000 | [Portillo Sur](https://www.portillosur.cl/toyota/corollasedanhv) | 2026-10-19 |
 | Corolla Sedán | SEG 1.8 CVT HEV | HEV | $28.490.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-H%26iacute%3Bbrido) | 2026-10-17 |
 | Fortuner | SR5 4X4 MT TDI 2.8L | No clasificada | $42.890.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=400&id_product_attribute=376&rewrite=fortuner&controller=product#/30-combustible-diesel/40-modelo-fortuner) | 2026-10-19 |
 | Fortuner | SR5 4X4 TDI 2.8L | No clasificada | $44.390.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=403&id_product_attribute=379&rewrite=fortuner&controller=product#/30-combustible-diesel/40-modelo-fortuner) | 2026-10-19 |
-| FORTUNER | SR544AT28-3 | No clasificada | $44.390.000 | [portillosur.cl](https://www.portillosur.cl/toyota/fortuner) | 2026-10-19 |
-| FORTUNER | SRX44AT28 -23PC | No clasificada | $51.090.000 | [portillosur.cl](https://www.portillosur.cl/toyota/fortuner) | 2026-10-19 |
+| FORTUNER | SR544AT28-3 | No clasificada | $44.390.000 | [Portillo Sur](https://www.portillosur.cl/toyota/fortuner) | 2026-10-19 |
+| FORTUNER | SRX44AT28 -23PC | No clasificada | $51.090.000 | [Portillo Sur](https://www.portillosur.cl/toyota/fortuner) | 2026-10-19 |
 | Hiace Cargo | Precio desde (versión no especificada) | No clasificada | $32.490.000 | [auto.cl](https://www.auto.cl/nuevos/toyota) | 2026-10-20 |
 | Hiace Minibus | Precio desde (versión no especificada) | No clasificada | $40.390.000 | [auto.cl](https://www.auto.cl/nuevos/toyota) | 2026-10-20 |
 | Hilux | 4x2 2.4 MT SR Diesel | No clasificada | $35.290.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=257&id_product_attribute=232&rewrite=hilux&controller=product#/30-combustible-diesel/39-modelo-hilux) | 2026-10-19 |
@@ -1826,28 +1826,28 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Hilux | 4x4 2.4 MT SR Diesel | No clasificada | $41.790.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=259&id_product_attribute=234&rewrite=hilux&controller=product#/30-combustible-diesel/39-modelo-hilux) | 2026-10-19 |
 | Hilux | 4x4 2.8 AT SRV Diesel | No clasificada | $48.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=278&id_product_attribute=253&rewrite=hilux&controller=product#/30-combustible-diesel/39-modelo-hilux) | 2026-10-19 |
 | Hilux | 4x4 2.8 MT SR Diesel | No clasificada | $45.290.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=product&id_product=234&id_product_attribute=222&rewrite=hilux) | 2026-10-17 |
-| HILUX | DX42MT24-3 TSS | No clasificada | $36.290.000 | [portillosur.cl](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
-| HILUX | DX44MT24 R-3 | No clasificada | $39.290.000 | [portillosur.cl](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
-| HILUX | DX44MT24 TSS -23PC | No clasificada | $40.490.000 | [portillosur.cl](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
-| HILUX | SR44MT24 R-3 | No clasificada | $41.790.000 | [portillosur.cl](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
-| HILUX | SR44MT28-3 | No clasificada | $45.890.000 | [portillosur.cl](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
-| HILUX | SRV44AT28 -23PC | No clasificada | $48.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
+| HILUX | DX42MT24-3 TSS | No clasificada | $36.290.000 | [Portillo Sur](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
+| HILUX | DX44MT24 R-3 | No clasificada | $39.290.000 | [Portillo Sur](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
+| HILUX | DX44MT24 TSS -23PC | No clasificada | $40.490.000 | [Portillo Sur](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
+| HILUX | SR44MT24 R-3 | No clasificada | $41.790.000 | [Portillo Sur](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
+| HILUX | SR44MT28-3 | No clasificada | $45.890.000 | [Portillo Sur](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
+| HILUX | SRV44AT28 -23PC | No clasificada | $48.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/hilux) | 2026-10-19 |
 | Land Cruiser Prado | VX-L | No clasificada | $73.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=953&id_product_attribute=6329&rewrite=land-cruiser-prado&controller=product#/30-combustible-diesel/42-modelo-land_cruiser_prado) | 2026-10-19 |
-| NEW LAND CRUISER PRADO | WX 2.8 8AT DSL | No clasificada | $64.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/newlandcruiserprado) | 2026-10-19 |
+| NEW LAND CRUISER PRADO | WX 2.8 8AT DSL | No clasificada | $64.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/newlandcruiserprado) | 2026-10-19 |
 | Raize | 1.2 E CVT | No clasificada | $16.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3) | 2026-10-17 |
 | Raize | 1.2 E MT | No clasificada | $15.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3) | 2026-10-17 |
 | Raize | 1.2 G CVT | No clasificada | $18.490.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Combustible-Gasolina%2FModelo-Raize) | 2026-10-17 |
 | Raize | 1.2 i MT | No clasificada | $13.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=466&id_product_attribute=669&rewrite=raize&controller=product#/29-combustible-gasolina/60-modelo-raize) | 2026-10-19 |
-| RAIZE | 12CVTGASE | No clasificada | $16.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/raize) | 2026-10-19 |
-| RAIZE | 12CVTGASG | No clasificada | $18.490.000 | [portillosur.cl](https://www.portillosur.cl/toyota/raize) | 2026-10-19 |
-| RAV 4 HEV | R625HVXSE4C | No clasificada | $42.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/rav4hev) | 2026-10-19 |
-| RAV 4 | R620LE2C | No clasificada | $28.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/rav4) | 2026-10-19 |
-| RAV 4 | R620LE4C | No clasificada | $29.990.000 | [portillosur.cl](https://www.portillosur.cl/toyota/rav4) | 2026-10-19 |
-| RAV 4 | R620XLE2C | No clasificada | $32.490.000 | [portillosur.cl](https://www.portillosur.cl/toyota/rav4) | 2026-10-19 |
+| RAIZE | 12CVTGASE | No clasificada | $16.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/raize) | 2026-10-19 |
+| RAIZE | 12CVTGASG | No clasificada | $18.490.000 | [Portillo Sur](https://www.portillosur.cl/toyota/raize) | 2026-10-19 |
+| RAV 4 HEV | R625HVXSE4C | No clasificada | $42.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/rav4hev) | 2026-10-19 |
+| RAV 4 | R620LE2C | No clasificada | $28.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/rav4) | 2026-10-19 |
+| RAV 4 | R620LE4C | No clasificada | $29.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/rav4) | 2026-10-19 |
+| RAV 4 | R620XLE2C | No clasificada | $32.490.000 | [Portillo Sur](https://www.portillosur.cl/toyota/rav4) | 2026-10-19 |
 | Yaris Cross Híbrido | XI 1.5 HEV CVT | HEV | $24.590.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=785&id_product_attribute=5151&rewrite=yaris-cross&controller=product#/31-combustible-hibrido/140-modelo-yaris_cross_hibrido) | 2026-10-19 |
 | Yaris Cross | Yaris Cross Híbrido XI 1.5 HEV CVT | HEV | $24.590.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=product&id_product=783&rewrite=yaris-cross) | 2026-10-19 |
 | Yaris | i MT | No clasificada | $14.690.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3) | 2026-10-17 |
-| YARIS SEDAN | 15CVTGSLEY | No clasificada | $17.490.000 | [portillosur.cl](https://www.portillosur.cl/toyota/yarissedan) | 2026-10-19 |
+| YARIS SEDAN | 15CVTGSLEY | No clasificada | $17.490.000 | [Portillo Sur](https://www.portillosur.cl/toyota/yarissedan) | 2026-10-19 |
 
 ### Uaz — 2 registros
 
@@ -1881,20 +1881,20 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| EC40 | P6 | EV | $54.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/ec40/) | 2026-10-19 |
-| EX30 | Cross Country | EV | $54.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
-| EX30 | E40 Core | EV | $35.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
-| EX30 | E60 Plus | EV | $41.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
-| EX30 | E60 Ultra | EV | $47.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
-| EX40 | P6 | EV | $51.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
-| EX40 | P8 Recharge | EV | $65.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
+| EC40 | P6 | EV | $54.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ec40/) | 2026-10-19 |
+| EX30 | Cross Country | EV | $54.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
+| EX30 | E40 Core | EV | $35.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
+| EX30 | E60 Plus | EV | $41.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
+| EX30 | E60 Ultra | EV | $47.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
+| EX40 | P6 | EV | $51.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
+| EX40 | P8 Recharge | EV | $65.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
 | Xc40 | Precio desde (versión no especificada) | No clasificada | $35.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 | XC40 Pure Electric | Precio desde (versión no especificada) | EV | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
-| XC60 | NUEVO T8 AWD CORE | HEV | $64.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
-| XC60 | NUEVO T8 AWD ULTRA | No clasificada | $81.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
+| XC60 | NUEVO T8 AWD CORE | HEV | $64.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
+| XC60 | NUEVO T8 AWD ULTRA | No clasificada | $81.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
 | XC60 Plug-In Hybrid | Precio desde (versión no especificada) | PHEV | $54.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 | xc60-mild-hybrid | Precio desde (versión no especificada) | MHEV | $46.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
-| XC90 | NUEVO T8 CORE | HEV | $90.900.000 | [portillosur.cl](https://www.portillosur.cl/volvo/xc90) | 2026-10-19 |
+| XC90 | NUEVO T8 CORE | HEV | $90.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc90) | 2026-10-19 |
 | XC90 Plug-In Hybrid | Precio desde (versión no especificada) | PHEV | $76.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 | xc90-mild-hybrid | Precio desde (versión no especificada) | MHEV | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 
