@@ -13896,5 +13896,65 @@
     "checkedAt": "2026-10-20",
     "currency": "CLP",
     "priceBasis": "Precio lista en pesos publicado por concesionario oficial Kaufmann Chile."
+  },
+  {
+    "brand": "Tesla",
+    "family": "Model 3",
+    "version": "Rear-Wheel Drive",
+    "modelYear": 2026,
+    "priceListClp": 30000000,
+    "source": "https://www.tesla.com/es_CL/inventory/new/m3",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio publicado en Tesla Chile para configuración de vehículo nuevo; no corresponde a un precio universal por versión.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Tesla",
+    "family": "Model 3",
+    "version": "Premium Long Range Rear-Wheel Drive",
+    "modelYear": 2026,
+    "priceListClp": 35000000,
+    "source": "https://www.tesla.com/es_CL/inventory/new/m3",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio publicado en Tesla Chile para configuración de vehículo nuevo; no corresponde a un precio universal por versión.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Tesla",
+    "family": "Model Y",
+    "version": "Premium Rear-Wheel Drive",
+    "modelYear": 2026,
+    "priceListClp": 37000000,
+    "source": "https://www.tesla.com/es_CL/inventory/new/my",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio publicado en Tesla Chile para configuración de vehículo nuevo; no corresponde a un precio universal por versión.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Tesla",
+    "family": "Model Y",
+    "version": "Premium Long Range Rear-Wheel Drive",
+    "modelYear": 2026,
+    "priceListClp": 40000000,
+    "source": "https://www.tesla.com/es_CL/inventory/new/my",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio publicado en Tesla Chile para configuración de vehículo nuevo; no corresponde a un precio universal por versión.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Tesla",
+    "family": "Model Y",
+    "version": "Premium Long Range All-Wheel Drive",
+    "modelYear": 2026,
+    "priceListClp": 43000000,
+    "source": "https://www.tesla.com/es_CL/inventory/new/my",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio publicado en Tesla Chile para configuración de vehículo nuevo; no corresponde a un precio universal por versión.",
+    "technology": "EV"
   }
 ]
