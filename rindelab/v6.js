@@ -498,7 +498,20 @@ function showDetail(i){
  const ranking=percentileFor(r);
  if(ranking){const p=document.createElement('div');p.className='rinde-percentile';const t=document.createElement('p');t.textContent='Percentil '+ranking.pct+' de eficiencia · '+ranking.n+' fichas con misma tecnología, carrocería y ciclo '+r[F.CYCLE]+' ('+ranking.measure+'). Percentil calculado sobre fichas, no ventas ni modelos únicos.';const meter=document.createElement('meter');meter.min=0;meter.max=100;meter.value=ranking.pct;meter.setAttribute('aria-label','Percentil relativo de eficiencia');meter.style.width='100%';p.append(t,meter);$('detailContent').append(p);}
  const emission=co2Annual(r);
- if(r[F.TECH]==='EV'){const p=document.createElement('p');p.className='note';p.textContent='Vehículo eléctrico: 0 toneladas/año de CO₂ en tubo de escape. Esto no incluye emisiones asociadas a generación eléctrica ni fabricación.';$('detailContent').append(p);}
+ if(r[F.TECH]==='EV'){
+  const p=document.createElement('p');p.className='note';p.textContent='Vehículo eléctrico: 0 toneladas/año de CO₂ en tubo de escape. Las emisiones indirectas dependen de la generación eléctrica; no representan emisiones de ciclo de vida.';$('detailContent').append(p);
+  const grid=document.createElement('section');grid.className='rinde-profile';
+  grid.innerHTML='<h3>Emisiones indirectas por electricidad (SEN)</h3>'+
+    '<p class="note">Introduce un factor de emisión SEN para el período que quieras representar, en kg CO₂eq/MWh (numéricamente igual a g CO₂eq/kWh). No se asigna un factor nacional actual sin identificar el año y fuente. <a href="https://energia.gob.cl/node/20185" target="_blank" rel="noopener noreferrer">Consultar indicador oficial del Ministerio de Energía ↗</a>.</p>'+
+    '<label>Factor SEN (kg CO₂eq/MWh) <input id="rindeSENFactor" type="number" min="0.01" max="1500" step="0.01" placeholder="Ingresa factor del período"></label><p id="rindeSENResult" role="status" aria-live="polite">Introduce el factor para estimar emisiones indirectas de generación eléctrica.</p>';
+  $('detailContent').append(grid);
+  grid.querySelector('#rindeSENFactor').addEventListener('input',()=>{
+    const factor=number($('rindeSENFactor').value),efficiency=number(r[F.EL]),km=number($('annualKm').value);
+    $('rindeSENResult').textContent=(!factor||factor>1500||!efficiency||!km)?
+     'Requiere factor positivo, rendimiento eléctrico homologado y kilometraje.' :
+     'Electricidad estimada: '+fmt(Math.round(km/efficiency))+' kWh/año · Emisiones indirectas aproximadas: '+((km/efficiency)*factor/1000000).toLocaleString('es-CL',{maximumFractionDigits:3})+' t CO₂eq/año. Sin pérdidas de recarga ni otras emisiones del ciclo de vida.';
+  });
+}
  else if(emission!==null){const p=document.createElement('p');p.className='note';p.textContent='CO₂ directo: '+emission.toLocaleString('es-CL',{maximumFractionDigits:3})+' t/año según g/km 3CV y '+fmt(Number($('annualKm').value))+' km/año. No incluye emisiones del ciclo de vida.';$('detailContent').append(p);}
  drivingProfile(r);
  $('detailDialog').showModal();
