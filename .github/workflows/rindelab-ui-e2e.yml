@@ -45,6 +45,22 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Comprobar sintaxis JavaScript de todos los módulos de RINDELAB
+        run: |
+          for file in \
+            rindelab/v6.js \
+            rindelab/sii/prices.js \
+            rindelab/cotizador.js \
+            rindelab/electromovilidad.js \
+            rindelab/coverage.js \
+            rindelab/versiones.js \
+            rindelab/sii/coverage-matcher.js \
+            rindelab/sii/version-audit.js \
+            scripts/audit-price-sources.cjs \
+            rindelab/tests/e2e.cjs; do
+            node --check "$file"
+          done
+
       - name: Validar integridad y exportación del informe de precios
         run: |
           node scripts/audit-price-sources.cjs --report-json=price-audit.json
