@@ -315,7 +315,7 @@ await test('PHEV muestra 264 fichas y rendimiento eléctrico y ponderado sin cos
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
  assert.match(await page.locator('#statsMetricHint').textContent(),/No se calcula un costo energético combinado/);
  await page.selectOption('#statsMetric','weighted');
- assert.equal(await page.locator('.rank-item').count(),Math.min(10,nedcCount));
+ assert.equal(await page.locator('.rank-item').count(),10);
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/L pond.')));
  assert.match(await page.locator('#statsNotice').textContent(),/no equivale al rendimiento con batería descargada/);
  await page.locator('#statsClose').click();
@@ -339,7 +339,7 @@ await test('REEV muestra sus 16 registros y ambas métricas con orden dinámico'
  const reversed=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/[^\d,.]/g,'').replace(',','.')));
  assert(reversed.every((v,i)=>i===0||reversed[i-1]>=v),'REEV descendente '+reversed);
  await page.selectOption('#statsMetric','weighted');
- assert.equal(await page.locator('.rank-item').count(),10);
+ assert.equal(await page.locator('.rank-item').count(),Math.min(10,nedcCount));
  assert.match(await page.locator('#statsNotice').textContent(),/Rendimiento ponderado informado/);
  await page.selectOption('#statsMetric','electric');
  await page.selectOption('#statsCycle',''); // Restituir exploración conjunta sin ranking después del cálculo por ciclo.
