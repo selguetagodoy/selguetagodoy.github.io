@@ -1,39 +1,39 @@
 # RINDELAB — Cierre documental de brechas por marca y nuevos precios
 
-**Corte de trabajo:** 20 de octubre de 2026. **Formato:** Markdown previo a migración; no cambia el JSON comercial ni las homologaciones 3CV. **Fuentes:** inventario aportado por el usuario, base maestra 1.485 (`rindelab/sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md`), consulta de catálogos de fabricantes y marketplaces. Los importes de terceros son publicaciones, no cotizaciones vinculantes. No se afirma comprobación de stock.
+**Corte de trabajo:** 20 de octubre de 2026. **Estado:** expediente reconciliado e integrado en `commercial-2026.json` en el PR #106; las homologaciones oficiales 3CV no se alteran. **Fuentes:** inventario aportado por el usuario, base maestra 1.485 (`rindelab/sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md`), consulta de catálogos de fabricantes y marketplaces. Los importes de terceros son publicaciones, no cotizaciones vinculantes. No se afirma comprobación de stock.
 
 ## 1. Resultado cuantitativo y diagnóstico
 
-- **124 denominaciones de marca** en el insumo 3CV, con **8.053 registros históricos**; **1.485 referencias comerciales** distribuidas en **74 marcas**. Las cantidades comerciales coinciden con la base maestra del repositorio.
-- **50 denominaciones con cero referencias comerciales bajo el mismo nombre.** Varias son alias, submarcas o marcas de comercialización histórica: no deben considerarse automáticamente 50 marcas activas sin oferta ni 8.053 precios faltantes.
-- **Nuevos hallazgos:** 26 publicaciones modelo/precio registradas abajo, de las que **18 son candidatas no identificadas en la base actual**, **otros 3 Nammi requieren cruce de versión**, y **5 DFM corresponden a modelos ya cubiertos como Dongfeng**. *Las cifras de candidatos son un instrumento de revisión, no un incremento ya aplicado al catálogo.*
+- **124 denominaciones de marca** en la tabla comparativa proporcionada, incluidas grafías comerciales y 3CV; **8.053 registros históricos 3CV**. Línea base comercial **1.485 precios / 74 marcas**; después de la integración, **1.504 precios / 80 marcas**. Las 122 denominaciones del índice 3CV bruto no equivalen a 124 marcas con venta actual.
+- **50 denominaciones inicialmente sin precio bajo el mismo nombre**. La regularización agregó seis marcas a la base comercial (Nammi, Uaz, ZNA, Iveco, Hino y Fuso), y permite consultar alias de otras marcas. El cero inicial corresponde al corte anterior; no indica comercialización vigente o inexistente.
+- **Resultado implementado:** 26 publicaciones revisadas; **19 altas integradas**, **5 DFM ya representadas como Dongfeng** y **2 referencias Nammi no duplicadas** (LR Full publicado por otra fuente y 94 HP sin correspondencia de versión). Adicionalmente, dos precios Nammi que figuraban bajo Dongfeng se trasladaron a Nammi sin modificar valor ni fuente.
 - La marca **M. Benz** agrupa 565 fichas del 3CV, mientras **Mercedes-Benz** ya tiene 26 precios; **Haval** ya figura como familia de modelos dentro de **Great Wall**; **Ssangyong** ya tiene referencias bajo **KGM**. También hay equivalencias de grafía Lynk Co/Lynk & Co y ZX Auto/Zxauto.
 
 ## 2. Hallazgos directos para incorporar o conciliar
 
 | Marca publicada | Modelo | Versión / referencia | Precio publicado | Tratamiento | Resultado del cruce | URL específica |
 |---|---|---|---:|---|---|---|
-| Nammi | 001 | SR | $14.990.000 | Oferta publicada | CRUZAR (puede solaparse con Dongfeng/Nammi) | [Fuente](https://www.auto.cl/nuevos/nammi/001) |
+| Nammi | 001 | SR | $14.990.000 | Oferta publicada | ALTA INTEGRADA: SR diferenciada de LR | [Fuente](https://www.auto.cl/nuevos/nammi/001) |
 | Nammi | 001 | LR Full | $21.490.000 | Oferta publicada | DUPLICADO PROBABLE: Dongfeng ya tiene LR FULL | [Fuente](https://www.auto.cl/nuevos/nammi/001) |
-| Nammi | 001 | LR 6AB Elite | $24.990.000 | Precio publicado | ALTA CANDIDATA previa comparación de llave exacta | [Fuente](https://www.auto.cl/nuevos/nammi/001) |
+| Nammi | 001 | LR 6AB Elite | $24.990.000 | Precio publicado | ALTA INTEGRADA: LR 6AB Elite diferenciada | [Fuente](https://www.auto.cl/nuevos/nammi/001) |
 | Nammi | 001 | 94 HP | $22.990.000 | Precio de lista Autocosmos | CRUZAR: no identificar automáticamente con SR/LR | [Fuente](https://www.autocosmos.cl/catalogo/vigente/nammi/001) |
-| Uaz | Hunter | 2.7L Sport | $16.990.000 | Precio de lista referencial | ALTA CANDIDATA, stock no corroborado | [Fuente](https://www.autocosmos.cl/catalogo/vigente/uaz/hunter) |
-| Uaz | Hunter | 2.7L Sport Ac | $18.490.000 | Precio de lista referencial | ALTA CANDIDATA, stock no corroborado | [Fuente](https://www.autocosmos.cl/catalogo/vigente/uaz/hunter) |
-| ZNA | DF6 | 2.5L 4x2 | $17.838.100 | Precio de lista referencial | ALTA CANDIDATA, validar marca comercial vigente | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/zna) |
-| ZNA | DF6 | 2.5L 4x4 | $19.623.100 | Precio de lista referencial | ALTA CANDIDATA, validar marca comercial vigente | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/zna) |
-| Iveco | Daily Chasis Cabina | 35-150 | $29.143.100 | Precio de lista referencial | ALTA CANDIDATA, línea comercial | [Fuente](https://www.autocosmos.cl/catalogo/vigente/iveco/daily-chasis-cabina) |
-| Iveco | Daily Furgón | 30-130 | $30.928.100 | Precio de lista referencial | ALTA CANDIDATA, línea comercial | [Fuente](https://www.autocosmos.cl/catalogo/vigente/iveco/daily-furgon) |
-| Hino | City 515 | MT/AT (precio mínimo de familia) | $27.290.000 + IVA | Precio desde fabricante | ALTA CANDIDATA: precio familiar, no separar MT/AT | [Fuente](https://www.hino.cl/300) |
-| Hino | XZU 616 | MT/AT (precio mínimo de familia) | $28.690.000 + IVA | Precio desde fabricante | ALTA CANDIDATA: precio familiar, no separar MT/AT | [Fuente](https://www.hino.cl/300) |
-| Hino | XZU 617 DC | MT | $34.490.000 + IVA | Precio desde fabricante | ALTA CANDIDATA, comercial | [Fuente](https://www.hino.cl/300) |
-| Hino | XZU 817 | MT | $34.290.000 + IVA | Precio desde fabricante | ALTA CANDIDATA, comercial | [Fuente](https://www.hino.cl/300) |
-| Hino | XZU 917 | MT | $36.390.000 + IVA | Precio desde fabricante | ALTA CANDIDATA, comercial | [Fuente](https://www.hino.cl/300) |
-| Hino | XZU 816 | AT | $40.990.000 + IVA | Precio desde fabricante | ALTA CANDIDATA, comercial | [Fuente](https://www.hino.cl/300) |
-| Fuso | Canter 515 | Full manual | $25.490.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA CANDIDATA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-515) |
-| Fuso | Canter 515 | Full automatizada | $27.990.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA CANDIDATA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-515) |
-| Fuso | Canter 718 | Manual | $30.990.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA CANDIDATA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-718) |
-| Fuso | Canter 718 | Automatizada | $32.490.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA CANDIDATA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-718) |
-| Fuso | Canter 918 | Full (manual) | $34.490.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA CANDIDATA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-918) |
+| Uaz | Hunter | 2.7L Sport | $16.990.000 | Precio de lista referencial | ALTA INTEGRADA, stock no corroborado | [Fuente](https://www.autocosmos.cl/catalogo/vigente/uaz/hunter) |
+| Uaz | Hunter | 2.7L Sport Ac | $18.490.000 | Precio de lista referencial | ALTA INTEGRADA, stock no corroborado | [Fuente](https://www.autocosmos.cl/catalogo/vigente/uaz/hunter) |
+| ZNA | DF6 | 2.5L 4x2 | $17.838.100 | Precio de lista referencial | ALTA INTEGRADA, validar marca comercial vigente | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/zna) |
+| ZNA | DF6 | 2.5L 4x4 | $19.623.100 | Precio de lista referencial | ALTA INTEGRADA, validar marca comercial vigente | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/zna) |
+| Iveco | Daily Chasis Cabina | 35-150 | $29.143.100 | Precio de lista referencial | ALTA INTEGRADA, línea comercial | [Fuente](https://www.autocosmos.cl/catalogo/vigente/iveco/daily-chasis-cabina) |
+| Iveco | Daily Furgón | 30-130 | $30.928.100 | Precio de lista referencial | ALTA INTEGRADA, línea comercial | [Fuente](https://www.autocosmos.cl/catalogo/vigente/iveco/daily-furgon) |
+| Hino | City 515 | MT/AT (precio mínimo de familia) | $27.290.000 + IVA | Precio desde fabricante | ALTA INTEGRADA: precio familiar, no separar MT/AT | [Fuente](https://www.hino.cl/300) |
+| Hino | XZU 616 | MT/AT (precio mínimo de familia) | $28.690.000 + IVA | Precio desde fabricante | ALTA INTEGRADA: precio familiar, no separar MT/AT | [Fuente](https://www.hino.cl/300) |
+| Hino | XZU 617 DC | MT | $34.490.000 + IVA | Precio desde fabricante | ALTA INTEGRADA, comercial | [Fuente](https://www.hino.cl/300) |
+| Hino | XZU 817 | MT | $34.290.000 + IVA | Precio desde fabricante | ALTA INTEGRADA, comercial | [Fuente](https://www.hino.cl/300) |
+| Hino | XZU 917 | MT | $36.390.000 + IVA | Precio desde fabricante | ALTA INTEGRADA, comercial | [Fuente](https://www.hino.cl/300) |
+| Hino | XZU 816 | AT | $40.990.000 + IVA | Precio desde fabricante | ALTA INTEGRADA, comercial | [Fuente](https://www.hino.cl/300) |
+| Fuso | Canter 515 | Full manual | $25.490.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA INTEGRADA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-515) |
+| Fuso | Canter 515 | Full automatizada | $27.990.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA INTEGRADA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-515) |
+| Fuso | Canter 718 | Manual | $30.990.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA INTEGRADA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-718) |
+| Fuso | Canter 718 | Automatizada | $32.490.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA INTEGRADA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-718) |
+| Fuso | Canter 918 | Full (manual) | $34.490.000 + IVA | Precio actual anunciado, puede incluir rebaja | ALTA INTEGRADA, no catalogar como precio de lista | [Fuente](https://www.fuso.cl/camiones-canter-918) |
 | DFM | Aeolus GS Cross | Precio desde (versión no identificada) | $13.890.000 | Precio desde auto.cl | NO ALTA: ya figura en Dongfeng como AEOLUS GS | [Fuente](https://www.auto.cl/nuevos/dongfeng) |
 | DFM | Aeolus Y3 | Precio desde (versión no identificada) | $11.490.000 | Precio desde auto.cl | NO ALTA: 3 versiones ya en Dongfeng | [Fuente](https://www.auto.cl/nuevos/dongfeng) |
 | DFM | S50 EV | Precio desde (versión no identificada) | $26.990.000 | Precio desde auto.cl | NO ALTA: ya figura en Dongfeng como S50 EVE | [Fuente](https://www.auto.cl/nuevos/dongfeng) |
@@ -179,15 +179,15 @@ Se reproduce el inventario sin modificar sus cifras. La columna de tratamiento e
 
 ## 4. Priorización práctica, no por diferencia bruta
 
-**Grupo A — ejecutar ahora desde fuentes localizadas.** Añadir al MD de precios candidatos verificables sin repetidos: Hino (seis referencias “desde” + IVA), Fuso (cinco referencias actuales + IVA), Iveco (dos versiones CLP), UAZ Hunter (dos versiones CLP), ZNA DF6 (dos versiones CLP). Nammi requiere cruce de cuatro publicaciones con Dongfeng, especialmente el acabado 6AB Elite. **No se modificó el JSON.**
+**Grupo A — integrado en JSON y MD.** Se incorporaron Hino (seis referencias «desde» + IVA), Fuso (cinco referencias actuales + IVA), Iveco (dos), Uaz Hunter (dos), ZNA DF6 (dos) y Nammi 001 (SR y LR 6AB Elite), preservando la fuente. Nammi LR y LR Full de Callegari se conservaron en la marca Nammi. La publicación de 94 HP no se transformó en una versión distinta sin correspondencia comprobada.
 
-**Grupo B — regularizar alias de búsqueda y cobertura.** M. Benz→Mercedes-Benz, Lynk Co→Lynk & Co, ZX Auto→Zxauto, SsangYong→KGM cuando corresponde al mismo modelo/generación, Haval→submarca de Great Wall, Mitsubishi Fuso→Fuso, DFM→Dongfeng por familia. Conservar literalmente el identificador y marca 3CV en cada ficha; usar nombre normalizado únicamente en una capa de cruce/búsqueda, nunca sobreescribir fuente original.
+**Grupo B — alias de búsqueda y cobertura implementados.** M. Benz→Mercedes-Benz, Lynk Co→Lynk & Co, ZX Auto→Zxauto, SsangYong→KGM cuando corresponde al mismo modelo/generación, Haval→submarca de Great Wall, Mitsubishi Fuso→Fuso, DFM→Dongfeng por familia. Conservar literalmente el identificador y marca 3CV en cada ficha; usar nombre normalizado únicamente en una capa de cruce/búsqueda, nunca sobreescribir fuente original.
 
 **Grupo C — cero comercial y evidencia aún incompleta.** Bentley, Borgward, Brilliance, Chrysler, Daihatsu, DFLM, DFLZ, Dodge, Eveasy, Farizon, Faw, Fest, Gac Gonow, Gecko, Genesis, INEOS, Infiniti, Isuzu, Kenbo, Lada, Lamborghini, Landwind, Lifan, Lotus, MAN, Maple, McLaren, Neta, Piaggio, Proton, Rolls-Royce, Sinotruk, Skywell, Weltmeister, Zotye y otras filas con cero. El hecho de que hayan sido homologados no comprueba que exista oferta chilena 0 km en octubre de 2026. No atribuir “descontinuada” sin verificar por marca.
 
 **Grupo D — marcas ya presentes.** Priorizar brechas de *familias ofertadas* contra el catálogo 0 km del mercado, no una supuesta diferencia entre 3CV y precios. Marcas con muchas homologaciones (Land Rover, BMW, Audi, Mercedes-Benz, Porsche, Kia, Hyundai, Chevrolet, Toyota, etc.) ya tienen referencias; toca resolver versiones efectivamente en venta que aún no están en la base por cruce exacto de modelo/versión/año.
 
-## 5. Regla de integración MD → JSON y cierre de control
+## 5. Reglas de integración aplicadas y controles
 
 1. Conciliar `marca_normalizada + modelo_normalizado + versión_publicada + moneda + condición_IVA` contra la **base maestra actual**, y comprobar similitudes de alias (p. ej. `AEOLUS GS`/`GS CROSS`, `NAMMI EV LR FULL`/`001 LR Full`). Escribir resultado en MD: `ALTA`, `DUPLICADO`, `ALIAS`, `CONFLICTO` o `SIN PRECIO`.
 2. Guardar URL directa, fecha de consulta, tipo (`lista`, `desde`, `oferta`, `actual`), moneda y tratamiento del IVA. No reinterpretar descuentos o convertir monedas sin fuente; si existe más de un precio publicado, conservar su **fuente** y su **tipo** en vez de sustituir arbitrariamente.
@@ -203,4 +203,4 @@ Se reproduce el inventario sin modificar sus cifras. La columna de tratamiento e
 - [Hino Serie 300](https://www.hino.cl/300), [Fuso Canter 515](https://www.fuso.cl/camiones-canter-515), [718](https://www.fuso.cl/camiones-canter-718), [918](https://www.fuso.cl/camiones-canter-918).
 - [GWM / Haval](https://www.gwm.cl/electricos/) y [KGM / Ssangyong](https://www.ssangyong.cl/modelos/torres/) para equivalencias comerciales (no equivalencia automática de código 3CV).
 
-**Estado real de esta entrega:** expediente Markdown, matriz total y nuevos precios fuente-a-fuente preparados; **no se ha modificado el catálogo público**, ni se promete cobertura completa de la oferta chilena. Los registros de cero sin fuente nueva permanecen explícitamente pendientes y no se rellenan artificialmente.
+**Estado real de esta integración:** datos y vistas actualizados en la rama del [PR #106](https://github.com/selguetagodoy/selguetagodoy.github.io/pull/106), con **1.504 precios y 80 marcas**. La publicación en GitHub Pages requiere fusión y despliegue del PR. No se afirma cobertura íntegra del mercado; marcas sin precio verificable conservan estado pendiente.
