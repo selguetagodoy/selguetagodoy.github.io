@@ -6,6 +6,9 @@ const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'
 const normal=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
 const positive=s=>s!==''&&s!==null&&Number.isFinite(Number(s))&&Number(s)>=0?Number(s):null;
 const identity=x=>[x.brand,x.family,x.version,x.modelYear??''].join('|');
+const displayPrice=x=>clp(x.priceListClp)+(x.taxIncluded===false?' + IVA':'');
+const priceKind=x=>x.taxIncluded===false?(x.priceType==='desde'?'Desde · + IVA':'Publicado · + IVA'):x.priceType==='oferta'?'Oferta publicada':x.priceType==='desde'||x.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos';
+const searchAliases={'Mercedes-Benz':'M. Benz','Great Wall':'Haval','KGM':'Ssangyong','Dongfeng':'DFM','Lynk & Co':'Lynk Co','Zxauto':'ZX Auto','Fuso':'Mitsubishi Fuso','Exeed':'Exeed Born For More'};
 let catalog=[],visible=[],chosen=null,limit=24;
 const dealerPages={Hyundai:'https://www.hyundai.cl/cotizador/',Changan:'https://www.changan.cl/formulario/cotizacion/'};
 function ageDays(s){const n=Date.parse(String(s||'')+'T00:00:00Z');return Number.isFinite(n)?Math.max(0,Math.floor((Date.now()-n)/86400000)):null}
@@ -39,7 +42,7 @@ function updateFamilies(){
 function filter(){
  const q=normal($('quoteSearch').value),brand=$('quoteBrand').value,family=$('quoteFamily').value;
  visible=catalog.filter(x=>(!brand||x.brand===brand)&&(!family||x.family===family)&&
-  (!q||normal([x.brand,x.family,x.version,x.modelYear||''].join(' ')).includes(q)));
+  (!q||normal([x.brand,x.family,x.version,x.modelYear||'',searchAliases[x.brand]||''].join(' ')).includes(q)));
  const sort=$('quoteSort').value;
  visible.sort((a,b)=>sort==='low'?a.priceListClp-b.priceListClp:
   sort==='high'?b.priceListClp-a.priceListClp:
@@ -55,7 +58,7 @@ function render(){
   const card=document.createElement('article');card.className='quote-version';
   const active=chosen&&identity(x)===identity(chosen);
   card.innerHTML='<div><strong>'+safe(x.brand+' '+x.family)+'</strong><span>'+safe(x.version)+(x.modelYear?' · modelo '+safe(x.modelYear):' · año no indicado')+'</span>'+
-   '<small>'+safe(statusText(x))+'</small></div><div class="quote-version-price"><strong>'+clp(x.priceListClp)+'</strong><span>'+(x.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos')+'</span></div>';
+   '<small>'+safe(statusText(x))+'</small></div><div class="quote-version-price"><strong>'+displayPrice(x)+'</strong><span>'+safe(priceKind(x))+'</span></div>';
   const actions=document.createElement('div');actions.className='quote-version-actions';
   const btn=document.createElement('button');btn.type='button';btn.className='button '+(active?'primary':'secondary');btn.textContent=active?'Versión seleccionada':'Cotizar esta versión';
   btn.disabled=!!active;btn.addEventListener('click',()=>select(x));
@@ -70,11 +73,11 @@ function extras(){
 }
 function amount(){
  const other=extras();
- return chosen&&other!==null?chosen.priceListClp+other:null;
+ return chosen&&chosen.taxIncluded!==false&&other!==null?chosen.priceListClp+other:null;
 }
 function finance(total){
  const out=$('quoteFinanceOut');
- if(total===null){out.textContent='Selecciona una versión y completa gastos válidos.';return}
+ if(total===null){out.textContent=chosen&&chosen.taxIncluded===false?'Precio publicado + IVA: sin precio final con impuestos no se estima financiamiento.':'Selecciona una versión y completa gastos válidos.';return}
  const entered=$('quoteAnnualRate').value.trim();
  if(entered===''){out.textContent='Ingresa una tasa para estimar cuotas.';return}
  const rate=Number(entered),pie=positive($('quoteDeposit').value),n=Number($('quoteMonths').value);
@@ -93,10 +96,10 @@ function updateBudget(){
   $('quoteSource').hidden=true;$('quoteDealer').hidden=true;
  }else{
   selected.innerHTML='<small>VERSIÓN COMERCIAL SELECCIONADA</small><h3>'+safe(chosen.brand+' '+chosen.family)+'</h3><p>'+safe(chosen.version)+
-    (chosen.modelYear?' · '+safe(chosen.modelYear):' · año de modelo no informado')+'</p><strong>'+clp(chosen.priceListClp)+'</strong>'+
+    (chosen.modelYear?' · '+safe(chosen.modelYear):' · año de modelo no informado')+'</p><strong>'+displayPrice(chosen)+'</strong>'+
     '<p class="quote-date">Fuente consultada '+safe(chosen.checkedAt)+' · '+safe(statusText(chosen))+'.</p>';
-  $('quoteTotal').textContent=total===null?'Revisa los gastos':clp(total);
-  $('quoteTotalNote').textContent=(chosen.version.startsWith('Precio desde')?'Precio desde publicado ':'Precio de lista ')+clp(chosen.priceListClp)+' + gastos ingresados '+(extras()===null?'inválidos':clp(extras()))+'. Consultar condiciones en fuente.';
+  $('quoteTotal').textContent=chosen.taxIncluded===false?'No calculable (+ IVA)':total===null?'Revisa los gastos':clp(total);
+  $('quoteTotalNote').textContent=chosen.taxIncluded===false?'Precio base '+displayPrice(chosen)+'. El IVA no está incluido: no se calcula total ni cuotas hasta contar con precio final.':priceKind(chosen)+' '+displayPrice(chosen)+' + gastos ingresados '+(extras()===null?'inválidos':clp(extras()))+'. Consultar condiciones en fuente.';
   $('quoteSource').href=chosen.source;$('quoteSource').hidden=false;
   const dealer=dealerPages[chosen.brand];$('quoteDealer').hidden=!dealer;
   if(dealer)$('quoteDealer').href=dealer;
@@ -143,7 +146,7 @@ $('quotePrint').addEventListener('click',()=>{if(amount()!==null)window.print();
 async function init(){
  for(const id of ['quoteCopy','quotePrint'])$(id).disabled=true;
  try{
-  const resp=await fetch('./sii/commercial-2026.json?v=20261020-list1485');
+  const resp=await fetch('./sii/commercial-2026.json?v=20261020-list1504');
   if(!resp.ok)throw Error('No disponible');
   const data=await resp.json();if(!Array.isArray(data))throw Error('Formato incorrecto');
   catalog=data.filter(x=>x&&x.currency==='CLP'&&Number.isInteger(x.priceListClp)&&x.priceListClp>0&&

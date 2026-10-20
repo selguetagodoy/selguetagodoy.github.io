@@ -3,6 +3,8 @@
 const api=window.RindelabSII;if(!api)return;
 const originalShow=api.show,originalCompare=api.decorateComparison;
 const clp=n=>Number.isFinite(n)?'$'+Math.round(n).toLocaleString('es-CL'):'Sin precio';
+const displayPrice=p=>clp(p.priceListClp)+(p.taxIncluded===false?' + IVA':'');
+const priceKind=p=>p.priceType==='oferta'?'Oferta publicada':p.priceType==='desde'||p.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos';
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const makeIdentity=p=>norm([p.brand,p.family,p.version,p.modelYear||'N/A'].join(' '));
@@ -18,7 +20,7 @@ function ageWarning(record){
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[];
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1485').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1504').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
   window.dispatchEvent(new Event("rindelab:prices-ready"));
@@ -46,12 +48,12 @@ function render(section,row,family){
  const available=match(row,family,loaded),chosen=selected(row);
  dst.replaceChildren();
  const title=document.createElement('div');title.className='sii-price-head';
- title.innerHTML='<small>PRECIOS DE LISTA NUEVOS · SIN BONOS</small>'+
- '<p>Valores publicados en sitios comerciales, por marca y versión. No incluyen descuentos, financiación, impuesto verde, patentamiento ni fletes cuando se cobran aparte. No son tasaciones de usados.</p>';
+ title.innerHTML='<small>PRECIOS COMERCIALES PUBLICADOS · REVISAR CONDICIONES</small>'+
+ '<p>Valores publicados por marca y versión. Ofertas, importes desde y precios + IVA no equivalen necesariamente al valor final de compra. Revisa cargos y condiciones en la fuente. No son tasaciones de usados.</p>';
  dst.append(title);
  if(chosen){
   const summary=document.createElement('div');summary.className='sii-selected-price';
-  summary.innerHTML='<small>VERSIÓN COMERCIAL SELECCIONADA</small><strong>'+clp(chosen.priceListClp)+'</strong>'+
+  summary.innerHTML='<small>VERSIÓN COMERCIAL SELECCIONADA</small><strong>'+displayPrice(chosen)+'</strong>'+
    '<p>'+esc(chosen.brand+' '+chosen.family+' · '+chosen.version)+(chosen.modelYear?' · modelo '+chosen.modelYear:' · año de modelo no informado')+'</p>'+
    '<p class="sii-small">Fuente consultada: '+esc(chosen.checkedAt)+(chosen.sourceOfferEnd?' · Campaña documentada hasta '+esc(chosen.sourceOfferEnd):'')+'. El fabricante puede modificar el precio sin previo aviso.</p>'+
    (ageWarning(chosen)?'<p class="sii-price-age" role="status">'+esc(ageWarning(chosen))+'</p>':'')+
@@ -75,9 +77,9 @@ function render(section,row,family){
  const list=document.createElement('div');list.className='sii-price-list';
  for(const p of available){
   const item=document.createElement('article');item.className='sii-price-item';
-  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>'+(p.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos')+' · fuente consultada '+esc(p.checkedAt)+'</span>'+ (p.sourceOfferEnd?'<span class="sii-price-age">Campaña documentada hasta '+esc(p.sourceOfferEnd)+'</span>':'')+
+  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>'+priceKind(p)+(p.taxIncluded===false?' · + IVA no incluido':'')+' · fuente consultada '+esc(p.checkedAt)+'</span>'+ (p.sourceOfferEnd?'<span class="sii-price-age">Campaña documentada hasta '+esc(p.sourceOfferEnd)+'</span>':'')+
     (ageWarning(p)?'<span class="sii-price-age">'+esc(ageWarning(p))+'</span>':'')+
-    '</div><div class="sii-price-amount">'+clp(p.priceListClp)+'</div>';
+    '</div><div class="sii-price-amount">'+displayPrice(p)+'</div>';
   const actions=document.createElement('div');actions.className='sii-price-actions';
   const choose=document.createElement('button');choose.type='button';choose.className='button secondary';choose.textContent='Elegir esta versión';
   choose.disabled=!!chosen&&makeIdentity(chosen)===makeIdentity(p);
@@ -101,7 +103,7 @@ api.decorateComparison=function(vehicles){
  if(!r)return;
  r.querySelector('th').textContent='Precio de lista nuevo (sin bonos)';
  const cells=[...r.querySelectorAll('td')],cars=vehicles.map(x=>x.row||x);
- cars.forEach((car,i)=>{const p=selected(car);if(cells[i])cells[i].textContent=p?clp(p.priceListClp)+' · versión elegida':'Elegir versión comercial en ficha';});
+ cars.forEach((car,i)=>{const p=selected(car);if(cells[i])cells[i].textContent=p?displayPrice(p)+' · versión elegida':'Elegir versión comercial en ficha';});
 };
 window.RindelabCommercial={
  ready:catalog,
@@ -111,7 +113,7 @@ window.RindelabCommercial={
    const items=match(row,family,loaded);if(!items.length)return null;
    return items.reduce((a,b)=>a.priceListClp<=b.priceListClp?a:b);
  },
- cleanPrice:record=>record&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
+ cleanPrice:record=>record&&record.taxIncluded!==false&&record.priceType!=='oferta'&&record.priceType!=='desde'&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
  clp,
  ageWarning
 };
