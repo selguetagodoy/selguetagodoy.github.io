@@ -12518,5 +12518,41 @@
     "checkedAt": "2026-10-20",
     "currency": "CLP",
     "priceBasis": "Precio de lista IVA incluido publicado por Gildemeister Retail para esta versión comercial; sin descuentos ni bonos."
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Ioniq 5",
+    "version": "IONIQ 5 NE EV PREMIUM",
+    "modelYear": null,
+    "priceListClp": 52890000,
+    "source": "https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-premium/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Gildemeister Retail; IVA incluido, sin bonos de financiamiento.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Ioniq 5",
+    "version": "IONIQ 5 NE EV LIMITED",
+    "modelYear": null,
+    "priceListClp": 57890000,
+    "source": "https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-limited/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Gildemeister Retail; IVA incluido, sin bonos de financiamiento.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Hyundai",
+    "family": "Ioniq 5",
+    "version": "IONIQ 5 NE EV AWD LIMITED",
+    "modelYear": null,
+    "priceListClp": 62890000,
+    "source": "https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-awd-limited/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Gildemeister Retail; IVA incluido, sin bonos de financiamiento.",
+    "technology": "EV"
   }
 ]
