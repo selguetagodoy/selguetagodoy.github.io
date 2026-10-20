@@ -1,0 +1,112 @@
+[
+  {
+    "brand": "Dongfeng",
+    "family": "T5 EVO",
+    "version": "1.5 HEV",
+    "modelYear": null,
+    "priceListClp": 23990000,
+    "source": "https://www.portillosur.cl/dong-feng/t5evo",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "Dongfeng",
+    "family": "AEOLUS GS",
+    "version": "AEOLUS GS CROSS",
+    "modelYear": null,
+    "priceListClp": 13990000,
+    "source": "https://www.portillosur.cl/dong-feng/aeolusgs",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "X5",
+    "version": "xDrive 30d M sport LCI",
+    "modelYear": null,
+    "priceListClp": 105900000,
+    "source": "https://www.portillosur.cl/bmw/x5",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "X2",
+    "version": "sDrive20i M Sport",
+    "modelYear": null,
+    "priceListClp": 55900000,
+    "source": "https://www.portillosur.cl/bmw/x2",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "X2",
+    "version": "xDrive20d M Sport",
+    "modelYear": null,
+    "priceListClp": 58900000,
+    "source": "https://www.portillosur.cl/bmw/x2",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 5",
+    "version": "520i Berlina Heritage",
+    "modelYear": 2026,
+    "priceListClp": 68900000,
+    "source": "https://www.portillosur.cl/bmw/serie5",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 4",
+    "version": "420i Gran Coupé Dynamic LCI II",
+    "modelYear": 2026,
+    "priceListClp": 52900000,
+    "source": "https://www.portillosur.cl/bmw/serie4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 4",
+    "version": "420i Cabriolet Dynamic LCI II",
+    "modelYear": null,
+    "priceListClp": 59900000,
+    "source": "https://www.portillosur.cl/bmw/serie4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 1",
+    "version": "120 Hatch Dynamic HEA",
+    "modelYear": 2026,
+    "priceListClp": 35900000,
+    "source": "https://www.portillosur.cl/bmw/serie1",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  },
+  {
+    "brand": "Mini",
+    "family": "COUNTRYMAN JCW ALL4",
+    "version": "JCW",
+    "modelYear": null,
+    "priceListClp": 54990000,
+    "source": "https://www.portillosur.cl/mini/countrymanjcwall4",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, Precio lista literal por versión, separado de bonos y ofertas. Documentado 19/10/2026; sin equiparar a fichas 3CV."
+  }
+]

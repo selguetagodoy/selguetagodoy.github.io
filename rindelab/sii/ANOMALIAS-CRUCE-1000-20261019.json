@@ -1,0 +1,39 @@
+{
+  "conflicts": [
+    {
+      "why": "different_price_for_same_version",
+      "prior": {
+        "version": "1.5 CVT PRIME",
+        "year": null,
+        "price": 13490000,
+        "source": "https://www.portillosur.cl/geely/coolraylite"
+      },
+      "next": {
+        "version": "1.5 CVT PRIME +",
+        "year": null,
+        "price": 14290000,
+        "source": "https://www.portillosur.cl/geely/coolraylite"
+      }
+    }
+  ],
+  "duplicates": [
+    {
+      "brand": "Volvo",
+      "family": "EX40",
+      "version": "P6",
+      "reason": "in_main"
+    },
+    {
+      "brand": "Volvo",
+      "family": "EX30",
+      "version": "E60 ULTRA",
+      "reason": "in_main"
+    },
+    {
+      "brand": "Volvo",
+      "family": "EX30",
+      "version": "CROSS COUNTRY",
+      "reason": "in_main"
+    }
+  ]
+}
