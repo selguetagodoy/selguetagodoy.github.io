@@ -663,6 +663,43 @@ await test('Nuevos BYD eléctricos conservan fuente publicada y no asignan rendi
   assert.equal(row.technology,'EV');assert.match(row.source,/^https:\/\/www\.autocosmos\.cl\/catalogo\//);
  }
 });
+await test('Inventario MD Gildemeister migrado sin perder precio, origen ni versiones electricas',async()=>{
+ const md=fs.readFileSync(path.join(__dirname,'../sii/INVENTARIO-MAESTRO-VEHICULOS-NUEVOS-20261020.md'),'utf8');
+ const complete=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
+ const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert(list.length>=1084,'Lote de 22 versiones faltante');
+ const pendingRows=md.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.trim().endsWith('| Agregar |'));
+ assert.equal(pendingRows.length,22,'El MD de origen no refleja las 22 altas');
+ for(const row of pendingRows){
+  const col=row.split('|').map(s=>s.trim());
+  const sourceUrl=col[6].split('](')[1]?.split(')')[0];assert(sourceUrl&&sourceUrl.startsWith('https://'),'Falta enlace '+row);
+  const x=list.find(z=>z.brand===col[1]&&z.family===col[2]&&z.version===col[3]);
+  assert(x,'Versión no migrada '+col[3]);assert.equal(x.priceListClp,Number(col[5].replace(/[^0-9]/g,'')));
+  assert.equal(x.source,sourceUrl);
+ }
+ assert(complete.includes('Gildemeister Retail')&&complete.includes('Portillo Sur'),'El MD maestro debe identificar la concesionaria de origen');
+ for(const version of ['IONIQ 5 NE EV PREMIUM','IONIQ 5 NE EV LIMITED','IONIQ 5 NE EV AWD LIMITED']){
+  assert.equal(list.find(x=>x.brand==='Hyundai'&&x.version===version)?.technology,'EV');
+ }
+});
+await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicados',async()=>{
+ const md=fs.readFileSync(path.join(__dirname,'../sii/LOTE-CHEVROLET-MAXUS-20261020.md'),'utf8');
+ const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert(data.length>=1109);
+ const rows=md.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.trim().endsWith('| Agregar |'));
+ assert.equal(rows.length,25);
+ for(const row of rows){
+  const c=row.split('|').map(x=>x.trim());
+  const sourceUrl=c[7].split('](')[1]?.split(')')[0];
+  const x=data.find(z=>z.brand===c[1]&&z.family===c[2]&&z.version===c[3]);
+  assert(x,'Falta versión comercial '+c[1]+' '+c[2]+' '+c[3]);
+  assert.equal(x.priceListClp,Number(c[6].replace(/[^0-9]/g,'')));
+  assert.equal(x.source,sourceUrl);
+  assert.equal(x.modelYear,c[4]==='No informado'?null:Number(c[4]));
+ }
+ assert(data.some(x=>x.brand==='Chevrolet'&&x.family==='Captiva PHEV'&&x.technology==='PHEV'));
+ assert(data.some(x=>x.brand==='Maxus'&&x.family==='T90 EV'&&x.technology==='EV'));
+});
 await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercial identificada',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  const expected={Mitsubishi:13,Peugeot:3,Fiat:4,Jeep:2,KGM:5};
@@ -1200,7 +1237,7 @@ await test('Marcas: 134 marcas del 3CV histórico, filtro transparente y CSV',as
  assert((await p.locator('#brandRows tr').count())>=119,'Se conservan las 119 marcas históricas y se agregan nuevas comerciales');
  await p.fill('#brandSearch','Chevrolet');
  assert.equal(await p.locator('#brandRows tr').count(),1);
- assert.match(await p.locator('#brandRows tr').first().textContent(),/Sin precio documentado/);
+ assert.match(await p.locator('#brandRows tr').first().textContent(),/Precio documentado/);
  await p.fill('#brandSearch','Chery');
  assert.equal(await p.locator('#brandRows tr').count(),1);
  assert.match(await p.locator('#brandRows tr').first().textContent(),/Precio documentado/);
