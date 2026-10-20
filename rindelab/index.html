@@ -38,7 +38,7 @@
  <div class="shell header-inner">
   <div class="brand-lockup"><a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a><small class="brand-tagline">Inteligencia energética vehicular para Chile</small></div>
   <nav class="header-links" aria-label="Navegación principal"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizador</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav>
-  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizar auto</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav></details>
+  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizador</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav></details>
  </div>
 </header>
 <main id="inicio" class="shell">
@@ -121,7 +121,7 @@
    <div class="source-legend-details">
     <p><strong>Rendimientos oficiales.</strong> Base histórica 3CV de mayo y 272 registros adicionales de la API oficial de octubre de 2026. Cada ficha muestra su ciclo NEDC o WLTP; sus valores no son directamente equivalentes.</p>
     <p><strong>Homologaciones MTT pendientes.</strong> Un código de septiembre continúa sin ficha energética en la consulta de octubre. No recibe costos estimados ni se mezcla con fichas con rendimiento.</p>
-    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="#fuentes">Metodología completa ↗</a></p>
+    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="./metodologia.html">Metodología completa ↗</a></p>
    </div>
   </details>
   <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
@@ -191,7 +191,7 @@
       <p class="bill-help">Si tu boleta detalla el valor del kWh y los cargos variables, es preferible ingresar directamente el precio aplicable. Puedes revisar las <a href="https://www.sec.cl/area-ciudadana/tarifas-electricas/" target="_blank" rel="noopener noreferrer">tarifas residenciales BT1 (SEC)</a> y los <a href="https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.html" target="_blank" rel="noopener noreferrer">pliegos de Enel</a> cuando corresponda.</p>
     </details>
     <section class="charge-example" aria-labelledby="chargeExampleHeading">
-      <div class="charge-example-title"><h3 id="chargeExampleHeading">¿Cuánto cuesta una recarga de energía?</h3><div class="field"><label for="chargeKwh">Energía cargada (kWh)</label><input id="chargeKwh" type="number" min="1" max="200" step="1" value="20" inputmode="numeric"></div></div>
+      <div class="charge-example-title"><h3 id="chargeExampleHeading">¿Cuánto cuesta cargar 20 kWh de energía?</h3><div class="field"><label for="chargeKwh">Energía cargada (kWh)</label><input id="chargeKwh" type="number" aria-describedby="chargeKwhNote" min="1" max="200" step="1" value="20" inputmode="numeric"><small id="chargeKwhNote">El monto se calcula para los kWh indicados, no necesariamente para una carga completa.</small></div></div>
       <div class="charge-example-grid">
         <div class="charge-example-value"><small>En casa</small><strong id="homeSessionCost">Ingresa tu tarifa</strong><span id="homeSessionRate">Depende de tu boleta</span></div>
         <div class="charge-example-value"><small>En electrolinera</small><strong id="publicSessionCost">$6.800</strong><span id="publicSessionRate">Copec Voltex, AC ciudad valle</span></div>
@@ -299,5 +299,25 @@
 <script src="./sii/prices.js?v=20261020-1485" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
 <script src="./v6.js?v=20261018-comprador1" defer></script>
+<script>
+/* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
+(function(){
+ function openTarget(){
+   if (window.location.hash === '#supuestos') {
+     const panel=document.getElementById('supuestos');
+     if(panel) { panel.open=true; panel.removeAttribute('hidden'); }
+   }
+ }
+ window.addEventListener('hashchange',openTarget);
+ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',openTarget); else openTarget();
+ const adjust=document.getElementById('scenarioAdjust');
+ if(adjust) adjust.addEventListener('click',openTarget);
+ const input=document.getElementById('chargeKwh');
+ const title=document.getElementById('chargeExampleHeading');
+ if(input&&title) input.addEventListener('input',function(){
+   const n=Number(input.value);if(Number.isFinite(n)&&n>0) title.textContent='¿Cuánto cuesta cargar '+new Intl.NumberFormat('es-CL',{maximumFractionDigits:1}).format(n)+' kWh de energía?';
+ });
+})();
+</script>
 </body>
 </html>
