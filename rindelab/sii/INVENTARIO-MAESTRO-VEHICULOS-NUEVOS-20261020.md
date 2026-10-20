@@ -83,3 +83,13 @@ Para migrar: **Agregar** pasa a JSON (solo con precio de lista explícito); **Re
 Este lote **no representa todos los vehículos nuevos vendidos en Chile**. Es un primer barrido ordenado por versiones y fuente. Continuar con Portillo, Salazar Israel, Pompeyo, Astara Retail, Gildemeister (otros modelos/marcas), fabricantes e importadores. No utilizar la cantidad total de fichas como equivalente de cobertura de mercado. Priorizar EV, HEV, PHEV, REEV, diésel y bencina; indicar origen de cada precio.
 
 **Inconsistencias de fuente o nombre:** conservar el vínculo comercial; no detener carga por ortografía o naming. Evitar enlazar rendimientos energéticos a versiones distintas sin correspondencia fundamentada.
+
+## Segundo barrido — eléctricos Hyundai IONIQ 5
+
+Se revisaron las fichas individuales de Gildemeister Retail, incluyendo los precios de lista sin aplicar bonos. Estas versiones no estaban registradas en el catálogo a la fecha del cruce.
+
+| Marca | Modelo | Versión comercial publicada | Tecnología | Precio lista CLP | Origen | Situación |
+|---|---|---|---|---:|---|---|
+| Hyundai | Ioniq 5 | IONIQ 5 NE EV PREMIUM | EV | $52.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-premium/) | Agregar |
+| Hyundai | Ioniq 5 | IONIQ 5 NE EV LIMITED | EV | $57.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-limited/) | Agregar |
+| Hyundai | Ioniq 5 | IONIQ 5 NE EV AWD LIMITED | EV | $62.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-awd-limited/) | Agregar |
