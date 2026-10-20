@@ -14092,5 +14092,71 @@
     "checkedAt": "2026-10-20",
     "currency": "CLP",
     "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "GLC",
+    "version": "GLC 200 4MATIC",
+    "modelYear": null,
+    "priceListClp": 62900000,
+    "source": "https://www.kaufmann.cl/automoviles/glc",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio comercial publicado por concesionario Kaufmann Chile; precio de lista cuando así lo identifica la fuente."
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "GLC",
+    "version": "GLC 220d 4MATIC",
+    "modelYear": null,
+    "priceListClp": 67900000,
+    "source": "https://www.kaufmann.cl/automoviles/glc",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio comercial publicado por concesionario Kaufmann Chile; precio de lista cuando así lo identifica la fuente."
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "GLC",
+    "version": "GLC 200 4MATIC Advanced",
+    "modelYear": null,
+    "priceListClp": 63900000,
+    "source": "https://www.kaufmann.cl/automoviles/mercedes-benz/glc",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio comercial publicado por concesionario Kaufmann Chile; precio de lista cuando así lo identifica la fuente."
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "GLC",
+    "version": "GLC 220d 4MATIC Advanced",
+    "modelYear": null,
+    "priceListClp": 68900000,
+    "source": "https://www.kaufmann.cl/automoviles/mercedes-benz/glc",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio comercial publicado por concesionario Kaufmann Chile; precio de lista cuando así lo identifica la fuente."
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "CLE Coupé",
+    "version": "CLE 200 Coupé",
+    "modelYear": null,
+    "priceListClp": 64900000,
+    "source": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio comercial publicado por concesionario Kaufmann Chile; precio de lista cuando así lo identifica la fuente."
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "CLE Coupé",
+    "version": "CLE 300 Coupé",
+    "modelYear": null,
+    "priceListClp": 72900000,
+    "source": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio comercial publicado por concesionario Kaufmann Chile; precio de lista cuando así lo identifica la fuente."
   }
 ]
