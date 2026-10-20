@@ -12261,5 +12261,53 @@
     "checkedAt": "2026-10-19",
     "currency": "CLP",
     "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "BYD",
+    "family": "Dolphin EV",
+    "version": "Pure Electric",
+    "modelYear": 2025,
+    "priceListClp": 28990000,
+    "source": "https://www.autocosmos.cl/catalogo/2025/byd/dolphin-ev/pure-electric/178814",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado en catálogo comercial Autocosmos Chile para la versión indicada (año modelo 2025). Consulta el enlace para corroborar las condiciones.",
+    "technology": "EV"
+  },
+  {
+    "brand": "BYD",
+    "family": "Han EV",
+    "version": "GS",
+    "modelYear": 2025,
+    "priceListClp": 62990000,
+    "source": "https://www.autocosmos.cl/catalogo/2025/byd/han-ev/gs/178813",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado en catálogo comercial Autocosmos Chile para la versión indicada (año modelo 2025). Consulta el enlace para corroborar las condiciones.",
+    "technology": "EV"
+  },
+  {
+    "brand": "BYD",
+    "family": "Seal",
+    "version": "GS",
+    "modelYear": 2025,
+    "priceListClp": 50990000,
+    "source": "https://www.autocosmos.cl/catalogo/2025/byd/seal/gs/178815",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado en catálogo comercial Autocosmos Chile para la versión indicada (año modelo 2025). Consulta el enlace para corroborar las condiciones.",
+    "technology": "EV"
+  },
+  {
+    "brand": "BYD",
+    "family": "Tang",
+    "version": "GS",
+    "modelYear": 2025,
+    "priceListClp": 70990000,
+    "source": "https://www.autocosmos.cl/catalogo/2025/byd/tang/gs/178822",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado en catálogo comercial Autocosmos Chile para la versión indicada (año modelo 2025). Consulta el enlace para corroborar las condiciones.",
+    "technology": "EV"
   }
 ]

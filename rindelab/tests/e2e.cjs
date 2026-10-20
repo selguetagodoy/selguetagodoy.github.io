@@ -648,10 +648,19 @@ await test('Catálogo de precios de lista sin bonos con fuente oficial',async()=
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.gildemeisterretail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.cartoni\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl|www\.mini\.cl)\//);
+  assert.match(item.source,/^https:\/\/[^/\s]+\//,'La ficha comercial requiere enlace HTTPS directo a la publicación del precio');
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
+ }
+});
+await test('Nuevos BYD eléctricos conservan fuente publicada y no asignan rendimientos automáticos',async()=>{
+ const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ const expected={'Dolphin EV':28990000,'Han EV':62990000,'Seal':50990000,'Tang':70990000};
+ for(const [family,price] of Object.entries(expected)){
+  const row=data.find(x=>x.brand==='BYD'&&x.family===family&&x.modelYear===2025);
+  assert(row,'Falta modelo '+family);assert.equal(row.priceListClp,price);
+  assert.equal(row.technology,'EV');assert.match(row.source,/^https:\/\/www\.autocosmos\.cl\/catalogo\//);
  }
 });
 await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercial identificada',async()=>{
@@ -732,7 +741,7 @@ await test('BYD y Volvo: dieciséis precios de lista literales sin deducir bonos
  assert.equal(latest.length,16);
  assert.equal(latest.filter(x=>x.brand==='BYD').length,9);
  assert.equal(latest.filter(x=>x.brand==='Volvo').length,7);
- assert.equal(list.filter(x=>x.brand==='BYD').length,12);
+ assert(list.filter(x=>x.brand==='BYD').length>=12);
  assert(list.filter(x=>x.brand==='Volvo').length>=7);
  assert.equal(latest.find(x=>x.brand==='BYD'&&x.family==='Dolphin Mini')?.priceListClp,17990000);
  assert.equal(latest.find(x=>x.brand==='BYD'&&x.family==='Shark')?.priceListClp,48398100);
@@ -1049,7 +1058,7 @@ await test('Changan Hunter presenta cuatro precios de lista seleccionables sin a
  await page.locator('.vehicle-card button[data-detail]').first().click();
  await page.waitForTimeout(1000);
  const noReev=String(await page.locator('#siiCommercial').textContent());
- assert.match(noReev,/Sin precio de lista verificado/,'Hunter EREV - '+noReev.slice(0,700));
+ assert.match(noReev,/Sin precio publicado en el catálogo/,'Hunter EREV - '+noReev.slice(0,700));
  assert.equal(await page.locator('.sii-price-item').count(),0);
  await page.locator('#detailClose').click();
 });

@@ -5,7 +5,7 @@
 <meta name="description" content="Cotizador gratuito de autos nuevos en Chile: precios de lista oficiales por marca y versión, gastos adicionales y simulación referencial de financiamiento. RINDELAB.">
 <meta name="author" content="Sebastián Elgueta Godoy">
 <meta property="og:title" content="Cotizador de autos nuevos | RINDELAB">
-<meta property="og:description" content="298 precios de lista documentados, con fuente y fecha, sin bonos ni precios inventados. Cotiza por versión comercial.">
+<meta property="og:description" content="Consulta precios publicados de distintas marcas, por modelo y versión, con enlace a la fuente comercial.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://selguetagodoy.github.io/rindelab/cotizador.html">
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/cotizador.html">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="./v6.css?v=20261018-interlocal-10">
 <link rel="stylesheet" href="./cotizador.css?v=20261018-comprador1">
 <title>Cotizador de autos nuevos | RINDELAB</title>
-<script src="./cotizador.js?v=20261018-comprador1" defer></script>
+<script src="./cotizador.js?v=20261020-catalogo1062" defer></script>
 <link rel="stylesheet" href="./v2-secondary.css?v=20261019-v2a">
 </head>
 <body>
@@ -28,14 +28,14 @@
 <p>Busca una marca, modelo y versión. Revisa el precio de lista y calcula tu presupuesto.</p></div>
 <div class="quote-layout">
 <section class="quote-catalog" aria-labelledby="catalogTitle">
-<div class="quote-heading"><h2 id="catalogTitle">Busca tu versión</h2><p id="catalogCount" role="status" aria-live="polite">Cargando catálogo oficial…</p></div>
+<div class="quote-heading"><h2 id="catalogTitle">Busca tu versión</h2><p id="catalogCount" role="status" aria-live="polite">Cargando precios publicados…</p></div>
 <div class="quote-filters">
 <div class="field"><label for="quoteSearch">Buscar nombre o versión</label><input id="quoteSearch" type="search" autocomplete="off" placeholder="Ej. Corolla Cross, Hunter, Kona"></div>
 <div class="field"><label for="quoteBrand">Marca</label><select id="quoteBrand"><option value="">Todas las marcas</option></select></div>
 <div class="field"><label for="quoteFamily">Modelo comercial</label><select id="quoteFamily"><option value="">Todos los modelos</option></select></div>
 <div class="field"><label for="quoteSort">Ordenar</label><select id="quoteSort"><option value="brand">Marca y modelo</option><option value="low">Precio menor a mayor</option><option value="high">Precio mayor a menor</option><option value="recent">Última revisión</option></select></div>
 </div>
-<p class="quote-note">Precios de lista, sin bonos. Revisa la fuente y fecha de cada versión. No equivalen a una oferta de concesionario.</p>
+<p class="quote-note">Precios de lista publicados en sitios comerciales, sin aplicar bonos. Los nombres se presentan como figuran en la fuente. <strong>*</strong> La vinculación con rendimientos homologados 3CV se realiza solo cuando puede identificarse la versión correspondiente.</p>
 <div id="quoteResults" class="quote-results" aria-live="polite"></div>
 <button type="button" id="quoteMore" class="button secondary" hidden>Ver más versiones</button>
 </section>
@@ -63,7 +63,7 @@
 <div class="quote-actions">
 <button type="button" class="button primary" id="quoteCopy">Copiar presupuesto</button>
 <button type="button" class="button secondary" id="quotePrint">Imprimir</button>
-<a id="quoteSource" href="#" class="button secondary" target="_blank" rel="noopener noreferrer" hidden>Confirmar precio en fuente oficial ↗</a>
+<a id="quoteSource" href="#" class="button secondary" target="_blank" rel="noopener noreferrer" hidden>Ver precio en la fuente ↗</a>
 <a id="quoteDealer" href="#" class="button secondary" target="_blank" rel="noopener noreferrer" hidden>Solicitar cotización a la marca ↗</a>
 </div>
 <p id="quoteFeedback" class="quote-feedback" role="status" aria-live="polite"></p>
@@ -72,7 +72,7 @@
 </div>
 <details class="quote-legal"><summary>Fuentes, alcance y limitaciones</summary>
 <h2>Cómo interpretar el precio</h2>
-<p>Catálogo <span id="quoteCatalogNumber">—</span> de precios de lista individuales. Cada tarjeta indica la fecha de revisión y conserva un enlace a su página oficial. Los valores pueden variar sin previo aviso; RINDELAB no verifica disponibilidad, stock, costos de financiamiento ni precios finales personalizados en tiempo real. Si el vehículo es usado, revisa la <a href="./index.html">consulta SII dentro de su ficha</a>, que informa tasación fiscal y permiso de circulación, pero no el precio de reventa.</p>
+<p>Catálogo <span id="quoteCatalogNumber">—</span> de precios de lista individuales. Cada tarjeta indica la fecha de consulta y enlaza la página comercial donde se publicó el precio. Los valores pueden variar sin previo aviso; RINDELAB no verifica disponibilidad, stock, costos de financiamiento ni precios finales personalizados en tiempo real. Si el vehículo es usado, revisa la <a href="./index.html">consulta SII dentro de su ficha</a>, que informa tasación fiscal y permiso de circulación, pero no el precio de reventa.</p>
 <p>Los costos energéticos por kilómetro pertenecen a la base <a href="./index.html#buscador">3CV</a>. No se suman al presupuesto de compra salvo que exista correspondencia verificada entre versión comercial y ficha 3CV; esta herramienta no inventa ese vínculo.</p>
 </details>
 </main>

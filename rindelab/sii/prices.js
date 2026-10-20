@@ -13,12 +13,12 @@ function ageDays(value){
 }
 function ageWarning(record){
  const days=ageDays(record?.checkedAt);
- return days!==null&&days>=30?'Datos revisados hace '+days+' días. Confirma el precio de lista en el sitio oficial antes de comparar o comprar.':'';
+ return days!==null&&days>=30?'Datos revisados hace '+days+' días. Confirma el precio de lista en el sitio enlazado antes de comparar o comprar.':'';
 }
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[];
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261019-list1049').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1062').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
   return loaded;
@@ -46,7 +46,7 @@ function render(section,row,family){
  dst.replaceChildren();
  const title=document.createElement('div');title.className='sii-price-head';
  title.innerHTML='<small>PRECIOS DE LISTA NUEVOS · SIN BONOS</small>'+
- '<p>Valores publicados por fabricantes o sus tiendas oficiales, por versión. No incluyen descuentos, financiación, impuesto verde, patentamiento ni fletes cuando se cobran aparte. No son tasaciones de usados.</p>';
+ '<p>Valores publicados en sitios comerciales, por marca y versión. No incluyen descuentos, financiación, impuesto verde, patentamiento ni fletes cuando se cobran aparte. No son tasaciones de usados.</p>';
  dst.append(title);
  if(chosen){
   const summary=document.createElement('div');summary.className='sii-selected-price';
@@ -54,7 +54,7 @@ function render(section,row,family){
    '<p>'+esc(chosen.brand+' '+chosen.family+' · '+chosen.version)+(chosen.modelYear?' · modelo '+chosen.modelYear:' · año de modelo no informado')+'</p>'+
    '<p class="sii-small">Fuente consultada: '+esc(chosen.checkedAt)+(chosen.sourceOfferEnd?' · Campaña documentada hasta '+esc(chosen.sourceOfferEnd):'')+'. El fabricante puede modificar el precio sin previo aviso.</p>'+
    (ageWarning(chosen)?'<p class="sii-price-age" role="status">'+esc(ageWarning(chosen))+'</p>':'')+
-   '<a href="'+esc(chosen.source)+'" target="_blank" rel="noopener noreferrer">Ver precio en sitio oficial ↗</a>';
+   '<a href="'+esc(chosen.source)+'" target="_blank" rel="noopener noreferrer">Ver precio publicado ↗</a>';
   const remove=document.createElement('button');remove.type='button';remove.className='button secondary';remove.textContent='Quitar versión comercial';
   remove.addEventListener('click',()=>{clear(row);render(section,row,family);});
   const quote=document.createElement('a');
@@ -68,7 +68,7 @@ function render(section,row,family){
   dst.append(p);
  }
  if(!available.length){
-  const missing=document.createElement('p');missing.className='sii-pending';missing.textContent='Sin precio de lista verificado en el catálogo inicial para este modelo. Puede estar descontinuado o pendiente de cobertura; no se sustituye por la tasación SII.';
+  const missing=document.createElement('p');missing.className='sii-pending';missing.textContent='Sin precio publicado en el catálogo para este modelo. Puede estar descontinuado o pendiente de cobertura; no se sustituye por la tasación SII.';
   dst.append(missing);return;
  }
  const list=document.createElement('div');list.className='sii-price-list';
@@ -81,7 +81,7 @@ function render(section,row,family){
   const choose=document.createElement('button');choose.type='button';choose.className='button secondary';choose.textContent='Elegir esta versión';
   choose.disabled=!!chosen&&makeIdentity(chosen)===makeIdentity(p);
   choose.addEventListener('click',()=>{persist(row,p);render(section,row,family);});
-  const a=document.createElement('a');a.href=p.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Fuente oficial ↗';
+  const a=document.createElement('a');a.href=p.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ver fuente ↗';
   actions.append(choose,a);item.append(actions);list.append(item);
  }
  dst.append(list);
