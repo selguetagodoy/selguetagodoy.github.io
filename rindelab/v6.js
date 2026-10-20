@@ -8,7 +8,7 @@ const fmt=n=>Number(n).toLocaleString('es-CL');
 const techHuman={EV:'Eléctrico',HEV:'Híbrido',MHEV:'Híbrido suave',PHEV:'Híbrido enchufable',REEV:'Eléctrico con extensor',Bencina:'Bencina',Diésel:'Diésel'};
 function updateScenarioSummary(){
  const km=Number($('annualKm').value)||15000;
- const mode=$('chargeScenario').value,place=mode==='home'?'carga en casa':mode==='mixed'?'carga mixta':mode==='manual'?'tarifa manual':'carga pública';
+ const mode=$('chargeScenario').value,place=mode==='home'?'carga en casa':mode==='mixed'?'carga mixta (80/20 editable)':mode==='manual'?'tarifa manual':'carga pública';
  $('scenarioSummaryText').textContent='Calculado para '+fmt(km)+' km al año · '+place+' · precios editables';
 }
 const safe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -417,6 +417,7 @@ function showDetail(i){
    [['Rendimiento oficial',metric(r)]]),
   ['Costo energético estimado/100 km',isPlugInTechnology(r[F.TECH])?'No calculable sin supuestos de uso eléctrico y combustible':money(cost(r))],
   ['Gasto energético anual estimado ('+fmt(Number($('annualKm').value))+' km)',money(annualEnergy(r))],
+  ['Gasto energético estimado a 3 años',money(annualEnergy(r,3))],
   ['Gasto energético estimado a 5 años',money(annualEnergy(r,5))],
   ...(r[F.TECH]==='EV'?[
     ['Costo de 100 km cargando en casa',money(evCostForTariff(r,number($('homeChargeRate').value)))],
@@ -525,6 +526,7 @@ function renderComparisonContent(){
   ]:[]),
   ['Costo estimado /100 km',r=>money(cost(r))],
   ['Gasto anual ('+fmt(Number($('annualKm').value))+' km)',r=>money(annualEnergy(r))],
+  ['Gasto energético en 3 años',r=>money(annualEnergy(r,3))],
   ['Gasto energético en 5 años',r=>money(annualEnergy(r,5))],
   ['Ciclo de ensayo',r=>r[F.CYCLE]],
   ['Homologación',r=>r[F.DATE]],
@@ -728,6 +730,14 @@ $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').tex
 $('sort').addEventListener('change',render);
 $('mttSearchMore').addEventListener('click',()=>{mttLimit+=10;renderMTT();});
 for(const id of ['gasPrice','dieselPrice','annualKm'])$(id).addEventListener('change',refreshEnergyViews);
+$('trafficProfile').addEventListener('change',refreshEnergyViews);
+document.querySelectorAll('[data-rinde-explore]').forEach(button=>button.addEventListener('click',()=>{
+ if(!all.length)return;
+ for(const id of ['query','brand','model','bodytype','cycle','year'])$(id).value='';
+ if(button.dataset.rindeExplore==='lowest'){$('tech').value='';$('sort').value='cheapest';}
+ else{$('tech').value=button.dataset.rindeExplore;$('sort').value='recent';}
+ choices();performSearch();
+}));
 for(const id of ['chargeScenario','publicChargeRate','homeChargeShare']){
  $(id).addEventListener('change',()=>{updateChargeScenario();refreshEnergyViews();});
 }
