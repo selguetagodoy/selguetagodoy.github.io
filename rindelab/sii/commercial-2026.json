@@ -7332,17 +7332,6 @@
   },
   {
     "brand": "JAC",
-    "family": "Seguridad Avanzada",
-    "version": "Doble airbag, frenos ABS con discos ventilados adelante y tambores atrás. Cinturones de tres puntos con pretensores, alarma de motor, control crucero y una estructura robusta para mayor protección.",
-    "modelYear": 2026,
-    "priceListClp": 21051100,
-    "source": "https://www.portillosur.cl/jac/x200",
-    "checkedAt": "2026-10-19",
-    "currency": "CLP",
-    "priceBasis": "Portillo Sur Chile, Precio lista en tabla de versión individual, sin promoción/bono. Consulta 19/10/2026. No equivalencia automática 3CV."
-  },
-  {
-    "brand": "JAC",
     "family": "X200",
     "version": "2.0T DSL MT C S JAULA GAS",
     "modelYear": null,
@@ -7464,17 +7453,6 @@
   },
   {
     "brand": "Hyundai",
-    "family": "Seguridad Avanzada",
-    "version": "El modelo está equipado con características de seguridad avanzadas para garantizar la protección de todos los ocupantes. Incluye frenos ABS, EBD, ESC y TCS. Los airbags frontales, laterales y de cortina ofrecen una protección integral. Además, cuenta con asistencia de arranque en pendientes (HAC), cámara de reversa con sensores de estacionamiento traseros y sistemas avanzados como el asistente de mantenimiento de carril, alerta de colisión frontal y monitoreo de punto ciego, asegurando una conducción segura en diversas condiciones.",
-    "modelYear": 2026,
-    "priceListClp": 35985600,
-    "source": "https://www.portillosur.cl/hyundai/stariaus4mb",
-    "checkedAt": "2026-10-19",
-    "currency": "CLP",
-    "priceBasis": "Portillo Sur Chile, Precio lista documentado por versión, excluye promociones/bonos; corte 19/10/2026. No relación 3CV automática."
-  },
-  {
-    "brand": "Hyundai",
     "family": "STARIA US4 MB",
     "version": "2.2 CRDI MT 11P FL",
     "modelYear": null,
@@ -7491,17 +7469,6 @@
     "modelYear": null,
     "priceListClp": 38544100,
     "source": "https://www.portillosur.cl/hyundai/stariaus4mb",
-    "checkedAt": "2026-10-19",
-    "currency": "CLP",
-    "priceBasis": "Portillo Sur Chile, Precio lista documentado por versión, excluye promociones/bonos; corte 19/10/2026. No relación 3CV automática."
-  },
-  {
-    "brand": "Hyundai",
-    "family": "Seguridad Avanzada",
-    "version": "Está equipado con avanzadas características de seguridad para garantizar la protección de todos los ocupantes. Incluye frenos ABS, EBD, ESC y TCS. Los airbags frontales, laterales y de cortina ofrecen una protección integral. Además, cuenta con asistencia de arranque en pendientes (HAC), cámara de reversa con sensores de estacionamiento traseros y sistemas avanzados como el asistente de mantenimiento de carril, alerta de colisión frontal, monitoreo de punto ciego y asistente de tráfico cruzado trasero.",
-    "modelYear": 2026,
-    "priceListClp": 32356100,
-    "source": "https://www.portillosur.cl/hyundai/stariaus4fg",
     "checkedAt": "2026-10-19",
     "currency": "CLP",
     "priceBasis": "Portillo Sur Chile, Precio lista documentado por versión, excluye promociones/bonos; corte 19/10/2026. No relación 3CV automática."
@@ -7777,17 +7744,6 @@
     "modelYear": null,
     "priceListClp": 14268100,
     "source": "https://www.portillosur.cl/foton/tm5",
-    "checkedAt": "2026-10-19",
-    "currency": "CLP",
-    "priceBasis": "Portillo Sur Chile, Precio lista documentado por versión, excluye promociones/bonos; corte 19/10/2026. No relación 3CV automática."
-  },
-  {
-    "brand": "Dongfeng",
-    "family": "Seguridad Avanzada",
-    "version": "El Dongfeng Huge incorpora un completo paquete de seguridad activa y pasiva, diseñado para proteger a todos sus ocupantes. Su estructura reforzada de acero de alta resistencia actúa como una coraza ante impactos, mientras los sistemas de control de estabilidad (ESP), frenos ABS con EBD y asistente de arranque en pendiente (HSA) entregan un control total en cualquier situación. A esto se suman airbags frontales y laterales, junto con cámaras y sensores de estacionamiento que facilitan cada maniobra. Con Huge, la seguridad no se promete: se vive en cada kilómetro.",
-    "modelYear": 2026,
-    "priceListClp": 18990000,
-    "source": "https://www.portillosur.cl/dong-feng/huge",
     "checkedAt": "2026-10-19",
     "currency": "CLP",
     "priceBasis": "Portillo Sur Chile, Precio lista documentado por versión, excluye promociones/bonos; corte 19/10/2026. No relación 3CV automática."
