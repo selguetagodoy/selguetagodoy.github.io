@@ -21,7 +21,7 @@ table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}thead{b
 <p class="muted">TRANSPARENCIA DE DATOS · CHILE</p><h1>Marcas y cobertura documental</h1>
 <p class="brand-summary">Explora las marcas presentes en el registro 3CV y cuáles tienen precios de lista documentados por versión.</p><details class="brand-about"><summary>¿Qué significa esta cobertura?</summary><p>Consulta todas las marcas del registro energético 3CV de mayo de 2026 y distingue cuáles tienen precios de lista comerciales documentados. <strong>Una marca sin precio no significa que no venda vehículos en Chile</strong>: significa que RINDELAB todavía no cuenta con un valor de lista por versión verificable. Las cifras de homologación son históricas, no stock ni catálogo comercial.</p></details>
 <section class="metrics" aria-label="Indicadores de cobertura">
-<div class="metric"><strong id="metricBrands">—</strong><span>Marcas en 3CV histórico</span></div>
+<div class="metric"><strong id="metricBrands">—</strong><span>Marcas agrupadas 3CV</span></div>
 <div class="metric"><strong id="metricCovered">—</strong><span>Marcas con precio documentado</span></div>
 <div class="metric"><strong id="metricPrices">—</strong><span>Precios por versión</span></div>
 </section>
@@ -31,7 +31,7 @@ table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}thead{b
 <div class="field"><label for="brandStatus">Cobertura de precios</label><select id="brandStatus"><option value="all">Todas las marcas</option><option value="available">Con precios verificados</option><option value="pending">Sin precio documentado</option></select></div>
 <button type="button" id="exportBrands">Exportar CSV</button>
 </div>
-<div class="scroller"><table><thead><tr><th>Marca según 3CV</th><th style="text-align:right">Fichas 3CV mayo</th><th style="text-align:right">Precios comerciales</th><th>Estado</th></tr></thead><tbody id="brandRows"><tr><td colspan="4">Cargando fuentes documentales…</td></tr></tbody></table></div>
+<div class="scroller"><table><thead><tr><th>Marca comercial (alias 3CV)</th><th style="text-align:right">Fichas 3CV mayo</th><th style="text-align:right">Precios comerciales</th><th>Estado</th></tr></thead><tbody id="brandRows"><tr><td colspan="4">Cargando fuentes documentales…</td></tr></tbody></table></div>
 <div class="foot"><span id="brandCount" aria-live="polite">Cargando marcas…</span> · <a href="./cotizador.html">Consultar versiones y precios</a></div>
 </section>
 <p><small>Fuentes: <a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">archivo 3CV 08/05/2026</a> y catálogo comercial de RINDELAB con URLs por versión. No se certifica ninguna equivalencia técnica entre códigos de homologación y versiones comerciales. Esta tabla comprende el corte histórico de mayo; las fichas adicionales de la API de octubre se consultan en el buscador principal.</small></p>
@@ -39,17 +39,19 @@ table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}thead{b
 <script>
 (()=>{'use strict';
 const $=x=>document.getElementById(x),norm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(),num=x=>Number(x).toLocaleString('es-CL');
+const brandAliases=new Map([['m. benz','Mercedes-Benz'],['haval','Great Wall'],['ssangyong','KGM'],['lynk co','Lynk & Co'],['zx auto','Zxauto'],['dfm','Dongfeng'],['mitsubishi fuso','Fuso'],['exeed born for more','Exeed']]);
+const canonicalBrand=x=>brandAliases.get(norm(x))||x;
 let all=[],visible=[];
 function td(text,className){const el=document.createElement('td');el.textContent=String(text);if(className)el.className=className;return el;}
 function render(){
 const q=norm($('brandSearch').value).trim(),status=$('brandStatus').value;
-visible=all.filter(x=>norm(x.brand).includes(q)&&(status==='all'||(status==='available'?x.priceCount>0:x.priceCount===0)));
+visible=all.filter(x=>norm([x.brand,...(x.aliases||[])].join(' ')).includes(q)&&(status==='all'||(status==='available'?x.priceCount>0:x.priceCount===0)));
 $('brandRows').replaceChildren();
 const frag=document.createDocumentFragment();for(const b of visible){
- const tr=document.createElement('tr');tr.append(td(b.brand),td(num(b.homologationRecords),'num'),td(num(b.priceCount),'num'),td(b.priceCount?'Precio documentado':'Sin precio documentado',b.priceCount?'ready':'pending'));frag.append(tr);
+ const tr=document.createElement('tr');tr.append(td(b.brand+(b.aliases?.length?' · también '+b.aliases.join(', '):'')),td(num(b.homologationRecords),'num'),td(num(b.priceCount),'num'),td(b.priceCount?'Precio documentado':'Sin precio documentado',b.priceCount?'ready':'pending'));frag.append(tr);
 }
 if(!visible.length){const tr=document.createElement('tr'),cell=td('No hay marcas con esos filtros.');cell.colSpan=4;tr.append(cell);frag.append(tr);}
-$('brandRows').append(frag);$('brandCount').textContent=num(visible.length)+' de '+num(all.length)+' marcas agrupadas del corte 3CV';
+$('brandRows').append(frag);$('brandCount').textContent=num(visible.length)+' de '+num(all.length)+' marcas comerciales consolidadas';
 }
 $('brandSearch').addEventListener('input',render);$('brandStatus').addEventListener('change',render);
 $('exportBrands').addEventListener('click',()=>{
@@ -57,18 +59,19 @@ $('exportBrands').addEventListener('click',()=>{
  const body=['Marca,Homologaciones 3CV mayo 2026,Precios comerciales documentados,Estado',...visible.map(b=>[b.brand,b.homologationRecords,b.priceCount,b.priceCount?'Precio documentado':'Sin precio documentado'].map(esc).join(','))].join('\r\n');
  const url=URL.createObjectURL(new Blob(['\ufeff'+body],{type:'text/csv;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='rindelab-cobertura-marcas-20261018.csv';document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
 });
-Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
+Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261020-list1504').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()})]).then(([m,prices])=>{
  if(!m||m.records!==8053||!Array.isArray(m.brands)||!Array.isArray(prices))throw Error('Fuentes incompletas');
- const by=new Map();for(const p of prices){const k=norm(p.brand);by.set(k,(by.get(k)||0)+1);}
+ const by=new Map();
+ for(const p of prices){const k=norm(canonicalBrand(p.brand));by.set(k,(by.get(k)||0)+1);}
  const canonical=new Map();
  for(const item of m.brands){
-  const k=norm(item.brand),old=canonical.get(k);
-  if(old){old.homologationRecords+=item.homologationRecords;if(item.brand==='Leapmotor')old.brand='Leapmotor';}
-  else canonical.set(k,{...item});
+  const brand=canonicalBrand(item.brand),k=norm(brand),old=canonical.get(k);
+  if(old){old.homologationRecords+=item.homologationRecords;if(item.brand!==brand&&!old.aliases.includes(item.brand))old.aliases.push(item.brand);}
+  else canonical.set(k,{brand,homologationRecords:item.homologationRecords,aliases:item.brand===brand?[]:[item.brand]});
  }
  const known=new Set(canonical.keys());
  all=[...canonical.values()].map(b=>({...b,priceCount:by.get(norm(b.brand))||0}));
- for(const p of prices)if(!known.has(norm(p.brand))){known.add(norm(p.brand));all.push({brand:p.brand,homologationRecords:0,priceCount:by.get(norm(p.brand))||0});}
+ for(const p of prices){const brand=canonicalBrand(p.brand),k=norm(brand);if(!known.has(k)){known.add(k);all.push({brand,homologationRecords:0,priceCount:by.get(k)||0,aliases:[]});}}
  all.sort((a,b)=>a.brand.localeCompare(b.brand,'es'));
  $('metricBrands').textContent=num(canonical.size);$('metricCovered').textContent=num(all.filter(x=>x.priceCount>0).length);$('metricPrices').textContent=num(prices.length);render();
 }).catch(e=>{$('brandRows').replaceChildren();const tr=document.createElement('tr'),t=td('No fue posible cargar el inventario: '+e.message);t.colSpan=4;tr.append(t);$('brandRows').append(tr);$('brandCount').textContent='Consulta las fuentes originales para verificar cobertura';});
