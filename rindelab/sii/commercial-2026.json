@@ -16086,7 +16086,8 @@
     "source": "https://www.auto.cl/nuevos/ford",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Ford",
@@ -16207,7 +16208,8 @@
     "source": "https://www.auto.cl/nuevos/fiat",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Fiat",
@@ -16218,7 +16220,8 @@
     "source": "https://www.auto.cl/nuevos/fiat",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Fiat",
@@ -16262,7 +16265,8 @@
     "source": "https://www.auto.cl/nuevos/peugeot",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Peugeot",
@@ -16273,7 +16277,8 @@
     "source": "https://www.auto.cl/nuevos/peugeot",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Chery",
@@ -16636,7 +16641,8 @@
     "source": "https://www.auto.cl/nuevos/volvo",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Volvo",
@@ -16647,7 +16653,8 @@
     "source": "https://www.auto.cl/nuevos/volvo",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "MHEV"
   },
   {
     "brand": "Volvo",
@@ -16658,7 +16665,8 @@
     "source": "https://www.auto.cl/nuevos/volvo",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "PHEV"
   },
   {
     "brand": "Volvo",
@@ -16669,7 +16677,8 @@
     "source": "https://www.auto.cl/nuevos/volvo",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "MHEV"
   },
   {
     "brand": "Volvo",
@@ -16680,7 +16689,8 @@
     "source": "https://www.auto.cl/nuevos/volvo",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "PHEV"
   },
   {
     "brand": "Foton",
@@ -16757,7 +16767,8 @@
     "source": "https://www.auto.cl/nuevos/chevrolet",
     "checkedAt": "2026-10-20",
     "currency": "CLP",
-    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV."
+    "priceBasis": "Precio mínimo «desde» publicado para el modelo por auto.cl; página de marca sin detalle de versión. Referencia comercial, no precio certificado de una ficha 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Chevrolet",
