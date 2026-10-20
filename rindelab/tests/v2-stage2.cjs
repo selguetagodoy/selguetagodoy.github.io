@@ -25,6 +25,37 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert.match(credit,/CC BY/);
   assert((await p.locator('.vehicle-photo img').first().getAttribute('alt')).includes('no acredita'));
  });
+ await check('Tesla Model 3, Kia EV5 y BMW i4 muestran fotos atribuidas sin afirmar versión exacta',async()=>{
+  for(const term of ['Tesla Model 3','Kia EV5','BMW i4']){
+   await p.locator('#resetButton').click();await p.fill('#query',term);await p.click('#searchButton');
+   const photo=p.locator('.vehicle-card .vehicle-photo img').first();
+   assert((await photo.count())>0,'Falta foto de '+term);
+   assert.match(await photo.getAttribute('src'),/commons\.wikimedia\.org\/wiki\/Special:FilePath\//);
+   assert.match(await photo.getAttribute('alt'),/no acredita la versión homologada/);
+   assert(await p.locator('.vehicle-card .vehicle-photo-credit a').first().count()>0);
+   assert.match(await p.locator('.vehicle-card .vehicle-photo-credit').first().textContent(),/CC BY|CC0/);
+  }
+  await p.locator('#resetButton').click();await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ });
+ await check('Cotizador y electromovilidad comparten fotos y licencias de modelos',async()=>{
+  const quote=await b.newPage({viewport:{width:1200,height:850}});
+  await quote.goto(base+'cotizador.html',{waitUntil:'domcontentloaded'});
+  await quote.waitForFunction(()=>document.querySelectorAll('.quote-version').length>0,{timeout:15000});
+  await quote.fill('#quoteSearch','Tesla Model Y');
+  assert((await quote.locator('.quote-version.has-photo .rinde-photo-thumb img').count())>0,'Sin fotos en cotizador Tesla');
+  assert.match(await quote.locator('.quote-version .rinde-photo-attribution').first().textContent(),/CC BY-SA/);
+  await quote.fill('#quoteSearch','Porsche 911');
+  assert((await quote.locator('.quote-version').count())>0);
+  assert.equal(await quote.locator('.quote-version .rinde-photo-thumb img').count(),0,'No usar foto del Taycan para un Porsche 911');
+  await quote.close();
+  const ev=await b.newPage({viewport:{width:1200,height:850}});
+  await ev.goto(base+'electromovilidad.html',{waitUntil:'domcontentloaded'});
+  await ev.waitForFunction(()=>document.querySelectorAll('#electroRows tr').length>0,{timeout:15000});
+  await ev.fill('#eSearch','Kia EV5');
+  assert((await ev.locator('#electroRows .rinde-photo-thumb img').count())>0,'Sin fotos en electromovilidad Kia EV5');
+  assert.match(await ev.locator('#electroRows .rinde-photo-attribution').first().textContent(),/CC0/);
+  await ev.close();
+ });
  await check('El escenario desplegable mantiene las tarifas y cálculos originales',async()=>{
   await p.locator('#supuestos').evaluate(el=>el.open=true);
   await p.selectOption('#chargeScenario','home');
