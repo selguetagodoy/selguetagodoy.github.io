@@ -281,7 +281,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Bolt | LTZ | EV | $23.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/bolt) | 2026-10-20 |
-| Bolt EUV | Precio desde (versión no especificada) | No clasificada | $23.990.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
+| Bolt EUV | Precio desde (versión no especificada) | EV | $23.990.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
 | Captiva EV | Premier FWD | EV | $28.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/captiva-ev) | 2026-10-20 |
 | Captiva PHEV | Premier FWD | PHEV | $26.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/captiva-phev) | 2026-10-20 |
 | Colorado | Precio desde (versión no especificada) | No clasificada | $34.665.100 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
@@ -439,8 +439,8 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| 500e | Precio desde (versión no especificada) | No clasificada | $21.990.000 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
-| 600e | Precio desde (versión no especificada) | No clasificada | $25.990.000 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
+| 500e | Precio desde (versión no especificada) | EV | $21.990.000 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
+| 600e | Precio desde (versión no especificada) | EV | $25.990.000 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
 | Ducato | Precio desde (versión no especificada) | No clasificada | $35.688.100 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
 | Fastback | FASTBACK DRIVE TURBO AT MCA | No clasificada | $20.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/fiat/fastback) | 2026-10-19 |
 | Pulse | Drive 1.3 AT MCA | No clasificada | $18.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/fiat/pulse) | 2026-10-18 |
@@ -453,7 +453,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| E-Transit Chasis | Precio desde (versión no especificada) | No clasificada | $65.900.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| E-Transit Chasis | Precio desde (versión no especificada) | EV | $65.900.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
 | Escape | Precio desde (versión no especificada) | No clasificada | $33.190.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
 | Expedition | Precio desde (versión no especificada) | No clasificada | $74.690.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
 | Explorer 26 MY | Explorer Active 2.3L 4x2 MCA | No clasificada | $39.490.000 | [Callegari](https://callegari.cl/nuevos/explorer-26-my/) | 2026-10-19 |
@@ -1472,7 +1472,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | boxer mca | Boxer MCA Furgón L3H2 Diesel 140hp MT | No clasificada | $38.663.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/boxer-mca) | 2026-10-19 |
 | boxer mca | Boxer MCA Furgón L4H2 Diesel 140hp MT | No clasificada | $39.853.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/boxer-mca) | 2026-10-19 |
 | BOXER MCA | Boxer MCA Furgón L2H2 Diesel 140hp MT | No clasificada | $37.354.100 | [Rosselot](https://www.rosselot.cl/nuevos/peugeot/boxer-mca) | 2026-10-19 |
-| e-2008 | Precio desde (versión no especificada) | No clasificada | $40.490.000 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
+| e-2008 | Precio desde (versión no especificada) | EV | $40.490.000 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
 | expert | Expert MCA L3 BlueHdi 145 | No clasificada | $32.118.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/expert) | 2026-10-19 |
 | Expert | Expert MCA L3 Diesel 145hp MT | No clasificada | $32.118.100 | [Rosselot](https://www.rosselot.cl/nuevos/peugeot/expert) | 2026-10-19 |
 | landtrek | Landtrek MCA Action4 Diesel 200hp 4x4 AT | No clasificada | $37.830.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/landtrek) | 2026-10-19 |
@@ -1494,7 +1494,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | nuevo 308 | 308 Allure Hybrid 136hp AT | No clasificada | $28.290.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/nuevo-308) | 2026-10-19 |
 | nuevo 308 | 308 GT Gasolina 130hp AT | No clasificada | $27.290.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/nuevo-308) | 2026-10-19 |
 | nuevo 308 | 308 GT Hybrid 136hp AT | No clasificada | $31.790.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/nuevo-308) | 2026-10-19 |
-| Partner Electric | Precio desde (versión no especificada) | No clasificada | $39.139.100 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
+| Partner Electric | Precio desde (versión no especificada) | EV | $39.139.100 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
 | partner mca | Partner MCA L1 BlueHDi 100 | No clasificada | $23.312.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/partner-mca) | 2026-10-19 |
 | partner mca | Partner MCA L2 BlueHDi 100 | No clasificada | $24.264.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/partner-mca) | 2026-10-19 |
 | traveller | New Traveller MCA L3 9P Diesel 180hp AT | No clasificada | $37.711.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/traveller) | 2026-10-19 |
@@ -1829,14 +1829,14 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | EX40 | P6 | EV | $51.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
 | EX40 | P8 Recharge | EV | $65.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
 | Xc40 | Precio desde (versión no especificada) | No clasificada | $35.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
-| XC40 Pure Electric | Precio desde (versión no especificada) | No clasificada | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| XC40 Pure Electric | Precio desde (versión no especificada) | EV | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 | XC60 | NUEVO T8 AWD CORE | HEV | $64.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
 | XC60 | NUEVO T8 AWD ULTRA | No clasificada | $81.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
-| XC60 Plug-In Hybrid | Precio desde (versión no especificada) | No clasificada | $54.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
-| xc60-mild-hybrid | Precio desde (versión no especificada) | No clasificada | $46.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| XC60 Plug-In Hybrid | Precio desde (versión no especificada) | PHEV | $54.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| xc60-mild-hybrid | Precio desde (versión no especificada) | MHEV | $46.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 | XC90 | NUEVO T8 CORE | HEV | $90.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc90) | 2026-10-19 |
-| XC90 Plug-In Hybrid | Precio desde (versión no especificada) | No clasificada | $76.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
-| xc90-mild-hybrid | Precio desde (versión no especificada) | No clasificada | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| XC90 Plug-In Hybrid | Precio desde (versión no especificada) | PHEV | $76.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| xc90-mild-hybrid | Precio desde (versión no especificada) | MHEV | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 
 ### Zxauto — 2 registros
 
