@@ -702,7 +702,7 @@ await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicad
 });
 await test('Ocho marcas agregadas con Markdown, precio de lista y origen comercial',async()=>{
  const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(data.length,1467);
+ assert.equal(data.length,1485);
  const counts={'Porsche':67,'Honda':9,'Lexus':11,'Mercedes-Benz':11,'Tesla':5,'DS':8,'Alfa Romeo':2,'Jaguar':2};
  for(const [brand,n] of Object.entries(counts)){
   const items=data.filter(x=>x.brand===brand);
@@ -712,11 +712,11 @@ await test('Ocho marcas agregadas con Markdown, precio de lista y origen comerci
  for(const pathFile of ['LOTE-PORSCHE-20261020.md','LOTE-HONDA-20261020.md','LOTE-LEXUS-MERCEDES-20261020.md','LOTE-TESLA-20261020.md','LOTE-DS-ALFA-JAGUAR-20261020.md','PENDIENTES-CATALOGO-NUEVOS-20261020.md']){
   assert(fs.existsSync(path.join(__dirname,'../sii',pathFile)),'MD no generado '+pathFile);
  }
- assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.467'));
+ assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.485'));
 });
 await test('Segunda ola: 100 precios en MD comercial con origen para quince marcas',async()=>{
  const rows=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(rows.length,1467);
+ assert.equal(rows.length,1485);
  const counts={'Land Rover':17,'Smart':2,'Deepal':3,'Exeed':10,'Kaiyi':6,'Karry':8,'Kyc':8,'Seat':11,'Avatr':1,'Livan':2,'Riddara':2,'Zxauto':2,'Maserati':9,'Aston Martin':12,'Ferrari':7};
  for(const [brand,n] of Object.entries(counts)){
   const match=rows.filter(x=>x.brand===brand);
@@ -730,13 +730,13 @@ await test('Segunda ola: 100 precios en MD comercial con origen para quince marc
  assert(rows.some(x=>x.brand==='Avatr'&&x.technology==='EV'));
  assert(rows.some(x=>x.brand==='Riddara'&&x.technology==='EV'));
  const master=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
- assert(master.includes('1.467')&&master.includes('74'));
+ assert(master.includes('1.485')&&master.includes('74'));
 });
-await test('143 precios desde por modelo: MD, origen, buscador y cotizador',async()=>{
+await test('161 precios desde por modelo: MD, origen, buscador y cotizador',async()=>{
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(all.length,1467);
+ assert.equal(all.length,1485);
  const desde=all.filter(x=>x.version==='Precio desde (versión no especificada)');
- assert.equal(desde.length,143,'Falta un modelo de los lotes MD');
+ assert.equal(desde.length,161,'Falta un modelo de los lotes MD');
  const electricClassifications={'Ford|E-Transit Chasis':'EV','Fiat|500e':'EV','Fiat|600e':'EV','Peugeot|e-2008':'EV','Peugeot|Partner Electric':'EV','Volvo|XC40 Pure Electric':'EV','Volvo|XC60 Plug-In Hybrid':'PHEV','Volvo|XC90 Plug-In Hybrid':'PHEV','Volvo|xc60-mild-hybrid':'MHEV','Volvo|xc90-mild-hybrid':'MHEV','Chevrolet|Bolt EUV':'EV'};
  for(const [key,tech] of Object.entries(electricClassifications)){const row=desde.find(x=>x.brand+'|'+x.family===key);assert.equal(row?.technology,tech,'Etiqueta de tecnología incorrecta para '+key);}
 
@@ -751,6 +751,11 @@ await test('143 precios desde por modelo: MD, origen, buscador y cotizador',asyn
  const mdB=fs.readFileSync(path.join(__dirname,'../sii/LOTE-MODELOS-MARCAS-MASIVAS-20261020.md'),'utf8');
  const linesB=mdB.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Agregar |'));
  assert.equal(linesB.length,79);
+ const mdC=fs.readFileSync(path.join(__dirname,'../sii/LOTE-BMW-RAM-CITROEN-CUPRA-20261020.md'),'utf8');
+ const linesC=mdC.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Alta |'));
+ assert.equal(linesC.length,18);
+ for(const line of linesC){const c=line.split('|').map(x=>x.trim());const row=desde.find(x=>x.brand===c[1]&&x.family===c[2]);assert(row,'Sin ficha '+c[1]+' '+c[2]);assert.equal(row.priceListClp,Number(c[4].replace(/[^0-9]/g,'')));assert.equal(row.source,c[5].split('](')[1]?.split(')')[0]);}
+
  for(const line of linesB){const c=line.split('|').map(x=>x.trim());const item=desde.find(x=>x.brand===c[1]&&x.family===c[2]);assert(item,'Falta '+c[1]+' '+c[2]);assert.equal(item.priceListClp,Number(c[3].replace(/[^0-9]/g,'')));}
  const p=await browser.newPage({viewport:{width:390,height:844}});
  await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
