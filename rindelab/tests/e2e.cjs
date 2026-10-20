@@ -315,7 +315,7 @@ await test('PHEV muestra 264 fichas y rendimiento eléctrico y ponderado sin cos
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
  assert.match(await page.locator('#statsMetricHint').textContent(),/No se calcula un costo energético combinado/);
  await page.selectOption('#statsMetric','weighted');
- assert.equal(await page.locator('.rank-item').count(),10);
+ assert.equal(await page.locator('.rank-item').count(),Math.min(10,nedcCount));
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/L pond.')));
  assert.match(await page.locator('#statsNotice').textContent(),/no equivale al rendimiento con batería descargada/);
  await page.locator('#statsClose').click();
