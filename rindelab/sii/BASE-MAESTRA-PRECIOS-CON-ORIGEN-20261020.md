@@ -1,6 +1,6 @@
 # RINDELAB — Base maestra de vehículos nuevos y precios publicados
 
-**Fecha de corte:** 20 de octubre de 2026. **Precios con fuente registrados:** 1.218. **Marcas:** 59.
+**Fecha de corte:** 20 de octubre de 2026. **Precios con fuente registrados:** 1.224. **Marcas:** 59.
 
 Cada fila conserva marca, modelo, versión, tipo de propulsión cuando la fuente lo declara, precio publicado y **nombre/enlace del origen comercial**. Los importes son referenciales y pueden variar por sucursal, configuración, bonos o stock. La falta de correspondencia entre la versión comercial y una ficha 3CV **no invalida el precio publicado**: solamente impide atribuirle un rendimiento no acreditado.
 
@@ -1012,7 +1012,7 @@ Nota breve para usuarios: «Precio publicado por la marca, concesionaria o catá
 | CX-5 | SIGNATURE 2.5T AWD 6AT | No etiquetada | 2027 | $35.190.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-5) |
 | CX-5 | SPORT 2.5 AWD 6AT | No etiquetada | 2027 | $33.290.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-5) |
 
-### Mercedes-Benz (5 versiones)
+### Mercedes-Benz (11 versiones)
 
 | Modelo | Versión | Tecnología | Año | Precio publicado | Origen |
 |---|---|---|---|---:|---|
@@ -1021,6 +1021,12 @@ Nota breve para usuarios: «Precio publicado por la marca, concesionaria o catá
 | GLA | GLA 200 Progressive | No etiquetada | — | $50.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/gla) |
 | GLA | GLA 200 Pure | No etiquetada | — | $46.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/gla) |
 | GLA | GLA 220d 4MATIC AMG | No etiquetada | — | $60.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/gla) |
+| GLC | GLC 200 4MATIC | No etiquetada | — | $62.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/glc) |
+| GLC | GLC 220d 4MATIC | No etiquetada | — | $67.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/glc) |
+| GLC | GLC 200 4MATIC Advanced | No etiquetada | — | $63.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) |
+| GLC | GLC 220d 4MATIC Advanced | No etiquetada | — | $68.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) |
+| CLE Coupé | CLE 200 Coupé | No etiquetada | — | $64.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) |
+| CLE Coupé | CLE 300 Coupé | No etiquetada | — | $72.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) |
 
 ### MG (29 versiones)
 
@@ -1529,4 +1535,4 @@ Nota breve para usuarios: «Precio publicado por la marca, concesionaria o catá
 4. Probar buscador, filtros, comparador, cotizador y móvil; fusionar a `main` solo con QA aprobado.
 5. Verificar el JSON público de GitHub Pages después de la fusión.
 
-**Cobertura:** la existencia de 1218 fichas comerciales no certifica por sí sola la totalidad de las versiones nuevas comercializadas en Chile. Las marcas sin precio publicado pueden figurar en el MD de pendientes sin mostrarse en el cotizador.
+**Cobertura:** la existencia de 1224 fichas comerciales no certifica por sí sola la totalidad de las versiones nuevas comercializadas en Chile. Las marcas sin precio publicado pueden figurar en el MD de pendientes sin mostrarse en el cotizador.
