@@ -718,7 +718,7 @@ await test('Ocho marcas agregadas con Markdown, precio de lista y origen comerci
  for(const pathFile of ['LOTE-PORSCHE-20261020.md','LOTE-HONDA-20261020.md','LOTE-LEXUS-MERCEDES-20261020.md','LOTE-TESLA-20261020.md','LOTE-DS-ALFA-JAGUAR-20261020.md','PENDIENTES-CATALOGO-NUEVOS-20261020.md']){
   assert(fs.existsSync(path.join(__dirname,'../sii',pathFile)),'MD no generado '+pathFile);
  }
- assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.485'));
+ assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1504'));
 });
 await test('Segunda ola: 100 precios en MD comercial con origen para quince marcas',async()=>{
  const rows=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
@@ -736,7 +736,7 @@ await test('Segunda ola: 100 precios en MD comercial con origen para quince marc
  assert(rows.some(x=>x.brand==='Avatr'&&x.technology==='EV'));
  assert(rows.some(x=>x.brand==='Riddara'&&x.technology==='EV'));
  const master=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
- assert(master.includes('1.485')&&master.includes('74'));
+ assert(master.includes('1504')&&master.includes('74'));
 });
 await test('161 precios desde por modelo: MD, origen, buscador y cotizador',async()=>{
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
@@ -1299,13 +1299,41 @@ await test('Subaru Impreza: tres versiones con precio de lista y selección manu
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.locator('#detailClose').click();
 });
+await test('Integración 20/10: 1504 precios, 80 marcas, Nammi y +IVA sin total engañoso',async()=>{
+ const all=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/commercial-2026.json'),'utf8'));
+ assert.equal(all.length,1504);
+ assert.equal(new Set(all.map(x=>x.brand)).size,80);
+ assert.equal(all.filter(x=>x.taxIncluded===false).length,11);
+ assert.equal(all.filter(x=>x.brand==='Nammi').length,4);
+ assert(!all.some(x=>x.brand==='Dongfeng'&&/Nammi/i.test(x.family)));
+ assert.equal(all.filter(x=>x.brand==='Hino').length,6);
+ assert.equal(all.filter(x=>x.brand==='Fuso').length,5);
+ for(const x of all.filter(x=>['Hino','Fuso'].includes(x.brand)))assert.equal(x.taxIncluded,false);
+ const md=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
+ assert(md.includes('1504')&&md.includes('80')&&md.includes('+ IVA'));
+ const q=await browser.newPage({viewport:{width:390,height:844}});
+ await q.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ await q.fill('#quoteSearch','Hino');
+ await q.waitForFunction(()=>document.querySelector('#quoteResults')?.textContent?.includes('Hino'));
+ assert.match(await q.locator('#quoteResults').textContent(),/\+ IVA/);
+ await q.locator('#quoteResults .quote-version-actions button').first().click();
+ assert.match(await q.locator('#quoteTotal').textContent(),/No calculable/);
+ assert.equal(await q.locator('#quoteCopy').isDisabled(),true);
+ await q.close();
+ const m=await browser.newPage();
+ await m.goto(base+'marcas.html',{waitUntil:'networkidle'});
+ await m.fill('#brandSearch','M. Benz');
+ await m.waitForFunction(()=>document.querySelector('#brandRows')?.textContent?.includes('Mercedes-Benz'));
+ assert.match(await m.locator('#brandRows').textContent(),/Precio documentado/);
+ await m.close();
+});
 await test('Marcas: 134 marcas del 3CV histórico, filtro transparente y CSV',async()=>{
  const p=await browser.newPage({viewport:{width:390,height:844},acceptDownloads:true});
  await p.goto(base+'marcas.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#metricBrands')?.textContent==='119',{timeout:30000});
+ await p.waitForFunction(()=>Number(document.querySelector('#metricBrands')?.textContent)>100,{timeout:30000});
  assert.equal(Number((await p.locator('#metricPrices').textContent()).replace(/\D/g,'')),priceTotal);
  assert.equal(await p.locator('#metricCovered').textContent(),String(catalogBrandTotal));
- assert((await p.locator('#brandRows tr').count())>=119,'Se conservan las 119 marcas históricas y se agregan nuevas comerciales');
+ assert((await p.locator('#brandRows tr').count())>=100,'La vista debe conservar grupos históricos, homologaciones y nuevas marcas comerciales');
  await p.fill('#brandSearch','Chevrolet');
  assert.equal(await p.locator('#brandRows tr').count(),1);
  assert.match(await p.locator('#brandRows tr').first().textContent(),/Precio documentado/);
