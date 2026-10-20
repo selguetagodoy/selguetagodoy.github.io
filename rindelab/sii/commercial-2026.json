@@ -12162,5 +12162,104 @@
     "modelYear": null,
     "checkedAt": "2026-10-19",
     "currency": "CLP"
+  },
+  {
+    "brand": "Baic",
+    "family": "X35",
+    "version": "CVT Fashion",
+    "modelYear": null,
+    "priceListClp": 14590000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "X35",
+    "version": "CVT Luxury",
+    "modelYear": null,
+    "priceListClp": 15990000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "X55",
+    "version": "LV2",
+    "modelYear": null,
+    "priceListClp": 18490000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "X7",
+    "version": "Luxury",
+    "modelYear": null,
+    "priceListClp": 24990000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "X7",
+    "version": "Exclusive",
+    "modelYear": null,
+    "priceListClp": 25490000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "BJ30",
+    "version": "LV3",
+    "modelYear": null,
+    "priceListClp": 25990000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "U5 Plus",
+    "version": "MT Luxury",
+    "modelYear": null,
+    "priceListClp": 12990000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "U5 Plus",
+    "version": "CVT Luxury",
+    "modelYear": null,
+    "priceListClp": 14990000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
+  },
+  {
+    "brand": "Baic",
+    "family": "U5 Plus",
+    "version": "CVT Honor",
+    "modelYear": null,
+    "priceListClp": 15690000,
+    "source": "https://www.baic.cl/legales-modelos/",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "BAIC Chile: precio de lista explícito, sin bonos; referencia documental campaña septiembre 2026, no afirmar vigencia actual."
   }
 ]
