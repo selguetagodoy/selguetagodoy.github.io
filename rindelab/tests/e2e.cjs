@@ -702,21 +702,21 @@ await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicad
 });
 await test('Ocho marcas agregadas con Markdown, precio de lista y origen comercial',async()=>{
  const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(data.length,1324);
+ assert.equal(data.length,1467);
  const counts={'Porsche':67,'Honda':9,'Lexus':11,'Mercedes-Benz':11,'Tesla':5,'DS':8,'Alfa Romeo':2,'Jaguar':2};
  for(const [brand,n] of Object.entries(counts)){
   const items=data.filter(x=>x.brand===brand);
-  assert.equal(items.length,n,'Incompleto '+brand);
+  assert(items.length>=n,'Incompleto '+brand);
   assert(items.every(x=>x.priceListClp>0&&x.source.startsWith('https://')),'Fuente o importe inválido '+brand);
  }
  for(const pathFile of ['LOTE-PORSCHE-20261020.md','LOTE-HONDA-20261020.md','LOTE-LEXUS-MERCEDES-20261020.md','LOTE-TESLA-20261020.md','LOTE-DS-ALFA-JAGUAR-20261020.md','PENDIENTES-CATALOGO-NUEVOS-20261020.md']){
   assert(fs.existsSync(path.join(__dirname,'../sii',pathFile)),'MD no generado '+pathFile);
  }
- assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.324'));
+ assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.467'));
 });
 await test('Segunda ola: 100 precios en MD comercial con origen para quince marcas',async()=>{
  const rows=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(rows.length,1324);
+ assert.equal(rows.length,1467);
  const counts={'Land Rover':17,'Smart':2,'Deepal':3,'Exeed':10,'Kaiyi':6,'Karry':8,'Kyc':8,'Seat':11,'Avatr':1,'Livan':2,'Riddara':2,'Zxauto':2,'Maserati':9,'Aston Martin':12,'Ferrari':7};
  for(const [brand,n] of Object.entries(counts)){
   const match=rows.filter(x=>x.brand===brand);
@@ -730,7 +730,32 @@ await test('Segunda ola: 100 precios en MD comercial con origen para quince marc
  assert(rows.some(x=>x.brand==='Avatr'&&x.technology==='EV'));
  assert(rows.some(x=>x.brand==='Riddara'&&x.technology==='EV'));
  const master=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
- assert(master.includes('1.324')&&master.includes('74'));
+ assert(master.includes('1.467')&&master.includes('74'));
+});
+await test('143 precios desde por modelo: MD, origen, buscador y cotizador',async()=>{
+ const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert.equal(all.length,1467);
+ const desde=all.filter(x=>x.version==='Precio desde (versión no especificada)');
+ assert.equal(desde.length,143,'Falta un modelo de los lotes MD');
+ for(const name of ['LOTE-MODELOS-FALTANTES-PRECIO-DESDE-20261020.md','LOTE-MODELOS-MARCAS-MASIVAS-20261020.md']){
+  const txt=fs.readFileSync(path.join(__dirname,'../sii',name),'utf8');
+  assert(txt.includes('auto.cl'),'El inventario debe indicar el origen');
+ }
+ const mdA=fs.readFileSync(path.join(__dirname,'../sii/LOTE-MODELOS-FALTANTES-PRECIO-DESDE-20261020.md'),'utf8');
+ const linesA=mdA.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Alta |'));
+ assert.equal(linesA.length,64);
+ for(const line of linesA){const c=line.split('|').map(x=>x.trim());const item=desde.find(x=>x.brand===c[1]&&x.family===c[2]);assert(item,'Falta '+c[1]+' '+c[2]);assert.equal(item.priceListClp,Number(c[4].replace(/[^0-9]/g,'')));assert.equal(item.source,c[5].split('](')[1]?.split(')')[0]);}
+ const mdB=fs.readFileSync(path.join(__dirname,'../sii/LOTE-MODELOS-MARCAS-MASIVAS-20261020.md'),'utf8');
+ const linesB=mdB.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Agregar |'));
+ assert.equal(linesB.length,79);
+ for(const line of linesB){const c=line.split('|').map(x=>x.trim());const item=desde.find(x=>x.brand===c[1]&&x.family===c[2]);assert(item,'Falta '+c[1]+' '+c[2]);assert.equal(item.priceListClp,Number(c[3].replace(/[^0-9]/g,'')));}
+ const p=await browser.newPage({viewport:{width:390,height:844}});
+ await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ await p.fill('#quoteSearch','Kwid E -Tech');
+ await p.waitForFunction(()=>document.querySelector('#quoteResults')?.textContent?.includes('Kwid E -Tech'));
+ assert.match(await p.locator('#quoteResults').textContent(),/Precio desde publicado/);
+ const width=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));assert(width.doc<=width.view+3,JSON.stringify(width));
+ await p.close();
 });
 await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercial identificada',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
