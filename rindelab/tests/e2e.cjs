@@ -787,7 +787,7 @@ await test('Electromovilidad: 40 precios nuevos, 384 homologaciones recientes y 
  await e.waitForFunction(expected=>document.querySelector('#mPrices')?.textContent===String(expected),electrifiedTotal,{timeout:30000});
  assert.equal(await e.locator('#mRecords').textContent(),'384');
  await e.selectOption('#eTech','REEV');
- assert.equal(await e.locator('#electroRows tr').count(),6);
+ assert.equal(await e.locator('#electroRows tr').count(),all.filter(x=>x.technology==='REEV').length);
  await e.fill('#eSearch','B10');
  assert.equal(await e.locator('#electroRows tr').count(),1);
  assert.match(await e.locator('#electroRows').textContent(),/25\.990\.000/);
