@@ -6,6 +6,8 @@
 })(typeof globalThis!=='undefined'?globalThis:null,function(){
  'use strict';
  const normalized=value=>String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').replace(/\s+/g,' ').trim();
+ const brandAliases={'M BENZ':'MERCEDES BENZ','LYNK CO':'LYNK CO','ZX AUTO':'ZXAUTO','SSANGYONG':'KGM','HAVAL':'GREAT WALL','DFM':'DONGFENG','MITSUBISHI FUSO':'FUSO','EXEED BORN FOR MORE':'EXEED'};
+ const canonicalBrand=value=>brandAliases[normalized(value)]||normalized(value);
  const special={
   'Mitsubishi|Outlander':/^OUTLANDER(?! (?:SPORT|P ?HEV))(?= |$)/,
   'Mitsubishi|Outlander Sport':/^OUTLANDER SPORT(?= |$)/,
@@ -46,9 +48,10 @@
   return model;
  }
  function matches(brand,family,row){
-  if(!Array.isArray(row)||normalized(row[0])!==normalized(brand)||!row[1])return false;
-  const rule=special[brand+'|'+family]||exactPrefix(family);
-  return rule.test(cleanModel(brand,row[1]));
+  if(!Array.isArray(row)||canonicalBrand(row[0])!==canonicalBrand(brand)||!row[1])return false;
+  const familyForHistoricalHaval=normalized(row[0])==='HAVAL'&&canonicalBrand(brand)==='GREAT WALL'?family.replace(/^Haval\s+/i,''):family;
+  const rule=special[brand+'|'+family]&&familyForHistoricalHaval===family?special[brand+'|'+family]:exactPrefix(familyForHistoricalHaval);
+  return rule.test(cleanModel(row[0],row[1]));
  }
  function analyze(prices,rows,published){
   if(!Array.isArray(prices)||!Array.isArray(rows)||!published)throw Error('Fuentes de cobertura no disponibles');
@@ -82,5 +85,5 @@
    rows:table
   };
  }
- return {normalized,cleanModel,matches,analyze};
+ return {normalized,canonicalBrand,cleanModel,matches,analyze};
 });
