@@ -26,7 +26,7 @@ function priceRows(){
   name.append(title,description);
   const t=td(tr,'');const badge=document.createElement('span');badge.className='tag';badge.textContent=techNames[p.technology]||p.technology;t.append(badge);
   const cost=td(tr,money(p.priceListClp));cost.className='price';
-  const src=td(tr,'');const link=document.createElement('a');link.href=p.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Ver fuente oficial ↗';const date=document.createElement('small');date.textContent='Consultado: '+p.checkedAt+(p.sourceOfferEnd?' · campaña informada hasta '+p.sourceOfferEnd:'');src.append(link,date);
+  const src=td(tr,'');const link=document.createElement('a');link.href=p.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Ver fuente ↗';const date=document.createElement('small');date.textContent='Consultado: '+p.checkedAt+(p.sourceOfferEnd?' · campaña informada hasta '+p.sourceOfferEnd:'');src.append(link,date);
   $('electroRows').append(tr);
  }
  if(!result.length){const tr=document.createElement('tr');td(tr,'Sin precios documentados para los filtros seleccionados.').colSpan=4;$('electroRows').append(tr);}
