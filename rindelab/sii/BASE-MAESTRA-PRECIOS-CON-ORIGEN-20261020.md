@@ -1,25 +1,23 @@
-# RINDELAB — Base maestra nacional de vehículos nuevos y precios publicados
+# RINDELAB — Base maestra de vehículos nuevos y precios publicados
 
-**Actualización documental:** 20-10-2026. **Total capturado:** 1.324 versiones con precio publicado. **Marcas:** 74. **Orígenes:** fabricantes, concesionarias y catálogos comerciales chilenos, enlazados por registro.
+**Corte:** 20 de octubre de 2026. **Registros:** 1.467. **Marcas:** 74. **Referencias de precio «desde» sin versión detallada:** 143.
 
-## Criterio editorial
+**Uso:** cada fila conserva marca, modelo, versión comercial o condición explícita de «desde», precio CLP y **origen del precio** con enlace navegable. Se transcribe el importe publicado en la fuente, sin imputar variantes, homologaciones 3CV ni descuentos no declarados. Las referencias «desde» representan el precio mínimo anunciado para la familia de vehículo, **no una versión específica**. Las fechas de consulta históricas se mantienen y no se revalidan artificialmente.
 
-Se conserva el precio y la denominación comercial publicados en el sitio vinculado. RINDELAB informa el **origen**; no garantiza stock, promociones ni financiamiento. Si no existe una correspondencia verificada entre la versión comercial y la base 3CV, la ficha deberá indicar «*Homologación energética de esta versión aún no identificada*» sin inventar consumos. Las distintas denominaciones comerciales de grupos automotrices pueden figurar como marcas separadas según la fuente.
+Cuando no exista correspondencia homologada: «*Homologación energética de esta versión aún no identificada; puedes consultar igualmente su precio publicado.*».
 
-Este inventario representa los registros recolectados, no certifica exhaustividad de todas las variantes del mercado chileno. Se revisaron además las marcas del directorio de 73 marcas de auto.cl; algunas denominaciones son submarcas o nombres alternativos de marcas ya registradas. Para completar versiones, seguir con la metodología MD → cruce → migración → QA → despliegue.
+## Modelos y precios por marca
 
-## Versiones con precio, fuente y origen comercial
+### Alfa Romeo — 2 registros
 
-### Alfa Romeo (2 registros)
-
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Tonale | Sprint | No clasificada | $36.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/alfa-romeo/tonale) | 2026-10-20 |
 | Tonale | Veloce | No clasificada | $46.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/alfa-romeo/tonale) | 2026-10-20 |
 
-### Aston Martin (12 registros)
+### Aston Martin — 12 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | DB11 | V12 COUPE | No clasificada | $213.802.350 | [auto.cl](https://www.auto.cl/nuevos/aston-martin/db11) | 2026-10-20 |
 | DB11 | V8 COUPE | No clasificada | $199.548.860 | [auto.cl](https://www.auto.cl/nuevos/aston-martin/db11) | 2026-10-20 |
@@ -34,25 +32,42 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Vantage | ROADSTER F1 EDITION | No clasificada | $168.178.308 | [auto.cl](https://www.auto.cl/nuevos/aston-martin/vantage) | 2026-10-20 |
 | Vantage | V12 COUPE | No clasificada | $277.056.580 | [auto.cl](https://www.auto.cl/nuevos/aston-martin/vantage) | 2026-10-20 |
 
-### Audi (5 registros)
+### Audi — 22 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| A1 | Precio desde (versión no especificada) | No clasificada | $26.190.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| A3 Sedan | Precio desde (versión no especificada) | No clasificada | $32.290.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| A3 Sportback | Precio desde (versión no especificada) | No clasificada | $32.790.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| A4 | Precio desde (versión no especificada) | No clasificada | $38.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| A5 Cabrio | Precio desde (versión no especificada) | No clasificada | $54.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| A5 Coupe | Precio desde (versión no especificada) | No clasificada | $47.490.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| A5 Sportback | Precio desde (versión no especificada) | No clasificada | $48.290.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| A6 | Precio desde (versión no especificada) | No clasificada | $60.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
 | A6 Sportback e-tron | A6 Sportback e-tron performance S line | EV | $105.900.000 | [audi.cl](https://www.audi.cl/a6-e-tron/a6-sportback-e-tron/Lista-de-precios) | 2026-10-19 |
 | A6 Sportback e-tron | A6 Sportback e-tron S line | EV | $90.900.000 | [audi.cl](https://www.audi.cl/a6-e-tron/a6-sportback-e-tron/Lista-de-precios) | 2026-10-19 |
+| E-TRON GT | Precio desde (versión no especificada) | EV | $139.000.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| Q2 | Precio desde (versión no especificada) | No clasificada | $33.490.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| Q3 | Precio desde (versión no especificada) | No clasificada | $38.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| Q3 Sportback | Precio desde (versión no especificada) | No clasificada | $41.290.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
 | Q4 Sportback e-tron | Q4 Sportback e-tron S line | EV | $70.990.000 | [audi.cl](https://www.audi.cl/q4/q4-sportback-e-tron/Lista-de-precios) | 2026-10-19 |
+| Q5 | Precio desde (versión no especificada) | No clasificada | $57.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| Q5 Sportback | Precio desde (versión no especificada) | No clasificada | $59.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
 | Q6 e-tron | Q6 e-tron 50 S line | EV | $87.990.000 | [audi.cl](https://www.audi.cl/q6-e-tron/q6-e-tron/lista-de-precios) | 2026-10-19 |
 | Q6 Sportback e-tron | Q6 Sportback e-tron 50 S line | EV | $90.490.000 | [audi.cl](https://www.audi.cl/q6-e-tron/q6-sportback-e-tron/Lista-de-precios) | 2026-10-19 |
+| Q7 | Precio desde (versión no especificada) | No clasificada | $76.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| Q8 | Precio desde (versión no especificada) | No clasificada | $84.490.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
+| RS5 | Precio desde (versión no especificada) | No clasificada | $109.990.000 | [auto.cl](https://www.auto.cl/nuevos/audi) | 2026-10-20 |
 
-### Avatr (1 registros)
+### Avatr — 1 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 11 | LUXURY EV | EV | $65.990.000 | [auto.cl](https://www.auto.cl/nuevos/avatr/11) | 2026-10-20 |
 
-### Baic (14 registros)
+### Baic — 14 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | BJ30 | BJ30 4WD HEV | HEV | $27.990.000 | [baic.cl](https://www.baic.cl/modelos/bj30/) | 2026-10-19 |
 | BJ30 | LV3 | No clasificada | $25.990.000 | [baic.cl](https://www.baic.cl/legales-modelos/) | 2026-10-19 |
@@ -69,9 +84,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | X7 | Exclusive | No clasificada | $25.490.000 | [baic.cl](https://www.baic.cl/legales-modelos/) | 2026-10-19 |
 | X7 | Luxury | No clasificada | $24.990.000 | [baic.cl](https://www.baic.cl/legales-modelos/) | 2026-10-19 |
 
-### BMW (61 registros)
+### BMW — 61 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | i4 | i4 eDrive40 Gran Coupé M Sport LCI II | EV | $87.900.000 | [bmw.cl](https://www.bmw.cl/modelos/i4) | 2026-10-19 |
 | i5 | i5 eDrive40 Berlina M Sport | EV | $104.900.000 | [bmw.cl](https://www.bmw.cl/modelos/i5) | 2026-10-19 |
@@ -135,9 +150,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | XM | XM | PHEV | $232.900.000 | [bmw.cl](https://www.bmw.cl/modelos/xm) | 2026-10-19 |
 | Z4 | Z4 M40i Roadster LCI | No clasificada | $91.900.000 | [bmw.cl](https://www.bmw.cl/modelos/z4) | 2026-10-19 |
 
-### BYD (16 registros)
+### BYD — 16 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Atto 8 | Atto 8 GL | PHEV | $44.990.000 | [BYD Chile](https://www.byd.com/cl/legal/terminos-condiciones-promocion) | 2026-10-19 |
 | Atto 8 | Atto 8 GS | PHEV | $49.990.000 | [BYD Chile](https://www.byd.com/cl/legal/terminos-condiciones-promocion) | 2026-10-19 |
@@ -156,12 +171,14 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Yuan Pro DM-i | Yuan Pro DM-i GL | PHEV | $19.990.000 | [BYD Chile](https://www.byd.com/cl/legal/terminos-condiciones-promocion) | 2026-10-18 |
 | Yuan Pro DM-i | Yuan Pro DM-i GS | PHEV | $22.990.000 | [BYD Chile](https://www.byd.com/cl/legal/terminos-condiciones-promocion) | 2026-10-18 |
 
-### Changan (26 registros)
+### Changan — 37 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| Alsvin | Precio desde (versión no especificada) | No clasificada | $9.590.000 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
 | Avatr 07 | AVATR 07 4x2 REEV RWD | REEV | $55.990.000 | [changan.cl](https://www.changan.cl/vehiculo/avatr/avatr-07/) | 2026-10-17 |
 | Avatr 07 | AVATR 07 4x4 REEV AWD | REEV | $59.990.000 | [changan.cl](https://www.changan.cl/vehiculo/avatr/avatr-07/) | 2026-10-17 |
+| Cs15 | Precio desde (versión no especificada) | No clasificada | $10.990.000 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
 | CS35 Max | CS35 Max Comfort AT | No clasificada | $16.390.000 | [changan.cl](https://www.changan.cl/vehiculo/cs35-max/) | 2026-10-17 |
 | CS35 Max | CS35 Max Comfort MT | No clasificada | $14.490.000 | [changan.cl](https://www.changan.cl/vehiculo/cs35-max/) | 2026-10-17 |
 | CS35 Max | CS35 Max Deluxe AT | No clasificada | $18.890.000 | [changan.cl](https://www.changan.cl/vehiculo/cs35-max/) | 2026-10-17 |
@@ -182,15 +199,26 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Lumin | LUMIN EV | EV | $13.990.000 | [changan.cl](https://www.changan.cl/vehiculo/lumin) | 2026-10-19 |
 | S07 | Deepal S07 BEV | EV | $37.990.000 | [changan.cl](https://www.changan.cl/vehiculo/deepal/s07/) | 2026-10-17 |
 | S07 | Deepal S07 REEV | REEV | $32.990.000 | [changan.cl](https://www.changan.cl/vehiculo/deepal/s07/) | 2026-10-17 |
+| Serie M | Precio desde (versión no especificada) | No clasificada | $8.080.100 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| Serie M Cargo BOX | Precio desde (versión no especificada) | No clasificada | $9.329.600 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| Serie M Furgon | Precio desde (versión no especificada) | No clasificada | $8.496.600 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| star-truck-plus-cargo-box | Precio desde (versión no especificada) | No clasificada | $12.316.500 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| star-truck-plus-pick-up-cabina-doble | Precio desde (versión no especificada) | No clasificada | $11.714.360 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| star-truck-plus-pick-up-cabina-simple | Precio desde (versión no especificada) | No clasificada | $11.055.100 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| uni-k | Precio desde (versión no especificada) | No clasificada | $24.990.000 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| UNI-T | Precio desde (versión no especificada) | No clasificada | $19.690.000 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
+| x7 | Precio desde (versión no especificada) | No clasificada | $15.890.000 | [auto.cl](https://www.auto.cl/nuevos/changan) | 2026-10-20 |
 | X7 Plus | X7 Plus Elite AT | No clasificada | $19.990.000 | [changan.cl](https://www.changan.cl/vehiculo/x7-plus/) | 2026-10-17 |
 | X7 Plus | X7 Plus Elite MT | No clasificada | $18.490.000 | [changan.cl](https://www.changan.cl/vehiculo/x7-plus/) | 2026-10-17 |
 | X7 Plus | X7 Plus Luxury AT | No clasificada | $18.990.000 | [changan.cl](https://www.changan.cl/vehiculo/x7-plus/) | 2026-10-17 |
 | X7 Plus | X7 Plus Luxury MT | No clasificada | $17.990.000 | [changan.cl](https://www.changan.cl/vehiculo/x7-plus/) | 2026-10-17 |
 
-### Chery (56 registros)
+### Chery — 58 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| cl-tiggo-2-pro | Precio desde (versión no especificada) | No clasificada | $10.990.000 | [auto.cl](https://www.auto.cl/nuevos/chery) | 2026-10-20 |
+| cl-tiggo-3-pro | Precio desde (versión no especificada) | No clasificada | $13.990.000 | [auto.cl](https://www.auto.cl/nuevos/chery) | 2026-10-20 |
 | himla | HIMLA 2.3T AT 4x4 | No clasificada | $25.288.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/chery/himla) | 2026-10-19 |
 | himla | HIMLA 2.3T MT 4x2 | No clasificada | $19.338.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/chery/himla) | 2026-10-19 |
 | Himla | HIMLA 2.3T MT 4×2 ADVENTURE | No clasificada | $19.338.100 | [Rosselot](https://www.rosselot.cl/nuevos/chery/himla) | 2026-10-19 |
@@ -248,13 +276,15 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | TIGGO 9 | 2.0T AT GLX AWD | No clasificada | $29.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo9) | 2026-10-19 |
 | TIGGO 9 HÍBRIDO | 1.5T DHT PHEV | PHEV | $31.990.000 | [Portillo Sur](https://www.portillosur.cl/chery/tiggo9hibrido) | 2026-10-19 |
 
-### Chevrolet (18 registros)
+### Chevrolet — 27 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Bolt | LTZ | EV | $23.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/bolt) | 2026-10-20 |
+| Bolt EUV | Precio desde (versión no especificada) | EV | $23.990.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
 | Captiva EV | Premier FWD | EV | $28.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/captiva-ev) | 2026-10-20 |
 | Captiva PHEV | Premier FWD | PHEV | $26.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/captiva-phev) | 2026-10-20 |
+| Colorado | Precio desde (versión no especificada) | No clasificada | $34.665.100 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
 | Equinox EV | RS | EV | $45.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/equinox-ev) | 2026-10-20 |
 | Groove | 1.5L Premier S | No clasificada | $12.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/groove) | 2026-10-20 |
 | Groove | LTZ S | No clasificada | $11.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/groove) | 2026-10-20 |
@@ -262,18 +292,25 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Montana | LTZ S 1.2 Aut | No clasificada | $21.054.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/montana) | 2026-10-20 |
 | Montana | Premier S 1.2 | No clasificada | $17.400.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/montana) | 2026-10-20 |
 | Montana | Premier S 1.2 Aut | No clasificada | $22.627.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/montana) | 2026-10-20 |
+| N400 Cargo | Precio desde (versión no especificada) | No clasificada | $12.302.100 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
 | Onix | 1.0T LTZ R | No clasificada | $13.190.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/onix) | 2026-10-20 |
 | Onix | 1.0T Premier RS R | No clasificada | $15.290.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/onix) | 2026-10-20 |
 | Onix | 1.0T Premier S Aut | No clasificada | $16.390.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/onix) | 2026-10-20 |
 | Onix Sedán | 1.0L Premier S | No clasificada | $16.590.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/onix-sedan) | 2026-10-20 |
 | Onix Sedán | 1.2L LT R | No clasificada | $9.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/onix-sedan) | 2026-10-20 |
 | Onix Sedán | 1.2L LTZ R | No clasificada | $10.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/onix-sedan) | 2026-10-20 |
+| Sail Sedan | Precio desde (versión no especificada) | No clasificada | $12.290.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
+| sail-hatchback | Precio desde (versión no especificada) | No clasificada | $12.890.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
+| Silverado CD | Precio desde (versión no especificada) | No clasificada | $60.298.100 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
+| Suburban | Precio desde (versión no especificada) | No clasificada | $78.287.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
+| Tahoe | Precio desde (versión no especificada) | No clasificada | $74.221.400 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
 | Tracker | LTZ AT | No clasificada | $18.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/tracker) | 2026-10-20 |
 | Tracker | Premier AT | No clasificada | $19.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/tracker) | 2026-10-20 |
+| Traverse | Precio desde (versión no especificada) | No clasificada | $46.190.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
 
-### Citroen (22 registros)
+### Citroen — 22 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | basalt | Basalt Shine Turbo 125HP AT | No clasificada | $15.690.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/citroen/basalt) | 2026-10-19 |
 | berlingo | Berlingo MCA M Diesel 100HP MT | No clasificada | $23.074.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/citroen/berlingo) | 2026-10-19 |
@@ -298,9 +335,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Spacetourer | Spacetourer MCA 8P Diesel 180HP AT | No clasificada | $36.640.100 | [Rosselot](https://www.rosselot.cl/nuevos/citroen/spacetourer) | 2026-10-19 |
 | Spacetourer | Spacetourer MCA 9P Diesel 180HP AT | No clasificada | $36.759.100 | [Rosselot](https://www.rosselot.cl/nuevos/citroen/spacetourer) | 2026-10-19 |
 
-### Cupra (6 registros)
+### Cupra — 6 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Formentor | 1.5 TSI e-Hybrid | PHEV | $40.990.000 | [cupraofficial.cl](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) | 2026-10-19 |
 | Leon | Cupra Leon 1.5 TSI mHEV AT | MHEV | $29.990.000 | [cupraofficial.cl](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) | 2026-10-19 |
@@ -309,26 +346,26 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Terramar | 1.5 TSI mHEV AT 150hp | MHEV | $39.990.000 | [cupraofficial.cl](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) | 2026-10-19 |
 | Terramar | High 1.5 TSI mHEV AT 150hp | MHEV | $43.990.000 | [cupraofficial.cl](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) | 2026-10-19 |
 
-### Deepal (3 registros)
+### Deepal — 3 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | S05 | REEV | REEV | $27.590.000 | [auto.cl](https://www.auto.cl/nuevos/deepal/s05) | 2026-10-20 |
 | S07 | BEV | EV | $37.490.000 | [auto.cl](https://www.auto.cl/nuevos/deepal/s07) | 2026-10-20 |
 | S07 | REEV | REEV | $31.690.000 | [auto.cl](https://www.auto.cl/nuevos/deepal/s07) | 2026-10-20 |
 
-### DFSK (4 registros)
+### DFSK — 4 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Cargo Van EC35 | EC35 EV | EV | $29.738.100 | [dfsk.cl](https://www.dfsk.cl/precios-y-especificaciones-por-modelo/) | 2026-10-19 |
 | E5 Plus | E5 PLUS PHEV | PHEV | $29.990.000 | [dfsk.cl](https://www.dfsk.cl/vehiculos/dfsk/e5-plus/) | 2026-10-19 |
 | SUV600 PHEV | ELITE | PHEV | $24.990.000 | [pdn.dfsk.cl](https://www.pdn.dfsk.cl/pasajeros/vehiculo/600-phev/) | 2026-10-19 |
 | SUV600 PHEV | ELITE PRO | PHEV | $28.990.000 | [dfsk.cl](https://www.dfsk.cl/precios-y-especificaciones-por-modelo/) | 2026-10-19 |
 
-### Dongfeng (27 registros)
+### Dongfeng — 27 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | AEOLUS GS | AEOLUS GS CROSS | No clasificada | $13.990.000 | [Portillo Sur](https://www.portillosur.cl/dong-feng/aeolusgs) | 2026-10-19 |
 | aeolus y3 | AEOLUS Y3 AT COMFORT | No clasificada | $12.590.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/dongfeng/aeolus-y3) | 2026-10-19 |
@@ -358,9 +395,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Vigo | VIGO EV 45.0KWH SR FULL | EV | $20.490.000 | [dongfengindumotora.cl](https://dongfengindumotora.cl/terminos-y-condiciones.html) | 2026-10-19 |
 | Vigo | VIGO EV 51.9KWH LR ELITE | EV | $23.990.000 | [dongfengindumotora.cl](https://dongfengindumotora.cl/terminos-y-condiciones.html) | 2026-10-19 |
 
-### DS (8 registros)
+### DS — 8 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 3 Crossback E-Tense | Bastille | EV | $41.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/ds) | 2026-10-20 |
 | 3 Crossback E-Tense | Bastille + | EV | $41.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/ds) | 2026-10-20 |
@@ -371,9 +408,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | 7 E-Tense | Bastille 300 4x4 | PHEV | $57.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/ds) | 2026-10-20 |
 | 7 E-Tense | Rivoli 300 4x4 | PHEV | $59.490.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/ds) | 2026-10-20 |
 
-### Exeed (10 registros)
+### Exeed — 10 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | LX | 1.5 G CVT 4x2 5P Advanced | No clasificada | $19.490.000 | [auto.cl](https://www.auto.cl/nuevos/exeed/lx) | 2026-10-20 |
 | LX | 1.5 G CVT 4x2 5P Unlimited | No clasificada | $20.490.000 | [auto.cl](https://www.auto.cl/nuevos/exeed/lx) | 2026-10-20 |
@@ -386,9 +423,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | VX | 2.0 G DCT 4x4 5P Unlimited AWD 7AS | No clasificada | $40.990.000 | [auto.cl](https://www.auto.cl/nuevos/exeed/vx) | 2026-10-20 |
 | VX | 2.0T DCT UNLIMITED | No clasificada | $29.490.000 | [auto.cl](https://www.auto.cl/nuevos/exeed/vx) | 2026-10-20 |
 
-### Ferrari (7 registros)
+### Ferrari — 7 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 296 | GTB | PHEV | $310.818.040 | [auto.cl](https://www.auto.cl/nuevos/ferrari/296) | 2026-10-20 |
 | 812 | GTS | No clasificada | $395.419.400 | [auto.cl](https://www.auto.cl/nuevos/ferrari/812) | 2026-10-20 |
@@ -398,10 +435,13 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Roma Spider | 3.9T G 4x2 2P | No clasificada | $274.426.000 | [auto.cl](https://www.auto.cl/nuevos/ferrari/roma-spider) | 2026-10-20 |
 | SF90 | STRADALE | PHEV | $551.748.000 | [auto.cl](https://www.auto.cl/nuevos/ferrari/sf90) | 2026-10-20 |
 
-### Fiat (6 registros)
+### Fiat — 9 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| 500e | Precio desde (versión no especificada) | EV | $21.990.000 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
+| 600e | Precio desde (versión no especificada) | EV | $25.990.000 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
+| Ducato | Precio desde (versión no especificada) | No clasificada | $35.688.100 | [auto.cl](https://www.auto.cl/nuevos/fiat) | 2026-10-20 |
 | Fastback | FASTBACK DRIVE TURBO AT MCA | No clasificada | $20.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/fiat/fastback) | 2026-10-19 |
 | Pulse | Drive 1.3 AT MCA | No clasificada | $18.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/fiat/pulse) | 2026-10-18 |
 | Pulse | Drive 1.3 MT | No clasificada | $17.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/fiat/pulse) | 2026-10-18 |
@@ -409,10 +449,13 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Pulse | Impetus Turbo AT MCA | No clasificada | $19.790.000 | [Rosselot](https://www.rosselot.cl/nuevos/fiat/pulse) | 2026-10-18 |
 | Pulse | PULSE DRIVE 1.3 AT MCA | No clasificada | $18.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/fiat/pulse) | 2026-10-19 |
 
-### Ford (46 registros)
+### Ford — 58 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| E-Transit Chasis | Precio desde (versión no especificada) | EV | $65.900.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| Escape | Precio desde (versión no especificada) | No clasificada | $33.190.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| Expedition | Precio desde (versión no especificada) | No clasificada | $74.690.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
 | Explorer 26 MY | Explorer Active 2.3L 4x2 MCA | No clasificada | $39.490.000 | [Callegari](https://callegari.cl/nuevos/explorer-26-my/) | 2026-10-19 |
 | Explorer 26 MY | Explorer Active 2.3L 4x4 MCA | No clasificada | $47.390.000 | [Callegari](https://callegari.cl/nuevos/explorer-26-my/) | 2026-10-19 |
 | Explorer 26 MY | Explorer Platinum MCA | No clasificada | $51.190.000 | [Callegari](https://callegari.cl/nuevos/explorer-26-my/) | 2026-10-19 |
@@ -423,6 +466,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | F-150 MCA 26MY | F-150 Platinum HEV 3.5 | No clasificada | $83.014.400 | [Callegari](https://callegari.cl/nuevos/f-150/) | 2026-10-19 |
 | F-150 MCA 26MY | F-150 Raptor CC 4X4 3.5L MCA | No clasificada | $106.219.400 | [Callegari](https://callegari.cl/nuevos/f-150/) | 2026-10-19 |
 | F-150 MCA 26MY | F-150 XLT CC 4X4 5.0L | No clasificada | $58.500.400 | [Callegari](https://callegari.cl/nuevos/f-150/) | 2026-10-19 |
+| f-150-cabina-doble | Precio desde (versión no especificada) | No clasificada | $55.918.100 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| f-150-cabina-simple | Precio desde (versión no especificada) | No clasificada | $45.089.100 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| f-150-raptor-cabina-doble | Precio desde (versión no especificada) | No clasificada | $103.637.100 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
 | Ford Bronco Sport MCA | Bronco Sport Badlands 2.0L 4x4 AT | No clasificada | $38.290.000 | [Callegari](https://callegari.cl/nuevos/bronco-sport/) | 2026-10-19 |
 | Ford Bronco Sport MCA | Bronco Sport Big Bend 1.5 AT 4x4 | No clasificada | $31.990.000 | [Callegari](https://callegari.cl/nuevos/bronco-sport/) | 2026-10-19 |
 | Ford Bronco Sport MCA | Bronco Sport Outer Banks 1.5 AT 4WD | No clasificada | $34.690.000 | [Callegari](https://callegari.cl/nuevos/bronco-sport/) | 2026-10-19 |
@@ -434,6 +480,7 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Maverick MCA | Maverick Lariat FHEV 2.5 AT 4X4 | No clasificada | $39.817.400 | [Callegari](https://callegari.cl/nuevos/maverick/) | 2026-10-19 |
 | Maverick MCA | Maverick Tremor 2.0 AT 4X4 | No clasificada | $40.412.400 | [Callegari](https://callegari.cl/nuevos/maverick/) | 2026-10-19 |
 | Maverick MCA | Maverick XLT 2.0 AT 4x4 | No clasificada | $31.487.400 | [Callegari](https://callegari.cl/nuevos/maverick/) | 2026-10-19 |
+| Mustang | Precio desde (versión no especificada) | No clasificada | $54.990.000 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
 | Ranger | Limited 3.0L Diésel Cabina Doble 4x4 AT | No clasificada | $50.705.900 | [ford.cl](https://www.ford.cl/pickups/ranger/comparar-modelos/) | 2026-10-18 |
 | Ranger | XL 2.0L Diésel Cabina Doble 4x2 MT | No clasificada | $33.665.100 | [ford.cl](https://www.ford.cl/pickups/ranger/comparar-modelos/) | 2026-10-18 |
 | Ranger | XL 2.0L Diésel Cabina Doble 4x4 MT | No clasificada | $38.306.100 | [ford.cl](https://www.ford.cl/pickups/ranger/comparar-modelos/) | 2026-10-18 |
@@ -459,12 +506,18 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Territory MCA | Territory Titanium 1.5L 4x2 | No clasificada | $29.190.000 | [Callegari](https://callegari.cl/nuevos/territory/) | 2026-10-19 |
 | Territory MCA | Territory Titanium Plus FHEV 1.5L 4x2 | No clasificada | $32.590.000 | [Callegari](https://callegari.cl/nuevos/territory/) | 2026-10-19 |
 | Territory MCA | Territory Trend 1.5 4x2 | No clasificada | $22.590.000 | [Callegari](https://callegari.cl/nuevos/territory/) | 2026-10-19 |
+| Transit Chasis | Precio desde (versión no especificada) | No clasificada | $35.093.100 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| Transit Custom Furgon | Precio desde (versión no especificada) | No clasificada | $34.855.100 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| Transit Furgon | Precio desde (versión no especificada) | No clasificada | $36.247.400 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| Transit Minibus | Precio desde (versión no especificada) | No clasificada | $50.134.700 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
+| transit-custom-minibus | Precio desde (versión no especificada) | No clasificada | $40.924.100 | [auto.cl](https://www.auto.cl/nuevos/ford) | 2026-10-20 |
 
-### Foton (41 registros)
+### Foton — 44 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | FT | CREW PASAJEROS Euro | No clasificada | $32.118.100 | [Portillo Sur](https://www.portillosur.cl/foton/ft) | 2026-10-19 |
+| FT Crew | Precio desde (versión no especificada) | No clasificada | $30.618.100 | [auto.cl](https://www.auto.cl/nuevos/foton) | 2026-10-20 |
 | g7 | G7 4X2 EURO VI | No clasificada | $18.552.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/g7) | 2026-10-19 |
 | g7 | G7 ULTIMATE 4x4 Euro 6 AT | No clasificada | $23.312.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/g7) | 2026-10-19 |
 | g7 | G7 ULTIMATE 4X4 EURO VI MT | No clasificada | $20.813.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/g7) | 2026-10-19 |
@@ -479,10 +532,12 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | g9 | G9 4X2 MT | No clasificada | $19.028.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/g9) | 2026-10-19 |
 | G9 | G9 4X4 AT | No clasificada | $25.335.100 | [Rosselot](https://www.rosselot.cl/nuevos/foton/g9) | 2026-10-19 |
 | G9 | G9 4X4 MT | No clasificada | $20.813.100 | [Rosselot](https://www.rosselot.cl/nuevos/foton/g9) | 2026-10-19 |
+| K1 Cargo | Precio desde (versión no especificada) | No clasificada | $16.490.000 | [auto.cl](https://www.auto.cl/nuevos/foton) | 2026-10-20 |
 | MIDI | Cabina Simple / 1.2 | No clasificada | $9.508.100 | [Portillo Sur](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
 | MIDI | CARGO BOX | No clasificada | $11.650.100 | [Portillo Sur](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
 | MIDI | CARGO BOX REF 1.2 Euro VI | No clasificada | $15.339.100 | [Portillo Sur](https://www.portillosur.cl/foton/midi) | 2026-10-19 |
 | midi cargo box | MIDI CARGO BOX 1.2 Euro VI | No clasificada | $11.650.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/midi-cargo-box) | 2026-10-19 |
+| Midi Chasis | Precio desde (versión no especificada) | No clasificada | $8.508.100 | [auto.cl](https://www.auto.cl/nuevos/foton) | 2026-10-20 |
 | tm cabina doble | TM3 CABINA DOBLE 1.6 Euro VI 2 AirBag | No clasificada | $13.078.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/tm-cabina-doble) | 2026-10-19 |
 | tm cabina simple | TM3 CABINA SIMPLE 1.6 Euro VI 2 AirBag | No clasificada | $11.888.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/tm-cabina-simple) | 2026-10-19 |
 | tm cargo box | TM3 CARGO BOX Euro VI | No clasificada | $13.066.200 | [Rosselot](https://www.rosselot.cl/public/nuevos/foton/tm-cargo-box) | 2026-10-19 |
@@ -506,9 +561,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | WONDER | WONDER CABINA SIMPLE 1.6 E6 | No clasificada | $12.483.100 | [Rosselot](https://www.rosselot.cl/nuevos/foton/wonder) | 2026-10-19 |
 | WONDER | WONDER CARGO BOX 1.6 E6 | No clasificada | $14.625.100 | [Rosselot](https://www.rosselot.cl/nuevos/foton/wonder) | 2026-10-19 |
 
-### Gac (26 registros)
+### Gac — 26 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | AION ES | AION ES | EV | $25.990.000 | [Astara Retail](https://astararetail.cl/gac-aion-es/) | 2026-10-19 |
 | AION UT | Aion UT Basic 44kwh | EV | $20.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/aion-ut/) | 2026-10-19 |
@@ -537,25 +592,27 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | GS8 | NEW GS8 2.0T AT GT 2WD | No clasificada | $30.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs8/precios-y-financiamiento/) | 2026-10-18 |
 | GS8 | NEW GS8 2.0T AT GX 4WD | No clasificada | $37.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs8/precios-y-financiamiento/) | 2026-10-18 |
 
-### Geely (11 registros)
+### Geely — 13 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | CITYRAY | / Crédito inteligente / $17.890.000 / | No clasificada | $20.890.000 | [Portillo Sur](https://www.portillosur.cl/geely/cityray) | 2026-10-19 |
-| EX2 | EX2 Max | EV | $20.490.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex2/) | 2026-10-19 |
-| EX2 | EX2 Pro | EV | $18.990.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex2/) | 2026-10-19 |
-| EX5 | EX5 Max | EV | $33.990.000 | [geely.cl](https://www.geely.cl/modelos/ex5/) | 2026-10-19 |
-| EX5 | EX5 Pro | EV | $30.990.000 | [geely.cl](https://www.geely.cl/modelos/ex5/) | 2026-10-19 |
-| EX5 EM-i | EX5 EM-i Max | PHEV | $26.490.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
-| EX5 EM-i | EX5 EM-i Max+ | PHEV | $28.990.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
-| EX5 EM-i | EX5 EM-i Pro | PHEV | $23.990.000 | [geely.cl](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
+| EX2 | EX2 Max | EV | $20.490.000 | [Geely Chile](https://www.geely.cl/modelos/geely-ex2/) | 2026-10-19 |
+| EX2 | EX2 Pro | EV | $18.990.000 | [Geely Chile](https://www.geely.cl/modelos/geely-ex2/) | 2026-10-19 |
+| EX5 | EX5 Max | EV | $33.990.000 | [Geely Chile](https://www.geely.cl/modelos/ex5/) | 2026-10-19 |
+| EX5 | EX5 Pro | EV | $30.990.000 | [Geely Chile](https://www.geely.cl/modelos/ex5/) | 2026-10-19 |
+| EX5 EM-i | EX5 EM-i Max | PHEV | $26.490.000 | [Geely Chile](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
+| EX5 EM-i | EX5 EM-i Max+ | PHEV | $28.990.000 | [Geely Chile](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
+| EX5 EM-i | EX5 EM-i Pro | PHEV | $23.990.000 | [Geely Chile](https://www.geely.cl/modelos/geely-ex5-em-i/) | 2026-10-19 |
 | EX5-EMi | MAX+ | No clasificada | $28.990.000 | [Portillo Sur](https://www.portillosur.cl/geely/ex5emi) | 2026-10-19 |
 | GX3 PRO | GF ELITE | No clasificada | $12.990.000 | [Portillo Sur](https://www.portillosur.cl/geely/gx3pro) | 2026-10-19 |
+| NEW Coolray | Precio desde (versión no especificada) | No clasificada | $15.490.000 | [auto.cl](https://www.auto.cl/nuevos/geely) | 2026-10-20 |
 | OKAVANGO | SIGNATURE 2.0T 7DCT | No clasificada | $26.690.000 | [Portillo Sur](https://www.portillosur.cl/geely/okavango) | 2026-10-19 |
+| Starray | Precio desde (versión no especificada) | No clasificada | $23.990.000 | [auto.cl](https://www.auto.cl/nuevos/geely) | 2026-10-20 |
 
-### Great Wall (40 registros)
+### Great Wall — 40 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Haval H6 | H6 F2 2.0T AT 2WD DELUXE | No clasificada | $25.290.000 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
 | Haval H6 | H6 F2 2.0T AT 2WD ELITE | No clasificada | $23.190.000 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
@@ -579,7 +636,7 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Haval Jolion Pro | HAVAL JOLION PRO HEV 1.5 AT 2WD DELUXE | HEV | $28.490.000 | [GWM Chile](https://www.gwm.cl/media/4igkuvlz/bases-reservas-de-verano-gwm.pdf) | 2026-10-19 |
 | Haval Jolion Pro | HAVAL JOLION PRO HEV 1.5 AT 2WD ELITE | HEV | $26.490.000 | [GWM Chile](https://www.gwm.cl/media/4igkuvlz/bases-reservas-de-verano-gwm.pdf) | 2026-10-19 |
 | ORA 03 | ORA 03 400 KM EV | EV | $26.490.000 | [GWM Chile](https://www.gwm.cl/vehiculo/ora/ora-03/) | 2026-10-18 |
-| ORA 03 | ORA 03 GT | EV | $32.490.000 | [dercocenter.cl](https://www.dercocenter.cl/cotizacion/1445) | 2026-10-19 |
+| ORA 03 | ORA 03 GT | EV | $32.490.000 | [DercoCenter](https://www.dercocenter.cl/cotizacion/1445) | 2026-10-19 |
 | ORA 5 | ORA 5 EV 2WD DELUXE | EV | $26.490.000 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
 | ORA 5 | ORA 5 EV 2WD DELUXE KIT | EV | $26.490.000 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
 | Poer | POER 2.0 TD 4X2 DELUXE F2 | No clasificada | $25.097.100 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
@@ -598,35 +655,35 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Wingle 7 | WINGLE 7 2.4 G 4X2 DELUXE F2 | No clasificada | $17.600.100 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
 | Wingle 7 | WINGLE 7 2.4 G 4X4 DELUXE F2 | No clasificada | $19.742.100 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
 
-### Honda (9 registros)
+### Honda — 9 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| Civic | TOURING CVT 1.5T | No clasificada | $31.390.000 | [Honda Chile](https://autos.honda.cl/sedan/civic/) | 2026-10-20 |
-| CR-V | TOURING 1.5 TURBO AUT. 4X4 | No clasificada | $42.990.000 | [Honda Chile](https://autos.honda.cl/suv/cr-v/) | 2026-10-20 |
-| HR-V | New HR-V Touring | No clasificada | $26.990.000 | [Honda Chile](https://autos.honda.cl/suv/hr-v/) | 2026-10-20 |
-| Pilot | ELITE 3.5 AUT. 4X4 (2027) | No clasificada | $61.990.000 | [Honda Chile](https://autos.honda.cl/suv/pilot/) | 2026-10-20 |
-| Pilot | TOURING 3.5 AUT. 4X4 (2027) | No clasificada | $59.990.000 | [Honda Chile](https://autos.honda.cl/suv/pilot/) | 2026-10-20 |
-| WR-V | WR-V EX | No clasificada | $22.990.000 | [Honda Chile](https://autos.honda.cl/suv/wr-v/) | 2026-10-20 |
-| WR-V | WR-V Touring | No clasificada | $23.990.000 | [Honda Chile](https://autos.honda.cl/suv/wr-v/) | 2026-10-20 |
-| ZR-V | EXL 2.0 AUT. 4X2 | No clasificada | $31.990.000 | [Honda Chile](https://autos.honda.cl/suv/zr-v/) | 2026-10-20 |
-| ZR-V | TOURING 2.0 AUT. 4X2 | No clasificada | $31.990.000 | [Honda Chile](https://autos.honda.cl/suv/zr-v/) | 2026-10-20 |
+| Civic | TOURING CVT 1.5T | No clasificada | $31.390.000 | [Honda Autos Chile](https://autos.honda.cl/sedan/civic/) | 2026-10-20 |
+| CR-V | TOURING 1.5 TURBO AUT. 4X4 | No clasificada | $42.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/cr-v/) | 2026-10-20 |
+| HR-V | New HR-V Touring | No clasificada | $26.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/hr-v/) | 2026-10-20 |
+| Pilot | ELITE 3.5 AUT. 4X4 (2027) | No clasificada | $61.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/pilot/) | 2026-10-20 |
+| Pilot | TOURING 3.5 AUT. 4X4 (2027) | No clasificada | $59.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/pilot/) | 2026-10-20 |
+| WR-V | WR-V EX | No clasificada | $22.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/wr-v/) | 2026-10-20 |
+| WR-V | WR-V Touring | No clasificada | $23.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/wr-v/) | 2026-10-20 |
+| ZR-V | EXL 2.0 AUT. 4X2 | No clasificada | $31.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/zr-v/) | 2026-10-20 |
+| ZR-V | TOURING 2.0 AUT. 4X2 | No clasificada | $31.990.000 | [Honda Autos Chile](https://autos.honda.cl/suv/zr-v/) | 2026-10-20 |
 
-### Hyundai (65 registros)
+### Hyundai — 66 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Accent | ACCENT BN7i 1.5 MT BLACK | No clasificada | $15.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
 | Accent | ACCENT BN7i 1.5 MT PLUS | No clasificada | $15.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
 | ACCENT BN7i | 1.5 AT DESIGN | No clasificada | $20.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
 | ACCENT BN7i | 1.5 AT PLUS | No clasificada | $17.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
 | ACCENT BN7i | 1.5 MT DESIGN | No clasificada | $18.790.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
-| Creta | SU2id 1.5 CVT DESIGN FL | No clasificada | $22.790.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
-| Creta | SU2id 1.5 CVT PLUS FL | No clasificada | $20.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
-| Creta | SU2id 1.5 MT GO FL | No clasificada | $18.290.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
-| Creta | SU2id 1.5 MT PLUS FL | No clasificada | $19.090.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
-| Creta Grand | CRETA GRAND SU2i 2.0 AT PLUS FL | No clasificada | $24.290.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/) | 2026-10-17 |
-| Creta Grand | CRETA GRAND SU2i 2.0 MT GO FL | No clasificada | $21.790.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/) | 2026-10-17 |
+| Creta | SU2id 1.5 CVT DESIGN FL | No clasificada | $22.790.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
+| Creta | SU2id 1.5 CVT PLUS FL | No clasificada | $20.590.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
+| Creta | SU2id 1.5 MT GO FL | No clasificada | $18.290.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
+| Creta | SU2id 1.5 MT PLUS FL | No clasificada | $19.090.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/new-creta/precios-y-financiamiento/) | 2026-10-17 |
+| Creta Grand | CRETA GRAND SU2i 2.0 AT PLUS FL | No clasificada | $24.290.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/) | 2026-10-17 |
+| Creta Grand | CRETA GRAND SU2i 2.0 MT GO FL | No clasificada | $21.790.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/the-new-creta-grand/precios-y-financiamiento/) | 2026-10-17 |
 | Creta SU2id | 1.5 CVT DESIGN FL | No clasificada | $22.790.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/cretasu2id) | 2026-10-19 |
 | Creta SU2id | 1.5 CVT PLUS FL | No clasificada | $20.590.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/cretasu2id) | 2026-10-19 |
 | GRAND I-10 AI3 SEDAN | 1.2 AT PLUS FL | No clasificada | $14.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/grandi10ai3sedan) | 2026-10-19 |
@@ -639,26 +696,27 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | i20 | I20 BI3 1.4 MT PLUS FL | No clasificada | $16.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | 2026-10-20 |
 | I20 BI3 FL | 1.0T AT DESIGN | No clasificada | $19.690.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
 | I20 BI3 FL | 1.4 AT PLUS | No clasificada | $17.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
-| Inster | AX EV DESIGN LR | EV | $24.490.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/) | 2026-10-17 |
-| Inster | AX EV PLUS | EV | $21.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/) | 2026-10-17 |
+| Inster | AX EV DESIGN LR | EV | $24.490.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/) | 2026-10-17 |
+| Inster | AX EV PLUS | EV | $21.990.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/) | 2026-10-17 |
 | Ioniq 5 | IONIQ 5 NE EV AWD LIMITED | EV | $62.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-awd-limited/) | 2026-10-20 |
 | Ioniq 5 | IONIQ 5 NE EV LIMITED | EV | $57.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-limited/) | 2026-10-20 |
 | Ioniq 5 | IONIQ 5 NE EV PREMIUM | EV | $52.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-premium/) | 2026-10-20 |
-| Kona | KONA SX2 EV GO LR | EV | $40.090.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-electrico/precios-y-financiamiento/) | 2026-10-17 |
-| Kona | SX2 1.6 AT HEV DESIGN | HEV | $30.190.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
-| Kona | SX2 1.6 AT HEV PLUS | HEV | $27.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
-| Kona | SX2 1.6T AT 4WD N-LINE | No clasificada | $35.790.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-kona/precios-y-financiamiento/) | 2026-10-17 |
+| Kona | KONA SX2 EV GO LR | EV | $40.090.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-electrico/precios-y-financiamiento/) | 2026-10-17 |
+| Kona | SX2 1.6 AT HEV DESIGN | HEV | $30.190.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
+| Kona | SX2 1.6 AT HEV PLUS | HEV | $27.590.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
+| Kona | SX2 1.6T AT 4WD N-LINE | No clasificada | $35.790.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/all-new-kona/precios-y-financiamiento/) | 2026-10-17 |
 | KONA SX2 ICE | 1.6T AT 4WD N-LINE | No clasificada | $35.790.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/konasx2ice) | 2026-10-19 |
-| Palisade | LX3 2.5T HEV AT AWD 7P CALLIGRAPHY | HEV | $66.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
-| Palisade | LX3 2.5T HEV AT AWD CALLIGRAPHY | HEV | $65.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
-| Palisade | LX3 2.5T HEV AT AWD LIMITED | HEV | $59.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
+| Palisade | LX3 2.5T HEV AT AWD 7P CALLIGRAPHY | HEV | $66.990.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
+| Palisade | LX3 2.5T HEV AT AWD CALLIGRAPHY | HEV | $65.990.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
+| Palisade | LX3 2.5T HEV AT AWD LIMITED | HEV | $59.990.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
 | Palisade | Palisade LX2 2.2 CRDI AT AWD Limited FL | No clasificada | $57.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
 | Palisade | Palisade LX2 2.2 CRDI AT AWD Premium FL | No clasificada | $52.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
 | Palisade | Palisade LX2 3.5 AT AWD Premium FL | No clasificada | $48.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
 | PALISADE LX3 | 2.5T HEV AT AWD 7P CALLIGRAPHY | No clasificada | $66.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/palisadelx3) | 2026-10-19 |
-| Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD LIMITED | HEV | $50.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
-| Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD PREMIUM | HEV | $46.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
-| Santa Fe | SANTA FE MX5 1.6T HEV AT DESIGN | HEV | $41.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
+| Porter | Precio desde (versión no especificada) | No clasificada | $22.955.100 | [auto.cl](https://www.auto.cl/nuevos/hyundai) | 2026-10-20 |
+| Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD LIMITED | HEV | $50.590.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
+| Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD PREMIUM | HEV | $46.990.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
+| Santa Fe | SANTA FE MX5 1.6T HEV AT DESIGN | HEV | $41.590.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
 | SANTA FE MX5 | 1.6T HEV AT 4WD LIMITED | No clasificada | $50.590.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
 | SANTA FE MX5 | 2.5T AT 4WD CALLIGRAPHY | No clasificada | $55.090.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
 | SANTA FE MX5 | 2.5T AT 4WD LIMITED | No clasificada | $50.090.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
@@ -666,42 +724,42 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Staria | STARIA US4 MB 2.2 CRDI AT 4WD 9P LUXURY | No clasificada | $49.373.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | 2026-10-20 |
 | STARIA US4 MB | 2.2 CRDI AT 9P FL | No clasificada | $38.544.100 | [Portillo Sur](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
 | STARIA US4 MB | 2.2 CRDI MT 11P FL | No clasificada | $37.711.100 | [Portillo Sur](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
-| Tucson | TUCSON NX4 1.6T HEV AT 4WD LIMITED FL | HEV | $42.390.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
-| Tucson | TUCSON NX4 1.6T HEV AT DESIGN FL | HEV | $37.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
-| Tucson | TUCSON NX4 1.6T HEV AT PLUS FL | HEV | $31.890.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
-| Tucson | TUCSON NX4c 1.5T AT 4WD PLUS FL | No clasificada | $30.190.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
-| Tucson | TUCSON NX4c 2.0 AT BLACKLINE FL | No clasificada | $30.190.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
-| Tucson | TUCSON NX4c 2.0 AT PLUS FL | No clasificada | $25.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
-| Tucson | TUCSON NX4c 2.0 MT GO FL | No clasificada | $24.390.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
+| Tucson | TUCSON NX4 1.6T HEV AT 4WD LIMITED FL | HEV | $42.390.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
+| Tucson | TUCSON NX4 1.6T HEV AT DESIGN FL | HEV | $37.590.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
+| Tucson | TUCSON NX4 1.6T HEV AT PLUS FL | HEV | $31.890.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/ecologicos/the-new-tucson-hibrido/) | 2026-10-19 |
+| Tucson | TUCSON NX4c 1.5T AT 4WD PLUS FL | No clasificada | $30.190.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
+| Tucson | TUCSON NX4c 2.0 AT BLACKLINE FL | No clasificada | $30.190.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
+| Tucson | TUCSON NX4c 2.0 AT PLUS FL | No clasificada | $25.990.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
+| Tucson | TUCSON NX4c 2.0 MT GO FL | No clasificada | $24.390.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/the-new-tucson/precios-y-financiamiento/) | 2026-10-17 |
 | TUCSON NX4 HEV | 1.6T HEV AT 4WD LIMITED FL | No clasificada | $42.390.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/tucsonnx4hev) | 2026-10-19 |
 | TUCSON NX4c | 1.5T AT 4WD PLUS FL | No clasificada | $30.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/tucsonnx4c) | 2026-10-19 |
-| Venue | Venue QU2i 1.0T AT DESIGN | No clasificada | $20.490.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
-| Venue | Venue QU2i 1.0T AT PLUS | No clasificada | $18.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
-| Venue | Venue QU2i 1.0T MT GO | No clasificada | $16.490.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
-| Venue | Venue QU2i 1.0T MT PLUS | No clasificada | $17.190.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
+| Venue | Venue QU2i 1.0T AT DESIGN | No clasificada | $20.490.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
+| Venue | Venue QU2i 1.0T AT PLUS | No clasificada | $18.990.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
+| Venue | Venue QU2i 1.0T MT GO | No clasificada | $16.490.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
+| Venue | Venue QU2i 1.0T MT PLUS | No clasificada | $17.190.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
 | VENUE QU2I | Venue QU2i 1.0T AT DESIGN | No clasificada | $20.490.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
 | VENUE QU2I | Venue QU2i 1.0T AT PLUS | No clasificada | $18.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
 
-### JAC (53 registros)
+### JAC — 53 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| Ignite30X | IGNITE30X CCS2 LUXURY | EV | $19.490.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/) | 2026-10-19 |
+| Ignite30X | IGNITE30X CCS2 LUXURY | EV | $19.490.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/) | 2026-10-19 |
 | JS2 | PRO MT LUXURY 6C | No clasificada | $13.290.000 | [Portillo Sur](https://www.portillosur.cl/jac/js2) | 2026-10-19 |
-| JS2 Pro | JS2 PRO CVT ADVANCE | No clasificada | $14.290.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/jac-js2-pro/) | 2026-10-19 |
-| JS2 Pro | JS2 PRO MT LUXURY | No clasificada | $13.290.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/jac-js2-pro/) | 2026-10-19 |
+| JS2 Pro | JS2 PRO CVT ADVANCE | No clasificada | $14.290.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/jac-js2-pro/) | 2026-10-19 |
+| JS2 Pro | JS2 PRO MT LUXURY | No clasificada | $13.290.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/jac-js2-pro/) | 2026-10-19 |
 | JS4 | 1.5T CVT ADVANCE | No clasificada | $17.690.000 | [Portillo Sur](https://www.portillosur.cl/jac/js4) | 2026-10-19 |
-| JS4 | JS4 ADVANCE CVT | No clasificada | $17.690.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
-| JS4 | JS4 COMFORT CVT | No clasificada | $15.390.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
-| JS4 | JS4 LUXURY CVT | No clasificada | $16.190.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
-| JS8 | JS8 COMFORT MT | No clasificada | $17.690.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/js8/) | 2026-10-19 |
-| JS8 | JS8 LUXURY MT | No clasificada | $18.190.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/js8/) | 2026-10-19 |
-| JS8 Pro | JS8 PRO DCT ADVANCE | No clasificada | $21.990.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/jac-js8-pro/) | 2026-10-19 |
-| JS8 Pro | JS8 PRO DCT LUXURY | No clasificada | $20.990.000 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/suv/jac-js8-pro/) | 2026-10-19 |
-| Refine Cargo | REFINE CARGO | No clasificada | $26.168.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/) | 2026-10-19 |
-| Refine Cargo EV | REFINE CARGO EV | EV | $26.168.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-cargo-ev/) | 2026-10-19 |
-| Refine Pasajeros | REFINE 10+1 | No clasificada | $29.738.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-pasajeros/) | 2026-10-19 |
-| Refine Pasajeros | REFINE 8+1 | No clasificada | $28.786.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-pasajeros/) | 2026-10-19 |
+| JS4 | JS4 ADVANCE CVT | No clasificada | $17.690.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
+| JS4 | JS4 COMFORT CVT | No clasificada | $15.390.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
+| JS4 | JS4 LUXURY CVT | No clasificada | $16.190.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/js4/) | 2026-10-19 |
+| JS8 | JS8 COMFORT MT | No clasificada | $17.690.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/js8/) | 2026-10-19 |
+| JS8 | JS8 LUXURY MT | No clasificada | $18.190.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/js8/) | 2026-10-19 |
+| JS8 Pro | JS8 PRO DCT ADVANCE | No clasificada | $21.990.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/jac-js8-pro/) | 2026-10-19 |
+| JS8 Pro | JS8 PRO DCT LUXURY | No clasificada | $20.990.000 | [JAC Chile](https://www.jacautoschile.cl/modelos/suv/jac-js8-pro/) | 2026-10-19 |
+| Refine Cargo | REFINE CARGO | No clasificada | $26.168.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/) | 2026-10-19 |
+| Refine Cargo EV | REFINE CARGO EV | EV | $26.168.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-cargo-ev/) | 2026-10-19 |
+| Refine Pasajeros | REFINE 10+1 | No clasificada | $29.738.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-pasajeros/) | 2026-10-19 |
+| Refine Pasajeros | REFINE 8+1 | No clasificada | $28.786.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/refine-pasajeros/) | 2026-10-19 |
 | REFINE PASAJEROS | 10+1 PASAJEROS | No clasificada | $29.738.100 | [Portillo Sur](https://www.portillosur.cl/jac/refinepasajeros) | 2026-10-19 |
 | REFINE PASAJEROS | 8+1 PASAJEROS | No clasificada | $28.786.100 | [Portillo Sur](https://www.portillosur.cl/jac/refinepasajeros) | 2026-10-19 |
 | SUNRAY | 2.5 DSL MT 13+1 PASAJEROS E6 | No clasificada | $34.736.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
@@ -709,26 +767,26 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | SUNRAY | 2.7T DSL MT 16+1 PASAJEROS | No clasificada | $37.711.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
 | SUNRAY | 2.7T DSL MT 17+1 PASAJEROS | No clasificada | $38.901.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
 | SUNRAY | 2.7T DSL MT 27+1 PASAJEROS ESCOLAR | No clasificada | $36.521.100 | [Portillo Sur](https://www.portillosur.cl/jac/sunray) | 2026-10-19 |
-| Sunray Euro 6 | SUNRAY 13+1 E6 | No clasificada | $34.736.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
-| Sunray Euro 6 | SUNRAY 14+1 E6 | No clasificada | $35.926.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
-| Sunray Euro 6 | SUNRAY 16+1 E6 | No clasificada | $40.091.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
-| Sunray Euro 6 | SUNRAY 17+1 E6 | No clasificada | $41.281.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
-| Sunray Euro 6 | SUNRAY 28PAS | No clasificada | $38.068.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
+| Sunray Euro 6 | SUNRAY 13+1 E6 | No clasificada | $34.736.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
+| Sunray Euro 6 | SUNRAY 14+1 E6 | No clasificada | $35.926.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
+| Sunray Euro 6 | SUNRAY 16+1 E6 | No clasificada | $40.091.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
+| Sunray Euro 6 | SUNRAY 17+1 E6 | No clasificada | $41.281.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
+| Sunray Euro 6 | SUNRAY 28PAS | No clasificada | $38.068.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/nuevo-sunray-euro-6/) | 2026-10-19 |
 | T8 | 2.0T 4X4 DSL MT COMFORT SMART | No clasificada | $21.408.100 | [Portillo Sur](https://www.portillosur.cl/jac/t8) | 2026-10-19 |
 | T8 | 2.5T 4X4 DSL MT COMFORT SMART | No clasificada | $22.598.100 | [Portillo Sur](https://www.portillosur.cl/jac/t8) | 2026-10-19 |
-| T8 | T8 4X2 COMFORT | No clasificada | $20.218.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
-| T8 | T8 4X2 COMFORT SMART | No clasificada | $20.218.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
-| T8 | T8 4X4 COMFORT SMART | No clasificada | $21.408.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
-| T8 Pro | T8P 4X4 LUXURY 2.5 | No clasificada | $24.621.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/jac-t8-pro-2-5/) | 2026-10-19 |
+| T8 | T8 4X2 COMFORT | No clasificada | $20.218.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
+| T8 | T8 4X2 COMFORT SMART | No clasificada | $20.218.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
+| T8 | T8 4X4 COMFORT SMART | No clasificada | $21.408.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/t8/) | 2026-10-19 |
+| T8 Pro | T8P 4X4 LUXURY 2.5 | No clasificada | $24.621.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/jac-t8-pro-2-5/) | 2026-10-19 |
 | T8 PRO | 2.0T 4X4 DSL AT ADVANCE | No clasificada | $26.644.100 | [Portillo Sur](https://www.portillosur.cl/jac/t8pro) | 2026-10-19 |
 | T9 | 4X4 KIT OFF ROAD | No clasificada | $31.880.100 | [Portillo Sur](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
 | T9 | 4X4 TEAM CHILE | No clasificada | $31.166.100 | [Portillo Sur](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
 | T9 | EV AWD AT ADVANCE | No clasificada | $54.728.100 | [Portillo Sur](https://www.portillosur.cl/jac/t9) | 2026-10-19 |
-| T9 | T9 4x4 AT Advance | No clasificada | $28.786.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
-| T9 | T9 4X4 KIT OFF ROAD | No clasificada | $31.880.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
-| T9 | T9 4x4 MT Luxury | No clasificada | $27.001.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
-| T9 | T9 4x4 TEAM CHILE | No clasificada | $31.166.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
-| T9 EV | JAC EV AWD AT ADVANCE | EV | $54.728.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/electricos/jac-t9-ev/) | 2026-10-19 |
+| T9 | T9 4x4 AT Advance | No clasificada | $28.786.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
+| T9 | T9 4X4 KIT OFF ROAD | No clasificada | $31.880.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
+| T9 | T9 4x4 MT Luxury | No clasificada | $27.001.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
+| T9 | T9 4x4 TEAM CHILE | No clasificada | $31.166.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/pickup/t9/) | 2026-10-19 |
+| T9 EV | JAC EV AWD AT ADVANCE | EV | $54.728.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/electricos/jac-t9-ev/) | 2026-10-19 |
 | X200 | 2.0T DSL MT C S JAULA GAS | No clasificada | $24.390.076 | [Portillo Sur](https://www.portillosur.cl/jac/x200) | 2026-10-19 |
 | X200 | 2.0T DSL MT D C | No clasificada | $24.621.100 | [Portillo Sur](https://www.portillosur.cl/jac/x200) | 2026-10-19 |
 | X200 | X200 2.0T DSL MT CABINA DOBLE LUXURY | No clasificada | $24.621.100 | [Callegari](https://callegari.cl/nuevos/x200/) | 2026-10-19 |
@@ -736,29 +794,29 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | X200 | X200 2.0T DSL MT CABINA SIMPLE LUXURY | No clasificada | $22.717.100 | [Callegari](https://callegari.cl/nuevos/x200/) | 2026-10-19 |
 | X200 | X200 2.0T DSL MT CABINA SIMPLE LUXURY CARROZADO | No clasificada | $23.606.030 | [Callegari](https://callegari.cl/nuevos/x200/) | 2026-10-19 |
 | X200 | X200 2.0T DSL MT CHASIS CABINA LUXURY | No clasificada | $21.051.100 | [Callegari](https://callegari.cl/nuevos/x200/) | 2026-10-19 |
-| X200 | X200 MT CABINA DOBLE | No clasificada | $24.621.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/x200/) | 2026-10-19 |
-| X200 | X200 MT CABINA SIMPLE | No clasificada | $22.717.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/x200/) | 2026-10-19 |
-| X200 | X200 MT CHASIS CABINA | No clasificada | $21.051.100 | [JAC Autos Chile](https://www.jacautoschile.cl/modelos/comerciales/x200/) | 2026-10-19 |
+| X200 | X200 MT CABINA DOBLE | No clasificada | $24.621.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/x200/) | 2026-10-19 |
+| X200 | X200 MT CABINA SIMPLE | No clasificada | $22.717.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/x200/) | 2026-10-19 |
+| X200 | X200 MT CHASIS CABINA | No clasificada | $21.051.100 | [JAC Chile](https://www.jacautoschile.cl/modelos/comerciales/x200/) | 2026-10-19 |
 
-### Jaecoo (4 registros)
+### Jaecoo — 4 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 7 SHS | JAECOO 7 SHS ANDES | PHEV | $26.990.000 | [omodajaecoo.cl](https://www.omodajaecoo.cl/modelos/jaecoo-7-shs/) | 2026-10-19 |
 | 7 SHS | JAECOO 7 SHS PATAGONIA | PHEV | $28.990.000 | [omodajaecoo.cl](https://www.omodajaecoo.cl/modelos/jaecoo-7-shs/) | 2026-10-19 |
 | Jaecoo 7 | J7 1.6T New Elemental | No clasificada | $22.690.000 | [Callegari](https://callegari.cl/nuevos/jaecoo-7/) | 2026-10-19 |
 | Jaecoo 7 | J7 1.6T New Prime AWD | No clasificada | $25.690.000 | [Callegari](https://callegari.cl/nuevos/jaecoo-7/) | 2026-10-19 |
 
-### Jaguar (2 registros)
+### Jaguar — 2 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | E-Pace | 2.0L | No clasificada | $67.900.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/jaguar/e-pace) | 2026-10-20 |
 | F-Type | 2.0L | No clasificada | $113.900.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/jaguar/f-type) | 2026-10-20 |
 
-### Jeep (37 registros)
+### Jeep — 37 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Avenger | AVENGER ALTITUDE 1.2T H DDCT6 FWD | No clasificada | $24.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/jeep/new-avenger) | 2026-10-19 |
 | Avenger | JEEP AVENGER ALTITUDE 1.2T H DDCT6 FWD | No clasificada | $24.990.000 | [Callegari](https://callegari.cl/nuevos/avenger/) | 2026-10-19 |
@@ -798,9 +856,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Wrangler | WRANGLER SAHARA 2.0T AT8 4×4 | No clasificada | $61.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/jeep/wrangler) | 2026-10-19 |
 | Wrangler | WRANGLER SPORT 2.0T AT8 4×4 | No clasificada | $57.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/jeep/wrangler) | 2026-10-19 |
 
-### Jetour (12 registros)
+### Jetour — 12 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Dashing | Dashing 1.5L 6MT Turbo Lux FL | No clasificada | $17.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/jetour/dashing) | 2026-10-19 |
 | Dashing | Dashing 6DCT 1.5L Turbo Lux | No clasificada | $19.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/jetour/dashing) | 2026-10-19 |
@@ -815,18 +873,18 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | X70 PLUS | X70 PLUS 1.5T 6DCT FL | No clasificada | $20.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/jetour/x70-plus) | 2026-10-19 |
 | X90 PLUS | X90 Plus 2.0T GDI 7DCT | No clasificada | $27.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/jetour/x90-plus) | 2026-10-19 |
 
-### JIM (4 registros)
+### JIM — 4 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | RE-MAX | 4X2 AT DLX | No clasificada | $22.836.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
 | RE-MAX | 4X4 AT DLX | No clasificada | $24.026.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
 | RE-MAX | 4X4 MT DLX | No clasificada | $22.598.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
 | RE-MAX | 4X4 MT STD | No clasificada | $20.694.100 | [Portillo Sur](https://www.portillosur.cl/jim/remax) | 2026-10-19 |
 
-### JMC (23 registros)
+### JMC — 23 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | All New Vigus Plus | Vigus Plus 4x2 MT | No clasificada | $22.598.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 | All New Vigus Plus | Vigus Plus 4x4 MT | No clasificada | $23.788.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
@@ -852,9 +910,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Touring Cargo | Touring Cargo L2H2 | No clasificada | $30.333.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 | Vigus EV | Vigus EV 4x2 | EV | $30.928.100 | [jmcchile.cl](https://jmcchile.cl/legales/santander-consumer/) | 2026-10-19 |
 
-### Kaiyi (6 registros)
+### Kaiyi — 6 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Kye-5 | 1.5T G AT 4x2 5AS Lux | No clasificada | $14.190.000 | [auto.cl](https://www.auto.cl/nuevos/kaiyi/kye-5) | 2026-10-20 |
 | Kye-5 | 1.5T G MT 4x2 5AS Lux | No clasificada | $13.490.000 | [auto.cl](https://www.auto.cl/nuevos/kaiyi/kye-5) | 2026-10-20 |
@@ -863,9 +921,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Kyx3 | 1,5 G MT 5P STD | No clasificada | $11.490.000 | [auto.cl](https://www.auto.cl/nuevos/kaiyi/kyx3) | 2026-10-20 |
 | Kyx3 PRO | 1,5 G AT 5P CVT | No clasificada | $12.990.000 | [auto.cl](https://www.auto.cl/nuevos/kaiyi/kyx3-pro) | 2026-10-20 |
 
-### Karry (8 registros)
+### Karry — 8 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Q22 Cabina Doble | 1,3 MT | No clasificada | $7.790.000 | [auto.cl](https://www.auto.cl/nuevos/karry/q22-cabina-doble) | 2026-10-20 |
 | Q22 Cabina Doble | 1,5 MT | No clasificada | $9.390.000 | [auto.cl](https://www.auto.cl/nuevos/karry/q22-cabina-doble) | 2026-10-20 |
@@ -876,9 +934,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Q51 Cabina Simple | 1.6 MT 4x2 | No clasificada | $12.364.100 | [auto.cl](https://www.auto.cl/nuevos/karry/q51-cabina-simple) | 2026-10-20 |
 | Q52 Cabina Doble | 1.6 MT 4x2 DC | No clasificada | $13.554.100 | [auto.cl](https://www.auto.cl/nuevos/karry/q52-cabina-doble) | 2026-10-20 |
 
-### KGM (65 registros)
+### KGM — 65 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Actyon | ACTYON DLX Euro 6D – KAY224 | No clasificada | $34.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/kgm/actyon) | 2026-10-19 |
 | Actyon | ACTYON GLX Euro 6D – KAY112 | No clasificada | $30.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/kgm/actyon) | 2026-10-19 |
@@ -946,9 +1004,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | torres evx | TORRES EVX LIMITED | No clasificada | $43.490.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/kgm/torres-evx) | 2026-10-19 |
 | Torres HEV | DLX | HEV | $32.990.000 | [Astara Retail](https://astararetail.cl/kgm-torres-hev/) | 2026-10-18 |
 
-### Kia (48 registros)
+### Kia — 53 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | All New TASMAN | TASMAN EX 2.2T DSL 6MT 4X4 FULL | No clasificada | $35.990.000 | [Callegari](https://callegari.cl/nuevos/all-new-tasman/) | 2026-10-19 |
 | All New TASMAN | TASMAN EX 2.2T DSL 8AT 4X4 FULL | No clasificada | $39.990.000 | [Callegari](https://callegari.cl/nuevos/all-new-tasman/) | 2026-10-19 |
@@ -967,11 +1025,16 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | EV6 | EV6 EV GT-LINE 84.0KWH AWD | EV | $59.990.000 | [kia.cl](https://www.kia.cl/promociones/kia-ev6.html) | 2026-10-19 |
 | EV9 | EV9 GT-LINE 99.8KWH AWD 6P1 | EV | $99.990.000 | [kia.cl](https://www.kia.cl/promociones/kia-ev9.html) | 2026-10-19 |
 | EV9 | EV9 GT-LINE 99.8KWH AWD 6P2 | EV | $99.990.000 | [kia.cl](https://www.kia.cl/promociones/kia-ev9.html) | 2026-10-19 |
+| Frontier II | Precio desde (versión no especificada) | No clasificada | $22.521.008 | [auto.cl](https://www.auto.cl/nuevos/kia) | 2026-10-20 |
+| k3 | Precio desde (versión no especificada) | No clasificada | $17.990.000 | [auto.cl](https://www.auto.cl/nuevos/kia) | 2026-10-20 |
+| k3-cross | Precio desde (versión no especificada) | No clasificada | $17.490.000 | [auto.cl](https://www.auto.cl/nuevos/kia) | 2026-10-20 |
 | Morning | EX 1.2L 5AMT FULL | No clasificada | $14.990.000 | [kia.cl](https://www.kia.cl/promociones/kia-morning.html) | 2026-10-17 |
 | Morning | EX 1.2L 5MT FULL | No clasificada | $13.490.000 | [kia.cl](https://www.kia.cl/promociones/kia-morning.html) | 2026-10-17 |
 | Morning | LX 1.0L 5MT | No clasificada | $10.990.000 | [kia.cl](https://www.kia.cl/promociones/kia-morning.html) | 2026-10-17 |
 | Morning | LX 1.2L 5AMT | No clasificada | $13.490.000 | [kia.cl](https://www.kia.cl/promociones/kia-morning.html) | 2026-10-17 |
 | Morning | LX 1.2L 5MT | No clasificada | $11.990.000 | [kia.cl](https://www.kia.cl/promociones/kia-morning.html) | 2026-10-17 |
+| Niro | Precio desde (versión no especificada) | No clasificada | $29.990.000 | [auto.cl](https://www.auto.cl/nuevos/kia) | 2026-10-20 |
+| Seltos | Precio desde (versión no especificada) | No clasificada | $19.390.000 | [auto.cl](https://www.auto.cl/nuevos/kia) | 2026-10-20 |
 | Soluto | SOLUTO EX 1.4L 4AT FULL | No clasificada | $13.490.000 | [Callegari](https://callegari.cl/nuevos/soluto/) | 2026-10-19 |
 | Soluto | SOLUTO EX 1.4L 5MT FULL | No clasificada | $12.490.000 | [Callegari](https://callegari.cl/nuevos/soluto/) | 2026-10-19 |
 | Soluto | SOLUTO LX 1.4L 4AT HIGH | No clasificada | $12.490.000 | [Callegari](https://callegari.cl/nuevos/soluto/) | 2026-10-19 |
@@ -999,9 +1062,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Sportage DLS | SPORTAGE LX 2.0T 8AT DSL | No clasificada | $28.990.000 | [Callegari](https://callegari.cl/nuevos/sportage-dls/) | 2026-10-19 |
 | Sportage DLS | SPORTAGE X-LINE 2.0T 8AT DSL AWD FULL | No clasificada | $40.990.000 | [Callegari](https://callegari.cl/nuevos/sportage-dls/) | 2026-10-19 |
 
-### Kyc (8 registros)
+### Kyc — 8 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | T3 Gran Mamut | 1.5 G MT 2P CH CS | No clasificada | $10.341.100 | [auto.cl](https://www.auto.cl/nuevos/kyc/t3-gran-mamut) | 2026-10-20 |
 | T3 Gran Mamut Cargo BOX | 1.6 G 4x2 MT 2P Cargo Box | No clasificada | $12.126.100 | [auto.cl](https://www.auto.cl/nuevos/kyc/t3-gran-mamut-cargo-box) | 2026-10-20 |
@@ -1012,9 +1075,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | X5 Pick UP Doble Cabina | 1.6 G MT 4P CH CD Pick Up AA | No clasificada | $14.863.100 | [auto.cl](https://www.auto.cl/nuevos/kyc/x5-pick-up-doble-cabina) | 2026-10-20 |
 | X5 Pick UP Doble Cabina | 2.0 G MT 4P CH CD Pick Up Plus AA | No clasificada | $13.078.100 | [auto.cl](https://www.auto.cl/nuevos/kyc/x5-pick-up-doble-cabina) | 2026-10-20 |
 
-### Land Rover (17 registros)
+### Land Rover — 17 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Defender 110 | X-DYNAMIC HSE | No clasificada | $130.900.000 | [auto.cl](https://www.auto.cl/nuevos/land-rover/defender-110) | 2026-10-20 |
 | Defender 110 | X-DYNAMIC S | No clasificada | $115.900.000 | [auto.cl](https://www.auto.cl/nuevos/land-rover/defender-110) | 2026-10-20 |
@@ -1034,9 +1097,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Range Rover Sport | 4.4 FIRST EDITION | No clasificada | $188.421.942 | [auto.cl](https://www.auto.cl/nuevos/land-rover/range-rover-sport) | 2026-10-20 |
 | Range Rover Velar | SE | No clasificada | $89.900.000 | [auto.cl](https://www.auto.cl/nuevos/land-rover/range-rover-velar) | 2026-10-20 |
 
-### Landking (16 registros)
+### Landking — 16 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | LK 1016 | LK 1016 Cargo Box | No clasificada | $38.068.100 | [Rosselot](https://www.rosselot.cl/nuevos/landking/lk-1016) | 2026-10-19 |
 | LK 1016 | LK 1016 Chasis Cabina | No clasificada | $34.498.100 | [Rosselot](https://www.rosselot.cl/nuevos/landking/lk-1016) | 2026-10-19 |
@@ -1055,18 +1118,18 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | LK5 | LK5 Pick up | No clasificada | $16.172.100 | [Rosselot](https://www.rosselot.cl/nuevos/landking/lk5) | 2026-10-19 |
 | LK8 EV | LK8 EV Cargobox | EV | $62.463.100 | [Rosselot](https://www.rosselot.cl/nuevos/landking/lk8-ev) | 2026-10-19 |
 
-### Leapmotor (4 registros)
+### Leapmotor — 4 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| B10 | B10 BEV LIFE | EV | $24.990.000 | [guillermomorales.cl](https://guillermomorales.cl/autos-nuevos/leapmotor/b10) | 2026-10-19 |
-| B10 | B10 REEV DESIGN | REEV | $25.990.000 | [guillermomorales.cl](https://guillermomorales.cl/autos-nuevos/leapmotor/b10/b10-reev-design) | 2026-10-19 |
+| B10 | B10 BEV LIFE | EV | $24.990.000 | [Guillermo Morales](https://guillermomorales.cl/autos-nuevos/leapmotor/b10) | 2026-10-19 |
+| B10 | B10 REEV DESIGN | REEV | $25.990.000 | [Guillermo Morales](https://guillermomorales.cl/autos-nuevos/leapmotor/b10/b10-reev-design) | 2026-10-19 |
 | C10 | C10 BEV Design | EV | $29.490.000 | [Callegari](https://callegari.cl/nuevos/c10/) | 2026-10-19 |
 | C10 | C10 REEV Design | REEV | $30.990.000 | [Callegari](https://callegari.cl/nuevos/c10/) | 2026-10-19 |
 
-### Lexus (11 registros)
+### Lexus — 11 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | ES | ES 300h | HEV | $58.503.136 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/lexus/es) | 2026-10-20 |
 | ES | ES 500e | EV | $68.990.000 | [Lexus Chile](https://lexus.cl/es/) | 2026-10-20 |
@@ -1080,38 +1143,38 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | RX | RX 450H+ PHEV | PHEV | $96.329.865 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/lexus/rx) | 2026-10-20 |
 | UX | UX300h Premium | HEV | $39.990.000 | [Lexus Chile](https://lexus.cl/es/) | 2026-10-20 |
 
-### Livan (2 registros)
+### Livan — 2 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | X6PRO | HONOR | No clasificada | $17.490.000 | [auto.cl](https://www.auto.cl/nuevos/livan/x6pro) | 2026-10-20 |
 | X6PRO | LUX | No clasificada | $16.490.000 | [auto.cl](https://www.auto.cl/nuevos/livan/x6pro) | 2026-10-20 |
 
-### Lynk & Co (8 registros)
+### Lynk & Co — 8 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| 01 | HALO | PHEV | $32.990.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/CO01) | 2026-10-19 |
-| 01 | PRO | PHEV | $29.490.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/CO01) | 2026-10-19 |
-| 06 | HALO | No clasificada | $25.490.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/06) | 2026-10-19 |
-| 06 | PLUS | No clasificada | $20.990.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/06) | 2026-10-19 |
-| 06 | PRO | No clasificada | $22.990.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/06) | 2026-10-19 |
-| 08 | HALO | PHEV | $43.990.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/08) | 2026-10-19 |
-| 08 | PRO | PHEV | $40.990.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/08) | 2026-10-19 |
-| 09 | HALO | MHEV | $45.990.000 | [Cartoni](https://www.cartoni.cl/nuevo/lynk-co/09) | 2026-10-19 |
+| 01 | HALO | PHEV | $32.990.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/CO01) | 2026-10-19 |
+| 01 | PRO | PHEV | $29.490.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/CO01) | 2026-10-19 |
+| 06 | HALO | No clasificada | $25.490.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/06) | 2026-10-19 |
+| 06 | PLUS | No clasificada | $20.990.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/06) | 2026-10-19 |
+| 06 | PRO | No clasificada | $22.990.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/06) | 2026-10-19 |
+| 08 | HALO | PHEV | $43.990.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/08) | 2026-10-19 |
+| 08 | PRO | PHEV | $40.990.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/08) | 2026-10-19 |
+| 09 | HALO | MHEV | $45.990.000 | [cartoni.cl](https://www.cartoni.cl/nuevo/lynk-co/09) | 2026-10-19 |
 
-### Mahindra (4 registros)
+### Mahindra — 4 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | XUV 3XO | AT DELUXE | No clasificada | $17.990.000 | [Portillo Sur](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
 | XUV 3XO | MT LUXURY | No clasificada | $14.990.000 | [Portillo Sur](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
 | XUV 3XO | XUV3X0 AT ELITE | No clasificada | $14.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/) | 2026-10-19 |
 | XUV 3XO | XUV3X0 MT COMFORT | No clasificada | $12.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/xuv3x0-mt-comfort/) | 2026-10-19 |
 
-### Maserati (9 registros)
+### Maserati — 9 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Ghibli | GT HÍBRIDO | MHEV | $64.900.000 | [auto.cl](https://www.auto.cl/nuevos/maserati/ghibli) | 2026-10-20 |
 | Grecale | GT | No clasificada | $69.900.000 | [auto.cl](https://www.auto.cl/nuevos/maserati/grecale) | 2026-10-20 |
@@ -1123,88 +1186,124 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Levante | TROFEO | No clasificada | $99.900.000 | [auto.cl](https://www.auto.cl/nuevos/maserati/levante) | 2026-10-20 |
 | MC20 | MC20 | No clasificada | $257.274.000 | [auto.cl](https://www.auto.cl/nuevos/maserati/mc20) | 2026-10-20 |
 
-### Maxus (7 registros)
+### Maxus — 15 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| C35 | Precio desde (versión no especificada) | No clasificada | $26.891.739 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
 | D60 | Elite | No clasificada | $24.978.100 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/maxus) | 2026-10-20 |
 | D60 | Luxury | No clasificada | $27.358.100 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/maxus) | 2026-10-20 |
 | D90 | Elite | No clasificada | $43.423.100 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/maxus) | 2026-10-20 |
 | D90 | Flagship | No clasificada | $49.373.100 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/maxus) | 2026-10-20 |
 | D90 | Luxury | No clasificada | $46.993.100 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/maxus) | 2026-10-20 |
+| Deliver 9 | Precio desde (versión no especificada) | No clasificada | $42.352.100 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
+| Deliver 9 Cargo | Precio desde (versión no especificada) | No clasificada | $34.963.509 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
+| Edeliver 9 | Precio desde (versión no especificada) | No clasificada | $43.882.000 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
+| G10 Cargo | Precio desde (versión no especificada) | No clasificada | $29.723.939 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
+| g90 | Precio desde (versión no especificada) | No clasificada | $39.862.739 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
+| T60 | Precio desde (versión no especificada) | No clasificada | $21.227.339 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
+| T90 | Precio desde (versión no especificada) | No clasificada | $29.738.100 | [auto.cl](https://www.auto.cl/nuevos/maxus) | 2026-10-20 |
 | T90 EV | GL | EV | $65.327.900 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/maxus?c=4) | 2026-10-20 |
 | T90 EV | GLX | EV | $70.167.900 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/segmentos/maxus?c=4) | 2026-10-20 |
 
-### Mazda (12 registros)
+### Mazda — 19 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| CX-3 | CORE 2.0 6AT | No clasificada | $20.590.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-3/) | 2026-10-17 |
-| CX-3 | CORE 2.0 MT | No clasificada | $19.790.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-3/) | 2026-10-17 |
-| CX-30 | CORE 2.0 2WD 6AT 7G | No clasificada | $24.090.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
-| CX-30 | CORE 2.0 2WD 6MT 7G | No clasificada | $23.390.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
-| CX-30 | CORE PLUS 2.0 2WD 6AT 7G | No clasificada | $25.890.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
-| CX-30 | ENTRY 2.0 2WD AT 7G | No clasificada | $22.990.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
-| CX-30 | HIGH 2.5 AWD 6AT 7G | No clasificada | $29.690.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
-| CX-5 | CORE 2.0 2WD 6AT | No clasificada | $24.990.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
-| CX-5 | CORE 2.0 AWD 6AT | No clasificada | $27.490.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
-| CX-5 | CORE PLUS 2.0 AWD 6AT | No clasificada | $29.290.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
-| CX-5 | SIGNATURE 2.5T AWD 6AT | No clasificada | $35.190.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
-| CX-5 | SPORT 2.5 AWD 6AT | No clasificada | $33.290.000 | [mazda.cl](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
+| 6 Sedan | Precio desde (versión no especificada) | No clasificada | $21.401.900 | [auto.cl](https://www.auto.cl/nuevos/mazda) | 2026-10-20 |
+| BT-50 | Precio desde (versión no especificada) | No clasificada | $31.790.000 | [auto.cl](https://www.auto.cl/nuevos/mazda) | 2026-10-20 |
+| CX-3 | CORE 2.0 6AT | No clasificada | $20.590.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-3/) | 2026-10-17 |
+| CX-3 | CORE 2.0 MT | No clasificada | $19.790.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-3/) | 2026-10-17 |
+| CX-30 | CORE 2.0 2WD 6AT 7G | No clasificada | $24.090.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
+| CX-30 | CORE 2.0 2WD 6MT 7G | No clasificada | $23.390.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
+| CX-30 | CORE PLUS 2.0 2WD 6AT 7G | No clasificada | $25.890.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
+| CX-30 | ENTRY 2.0 2WD AT 7G | No clasificada | $22.990.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
+| CX-30 | HIGH 2.5 AWD 6AT 7G | No clasificada | $29.690.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-30/) | 2026-10-17 |
+| CX-5 | CORE 2.0 2WD 6AT | No clasificada | $24.990.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
+| CX-5 | CORE 2.0 AWD 6AT | No clasificada | $27.490.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
+| CX-5 | CORE PLUS 2.0 AWD 6AT | No clasificada | $29.290.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
+| CX-5 | SIGNATURE 2.5T AWD 6AT | No clasificada | $35.190.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
+| CX-5 | SPORT 2.5 AWD 6AT | No clasificada | $33.290.000 | [Mazda Chile](https://www.mazda.cl/vehiculo/mazda-cx-5) | 2026-10-17 |
+| CX-60 | Precio desde (versión no especificada) | No clasificada | $40.990.000 | [auto.cl](https://www.auto.cl/nuevos/mazda) | 2026-10-20 |
+| cx-90 | Precio desde (versión no especificada) | No clasificada | $56.490.000 | [auto.cl](https://www.auto.cl/nuevos/mazda) | 2026-10-20 |
+| MX-5 | Precio desde (versión no especificada) | No clasificada | $30.990.000 | [auto.cl](https://www.auto.cl/nuevos/mazda) | 2026-10-20 |
+| NEW Mazda 3 Sedan | Precio desde (versión no especificada) | No clasificada | $19.590.000 | [auto.cl](https://www.auto.cl/nuevos/mazda) | 2026-10-20 |
+| NEW Mazda 3 Sport | Precio desde (versión no especificada) | No clasificada | $19.890.000 | [auto.cl](https://www.auto.cl/nuevos/mazda) | 2026-10-20 |
 
-### Mercedes-Benz (11 registros)
+### Mercedes-Benz — 26 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| Clase C | C 200 Avantgarde | No clasificada | $54.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/clase-c) | 2026-10-20 |
-| CLE Coupé | CLE 200 Coupé | No clasificada | $64.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) | 2026-10-20 |
-| CLE Coupé | CLE 300 Coupé | No clasificada | $72.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) | 2026-10-20 |
-| GLA | GLA 200 AMG | No clasificada | $53.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
-| GLA | GLA 200 Progressive | No clasificada | $50.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
-| GLA | GLA 200 Pure | No clasificada | $46.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
-| GLA | GLA 220d 4MATIC AMG | No clasificada | $60.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
-| GLC | GLC 200 4MATIC | No clasificada | $62.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/glc) | 2026-10-20 |
-| GLC | GLC 200 4MATIC Advanced | No clasificada | $63.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) | 2026-10-20 |
-| GLC | GLC 220d 4MATIC | No clasificada | $67.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/glc) | 2026-10-20 |
-| GLC | GLC 220d 4MATIC Advanced | No clasificada | $68.900.000 | [Kaufmann Mercedes-Benz](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) | 2026-10-20 |
+| Clase A Hatchback | Precio desde (versión no especificada) | No clasificada | $38.591.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Clase A Sedan | Precio desde (versión no especificada) | No clasificada | $41.003.100 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Clase C | C 200 Avantgarde | No clasificada | $54.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/clase-c) | 2026-10-20 |
+| Clase E | Precio desde (versión no especificada) | No clasificada | $77.182.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Clase G | Precio desde (versión no especificada) | No clasificada | $185.237.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Clase S | Precio desde (versión no especificada) | No clasificada | $141.501.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Clase V | Precio desde (versión no especificada) | No clasificada | $53.062.525 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| CLE Coupé | CLE 200 Coupé | No clasificada | $64.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) | 2026-10-20 |
+| CLE Coupé | CLE 300 Coupé | No clasificada | $72.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) | 2026-10-20 |
+| EQS 450+ | Precio desde (versión no especificada) | EV | $158.652.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| GLA | GLA 200 AMG | No clasificada | $53.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
+| GLA | GLA 200 Progressive | No clasificada | $50.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
+| GLA | GLA 200 Pure | No clasificada | $46.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
+| GLA | GLA 220d 4MATIC AMG | No clasificada | $60.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/gla) | 2026-10-20 |
+| GLB | Precio desde (versión no especificada) | No clasificada | $44.139.840 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| GLC | GLC 200 4MATIC | No clasificada | $62.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/glc) | 2026-10-20 |
+| GLC | GLC 200 4MATIC Advanced | No clasificada | $63.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) | 2026-10-20 |
+| GLC | GLC 220d 4MATIC | No clasificada | $67.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/glc) | 2026-10-20 |
+| GLC | GLC 220d 4MATIC Advanced | No clasificada | $68.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) | 2026-10-20 |
+| GLE | Precio desde (versión no especificada) | No clasificada | $89.900.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| GLE Coupe | Precio desde (versión no especificada) | No clasificada | $99.900.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| GLS | Precio desde (versión no especificada) | No clasificada | $116.631.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Sprinter Furgon | Precio desde (versión no especificada) | No clasificada | $51.016.000 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Sprinter Minibus | Precio desde (versión no especificada) | No clasificada | $54.703.975 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Vito Furgon | Precio desde (versión no especificada) | No clasificada | $30.629.371 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
+| Vito Minibus | Precio desde (versión no especificada) | No clasificada | $45.949.573 | [auto.cl](https://www.auto.cl/nuevos/mercedes-benz) | 2026-10-20 |
 
-### MG (29 registros)
+### MG — 35 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| 5 Sedan | Precio desde (versión no especificada) | No clasificada | $12.990.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
 | ALL NEW MG ZS EV | NEW MG ZS EV DLX 72KWh | EV | $33.990.000 | [Portillo Sur](https://www.portillosur.cl/mg/allnewmgzsev) | 2026-10-19 |
 | Cyberster | CYBERSTER 77 KHw | EV | $59.990.000 | [mgmotors-prod-s3.s3.us-east-2.amazonaws.com](https://mgmotors-prod-s3.s3.us-east-2.amazonaws.com/CL/menu/2026/03/cl_20260305_124230_menu_lista-de-precios_menu.pdf) | 2026-10-19 |
 | Cyberster | CYBERSTER 77 KHw AWD | EV | $67.990.000 | [mgmotors-prod-s3.s3.us-east-2.amazonaws.com](https://mgmotors-prod-s3.s3.us-east-2.amazonaws.com/CL/menu/2026/03/cl_20260305_124230_menu_lista-de-precios_menu.pdf) | 2026-10-19 |
 | CYBERSTER | CYBERSTER 77 KWh | EV | $59.990.000 | [Portillo Sur](https://www.portillosur.cl/mg/cyberster) | 2026-10-19 |
 | CYBERSTER | CYBERSTER 77 KWh AWD | EV | $67.990.000 | [Portillo Sur](https://www.portillosur.cl/mg/cyberster) | 2026-10-19 |
-| HS Hybrid | MG HS HEV Luxury | HEV | $24.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-HS-HEV) | 2026-10-19 |
+| GT | Precio desde (versión no especificada) | No clasificada | $14.790.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
+| HS | Precio desde (versión no especificada) | No clasificada | $17.990.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
+| HS Hybrid | MG HS HEV Luxury | HEV | $24.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-HS-HEV) | 2026-10-19 |
 | Marvel R | MG MARVEL R DLX | EV | $40.990.000 | [mgmotors-prod-s3.s3.us-east-2.amazonaws.com](https://mgmotors-prod-s3.s3.us-east-2.amazonaws.com/CL/menu/2026/03/cl_20260305_124230_menu_lista-de-precios_menu.pdf) | 2026-10-19 |
-| MG3 | MG3 HEV 1.5L COM | HEV | $16.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-3-HEV) | 2026-10-17 |
-| MG3 | NEW MG3 1.5L CVT COM | No clasificada | $13.290.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
-| MG3 | NEW MG3 1.5L CVT DLX | No clasificada | $14.290.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
-| MG3 | NEW MG3 1.5L MT COM | No clasificada | $12.090.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
-| MG3 | NEW MG3 1.5L MT STD | No clasificada | $10.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
-| MG4 | MG 4 DELUXE | EV | $29.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
-| MG4 | MG 4 DELUXE LR | EV | $31.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
-| MG4 | MG 4 STANDARD | EV | $26.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
-| MG4 | MG 4 XPOWER AWD | EV | $34.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
-| MG4 Urban | MG 4 Urban EV 43kW COM | EV | $18.490.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-4-URBAN-EV) | 2026-10-19 |
-| MG4 Urban | MG 4 Urban EV 43kW LUX | EV | $19.490.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-4-URBAN-EV) | 2026-10-19 |
-| S5 | MG S5 EV 49kW COM | EV | $25.490.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MGS5-EV) | 2026-10-17 |
-| S5 | MG S5 EV 49kW LUX | EV | $26.490.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MGS5-EV) | 2026-10-17 |
-| S5 | MG S5 EV 62kW LUX | EV | $28.490.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MGS5-EV) | 2026-10-17 |
-| ZS | MG ZS HEV 1.5L AT COM HEV | HEV | $20.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-ZS-HEV) | 2026-10-17 |
-| ZS | MG ZS HEV 1.5L DLX HEV | HEV | $21.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-ZS-HEV) | 2026-10-17 |
-| ZS | NEW MG ZS 1.5L CVT COM | No clasificada | $17.790.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
-| ZS | NEW MG ZS 1.5L CVT STD | No clasificada | $16.490.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
-| ZS | NEW MG ZS 1.5L MT COM | No clasificada | $16.890.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
-| ZS | NEW MG ZS 1.5L MT STD | No clasificada | $15.890.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
-| ZS | NEW MG ZS 1.5T Turbo CVT LUX | No clasificada | $20.490.000 | [mgmotor.cl](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
-| ZS EV | MG ZS EV DLX 72KWh | EV | $33.990.000 | [mgmotor.cl](https://www.mgmotor.cl/model/MG-ZS-EV) | 2026-10-19 |
+| MG3 | MG3 HEV 1.5L COM | HEV | $16.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-3-HEV) | 2026-10-17 |
+| MG3 | NEW MG3 1.5L CVT COM | No clasificada | $13.290.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
+| MG3 | NEW MG3 1.5L CVT DLX | No clasificada | $14.290.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
+| MG3 | NEW MG3 1.5L MT COM | No clasificada | $12.090.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
+| MG3 | NEW MG3 1.5L MT STD | No clasificada | $10.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-3/2025) | 2026-10-17 |
+| MG4 | MG 4 DELUXE | EV | $29.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
+| MG4 | MG 4 DELUXE LR | EV | $31.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
+| MG4 | MG 4 STANDARD | EV | $26.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
+| MG4 | MG 4 XPOWER AWD | EV | $34.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-4) | 2026-10-19 |
+| MG4 Urban | MG 4 Urban EV 43kW COM | EV | $18.490.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-4-URBAN-EV) | 2026-10-19 |
+| MG4 Urban | MG 4 Urban EV 43kW LUX | EV | $19.490.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-4-URBAN-EV) | 2026-10-19 |
+| ONE | Precio desde (versión no especificada) | No clasificada | $17.990.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
+| RX5 | Precio desde (versión no especificada) | No clasificada | $16.990.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
+| S5 | MG S5 EV 49kW COM | EV | $25.490.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MGS5-EV) | 2026-10-17 |
+| S5 | MG S5 EV 49kW LUX | EV | $26.490.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MGS5-EV) | 2026-10-17 |
+| S5 | MG S5 EV 62kW LUX | EV | $28.490.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MGS5-EV) | 2026-10-17 |
+| ZS | MG ZS HEV 1.5L AT COM HEV | HEV | $20.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-ZS-HEV) | 2026-10-17 |
+| ZS | MG ZS HEV 1.5L DLX HEV | HEV | $21.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-ZS-HEV) | 2026-10-17 |
+| ZS | NEW MG ZS 1.5L CVT COM | No clasificada | $17.790.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
+| ZS | NEW MG ZS 1.5L CVT STD | No clasificada | $16.490.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
+| ZS | NEW MG ZS 1.5L MT COM | No clasificada | $16.890.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
+| ZS | NEW MG ZS 1.5L MT STD | No clasificada | $15.890.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
+| ZS | NEW MG ZS 1.5T Turbo CVT LUX | No clasificada | $20.490.000 | [MG Motor Chile](https://www.mgmotor.cl/model/NEW-MG-ZS/2025) | 2026-10-17 |
+| ZS EV | MG ZS EV DLX 72KWh | EV | $33.990.000 | [MG Motor Chile](https://www.mgmotor.cl/model/MG-ZS-EV) | 2026-10-19 |
+| ZX | Precio desde (versión no especificada) | No clasificada | $12.190.000 | [auto.cl](https://www.auto.cl/nuevos/mg) | 2026-10-20 |
 
-### Mini (30 registros)
+### Mini — 30 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Aceman | JCW E 4x2 | EV | $46.900.000 | [Portillo Sur](https://www.portillosur.cl/mini/aceman) | 2026-10-19 |
 | Aceman | SE Favoured 4x2 | EV | $41.990.000 | [Portillo Sur](https://www.portillosur.cl/mini/aceman) | 2026-10-19 |
@@ -1237,9 +1336,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | JCW Eléctrico | Cooper JCWE | EV | $48.990.000 | [mini.cl](https://www.mini.cl/mini-jcw-electrico) | 2026-10-19 |
 | JCW Eléctrico | Cooper JCWE HEA | EV | $46.990.000 | [mini.cl](https://www.mini.cl/mini-jcw-electrico) | 2026-10-19 |
 
-### Mitsubishi (62 registros)
+### Mitsubishi — 62 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | destinator | Destinator GL EURO 6C | No clasificada | $23.990.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/mitsubishi/destinator) | 2026-10-19 |
 | destinator | Destinator GLS EURO 6C | No clasificada | $31.490.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/mitsubishi/destinator) | 2026-10-19 |
@@ -1304,16 +1403,17 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | OUTLANDER SPORT | GLS (NUEVO) (MY27) | No clasificada | $24.990.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
 | OUTLANDER SPORT | GLX | No clasificada | $23.490.000 | [Portillo Sur](https://www.portillosur.cl/mitsubishi/outlandersport) | 2026-10-19 |
 
-### Nissan (20 registros)
+### Nissan — 21 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| Kait | Advance | No clasificada | $22.490.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
+| Kait | Advance | No clasificada | $22.490.000 | [Nissan Chile](https://webstore.nissan.cl/) | 2026-10-18 |
 | Kait | Exclusive | No clasificada | $23.990.000 | [Astara Retail](https://astararetail.cl/nissan-kait) | 2026-10-19 |
-| Kait | Sense CVT | No clasificada | $20.990.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
+| Kait | Sense CVT | No clasificada | $20.990.000 | [Nissan Chile](https://webstore.nissan.cl/) | 2026-10-18 |
 | KAIT | ADVANCE CVT 1.6 | No clasificada | $22.490.000 | [Portillo Sur](https://www.portillosur.cl/nissan/kait) | 2026-10-19 |
 | KAIT | SENSE CVT 1.6 | No clasificada | $20.990.000 | [Portillo Sur](https://www.portillosur.cl/nissan/kait) | 2026-10-19 |
-| Kicks | New Kicks Sense CVT | No clasificada | $24.790.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
+| Kicks | New Kicks Sense CVT | No clasificada | $24.790.000 | [Nissan Chile](https://webstore.nissan.cl/) | 2026-10-18 |
+| NEW Navara Cabina Doble | Precio desde (versión no especificada) | No clasificada | $28.768.023 | [auto.cl](https://www.auto.cl/nuevos/nissan) | 2026-10-20 |
 | NEW PATHFINDER | ADVANCE 3.5 AT 4WD | No clasificada | $50.668.593 | [Portillo Sur](https://www.portillosur.cl/nissan/newpathfinder) | 2026-10-19 |
 | NEW QASHQAI | Exclusive CVT 4WD | No clasificada | $35.710.000 | [Portillo Sur](https://www.portillosur.cl/nissan/newqashqai) | 2026-10-19 |
 | New Versa | Sense MT | No clasificada | $16.990.000 | [Portillo Sur](https://www.portillosur.cl/nissan/newversa) | 2026-10-19 |
@@ -1322,24 +1422,24 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | NEW X-TRAIL | Sense CVT 2Row | No clasificada | $32.395.585 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
 | NEW X-TRAIL | Sense CVT 3Row | No clasificada | $34.401.901 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
 | NEW X-TRAIL | Sense CVT 3Row (Amazon Music) | No clasificada | $34.521.901 | [Portillo Sur](https://www.portillosur.cl/nissan/newxtrail) | 2026-10-19 |
-| Pathfinder | Exclusive 7P 3.5 CVT | No clasificada | $55.668.593 | [webstore.nissan.cl](https://webstore.nissan.cl/category/root) | 2026-10-18 |
-| Sentra | SR Platinum | No clasificada | $28.990.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
+| Pathfinder | Exclusive 7P 3.5 CVT | No clasificada | $55.668.593 | [Nissan Chile](https://webstore.nissan.cl/category/root) | 2026-10-18 |
+| Sentra | SR Platinum | No clasificada | $28.990.000 | [Nissan Chile](https://webstore.nissan.cl/) | 2026-10-18 |
 | SENTRA EURO 6 | Exclusive CVT | No clasificada | $26.970.177 | [Portillo Sur](https://www.portillosur.cl/nissan/sentraeuro6) | 2026-10-19 |
-| Versa | New Versa Sense MT | No clasificada | $16.990.000 | [webstore.nissan.cl](https://webstore.nissan.cl/) | 2026-10-18 |
-| X-Trail | Sense CVT 3R | No clasificada | $34.401.901 | [webstore.nissan.cl](https://webstore.nissan.cl/category/root) | 2026-10-18 |
+| Versa | New Versa Sense MT | No clasificada | $16.990.000 | [Nissan Chile](https://webstore.nissan.cl/) | 2026-10-18 |
+| X-Trail | Sense CVT 3R | No clasificada | $34.401.901 | [Nissan Chile](https://webstore.nissan.cl/category/root) | 2026-10-18 |
 | X-Trail e-POWER | EXCLUSIVE | HEV | $47.296.472 | [Astara Retail](https://astararetail.cl/nissan-x-trail-e-power/) | 2026-10-19 |
 
-### Omoda (3 registros)
+### Omoda — 3 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | C5 SHS-H | COMFORT 1.5T DHT SHS-H | HEV | $19.490.000 | [omodajaecoo.cl](https://www.omodajaecoo.cl/modelos/omoda-c5-shs/) | 2026-10-19 |
 | C5 SHS-H | LUXURY 1.5T DHT SHS-H | HEV | $21.490.000 | [omodajaecoo.cl](https://www.omodajaecoo.cl/modelos/omoda-c5-shs/) | 2026-10-19 |
 | E5 | OMODA E5 EV | EV | $30.990.000 | [omodajaecoo.cl](https://www.omodajaecoo.cl/modelos/omoda-e5/) | 2026-10-19 |
 
-### Opel (16 registros)
+### Opel — 18 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Combo | Combo Lite Diesel 100HP MT | No clasificada | $22.598.100 | [Rosselot](https://www.rosselot.cl/nuevos/opel/combo) | 2026-10-19 |
 | corsa | Corsa Edition Gasolina 100HP AT | No clasificada | $18.690.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/opel/corsa) | 2026-10-19 |
@@ -1350,6 +1450,7 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | mokka | Mokka GS Gasolina 130HP AT | No clasificada | $24.890.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/opel/mokka) | 2026-10-19 |
 | Mokka MCA | Mokka MCA Edition Gasolina 130HP AT | No clasificada | $21.690.000 | [Rosselot](https://www.rosselot.cl/nuevos/opel/new-mokka) | 2026-10-19 |
 | Mokka MCA | Mokka MCA Edition Plus Gasolina 130HP MT | No clasificada | $21.690.000 | [Rosselot](https://www.rosselot.cl/nuevos/opel/new-mokka) | 2026-10-19 |
+| Movano | Precio desde (versión no especificada) | No clasificada | $25.097.100 | [auto.cl](https://www.auto.cl/nuevos/opel) | 2026-10-20 |
 | new crossland | New Crossland GS 5P Hybrid 136 HP AT | No clasificada | $22.090.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/opel/new-crossland) | 2026-10-19 |
 | new crossland | New Crossland GS Electric | EV | $27.090.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/opel/new-crossland) | 2026-10-19 |
 | New Crossland | New Crossland GS 7P Hybrid 136 HP AT | No clasificada | $23.690.000 | [Rosselot](https://www.rosselot.cl/nuevos/opel/new-crossland) | 2026-10-19 |
@@ -1357,17 +1458,21 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | New Grandland | New Grandland GS Hybrid 136HP AT | No clasificada | $32.690.000 | [Rosselot](https://www.rosselot.cl/nuevos/opel/new-grandland) | 2026-10-19 |
 | new mokka | Mokka MCA Edition Plus Gasolina 130HP AT | No clasificada | $23.190.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/opel/new-mokka) | 2026-10-19 |
 | new mokka | Mokka MCA GS Plus Gasolina 130HP AT | No clasificada | $24.790.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/opel/new-mokka) | 2026-10-19 |
+| Vivaro | Precio desde (versión no especificada) | No clasificada | $27.120.100 | [auto.cl](https://www.auto.cl/nuevos/opel) | 2026-10-20 |
 
-### Peugeot (33 registros)
+### Peugeot — 37 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 208 | MCA Allure Hybrid 136hp AT | MHEV | $23.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/peugeot/new-208-mca) | 2026-10-18 |
 | 208 | MCA GT Electric | EV | $26.590.000 | [Rosselot](https://www.rosselot.cl/nuevos/peugeot/new-208-mca) | 2026-10-18 |
 | 208 | MCA Style Gasolina 100hp MT | No clasificada | $18.490.000 | [Rosselot](https://www.rosselot.cl/nuevos/peugeot/new-208-mca) | 2026-10-18 |
+| 5008 | Precio desde (versión no especificada) | No clasificada | $30.490.000 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
+| Boxer Chasis | Precio desde (versión no especificada) | No clasificada | $31.404.100 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
 | boxer mca | Boxer MCA Furgón L3H2 Diesel 140hp MT | No clasificada | $38.663.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/boxer-mca) | 2026-10-19 |
 | boxer mca | Boxer MCA Furgón L4H2 Diesel 140hp MT | No clasificada | $39.853.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/boxer-mca) | 2026-10-19 |
 | BOXER MCA | Boxer MCA Furgón L2H2 Diesel 140hp MT | No clasificada | $37.354.100 | [Rosselot](https://www.rosselot.cl/nuevos/peugeot/boxer-mca) | 2026-10-19 |
+| e-2008 | Precio desde (versión no especificada) | EV | $40.490.000 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
 | expert | Expert MCA L3 BlueHdi 145 | No clasificada | $32.118.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/expert) | 2026-10-19 |
 | Expert | Expert MCA L3 Diesel 145hp MT | No clasificada | $32.118.100 | [Rosselot](https://www.rosselot.cl/nuevos/peugeot/expert) | 2026-10-19 |
 | landtrek | Landtrek MCA Action4 Diesel 200hp 4x4 AT | No clasificada | $37.830.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/landtrek) | 2026-10-19 |
@@ -1389,6 +1494,7 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | nuevo 308 | 308 Allure Hybrid 136hp AT | No clasificada | $28.290.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/nuevo-308) | 2026-10-19 |
 | nuevo 308 | 308 GT Gasolina 130hp AT | No clasificada | $27.290.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/nuevo-308) | 2026-10-19 |
 | nuevo 308 | 308 GT Hybrid 136hp AT | No clasificada | $31.790.000 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/nuevo-308) | 2026-10-19 |
+| Partner Electric | Precio desde (versión no especificada) | EV | $39.139.100 | [auto.cl](https://www.auto.cl/nuevos/peugeot) | 2026-10-20 |
 | partner mca | Partner MCA L1 BlueHDi 100 | No clasificada | $23.312.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/partner-mca) | 2026-10-19 |
 | partner mca | Partner MCA L2 BlueHDi 100 | No clasificada | $24.264.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/partner-mca) | 2026-10-19 |
 | traveller | New Traveller MCA L3 9P Diesel 180hp AT | No clasificada | $37.711.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/peugeot/traveller) | 2026-10-19 |
@@ -1396,9 +1502,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Traveller MCA | Traveller MCA L3 8P Diesel 180hp AT | No clasificada | $31.090.000 | [Callegari](https://callegari.cl/nuevos/traveller-mca/) | 2026-10-19 |
 | Traveller MCA | Traveller MCA L3 9P Diesel 180hp AT | No clasificada | $31.690.000 | [Callegari](https://callegari.cl/nuevos/traveller-mca/) | 2026-10-19 |
 
-### Porsche (67 registros)
+### Porsche — 67 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 911 | 911 Carrera | No clasificada | $159.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) | 2026-10-20 |
 | 911 | 911 Carrera 4 GTS | No clasificada | $208.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) | 2026-10-20 |
@@ -1468,9 +1574,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Taycan | Taycan Turbo GT With Weissach | EV | $231.000.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) | 2026-10-20 |
 | Taycan | Taycan Turbo S | EV | $211.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) | 2026-10-20 |
 
-### RAM (13 registros)
+### RAM — 13 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | New RAM 1500 | RAM 1500 BIGHORN 3.0 SO 420 HP 4X4 AT | No clasificada | $67.818.100 | [Rosselot](https://www.rosselot.cl/nuevos/ram/new-ram-1500) | 2026-10-19 |
 | New RAM 1500 | RAM 1500 BIGHORN BACKCOUNTRY 3.0 SO 426 HP 4X4 AT | No clasificada | $58.298.100 | [Rosselot](https://www.rosselot.cl/nuevos/ram/new-ram-1500) | 2026-10-19 |
@@ -1486,22 +1592,27 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | ram700 | RAM 700 LARAMIE CREW CAB 1.0T CVT | No clasificada | $23.669.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/ram/ram700) | 2026-10-19 |
 | ram700 | RAM 700 SLT CREW CAB 1.3 MT | No clasificada | $17.600.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/ram/ram700) | 2026-10-19 |
 
-### Renault (1 registros)
+### Renault — 6 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | ARKANA HYBRID | 1.3 4X2 AT INTENS ALPINE MHEV | No clasificada | $28.490.000 | [Portillo Sur](https://www.portillosur.cl/renault/arkanahybrid) | 2026-10-19 |
+| Duster | Precio desde (versión no especificada) | No clasificada | $15.690.000 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
+| Koleos | Precio desde (versión no especificada) | No clasificada | $21.890.000 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
+| Kwid | Precio desde (versión no especificada) | No clasificada | $9.290.000 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
+| Kwid E -Tech | Precio desde (versión no especificada) | EV | $13.990.000 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
+| Oroch | Precio desde (versión no especificada) | No clasificada | $17.005.100 | [auto.cl](https://www.auto.cl/nuevos/renault) | 2026-10-20 |
 
-### Riddara (2 registros)
+### Riddara — 2 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | RD6 | RD6 AIR | EV | $49.288.100 | [auto.cl](https://www.auto.cl/nuevos/riddara/rd6) | 2026-10-20 |
 | RD6 | RD6 ULTRA | EV | $55.085.100 | [auto.cl](https://www.auto.cl/nuevos/riddara/rd6) | 2026-10-20 |
 
-### Seat (11 registros)
+### Seat — 11 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Arona | 1.0 G AT 4x2 5P Style | No clasificada | $21.090.000 | [auto.cl](https://www.auto.cl/nuevos/seat/arona) | 2026-10-20 |
 | Arona | 1.6 G AT 4x2 5P FR | No clasificada | $21.890.000 | [auto.cl](https://www.auto.cl/nuevos/seat/arona) | 2026-10-20 |
@@ -1515,15 +1626,15 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Ibiza | 1.6 G MT 5P Reference | No clasificada | $16.090.000 | [auto.cl](https://www.auto.cl/nuevos/seat/ibiza) | 2026-10-20 |
 | Ibiza | 1.6 G MT 5P Style | No clasificada | $16.890.000 | [auto.cl](https://www.auto.cl/nuevos/seat/ibiza) | 2026-10-20 |
 
-### Seres (1 registros)
+### Seres — 1 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Seres 3 | SERES 3 EV | EV | $31.990.000 | [dfsk.cl](https://www.dfsk.cl/precios-y-especificaciones-por-modelo/) | 2026-10-19 |
 
-### Shineray (5 registros)
+### Shineray — 5 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | T30 CS | 1.6 5MT ELT | No clasificada | $11.055.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t30cs) | 2026-10-19 |
 | T32 CD | 1.6 5MT ELT | No clasificada | $12.245.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t32cd) | 2026-10-19 |
@@ -1531,23 +1642,29 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | T52 CD | 1.6 5MT STD | No clasificada | $14.030.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t52cd) | 2026-10-19 |
 | X30 con A/C | X30 1.5 5MT ELT | No clasificada | $10.936.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/shineray-x30-con-a-c/x30-1-5-5mt-elt/) | 2026-10-19 |
 
-### Skoda (2 registros)
+### Skoda — 8 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Elroq | Elroq 85 - Design | EV | $45.990.000 | [skoda.cl](https://www.skoda.cl/elroq/elroq) | 2026-10-19 |
 | Enyaq | Enyaq 85 - Design | EV | $58.500.000 | [skoda.cl](https://www.skoda.cl/enyaq/enyaq) | 2026-10-19 |
+| Fabia | Precio desde (versión no especificada) | No clasificada | $17.690.000 | [auto.cl](https://www.auto.cl/nuevos/skoda) | 2026-10-20 |
+| Kamiq | Precio desde (versión no especificada) | No clasificada | $23.790.000 | [auto.cl](https://www.auto.cl/nuevos/skoda) | 2026-10-20 |
+| Karoq | Precio desde (versión no especificada) | No clasificada | $29.690.000 | [auto.cl](https://www.auto.cl/nuevos/skoda) | 2026-10-20 |
+| Kodiaq | Precio desde (versión no especificada) | No clasificada | $30.290.000 | [auto.cl](https://www.auto.cl/nuevos/skoda) | 2026-10-20 |
+| Octavia | Precio desde (versión no especificada) | No clasificada | $22.690.000 | [auto.cl](https://www.auto.cl/nuevos/skoda) | 2026-10-20 |
+| Scala | Precio desde (versión no especificada) | No clasificada | $23.790.000 | [auto.cl](https://www.auto.cl/nuevos/skoda) | 2026-10-20 |
 
-### Smart (2 registros)
+### Smart — 2 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | #1 | Brabus | EV | $47.990.000 | [auto.cl](https://www.auto.cl/nuevos/smart/1) | 2026-10-20 |
 | #3 | Brabus | EV | $53.990.000 | [auto.cl](https://www.auto.cl/nuevos/smart/3) | 2026-10-20 |
 
-### Soueast (6 registros)
+### Soueast — 6 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | S06 | S06 1.5T 6DCT LUX | No clasificada | $17.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/soueast/s06) | 2026-10-19 |
 | S06 | S06 1.6T 7DCT LUX | No clasificada | $18.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/soueast/s06) | 2026-10-19 |
@@ -1556,9 +1673,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | S08 PHEV | S08 PHEV LIMITED | PHEV | $29.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/soueast/s08-phev) | 2026-10-19 |
 | S09 | S09 2.0T 7DCT | No clasificada | $25.990.000 | [Rosselot](https://www.rosselot.cl/nuevos/soueast/s09) | 2026-10-19 |
 
-### Subaru (21 registros)
+### Subaru — 24 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | All New Forester | FORESTER 2.5 AWD CVT DYNAMIC ES | No clasificada | $35.590.000 | [Callegari](https://callegari.cl/nuevos/new-forester/) | 2026-10-19 |
 | All New Forester | FORESTER 2.5 AWD CVT SPORT ES | No clasificada | $36.590.000 | [Callegari](https://callegari.cl/nuevos/new-forester/) | 2026-10-19 |
@@ -1571,6 +1688,7 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Crosstrek | 2.0I AWD CVT PLUS | HEV | $26.990.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-crosstrek) | 2026-10-17 |
 | Crosstrek | 2.0I AWD CVT TOURING EYESIGHT HK 360 | HEV | $32.590.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-crosstrek) | 2026-10-17 |
 | Crosstrek | 2.0I HYBRID AWD CVT TOURING ES | HEV | $34.490.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-crosstrek-hibrido/) | 2026-10-18 |
+| Evoltis | Precio desde (versión no especificada) | No clasificada | $49.240.000 | [auto.cl](https://www.auto.cl/nuevos/subaru) | 2026-10-20 |
 | Forester | 2.5 AWD CVT DYNAMIC ES | HEV | $35.590.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-forester) | 2026-10-17 |
 | Forester | 2.5 AWD CVT SPORT ES | HEV | $36.590.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-forester) | 2026-10-17 |
 | Forester | 2.5 AWD CVT TOURING ES | HEV | $38.990.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-forester) | 2026-10-17 |
@@ -1581,38 +1699,45 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Impreza | 2.0I AWD CVT TOURING ES HK | No clasificada | $28.390.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-impreza/) | 2026-10-18 |
 | Outback | Premium | No clasificada | $37.990.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-outback) | 2026-10-17 |
 | Outback | Touring | No clasificada | $41.990.000 | [subaru.cl](https://www.subaru.cl/vehiculos/all-new-outback) | 2026-10-17 |
+| WRX | Precio desde (versión no especificada) | No clasificada | $37.990.000 | [auto.cl](https://www.auto.cl/nuevos/subaru) | 2026-10-20 |
+| WRX SW | Precio desde (versión no especificada) | No clasificada | $41.490.000 | [auto.cl](https://www.auto.cl/nuevos/subaru) | 2026-10-20 |
 
-### Suzuki (16 registros)
+### Suzuki — 21 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Across Hybrid | GL AT | MHEV | $21.390.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/across-hybrid/) | 2026-10-19 |
 | Across Hybrid | GL MT | MHEV | $19.890.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/across-hybrid/) | 2026-10-19 |
 | Across Hybrid | GLX AT | MHEV | $23.290.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/across-hybrid/) | 2026-10-19 |
 | Across Hybrid | GLX MT | MHEV | $21.190.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/across-hybrid/) | 2026-10-19 |
+| alto | Precio desde (versión no especificada) | No clasificada | $8.290.000 | [auto.cl](https://www.auto.cl/nuevos/suzuki) | 2026-10-20 |
+| Baleno | Precio desde (versión no especificada) | No clasificada | $13.590.000 | [auto.cl](https://www.auto.cl/nuevos/suzuki) | 2026-10-20 |
 | Celerio | GLX PLUS | No clasificada | $11.090.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/celerio/) | 2026-10-17 |
 | Celerio | GLX PLUS AMT | No clasificada | $11.790.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/celerio/) | 2026-10-17 |
 | Fronx | 1.5 GL | MHEV | $16.990.000 | [suzuki.cl](https://suzuki.cl/vehiculo/fronx/) | 2026-10-17 |
 | Fronx | 1.5 GL AT | MHEV | $18.590.000 | [suzuki.cl](https://suzuki.cl/vehiculo/fronx/) | 2026-10-17 |
 | Fronx | 1.5 GLX | MHEV | $18.690.000 | [suzuki.cl](https://suzuki.cl/vehiculo/fronx/) | 2026-10-17 |
 | Fronx | 1.5 GLX AT | MHEV | $20.290.000 | [suzuki.cl](https://suzuki.cl/vehiculo/fronx/) | 2026-10-17 |
+| grand vitara | Precio desde (versión no especificada) | No clasificada | $18.890.000 | [auto.cl](https://www.auto.cl/nuevos/suzuki) | 2026-10-20 |
 | Jimny | 1.5 AT GLX 3P | No clasificada | $19.490.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/jimny) | 2026-10-17 |
 | Jimny | 1.5 GL 3P | No clasificada | $17.490.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/jimny) | 2026-10-17 |
+| S-PRESSO | Precio desde (versión no especificada) | No clasificada | $9.490.000 | [auto.cl](https://www.auto.cl/nuevos/suzuki) | 2026-10-20 |
 | Swift | 1.2 GL | No clasificada | $14.090.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/swift-hybrid/) | 2026-10-17 |
 | Swift | 1.2 GL CVT | No clasificada | $15.690.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/swift-hybrid/) | 2026-10-17 |
 | Swift | 1.2 GLX PLUS | No clasificada | $15.990.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/swift-hybrid/) | 2026-10-17 |
 | Swift | 1.2 GLX PLUS CVT | No clasificada | $17.490.000 | [suzuki.cl](https://www.suzuki.cl/vehiculo/swift-hybrid/) | 2026-10-17 |
+| xl7-hybrid | Precio desde (versión no especificada) | No clasificada | $18.490.000 | [auto.cl](https://www.auto.cl/nuevos/suzuki) | 2026-10-20 |
 
-### SWM (2 registros)
+### SWM — 2 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | G05 Pro | SWM G05 Pro 1.5T DCT Elite | No clasificada | $16.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/swm-g05/) | 2026-10-19 |
 | G05 Pro | SWM G05 Pro 2.0L Elite | No clasificada | $14.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/swm-g05/) | 2026-10-19 |
 
-### Tesla (5 registros)
+### Tesla — 5 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Model 3 | Premium Long Range Rear-Wheel Drive | EV | $35.000.000 | [Tesla Chile](https://www.tesla.com/es_CL/inventory/new/m3) | 2026-10-20 |
 | Model 3 | Rear-Wheel Drive | EV | $30.000.000 | [Tesla Chile](https://www.tesla.com/es_CL/inventory/new/m3) | 2026-10-20 |
@@ -1620,9 +1745,9 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Model Y | Premium Long Range Rear-Wheel Drive | EV | $40.000.000 | [Tesla Chile](https://www.tesla.com/es_CL/inventory/new/my) | 2026-10-20 |
 | Model Y | Premium Rear-Wheel Drive | EV | $37.000.000 | [Tesla Chile](https://www.tesla.com/es_CL/inventory/new/my) | 2026-10-20 |
 
-### Toyota (44 registros)
+### Toyota — 46 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | 4Runner | 4x4 SR5 | No clasificada | $53.990.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=1018&id_product_attribute=6907&rewrite=4runner&controller=product#/29-combustible-gasolina/41-modelo-4runner) | 2026-10-19 |
 | 4RUNNER | 4R24T8ATLTD | No clasificada | $59.990.000 | [Portillo Sur](https://www.portillosur.cl/toyota/4runner) | 2026-10-19 |
@@ -1641,6 +1766,8 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Fortuner | SR5 4X4 TDI 2.8L | No clasificada | $44.390.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=403&id_product_attribute=379&rewrite=fortuner&controller=product#/30-combustible-diesel/40-modelo-fortuner) | 2026-10-19 |
 | FORTUNER | SR544AT28-3 | No clasificada | $44.390.000 | [Portillo Sur](https://www.portillosur.cl/toyota/fortuner) | 2026-10-19 |
 | FORTUNER | SRX44AT28 -23PC | No clasificada | $51.090.000 | [Portillo Sur](https://www.portillosur.cl/toyota/fortuner) | 2026-10-19 |
+| Hiace Cargo | Precio desde (versión no especificada) | No clasificada | $32.490.000 | [auto.cl](https://www.auto.cl/nuevos/toyota) | 2026-10-20 |
+| Hiace Minibus | Precio desde (versión no especificada) | No clasificada | $40.390.000 | [auto.cl](https://www.auto.cl/nuevos/toyota) | 2026-10-20 |
 | Hilux | 4x2 2.4 MT SR Diesel | No clasificada | $35.290.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=257&id_product_attribute=232&rewrite=hilux&controller=product#/30-combustible-diesel/39-modelo-hilux) | 2026-10-19 |
 | Hilux | 4x4 2.4 MT DX Diesel | No clasificada | $39.290.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=273&id_product_attribute=248&rewrite=hilux&controller=product#/30-combustible-diesel/39-modelo-hilux) | 2026-10-19 |
 | Hilux | 4x4 2.4 MT SR Diesel | No clasificada | $41.790.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=259&id_product_attribute=234&rewrite=hilux&controller=product#/30-combustible-diesel/39-modelo-hilux) | 2026-10-19 |
@@ -1669,22 +1796,30 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | Yaris Cross Híbrido | XI 1.5 HEV CVT | HEV | $24.590.000 | [tienda.toyota.cl](https://tienda.toyota.cl/index.php?id_product=785&id_product_attribute=5151&rewrite=yaris-cross&controller=product#/31-combustible-hibrido/140-modelo-yaris_cross_hibrido) | 2026-10-19 |
 | YARIS SEDAN | 15CVTGSLEY | No clasificada | $17.490.000 | [Portillo Sur](https://www.portillosur.cl/toyota/yarissedan) | 2026-10-19 |
 
-### Volkswagen (8 registros)
+### Volkswagen — 16 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
+| Atlas | Precio desde (versión no especificada) | No clasificada | $53.390.000 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
 | ID.4 | Pro 82 kWh | EV | $49.900.000 | [volkswagen.cl](https://www.volkswagen.cl/id4/id4) | 2026-10-17 |
+| Jetta | Precio desde (versión no especificada) | No clasificada | $21.540.000 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
+| Nivus | Precio desde (versión no especificada) | No clasificada | $17.040.000 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
 | Polo | Track 1.6 MSI MT | No clasificada | $14.490.000 | [volkswagen.cl](https://www.volkswagen.cl/polo/polo-track) | 2026-10-17 |
+| Saveiro CD | Precio desde (versión no especificada) | No clasificada | $15.160.600 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
+| Saveiro CS | Precio desde (versión no especificada) | No clasificada | $15.160.600 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
+| T-CROSS | Precio desde (versión no especificada) | No clasificada | $19.140.000 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
 | Taos | Comfortline 1.5 TSI AT | No clasificada | $30.590.000 | [volkswagen.cl](https://www.volkswagen.cl/taos/nuevo-taos) | 2026-10-17 |
 | Tera | Comfort 1.0 TSI AT | No clasificada | $18.990.000 | [volkswagen.cl](https://www.volkswagen.cl/tera/tera) | 2026-10-17 |
 | Tera | Comfort 1.6 MSI MT | No clasificada | $17.490.000 | [volkswagen.cl](https://www.volkswagen.cl/tera/tera) | 2026-10-17 |
 | Tera | High 1.0 TSI AT | No clasificada | $20.690.000 | [volkswagen.cl](https://www.volkswagen.cl/tera/tera) | 2026-10-17 |
 | Tera | Outfit 1.0 TSI AT | No clasificada | $21.090.000 | [volkswagen.cl](https://www.volkswagen.cl/tera/tera) | 2026-10-17 |
 | Tera | Trend 1.6 MSI MT | No clasificada | $16.590.000 | [volkswagen.cl](https://www.volkswagen.cl/tera/tera) | 2026-10-17 |
+| Tiguan | Precio desde (versión no especificada) | No clasificada | $31.990.000 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
+| Virtus | Precio desde (versión no especificada) | No clasificada | $16.640.000 | [auto.cl](https://www.auto.cl/nuevos/volkswagen) | 2026-10-20 |
 
-### Volvo (10 registros)
+### Volvo — 16 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | EC40 | P6 | EV | $54.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ec40/) | 2026-10-19 |
 | EX30 | Cross Country | EV | $54.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
@@ -1693,23 +1828,29 @@ Este inventario representa los registros recolectados, no certifica exhaustivida
 | EX30 | E60 Ultra | EV | $47.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex30) | 2026-10-19 |
 | EX40 | P6 | EV | $51.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
 | EX40 | P8 Recharge | EV | $65.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/ex40) | 2026-10-19 |
+| Xc40 | Precio desde (versión no especificada) | No clasificada | $35.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| XC40 Pure Electric | Precio desde (versión no especificada) | EV | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 | XC60 | NUEVO T8 AWD CORE | HEV | $64.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
 | XC60 | NUEVO T8 AWD ULTRA | No clasificada | $81.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc60) | 2026-10-19 |
+| XC60 Plug-In Hybrid | Precio desde (versión no especificada) | PHEV | $54.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| xc60-mild-hybrid | Precio desde (versión no especificada) | MHEV | $46.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 | XC90 | NUEVO T8 CORE | HEV | $90.900.000 | [Portillo Sur](https://www.portillosur.cl/volvo/xc90) | 2026-10-19 |
+| XC90 Plug-In Hybrid | Precio desde (versión no especificada) | PHEV | $76.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
+| xc90-mild-hybrid | Precio desde (versión no especificada) | MHEV | $58.900.000 | [auto.cl](https://www.auto.cl/nuevos/volvo) | 2026-10-20 |
 
-### Zxauto (2 registros)
+### Zxauto — 2 registros
 
-| Modelo | Versión | Tecnología | Precio CLP | Origen | Fecha de consulta |
+| Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | Grand Lion | 2.3 D AT 4x4 4P 5AS | No clasificada | $35.093.100 | [auto.cl](https://www.auto.cl/nuevos/zxauto/grand-lion) | 2026-10-20 |
 | Grand Lion | 2.3 D MT 4x4 4P 5AS | No clasificada | $29.213.100 | [auto.cl](https://www.auto.cl/nuevos/zxauto/grand-lion) | 2026-10-20 |
 
-## Procedimiento para próximos lotes
+## Cómo incorporar otro lote
 
-1. Consultar oferta comercial por marca, modelo y versión, incluyendo EV, REEV, PHEV, HEV, gasolina y diésel.
-2. Crear MD del lote con precio, origen y URL, conservando literalmente la denominación publicada.
-3. No duplicar versiones existentes; no bloquear el precio publicado por diferencias menores de nomenclatura.
-4. Migrar solo nuevas versiones al archivo JSON y comprobar datos, filtros, buscadores y cotizador mediante QA.
-5. Fusionar con QA aprobado y confirmar el total real servido por GitHub Pages.
+1. Consultar fabricante, importador, concesionaria o mercado digital que publique el precio y conservar la URL de origen.
+2. Elaborar un MD por lote, antes de tocar el JSON, con marca, familia, versión o «precio desde», tecnología si está identificada, precio CLP y fecha.
+3. Cruzar modelos y versiones con `commercial-2026.json` y no duplicar registros equivalentes.
+4. Incorporar al catálogo con estado comercial transparente. Un precio «desde» no representa un valor confirmado para cada versión.
+5. Ejecutar QA del buscador, filtros, ordenamiento, comparador, cotizador y versión móvil. Fusionar solo con pruebas aprobadas; comprobar publicación pública.
 
-**Cierre parcial de cobertura:** 1324 precios documentados, 74 marcas comerciales con al menos una versión en catálogo.
+**Alcance:** este inventario incorpora modelos anunciados por fuentes comerciales chilenas consultadas, pero no equivale a certificar el 100% de todas las versiones ofertadas por todas las marcas.

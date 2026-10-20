@@ -55,7 +55,7 @@ function render(){
   const card=document.createElement('article');card.className='quote-version';
   const active=chosen&&identity(x)===identity(chosen);
   card.innerHTML='<div><strong>'+safe(x.brand+' '+x.family)+'</strong><span>'+safe(x.version)+(x.modelYear?' · modelo '+safe(x.modelYear):' · año no indicado')+'</span>'+
-   '<small>'+safe(statusText(x))+'</small></div><div class="quote-version-price"><strong>'+clp(x.priceListClp)+'</strong><span>Lista sin bonos</span></div>';
+   '<small>'+safe(statusText(x))+'</small></div><div class="quote-version-price"><strong>'+clp(x.priceListClp)+'</strong><span>'+(x.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos')+'</span></div>';
   const actions=document.createElement('div');actions.className='quote-version-actions';
   const btn=document.createElement('button');btn.type='button';btn.className='button '+(active?'primary':'secondary');btn.textContent=active?'Versión seleccionada':'Cotizar esta versión';
   btn.disabled=!!active;btn.addEventListener('click',()=>select(x));
@@ -96,7 +96,7 @@ function updateBudget(){
     (chosen.modelYear?' · '+safe(chosen.modelYear):' · año de modelo no informado')+'</p><strong>'+clp(chosen.priceListClp)+'</strong>'+
     '<p class="quote-date">Fuente consultada '+safe(chosen.checkedAt)+' · '+safe(statusText(chosen))+'.</p>';
   $('quoteTotal').textContent=total===null?'Revisa los gastos':clp(total);
-  $('quoteTotalNote').textContent='Precio de lista '+clp(chosen.priceListClp)+' + gastos ingresados '+(extras()===null?'inválidos':clp(extras()))+'. Sin bonos.';
+  $('quoteTotalNote').textContent=(chosen.version.startsWith('Precio desde')?'Precio desde publicado ':'Precio de lista ')+clp(chosen.priceListClp)+' + gastos ingresados '+(extras()===null?'inválidos':clp(extras()))+'. Consultar condiciones en fuente.';
   $('quoteSource').href=chosen.source;$('quoteSource').hidden=false;
   const dealer=dealerPages[chosen.brand];$('quoteDealer').hidden=!dealer;
   if(dealer)$('quoteDealer').href=dealer;
@@ -114,7 +114,7 @@ function quoteText(){
  'Modelo comercial: '+chosen.brand+' '+chosen.family,
  'Versión seleccionada: '+chosen.version,
  'Año modelo: '+(chosen.modelYear||'No informado'),
- 'Precio de lista sin bonos: '+clp(chosen.priceListClp),
+ (chosen.version.startsWith('Precio desde')?'Precio desde publicado: ':'Precio de lista sin bonos: ')+clp(chosen.priceListClp),
  'Impuesto verde ingresado: '+clp(positive($('quoteGreen').value)),
  'Patente/inscripción y trámites ingresados: '+clp(positive($('quoteRegistration').value)),
  'Otros gastos ingresados: '+clp(positive($('quoteOther').value)),
@@ -143,7 +143,7 @@ $('quotePrint').addEventListener('click',()=>{if(amount()!==null)window.print();
 async function init(){
  for(const id of ['quoteCopy','quotePrint'])$(id).disabled=true;
  try{
-  const resp=await fetch('./sii/commercial-2026.json?v=20261020-list1324');
+  const resp=await fetch('./sii/commercial-2026.json?v=20261020-list1467');
   if(!resp.ok)throw Error('No disponible');
   const data=await resp.json();if(!Array.isArray(data))throw Error('Formato incorrecto');
   catalog=data.filter(x=>x&&x.currency==='CLP'&&Number.isInteger(x.priceListClp)&&x.priceListClp>0&&

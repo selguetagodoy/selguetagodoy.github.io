@@ -18,7 +18,7 @@ function ageWarning(record){
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[];
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1324').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1467').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
   return loaded;
@@ -74,7 +74,7 @@ function render(section,row,family){
  const list=document.createElement('div');list.className='sii-price-list';
  for(const p of available){
   const item=document.createElement('article');item.className='sii-price-item';
-  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>Lista sin bonos · fuente consultada '+esc(p.checkedAt)+'</span>'+ (p.sourceOfferEnd?'<span class="sii-price-age">Campaña documentada hasta '+esc(p.sourceOfferEnd)+'</span>':'')+
+  item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>'+(p.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos')+' · fuente consultada '+esc(p.checkedAt)+'</span>'+ (p.sourceOfferEnd?'<span class="sii-price-age">Campaña documentada hasta '+esc(p.sourceOfferEnd)+'</span>':'')+
     (ageWarning(p)?'<span class="sii-price-age">'+esc(ageWarning(p))+'</span>':'')+
     '</div><div class="sii-price-amount">'+clp(p.priceListClp)+'</div>';
   const actions=document.createElement('div');actions.className='sii-price-actions';
