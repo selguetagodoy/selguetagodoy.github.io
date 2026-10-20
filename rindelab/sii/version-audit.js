@@ -76,7 +76,7 @@
   const active=rows.filter(r=>Array.isArray(r)&&r[0]&&r[1]&&r[8]&&r[8]<=published);
   const byBrand=new Map();
   for(const row of active){
-   const b=N(row[0]);if(!byBrand.has(b))byBrand.set(b,[]);
+   const b=coverage.canonicalBrand(row[0]);if(!byBrand.has(b))byBrand.set(b,[]);
    byBrand.get(b).push(row);
   }
   const evidenceMap=new Map();
@@ -94,7 +94,7 @@
   const cases=prices.map((p,index)=>{
    const evidence=evidenceMap.get([p.brand,p.family,p.version].join('|'))||null;
    const spec=specsFor(p,evidence);
-   const candidates=(byBrand.get(N(p.brand))||[]).filter(r=>coverage.matches(p.brand,p.family,r));
+   const candidates=(byBrand.get(coverage.canonicalBrand(p.brand))||[]).filter(r=>coverage.matches(p.brand,p.family,r));
    const consistent=[],contradicted=[];
    for(const c of candidates){
     const compared=compare(spec,c);
