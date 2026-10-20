@@ -816,7 +816,7 @@ await test('JAC, Baic, Nammi, MG, Suzuki y Changan: fichas electrificadas por ma
  const brands=['JAC','Dongfeng','Baic','MG','Suzuki','Changan','Great Wall'];
  const recent=a.filter(p=>brands.includes(p.brand)&&p.checkedAt==='2026-10-19'&&p.source!=='https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf');
  const counts=Object.fromEntries(brands.map(b=>[b,recent.filter(p=>p.brand===b).length]));
- assert(counts.JAC>=3);assert(counts.Dongfeng>=2);assert.equal(counts.Baic,5);
+ assert(counts.JAC>=3);assert(counts.Dongfeng>=2);assert(counts.Baic>=5);
  assert(counts.MG>=8);assert.equal(counts.Suzuki,4);assert.equal(counts.Changan,1);assert(counts['Great Wall']>=1);
  assert.equal(a.find(p=>p.brand==='Dongfeng'&&p.family==='Nammi 001'&&p.version==='NAMMI EV 42.3KWH LR')?.priceListClp,18490000);
 });
