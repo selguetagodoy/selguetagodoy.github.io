@@ -1,6 +1,6 @@
 # RINDELAB — Base maestra de vehículos nuevos y precios publicados
 
-**Corte:** 20 de octubre de 2026. **Registros:** 1.467. **Marcas:** 74. **Referencias de precio «desde» sin versión detallada:** 143.
+**Corte:** 20 de octubre de 2026. **Registros:** 1.485. **Marcas:** 74. **Referencias de precio «desde» sin versión detallada:** 161.
 
 **Uso:** cada fila conserva marca, modelo, versión comercial o condición explícita de «desde», precio CLP y **origen del precio** con enlace navegable. Se transcribe el importe publicado en la fuente, sin imputar variantes, homologaciones 3CV ni descuentos no declarados. Las referencias «desde» representan el precio mínimo anunciado para la familia de vehículo, **no una versión específica**. Las fechas de consulta históricas se mantienen y no se revalidan artificialmente.
 
@@ -84,7 +84,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | X7 | Exclusive | No clasificada | $25.490.000 | [baic.cl](https://www.baic.cl/legales-modelos/) | 2026-10-19 |
 | X7 | Luxury | No clasificada | $24.990.000 | [baic.cl](https://www.baic.cl/legales-modelos/) | 2026-10-19 |
 
-### BMW — 61 registros
+### BMW — 67 registros
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
@@ -149,6 +149,12 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | X7 | X7 xDrive40i M Sport LCI | No clasificada | $114.900.000 | [bmw.cl](https://www.bmw.cl/modelos/x7) | 2026-10-19 |
 | XM | XM | PHEV | $232.900.000 | [bmw.cl](https://www.bmw.cl/modelos/xm) | 2026-10-19 |
 | Z4 | Z4 M40i Roadster LCI | No clasificada | $91.900.000 | [bmw.cl](https://www.bmw.cl/modelos/z4) | 2026-10-19 |
+| i7 | Precio desde (versión no especificada) | EV | $199.900.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
+| iX | Precio desde (versión no especificada) | EV | $106.900.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
+| iX3 | Precio desde (versión no especificada) | EV | $79.990.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
+| M2 | Precio desde (versión no especificada) | No clasificada | $104.900.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
+| Serie 8 Coupe | Precio desde (versión no especificada) | No clasificada | $144.000.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
+| X4 | Precio desde (versión no especificada) | No clasificada | $57.900.000 | [auto.cl](https://www.auto.cl/nuevos/bmw) | 2026-10-20 |
 
 ### BYD — 16 registros
 
@@ -308,7 +314,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | Tracker | Premier AT | No clasificada | $19.990.000 | [Autocosmos Chile](https://www.autocosmos.cl/catalogo/vigente/chevrolet/tracker) | 2026-10-20 |
 | Traverse | Precio desde (versión no especificada) | No clasificada | $46.190.000 | [auto.cl](https://www.auto.cl/nuevos/chevrolet) | 2026-10-20 |
 
-### Citroen — 22 registros
+### Citroen — 24 registros
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
@@ -334,8 +340,10 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | jumpy | Jumpy MCA XL Diesel 145HP MT | No clasificada | $31.404.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/citroen/jumpy) | 2026-10-19 |
 | Spacetourer | Spacetourer MCA 8P Diesel 180HP AT | No clasificada | $36.640.100 | [Rosselot](https://www.rosselot.cl/nuevos/citroen/spacetourer) | 2026-10-19 |
 | Spacetourer | Spacetourer MCA 9P Diesel 180HP AT | No clasificada | $36.759.100 | [Rosselot](https://www.rosselot.cl/nuevos/citroen/spacetourer) | 2026-10-19 |
+| C5 Aircross | Precio desde (versión no especificada) | No clasificada | $25.490.000 | [auto.cl](https://www.auto.cl/nuevos/citroen) | 2026-10-20 |
+| C5 Aircross Plug - In Hybrid | Precio desde (versión no especificada) | PHEV | $40.490.000 | [auto.cl](https://www.auto.cl/nuevos/citroen) | 2026-10-20 |
 
-### Cupra — 6 registros
+### Cupra — 7 registros
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
@@ -345,6 +353,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | Tavascan | Extreme 82 kWh 286hp | EV | $53.990.000 | [cupraofficial.cl](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) | 2026-10-19 |
 | Terramar | 1.5 TSI mHEV AT 150hp | MHEV | $39.990.000 | [cupraofficial.cl](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) | 2026-10-19 |
 | Terramar | High 1.5 TSI mHEV AT 150hp | MHEV | $43.990.000 | [cupraofficial.cl](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) | 2026-10-19 |
+| Ateca | Precio desde (versión no especificada) | No clasificada | $41.990.000 | [auto.cl](https://www.auto.cl/nuevos/cupra) | 2026-10-20 |
 
 ### Deepal — 3 registros
 
@@ -1574,7 +1583,7 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | Taycan | Taycan Turbo GT With Weissach | EV | $231.000.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) | 2026-10-20 |
 | Taycan | Taycan Turbo S | EV | $211.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) | 2026-10-20 |
 
-### RAM — 13 registros
+### RAM — 22 registros
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
@@ -1591,6 +1600,15 @@ Cuando no exista correspondencia homologada: «*Homologación energética de est
 | ram700 | RAM 700 BIGHORN CREW CAB 1.3 MT | No clasificada | $19.147.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/ram/ram700) | 2026-10-19 |
 | ram700 | RAM 700 LARAMIE CREW CAB 1.0T CVT | No clasificada | $23.669.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/ram/ram700) | 2026-10-19 |
 | ram700 | RAM 700 SLT CREW CAB 1.3 MT | No clasificada | $17.600.100 | [Rosselot](https://www.rosselot.cl/public/nuevos/ram/ram700) | 2026-10-19 |
+| 1000 Pick UP | Precio desde (versión no especificada) | No clasificada | $26.168.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| 1500 CD | Precio desde (versión no especificada) | No clasificada | $55.990.000 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| 2500 CD | Precio desde (versión no especificada) | No clasificada | $78.528.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| 700 CD | Precio desde (versión no especificada) | No clasificada | $17.243.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| Nueva 700 CE | Precio desde (versión no especificada) | No clasificada | $16.053.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| rampage | Precio desde (versión no especificada) | No clasificada | $38.068.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| V1000 | Precio desde (versión no especificada) | No clasificada | $18.433.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| V700 City | Precio desde (versión no especificada) | No clasificada | $17.243.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
+| V700 Rapid | Precio desde (versión no especificada) | No clasificada | $16.648.100 | [auto.cl](https://www.auto.cl/nuevos/ram) | 2026-10-20 |
 
 ### Renault — 6 registros
 
