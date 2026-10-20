@@ -29,7 +29,7 @@ function render(){
   const status=cell(tr,x.candidateRecords?'Coincidencia nominal; versión sin cotejar':'No se encontró la familia');
   status.className='coverage-verdict';
   const source=document.createElement('a');source.href=x.sourceUrls[0];source.target='_blank';source.rel='noopener noreferrer';
-  source.textContent=x.sourceUrls.length>1?'Fuente oficial y otras ('+x.sourceUrls.length+')':'Fuente oficial';
+  source.textContent=x.sourceUrls.length>1?'Fuentes publicadas ('+x.sourceUrls.length+')':'Fuente publicada';
   status.append(source);
   out.append(tr);
  }
