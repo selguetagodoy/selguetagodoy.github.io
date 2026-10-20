@@ -496,7 +496,7 @@ function showDetail(i){
     'Datos de homologación, no consumo garantizado en ruta. WLTP y NEDC corresponden a ensayos distintos.')+
    '</p><dl class="details-list">'+displayItems.map(([k,v])=>'<dt>'+safe(k)+'</dt><dd>'+safe(v)+'</dd>').join('')+'</dl></details>';
  const ranking=percentileFor(r);
- if(ranking){const p=document.createElement('p');p.className='rinde-percentile';p.textContent='Percentil '+ranking.pct+' de eficiencia · '+ranking.n+' fichas con misma tecnología, carrocería y ciclo '+r[F.CYCLE]+' ('+ranking.measure+'). Percentil calculado sobre fichas, no ventas ni modelos únicos.';$('detailContent').append(p);}
+ if(ranking){const p=document.createElement('div');p.className='rinde-percentile';const t=document.createElement('p');t.textContent='Percentil '+ranking.pct+' de eficiencia · '+ranking.n+' fichas con misma tecnología, carrocería y ciclo '+r[F.CYCLE]+' ('+ranking.measure+'). Percentil calculado sobre fichas, no ventas ni modelos únicos.';const meter=document.createElement('meter');meter.min=0;meter.max=100;meter.value=ranking.pct;meter.setAttribute('aria-label','Percentil relativo de eficiencia');meter.style.width='100%';p.append(t,meter);$('detailContent').append(p);}
  const emission=co2Annual(r);
  if(r[F.TECH]==='EV'){const p=document.createElement('p');p.className='note';p.textContent='Vehículo eléctrico: 0 toneladas/año de CO₂ en tubo de escape. Esto no incluye emisiones asociadas a generación eléctrica ni fabricación.';$('detailContent').append(p);}
  else if(emission!==null){const p=document.createElement('p');p.className='note';p.textContent='CO₂ directo: '+emission.toLocaleString('es-CL',{maximumFractionDigits:3})+' t/año según g/km 3CV y '+fmt(Number($('annualKm').value))+' km/año. No incluye emisiones del ciclo de vida.';$('detailContent').append(p);}
@@ -731,6 +731,7 @@ $('statsOpen').disabled=true;
 // El enlace compartible #rankings abre el mismo panel que el botón.
 function revealRankings(){if(location.hash==='#rankings'&&all.length&&!$('statsDialog').open){$('statsDialog').showModal();configureStatsMetric();renderStatistics();}}
 window.addEventListener('hashchange',revealRankings);
+document.querySelectorAll('[data-open-rankings]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();history.replaceState(null,'',location.pathname+location.search+'#rankings');revealRankings();}));
 $('statsOpen').addEventListener('click',()=>{
  $('statsDialog').showModal();configureStatsMetric();renderStatistics();
 });
