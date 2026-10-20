@@ -935,7 +935,7 @@ await test('JAC, Baic, Nammi, MG, Suzuki y Changan: fichas electrificadas por ma
  const counts=Object.fromEntries(brands.map(b=>[b,recent.filter(p=>p.brand===b).length]));
  assert(counts.JAC>=3);assert(counts.Dongfeng>=2);assert(counts.Baic>=5);
  assert(counts.MG>=8);assert.equal(counts.Suzuki,4);assert.equal(counts.Changan,1);assert(counts['Great Wall']>=1);
- assert.equal(a.find(p=>p.brand==='Dongfeng'&&p.family==='Nammi 001'&&p.version==='NAMMI EV 42.3KWH LR')?.priceListClp,18490000);
+ assert.equal(a.find(p=>p.brand==='Nammi'&&p.family==='Nammi 001'&&p.version==='NAMMI EV 42.3KWH LR')?.priceListClp,18490000);
 });
 await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar ciclos ni motorizaciones',async()=>{
  const entries=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
