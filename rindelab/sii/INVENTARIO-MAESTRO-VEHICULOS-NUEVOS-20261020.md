@@ -6,16 +6,16 @@
 
 Se consigna el **precio de lista publicado con IVA incluido**, sin restar bonos ni convertir precios con financiamiento. Se conserva el nombre publicado por el concesionario. El enlace permite consultar el origen y sus condiciones; no implica vigencia permanente, stock ni homologación energética automática. Donde no sea posible asociar la versión con una ficha 3CV, mostrar una nota breve: **«Homologación de esta versión aún no identificada. Puedes consultar el precio publicado en la fuente.»**
 
-Para migrar: **Agregar** pasa a JSON; **Registrado** no se duplica; **Registrado; fuente difiere** permanece con su precio existente y la alternativa documentada; **Revisar posible equivalencia** no se migra automáticamente.
+Para migrar: **Agregar** pasa a JSON (solo con precio de lista explícito); **Registrado** no se duplica; **Registrado; fuente difiere** permanece con su precio existente y la alternativa documentada; **Revisar posible equivalencia** no se migra automáticamente.
 
-**Resultado del barrido:** 63 versiones extraídas de 22 páginas de modelos; 12 altas propuestas; 38 presentes; 2 con otro precio publicado y 11 que podrían corresponder al mismo registro.
+**Resultado del barrido (con revisión de variantes MT/AT, equipamientos y tracción):** 63 versiones extraídas de 22 páginas de modelos; 19 altas propuestas; 41 presentes; 3 con otro precio publicado y 0 por resolver.
 
 ## Tabla maestra de versiones y fuentes
 
 | Marca | Modelo | Versión comercial publicada | Tecnología | Precio lista CLP | Origen | Situación |
 |---|---|---|---|---:|---|---|
 | Hyundai | i20 | I20 BI3 1.4 MT GO FL | Gasolina | $14.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | Agregar |
-| Hyundai | i20 | I20 BI3 1.4 MT PLUS FL | Gasolina | $16.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | Revisar posible equivalencia |
+| Hyundai | i20 | I20 BI3 1.4 MT PLUS FL | Gasolina | $16.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | Agregar |
 | Hyundai | i20 | I20 BI3 1.4 AT PLUS FL | Gasolina | $17.190.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | Registrado |
 | Hyundai | i20 | I20 BI3 1.0T AT DESIGN FL | Gasolina | $19.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | Registrado |
 | Hyundai | Creta | Creta SU2id 1.5 MT GO FL | Gasolina | $18.290.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-creta/) | Registrado |
@@ -40,28 +40,28 @@ Para migrar: **Agregar** pasa a JSON; **Registrado** no se duplica; **Registrado
 | Hyundai | Palisade | Palisade LX2 3.5 AT AWD Premium FL | Gasolina | $48.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | Agregar |
 | Hyundai | Palisade | Palisade LX2 2.2 CRDI AT AWD Premium FL | Diésel | $52.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | Agregar |
 | Hyundai | Palisade | Palisade LX2 2.2 CRDI AT AWD Limited FL | Diésel | $57.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | Agregar |
-| Hyundai | Accent | ACCENT BN7i 1.5 MT BLACK | Gasolina | $15.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | Revisar posible equivalencia |
-| Hyundai | Accent | ACCENT BN7i 1.5 MT PLUS | Gasolina | $15.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | Revisar posible equivalencia |
+| Hyundai | Accent | ACCENT BN7i 1.5 MT BLACK | Gasolina | $15.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | Agregar |
+| Hyundai | Accent | ACCENT BN7i 1.5 MT PLUS | Gasolina | $15.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | Agregar |
 | Hyundai | Accent | ACCENT BN7i 1.5 AT PLUS | Gasolina | $17.290.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | Registrado |
 | Hyundai | Accent | ACCENT BN7i 1.5 MT DESIGN | Gasolina | $18.790.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | Registrado |
 | Hyundai | Accent | ACCENT BN7i 1.5 AT DESIGN | Gasolina | $20.290.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | Registrado |
-| Hyundai | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT GO FL | Gasolina | $10.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | Revisar posible equivalencia |
-| Hyundai | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT PLUS FL | Gasolina | $11.790.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | Revisar posible equivalencia |
+| Hyundai | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT GO FL | Gasolina | $10.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | Agregar |
+| Hyundai | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT PLUS FL | Gasolina | $11.790.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | Agregar |
 | Hyundai | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT DESIGN FL | Gasolina | $12.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | Registrado |
 | Hyundai | Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 AT PLUS FL | Gasolina | $13.290.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | Registrado |
-| Hyundai | Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 MT PLUS FL | Gasolina | $12.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | Revisar posible equivalencia |
-| Hyundai | Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 MT DESIGN FL | Gasolina | $13.590.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | Revisar posible equivalencia |
+| Hyundai | Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 MT PLUS FL | Gasolina | $12.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | Agregar |
+| Hyundai | Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 MT DESIGN FL | Gasolina | $13.590.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | Registrado |
 | Hyundai | Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 AT PLUS FL | Gasolina | $14.190.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | Registrado |
 | Hyundai | Staria | STARIA US4 MB 2.2 CRDI MT 11P | Diésel | $35.985.600 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | Registrado; fuente difiere |
 | Hyundai | Staria | STARIA US4 MB 2.2 CRDI AT 9P | Diésel | $36.104.600 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | Registrado; fuente difiere |
 | Hyundai | Staria | STARIA US4 MB 2.2 CRDI AT 4WD 7P LUXURY | Diésel | $48.897.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | Agregar |
-| Hyundai | Staria | STARIA US4 MB 2.2 CRDI AT 4WD 9P LUXURY | Diésel | $49.373.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | Revisar posible equivalencia |
+| Hyundai | Staria | STARIA US4 MB 2.2 CRDI AT 4WD 9P LUXURY | Diésel | $49.373.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | Agregar |
 | Gac | GS8 | GS8 GL 2.0 AT 2WD | Gasolina | $25.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/gs8/) | Agregar |
 | Gac | GS8 | GS8 GX 2.0 AT 4WD | Gasolina | $32.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/gs8/) | Agregar |
 | Gac | Emzoom | EMZOOM GS + 1.5 AT 2WD | Gasolina | $13.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | Agregar |
 | Gac | Emzoom | EMZOOM GB + 1.5 AT 2WD | Gasolina | $14.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | Agregar |
 | Gac | Emzoom | EMZOOM GL 1.5 AT 2WD | Gasolina | $15.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | Agregar |
-| Gac | Emzoom | EMZOOM GL R-STYLE 1.5 AT 2WD | Gasolina | $17.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | Revisar posible equivalencia |
+| Gac | Emzoom | EMZOOM GL R-STYLE 1.5 AT 2WD | Gasolina | $17.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | Registrado; fuente difiere |
 | Gac | Emkoo | EMKOO GE 1.5 AT 2WD | Gasolina | $16.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emkoo/) | Agregar |
 | Gac | Emkoo | EMKOO GL 1.5 AT 2WD | Gasolina | $18.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emkoo/) | Agregar |
 | JAC | JS2 Pro | JS2 PRO MT LUXURY | Gasolina | $13.290.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/jac/jac-js2-pro/) | Registrado |
@@ -75,8 +75,8 @@ Para migrar: **Agregar** pasa a JSON; **Registrado** no se duplica; **Registrado
 | JAC | T9 | T9 4x4 AT Advance | Diésel | $28.786.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/jac/jac-t9/) | Registrado |
 | JAC | T9 | T9 4x4 TEAM CHILE | Diésel | $31.166.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/jac/jac-t9/) | Registrado |
 | JAC | T9 | T9 4X4 KIT OFF ROAD | Diésel | $31.880.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/jac/jac-t9/) | Registrado |
-| Shineray | T30 | T30 Mini Truck CS 1.6 5MT ELT | Gasolina | $11.055.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/shineray-t30-con-a-c/) | Revisar posible equivalencia |
-| Shineray | T52 | T52 Mini Truck CD 1.6 5MT STD | Gasolina | $13.316.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/shineray-t52-con-a-c/) | Revisar posible equivalencia |
+| Shineray | T30 | T30 Mini Truck CS 1.6 5MT ELT | Gasolina | $11.055.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/shineray-t30-con-a-c/) | Registrado |
+| Shineray | T52 | T52 Mini Truck CD 1.6 5MT STD | Gasolina | $13.316.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/shineray-t52-con-a-c/) | Registrado |
 
 ## Cobertura y siguiente barrido
 
