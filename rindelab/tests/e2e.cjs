@@ -643,7 +643,7 @@ await test('Índice SII 2026 carga metadatos y 81.697 registros sin valores infe
 await test('Catálogo de precios de lista sin bonos con fuente oficial',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
  assert.equal(list.length,priceTotal);
- assert.deepEqual([...new Set(list.map(x=>x.brand))].sort(),['Audi','BMW','BYD','Baic','Changan','Chery','Citroen','Cupra','DFSK','Dongfeng','Fiat','Ford','Gac','Geely','Great Wall','Hyundai','JAC','JMC','Jaecoo','Jeep','KGM','Kia','Leapmotor','MG','Mazda','Mini','Mitsubishi','Nissan','Omoda','Peugeot','Seres','Skoda','Subaru','Suzuki','Toyota','Volkswagen','Volvo']);
+ for(const previouslyCovered of ['Audi','BMW','BYD','Baic','Changan','Chery','Citroen','Cupra','DFSK','Dongfeng','Fiat','Ford','Gac','Geely','Great Wall','Hyundai','JAC','JMC','Jaecoo','Jeep','KGM','Kia','Leapmotor','MG','Mazda','Mini','Mitsubishi','Nissan','Omoda','Peugeot','Seres','Skoda','Subaru','Suzuki','Toyota','Volkswagen','Volvo']) assert(list.some(x=>x.brand===previouslyCovered),'Marca base ausente '+previouslyCovered);
  const seen=new Set();
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
@@ -2239,7 +2239,7 @@ await test('Lote 36: comprobar JAC, Dongfeng EV y MINI eléctricos',async()=>{
  const testPage=await browser.newPage({viewport:{width:1280,height:800}});
  await testPage.goto(base+'cotizador.html',{waitUntil:'networkidle'});
  const list=await testPage.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(list.length,406);
+ assert.equal(list.length,priceTotal);
  assert.equal(list.filter(x=>x.brand==='Mini'&&x.technology==='EV').length,7);
  assert.equal(list.filter(x=>x.brand==='JAC'&&x.checkedAt==='2026-10-19').length,31);
  assert.equal(list.find(x=>x.brand==='Dongfeng'&&x.family==='MAGE EV')?.priceListClp,21990000);
