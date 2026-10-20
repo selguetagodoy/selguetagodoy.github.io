@@ -59,7 +59,7 @@ function render(){
   const actions=document.createElement('div');actions.className='quote-version-actions';
   const btn=document.createElement('button');btn.type='button';btn.className='button '+(active?'primary':'secondary');btn.textContent=active?'Versión seleccionada':'Cotizar esta versión';
   btn.disabled=!!active;btn.addEventListener('click',()=>select(x));
-  const a=document.createElement('a');a.href=x.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Precio oficial ↗';
+  const a=document.createElement('a');a.href=x.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ver fuente ↗';
   actions.append(btn,a);card.append(actions);box.append(card);
  });
  $('quoteMore').hidden=limit>=visible.length;
@@ -120,7 +120,7 @@ function quoteText(){
  'Otros gastos ingresados: '+clp(positive($('quoteOther').value)),
  'TOTAL REFERENCIAL AL CONTADO: '+clp(total),
  'Precio revisado: '+chosen.checkedAt,
- 'Fuente oficial: '+chosen.source,
+ 'Fuente del precio: '+chosen.source,
  'No es una oferta vinculante ni disponibilidad confirmada. Los gastos deben verificarse con la marca. No se asume correspondencia con una ficha 3CV.'
  ];return parts.join('\n');
 }
@@ -143,7 +143,7 @@ $('quotePrint').addEventListener('click',()=>{if(amount()!==null)window.print();
 async function init(){
  for(const id of ['quoteCopy','quotePrint'])$(id).disabled=true;
  try{
-  const resp=await fetch('./sii/commercial-2026.json?v=20261019-list1049');
+  const resp=await fetch('./sii/commercial-2026.json?v=20261020-list1062');
   if(!resp.ok)throw Error('No disponible');
   const data=await resp.json();if(!Array.isArray(data))throw Error('Formato incorrecto');
   catalog=data.filter(x=>x&&x.currency==='CLP'&&Number.isInteger(x.priceListClp)&&x.priceListClp>0&&
