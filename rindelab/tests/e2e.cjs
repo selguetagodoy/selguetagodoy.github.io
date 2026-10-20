@@ -700,6 +700,20 @@ await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicad
  assert(data.some(x=>x.brand==='Chevrolet'&&x.family==='Captiva PHEV'&&x.technology==='PHEV'));
  assert(data.some(x=>x.brand==='Maxus'&&x.family==='T90 EV'&&x.technology==='EV'));
 });
+await test('Ocho marcas agregadas con Markdown, precio de lista y origen comercial',async()=>{
+ const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert.equal(data.length,1218);
+ const counts={'Porsche':67,'Honda':9,'Lexus':11,'Mercedes-Benz':5,'Tesla':5,'DS':8,'Alfa Romeo':2,'Jaguar':2};
+ for(const [brand,n] of Object.entries(counts)){
+  const items=data.filter(x=>x.brand===brand);
+  assert.equal(items.length,n,'Incompleto '+brand);
+  assert(items.every(x=>x.priceListClp>0&&x.source.startsWith('https://')),'Fuente o importe inválido '+brand);
+ }
+ for(const pathFile of ['LOTE-PORSCHE-20261020.md','LOTE-HONDA-20261020.md','LOTE-LEXUS-MERCEDES-20261020.md','LOTE-TESLA-20261020.md','LOTE-DS-ALFA-JAGUAR-20261020.md','PENDIENTES-CATALOGO-NUEVOS-20261020.md']){
+  assert(fs.existsSync(path.join(__dirname,'../sii',pathFile)),'MD no generado '+pathFile);
+ }
+ assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.218'));
+});
 await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercial identificada',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  const expected={Mitsubishi:13,Peugeot:3,Fiat:4,Jeep:2,KGM:5};
