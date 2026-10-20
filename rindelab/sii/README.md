@@ -1,3 +1,9 @@
+# Corte comercial RINDELAB — 20/10/2026
+
+**Estado más reciente:** 1.504 referencias de precios publicados, 80 marcas. Se añadieron 19 referencias documentales de Hino (6), Fuso (5), Iveco (2), Uaz (2), ZNA (2) y Nammi (2), y se corrigió la asignación de dos referencias Nammi que estaban bajo Dongfeng. Los precios Hino y Fuso figuran **+ IVA**: se visualizan sin calcular total final en el cotizador. `priceType` documenta lista, oferta, desde o precio publicado según fuente; las fechas de consulta preexistentes no se actualizan de forma masiva. Las 124 denominaciones del inventario 3CV se cotejan mediante alias de visualización sin reescribir datos originales. El listado de brechas y el origen individual están en `CIERRE-PENDIENTES-COBERTURA-MARCAS-20261020.md` y `BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md`. Las cifras históricas de ampliaciones a continuación se conservan como registros de etapa, no como total vigente.
+
+---
+
 ## Referencia fiscal SII 2026: tasación y permiso
 RINDELAB incorpora la nómina **LIV2026** del SII, descargada desde
 https://www.sii.cl/servicios_online/tasacion_fiscal_vehiculos/liv2026.xlsx
