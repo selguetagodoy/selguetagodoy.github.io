@@ -860,6 +860,7 @@ async function showBt1Directory(){
  }catch(err){enelPending=null;$('tariffEnelStatus').textContent='No fue posible cargar el índice del pliego oficial: '+err.message+'. Revisa el sitio Enel desde el enlace.';}
 }
 $('tariffDistributor').addEventListener('change',showBt1Directory);
+$('useHomeTariff').addEventListener('click',()=>{ $('chargeScenario').value='home'; updateChargeScenario(); refreshEnergyViews(); $('scenarioAdvanced').open=true; $('homeChargeRate').focus(); $('homeChargeRate').scrollIntoView({block:'center',behavior:'smooth'}); });
 for(const id of ['tariffCommune','tariffNetwork','tariffEtr'])$(id).addEventListener('change',updateBt1Description);
 $('calcHomeFromBill').addEventListener('click',calculateHomeFromBill);
 $('chargeKwh').addEventListener('input',updateChargingExample);
