@@ -668,14 +668,14 @@ await test('Inventario MD Gildemeister migrado sin perder precio, origen ni vers
  const complete=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
  assert(list.length>=1084,'Lote de 22 versiones faltante');
- const pendingRows=md.split('\\n').filter(x=>x.startsWith('| ')&&x.trim().endsWith('| Agregar |'));
+ const pendingRows=md.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.trim().endsWith('| Agregar |'));
  assert.equal(pendingRows.length,22,'El MD de origen no refleja las 22 altas');
  for(const row of pendingRows){
   const col=row.split('|').map(s=>s.trim());
-  const link=col[6].match(/\\]\((https:\\/\\/[^)]+)\\)/);assert(link,'Falta enlace de concesionaria '+row);
+  const sourceUrl=col[6].split('](')[1]?.split(')')[0];assert(sourceUrl&&sourceUrl.startsWith('https://'),'Falta enlace '+row);
   const x=list.find(z=>z.brand===col[1]&&z.family===col[2]&&z.version===col[3]);
   assert(x,'Versión no migrada '+col[3]);assert.equal(x.priceListClp,Number(col[5].replace(/[^0-9]/g,'')));
-  assert.equal(x.source,link[1]);
+  assert.equal(x.source,sourceUrl);
  }
  assert(complete.includes('Gildemeister Retail')&&complete.includes('Portillo Sur'),'El MD maestro debe identificar la concesionaria de origen');
  for(const version of ['IONIQ 5 NE EV PREMIUM','IONIQ 5 NE EV LIMITED','IONIQ 5 NE EV AWD LIMITED']){
