@@ -1237,7 +1237,7 @@ await test('Marcas: 134 marcas del 3CV histórico, filtro transparente y CSV',as
  assert((await p.locator('#brandRows tr').count())>=119,'Se conservan las 119 marcas históricas y se agregan nuevas comerciales');
  await p.fill('#brandSearch','Chevrolet');
  assert.equal(await p.locator('#brandRows tr').count(),1);
- assert.match(await p.locator('#brandRows tr').first().textContent(),/Sin precio documentado/);
+ assert.match(await p.locator('#brandRows tr').first().textContent(),/Precio documentado/);
  await p.fill('#brandSearch','Chery');
  assert.equal(await p.locator('#brandRows tr').count(),1);
  assert.match(await p.locator('#brandRows tr').first().textContent(),/Precio documentado/);
