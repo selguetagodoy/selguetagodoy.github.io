@@ -21,6 +21,7 @@ function catalog(){
  return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1485').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
+  window.dispatchEvent(new Event("rindelab:prices-ready"));
   return loaded;
  }).catch(()=>{loaded=[];return []}));
 }
@@ -101,6 +102,18 @@ api.decorateComparison=function(vehicles){
  r.querySelector('th').textContent='Precio de lista nuevo (sin bonos)';
  const cells=[...r.querySelectorAll('td')],cars=vehicles.map(x=>x.row||x);
  cars.forEach((car,i)=>{const p=selected(car);if(cells[i])cells[i].textContent=p?clp(p.priceListClp)+' · versión elegida':'Elegir versión comercial en ficha';});
+};
+window.RindelabCommercial={
+ ready:catalog,
+ selected,
+ available:(row,family)=>match(row,family,loaded),
+ minimum:(row,family)=>{
+   const items=match(row,family,loaded);if(!items.length)return null;
+   return items.reduce((a,b)=>a.priceListClp<=b.priceListClp?a:b);
+ },
+ cleanPrice:record=>record&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
+ clp,
+ ageWarning
 };
 catalog();
 })();
