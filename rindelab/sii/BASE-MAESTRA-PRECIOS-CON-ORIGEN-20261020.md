@@ -583,28 +583,28 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
 | AION ES | AION ES | EV | $25.990.000 | [Astara Retail](https://astararetail.cl/gac-aion-es/) | 2026-10-19 |
-| AION UT | Aion UT Basic 44kwh | EV | $20.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/aion-ut/) | 2026-10-19 |
+| AION UT | Aion UT Basic 44kwh | EV | $20.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/aion-ut/) | 2026-10-19 |
 | AION Y | AION Y | EV | $30.990.000 | [Astara Retail](https://astararetail.cl/gac-aion-y/) | 2026-10-19 |
 | Emkoo | EMKOO 1.5T AT GDI GE | No clasificada | $18.490.000 | [gacmotor.cl](https://gacmotor.cl/modelos/emkoo/precios-y-financiamiento/) | 2026-10-18 |
 | Emkoo | EMKOO 1.5T AT GDI GL | No clasificada | $21.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/emkoo/precios-y-financiamiento/) | 2026-10-18 |
 | Emkoo | EMKOO 2.0 AT HEV GL | HEV | $22.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/emkoo-hibrido/) | 2026-10-18 |
-| Emkoo | EMKOO GE 1.5 AT 2WD | No clasificada | $16.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/emkoo/) | 2026-10-20 |
-| Emkoo | EMKOO GL 1.5 AT 2WD | No clasificada | $18.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/emkoo/) | 2026-10-20 |
+| Emkoo | EMKOO GE 1.5 AT 2WD | No clasificada | $16.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emkoo/) | 2026-10-20 |
+| Emkoo | EMKOO GL 1.5 AT 2WD | No clasificada | $18.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emkoo/) | 2026-10-20 |
 | Emzoom | EMZOOM 1.5T AT GB | No clasificada | $16.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/emzoom/precios-y-financiamiento/) | 2026-10-18 |
 | Emzoom | EMZOOM 1.5T AT GL | No clasificada | $17.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/emzoom/precios-y-financiamiento/) | 2026-10-18 |
 | Emzoom | EMZOOM 1.5T AT GL R-STYLE | No clasificada | $19.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/emzoom-r-style/) | 2026-10-18 |
 | Emzoom | EMZOOM 1.5T AT GS | No clasificada | $15.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/emzoom/precios-y-financiamiento/) | 2026-10-18 |
-| Emzoom | EMZOOM GB + 1.5 AT 2WD | No clasificada | $14.490.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | 2026-10-20 |
-| Emzoom | EMZOOM GL 1.5 AT 2WD | No clasificada | $15.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | 2026-10-20 |
-| Emzoom | EMZOOM GS + 1.5 AT 2WD | No clasificada | $13.490.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | 2026-10-20 |
+| Emzoom | EMZOOM GB + 1.5 AT 2WD | No clasificada | $14.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | 2026-10-20 |
+| Emzoom | EMZOOM GL 1.5 AT 2WD | No clasificada | $15.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | 2026-10-20 |
+| Emzoom | EMZOOM GS + 1.5 AT 2WD | No clasificada | $13.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/emzoom/) | 2026-10-20 |
 | GS3 Power | GS3 POWER 1.5T AT GB | No clasificada | $15.490.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs3-power/precios-y-financiamiento/) | 2026-10-18 |
 | GS3 Power | GS3 POWER 1.5T AT GS | No clasificada | $14.490.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs3-power/precios-y-financiamiento/) | 2026-10-18 |
 | GS3 Power | GS3 POWER 1.5T MT GB | No clasificada | $14.490.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs3-power/precios-y-financiamiento/) | 2026-10-18 |
 | GS3 Power | GS3 POWER 1.5T MT GS | No clasificada | $12.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs3-power/precios-y-financiamiento/) | 2026-10-18 |
-| GS4 MAX | GS4 MAX GL 1.5 AT 2WD | No clasificada | $17.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/terminos-y-condiciones/) | 2026-10-19 |
-| GS4 MAX HEV | GS4 MAX GL HEV 2.0 ATK 2WD | HEV | $22.490.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/gs4/) | 2026-10-19 |
-| GS8 | GS8 GL 2.0 AT 2WD | No clasificada | $25.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/gs8/) | 2026-10-20 |
-| GS8 | GS8 GX 2.0 AT 4WD | No clasificada | $32.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/gac/gs8/) | 2026-10-20 |
+| GS4 MAX | GS4 MAX GL 1.5 AT 2WD | No clasificada | $17.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/terminos-y-condiciones/) | 2026-10-19 |
+| GS4 MAX HEV | GS4 MAX GL HEV 2.0 ATK 2WD | HEV | $22.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/gs4/) | 2026-10-19 |
+| GS8 | GS8 GL 2.0 AT 2WD | No clasificada | $25.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/gs8/) | 2026-10-20 |
+| GS8 | GS8 GX 2.0 AT 4WD | No clasificada | $32.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/gac/gs8/) | 2026-10-20 |
 | GS8 | NEW GS8 2.0T AT GL 2WD | No clasificada | $27.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs8/precios-y-financiamiento/) | 2026-10-18 |
 | GS8 | NEW GS8 2.0T AT GT 2WD | No clasificada | $30.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs8/precios-y-financiamiento/) | 2026-10-18 |
 | GS8 | NEW GS8 2.0T AT GX 4WD | No clasificada | $37.990.000 | [gacmotor.cl](https://gacmotor.cl/modelos/gs8/precios-y-financiamiento/) | 2026-10-18 |
@@ -701,8 +701,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| Accent | ACCENT BN7i 1.5 MT BLACK | No clasificada | $15.690.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
-| Accent | ACCENT BN7i 1.5 MT PLUS | No clasificada | $15.890.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
+| Accent | ACCENT BN7i 1.5 MT BLACK | No clasificada | $15.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
+| Accent | ACCENT BN7i 1.5 MT PLUS | No clasificada | $15.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-accent/) | 2026-10-20 |
 | ACCENT BN7i | 1.5 AT DESIGN | No clasificada | $20.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
 | ACCENT BN7i | 1.5 AT PLUS | No clasificada | $17.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
 | ACCENT BN7i | 1.5 MT DESIGN | No clasificada | $18.790.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/accentbn7i) | 2026-10-19 |
@@ -717,18 +717,18 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | GRAND I-10 AI3 SEDAN | 1.2 AT PLUS FL | No clasificada | $14.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/grandi10ai3sedan) | 2026-10-19 |
 | GRAND I,10 AI3 HB | 1.2 AT PLUS FL | No clasificada | $13.290.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/grandi10ai3hb) | 2026-10-19 |
 | GRAND I,10 AI3 HB | 1.2 MT DESIGN FL | No clasificada | $12.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/grandi10ai3hb) | 2026-10-19 |
-| Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT GO FL | No clasificada | $10.690.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | 2026-10-20 |
-| Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT PLUS FL | No clasificada | $11.790.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | 2026-10-20 |
-| Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 MT PLUS FL | No clasificada | $12.490.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | 2026-10-20 |
+| Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT GO FL | No clasificada | $10.690.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | 2026-10-20 |
+| Grand i10 Hatchback | GRAND I-10 AI3 HB 1.2 MT PLUS FL | No clasificada | $11.790.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/) | 2026-10-20 |
+| Grand i10 Sedan | GRAND I-10 AI3 SEDAN 1.2 MT PLUS FL | No clasificada | $12.490.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-sedan/) | 2026-10-20 |
 | I20 BI3 FL | 1.0T AT DESIGN | No clasificada | $19.690.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
 | I20 BI3 FL | 1.4 AT PLUS | No clasificada | $17.190.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/i20bi3fl) | 2026-10-19 |
-| i20 | I20 BI3 1.4 MT GO FL | No clasificada | $14.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | 2026-10-20 |
-| i20 | I20 BI3 1.4 MT PLUS FL | No clasificada | $16.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | 2026-10-20 |
+| i20 | I20 BI3 1.4 MT GO FL | No clasificada | $14.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | 2026-10-20 |
+| i20 | I20 BI3 1.4 MT PLUS FL | No clasificada | $16.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-i20/) | 2026-10-20 |
 | Inster | AX EV DESIGN LR | EV | $24.490.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/) | 2026-10-17 |
 | Inster | AX EV PLUS | EV | $21.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-inster/precios-y-financiamiento/) | 2026-10-17 |
-| Ioniq 5 | IONIQ 5 NE EV AWD LIMITED | EV | $62.890.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-awd-limited/) | 2026-10-20 |
-| Ioniq 5 | IONIQ 5 NE EV LIMITED | EV | $57.890.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-limited/) | 2026-10-20 |
-| Ioniq 5 | IONIQ 5 NE EV PREMIUM | EV | $52.890.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-premium/) | 2026-10-20 |
+| Ioniq 5 | IONIQ 5 NE EV AWD LIMITED | EV | $62.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-awd-limited/) | 2026-10-20 |
+| Ioniq 5 | IONIQ 5 NE EV LIMITED | EV | $57.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-limited/) | 2026-10-20 |
+| Ioniq 5 | IONIQ 5 NE EV PREMIUM | EV | $52.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-premium/) | 2026-10-20 |
 | Kona | KONA SX2 EV GO LR | EV | $40.090.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-electrico/precios-y-financiamiento/) | 2026-10-17 |
 | Kona | SX2 1.6 AT HEV DESIGN | HEV | $30.190.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
 | Kona | SX2 1.6 AT HEV PLUS | HEV | $27.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-kona-hibrido/precios-y-financiamiento/) | 2026-10-17 |
@@ -738,9 +738,9 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | PALISADE LX3 | 2.5T HEV AT AWD 7P CALLIGRAPHY | No clasificada | $66.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/palisadelx3) | 2026-10-19 |
 | Palisade | LX3 2.5T HEV AT AWD CALLIGRAPHY | HEV | $65.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
 | Palisade | LX3 2.5T HEV AT AWD LIMITED | HEV | $59.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/hibridos/all-new-palisade-hibrido/precios-y-financiamiento/) | 2026-10-17 |
-| Palisade | Palisade LX2 2.2 CRDI AT AWD Limited FL | No clasificada | $57.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
-| Palisade | Palisade LX2 2.2 CRDI AT AWD Premium FL | No clasificada | $52.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
-| Palisade | Palisade LX2 3.5 AT AWD Premium FL | No clasificada | $48.390.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
+| Palisade | Palisade LX2 2.2 CRDI AT AWD Limited FL | No clasificada | $57.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
+| Palisade | Palisade LX2 2.2 CRDI AT AWD Premium FL | No clasificada | $52.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
+| Palisade | Palisade LX2 3.5 AT AWD Premium FL | No clasificada | $48.390.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/new-palisade/) | 2026-10-20 |
 | Porter | Precio desde (versión no especificada) | No clasificada | $22.955.100 | [auto.cl](https://www.auto.cl/nuevos/hyundai) | 2026-10-20 |
 | SANTA FE MX5 | 1.6T HEV AT 4WD LIMITED | No clasificada | $50.590.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
 | SANTA FE MX5 | 2.5T AT 4WD CALLIGRAPHY | No clasificada | $55.090.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/santafemx5) | 2026-10-19 |
@@ -748,8 +748,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 | Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD LIMITED | HEV | $50.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
 | Santa Fe | SANTA FE MX5 1.6T HEV AT 4WD PREMIUM | HEV | $46.990.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
 | Santa Fe | SANTA FE MX5 1.6T HEV AT DESIGN | HEV | $41.590.000 | [hyundai.cl](https://www.hyundai.cl/nuestros-modelos/ecologicos/all-new-santa-fe-hibrido/) | 2026-10-19 |
-| Staria | STARIA US4 MB 2.2 CRDI AT 4WD 7P LUXURY | No clasificada | $48.897.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | 2026-10-20 |
-| Staria | STARIA US4 MB 2.2 CRDI AT 4WD 9P LUXURY | No clasificada | $49.373.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | 2026-10-20 |
+| Staria | STARIA US4 MB 2.2 CRDI AT 4WD 7P LUXURY | No clasificada | $48.897.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | 2026-10-20 |
+| Staria | STARIA US4 MB 2.2 CRDI AT 4WD 9P LUXURY | No clasificada | $49.373.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/staria/) | 2026-10-20 |
 | STARIA US4 MB | 2.2 CRDI AT 9P FL | No clasificada | $38.544.100 | [Portillo Sur](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
 | STARIA US4 MB | 2.2 CRDI MT 11P FL | No clasificada | $37.711.100 | [Portillo Sur](https://www.portillosur.cl/hyundai/stariaus4mb) | 2026-10-19 |
 | TUCSON NX4 HEV | 1.6T HEV AT 4WD LIMITED FL | No clasificada | $42.390.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/tucsonnx4hev) | 2026-10-19 |
@@ -1204,8 +1204,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 |---|---|---|---:|---|---|
 | XUV 3XO | AT DELUXE | No clasificada | $17.990.000 | [Portillo Sur](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
 | XUV 3XO | MT LUXURY | No clasificada | $14.990.000 | [Portillo Sur](https://www.portillosur.cl/mahindra/xuv3xo) | 2026-10-19 |
-| XUV 3XO | XUV3X0 AT ELITE | No clasificada | $14.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/) | 2026-10-19 |
-| XUV 3XO | XUV3X0 MT COMFORT | No clasificada | $12.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/xuv3x0-mt-comfort/) | 2026-10-19 |
+| XUV 3XO | XUV3X0 AT ELITE | No clasificada | $14.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/) | 2026-10-19 |
+| XUV 3XO | XUV3X0 MT COMFORT | No clasificada | $12.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/mahindra/xuv-3xo/xuv3x0-mt-comfort/) | 2026-10-19 |
 
 ### Maserati — 9 registros
 
@@ -1691,9 +1691,9 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 |---|---|---|---:|---|---|
 | T30 CS | 1.6 5MT ELT | No clasificada | $11.055.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t30cs) | 2026-10-19 |
 | T32 CD | 1.6 5MT ELT | No clasificada | $12.245.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t32cd) | 2026-10-19 |
-| T50 CS | T50 Mini Truck CS 1.6 5MT STD | No clasificada | $12.007.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/shineray/shineray-t50-con-a-c/) | 2026-10-19 |
+| T50 CS | T50 Mini Truck CS 1.6 5MT STD | No clasificada | $12.007.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/shineray-t50-con-a-c/) | 2026-10-19 |
 | T52 CD | 1.6 5MT STD | No clasificada | $14.030.100 | [Portillo Sur](https://www.portillosur.cl/shineray/t52cd) | 2026-10-19 |
-| X30 con A/C | X30 1.5 5MT ELT | No clasificada | $10.936.100 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/shineray/shineray-x30-con-a-c/x30-1-5-5mt-elt/) | 2026-10-19 |
+| X30 con A/C | X30 1.5 5MT ELT | No clasificada | $10.936.100 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/shineray-x30-con-a-c/x30-1-5-5mt-elt/) | 2026-10-19 |
 
 ### Skoda — 8 registros
 
@@ -1785,8 +1785,8 @@ Cada fila conserva precio en CLP, versión publicada y enlace al origen. **+ IVA
 
 | Modelo | Versión / referencia | Tecnología declarada | Precio publicado | Origen / enlace | Consulta |
 |---|---|---|---:|---|---|
-| G05 Pro | SWM G05 Pro 1.5T DCT Elite | No clasificada | $16.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/shineray/swm-g05/) | 2026-10-19 |
-| G05 Pro | SWM G05 Pro 2.0L Elite | No clasificada | $14.990.000 | [gildemeisterretail.cl](https://www.gildemeisterretail.cl/marcas/shineray/swm-g05/) | 2026-10-19 |
+| G05 Pro | SWM G05 Pro 1.5T DCT Elite | No clasificada | $16.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/swm-g05/) | 2026-10-19 |
+| G05 Pro | SWM G05 Pro 2.0L Elite | No clasificada | $14.990.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/shineray/swm-g05/) | 2026-10-19 |
 
 ### Tesla — 5 registros
 
