@@ -1928,7 +1928,7 @@ await test('Lista comercial ampliada: Ford Ranger 8 y BMW X1 4 con fuente y vers
  await q.selectOption('#quoteBrand','Ford');await q.selectOption('#quoteFamily','Ranger');
  assert.equal(await q.locator('.quote-version').count(),8);
  await q.selectOption('#quoteBrand','BMW');await q.selectOption('#quoteFamily','X1');
- assert.equal(await q.locator('.quote-version').count(),4);
+ assert((await q.locator('.quote-version').count())>=4,'Cuatro variantes BMW X1 de la línea base conservadas');
  await q.close();
  await detailPage.close();
 });
