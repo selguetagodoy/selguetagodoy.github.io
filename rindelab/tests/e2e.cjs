@@ -708,7 +708,7 @@ await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicad
 });
 await test('Ocho marcas agregadas con Markdown, precio de lista y origen comercial',async()=>{
  const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(data.length,1485);
+ assert.equal(data.length,1504);
  const counts={'Porsche':67,'Honda':9,'Lexus':11,'Mercedes-Benz':11,'Tesla':5,'DS':8,'Alfa Romeo':2,'Jaguar':2};
  for(const [brand,n] of Object.entries(counts)){
   const items=data.filter(x=>x.brand===brand);
@@ -722,7 +722,7 @@ await test('Ocho marcas agregadas con Markdown, precio de lista y origen comerci
 });
 await test('Segunda ola: 100 precios en MD comercial con origen para quince marcas',async()=>{
  const rows=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(rows.length,1485);
+ assert.equal(rows.length,1504);
  const counts={'Land Rover':17,'Smart':2,'Deepal':3,'Exeed':10,'Kaiyi':6,'Karry':8,'Kyc':8,'Seat':11,'Avatr':1,'Livan':2,'Riddara':2,'Zxauto':2,'Maserati':9,'Aston Martin':12,'Ferrari':7};
  for(const [brand,n] of Object.entries(counts)){
   const match=rows.filter(x=>x.brand===brand);
@@ -740,7 +740,7 @@ await test('Segunda ola: 100 precios en MD comercial con origen para quince marc
 });
 await test('161 precios desde por modelo: MD, origen, buscador y cotizador',async()=>{
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(all.length,1485);
+ assert.equal(all.length,1504);
  const desde=all.filter(x=>x.version==='Precio desde (versión no especificada)');
  assert.equal(desde.length,161,'Falta un modelo de los lotes MD');
  const electricClassifications={'Ford|E-Transit Chasis':'EV','Fiat|500e':'EV','Fiat|600e':'EV','Peugeot|e-2008':'EV','Peugeot|Partner Electric':'EV','Volvo|XC40 Pure Electric':'EV','Volvo|XC60 Plug-In Hybrid':'PHEV','Volvo|XC90 Plug-In Hybrid':'PHEV','Volvo|xc60-mild-hybrid':'MHEV','Volvo|xc90-mild-hybrid':'MHEV','Chevrolet|Bolt EUV':'EV'};
