@@ -13956,5 +13956,141 @@
     "currency": "CLP",
     "priceBasis": "Precio publicado en Tesla Chile para configuración de vehículo nuevo; no corresponde a un precio universal por versión.",
     "technology": "EV"
+  },
+  {
+    "brand": "DS",
+    "family": "3 Crossback E-Tense",
+    "version": "Bastille",
+    "modelYear": null,
+    "priceListClp": 41490000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente.",
+    "technology": "EV"
+  },
+  {
+    "brand": "DS",
+    "family": "3 Crossback E-Tense",
+    "version": "Bastille +",
+    "modelYear": null,
+    "priceListClp": 41490000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente.",
+    "technology": "EV"
+  },
+  {
+    "brand": "DS",
+    "family": "4",
+    "version": "1.5 BlueHDi 130 Performance Line",
+    "modelYear": null,
+    "priceListClp": 33490000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "DS",
+    "family": "4",
+    "version": "Cross 1.5 BlueHDi 130 Trocadero",
+    "modelYear": null,
+    "priceListClp": 38490000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "DS",
+    "family": "7",
+    "version": "Bastille 1.6 THP Performance Line",
+    "modelYear": null,
+    "priceListClp": 38990000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "DS",
+    "family": "7",
+    "version": "Rivoli 1.6 THP",
+    "modelYear": null,
+    "priceListClp": 42990000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "DS",
+    "family": "7 E-Tense",
+    "version": "Bastille 300 4x4",
+    "modelYear": null,
+    "priceListClp": 57490000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "DS",
+    "family": "7 E-Tense",
+    "version": "Rivoli 300 4x4",
+    "modelYear": null,
+    "priceListClp": 59490000,
+    "source": "https://www.autocosmos.cl/catalogo/segmentos/ds",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Alfa Romeo",
+    "family": "Tonale",
+    "version": "Sprint",
+    "modelYear": null,
+    "priceListClp": 36990000,
+    "source": "https://www.autocosmos.cl/catalogo/vigente/alfa-romeo/tonale",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "Alfa Romeo",
+    "family": "Tonale",
+    "version": "Veloce",
+    "modelYear": null,
+    "priceListClp": 46490000,
+    "source": "https://www.autocosmos.cl/catalogo/vigente/alfa-romeo/tonale",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "Jaguar",
+    "family": "E-Pace",
+    "version": "2.0L",
+    "modelYear": null,
+    "priceListClp": 67900000,
+    "source": "https://www.autocosmos.cl/catalogo/vigente/jaguar/e-pace",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
+  },
+  {
+    "brand": "Jaguar",
+    "family": "F-Type",
+    "version": "2.0L",
+    "modelYear": null,
+    "priceListClp": 113900000,
+    "source": "https://www.autocosmos.cl/catalogo/vigente/jaguar/f-type",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista publicado por Autocosmos Chile según precios suministrados por fabricantes o importadores; sujeto a consulta en fuente."
   }
 ]
