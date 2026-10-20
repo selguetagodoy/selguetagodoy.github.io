@@ -16,6 +16,8 @@ const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
 const number=n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>0?Number(n):null;
 const fixed=n=>number(n)?Number(n).toLocaleString('es-CL',{maximumFractionDigits:2}):'N/D';
 let all=[],results=[],selected=[],submitted=false,limit=10,cut='2026-05-08';
+let costSortCycleNotice='';
+const reviewedEnergyCodes=new Set(['BM9746EL1224S00-3']); // 10,6 km/kWh NEDC: verificación del documento original pendiente.
 let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
 const officialCodes=new Set();
 const searchIndex=new WeakMap();
@@ -302,8 +304,7 @@ function sortRows(rows,sort){
  if(sort==='name')copy.sort((a,b)=>(a[F.BRAND]+' '+a[F.MODEL]).localeCompare(b[F.BRAND]+' '+b[F.MODEL],'es'));
  else if(sort==='recent')copy.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
  else if(sort==='cheapest'||sort==='expensive'){
-  // Una sola lista global por costo. El ciclo permanece visible en cada ficha;
-  // el orden no implica equivalencia experimental NEDC/WLTP.
+  // Un ordenamiento por gasto se ejecuta únicamente con un ciclo seleccionado.
   copy.sort((a,b)=>cmpCost(a,b)||b[F.DATE].localeCompare(a[F.DATE]));
  }
  return copy;
@@ -330,6 +331,18 @@ function textSuggestions(criteria){
  };
  const picks=[...options].map(([key,label])=>({label,d:d(criteria.q,key)})).filter(x=>x.d>0&&x.d<=Math.max(2,Math.floor(criteria.q.length*.24))).sort((a,b)=>a.d-b.d||a.label.length-b.label.length).slice(0,3);
  if(picks.length){box.append('¿Buscabas otro nombre? ');for(const x of picks){const btn=document.createElement('button');btn.type='button';btn.dataset.suggestion=x.label;btn.textContent=x.label;box.append(btn);}box.hidden=false;}
+}
+function ensureCostSortCycle(){
+ if(!['cheapest','expensive'].includes($('sort').value)){costSortCycleNotice='';return;}
+ if($('cycle').value)return;
+ const available=new Set(results.filter(r=>cost(r)!==null).map(r=>r[F.CYCLE]).filter(c=>c==='WLTP'||c==='NEDC'));
+ const target=available.has('WLTP')?'WLTP':available.has('NEDC')?'NEDC':null;
+ if(!target)return;
+ $('cycle').value=target;
+ const scoped=inputCriteria();
+ results=all.filter(r=>matchesText(r,scoped.q)&&matchesFilters(r,scoped));
+ mttMatches=filterMTT(scoped);limit=10;
+ costSortCycleNotice='Se aplicó '+target+' para ordenar costos sin mezclar NEDC y WLTP. Puedes cambiar el ciclo en filtros técnicos.';
 }
 function syncSortAvailability(){
  const hasCost=results.some(row=>cost(row)!==null);
@@ -359,7 +372,7 @@ function render(){
  }else if(!costAvailable){
   $('sortNote').hidden=true;
  }else if(!$('sortNote').hidden){
-  $('sortNote').textContent='Orden único por costo estimado. Cada ficha indica WLTP o NEDC: son ensayos distintos y sus resultados no son directamente equivalentes. Los precios de energía son referenciales.';
+  $('sortNote').textContent=(costSortCycleNotice?costSortCycleNotice+' ':'')+'Orden por gasto energético estimado cada 100 km · ciclo '+($('cycle').value||'no definido')+'. No incluye precio de compra, seguros ni mantención. Supuestos energéticos editables.';
  }
  const list=$('resultList');list.replaceChildren();
  $('resultsTitle').textContent=results.length===1?'1 versión encontrada':fmt(results.length)+' versiones para comparar';
@@ -371,6 +384,8 @@ function render(){
   const displayDate=/^\d{4}-\d{2}-\d{2}$/.test(stamp)?stamp.slice(8)+'-'+stamp.slice(5,7)+'-'+stamp.slice(0,4):stamp||'sin fecha';
   const annual=annualEnergy(row),fiveYears=annualEnergy(row,5),per100=cost(row);
   const annualKm=Number($('annualKm').value);
+  const flaggedEnergy=reviewedEnergyCodes.has(row[F.CODE]);
+  const flaggedNote=flaggedEnergy?'<p class="energy-quality-note" role="note">Dato atípico pendiente de revisión documental: 10,6 km/kWh en NEDC. No equiparar con valores WLTP ni considerarlo el vehículo más eficiente del mercado.</p>':'';
   const offer=window.RindelabCommercial?.minimum(row,family(row));
   const offerHTML=offer?'<div class="rinde-commercial"><small>Precio comercial desde (familia, no versión homologada)</small> <strong>'+safe(money(offer.priceListClp))+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
@@ -379,7 +394,7 @@ function render(){
    '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'" title="Categoría declarada en 3CV: '+safe(row[F.TECH])+'">'+safe(techHuman[row[F.TECH]]||row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'" title="'+safe(row[F.CYCLE]==='NEDC'?'Ensayo NEDC; no es directamente comparable con WLTP':row[F.CYCLE]==='WLTP'?'Ensayo WLTP; no es directamente comparable con NEDC':'Ciclo no informado')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
    '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
-   offerHTML+
+   offerHTML+flaggedNote+
    '<div class="vehicle-actions"><button type="button" class="button primary" data-detail="'+index+'">Ver ficha</button>'+
    '<button type="button" class="button secondary" data-compare="'+index+'" aria-pressed="'+selectedNow+'">'+(selectedNow?'Quitar':'Comparar +')+'</button></div>'+
    '<div class="vehicle-annual"><div class="vehicle-monthly"><small>Gasto mensual estimado</small><strong class="vehicle-monthly-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual/12)))+'</strong></div><small>Gasto energético anual estimado</small><strong class="vehicle-annual-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual)))+'</strong>'+
@@ -396,6 +411,7 @@ function performSearch({scroll=true}={}){
  results=all.filter(r=>matchesText(r,criteria.q)&&matchesFilters(r,criteria));
  mttMatches=filterMTT(criteria);
  submitted=true;limit=10;mttLimit=6;
+ ensureCostSortCycle();
  $('results').hidden=false;
  $('filterHint').textContent='';
  render();textSuggestions(criteria);
@@ -514,6 +530,7 @@ function showDetail(i){
 }
  else if(emission!==null){const p=document.createElement('p');p.className='note';p.textContent='CO₂ directo: '+emission.toLocaleString('es-CL',{maximumFractionDigits:3})+' t/año según g/km 3CV y '+fmt(Number($('annualKm').value))+' km/año. No incluye emisiones del ciclo de vida.';$('detailContent').append(p);}
  drivingProfile(r);
+ if(reviewedEnergyCodes.has(r[F.CODE])){const note=document.createElement('p');note.className='energy-quality-note';note.textContent='Advertencia de calidad: esta homologación NEDC registra 10,6 km/kWh, mientras otra homologación NEDC de esta familia (2023) registra 6,3 km/kWh. No se reemplaza el dato oficial ni se afirma que sea un error; requiere cotejar el expediente 3CV y no es comparable con WLTP.';$('detailContent').append(note);}
  $('detailDialog').showModal();
  if(window.RindelabSII)window.RindelabSII.show(r,family(r));
 }
@@ -691,7 +708,7 @@ function renderStatistics(){
  const metric=$('statsMetric').value,tech=$('statsTech').value,body=$('statsBody').value,cycle=$('statsCycle').value,ascending=$('statsOrder').value==='asc';
  const note=$('statsNotice'),ranking=$('statsRanking');
  const isPerformance=metric==='performance',isElectric=metric==='electric',isWeighted=metric==='weighted';
- $('statsSummaryTitle').textContent=rankingTitle(metric,ascending);
+ $('statsSummaryTitle').textContent=cycle?rankingTitle(metric,ascending):'Exploración de fichas sin ranking · NEDC y WLTP';
  $('statsSummarySubtitle').textContent=(cycle||'NEDC + WLTP')+' · '+(tech||'Todas las motorizaciones')+' · '+(body?$('statsBody').selectedOptions[0].text:'Todas las carrocerías');
  $('statsBodyHint').textContent=body==='suv'?'Agrupación exploratoria de Station Wagon, Jeep y Tipo Jeep; no equivale a una clasificación oficial de todos los SUV.':body==='station'?'El 3CV declara «Station Wagon», categoría que puede incluir modelos comercializados como SUV; no es un ranking exclusivo de SUV.':body==='offroad'?'Agrupa únicamente las carrocerías «Jeep» y «Tipo Jeep» declaradas al 3CV; no incluye todos los SUV.':'';
  ranking.replaceChildren();note.textContent='';$('statsResultCount').textContent='';
@@ -710,16 +727,16 @@ function renderStatistics(){
  }
  const candidate=all.filter(row=>(!tech||row[F.TECH]===tech)&&(!cycle||row[F.CYCLE]===cycle)&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
  const scored=candidate.map(row=>({row,value:rankingValue(row,metric)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
- scored.sort((a,b)=>(ascending?a.value-b.value:b.value-a.value)||b.row[F.DATE].localeCompare(a.row[F.DATE])||(a.row[F.BRAND]+' '+a.row[F.MODEL]).localeCompare(b.row[F.BRAND]+' '+b.row[F.MODEL],'es'));
+ scored.sort((a,b)=>(cycle?(ascending?a.value-b.value:b.value-a.value):0)||b.row[F.DATE].localeCompare(a.row[F.DATE])||(a.row[F.BRAND]+' '+a.row[F.MODEL]).localeCompare(b.row[F.BRAND]+' '+b.row[F.MODEL],'es'));
  $('statsResultCount').textContent=fmt(scored.length)+' fichas con esta medida';
  if(!scored.length){
   ranking.innerHTML='<div class="stats-empty"><strong>No hay fichas con esta medida y esos filtros.</strong><p>Prueba otro ciclo, carrocería o motorización.</p></div>';
   return;
  }
  if(metric==='cost')note.textContent=cycle?
-  'Ranking de costos energéticos estimados solo para '+cycle+'. Las tarifas son supuestos editables; tecnologías y segmentos pueden diferir.':
-  'Exploración conjunta solicitada: NEDC y WLTP no son directamente comparables. No interpretes las posiciones como una superioridad homologada.';
- if(isPerformance)note.textContent='Rendimiento homologado de una sola motorización, en '+(tech==='EV'?'km/kWh':'km/L')+'. '+(cycle?'Ciclo: '+cycle+'.':'Incluye NEDC y WLTP identificados en cada ficha; los ensayos no son directamente equivalentes.');
+  'Ranking de gastos energéticos estimados por 100 km solo para '+cycle+'. No considera precio de compra, mantenimiento ni depreciación; tarifas editables.':
+  'Exploración documental por fecha de homologación, SIN RANKING. Los consumos NEDC y WLTP no se deben ordenar juntos.';
+ if(isPerformance)note.textContent='Rendimiento homologado de una sola motorización, en '+(tech==='EV'?'km/kWh':'km/L')+'. '+(cycle?'Ciclo: '+cycle+'.':'Muestra por fecha, sin ranking: NEDC y WLTP no son directamente equivalentes.');
  if(isElectric)note.textContent='Rendimiento eléctrico informado por el 3CV (km/kWh). No constituye un costo combinado ni garantiza el rendimiento en conducción real. Los ensayos WLTP y NEDC permanecen identificados y no son directamente equivalentes.';
  if(isWeighted)note.textContent='Rendimiento ponderado informado por el 3CV (km/L). Depende del procedimiento y supuestos del ensayo, incluida la utilización de energía eléctrica; no equivale al rendimiento con batería descargada ni permite estimar un costo combinado confiable.';
  const ten=scored.slice(0,10),maxValue=Math.max(...ten.map(p=>p.value),1);
@@ -730,12 +747,12 @@ function renderStatistics(){
   item.setAttribute('aria-label','Ver ficha de '+row[F.BRAND]+' '+row[F.MODEL]+', '+label);
   const valuesExtra=isPlugInTechnology(tech)?
    ' · Eléc. '+fixed(row[F.EL])+' km/kWh · Ponderado '+fixed(row[F.PH])+' km/L':'';
-  item.innerHTML='<span class="rank-number">'+String(i+1).padStart(2,'0')+'</span>'+
+  item.innerHTML='<span class="rank-number">'+(cycle?String(i+1).padStart(2,'0'):'—')+'</span>'+
    '<span class="rank-main"><strong>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</strong>'+
    '<small>'+safe(row[F.TECH])+' · '+safe(row[F.BODY]||'Carrocería no informada')+
    ' <span class="rank-cycle" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></small>'+
    (isPlugInTechnology(tech)?'<small class="rank-metrics">'+safe(valuesExtra)+'</small>':'')+
-   '<span class="rank-track"><span class="rank-fill" style="width:'+Math.max(4,value/maxValue*100).toFixed(2)+'%"></span></span></span>'+
+   (cycle?'<span class="rank-track"><span class="rank-fill" style="width:'+Math.max(4,value/maxValue*100).toFixed(2)+'%"></span></span>':'')+'</span>'+
    '<span class="rank-value">'+safe(label)+'<span class="rank-arrow" aria-hidden="true">↗</span></span>';
   ranking.append(item);
  }
@@ -807,7 +824,7 @@ $('searchButton').disabled=true;
 $('vehicleForm').addEventListener('submit',event=>{event.preventDefault();if(all.length)performSearch();});
 $('resetButton').addEventListener('click',()=>{
  for(const id of ['query','brand','model','tech','bodytype','cycle','year'])$(id).value='';
- choices();$('sort').value='recent';submitted=false;results=[];mttMatches=[];mttLimit=6;compareUpdate();
+ choices();$('sort').value='recent';costSortCycleNotice='';submitted=false;results=[];mttMatches=[];mttLimit=6;compareUpdate();
  $('results').hidden=true;$('mttSearchSection').hidden=true;$('sourceLegend').hidden=true;$('energyResultsHeading').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
 });
 for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
@@ -817,14 +834,14 @@ for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListene
 });
 $('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';});
 $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
-$('sort').addEventListener('change',render);
+$('sort').addEventListener('change',()=>{ensureCostSortCycle();render();});
 $('mttSearchMore').addEventListener('click',()=>{mttLimit+=10;renderMTT();});
 for(const id of ['gasPrice','dieselPrice','annualKm'])$(id).addEventListener('change',refreshEnergyViews);
 window.addEventListener('rindelab:prices-ready',()=>{if(submitted)render();if($('compareDialog').open)renderComparisonContent();});
 document.querySelectorAll('[data-rinde-explore]').forEach(button=>button.addEventListener('click',()=>{
  if(!all.length)return;
  for(const id of ['query','brand','model','bodytype','cycle','year'])$(id).value='';
- if(button.dataset.rindeExplore==='lowest'){$('tech').value='';$('sort').value='cheapest';}
+ if(button.dataset.rindeExplore==='lowest'){$('tech').value='';$('cycle').value='WLTP';$('sort').value='cheapest';costSortCycleNotice='Orden de gasto energético limitado al ciclo WLTP; no incluye precio de compra.';}
  else{$('tech').value=button.dataset.rindeExplore;$('sort').value='recent';}
  choices();performSearch();
 }));
