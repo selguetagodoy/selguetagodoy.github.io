@@ -82,7 +82,9 @@ await test('RINDELAB 7 muestra escenarios y metadatos compartibles',async()=>{
  assert(await page.locator('.footer-data summary').isVisible());
 });
 await test('Carga publica: tarifas verificables por potencia, lugar y horario',async()=>{
- assert.equal(await page.inputValue('#chargeScenario'),'public');
+ assert.equal(await page.inputValue('#chargeScenario'),'mixed');
+ assert.equal(await page.inputValue('#electricPrice'),'252');
+ await page.selectOption('#chargeScenario','public');
  assert.equal(await page.inputValue('#electricPrice'),'340');
  assert(await page.locator('#publicChargeField').isVisible());
  assert(await page.locator('#homeChargeField').isHidden());
@@ -96,6 +98,7 @@ await test('Carga en casa exige una tarifa manual y no inventa costo EV',async()
  await page.selectOption('#chargeScenario','home');
  assert(await page.locator('#homeChargeField').isVisible());
  assert(await page.locator('#publicChargeField').isHidden());
+ await page.fill('#homeChargeRate','');
  assert.equal(await page.inputValue('#electricPrice'),'');
  assert.match(await page.locator('#chargeStatus').textContent(),/Introduce tu precio/);
  await page.selectOption('#tech','EV');await page.click('#searchButton');
@@ -174,6 +177,9 @@ await test('La ficha EV muestra costos diferenciados de casa y electrolinera',as
  assert(labels.includes('Costo de 100 km en electrolinera seleccionada'));
  assert(labels.some(x=>x.startsWith('Costo de recarga en casa (20 kWh)')));
  assert(labels.some(x=>x.startsWith('Costo de recarga pública (20 kWh)')));
+ assert(await page.locator('#rindeSENFactor').isVisible());
+ await page.fill('#rindeSENFactor','250');
+ assert.match(await page.locator('#rindeSENResult').textContent(),/Emisiones indirectas aproximadas/);
  await page.locator('#detailClose').click();
  await page.click('#resetButton');
  await page.selectOption('#chargeScenario','public');
@@ -444,7 +450,7 @@ await test('Comparar exactamente dos vehículos y limpiar selección',async()=>{
  await page.locator('.vehicle-card button[data-compare]').nth(1).click();
  assert(await page.locator('#compareOpen').isEnabled());await page.locator('#compareOpen').click();
  assert(await page.locator('#compareDialog').evaluate(x=>x.open));
- assert.equal(await page.locator('#compareContent .compare-row').count(),13);
+ assert.equal(await page.locator('#compareContent .compare-row').count(),15);
  await page.locator('#shareCompare').click();
  assert((await page.inputValue('#compareShareLink')).includes('comparar='));
  assert(await page.locator('#compareShareLink').isVisible());
@@ -485,7 +491,7 @@ await test('Ventana de cinco columnas permite scroll, quitar uno y agregar otro'
  await page.click('#compareOpen');
  assert(await page.locator('#compareDialog').evaluate(e=>e.open));
  assert.equal(await page.locator('.comparison-table thead th').count(),6);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),12);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),14);
  assert.equal(await page.locator('.compare-model-cell').count(),5);
  const horizontal=await page.locator('.compare-scroller').evaluate(e=>({width:e.scrollWidth,visible:e.clientWidth,start:e.scrollLeft}));
  if(horizontal.width>horizontal.visible+2){
@@ -563,7 +569,7 @@ await test('Comparación enchufable y eléctrico desglosa rendimientos sin infer
  assert(labels.includes('Rendimiento eléctrico (km/kWh)'));
  assert(labels.includes('Rendimiento ponderado (km/L)'));
  assert.equal(await page.locator('.comparison-table thead th').count(),4);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),14);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),16);
  const note=await page.locator('#compareContent').textContent();
  assert.match(note,/Sin dato comparable/);
  await page.click('#compareClose');
@@ -626,7 +632,7 @@ await test('Tasación y permiso seleccionados aparecen en comparación de dos ve
  assert.match(data,/Permiso de circulación 2026/);
  assert(data.includes('Precio de lista nuevo (sin bonos)'));
  assert.match(data,/27\.990\.000/);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),12);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),14);
  assert.match(data,/22.354.806|23.139.460|21.570.147|18.775.083|20.189.698/);
  await page.locator('#compareClose').click();
  await page.click('#compareClear');
@@ -1942,8 +1948,65 @@ await test('Directorio de pliegos BT1 conserva fuente sin inventar precios',asyn
  assert.match(await p.locator('#tariffSourceDescription').textContent(),/pliegos/);
  await p.selectOption('#tariffDistributor','cge');
  assert.match(await p.locator('#tariffSourceLink').getAttribute('href'),/sec\.cl\/contactar-distribuidora/);
- assert.equal(await p.locator('#homeChargeRate').inputValue(),'');
+ assert.equal(await p.locator('#homeChargeRate').inputValue(),'230');
+ await p.locator('#useHomeTariff').click();
+ assert.equal(await p.inputValue('#chargeScenario'),'home');
+ assert(await p.locator('#homeChargeRate').evaluate(el=>document.activeElement===el));
  assert.deepEqual(e,[]);
+ await p.close();
+});
+await test('Exploración rápida permite buscar híbridos sin escribir',async()=>{
+ const {page:p,errors:issues}=await open(1200,850);
+ await p.locator('[data-rinde-explore="HEV"]').click();
+ assert.equal(await p.inputValue('#tech'),'HEV');
+ assert(await p.locator('.vehicle-card').count()>0);
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+await test('Buscador expone precio por familia comercial sin equiparar códigos 3CV',async()=>{
+ const {page:p,errors:issues}=await open(1280,850);
+ await p.fill('#query','Corolla Cross');await p.click('#searchButton');
+ const prices=p.locator('.rinde-commercial');
+ assert(await prices.count()>0);
+ assert.match(await prices.first().textContent(),/Precio comercial desde.*familia.*no versión homologada/i);
+ assert.match(await prices.first().locator('a').getAttribute('href'),/cotizador\.html/);
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+await test('Perfil ciudad/ruta calcula solo con rendimientos introducidos manualmente',async()=>{
+ const {page:p,errors:issues}=await open(1360,900);
+ await p.selectOption('#tech','Bencina');await p.click('#searchButton');
+ await p.locator('.vehicle-card button[data-detail]').first().click();
+ assert(await p.locator('.rinde-profile').isVisible());
+ await p.fill('#rindeUrban','12');await p.fill('#rindeRoad','17');
+ assert.match(await p.locator('#rindeProfileResult').textContent(),/Costo supuesto por 100 km/);
+ assert.match(await p.locator('.rinde-profile').textContent(),/supuestos tuyos, no cifras 3CV/);
+ await p.locator('#detailClose').click();
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+await test('CO2 anual y gastos a 3 y 5 años están disponibles en ficha/comparador',async()=>{
+ const {page:p,errors:issues}=await open(1360,900);
+ await p.selectOption('#tech','Bencina');await p.click('#searchButton');
+ await p.locator('.vehicle-card button[data-detail]').first().click();
+ assert.match(await p.locator('#detailContent').textContent(),/Gasto energético estimado a 3 años/);
+ assert.match(await p.locator('#detailContent').textContent(),/Emisiones directas anuales de CO₂/);
+ await p.locator('#detailClose').click();
+ await p.locator('.vehicle-card button[data-compare]').nth(0).click();
+ await p.locator('.vehicle-card button[data-compare]').nth(1).click();
+ await p.locator('#compareOpen').click();
+ assert.match(await p.locator('#compareContent').textContent(),/Gasto energético en 3 años/);
+ assert.match(await p.locator('#compareContent').textContent(),/Equilibrio de compra/);
+ await p.locator('#compareClose').click();
+ assert.deepEqual(issues,[]);
+ await p.close();
+});
+await test('Rankings incluye agrupación exploratoria SUV sin inventar carrocería oficial',async()=>{
+ const {page:p,errors:issues}=await open(1200,850);
+ await p.click('#statsOpen');await p.selectOption('#statsBody','suv');
+ assert.match(await p.locator('#statsBodyHint').textContent(),/Agrupación exploratoria/);
+ await p.locator('#statsClose').click();
+ assert.deepEqual(issues,[]);
  await p.close();
 });
 await test('Cotizador separado muestra precios y marcas reales del catálogo',async()=>{
@@ -2116,7 +2179,7 @@ await test('Fuentes 3CV permanecen accesibles mediante aviso compacto',async()=>
  assert.match(await p.locator('#sourceLegend').textContent(),/NEDC o WLTP/);
  assert.match(await p.locator('#sourceLegend').textContent(),/Homologaciones MTT pendientes/);
  assert.match(await p.locator('#sourceLegend').textContent(),/kilometraje seleccionado/);
- assert.equal(await p.locator('#sourceLegend a[href="#fuentes"]').count(),1);
+ assert.equal(await p.locator('#sourceLegend a[href="./metodologia.html"]').count(),1);
  await p.close();
 });
 await test('Contraste de etiquetas secundarias y entradas de 16 píxeles',async()=>{
@@ -2340,7 +2403,7 @@ for(const pageName of ['index.html','cotizador.html']){
   assert(await nav.isVisible());
   assert.equal(await nav.locator('a').count(),6);
   const targets=await nav.locator('a').allTextContents();
-  assert(targets.some(x=>x.includes('Cotizar auto')));
+  assert(targets.some(x=>x.includes('Cotizador')));
   const bounds=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
   assert(bounds.doc<=bounds.view+3,JSON.stringify(bounds));
   await p.close();

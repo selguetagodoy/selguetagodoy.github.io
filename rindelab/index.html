@@ -32,13 +32,28 @@
 <script src="./v2-polish.js?v=20261018-v1" defer></script>
 <script src="./v2-photos.js?v=20261019-1" defer></script>
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
-</head>
+<style>
+.rinde-explore{margin:1.1rem 0;padding:1rem 1.25rem;border:1px solid #d5dde7;border-radius:12px;background:#f6f9fc;color:#162d4b}
+.rinde-explore-actions{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.7rem}
+.rinde-explore-actions button,.rinde-explore-actions a{font:inherit;font-size:.9rem;background:white;color:#143655;border:1px solid #b9c9d9;border-radius:100px;padding:.55rem .85rem;cursor:pointer;text-decoration:none}
+.rinde-explore-actions button:hover,.rinde-explore-actions a:hover{border-color:#0a61a8}
+ .rinde-commercial,.rinde-percentile,.rinde-payback,.rinde-profile{border:1px solid #d6e2eb;border-radius:11px;padding:.9rem;margin:.75rem 0;background:#f7fafc;color:#183753}
+ .rinde-commercial{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;font-size:.86rem}
+ .rinde-commercial strong{font-weight:750;color:#11385b}
+ .rinde-commercial a{color:#086aa3}
+ .rinde-profile-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.6rem}
+ .rinde-profile-fields label{display:grid;gap:.3rem;font-size:.88rem}
+ .rinde-profile-fields input,.rinde-profile-fields select{width:100%;font:inherit;padding:.45rem;min-height:40px}
+ .rinde-resource-nav{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;margin:.5rem 0}
+ .rinde-resource-nav a{color:inherit;text-decoration:underline;text-underline-offset:3px;font-size:.88rem}
+ .rinde-payback h3,.rinde-profile h3{margin:0 0 .45rem}
+</style></head>
 <body>
 <header class="site-header">
  <div class="shell header-inner">
   <div class="brand-lockup"><a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a><small class="brand-tagline">Inteligencia energética vehicular para Chile</small></div>
   <nav class="header-links" aria-label="Navegación principal"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizador</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav>
-  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizar auto</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav></details>
+  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizador</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav></details>
  </div>
 </header>
 <main id="inicio" class="shell">
@@ -101,7 +116,7 @@
    </div>
   </form>
  </section>
- <div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
+ <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor costo energético</button><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
    <a href="#supuestos" id="scenarioAdjust" class="button secondary">Ajustar costos →</a>
   </div>
@@ -121,7 +136,7 @@
    <div class="source-legend-details">
     <p><strong>Rendimientos oficiales.</strong> Base histórica 3CV de mayo y 272 registros adicionales de la API oficial de octubre de 2026. Cada ficha muestra su ciclo NEDC o WLTP; sus valores no son directamente equivalentes.</p>
     <p><strong>Homologaciones MTT pendientes.</strong> Un código de septiembre continúa sin ficha energética en la consulta de octubre. No recibe costos estimados ni se mezcla con fichas con rendimiento.</p>
-    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="#fuentes">Metodología completa ↗</a></p>
+    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="./metodologia.html">Metodología completa ↗</a></p>
    </div>
   </details>
   <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
@@ -151,16 +166,16 @@
  <span class="scenario-drawer-action">Editar estimación <span aria-hidden="true">⌄</span></span>
  </summary>
  <div class="scenario-drawer-body">
- <p class="scenario-edit-caption">Los importes son supuestos editables y no precios en tiempo real.</p>
+ <p class="scenario-edit-caption">Simulación inicial: 80 % carga domiciliaria / 20 % pública, con tarifa de casa referencial editable de $230/kWh. No representa una tarifa residencial nacional; reemplázala con tu boleta para mayor precisión.</p>
 
 
     <div class="assumptions-grid">
       <div class="field"><label for="annualKm">Kilómetros al año</label><select id="annualKm"><option value="5000">5.000 km</option><option value="10000">10.000 km</option><option value="15000" selected>15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000 km</option><option value="30000">30.000 km</option></select></div>
       <div class="field"><label for="gasPrice">Bencina ($/L)</label><input id="gasPrice" type="number" min="1" max="10000" step="1" value="1535"></div>
       <div class="field"><label for="dieselPrice">Diésel ($/L)</label><input id="dieselPrice" type="number" min="1" max="10000" step="1" value="1503"></div>
-      <div class="field"><label for="chargeScenario">Escenario de carga eléctrica</label><select id="chargeScenario"><option value="public" selected>100 % carga pública</option><option value="home">100 % domicilio</option><option value="mixed">Mixta: casa + pública</option><option value="manual">Precio manual único</option></select></div>
+      <div class="field"><label for="chargeScenario">Escenario de carga eléctrica</label><select id="chargeScenario"><option value="public">100 % carga pública</option><option value="home">100 % domicilio</option><option value="mixed" selected>Mixta: casa + pública (80/20)</option><option value="manual">Precio manual único</option></select></div>
     </div>
-    <details id="scenarioAdvanced" class="scenario-advanced">
+    <details id="scenarioAdvanced" class="scenario-advanced" open>
       <summary>Tarifas de recarga y opciones avanzadas</summary>
       <div class="assumptions-grid advanced-grid">
       <div class="field" id="publicChargeField"><label for="publicChargeRate">Tarifa pública Copec Voltex</label><select id="publicChargeRate">
@@ -174,10 +189,11 @@
        <option value="495">DC ≥120 kW · ciudad punta · $495</option>
        <option value="495">DC ≥120 kW · carretera · $495</option>
       </select></div>
-      <div class="field" id="homeChargeField" hidden><label for="homeChargeRate">Tu precio de casa ($/kWh)</label><input id="homeChargeRate" type="number" min="1" max="10000" step="1" inputmode="numeric" placeholder="Ej. valor $/kWh de tu boleta"></div>
-      <div class="field" id="homeShareField" hidden><label for="homeChargeShare">Porcentaje cargado en casa</label><select id="homeChargeShare"><option value="20">20 %</option><option value="40">40 %</option><option value="50">50 %</option><option value="60">60 %</option><option value="80" selected>80 %</option><option value="90">90 %</option></select></div>
-      <div class="field"><label for="electricPrice">Tarifa eléctrica aplicada ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="340" readonly aria-describedby="chargeStatus"></div>
+      <div class="field" id="homeChargeField"><label for="homeChargeRate">Tu precio de casa ($/kWh)</label><input id="homeChargeRate" type="number" min="1" max="10000" step="1" inputmode="numeric" value="230" placeholder="Ej. valor $/kWh de tu boleta"></div>
+      <div class="field" id="homeShareField"><label for="homeChargeShare">Porcentaje cargado en casa</label><select id="homeChargeShare"><option value="20">20 %</option><option value="40">40 %</option><option value="50">50 %</option><option value="60">60 %</option><option value="80" selected>80 %</option><option value="90">90 %</option></select></div>
+      <div class="field"><label for="electricPrice">Tarifa eléctrica aplicada ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="252" readonly aria-describedby="chargeStatus"></div>
       </div>
+    </details>
     <details id="homeBillHelper" class="home-bill-helper" hidden>
       <summary>¿No sabes cuánto pagas por kWh en casa? Calcúlalo con tu boleta</summary>
       <p class="bill-help">Usa tu boleta residencial para estimar un precio promedio por kWh. La estimación se basa en el monto de la boleta menos los cargos fijos que ingreses, dividido por los kWh facturados. <strong>No equivale necesariamente al costo marginal de una recarga adicional</strong>, especialmente si hay tramos de consumo, descuentos, subsidios u otros cargos.</p>
@@ -191,7 +207,7 @@
       <p class="bill-help">Si tu boleta detalla el valor del kWh y los cargos variables, es preferible ingresar directamente el precio aplicable. Puedes revisar las <a href="https://www.sec.cl/area-ciudadana/tarifas-electricas/" target="_blank" rel="noopener noreferrer">tarifas residenciales BT1 (SEC)</a> y los <a href="https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.html" target="_blank" rel="noopener noreferrer">pliegos de Enel</a> cuando corresponda.</p>
     </details>
     <section class="charge-example" aria-labelledby="chargeExampleHeading">
-      <div class="charge-example-title"><h3 id="chargeExampleHeading">¿Cuánto cuesta una recarga de energía?</h3><div class="field"><label for="chargeKwh">Energía cargada (kWh)</label><input id="chargeKwh" type="number" min="1" max="200" step="1" value="20" inputmode="numeric"></div></div>
+      <div class="charge-example-title"><h3 id="chargeExampleHeading">¿Cuánto cuesta cargar 20 kWh de energía?</h3><div class="field"><label for="chargeKwh">Energía cargada (kWh)</label><input id="chargeKwh" type="number" aria-describedby="chargeKwhNote" min="1" max="200" step="1" value="20" inputmode="numeric"><small id="chargeKwhNote">El monto se calcula para los kWh indicados, no necesariamente para una carga completa.</small></div></div>
       <div class="charge-example-grid">
         <div class="charge-example-value"><small>En casa</small><strong id="homeSessionCost">Ingresa tu tarifa</strong><span id="homeSessionRate">Depende de tu boleta</span></div>
         <div class="charge-example-value"><small>En electrolinera</small><strong id="publicSessionCost">$6.800</strong><span id="publicSessionRate">Copec Voltex, AC ciudad valle</span></div>
@@ -225,12 +241,12 @@
           <p id="tariffEnelStatus" role="status" aria-live="polite">Selecciona comuna, conexión y tramo de la boleta para localizar el cargo correcto en el PDF.</p>
           <p class="tariff-component">El pliego registra un <strong>cargo por energía (3) de $162,041/kWh IVA incluido</strong> como uno de sus componentes BT1. <strong>No es el precio completo por kWh</strong>: también pueden corresponder transporte, compras de potencia, distribución y recargos por tramo. No se envía esta cifra a la calculadora domiciliaria.</p>
         </div>
+        <button type="button" id="useHomeTariff" class="button secondary">Ingresar la tarifa completa de mi boleta en la calculadora ↗</button>
         <p>En el pliego, identifica <strong>BT1, comuna, zona/red y fecha</strong>, y diferencia el cargo fijo de los cargos variables por kWh. La tarifa de carga del vehículo puede variar con consumo acumulado y reliquidaciones. RINDELAB no rellena una tarifa numérica si no está verificada para esa combinación.</p>
       </div>
     </details>
     <p id="chargeStatus" class="charge-status" role="status" aria-live="polite">Copec Voltex · AC hasta 22 kW · ciudad, horario valle. Tarifa aplicada: $340/kWh.</p>
-    <details class="scenario-method"><summary>Cómo se calculan estos costos y cuáles son sus límites</summary><p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa una tarifa introducida desde tu boleta o estimada con el formulario local, sin un precio residencial nacional por defecto. Si falta, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="./metodologia.html">Revisar metodología</a>.</p></details>
-    </details>
+    <details class="scenario-method"><summary>Cómo se calculan estos costos y cuáles son sus límites</summary><p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa inicialmente el supuesto editable de $230/kWh, NO una tarifa residencial oficial; reemplázalo por tu boleta o estima un valor con el formulario local. Si se borra este valor, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="./metodologia.html">Revisar metodología</a>.</p></details>
    </div>
   </details>
  </main>
@@ -254,13 +270,13 @@
  </div>
  <div class="modal-body stats-body">
   <div class="stats-controls">
-   <div class="field"><label for="statsMetric">¿Qué quieres comparar?</label><select id="statsMetric"><option value="cost">Costo energético por 100 km</option><option value="performance">Rendimiento homologado</option><option value="electric" disabled>Rendimiento eléctrico informado (km/kWh)</option><option value="weighted" disabled>Rendimiento ponderado informado (km/L)</option></select></div>
+   <div class="field"><label for="statsMetric">¿Qué quieres comparar?</label><select id="statsMetric"><option value="cost">Costo energético por 100 km</option><option value="performance">Rendimiento homologado</option><option value="electric" disabled>Rendimiento eléctrico informado (km/kWh) · seleccionar PHEV o REEV</option><option value="weighted" disabled>Rendimiento ponderado informado (km/L) · seleccionar PHEV o REEV</option></select></div>
    <div class="field"><label for="statsTech">Motorización</label><select id="statsTech"><option value="">Todas las motorizaciones</option><option value="Bencina">Bencina</option><option value="Diésel">Diésel</option><option value="MHEV">Híbrido suave (MHEV)</option><option value="HEV">Híbrido (HEV)</option><option value="PHEV">Híbrido enchufable (PHEV)</option><option value="REEV">Extensor de autonomía (REEV)</option><option value="EV">Eléctrico (EV)</option></select></div>
-   <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="station">Station Wagon (3CV)</option><option value="offroad">Jeep / Tipo Jeep (3CV)</option><option value="sedan">Sedán / limusina</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van / minivan</option><option value="bus">Bus / minibús</option></select></div>
+   <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="suv">SUV / Station Wagon / Todoterreno (agrupación 3CV)</option><option value="station">Station Wagon (3CV)</option><option value="offroad">Jeep / Tipo Jeep (3CV)</option><option value="sedan">Sedán / limusina</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van / minivan</option><option value="bus">Bus / minibús</option></select></div>
    <div class="field"><label for="statsCycle">Ciclo de ensayo</label><select id="statsCycle"><option value="WLTP" selected>Solo WLTP (inicial)</option><option value="NEDC">Solo NEDC</option><option value="">Exploración conjunta (no comparable)</option></select></div>
    <div class="field"><label for="statsOrder">Ordenar los 10</label><select id="statsOrder"><option value="asc">Menor a mayor</option><option value="desc">Mayor a menor</option></select></div>
   </div>
-  <p id="statsMetricHint" class="stats-metric-hint" role="status" aria-live="polite">Costo energético estimado por 100 km, con tarifas editables.</p>
+  <p>Primero selecciona la tecnología; PHEV y REEV habilitan indicadores específicos de rendimiento eléctrico y ponderado.</p><p id="statsMetricHint" class="stats-metric-hint" role="status" aria-live="polite">Costo energético estimado por 100 km, con tarifas editables.</p>
   <p id="statsBodyHint" class="stats-body-hint" role="note"></p>
   <div class="stats-summary"><div><span class="stats-live-indicator" aria-hidden="true"></span><strong id="statsSummaryTitle">Top 10 por costo energético</strong><p id="statsSummarySubtitle"></p></div><span id="statsResultCount" class="stats-count"></span></div>
   <div id="statsNotice" class="stats-notice" role="status" aria-live="polite"></div>
@@ -286,6 +302,7 @@
 </dialog>
 <footer class="footer" id="fuentes">
  <div class="shell footer-minimal">
+  <nav aria-label="Explorar más datos RINDELAB" class="rinde-resource-nav"><a href="./versiones.html">Versiones</a><a href="./homologaciones.html">Homologaciones</a><a href="./novedades-3cv.html">Novedades 3CV</a><a href="./cobertura.html">Cobertura de precios</a></nav>
   <span class="footer-credit">RINDELAB <span aria-hidden="true">·</span> Sebastián Elgueta Godoy</span>
   <nav class="footer-links" aria-label="Información y contacto">
    <a href="./metodologia.html">Fuentes y metodología</a>
@@ -296,8 +313,28 @@
  </div>
 </footer>
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
-<script src="./sii/prices.js?v=20261020-1485" defer></script>
+<script src="./sii/prices.js?v=20261020-uxfinal" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261018-comprador1" defer></script>
+<script src="./v6.js?v=20261020-uxfinal" defer></script>
+<script>
+/* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
+(function(){
+ function openTarget(){
+   if (window.location.hash === '#supuestos') {
+     const panel=document.getElementById('supuestos');
+     if(panel) { panel.open=true; panel.removeAttribute('hidden'); }
+   }
+ }
+ window.addEventListener('hashchange',openTarget);
+ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',openTarget); else openTarget();
+ const adjust=document.getElementById('scenarioAdjust');
+ if(adjust) adjust.addEventListener('click',openTarget);
+ const input=document.getElementById('chargeKwh');
+ const title=document.getElementById('chargeExampleHeading');
+ if(input&&title) input.addEventListener('input',function(){
+   const n=Number(input.value);if(Number.isFinite(n)&&n>0) title.textContent='¿Cuánto cuesta cargar '+new Intl.NumberFormat('es-CL',{maximumFractionDigits:1}).format(n)+' kWh de energía?';
+ });
+})();
+</script>
 </body>
 </html>
