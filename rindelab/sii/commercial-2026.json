@@ -13611,5 +13611,104 @@
     "currency": "CLP",
     "priceBasis": "Precio referencial en CLP publicado en el comparador oficial Porsche Chile, según la versión seleccionada.",
     "technology": "PHEV"
+  },
+  {
+    "brand": "Honda",
+    "family": "WR-V",
+    "version": "WR-V EX",
+    "modelYear": null,
+    "priceListClp": 22990000,
+    "source": "https://autos.honda.cl/suv/wr-v/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "WR-V",
+    "version": "WR-V Touring",
+    "modelYear": null,
+    "priceListClp": 23990000,
+    "source": "https://autos.honda.cl/suv/wr-v/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "ZR-V",
+    "version": "EXL 2.0 AUT. 4X2",
+    "modelYear": null,
+    "priceListClp": 31990000,
+    "source": "https://autos.honda.cl/suv/zr-v/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "ZR-V",
+    "version": "TOURING 2.0 AUT. 4X2",
+    "modelYear": null,
+    "priceListClp": 31990000,
+    "source": "https://autos.honda.cl/suv/zr-v/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "HR-V",
+    "version": "New HR-V Touring",
+    "modelYear": null,
+    "priceListClp": 26990000,
+    "source": "https://autos.honda.cl/suv/hr-v/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "CR-V",
+    "version": "TOURING 1.5 TURBO AUT. 4X4",
+    "modelYear": null,
+    "priceListClp": 42990000,
+    "source": "https://autos.honda.cl/suv/cr-v/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "Pilot",
+    "version": "TOURING 3.5 AUT. 4X4 (2027)",
+    "modelYear": 2027,
+    "priceListClp": 59990000,
+    "source": "https://autos.honda.cl/suv/pilot/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "Pilot",
+    "version": "ELITE 3.5 AUT. 4X4 (2027)",
+    "modelYear": 2027,
+    "priceListClp": 61990000,
+    "source": "https://autos.honda.cl/suv/pilot/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
+  },
+  {
+    "brand": "Honda",
+    "family": "Civic",
+    "version": "TOURING CVT 1.5T",
+    "modelYear": null,
+    "priceListClp": 31390000,
+    "source": "https://autos.honda.cl/sedan/civic/",
+    "checkedAt": "2026-10-20",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista IVA incluido explícito en Honda Autos Chile, antes de bonos de financiamiento."
   }
 ]
