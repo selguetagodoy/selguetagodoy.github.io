@@ -1,0 +1,73 @@
+# RINDELAB — Lote Porsche Chile, modelos 2026 y 2027
+
+Origen: **Porsche Chile**, comparador de modelos oficial. Valores en CLP publicados por versión, sin conversiones monetarias. No constituyen oferta final.
+
+| Marca | Modelo | Versión | Año | Tecnología | Precio de lista CLP | Origen |
+|---|---|---|---:|---|---:|---|
+| Porsche | Macan | Macan Electric | 2027 | EV | $98.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan 4 Electric | 2027 | EV | $103.500.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan 4S Electric | 2027 | EV | $113.800.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan GTS Electric | 2027 | EV | $121.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan Turbo Electric | 2027 | EV | $130.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan | 2026 | Gasolina | $69.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan T | 2026 | Gasolina | $71.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan S | 2026 | Gasolina | $89.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Macan | Macan GTS | 2026 | Gasolina | $113.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=macan) |
+| Porsche | Taycan | Taycan | 2027 | EV | $135.400.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan Black Edition | 2027 | EV | $139.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan 4 | 2027 | EV | $141.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan 4 Black Edition | 2027 | EV | $145.700.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan 4S | 2027 | EV | $148.400.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan 4S Black Edition | 2027 | EV | $154.800.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan GTS | 2027 | EV | $178.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan Turbo | 2027 | EV | $183.700.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan Turbo S | 2027 | EV | $211.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan Turbo GT | 2027 | EV | $231.000.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan Turbo GT With Weissach | 2027 | EV | $231.000.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan 4 Cross Turismo | 2027 | EV | $142.600.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan 4S Cross Turismo | 2027 | EV | $152.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Taycan | Taycan Turbo Cross Turismo | 2027 | EV | $181.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=taycan) |
+| Porsche | Cayenne | Cayenne Electric | 2027 | EV | $121.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S Electric | 2027 | EV | $137.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Turbo Electric | 2027 | EV | $184.000.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Coupé Electric | 2027 | EV | $124.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S Coupé Electric | 2027 | EV | $139.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Turbo Coupé Electric | 2027 | EV | $188.700.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne | 2027 | Gasolina | $99.500.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Black Edition | 2027 | Gasolina | $104.500.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne E-Hybrid | 2027 | PHEV | $126.700.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne E-Hybrid Black Edition | 2027 | PHEV | $129.500.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S | 2027 | Gasolina | $132.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S E-Hybrid | 2027 | PHEV | $142.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S E-Hybrid Black Edition | 2027 | PHEV | $145.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne GTS | 2027 | Gasolina | $152.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Turbo E-Hybrid | 2027 | PHEV | $194.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Coupé | 2027 | Gasolina | $103.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Coupé Black Edition | 2027 | Gasolina | $108.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne E-Hybrid Coupé | 2027 | PHEV | $127.500.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne E-Hybrid Coupé Black Edition | 2027 | PHEV | $130.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S Coupé | 2027 | Gasolina | $134.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S E-Hybrid Coupé | 2027 | PHEV | $144.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne S E-Hybrid Coupé Black Edition | 2027 | PHEV | $149.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne GTS Coupé | 2027 | Gasolina | $154.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | Cayenne | Cayenne Turbo E-Hybrid Coupé With GT Package | 2027 | PHEV | $227.200.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=cayenne) |
+| Porsche | 911 | 911 Carrera | 2027 | Gasolina | $159.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Carrera T | 2027 | Gasolina | $164.100.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Carrera S | 2027 | Gasolina | $185.600.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Carrera 4S | 2027 | Gasolina | $193.000.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Carrera GTS | 2027 | Gasolina | $200.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Carrera 4 GTS | 2027 | Gasolina | $208.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Carrera 4S Cabriolet | 2027 | Gasolina | $207.500.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Carrera 4 GTS Cabriolet | 2027 | Gasolina | $219.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Targa 4S | 2027 | Gasolina | $209.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Targa 4 GTS | 2027 | Gasolina | $219.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Turbo S | 2027 | Gasolina | $294.500.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 Turbo S Cabriolet | 2027 | Gasolina | $308.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 GT3 | 2027 | Gasolina | $257.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 GT3 with Touring Package | 2027 | Gasolina | $259.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | 911 | 911 GT3 S/C | 2027 | Gasolina | $306.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=911) |
+| Porsche | Panamera | Panamera 4 E-Hybrid | 2027 | PHEV | $163.800.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=panamera) |
+| Porsche | Panamera | Panamera 4S E-Hybrid | 2027 | PHEV | $177.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=panamera) |
+| Porsche | Panamera | Panamera GTS | 2027 | Gasolina | $191.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=panamera) |
+| Porsche | Panamera | Panamera Turbo E-Hybrid | 2027 | PHEV | $207.900.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=panamera) |
+| Porsche | Panamera | Panamera Turbo S E-Hybrid | 2027 | PHEV | $232.300.000 | [Porsche Chile](https://compare.porsche.com/es-CL?model-series=panamera) |
