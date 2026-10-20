@@ -1,6 +1,6 @@
 # RINDELAB — Base maestra de vehículos nuevos y precios comerciales
 
-**Corte documental:** 20-10-2026. **Registros en la rama de integración:** 1.081. **Marcas:** 49.
+**Corte documental:** 20-10-2026. **Registros en la rama de integración:** 1.084. **Marcas:** 49.
 
 Este índice se genera directamente desde `rindelab/sii/commercial-2026.json`. Cada versión conserva el **origen del precio** y un **enlace clicable** a la ficha/página comercial. Los valores son los informados por el sitio de origen; no son ofertas de RINDELAB. No se infiere homologación energética por coincidencia de nombres. Los registros añadidos el 20-10-2026 en el lote Gildemeister fueron cotejados individualmente; los registros anteriores mantienen sus fechas históricas de consulta, sin atribuirles una revalidación nueva.
 
@@ -497,7 +497,7 @@ Este archivo representa **los registros recopilados**, no acredita que ya estén
 | Wingle 7 | WINGLE 7 2.4 G 4X2 DELUXE F2 | Combustión / sin etiqueta | $17.600.100 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
 | Wingle 7 | WINGLE 7 2.4 G 4X4 DELUXE F2 | Combustión / sin etiqueta | $19.742.100 | [GWM Chile](https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf) | 2026-10-19 |
 
-### Hyundai — 62 versiones
+### Hyundai — 65 versiones
 
 | Modelo | Versión | Tecnología | Precio de lista | Origen del precio | Consultado |
 |---|---|---|---:|---|---|
@@ -563,6 +563,9 @@ Este archivo representa **los registros recopilados**, no acredita que ya estén
 | Venue | Venue QU2i 1.0T MT PLUS | Combustión / sin etiqueta | $17.190.000 | [Hyundai Chile](https://www.hyundai.cl/nuestros-modelos/suv/all-new-venue/precios-y-financiamiento/) | 2026-10-17 |
 | VENUE QU2I | Venue QU2i 1.0T AT DESIGN | Combustión / sin etiqueta | $20.490.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
 | VENUE QU2I | Venue QU2i 1.0T AT PLUS | Combustión / sin etiqueta | $18.990.000 | [Portillo Sur](https://www.portillosur.cl/hyundai/venuequ2i) | 2026-10-19 |
+| Ioniq 5 | IONIQ 5 NE EV PREMIUM | EV | $52.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-premium/) | 2026-10-20 |
+| Ioniq 5 | IONIQ 5 NE EV LIMITED | EV | $57.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-limited/) | 2026-10-20 |
+| Ioniq 5 | IONIQ 5 NE EV AWD LIMITED | EV | $62.890.000 | [Gildemeister Retail](https://www.gildemeisterretail.cl/marcas/hyundai/all-new-ioniq-5/ioniq-5-ne-ev-awd-limited/) | 2026-10-20 |
 
 ### JAC — 53 versiones
 
@@ -1344,4 +1347,4 @@ Este archivo representa **los registros recopilados**, no acredita que ya estén
 4. Incorporar solo faltantes al JSON comercial, respetando la fuente original y sin asignar rendimientos 3CV por proximidad nominal.
 5. Ejecutar QA de búsqueda, filtros, comparador, cotizador y móvil antes de fusionar y comprobar la publicación pública.
 
-**Control:** 1081 filas generadas, 44 orígenes comerciales identificados. No se debe declarar cobertura nacional completa sin contrastar la oferta por marca y modelo.
+**Control:** 1084 filas generadas, 44 orígenes comerciales identificados. No se debe declarar cobertura nacional completa sin contrastar la oferta por marca y modelo.
