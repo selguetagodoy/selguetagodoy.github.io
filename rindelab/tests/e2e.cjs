@@ -682,6 +682,24 @@ await test('Inventario MD Gildemeister migrado sin perder precio, origen ni vers
   assert.equal(list.find(x=>x.brand==='Hyundai'&&x.version===version)?.technology,'EV');
  }
 });
+await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicados',async()=>{
+ const md=fs.readFileSync(path.join(__dirname,'../sii/LOTE-CHEVROLET-MAXUS-20261020.md'),'utf8');
+ const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert(data.length>=1109);
+ const rows=md.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.trim().endsWith('| Agregar |'));
+ assert.equal(rows.length,25);
+ for(const row of rows){
+  const c=row.split('|').map(x=>x.trim());
+  const sourceUrl=c[7].split('](')[1]?.split(')')[0];
+  const x=data.find(z=>z.brand===c[1]&&z.family===c[2]&&z.version===c[3]);
+  assert(x,'Falta versión comercial '+c[1]+' '+c[2]+' '+c[3]);
+  assert.equal(x.priceListClp,Number(c[6].replace(/[^0-9]/g,'')));
+  assert.equal(x.source,sourceUrl);
+  assert.equal(x.modelYear,c[4]==='No informado'?null:Number(c[4]));
+ }
+ assert(data.some(x=>x.brand==='Chevrolet'&&x.family==='Captiva PHEV'&&x.technology==='PHEV'));
+ assert(data.some(x=>x.brand==='Maxus'&&x.family==='T90 EV'&&x.technology==='EV'));
+});
 await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercial identificada',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  const expected={Mitsubishi:13,Peugeot:3,Fiat:4,Jeep:2,KGM:5};
