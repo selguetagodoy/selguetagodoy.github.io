@@ -1,0 +1,215 @@
+{
+  "report": {
+    "rossRaw": 299,
+    "addedFromRoss": 258,
+    "prior": 282,
+    "combined": 540,
+    "pricedIfMerged": 946,
+    "remainingTo1000": 54,
+    "conflicts": 1,
+    "duplicates": 40,
+    "bad": 0,
+    "brands": {
+      "Peugeot": 28,
+      "Jeep": 31,
+      "Foton": 26,
+      "Opel": 16,
+      "RAM": 13,
+      "Citroen": 18,
+      "Jetour": 12,
+      "KGM": 28,
+      "JMC": 4,
+      "Soueast": 6,
+      "Mitsubishi": 24,
+      "Chery": 17,
+      "Fiat": 2,
+      "Landking": 16,
+      "Dongfeng": 17
+    },
+    "conflictsSample": [
+      {
+        "key": "OPEL|NEW CROSSLAND|NEW CROSSLAND GS 7P HYBRID 136 HP AT",
+        "price": 23090000,
+        "other": [
+          23690000
+        ],
+        "url": "https://www.rosselot.cl/public/nuevos/opel/new-crossland",
+        "existingUrl": "https://www.rosselot.cl/nuevos/opel/new-crossland"
+      }
+    ]
+  },
+  "conflicts": [
+    {
+      "key": "OPEL|NEW CROSSLAND|NEW CROSSLAND GS 7P HYBRID 136 HP AT",
+      "price": 23090000,
+      "other": [
+        23690000
+      ],
+      "url": "https://www.rosselot.cl/public/nuevos/opel/new-crossland",
+      "existingUrl": "https://www.rosselot.cl/nuevos/opel/new-crossland"
+    }
+  ],
+  "duplicates": [
+    {
+      "key": "JMC|GRAND AVENUE|GRAND AVENUE 4X2 MT",
+      "price": 24383100
+    },
+    {
+      "key": "LEAPMOTOR|C10|C10 BEV DESIGN",
+      "price": 29490000
+    },
+    {
+      "key": "LEAPMOTOR|C10|C10 REEV DESIGN",
+      "price": 30990000
+    },
+    {
+      "key": "CHERY|TIGGO 8 HIBRIDO|TIGGO 8 PRO MAX 1 5T DHT PHEV",
+      "price": 28990000
+    },
+    {
+      "key": "JMC|NEW TOURING CARGO|TOURING CARGO L1H2",
+      "price": 27953100
+    },
+    {
+      "key": "JMC|NEW TOURING CARGO|TOURING CARGO L2H2",
+      "price": 30333100
+    },
+    {
+      "key": "JEEP|NEW AVENGER|AVENGER ALTITUDE 1 2T H DDCT6 FWD",
+      "price": 24990000
+    },
+    {
+      "key": "CHERY|TIGGO 8|TIGGO 8 1 5T MT LIMITED",
+      "price": 16990000
+    },
+    {
+      "key": "CHERY|TIGGO 8|TIGGO 8 1 5T DCT LIMITED",
+      "price": 17990000
+    },
+    {
+      "key": "FOTON|G9|G9 4X4 MT",
+      "price": 20813100
+    },
+    {
+      "key": "FOTON|G9|G9 4X4 AT",
+      "price": 25335100
+    },
+    {
+      "key": "PEUGEOT|NEW 2008|2008 MCA STYLE HYBRID 136HP AT",
+      "price": 23190000
+    },
+    {
+      "key": "PEUGEOT|NEW 2008|2008 MCA ALLURE HYBRID 136HP AT",
+      "price": 25290000
+    },
+    {
+      "key": "PEUGEOT|NEW 2008|2008 MCA GT HYBRID 136HP AT",
+      "price": 28590000
+    },
+    {
+      "key": "PEUGEOT|NEW 2008|2008 MCA GT ELECTRIC",
+      "price": 29590000
+    },
+    {
+      "key": "PEUGEOT|BOXER MCA|BOXER MCA FURGON L2H2 DIESEL 140HP MT",
+      "price": 37354100
+    },
+    {
+      "key": "FOTON|G7|G7 LITE 4X2 EURO VI",
+      "price": 17243100
+    },
+    {
+      "key": "FOTON|G7|G7 LITE 4X4 EURO VI",
+      "price": 18433100
+    },
+    {
+      "key": "CHERY|TIGGO 9 PHEV|TIGGO 9 1 5T DHT PHEV",
+      "price": 31990000
+    },
+    {
+      "key": "CITROEN|C3|C3 LIVE PACK GASOLINA 96HP MT",
+      "price": 12890000
+    },
+    {
+      "key": "CITROEN|C3|C3 FEEL GASOLINA 96HP MT",
+      "price": 13690000
+    },
+    {
+      "key": "CITROEN|C3|C3 YOU TURBO 125HP AT",
+      "price": 16590000
+    },
+    {
+      "key": "CITROEN|JUMPER|JUMPER MCA L2H2 DIESEL 140HP MT",
+      "price": 36640100
+    },
+    {
+      "key": "CITROEN|JUMPER|JUMPER MCA L3H2 DIESEL 140HP MT",
+      "price": 37949100
+    },
+    {
+      "key": "PEUGEOT|TRAVELLER|NEW TRAVELLER MCA L3 8P DIESEL 180HP AT",
+      "price": 36997100
+    },
+    {
+      "key": "CITROEN|SPACETOURER|SPACETOURER MCA 8P DIESEL 180HP AT",
+      "price": 36640100
+    },
+    {
+      "key": "CITROEN|SPACETOURER|SPACETOURER MCA 9P DIESEL 180HP AT",
+      "price": 36759100
+    },
+    {
+      "key": "CHERY|TIGGO 4 PRO MAX|TIGGO 4 PRO MAX 1 5 MT GLS",
+      "price": 14490000
+    },
+    {
+      "key": "CHERY|TIGGO 4 PRO MAX|TIGGO 4 PRO MAX 1 5 CVT GLS",
+      "price": 15490000
+    },
+    {
+      "key": "CITROEN|BERLINGO MULTISPACE|BERLINGO MULTISPACE MCA PLUS XL DIESEL 100HP MT",
+      "price": 23090000
+    },
+    {
+      "key": "DONGFENG|T5 L|T5 L 1 5 TURBO EURO VI",
+      "price": 14990000
+    },
+    {
+      "key": "DONGFENG|T5 L|T5 L 1 8 TURBO EURO VI",
+      "price": 15690000
+    },
+    {
+      "key": "RAM|RAM700|RAM 700 SLT SINGLE CAB 1 3 MT",
+      "price": 16529100
+    },
+    {
+      "key": "CHERY|TIGGO 4 HEV|TIGGO 4 PRO MAX 1 5 DHT HEV",
+      "price": 19990000
+    },
+    {
+      "key": "DONGFENG|MAGE EV|MAGE EV",
+      "price": 21990000
+    },
+    {
+      "key": "DONGFENG|T5 EVO|T5 EVO 1 5 TURBO MT LUXURY EURO VI",
+      "price": 15990000
+    },
+    {
+      "key": "DONGFENG|AEOLUS GS|AEOLUS GS CROSS",
+      "price": 13990000
+    },
+    {
+      "key": "OPEL|NEW GRANDLAND|NEW GRANDLAND GS HYBRID 136HP AT",
+      "price": 32690000
+    },
+    {
+      "key": "OPEL|NEW MOKKA|MOKKA MCA EDITION PLUS GASOLINA 130HP MT",
+      "price": 21690000
+    },
+    {
+      "key": "OPEL|NEW MOKKA|MOKKA MCA EDITION GASOLINA 130HP AT",
+      "price": 21690000
+    }
+  ],
+  "bad": []
+}
