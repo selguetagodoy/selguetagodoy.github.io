@@ -116,4 +116,4 @@ window.RindelabCommercial={
  ageWarning
 };
 catalog();
-})()
+}})();
