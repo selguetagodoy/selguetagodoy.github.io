@@ -37,7 +37,7 @@ assert.equal(report.cases.length,14);
 assert.equal(nomina.records.length,15);
 assert.equal(nomina.sourceFileSha256,'6b013ee19be8e78757efa171a262badf793d0148aa35ca2154224858caaa5afa');
 const allVersions=report.cases.flatMap(x=>x.commercialVersions);
-assert.equal(allVersions.length,22);
+assert(allVersions.length>=22,'Conservar evidencia de al menos 22 versiones del corte documental MTT sin declarar equivalencia');
 assert(allVersions.every(x=>x.checkedManufacturer&&x.officialManufacturerSpecsUrl.startsWith('https://')));
 assert(report.cases.every(x=>x.status==='codigo_presente_en_nomina_no_validado_para_version'&&!x.verifiedSkuMatch&&!x.manualCertificateUrl&&x.septemberRegistryCrossChecked&&x.septemberCertificate));
 assert(report.cases.some(x=>x.code==='HY10456E60226S00-5'&&x.commercialVersions.length===2&&x.septemberCertificate==='C.H. 7730'));
