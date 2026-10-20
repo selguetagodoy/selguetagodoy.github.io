@@ -177,6 +177,9 @@ await test('La ficha EV muestra costos diferenciados de casa y electrolinera',as
  assert(labels.includes('Costo de 100 km en electrolinera seleccionada'));
  assert(labels.some(x=>x.startsWith('Costo de recarga en casa (20 kWh)')));
  assert(labels.some(x=>x.startsWith('Costo de recarga pública (20 kWh)')));
+ assert(await page.locator('#rindeSENFactor').isVisible());
+ await page.fill('#rindeSENFactor','250');
+ assert.match(await page.locator('#rindeSENResult').textContent(),/Emisiones indirectas aproximadas/);
  await page.locator('#detailClose').click();
  await page.click('#resetButton');
  await page.selectOption('#chargeScenario','public');
@@ -1946,6 +1949,9 @@ await test('Directorio de pliegos BT1 conserva fuente sin inventar precios',asyn
  await p.selectOption('#tariffDistributor','cge');
  assert.match(await p.locator('#tariffSourceLink').getAttribute('href'),/sec\.cl\/contactar-distribuidora/);
  assert.equal(await p.locator('#homeChargeRate').inputValue(),'230');
+ await p.locator('#useHomeTariff').click();
+ assert.equal(await p.inputValue('#chargeScenario'),'home');
+ assert(await p.locator('#homeChargeRate').evaluate(el=>document.activeElement===el));
  assert.deepEqual(e,[]);
  await p.close();
 });
