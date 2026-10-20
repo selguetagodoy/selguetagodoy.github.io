@@ -327,7 +327,11 @@ await test('REEV muestra sus 16 registros y ambas métricas con orden dinámico'
  await page.selectOption('#statsOrder','asc');
  assert.equal(await page.inputValue('#statsMetric'),'electric');
  assert.match(await page.locator('#statsResultCount').textContent(),/^16 fichas/);
- assert.equal(await page.locator('.rank-item').count(),10);
+ assert.match(await page.locator('#statsSummaryTitle').textContent(),/sin ranking/i);
+ await page.selectOption('#statsCycle','NEDC');
+ const nedcCount=Number((await page.locator('#statsResultCount').textContent()).match(/\d+/)[0]);
+ assert(nedcCount>1,'NEDC REEV debe permitir ordenamiento dentro de su ciclo');
+ assert.equal(await page.locator('.rank-item').count(),Math.min(10,nedcCount));
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
  const first=(await page.locator('.rank-value').allTextContents()).map(x=>Number(x.replace(/[^\d,.]/g,'').replace(',','.')));
  assert(first.every((v,i)=>i===0||first[i-1]<=v),'REEV ascendente '+first);
@@ -338,6 +342,7 @@ await test('REEV muestra sus 16 registros y ambas métricas con orden dinámico'
  assert.equal(await page.locator('.rank-item').count(),10);
  assert.match(await page.locator('#statsNotice').textContent(),/Rendimiento ponderado informado/);
  await page.selectOption('#statsMetric','electric');
+ await page.selectOption('#statsCycle',''); // Restituir exploración conjunta sin ranking después del cálculo por ciclo.
  await page.locator('.rank-item').first().click();
  assert(await page.locator('#statsDialog').isHidden());
  assert.match(await page.locator('#detailContent').textContent(),/Rendimiento eléctrico informado/);
@@ -423,6 +428,7 @@ await test('Orden mayor costo y marca/modelo cambian el listado',async()=>{
  await page.selectOption('#sort','name');assert.equal(await page.inputValue('#sort'),'name');assert(await page.locator('#sortNote').isHidden());
 });
 await test('Más resultados funciona sin paginación compleja',async()=>{
+ await page.click('#resetButton');await page.click('#searchButton');
  assert.equal(await page.locator('.vehicle-card').count(),10);
  await page.click('#more');assert.equal(await page.locator('.vehicle-card').count(),20);
 });
