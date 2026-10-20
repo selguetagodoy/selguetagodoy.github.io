@@ -1,328 +1,849 @@
-<!doctype html>
-<html lang="es-CL">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#102a43">
-<meta name="description" content="RINDELAB: busca vehículos homologados en Chile, revisa sus rendimientos y compara el costo estimado de energía por 100 kilómetros.">
-<meta name="author" content="Sebastián Elgueta Godoy">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_CL">
-<meta property="og:title" content="RINDELAB | Con las alzas, cada peso cuenta">
-<meta property="og:description" content="Compara vehículos eléctricos, híbridos y a combustión. Consulta rendimiento homologado y estima el gasto de energía según tus kilómetros.">
-<meta property="og:url" content="https://selguetagodoy.github.io/rindelab/">
-<meta property="og:site_name" content="RINDELAB">
-<meta property="og:image" content="https://selguetagodoy.github.io/rindelab/linkedin-preview.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="RINDELAB: compara el gasto energético de tu próximo auto con datos oficiales 3CV.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://selguetagodoy.github.io/rindelab/linkedin-preview.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"RINDELAB","url":"https://selguetagodoy.github.io/rindelab/","description":"Consulta homologaciones 3CV y compara costos energéticos estimados de vehículos en Chile.","applicationCategory":"ReferenceApplication","operatingSystem":"Web","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}},{"@type":"Dataset","name":"RINDELAB: rendimientos vehiculares homologados en Chile","description":"Integración independiente de fichas 3CV de mayo 2026 y nuevos códigos de la consulta oficial de octubre 2026. No equivale a un catálogo de vehículos disponibles para venta.","url":"https://selguetagodoy.github.io/rindelab/","isBasedOn":["https://www.consumovehicular.cl/","https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx"],"creator":{"@type":"Person","name":"Sebastián Elgueta Godoy"}}]}</script>
-<link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
-<link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./v6.css?v=20261018-imagen-v78"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
-<link rel="stylesheet" href="./v2-premium.css?v=20261018-rc1">
-<link rel="stylesheet" href="./v2-claridad.css?v=20261018-v1">
-<link rel="stylesheet" href="./v2-polish.css?v=20261018-v1">
-<script src="./v2-premium.js?v=20261018-rc1" defer></script>
-<script src="./v2-claridad.js?v=20261018-v1" defer></script>
-<script src="./v2-polish.js?v=20261018-v1" defer></script>
-<script src="./v2-photos.js?v=20261019-1" defer></script>
-<title>RINDELAB | Con las alzas, cada peso cuenta</title>
-<style>
-.rinde-explore{margin:1.1rem 0;padding:1rem 1.25rem;border:1px solid #d5dde7;border-radius:12px;background:#f6f9fc;color:#162d4b}
-.rinde-explore-actions{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.7rem}
-.rinde-explore-actions button,.rinde-explore-actions a{font:inherit;font-size:.9rem;background:white;color:#143655;border:1px solid #b9c9d9;border-radius:100px;padding:.55rem .85rem;cursor:pointer;text-decoration:none}
-.rinde-explore-actions button:hover,.rinde-explore-actions a:hover{border-color:#0a61a8}
-</style></head>
-<body>
-<header class="site-header">
- <div class="shell header-inner">
-  <div class="brand-lockup"><a href="#inicio" class="logo" aria-label="RINDELAB inicio">RINDE<span>LAB</span></a><small class="brand-tagline">Inteligencia energética vehicular para Chile</small></div>
-  <nav class="header-links" aria-label="Navegación principal"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizador</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav>
-  <details id="mobileNav" class="mobile-nav"><summary aria-label="Abrir navegación de RINDELAB">Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil"><a href="#buscador">Buscar</a><a href="#rankings" data-open-rankings>Rankings</a><a href="./cotizador.html">Cotizador</a><a href="./electromovilidad.html">Electromovilidad</a><a href="./marcas.html">Marcas</a><a href="./metodologia.html">Fuentes</a></nav></details>
- </div>
-</header>
-<main id="inicio" class="shell">
- <section class="intro visual-hero" aria-labelledby="title">
-   <div class="hero-copy">
-    <h1 id="title">¿Cuánto te costará usar tu próximo auto?</h1>
-    <p>Compara vehículos eléctricos, híbridos y a combustión según su rendimiento y cuánto gastarías en energía.</p>
-    <button class="statistics-entry" id="statsOpen" type="button" aria-haspopup="dialog" aria-controls="statsDialog">
-     <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V12M10 20V6M16 20v-9M22 20V3" stroke-linecap="round"/></svg>
-     Ver rankings y estadísticas <span aria-hidden="true">↗</span>
-    </button>
-   </div>
-   <div class="hero-image">
-    <img src="./hero-foto-rindelab.webp?v=20261018-1" width="450" height="253" alt="Cuatro automóviles en un estudio iluminado en azul: hatchback rojo, SUV plateado, crossover amarillo y camioneta pickup azul" loading="eager" decoding="async" fetchpriority="high">
-    <span class="hero-image-caption">Imagen referencial de vehículos</span>
-   </div>
-  </section>
-  <section id="buscador" class="search-card" aria-label="Buscador de vehículos">
-  <div class="search-card-heading"><h2>Busca un auto</h2></div>
-  <form id="vehicleForm" role="search">
-   <div class="quick-filters" role="group" aria-label="Filtrar por motorización"><button type="button" data-quick-tech="" aria-pressed="true">Todos</button><button type="button" data-quick-tech="EV" aria-pressed="false">Eléctricos</button><button type="button" data-quick-tech="HEV" aria-pressed="false">Híbridos</button><button type="button" data-quick-tech="PHEV" aria-pressed="false">Híbridos enchufables</button><button type="button" data-quick-tech="Bencina" aria-pressed="false">Bencina</button><button type="button" data-quick-tech="Diésel" aria-pressed="false">Diésel</button></div>
-   <div class="fields">
-    <div class="field wide">
-     <label for="query">Marca o modelo</label>
-     <input id="query" type="search" autocomplete="off" placeholder="Ej.: Corolla Cross, Hilux, B10" list="suggestions" spellcheck="false">
-     <datalist id="suggestions"></datalist>
-    </div>
-    <div class="field">
-     <label for="brand">Marca</label>
-     <select id="brand"><option value="">Todas las marcas</option></select>
-    </div>
-    <div class="field">
-     <label for="model">Modelo</label>
-     <select id="model" disabled><option value="">Primero selecciona una marca</option></select>
-    </div>
+/* RINDELAB 7 — búsqueda verificable, comparador y escenarios energéticos editables */
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const F={BRAND:0,MODEL:1,TECH:2,FUEL:3,BODY:4,DRIVE:5,TRANS:6,ENGINE:7,DATE:8,CODE:9,CLASS:10,CYCLE:11,KM:12,EL:13,PH:14,BAT:15,AC:16,DC:17,CO2:18,NORM:19};
+const aliases={'M. Benz':'Mercedes-Benz','Ram':'RAM','LEAPMOTOR':'Leapmotor','Faw':'FAW'};
+const money=n=>n===null||!Number.isFinite(n)?'Sin dato comparable':'$'+Math.round(n).toLocaleString('es-CL');
+const fmt=n=>Number(n).toLocaleString('es-CL');
+const techHuman={EV:'Eléctrico',HEV:'Híbrido',MHEV:'Híbrido suave',PHEV:'Híbrido enchufable',REEV:'Eléctrico con extensor',Bencina:'Bencina',Diésel:'Diésel'};
+function updateScenarioSummary(){
+ const km=Number($('annualKm').value)||15000;
+ const mode=$('chargeScenario').value,place=mode==='home'?'carga en casa':mode==='mixed'?'carga mixta (80/20 editable)':mode==='manual'?'tarifa manual':'carga pública';
+ $('scenarioSummaryText').textContent='Calculado para '+fmt(km)+' km al año · '+place+' · precios editables';
+}
+const safe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
+const number=n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>0?Number(n):null;
+const fixed=n=>number(n)?Number(n).toLocaleString('es-CL',{maximumFractionDigits:2}):'N/D';
+let all=[],results=[],selected=[],submitted=false,limit=10,cut='2026-05-08';
+let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
+const officialCodes=new Set();
+const searchIndex=new WeakMap();
+function cleanRow(row){
+ const r=row.slice();
+ Object.defineProperty(r,'sourceBrand',{value:row[F.BRAND]});
+ Object.defineProperty(r,'sourceTech',{value:row[F.TECH]});
+ r[F.BRAND]=aliases[r[F.BRAND]]||r[F.BRAND];
+ // No inferir MHEV/HEV a partir del nombre comercial: la tecnología es la declarada por 3CV.
+ // Las denominaciones Hybrid con tecnología de origen Bencina se aclaran únicamente en la ficha.
+ return r;
+}
+function family(row){
+ let name=String(row[F.MODEL]||'').trim(),brand=String(row[F.BRAND]||'').trim();
+ if(name.toLowerCase().startsWith((brand+' ').toLowerCase()))name=name.slice(brand.length).trim();
+ name=name.replace(/^(?:(?:The[\s-]+New|All[\s-]+New|New|Nuevo|Nueva)\s+)+/i,'').trim();
+ if(!name)return row[F.MODEL];
+ const patterns=[
+  // Subfamilias declaradas explícitamente, sin equiparar generaciones comerciales distintas.
+  [/^CS35\s+MAX\b/i,'CS35 Max'],[/^CS35\s+Plus\b/i,'CS35 Plus'],[/^CS75\s+Plus\b/i,'CS75 Plus'],
+  [/^CS\s*55\s+Plus\b/i,'CS55 Plus'],[/^X7\s+Plus\b/i,'X7 Plus'],
+  [/^Hunter\s+(?:EREV|E-?REEV|REEV)\b/i,'Hunter REEV'],
+  [/^Hunter\s+E\b/i,'Hunter eléctrico'],
+  [/^GR\s+Corolla\b/i,'GR Corolla'],[/^Corolla\s+Cross\b/i,'Corolla Cross'],[/^Creta\s+Grand\b/i,'Creta Grand'],
+  [/^Corolla\s+(?:SD|SEDAN|SEDÁN)\b/i,'Corolla Sedán'],
+  [/^Corolla\s+(?:HB|HATCHBACK)\b/i,'Corolla Hatchback'],
+  [/^Yaris\s+Cross\b/i,'Yaris Cross'],[/^Land\s+Cruiser\s+Prado\b/i,'Land Cruiser Prado'],
+  [/^Land\s+Cruiser\b/i,'Land Cruiser'],[/^Range\s+Rover\s+(Sport|Velar|Evoque)\b/i,null],
+  [/^Range\s+Rover\b/i,'Range Rover'],[/^Discovery\s+Sport\b/i,'Discovery Sport'],
+  [/^Defender\s+(90|110|130)\b/i,null],[/^Grand\s+Vitara\b/i,'Grand Vitara'],
+  [/^LPM\s+(?:B10|C10)\b/i,null],[/^Avatr\s+\d+\b/i,null],
+  [/^Outlander\s+P(?:\s|-)?HEV\b/i,'Outlander PHEV'],[/^Outlander\s+Sport\b/i,'Outlander Sport'],[/^Outlander\b/i,'Outlander'],
+  [/^Eclipse\s+Cross\b/i,'Eclipse Cross'],[/^Torres\s+(?:HEV|Hybrid)\b/i,'Torres HEV'],
+  [/^RAV4\b/i,'RAV4'],[/^Evoque\b/i,'Range Rover Evoque'],
+  [/^Dolphin\s+Mini\b/i,'Dolphin Mini'],[/^Yuan\s+Pro\s+DM[-\s]?i\b/i,'Yuan Pro DM-i'],[/^Yuan\s+Plus\b/i,'Yuan Plus'],[/^Song\s+Plus\b/i,'Song Plus'],[/^Song\s+Pro\b/i,'Song Pro'],
+  [/^Deepal\s+[A-Z0-9-]+\b/i,null],
+  [/^Haval\s+Jolion\s+Max\b/i,'Haval Jolion Max'],[/^Haval\s+(H6|H9|Jolion(?:\s+Pro)?|Dargo)\b/i,null],[/^ORA\s*0?3\b/i,'ORA 03'],
+  [/^Tiggo\s+2\s+Pro\s+Max\b/i,'Tiggo 2 Pro Max'],[/^Tiggo\s+4\s+Pro\s+Max\b/i,'Tiggo 4 Pro Max'],[/^Tiggo\s+7\s+Pro\s+Max\b/i,'Tiggo 7 Pro Max'],[/^Tiggo\s+8\s+Pro\s+Max\b/i,'Tiggo 8 Pro Max'],[/^Tiggo\s+\d+\b/i,null],
+  [/^GS3\s+Power\b/i,'GS3 Power'],[/^Emzoom\b/i,'Emzoom'],[/^Emkoo\b/i,'Emkoo'],[/^GS8\b/i,'GS8'],[/^C3\s+Aircross\b/i,'C3 Aircross'],[/^ATTO\s+\d+\b/i,null],
+  [/^Model\s+[3SYX]\b/i,null],[/^F[\s-]?(150|250|350)\b/i,null],
+  [/^e[\s-]?Vitara\b/i,'e Vitara'],[/^e[\s-]?208\b/i,'e-208'],[/^e[\s-]?2008\b/i,'e-2008']
+ ];
+ for(const [pattern,label] of patterns){const m=name.match(pattern);if(m)return label||m[0].replace(/^F[\s-]?(\d+)/i,'F-$1');}
+ const words=name.split(/\s+/).filter(Boolean);
+ return ['Serie','Series','Clase','Class','Model','Grand','Range'].includes(words[0])&&words[1]?words.slice(0,2).join(' '):words[0];
+}
+function queryText(row){
+ const cached=searchIndex.get(row);if(cached)return cached;
+ const brand=row[F.BRAND],model=row[F.MODEL],extra=[];
+ if(/^(M\.?\s*Benz|Mercedes[\s-]?Benz)$/i.test(brand))extra.push('mercedes benz mercedes');
+ if(/^(Great Wall|GWM)$/i.test(brand))extra.push('gwm great wall haval');
+ if(/^Leapmotor$/i.test(brand))extra.push('leap motor leapmotor');
+ if(/\bF[\s-]?150\b/i.test(model))extra.push('f150 f 150');
+ if(/\bCR[\s-]?V\b/i.test(model))extra.push('crv cr v');
+ if(/\bRAV[\s-]?4\b/i.test(model))extra.push('rav4 rav 4');
+ const value=normalize([brand,model,row[F.CODE],row[F.TECH],...extra].join(' '));
+ const out={words:value,compact:value.replace(/\s/g,'')};searchIndex.set(row,out);return out;
+}
+function matchesText(row,q){
+ if(!q)return true;
+ const hay=queryText(row),words=q.split(' ');
+ // No usar dígitos sueltos de los códigos 3CV para hacer coincidir motores (p. ej. Hunter 2.0 ≠ Hunter E).
+ const modelWords=normalize(row[F.BRAND]+' '+row[F.MODEL]).split(' ');
+ return hay.words.includes(q)||hay.compact.includes(q.replace(/\s/g,''))||
+  words.every(w=>/^\d{1,2}$/.test(w)?modelWords.includes(w):hay.words.includes(w));
+}
+function inputCriteria(){
+ return {q:normalize($('query').value),brand:$('brand').value,model:$('model').value,tech:$('tech').value,body:$('bodytype').value,cycle:$('cycle').value,year:$('year').value};
+}
+function matchesFilters(row,f){
+ return (!f.brand||row[F.BRAND]===f.brand)&&(!f.model||normalize(family(row))===f.model)&&
+  (!f.tech||row[F.TECH]===f.tech)&&(!f.body||row[F.BODY]===f.body)&&
+  (!f.cycle||row[F.CYCLE]===f.cycle)&&(!f.year||row[F.DATE].slice(0,4)>=f.year);
+}
 
-   </div>
-   <details class="technical" id="technical">
-    <summary>Más filtros <span aria-hidden="true">⌄</span></summary>
-    <div class="technical-fields">
-      <div class="field">
-     <label for="tech">Tipo de motor</label>
-     <select id="tech">
-      <option value="">Todas las motorizaciones</option>
-      <option value="Bencina">Bencina</option><option value="Diésel">Diésel</option>
-      <option value="MHEV">Híbrido suave (MHEV)</option><option value="HEV">Híbrido (HEV)</option>
-      <option value="PHEV">Híbrido enchufable (PHEV)</option><option value="REEV">Eléctrico con extensor (REEV)</option>
-      <option value="EV">Eléctrico (EV)</option>
-     </select>
-    </div>
-     <div class="field"><label for="bodytype">Carrocería (3CV)</label><select id="bodytype"><option value="">Todas</option></select></div>
-     <div class="field"><label for="cycle">Ciclo de homologación</label><select id="cycle"><option value="">Todos los ciclos</option><option value="WLTP">WLTP</option><option value="NEDC">NEDC</option></select></div>
-     <div class="field"><label for="year">Homologación desde</label><select id="year"><option value="">Todo el historial</option><option value="2025">2025</option><option value="2024">2024</option><option value="2020">2020</option><option value="2015">2015</option></select></div>
-    </div>
-   </details>
-   <p id="filterHint" class="form-hint" role="status" aria-live="polite"></p>
-   <div class="form-actions">
-    <button type="submit" class="button primary" id="searchButton">Buscar vehículos <span aria-hidden="true">→</span></button>
-    <button type="button" class="button secondary" id="resetButton">Limpiar</button>
-   </div>
-  </form>
- </section>
- <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor costo energético</button><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
-   <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
-   <a href="#supuestos" id="scenarioAdjust" class="button secondary">Ajustar costos →</a>
-  </div>
- <section id="results" class="results" aria-labelledby="resultsTitle" hidden>
-  <div class="results-head">
-   <div><h2 id="resultsTitle">Resultados de búsqueda</h2><p id="resultCount" role="status" aria-live="polite"></p></div>
-   <div class="field sort-field"><label for="sort">Ordenar por</label><select id="sort">
-    <option value="recent">Homologación más reciente</option>
-    <option value="cheapest">Menor costo estimado</option>
-    <option value="expensive">Mayor costo estimado</option>
-    <option value="name">Marca y modelo</option>
-   </select></div>
-  </div>
-  <p id="sortNote" class="sort-note" role="note" hidden></p>
-  <details id="sourceLegend" class="source-legend" aria-label="Cómo interpretar los resultados" hidden>
-   <summary><span>Sobre estos resultados</span><span class="source-legend-link">Ver detalles <span aria-hidden="true">⌄</span></span></summary>
-   <div class="source-legend-details">
-    <p><strong>Rendimientos oficiales.</strong> Base histórica 3CV de mayo y 272 registros adicionales de la API oficial de octubre de 2026. Cada ficha muestra su ciclo NEDC o WLTP; sus valores no son directamente equivalentes.</p>
-    <p><strong>Homologaciones MTT pendientes.</strong> Un código de septiembre continúa sin ficha energética en la consulta de octubre. No recibe costos estimados ni se mezcla con fichas con rendimiento.</p>
-    <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="./metodologia.html">Metodología completa ↗</a></p>
-   </div>
-  </details>
-  <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
-   <div class="mtt-search-heading">
-    <div><p class="mtt-search-eyebrow">NÓMINA MTT · 28 DE SEPTIEMBRE DE 2026</p><h3 id="mttSearchTitle">Homologaciones recientes sin ficha de rendimiento</h3>
-    <p id="mttSearchCount" role="status" aria-live="polite"></p></div>
-    <a href="./novedades-3cv.html" class="mtt-search-all">Ver nómina completa ↗</a>
-   </div>
-   <p class="mtt-search-explainer">Este registro aparece en la nómina MTT de septiembre pero no se encuentra en la consulta energética oficial del 18 de octubre. Conservamos código, certificado y fecha, <strong>sin inventar rendimiento ni costo por kilómetro</strong>. No se puede incorporar a una comparación energética.</p>
-   <div id="mttSearchList" class="mtt-search-list"></div>
-   <button id="mttSearchMore" type="button" class="button secondary" hidden>Mostrar más homologaciones MTT</button>
-  </section>
-  <p id="mttLoadNotice" class="mtt-load-notice" role="status" hidden></p>
-  <div id="emptyState" class="empty" hidden></div>
-  <div id="suggested" class="suggested" hidden></div>
-  <div id="energyResultsHeading" class="energy-results-heading" hidden>
-    <div><strong>Fichas energéticas 3CV</strong><span id="energyResultsCount"></span></div>
-
-  </div>
-  <div id="resultList" class="result-list"></div>
-  <div class="load-more"><button type="button" id="more" class="button secondary" hidden>Mostrar 10 vehículos más</button></div>
- </section>
- <details id="supuestos" class="energy-assumptions scenario-drawer" aria-labelledby="energyTitle">
- <summary class="scenario-drawer-toggle">
- <span class="scenario-icon" aria-hidden="true">⚙</span>
- <span class="scenario-drawer-heading"><strong id="energyTitle">Personalizar costos</strong><small>Cambia kilometraje, precios y tipo de carga cuando lo necesites</small></span>
- <span class="scenario-drawer-action">Editar estimación <span aria-hidden="true">⌄</span></span>
- </summary>
- <div class="scenario-drawer-body">
- <p class="scenario-edit-caption">Simulación inicial: 80 % carga domiciliaria / 20 % pública, con tarifa de casa referencial editable de $230/kWh. No representa una tarifa residencial nacional; reemplázala con tu boleta para mayor precisión.</p>
-
-
-    <div class="assumptions-grid">
-      <div class="field"><label for="annualKm">Kilómetros al año</label><select id="annualKm"><option value="5000">5.000 km</option><option value="10000">10.000 km</option><option value="15000" selected>15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000 km</option><option value="30000">30.000 km</option></select></div>
-      <div class="field"><label for="gasPrice">Bencina ($/L)</label><input id="gasPrice" type="number" min="1" max="10000" step="1" value="1535"></div>
-      <div class="field"><label for="dieselPrice">Diésel ($/L)</label><input id="dieselPrice" type="number" min="1" max="10000" step="1" value="1503"></div>
-      <div class="field"><label for="chargeScenario">Escenario de carga eléctrica</label><select id="chargeScenario"><option value="public">100 % carga pública</option><option value="home">100 % domicilio</option><option value="mixed" selected>Mixta: casa + pública (80/20)</option><option value="manual">Precio manual único</option></select></div>
-    </div>
-    <details id="scenarioAdvanced" class="scenario-advanced" open>
-      <summary>Tarifas de recarga y opciones avanzadas</summary>
-      <div class="assumptions-grid advanced-grid">
-      <div class="field" id="publicChargeField"><label for="publicChargeRate">Tarifa pública Copec Voltex</label><select id="publicChargeRate">
-       <option value="340" selected>AC ≤22 kW · ciudad valle · $340</option>
-       <option value="395">AC ≤22 kW · ciudad punta · $395</option>
-       <option value="395">AC ≤22 kW · carretera · $395</option>
-       <option value="395">DC 50 kW · ciudad valle · $395</option>
-       <option value="450">DC 50 kW · ciudad punta · $450</option>
-       <option value="450">DC 50 kW · carretera · $450</option>
-       <option value="440">DC ≥120 kW · ciudad valle · $440</option>
-       <option value="495">DC ≥120 kW · ciudad punta · $495</option>
-       <option value="495">DC ≥120 kW · carretera · $495</option>
-      </select></div>
-      <div class="field" id="homeChargeField"><label for="homeChargeRate">Tu precio de casa ($/kWh)</label><input id="homeChargeRate" type="number" min="1" max="10000" step="1" inputmode="numeric" value="230" placeholder="Ej. valor $/kWh de tu boleta"></div>
-      <div class="field" id="homeShareField"><label for="homeChargeShare">Porcentaje cargado en casa</label><select id="homeChargeShare"><option value="20">20 %</option><option value="40">40 %</option><option value="50">50 %</option><option value="60">60 %</option><option value="80" selected>80 %</option><option value="90">90 %</option></select></div>
-      <div class="field"><label for="trafficProfile">Perfil de circulación</label><select id="trafficProfile"><option value="combined" selected>Mixto homologado (3CV)</option><option value="urban">Ciudad (urbano 3CV, si existe)</option><option value="road">Carretera (extraurbano 3CV, si existe)</option></select></div><div class="field"><label for="electricPrice">Tarifa eléctrica aplicada ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="252" readonly aria-describedby="chargeStatus"></div>
-      </div>
-    <details id="homeBillHelper" class="home-bill-helper" hidden>
-      <summary>¿No sabes cuánto pagas por kWh en casa? Calcúlalo con tu boleta</summary>
-      <p class="bill-help">Usa tu boleta residencial para estimar un precio promedio por kWh. La estimación se basa en el monto de la boleta menos los cargos fijos que ingreses, dividido por los kWh facturados. <strong>No equivale necesariamente al costo marginal de una recarga adicional</strong>, especialmente si hay tramos de consumo, descuentos, subsidios u otros cargos.</p>
-      <div class="bill-grid">
-        <div class="field"><label for="homeBillAmount">Total de tu boleta ($)</label><input type="number" id="homeBillAmount" inputmode="numeric" min="1" step="1" placeholder="Ej. 35000"></div>
-        <div class="field"><label for="homeBillKwh">Consumo facturado (kWh)</label><input type="number" id="homeBillKwh" inputmode="decimal" min="1" step="0.01" placeholder="Ej. 150"></div>
-        <div class="field"><label for="homeBillFixed">Cargos no proporcionales al consumo ($)</label><input type="number" id="homeBillFixed" inputmode="numeric" min="0" step="1" placeholder="Indica cargos fijos; opcional"></div>
-      </div>
-      <button id="calcHomeFromBill" class="button secondary" type="button">Usar estimación de mi boleta</button>
-      <p id="homeBillStatus" class="bill-result" role="status" aria-live="polite"></p>
-      <p class="bill-help">Si tu boleta detalla el valor del kWh y los cargos variables, es preferible ingresar directamente el precio aplicable. Puedes revisar las <a href="https://www.sec.cl/area-ciudadana/tarifas-electricas/" target="_blank" rel="noopener noreferrer">tarifas residenciales BT1 (SEC)</a> y los <a href="https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.html" target="_blank" rel="noopener noreferrer">pliegos de Enel</a> cuando corresponda.</p>
-    </details>
-    <section class="charge-example" aria-labelledby="chargeExampleHeading">
-      <div class="charge-example-title"><h3 id="chargeExampleHeading">¿Cuánto cuesta cargar 20 kWh de energía?</h3><div class="field"><label for="chargeKwh">Energía cargada (kWh)</label><input id="chargeKwh" type="number" aria-describedby="chargeKwhNote" min="1" max="200" step="1" value="20" inputmode="numeric"><small id="chargeKwhNote">El monto se calcula para los kWh indicados, no necesariamente para una carga completa.</small></div></div>
-      <div class="charge-example-grid">
-        <div class="charge-example-value"><small>En casa</small><strong id="homeSessionCost">Ingresa tu tarifa</strong><span id="homeSessionRate">Depende de tu boleta</span></div>
-        <div class="charge-example-value"><small>En electrolinera</small><strong id="publicSessionCost">$6.800</strong><span id="publicSessionRate">Copec Voltex, AC ciudad valle</span></div>
-      </div>
-      <p id="chargeDifference" class="charge-difference" role="status" aria-live="polite">Agrega tu tarifa domiciliaria para comparar.</p>
-      <p class="charge-disclaimer">Cálculo de energía: kWh × tarifa. No es una carga completa obligatoriamente, ni incluye pérdidas eléctricas, servicios por tiempo, potencia instalada o cambios de tramo tarifario.</p>
-    </section>
-    <details id="homeTariffDirectory" class="home-tariff-directory">
-      <summary>Tarifas de luz por distribuidora: consulta el pliego BT1 vigente</summary>
-      <div class="tariff-directory-body">
-        <div class="field"><label for="tariffDistributor">Selecciona la distribuidora indicada en tu boleta</label>
-          <select id="tariffDistributor">
-            <option value="">Seleccionar distribuidora</option>
-            <option value="enel">Enel Distribución</option>
-            <option value="cge">CGE Distribución</option>
-            <option value="chilquinta">Chilquinta</option>
-            <option value="saesa">Saesa</option>
-            <option value="frontel">Frontel</option>
-            <option value="otra">Otra distribuidora</option>
-          </select>
-        </div>
-        <p id="tariffSourceDescription">Busca primero tu distribuidora en la boleta; la comuna por sí sola no identifica tu pliego ni el cargo total aplicable.</p>
-        <a id="tariffSourceLink" href="https://www.sec.cl/contactar-distribuidora/" target="_blank" rel="noopener noreferrer">Directorio de distribuidoras y tarifas SEC ↗</a>
-        <div id="tariffEnelDetails" class="tariff-enel-details" hidden>
-          <p class="tariff-enel-date"><strong>Enel BT1 · octubre 2026</strong> — pliego oficial identificado. Los siguientes filtros permiten ubicar la fila correcta, pero no constituyen una tarifa total preseleccionada.</p>
-          <div class="tariff-enel-grid">
-            <div class="field"><label for="tariffCommune">Comuna (Enel)</label><select id="tariffCommune"><option value="">Selecciona una comuna del pliego</option></select></div>
-            <div class="field"><label for="tariffNetwork">Tipo de conexión (RED)</label><select id="tariffNetwork"><option value="">Revisa tu boleta</option><option>BT_AA</option><option>BT_SA</option><option>BT_AS</option><option>BT_SS</option></select></div>
-            <div class="field"><label for="tariffEtr">Tramo ETR</label><select id="tariffEtr"><option value="">Revisa tu boleta</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option><option>T5</option><option>T6</option></select></div>
-          </div>
-          <p id="tariffEnelStatus" role="status" aria-live="polite">Selecciona comuna, conexión y tramo de la boleta para localizar el cargo correcto en el PDF.</p>
-          <p class="tariff-component">El pliego registra un <strong>cargo por energía (3) de $162,041/kWh IVA incluido</strong> como uno de sus componentes BT1. <strong>No es el precio completo por kWh</strong>: también pueden corresponder transporte, compras de potencia, distribución y recargos por tramo. No se envía esta cifra a la calculadora domiciliaria.</p>
-        </div>
-        <p>En el pliego, identifica <strong>BT1, comuna, zona/red y fecha</strong>, y diferencia el cargo fijo de los cargos variables por kWh. La tarifa de carga del vehículo puede variar con consumo acumulado y reliquidaciones. RINDELAB no rellena una tarifa numérica si no está verificada para esa combinación.</p>
-      </div>
-    </details>
-    <p id="chargeStatus" class="charge-status" role="status" aria-live="polite">Copec Voltex · AC hasta 22 kW · ciudad, horario valle. Tarifa aplicada: $340/kWh.</p>
-    <details class="scenario-method"><summary>Cómo se calculan estos costos y cuáles son sus límites</summary><p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa inicialmente el supuesto editable de $230/kWh, NO una tarifa residencial oficial; reemplázalo por tu boleta o estima un valor con el formulario local. Si se borra este valor, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="./metodologia.html">Revisar metodología</a>.</p></details>
-    </details>
-   </div>
-  </details>
- </main>
-<div id="compareTray" class="compare-tray" hidden aria-label="Vehículos elegidos para comparar">
- <div class="compare-inner">
-  <div class="compare-selection">
-   <p id="compareStatus" role="status" aria-live="polite">Elige entre dos y cinco vehículos para compararlos.</p>
-   <div id="compareSelected" class="compare-selected" aria-label="Modelos seleccionados"></div>
-  </div>
-  <div class="compare-actions">
-   <button type="button" id="compareAdd" class="button tray-add">+ Agregar otro</button>
-   <button type="button" id="compareOpen" class="button primary" disabled>Comparar</button>
-   <button type="button" id="compareClear" class="button tray-clear">Vaciar</button>
-  </div>
- </div>
-</div>
-<dialog id="statsDialog" class="modal stats-modal" aria-labelledby="statsTitle">
- <div class="modal-head stats-modal-head">
-  <div><p class="stats-overline">EXPLORA LA BASE 3CV</p><h2 id="statsTitle">Rankings y estadísticas</h2><p>Los 10 vehículos que más o menos rinden, o que más o menos cuestan.</p></div>
-  <button type="button" id="statsClose" class="button secondary" aria-label="Cerrar estadísticas">Cerrar ×</button>
- </div>
- <div class="modal-body stats-body">
-  <div class="stats-controls">
-   <div class="field"><label for="statsMetric">¿Qué quieres comparar?</label><select id="statsMetric"><option value="cost">Costo energético por 100 km</option><option value="performance">Rendimiento homologado</option><option value="electric" disabled>Rendimiento eléctrico informado (km/kWh) · seleccionar PHEV o REEV</option><option value="weighted" disabled>Rendimiento ponderado informado (km/L) · seleccionar PHEV o REEV</option></select></div>
-   <div class="field"><label for="statsTech">Motorización</label><select id="statsTech"><option value="">Todas las motorizaciones</option><option value="Bencina">Bencina</option><option value="Diésel">Diésel</option><option value="MHEV">Híbrido suave (MHEV)</option><option value="HEV">Híbrido (HEV)</option><option value="PHEV">Híbrido enchufable (PHEV)</option><option value="REEV">Extensor de autonomía (REEV)</option><option value="EV">Eléctrico (EV)</option></select></div>
-   <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="station">Station Wagon (3CV)</option><option value="offroad">Jeep / Tipo Jeep (3CV)</option><option value="sedan">Sedán / limusina</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van / minivan</option><option value="bus">Bus / minibús</option></select></div>
-   <div class="field"><label for="statsCycle">Ciclo de ensayo</label><select id="statsCycle"><option value="WLTP" selected>Solo WLTP (inicial)</option><option value="NEDC">Solo NEDC</option><option value="">Exploración conjunta (no comparable)</option></select></div>
-   <div class="field"><label for="statsOrder">Ordenar los 10</label><select id="statsOrder"><option value="asc">Menor a mayor</option><option value="desc">Mayor a menor</option></select></div>
-  </div>
-  <p>Primero selecciona la tecnología; PHEV y REEV habilitan indicadores específicos de rendimiento eléctrico y ponderado.</p><p id="statsMetricHint" class="stats-metric-hint" role="status" aria-live="polite">Costo energético estimado por 100 km, con tarifas editables.</p>
-  <p id="statsBodyHint" class="stats-body-hint" role="note"></p>
-  <div class="stats-summary"><div><span class="stats-live-indicator" aria-hidden="true"></span><strong id="statsSummaryTitle">Top 10 por costo energético</strong><p id="statsSummarySubtitle"></p></div><span id="statsResultCount" class="stats-count"></span></div>
-  <div id="statsNotice" class="stats-notice" role="status" aria-live="polite"></div>
-  <div id="statsRanking" class="stats-ranking" aria-live="polite"></div>
-  <p class="stats-footnote">Las categorías de carrocería siguen las denominaciones 3CV; «Station Wagon» puede incluir SUV, pero no es un segmento SUV verificado. NEDC y WLTP se identifican por ciclo y no son directamente equivalentes. Para híbridos enchufables (PHEV) y eléctricos con extensor (REEV) puedes consultar rendimiento eléctrico informado (km/kWh) y ponderado (km/L), sin suponer un costo combinado. Las denominaciones comerciales no se usan para inventar subcategorías híbridas.</p>
- </div>
-</dialog>
-<dialog id="detailDialog" class="modal" aria-labelledby="detailTitle">
- <div class="modal-head"><h2 id="detailTitle">Ficha del vehículo</h2><button type="button" class="button secondary" id="detailClose" aria-label="Cerrar ficha">Cerrar ×</button></div>
- <div id="detailContent" class="modal-body"></div>
-</dialog>
-<dialog id="compareDialog" class="modal compare-modal" aria-labelledby="compareTitle">
- <div class="modal-head"><div><h2 id="compareTitle">Comparación de vehículos</h2><p id="compareDialogSummary" class="compare-dialog-summary">Hasta cinco modelos, lado a lado.</p></div><button type="button" class="button secondary" id="compareClose" aria-label="Cerrar comparación">Cerrar ×</button></div>
- <div class="compare-dialog-toolbar">
-  <button type="button" id="compareDialogAdd" class="button primary">+ Agregar otro vehículo</button>
-  <span id="compareScrollHint">Desliza horizontalmente para revisar los vehículos.</span>
-  <div class="compare-scroll-actions">
-   <button type="button" id="comparePrev" class="button secondary" aria-label="Ver columnas anteriores">←</button>
-   <button type="button" id="compareNext" class="button secondary" aria-label="Ver columnas siguientes">→</button>
-  </div>
- </div>
- <div id="compareContent" class="modal-body compare-content"></div><div class="compare-share"><button id="shareCompare" type="button" class="button secondary">Copiar enlace de comparación</button><input id="compareShareLink" type="text" readonly aria-label="Enlace para compartir la comparación" hidden><p id="shareFeedback" role="status" aria-live="polite"></p></div>
-</dialog>
-<footer class="footer" id="fuentes">
- <div class="shell footer-minimal">
-  <span class="footer-credit">RINDELAB <span aria-hidden="true">·</span> Sebastián Elgueta Godoy</span>
-  <nav class="footer-links" aria-label="Información y contacto">
-   <a href="./metodologia.html">Fuentes y metodología</a>
-   <a href="mailto:e.elguetagodoy@gmail.com">Contacto</a>
-   <details class="footer-data"><summary>Más recursos</summary><a href="./marcas.html">Marcas</a><a href="./cobertura.html">Cobertura comercial</a><a href="./homologaciones.html">Homologaciones</a><a href="./novedades-3cv.html">Novedades 3CV</a><a href="./versiones.html">Versiones</a></details>
-  </nav>
-  <span id="recordCount" hidden>8.325</span>
- </div>
-</footer>
-<script src="./sii/sii.js?v=20261017-sii12" defer></script>
-<script src="./sii/prices.js?v=20261020-1485" defer></script>
-<script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261020-uxcompleta" defer></script>
-<script>
-/* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
-(function(){
- function openTarget(){
-   if (window.location.hash === '#supuestos') {
-     const panel=document.getElementById('supuestos');
-     if(panel) { panel.open=true; panel.removeAttribute('hidden'); }
-   }
- }
- window.addEventListener('hashchange',openTarget);
- if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',openTarget); else openTarget();
- const adjust=document.getElementById('scenarioAdjust');
- if(adjust) adjust.addEventListener('click',openTarget);
- const input=document.getElementById('chargeKwh');
- const title=document.getElementById('chargeExampleHeading');
- if(input&&title) input.addEventListener('input',function(){
-   const n=Number(input.value);if(Number.isFinite(n)&&n>0) title.textContent='¿Cuánto cuesta cargar '+new Intl.NumberFormat('es-CL',{maximumFractionDigits:1}).format(n)+' kWh de energía?';
+/* Las homologaciones MTT no tienen rendimiento en la base energética de mayo.
+ * Se consultan como un universo documental separado; jamás ingresan a all[]. */
+function mttTechnology(source){
+ const tech=normalize(source.technology),fuel=normalize(source.fuel);
+ if(tech.includes('rango extendido'))return 'REEV';
+ if(tech.includes('electrico a bateria'))return 'EV';
+ if(tech.includes('hibrido con recarga exterior'))return 'PHEV';
+ if(tech.includes('hibrido sin recarga exterior'))return 'HEV';
+ if(tech==='combustion interna'&&fuel==='diesel')return 'Diésel';
+ if(tech==='combustion interna'&&fuel==='gasolina')return 'Bencina';
+ return '';
+}
+function prepareMTT(source){
+ if(source.schemaVersion!==1||source.counts?.afterMayNewCodes!==229||source.counts.afterMayRows!==230||
+   source.recentRecords?.length!==230)throw Error('Cotejo oficial de septiembre incompleto');
+ const unique=new Set();
+ const items=source.recentRecords.filter(item=>!item.inMaySource).map(item=>{
+  if(!item.code||!item.brand||!item.model||!item.date||!item.certificate||
+    item.date<=cut||item.date>'2026-09-28'||unique.has(item.code))throw Error('Registro MTT inválido o duplicado');
+  unique.add(item.code);
+  const branded=aliases[item.brand]||item.brand;
+  const row=[];
+  row[F.BRAND]=branded;row[F.MODEL]=item.model;
+  row[F.TECH]=mttTechnology(item);row[F.DATE]=item.date;row[F.CODE]=item.code;
+  row[F.BODY]='';row[F.CYCLE]='';
+  return {source:item,row};
  });
+ if(items.length!==229||unique.size!==229)throw Error('Las 229 homologaciones MTT no cuadran con la fuente');
+ return items;
+}
+function filterMTT(f){
+ // La nómina MTT no informa carrocería ni ciclo de rendimiento equiparables.
+ if(f.body||f.cycle)return [];
+ return mttRecords.filter(item=>matchesText(item.row,f.q)&&matchesFilters(item.row,f));
+}
+function renderMTT(){
+ const container=$('mttSearchSection'),list=$('mttSearchList');list.replaceChildren();
+ container.hidden=!mttMatches.length;
+ $('mttSearchCount').textContent=fmt(mttMatches.length)+' '+(mttMatches.length===1?'homologación encontrada':'homologaciones encontradas')+' en la nómina MTT, pendiente de ficha energética oficial.';
+ for(const item of mttMatches.slice(0,mttLimit)){
+  const record=item.source,card=document.createElement('article');card.className='mtt-result-card';
+  const heading=document.createElement('div');heading.className='mtt-result-name';
+  const small=document.createElement('small');small.textContent=item.row[F.BRAND];heading.append(small);
+  const title=document.createElement('strong');title.textContent=record.model;heading.append(title);
+  const tag=document.createElement('em');tag.textContent='Solo homologación MTT · sin ficha energética en la consulta oficial de octubre';heading.append(tag);
+  const code=document.createElement('div');code.className='mtt-result-source';
+  code.append('Código 3CV: '+record.code);
+  const cert=document.createElement('small');cert.textContent=record.certificate+' · '+record.date;code.append(cert);
+  const link=document.createElement('a');link.href='./novedades-3cv.html?codigo='+encodeURIComponent(record.code);
+  link.textContent='Ver registro MTT y fuente ↗';code.append(link);
+  const status=document.createElement('div');status.className='mtt-result-metrics';
+  status.append(record.technology||'Tecnología no informada');
+  const note=document.createElement('small');note.textContent='Rendimiento: no disponible · Costo: no calculable';status.append(note);
+  card.append(heading,code,status);list.append(card);
+ }
+ const more=$('mttSearchMore');more.hidden=mttLimit>=mttMatches.length;
+ more.textContent='Mostrar más homologaciones MTT ('+fmt(mttMatches.length-mttLimit)+' pendientes)';
+}
+
+function setOptions(id,items,placeholder){
+ const element=$(id),current=element.value;
+ element.replaceChildren(new Option(placeholder,''),...items.map(item=>new Option(item.label||item.value,item.value)));
+ const valid=items.some(item=>item.value===current);
+ if(valid)element.value=current;
+ return !!current&&!valid;
+}
+function choices(){
+ // Only compatible brand/model options; never quietly invent or repeat empty entries.
+ const t=$('tech').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value;
+ const pool=all.filter(r=>(!t||r[F.TECH]===t)&&(!body||r[F.BODY]===body)&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
+ const mtPool=!body&&!cycle?mttRecords.filter(item=>(!t||item.row[F.TECH]===t)&&(!year||item.row[F.DATE].slice(0,4)>=year)):[];
+ const brands=[...new Set([...pool.map(r=>r[F.BRAND]),...mtPool.map(item=>item.row[F.BRAND])])].sort((a,b)=>a.localeCompare(b,'es')).map(x=>({value:x}));
+ const brandCleared=setOptions('brand',brands,'Todas las marcas');
+ const activeBrand=$('brand').value;
+ const modelSelect=$('model');
+ if(!activeBrand){modelSelect.disabled=true;modelSelect.replaceChildren(new Option('Primero selecciona una marca',''));}
+ else{
+  const families=new Map();
+  for(const r of pool){if(r[F.BRAND]!==activeBrand)continue;const label=family(r),k=normalize(label);if(!k)continue;families.set(k,label);}
+  for(const item of mtPool){const r=item.row;if(r[F.BRAND]!==activeBrand)continue;const label=family(r),k=normalize(label);if(k&&!families.has(k))families.set(k,label);}
+  const items=[...families].sort((a,b)=>a[1].localeCompare(b[1],'es',{numeric:true})).map(([value,label])=>({value,label}));
+  setOptions('model',items,'Todos los modelos');modelSelect.disabled=!items.length;
+ }
+ if(brandCleared)$('filterHint').textContent='La marca seleccionada no tiene versiones con esos filtros; se restableció la marca.';
+}
+function updateSuggestions(){
+ const q=normalize($('query').value),box=$('suggestions');
+ if(q.length<2){box.replaceChildren();return;}
+ const hit=[],seen=new Set();
+ for(const r of [...all,...mttRecords.map(item=>item.row)]){
+  const label=r[F.BRAND]+' '+family(r),k=normalize(label);
+  if((k.includes(q)||k.replace(/\s/g,'').includes(q.replace(/\s/g,'')))&&!seen.has(k)){
+   hit.push(new Option('',label));seen.add(k);if(hit.length===12)break;
+  }
+ }
+ box.replaceChildren(...hit);
+}
+
+function evCostForTariff(row,rate){
+ const perf=row[F.TECH]==='EV'?number(row[F.EL]):null;
+ return perf&&rate?100/perf*rate:null;
+}
+function sessionCost(rate){
+ const kwh=number($('chargeKwh').value);
+ return kwh&&kwh<=200&&rate?kwh*rate:null;
+}
+function fixedNumber(n){return Number(n).toLocaleString('es-CL',{maximumFractionDigits:2});}
+function updateChargingExample(){
+ const home=number($('homeChargeRate').value),publicRate=number($('publicChargeRate').value);
+ const homePrice=sessionCost(home),publicPrice=sessionCost(publicRate);
+ $('homeSessionCost').textContent=homePrice===null?'Ingresa tu tarifa':money(homePrice);
+ $('homeSessionRate').textContent=home?'Tarifa residencial elegida: '+money(home)+'/kWh':'Revisa tu boleta para conocer el precio';
+ $('publicSessionCost').textContent=publicPrice===null?'Ingresa kWh':money(publicPrice);
+ $('publicSessionRate').textContent='Copec Voltex · '+$('publicChargeRate').selectedOptions[0].textContent;
+ if(homePrice===null||publicPrice===null){
+  $('chargeDifference').textContent=(!number($('chargeKwh').value)||number($('chargeKwh').value)>200)?'Ingresa una cantidad válida de energía (1 a 200 kWh).':'Agrega tu tarifa domiciliaria para comparar.';
+ }else if(homePrice<publicPrice){
+  $('chargeDifference').textContent='Para esta energía, cargar en casa costaría '+money(publicPrice-homePrice)+' menos que la tarifa pública seleccionada.';
+ }else if(homePrice>publicPrice){
+  $('chargeDifference').textContent='Para esta energía, cargar en casa costaría '+money(homePrice-publicPrice)+' más que la tarifa pública seleccionada.';
+ }else{
+  $('chargeDifference').textContent='Ambas modalidades cuestan lo mismo para esta cantidad de energía.';
+ }
+}
+function calculateHomeFromBill(){
+ const total=number($('homeBillAmount').value),used=number($('homeBillKwh').value);
+ const fixedText=$('homeBillFixed').value.trim(),fixed=fixedText===''?0:Number(fixedText);
+ const result=$('homeBillStatus');
+ if(!total||!used||!Number.isFinite(fixed)||fixed<0||total<=fixed){
+  result.textContent='Verifica que el total y los kWh sean mayores que cero, y que los cargos fijos no superen el total.';
+  return;
+ }
+ const tariff=(total-fixed)/used;
+ if(tariff<1||tariff>10000){
+  result.textContent='La tarifa estimada está fuera del rango permitido. Revisa los montos y el consumo.';
+  return;
+ }
+ const approx=Math.round(tariff*100)/100;
+ $('homeChargeRate').value=String(approx);
+ result.textContent='Precio medio aproximado: $'+fixedNumber(approx)+'/kWh ('+money(total-fixed)+' ÷ '+fixedNumber(used)+' kWh). No equivale necesariamente al costo de añadir más consumo: revisa tramo, descuentos y cargos variables.';
+ updateChargeScenario();
+ refreshEnergyViews();
+}
+// Tarifas Copec Voltex de referencia verificadas el 18/10/2026; no se actualizan automáticamente.
+// La tarifa domiciliaria se introduce manualmente, sin medias supuestas.
+function updateChargeScenario(){
+ const mode=$('chargeScenario').value;
+ const publicRate=number($('publicChargeRate').value);
+ const homeRate=number($('homeChargeRate').value);
+ const homePart=Number($('homeChargeShare').value)/100;
+ const effective=$('electricPrice');
+ $('publicChargeField').hidden=mode==='home'||mode==='manual';
+ $('homeChargeField').hidden=mode==='public'||mode==='manual';
+ $('homeShareField').hidden=mode!=='mixed';
+ $('homeBillHelper').hidden=mode!=='home'&&mode!=='mixed';
+ effective.readOnly=mode!=='manual';
+ if(mode!=='manual'&&document.activeElement===effective)effective.blur();
+ let price=null,detail='';
+ if(mode==='public'){
+  price=publicRate;
+  detail='Copec Voltex · '+$('publicChargeRate').selectedOptions[0].textContent+'. Tarifa publicada, consulta 18/10/2026.';
+ }else if(mode==='home'){
+  price=homeRate;
+  detail=price?'Domicilio · tarifa ingresada por el usuario.':'Introduce tu precio de electricidad domiciliaria por kWh para calcular costos.';
+ }else if(mode==='mixed'){
+  if(homeRate&&publicRate)price=homeRate*homePart+publicRate*(1-homePart);
+  detail=price?'Escenario mixto: '+Math.round(homePart*100)+' % casa y '+Math.round((1-homePart)*100)+' % carga pública; promedio ponderado de tarifas, no de rendimientos.':
+   'Introduce tu tarifa de domicilio por kWh para calcular un escenario mixto.';
+ }else{
+  price=number(effective.value);
+  detail=price?'Tarifa manual elegida por el usuario.':'Introduce una tarifa manual positiva por kWh.';
+ }
+ if(mode!=='manual')effective.value=price===null?'':String(Math.round(price*100)/100);
+ $('chargeStatus').textContent=detail+(price!==null?' Tarifa efectiva: $'+Number(effective.value).toLocaleString('es-CL',{maximumFractionDigits:2})+'/kWh.':'');
+ updateChargingExample();
+}
+function refreshEnergyViews(){
+ updateScenarioSummary();
+ if(submitted)render();
+ if($('statsDialog').open)renderStatistics();
+ if($('compareDialog').open)renderComparisonContent();
+}
+function cost(row){
+ const t=row[F.TECH];
+ if(t==='PHEV'||t==='REEV')return null;
+ if(t==='EV'){const k=number(row[F.EL]),price=number($('electricPrice').value);return k&&price?100/k*price:null;}
+ const k=number(row[F.KM]),price=number($(t==='Diésel'||row[F.FUEL]==='Diésel'?'dieselPrice':'gasPrice').value);
+ return k&&price?100/k*price:null;
+}
+function annualEnergy(row,years=1){
+ const unit=cost(row),distance=number($('annualKm').value);
+ return unit===null||!distance?null:unit*distance/100*years;
+}
+function metric(row){
+ const t=row[F.TECH];
+ if(t==='EV')return number(row[F.EL])?fixed(row[F.EL])+' km/kWh':'No informado';
+ if(t==='PHEV'||t==='REEV'){
+  const portions=[];
+  if(number(row[F.EL]))portions.push('Eléctrico: '+fixed(row[F.EL])+' km/kWh');
+  if(number(row[F.PH]))portions.push('Ponderado: '+fixed(row[F.PH])+' km/L');
+  return portions.join(' · ')||'No informado';
+ }
+ return number(row[F.KM])?fixed(row[F.KM])+' km/L mixto':'No informado';
+}
+function sortRows(rows,sort){
+ const copy=[...rows];const cmpCost=(a,b)=>{const x=cost(a),y=cost(b);if(x===null)return y===null?0:1;if(y===null)return -1;return sort==='cheapest'?x-y:y-x;};
+ if(sort==='name')copy.sort((a,b)=>(a[F.BRAND]+' '+a[F.MODEL]).localeCompare(b[F.BRAND]+' '+b[F.MODEL],'es'));
+ else if(sort==='recent')copy.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
+ else if(sort==='cheapest'||sort==='expensive'){
+  // Una sola lista global por costo. El ciclo permanece visible en cada ficha;
+  // el orden no implica equivalencia experimental NEDC/WLTP.
+  copy.sort((a,b)=>cmpCost(a,b)||b[F.DATE].localeCompare(a[F.DATE]));
+ }
+ return copy;
+}
+function textSuggestions(criteria){
+ const box=$('suggested');box.replaceChildren();box.hidden=true;
+ if(!criteria.q||results.length||mttMatches.length)return;
+ // If the query exists but another facet hides it, offer a one-click global query.
+ const global=all.filter(r=>matchesText(r,criteria.q)).concat(mttRecords.filter(item=>matchesText(item.row,criteria.q)).map(item=>item.row));
+ if(global.length){
+  const button=document.createElement('button');button.type='button';button.textContent='Buscar '+fmt(global.length)+' coincidencias sin filtros';button.dataset.global='true';
+  box.append('Hay coincidencias fuera de tus filtros. ',button);box.hidden=false;return;
+ }
+ const options=new Map();
+ for(const row of [...all,...mttRecords.map(item=>item.row)]){
+  const name=family(row);
+  for(const label of [name,row[F.BRAND]+' '+name]){const key=normalize(label);if(key&&!options.has(key))options.set(key,label);}
+ }
+ const d=(a,b)=>{
+  if(Math.abs(a.length-b.length)>4)return 99;
+  const vals=Array.from({length:b.length+1},(_,i)=>i);
+  for(let i=1;i<=a.length;i++){let old=vals[0];vals[0]=i;for(let j=1;j<=b.length;j++){const before=vals[j];vals[j]=Math.min(vals[j]+1,vals[j-1]+1,old+(a[i-1]===b[j-1]?0:1));old=before;}}
+  return vals[b.length];
+ };
+ const picks=[...options].map(([key,label])=>({label,d:d(criteria.q,key)})).filter(x=>x.d>0&&x.d<=Math.max(2,Math.floor(criteria.q.length*.24))).sort((a,b)=>a.d-b.d||a.label.length-b.label.length).slice(0,3);
+ if(picks.length){box.append('¿Buscabas otro nombre? ');for(const x of picks){const btn=document.createElement('button');btn.type='button';btn.dataset.suggestion=x.label;btn.textContent=x.label;box.append(btn);}box.hidden=false;}
+}
+function syncSortAvailability(){
+ const hasCost=results.some(row=>cost(row)!==null);
+ for(const value of ['cheapest','expensive']){
+  const option=$('sort').querySelector('option[value="'+value+'"]');
+  if(option)option.disabled=!hasCost;
+ }
+ if(!hasCost&&['cheapest','expensive'].includes($('sort').value))$('sort').value='recent';
+ return hasCost;
+}
+function render(){
+ if(!submitted)return;
+ const costAvailable=syncSortAvailability();
+ const sorted=sortRows(results,$('sort').value),visible=sorted.slice(0,limit),sort=$('sort').value;
+ $('sourceLegend').hidden=!(results.length||mttMatches.length);
+ $('energyResultsHeading').hidden=!results.length;
+ $('energyResultsCount').textContent=fmt(results.length)+' fichas en esta búsqueda';
+ $('resultCount').textContent=fmt(results.length)+' '+(results.length===1?'versión encontrada':'versiones encontradas')+
+  (mttMatches.length?' · '+fmt(mttMatches.length)+' homologaciones MTT sin rendimiento':'');
+ $('emptyState').hidden=!!results.length||!!mttMatches.length;
+ if(!results.length&&!mttMatches.length)$('emptyState').innerHTML='<strong>Sin coincidencias</strong>Prueba con otra marca, modelo o quita un filtro técnico.';
+ renderMTT();
+ $('sortNote').hidden=costAvailable&&!['cheapest','expensive'].includes(sort);
+ if(!costAvailable&&results.length){
+  $('sortNote').textContent='No hay costo energético combinado calculable con los datos 3CV para esta selección. Se muestran por fecha de homologación. Para PHEV/REEV, consulta los rendimientos eléctrico y ponderado en Estadísticas.';
+  $('sortNote').hidden=false;
+ }else if(!costAvailable){
+  $('sortNote').hidden=true;
+ }else if(!$('sortNote').hidden){
+  $('sortNote').textContent='Orden único por costo estimado. Cada ficha indica WLTP o NEDC: son ensayos distintos y sus resultados no son directamente equivalentes. Los precios de energía son referenciales.';
+ }
+ const list=$('resultList');list.replaceChildren();
+ $('resultsTitle').textContent=results.length===1?'1 versión encontrada':fmt(results.length)+' versiones para comparar';
+ for(const row of visible){
+  const index=all.indexOf(row),article=document.createElement('article');article.className='vehicle-card';
+  const selectedNow=selected.includes(index);
+  const suffix=String(row[F.CODE]||'').slice(-9);
+  const stamp=String(row[F.DATE]||'');
+  const displayDate=/^\d{4}-\d{2}-\d{2}$/.test(stamp)?stamp.slice(8)+'-'+stamp.slice(5,7)+'-'+stamp.slice(0,4):stamp||'sin fecha';
+  const annual=annualEnergy(row),fiveYears=annualEnergy(row,5),per100=cost(row);
+  const annualKm=Number($('annualKm').value);
+  const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
+  article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
+   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p></div>'+
+   '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'" title="Categoría declarada en 3CV: '+safe(row[F.TECH])+'">'+safe(techHuman[row[F.TECH]]||row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'" title="'+safe(row[F.CYCLE]==='NEDC'?'Ensayo NEDC; no es directamente comparable con WLTP':row[F.CYCLE]==='WLTP'?'Ensayo WLTP; no es directamente comparable con NEDC':'Ciclo no informado')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
+   '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
+   '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
+   '<div class="vehicle-actions"><button type="button" class="button primary" data-detail="'+index+'">Ver ficha</button>'+
+   '<button type="button" class="button secondary" data-compare="'+index+'" aria-pressed="'+selectedNow+'">'+(selectedNow?'Quitar':'Comparar +')+'</button></div>'+
+   '<div class="vehicle-annual"><div class="vehicle-monthly"><small>Gasto mensual estimado</small><strong class="vehicle-monthly-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual/12)))+'</strong></div><small>Gasto energético anual estimado</small><strong class="vehicle-annual-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual)))+'</strong>'+
+   '<span>'+(annual===null?'Faltan datos de rendimiento o tarifa para calcularlo':'Con '+safe(fmt(annualKm))+' km al año · tarifas constantes')+'</span></div>'+
+   '<div class="vehicle-foot"><span class="vehicle-five-year">'+(fiveYears===null?'Sin proyección a 5 años':'5 años: '+safe(money(fiveYears))+' · tarifas constantes')+'</span>'+
+   '<small class="energy-source-line">Fuente: '+safe(source)+'</small></div>'+
+   (window.RindelabPhotos?.render(row,F,safe)||'<div class="vehicle-visual" aria-label="Fotografía de este vehículo no disponible"><svg viewBox="0 0 120 48" aria-hidden="true"><path d="M8 32h104l-3-12-17-4-13-10H38L22 20l-12 3z"/><path d="M37 19h48M12 32v6h13m70 0h13v-6"/><circle cx="31" cy="35" r="8"/><circle cx="89" cy="35" r="8"/></svg><small>Fotografía no disponible</small></div>');
+  list.append(article);
+ }
+ $('more').hidden=limit>=results.length;
+}
+function performSearch({scroll=true}={}){
+ const criteria=inputCriteria();
+ results=all.filter(r=>matchesText(r,criteria.q)&&matchesFilters(r,criteria));
+ mttMatches=filterMTT(criteria);
+ submitted=true;limit=10;mttLimit=6;
+ $('results').hidden=false;
+ $('filterHint').textContent='';
+ render();textSuggestions(criteria);
+ if(scroll)$('results').scrollIntoView({block:'start',behavior:'instant'});
+}
+function showDetail(i){
+ const r=all[i];if(!r)return;
+ $('detailTitle').textContent=r[F.BRAND]+' '+r[F.MODEL];
+ const link=new URL(location.href);link.searchParams.set('codigo',r[F.CODE]);link.searchParams.delete('comparar');
+ history.replaceState(null,'',link.pathname+link.search+link.hash);
+ const items=[
+  ['Marca de origen 3CV',r.sourceBrand],['Modelo y versión',r[F.MODEL]],
+  ['Motorización declarada 3CV',r.sourceTech],
+  ...(r.sourceTech!==r[F.TECH]?[['Motorización mostrada',r[F.TECH]]]:[]),
+  ...((r.sourceTech==='Bencina'&&/\b(?:HYBRID|HIBRID[OA]|HÍBRID[OA]|E-HYBRID|HEV)\b/i.test(r[F.MODEL]))?
+   [['Aclaración sobre el nombre comercial','El nombre contiene una referencia a tecnología híbrida, pero la fuente 3CV declara Bencina. RINDELAB no infiere una subtecnología.']]:[]),
+  ['Combustible',r[F.FUEL]],['Carrocería',r[F.BODY]],['Tracción',r[F.DRIVE]],
+  ['Transmisión',r[F.TRANS]],['Cilindrada',r[F.ENGINE]],
+  ['Ciclo de homologación',r[F.CYCLE]],['Fecha de homologación',r[F.DATE]],
+  ['Código 3CV',r[F.CODE]],
+  ...(isPlugInTechnology(r[F.TECH])?
+   [['Rendimiento eléctrico informado (km/kWh)',number(r[F.EL])?fixed(r[F.EL]):'N/D'],
+    ['Rendimiento ponderado informado (km/L)',number(r[F.PH])?fixed(r[F.PH]):'N/D']]:
+   [['Rendimiento oficial',metric(r)]]),
+  ['Costo energético estimado/100 km',isPlugInTechnology(r[F.TECH])?'No calculable sin supuestos de uso eléctrico y combustible':money(cost(r))],
+  ['Gasto energético anual estimado ('+fmt(Number($('annualKm').value))+' km)',money(annualEnergy(r))],
+  ['Gasto energético estimado a 3 años',money(annualEnergy(r,3))],
+  ['Gasto energético estimado a 5 años',money(annualEnergy(r,5))],
+  ...(r[F.TECH]==='EV'?[
+    ['Costo de 100 km cargando en casa',money(evCostForTariff(r,number($('homeChargeRate').value)))],
+    ['Costo de 100 km en electrolinera seleccionada',money(evCostForTariff(r,number($('publicChargeRate').value)))],
+    ['Costo de recarga en casa ('+fixedNumber(Number($('chargeKwh').value))+' kWh)',money(sessionCost(number($('homeChargeRate').value)))],
+    ['Costo de recarga pública ('+fixedNumber(Number($('chargeKwh').value))+' kWh)',money(sessionCost(number($('publicChargeRate').value)))]
+  ]:[]),
+  ...(r[F.TECH]==='EV'||isPlugInTechnology(r[F.TECH])?
+    [['Batería (kWh)',r[F.BAT]],['Conector AC',r[F.AC]],['Conector DC',r[F.DC]]].filter(([,v])=>v!==null&&v!==''&&v!=='N/D'):[]),
+  ['CO₂ (g/km)',r[F.CO2]],['Norma de emisiones',r[F.NORM]]
+ ];
+ const displayItems=items.filter(([k,v])=>{
+   const val=String(v??'').trim();
+   if(!val||val==='N/D'||val==='No aplica'||val==='0.0'||val==='0')return false;
+   if(r[F.TECH]==='EV'&&['Combustible','Cilindrada','CO₂ (g/km)'].includes(k))return false;
+   return true;
+  });
+  const annually=annualEnergy(r),km=Number($('annualKm').value),co2=number(r[F.CO2]);
+  const primary=[
+   ['Gasto energético anual estimado',annually===null?'No estimable':money(annually)],
+   ['Cada 100 km',cost(r)===null?'No estimable':money(cost(r))],
+   ['Rendimiento oficial',metric(r)],
+   ...(co2!==null&&r[F.TECH]!=='EV'?[['CO₂ homologado',fmt(co2)+' g/km']]:[])
+  ];
+  $('detailContent').innerHTML='<div class="detail-kpis">'+primary.map(([name,value],i)=>
+   '<div class="detail-kpi'+(i===0?' highlight':'')+'"><small>'+safe(name)+'</small><strong>'+safe(value)+'</strong></div>').join('')+'</div>'+
+   '<p class="detail-cost-context">Estimación con '+safe(fmt(km))+' km al año y tarifas editables; no es gasto medido. Gasto energético a cinco años, manteniendo precios constantes: <strong>'+safe(money(annualEnergy(r,5)))+'</strong>.</p>'+
+   '<div class="detail-purchase"><strong>¿Cuánto pagarías por comprarlo?</strong><p>El precio de lista depende de la versión comercial exacta. La homologación 3CV no demuestra esa correspondencia, por lo que RINDELAB no suma un precio de compra a esta ficha sin acreditarla.</p><a href="./cotizador.html?marca='+encodeURIComponent(r[F.BRAND])+'" class="button secondary">Consultar precios de lista por versión ↗</a></div>'+
+   '<details class="detail-technical"><summary>Datos técnicos y homologación oficial</summary><p class="note">'+
+   (isPlugInTechnology(r[F.TECH])?
+    'Los rendimientos eléctrico (km/kWh) y ponderado (km/L) son datos registrados en 3CV, bajo condiciones de ensayo. No se infiere un costo combinado.':
+    'Datos de homologación, no consumo garantizado en ruta. WLTP y NEDC corresponden a ensayos distintos.')+
+   '</p><dl class="details-list">'+displayItems.map(([k,v])=>'<dt>'+safe(k)+'</dt><dd>'+safe(v)+'</dd>').join('')+'</dl></details>';
+ $('detailDialog').showModal();
+ if(window.RindelabSII)window.RindelabSII.show(r,family(r));
+}
+const MAX_COMPARE=5;
+function syncCompareScrollControls(){
+ const scroller=$('compareContent').querySelector('.compare-scroller');
+ const buttons=document.querySelector('.compare-scroll-actions');
+ const overflow=!!scroller&&$('compareDialog').open&&scroller.scrollWidth>scroller.clientWidth+2;
+ buttons.hidden=!overflow;
+ $('compareScrollHint').hidden=!overflow;
+ $('comparePrev').disabled=!overflow||scroller.scrollLeft<=1;
+ $('compareNext').disabled=!overflow||scroller.scrollLeft>=scroller.scrollWidth-scroller.clientWidth-1;
+}
+function compareUpdate(message=''){
+ const n=selected.length;
+ $('compareTray').hidden=n===0;
+ document.body.classList.toggle('has-tray',n>0);
+ const nLabel=n===1?'1 vehículo seleccionado · agrega al menos uno más.':
+   n===MAX_COMPARE?'5 de 5 vehículos · puedes comparar o quitar uno para cambiarlo.':
+   n+' de 5 vehículos seleccionados · '+(n>=2?'puedes comparar o agregar otros.':'agrega otro vehículo.');
+ $('compareStatus').textContent=message||nLabel;
+ $('compareOpen').disabled=n<2;
+ $('compareOpen').textContent=n>=2?'Comparar '+n+' vehículos':'Comparar';
+ $('compareAdd').textContent=n===MAX_COMPARE?'Cambiar un vehículo':'+ Agregar otro';
+ const chipBox=$('compareSelected');chipBox.replaceChildren();
+ selected.forEach(i=>{
+  const r=all[i];if(!r)return;
+  const chip=document.createElement('div');chip.className='selected-vehicle-chip';
+  const label=document.createElement('span');label.className='selected-chip-label';
+  label.textContent=r[F.BRAND]+' '+r[F.MODEL];label.title=label.textContent;
+  const remove=document.createElement('button');remove.type='button';remove.className='selected-chip-remove';
+  remove.dataset.removeCompare=String(i);remove.setAttribute('aria-label','Quitar '+label.textContent+' de la comparación');
+  remove.textContent='×';chip.append(label,remove);chipBox.append(chip);
+ });
+ if($('compareDialog').open){
+  if(n<2)$('compareDialog').close();
+  else renderComparisonContent();
+  syncCompareScrollControls();
+ }
+}
+function selectForCompare(i){
+ if(!Number.isInteger(i)||!all[i])return;
+ const found=selected.indexOf(i);
+ if(found>=0)selected.splice(found,1);
+ else if(selected.length>=MAX_COMPARE){
+  compareUpdate('Ya seleccionaste cinco vehículos. Quita uno de la bandeja para agregar otro.');
+  return;
+ }else selected.push(i);
+ compareUpdate();if(submitted)render();
+}
+function goAddVehicle(){
+ if($('compareDialog').open)$('compareDialog').close();
+ const message=selected.length>=MAX_COMPARE?
+  'Ya tienes cinco vehículos. Quita uno de la bandeja para agregar otro modelo.':
+  'Escribe otra marca o modelo y pulsa Buscar. Conservaremos los vehículos seleccionados.';
+ compareUpdate(message);
+ $('query').scrollIntoView({block:'center',behavior:'instant'});
+ $('query').focus({preventScroll:true});
+}
+function renderComparisonContent(){
+ const vehicles=selected.map(i=>({index:i,row:all[i]})).filter(x=>x.row);
+ if(vehicles.length<2)return;
+ const uniqueCycles=new Set(vehicles.map(x=>x.row[F.CYCLE]).filter(Boolean));
+ const mixedCycles=uniqueCycles.size>1;
+ const columns=vehicles.length;
+ const containsPlugIn=vehicles.some(({row})=>isPlugInTechnology(row[F.TECH]));
+ const dataRows=[
+  ['Motorización',r=>r[F.TECH]],
+  ['Rendimiento oficial',r=>metric(r)],
+  ...(containsPlugIn?[
+   ['Rendimiento eléctrico (km/kWh)',r=>(isPlugInTechnology(r[F.TECH])||r[F.TECH]==='EV')&&number(r[F.EL])?fixed(r[F.EL]):'No aplica'],
+   ['Rendimiento ponderado (km/L)',r=>isPlugInTechnology(r[F.TECH])&&number(r[F.PH])?fixed(r[F.PH]):'No aplica']
+  ]:[]),
+  ['Costo estimado /100 km',r=>money(cost(r))],
+  ['Gasto anual ('+fmt(Number($('annualKm').value))+' km)',r=>money(annualEnergy(r))],
+  ['Gasto energético en 3 años',r=>money(annualEnergy(r,3))],
+  ['Gasto energético en 5 años',r=>money(annualEnergy(r,5))],
+  ['Ciclo de ensayo',r=>r[F.CYCLE]],
+  ['Homologación',r=>r[F.DATE]],
+  ['Carrocería',r=>r[F.BODY]],
+  ['Código 3CV',r=>r[F.CODE]]
+ ];
+ const esc=value=>safe(value===undefined||value===null||value===''?'N/D':value);
+ const header='<thead><tr class="compare-row header"><th scope="col" class="compare-label">Indicador</th>'+
+  vehicles.map(({index,row})=>'<th scope="col" class="compare-data compare-model-cell">'+
+   '<span class="compare-model-name">'+esc(row[F.BRAND]+' '+row[F.MODEL])+'</span>'+
+   '<span class="cycle-badge" data-cycle="'+esc(row[F.CYCLE])+'">'+esc(row[F.CYCLE]||'Sin ciclo')+'</span>'+
+   '<button type="button" data-remove-compare="'+index+'" class="compare-remove" aria-label="Quitar '+esc(row[F.BRAND]+' '+row[F.MODEL])+' de la comparación">Quitar ×</button></th>').join('')+'</tr></thead>';
+ const body='<tbody>'+dataRows.map(([title,get])=>'<tr class="compare-row"><th scope="row" class="compare-label">'+esc(title)+'</th>'+
+  vehicles.map(({row})=>'<td class="compare-data">'+esc(get(row))+'</td>').join('')+'</tr>').join('')+'</tbody>';
+ $('compareDialogSummary').textContent=columns+' de 5 vehículos seleccionados';
+ $('compareDialogAdd').textContent=columns===MAX_COMPARE?'Cambiar un vehículo':'+ Agregar otro vehículo';
+ $('compareContent').innerHTML=(mixedCycles?
+  '<div class="note"><strong>Atención:</strong> aquí hay ensayos NEDC y WLTP. Se muestran juntos, pero sus cifras no son directamente equivalentes.</div>':'')+
+  '<div class="compare-scroller" tabindex="0" role="region" aria-label="Tabla comparativa desplazable horizontalmente">'+
+  '<table class="comparison-table" style="--compare-columns:'+columns+'">'+header+body+'</table></div>'+
+  '<p class="compare-note">Costos energéticos referenciales por 100 km, no costo de propiedad ni consumo real. Para comparar rendimientos directamente, utiliza un mismo ciclo y tecnología.</p>';
+ if(window.RindelabSII)window.RindelabSII.decorateComparison(vehicles);
+ const scroller=$('compareContent').querySelector('.compare-scroller');
+ scroller.addEventListener('scroll',syncCompareScrollControls,{passive:true});
+ syncCompareScrollControls();
+}
+function openCompare(){
+ if(selected.length<2)return;
+ renderComparisonContent();
+ if(!$('compareDialog').open)$('compareDialog').showModal();
+ requestAnimationFrame(syncCompareScrollControls);
+}
+// Estadísticas independientes del catálogo: mostrar ciclo original y excluir proxies de costo PHEV/REEV.
+// Grupos exclusivos derivados de las 18 denominaciones exactas de carrocería 3CV.
+// «Station Wagon» no equivale a SUV comercial; «Jeep/Tipo Jeep» se agrupan aparte.
+const rankingBodies={
+ station:['Station Wagon'],
+ offroad:['Jeep','Tipo Jeep'],
+ sedan:['Sedán','Limusina'],
+ hatch:['Hatchback'],
+ pickup:['Camioneta'],
+ sport:['Coupé','Cabriolet','Convertible','Descapotable','Roadster'],
+ van:['Furgón','Van','Minivan','Microvan'],
+ bus:['Bus','Minibus']
+};
+function rankingPerformance(row){
+ return row[F.TECH]==='EV'?number(row[F.EL]):number(row[F.KM]);
+}
+function isPlugInTechnology(tech){return tech==='PHEV'||tech==='REEV';}
+function configureStatsMetric(){
+ const t=$('statsTech').value,isPlugIn=isPlugInTechnology(t),select=$('statsMetric');
+ for(const option of select.options){
+  if(option.value==='electric'||option.value==='weighted')option.disabled=!isPlugIn;
+  if(option.value==='cost'||option.value==='performance')option.disabled=isPlugIn;
+ }
+ if(isPlugIn&&['cost','performance'].includes(select.value))select.value='electric';
+ if(!isPlugIn&&['electric','weighted'].includes(select.value))select.value='cost';
+ $('statsMetricHint').textContent=isPlugIn?
+  'Para '+t+' se muestran rendimientos homologados registrados. No se calcula un costo energético combinado con datos ponderados.':
+  'Costo energético estimado por 100 km. En rendimiento, selecciona una motorización: las unidades deben ser homogéneas.';
+}
+function rankingTitle(metric,ascending){
+ const sort=ascending?'menor a mayor':'mayor a menor';
+ if(metric==='cost')return 'Top 10 · costo energético ('+sort+')';
+ if(metric==='performance')return 'Top 10 · rendimiento homologado ('+sort+')';
+ if(metric==='electric')return 'Top 10 · rendimiento eléctrico informado ('+sort+')';
+ return 'Top 10 · rendimiento ponderado informado ('+sort+')';
+}
+function rankingValue(row,metric){
+ if(metric==='cost')return cost(row);
+ if(metric==='performance')return rankingPerformance(row);
+ if(metric==='electric')return number(row[F.EL]);
+ if(metric==='weighted')return number(row[F.PH]);
+ return null;
+}
+function renderStatistics(){
+ const metric=$('statsMetric').value,tech=$('statsTech').value,body=$('statsBody').value,cycle=$('statsCycle').value,ascending=$('statsOrder').value==='asc';
+ const note=$('statsNotice'),ranking=$('statsRanking');
+ const isPerformance=metric==='performance',isElectric=metric==='electric',isWeighted=metric==='weighted';
+ $('statsSummaryTitle').textContent=rankingTitle(metric,ascending);
+ $('statsSummarySubtitle').textContent=(cycle||'NEDC + WLTP')+' · '+(tech||'Todas las motorizaciones')+' · '+(body?$('statsBody').selectedOptions[0].text:'Todas las carrocerías');
+ $('statsBodyHint').textContent=body==='station'?'El 3CV declara «Station Wagon», categoría que puede incluir modelos comercializados como SUV; no es un ranking exclusivo de SUV.':body==='offroad'?'Agrupa únicamente las carrocerías «Jeep» y «Tipo Jeep» declaradas al 3CV; no incluye todos los SUV.':'';
+ ranking.replaceChildren();note.textContent='';$('statsResultCount').textContent='';
+ if(!all.length){note.textContent='Cargando datos oficiales…';return;}
+ if(isPerformance&&!tech){
+  note.textContent='Selecciona una motorización para ordenar por rendimiento: km/L y km/kWh no son unidades equivalentes.';
+  return;
+ }
+ if((isElectric||isWeighted)&&!isPlugInTechnology(tech)){
+  note.textContent='Selecciona PHEV o REEV para revisar sus datos eléctricos o ponderados informados por 3CV.';
+  return;
+ }
+ if(isPlugInTechnology(tech)&&metric==='cost'){
+  note.textContent='No se estima un costo combinado de PHEV o REEV desde consumos ponderados. Elige rendimiento eléctrico o rendimiento ponderado, ambos disponibles en la fuente.';
+  return;
+ }
+ const candidate=all.filter(row=>(!tech||row[F.TECH]===tech)&&(!cycle||row[F.CYCLE]===cycle)&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
+ const scored=candidate.map(row=>({row,value:rankingValue(row,metric)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
+ scored.sort((a,b)=>(ascending?a.value-b.value:b.value-a.value)||b.row[F.DATE].localeCompare(a.row[F.DATE])||(a.row[F.BRAND]+' '+a.row[F.MODEL]).localeCompare(b.row[F.BRAND]+' '+b.row[F.MODEL],'es'));
+ $('statsResultCount').textContent=fmt(scored.length)+' fichas con esta medida';
+ if(!scored.length){
+  ranking.innerHTML='<div class="stats-empty"><strong>No hay fichas con esta medida y esos filtros.</strong><p>Prueba otro ciclo, carrocería o motorización.</p></div>';
+  return;
+ }
+ if(metric==='cost')note.textContent=cycle?
+  'Ranking de costos energéticos estimados solo para '+cycle+'. Las tarifas son supuestos editables; tecnologías y segmentos pueden diferir.':
+  'Exploración conjunta solicitada: NEDC y WLTP no son directamente comparables. No interpretes las posiciones como una superioridad homologada.';
+ if(isPerformance)note.textContent='Rendimiento homologado de una sola motorización, en '+(tech==='EV'?'km/kWh':'km/L')+'. '+(cycle?'Ciclo: '+cycle+'.':'Incluye NEDC y WLTP identificados en cada ficha; los ensayos no son directamente equivalentes.');
+ if(isElectric)note.textContent='Rendimiento eléctrico informado por el 3CV (km/kWh). No constituye un costo combinado ni garantiza el rendimiento en conducción real. Los ensayos WLTP y NEDC permanecen identificados y no son directamente equivalentes.';
+ if(isWeighted)note.textContent='Rendimiento ponderado informado por el 3CV (km/L). Depende del procedimiento y supuestos del ensayo, incluida la utilización de energía eléctrica; no equivale al rendimiento con batería descargada ni permite estimar un costo combinado confiable.';
+ const ten=scored.slice(0,10),maxValue=Math.max(...ten.map(p=>p.value),1);
+ for(let i=0;i<ten.length;i++){
+  const {row,value}=ten[i],index=all.indexOf(row);
+  const label=metric==='cost'?money(value):fixed(value)+(isElectric?' km/kWh':isWeighted?' km/L pond.':tech==='EV'?' km/kWh':' km/L');
+  const item=document.createElement('button');item.type='button';item.className='rank-item';item.dataset.statsDetail=String(index);
+  item.setAttribute('aria-label','Ver ficha de '+row[F.BRAND]+' '+row[F.MODEL]+', '+label);
+  const valuesExtra=isPlugInTechnology(tech)?
+   ' · Eléc. '+fixed(row[F.EL])+' km/kWh · Ponderado '+fixed(row[F.PH])+' km/L':'';
+  item.innerHTML='<span class="rank-number">'+String(i+1).padStart(2,'0')+'</span>'+
+   '<span class="rank-main"><strong>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</strong>'+
+   '<small>'+safe(row[F.TECH])+' · '+safe(row[F.BODY]||'Carrocería no informada')+
+   ' <span class="rank-cycle" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></small>'+
+   (isPlugInTechnology(tech)?'<small class="rank-metrics">'+safe(valuesExtra)+'</small>':'')+
+   '<span class="rank-track"><span class="rank-fill" style="width:'+Math.max(4,value/maxValue*100).toFixed(2)+'%"></span></span></span>'+
+   '<span class="rank-value">'+safe(label)+'<span class="rank-arrow" aria-hidden="true">↗</span></span>';
+  ranking.append(item);
+ }
+}
+$('statsOpen').disabled=true;
+$('statsOpen').addEventListener('click',()=>{
+ $('statsDialog').showModal();configureStatsMetric();renderStatistics();
+});
+$('statsClose').addEventListener('click',()=>$('statsDialog').close());
+$('statsTech').addEventListener('change',()=>{configureStatsMetric();renderStatistics();});
+for(const id of ['statsMetric','statsBody','statsCycle','statsOrder'])$(id).addEventListener('change',renderStatistics);
+$('statsRanking').addEventListener('click',event=>{
+ const button=event.target.closest('[data-stats-detail]');
+ if(!button)return;
+ $('statsDialog').close();showDetail(Number(button.dataset.statsDetail));
+});
+
+async function init(){
+ try{
+  const manifest=await fetch('../vehiculos/data/manifest.json').then(r=>{if(!r.ok)throw Error('No se pudo cargar el manifiesto 3CV');return r.json();});
+  cut=manifest.published||cut;
+  const files=await Promise.all(manifest.files.map(file=>fetch('../vehiculos/'+file).then(r=>{if(!r.ok)throw Error('Falta '+file);return r.json();})));
+  const legacy=files.flat().filter(r=>r&&r[F.BRAND]&&r[F.MODEL]&&r[F.DATE]&&r[F.DATE]<=cut);
+  if(!window.RindelabOfficialAPI)throw Error('Falta el módulo de actualización de Consumo Vehicular');
+  const officialFiles=await Promise.all([1,2,3,4].map(i=>{
+   const name='./data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json';
+   return fetch(name).then(r=>{if(!r.ok)throw Error('No disponible '+name);return r.json();});
+  }));
+  const additional=window.RindelabOfficialAPI.load(officialFiles,legacy);
+  for(const row of additional)officialCodes.add(row[F.CODE]);
+  all=legacy.concat(additional).map(cleanRow);
+  all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
+  $('recordCount').textContent=fmt(all.length);
+  $('statsOpen').disabled=false;
+  // La base MTT es opcional: un fallo de red nunca impide la búsqueda energética.
+  try{
+   const response=await fetch('./sii/mtt-sept-2026-may-2026-cross.json?v=20261018-mtt229-search');
+   if(!response.ok)throw Error('HTTP '+response.status);
+   mttRecords=prepareMTT(await response.json()).filter(item=>!officialCodes.has(item.row[F.CODE]));
+   if(mttRecords.length!==1||mttRecords[0].row[F.CODE]!=='PO10585EL0726M01-9')throw Error('Brecha MTT/API inconsistente');
+   mttLoadError='';
+  }catch(e){
+   mttRecords=[];mttLoadError='No se pudo cargar el cruce MTT; los rendimientos de mayo y octubre siguen disponibles.';
+  }
+  $('mttLoadNotice').hidden=!mttLoadError;
+  $('mttLoadNotice').textContent=mttLoadError;
+  const bodies=[...new Set(all.map(r=>r[F.BODY]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es')).map(value=>({value}));
+  setOptions('bodytype',bodies,'Todas las carrocerías');choices();
+  $('searchButton').disabled=false;
+  // Preserve direct navigation from older ficha permalinks.
+  const query=new URLSearchParams(location.search),code=query.get('codigo');
+  if(code){const i=all.findIndex(r=>r[F.CODE]===code);if(i>=0)showDetail(i);}
+  const comparisonCodes=(query.get('comparar')||'').split(',').filter(Boolean).slice(0,MAX_COMPARE);
+  if(!code&&comparisonCodes.length>=2){
+   selected=[...new Set(comparisonCodes.map(c=>all.findIndex(r=>r[F.CODE]===c)).filter(i=>i>=0))];
+   if(selected.length>=2){compareUpdate();openCompare();}
+  }
+ }catch(error){
+  $('filterHint').textContent='No se pudo cargar la base oficial: '+error.message+'. Intenta actualizar la página.';
+  $('searchButton').disabled=true;
+ }
+}
+$('searchButton').disabled=true;
+$('vehicleForm').addEventListener('submit',event=>{event.preventDefault();if(all.length)performSearch();});
+$('resetButton').addEventListener('click',()=>{
+ for(const id of ['query','brand','model','tech','bodytype','cycle','year'])$(id).value='';
+ choices();$('sort').value='recent';submitted=false;results=[];mttMatches=[];mttLimit=6;compareUpdate();
+ $('results').hidden=true;$('mttSearchSection').hidden=true;$('sourceLegend').hidden=true;$('energyResultsHeading').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
+});
+for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
+ if(id==='brand')$('model').value='';
+ if(id!=='model')choices();
+ $('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';
+});
+$('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';});
+$('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
+$('sort').addEventListener('change',render);
+$('mttSearchMore').addEventListener('click',()=>{mttLimit+=10;renderMTT();});
+for(const id of ['gasPrice','dieselPrice','annualKm'])$(id).addEventListener('change',refreshEnergyViews);
+document.querySelectorAll('[data-rinde-explore]').forEach(button=>button.addEventListener('click',()=>{
+ if(!all.length)return;
+ for(const id of ['query','brand','model','bodytype','cycle','year'])$(id).value='';
+ if(button.dataset.rindeExplore==='lowest'){$('tech').value='';$('sort').value='cheapest';}
+ else{$('tech').value=button.dataset.rindeExplore;$('sort').value='recent';}
+ choices();performSearch();
+}));
+for(const id of ['chargeScenario','publicChargeRate','homeChargeShare']){
+ $(id).addEventListener('change',()=>{updateChargeScenario();refreshEnergyViews();});
+}
+$('homeChargeRate').addEventListener('input',()=>{
+ updateChargeScenario();
+ refreshEnergyViews();
+});
+const tariffDirectory={
+ enel:{url:'https://www.enel.cl/es/clientes/tarifas-y-regulacion/tarifas.htmlSi.html',label:'Enel Distribución: documento BT1 publicado para octubre 2026. La comuna por sí sola no determina el costo completo por kWh.'},
+ cge:{url:'https://www.sec.cl/contactar-distribuidora/',label:'CGE: revisa la distribuidora y las condiciones del pliego desde el directorio SEC; no se infiere una tarifa por comuna.'},
+ chilquinta:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Chilquinta: verifica los pliegos BT1 y la red de conexión desde las fuentes oficiales SEC.'},
+ saesa:{url:'https://web.gruposaesa.cl/es/web/saesa/pago-y-boleta/tarifas-vigentes',label:'Saesa: consulta los pliegos vigentes por comuna y tipo de red; no hay precio por kWh precargado.'},
+ frontel:{url:'https://web.gruposaesa.cl/web/frontel/pago-y-boleta/tarifas-vigentes',label:'Frontel: consulta los pliegos de suministro regulado en su portal oficial.'},
+ otra:{url:'https://www.sec.cl/contactar-distribuidora/',label:'Otra empresa: identifica tu distribuidora y accede al pliego oficial mediante SEC.'}
+};
+let enelDocument=null,enelPending=null;
+function updateBt1Description(){
+ if(!enelDocument)return;
+ const commune=$('tariffCommune').value,network=$('tariffNetwork').value,etr=$('tariffEtr').value;
+ const status=$('tariffEnelStatus');
+ if(!commune){status.textContent='Selecciona la comuna y revisa la RED y el tramo ETR en la boleta. No hay un precio BT1 único nacional.';return;}
+ const incomplete=[!network?'tipo de RED':'',!etr?'tramo ETR':''].filter(Boolean);
+ status.textContent='Pliego Enel '+enelDocument.documentMonth+' · '+commune+' · '+(network||'RED por confirmar')+' · '+(etr||'ETR por confirmar')+'. '+
+  (incomplete.length?'Falta verificar '+incomplete.join(' y ')+'. ':'')+
+  'La tarifa completa no está normalizada para esta combinación; abre el PDF de la distribuidora. El componente cargo por energía no representa el costo marginal de cargar.';
+}
+async function showBt1Directory(){
+ const key=$('tariffDistributor').value,info=tariffDirectory[key],link=$('tariffSourceLink');
+ $('tariffSourceDescription').textContent=info?.label||'Selecciona tu distribuidora desde la boleta. La comuna sola no basta para determinar la tarifa.';
+ link.href=info?.url||'https://www.sec.cl/contactar-distribuidora/';
+ link.textContent=info?'Abrir pliego o directorio oficial ↗':'Directorio de distribuidoras y tarifas SEC ↗';
+ $('tariffEnelDetails').hidden=key!=='enel';
+ if(key!=='enel')return;
+ try{
+  enelPending??=fetch('./data/tarifas-bt1-enel-oct2026.json?v=20261018-bt1oct').then(r=>{if(!r.ok)throw Error('Fuente BT1 no disponible');return r.json();});
+  const doc=await enelPending;
+  if(doc.schemaVersion!==1||doc.tariff!=='BT1'||doc.documentMonth!=='2026-10'||!Array.isArray(doc.coveredMunicipalities)||doc.completeMarginalRateClpPerKwh!==null)throw Error('Documento BT1 sin garantías de vigencia o tarifa');
+  enelDocument=doc;
+  $('tariffCommune').replaceChildren(new Option('Selecciona una comuna del pliego',''),...doc.coveredMunicipalities.map(x=>new Option(x,x)));
+  $('tariffSourceLink').href=doc.officialDocumentUrl;
+  $('tariffSourceLink').textContent='Abrir pliego Enel BT1 octubre 2026 (PDF) ↗';
+  updateBt1Description();
+ }catch(err){enelPending=null;$('tariffEnelStatus').textContent='No fue posible cargar el índice del pliego oficial: '+err.message+'. Revisa el sitio Enel desde el enlace.';}
+}
+$('tariffDistributor').addEventListener('change',showBt1Directory);
+for(const id of ['tariffCommune','tariffNetwork','tariffEtr'])$(id).addEventListener('change',updateBt1Description);
+$('calcHomeFromBill').addEventListener('click',calculateHomeFromBill);
+$('chargeKwh').addEventListener('input',updateChargingExample);
+$('electricPrice').addEventListener('change',()=>{
+ // Un change diferido al perder foco no debe reactivar tarifa manual después de
+ // seleccionar casa/mixto/público. El campo es editable solo en modo manual.
+ if($('chargeScenario').value!=='manual'){
+  updateChargeScenario();
+  return;
+ }
+ updateChargeScenario();refreshEnergyViews();
+});
+$('resultList').addEventListener('click',event=>{
+ const detail=event.target.closest('[data-detail]'),comparison=event.target.closest('[data-compare]');
+ if(detail)showDetail(Number(detail.dataset.detail));
+ if(comparison)selectForCompare(Number(comparison.dataset.compare));
+});
+$('more').addEventListener('click',()=>{limit+=10;render();});
+$('suggested').addEventListener('click',event=>{
+ const btn=event.target.closest('button');if(!btn)return;
+ if(btn.dataset.global){for(const id of ['brand','model','tech','bodytype','cycle','year'])$(id).value='';choices();}
+ else if(btn.dataset.suggestion){$('query').value=btn.dataset.suggestion;for(const id of ['brand','model','tech','bodytype','cycle','year'])$(id).value='';choices();}
+ performSearch();
+});
+$('compareOpen').addEventListener('click',openCompare);
+$('compareAdd').addEventListener('click',goAddVehicle);
+$('compareDialogAdd').addEventListener('click',goAddVehicle);
+$('compareSelected').addEventListener('click',event=>{
+ const remove=event.target.closest('[data-remove-compare]');if(remove)selectForCompare(Number(remove.dataset.removeCompare));
+});
+$('compareContent').addEventListener('click',event=>{
+ const remove=event.target.closest('[data-remove-compare]');if(remove)selectForCompare(Number(remove.dataset.removeCompare));
+});
+for(const [id,direction] of [['comparePrev',-1],['compareNext',1]]){
+ $(id).addEventListener('click',()=>{
+  const scroller=$('compareContent').querySelector('.compare-scroller');if(!scroller)return;
+  const cells=scroller.querySelectorAll('thead .compare-data');
+  const step=cells[0]?.getBoundingClientRect().width||190;
+  scroller.scrollBy({left:direction*step,behavior:'smooth'});
+ });
+}
+$('compareClear').addEventListener('click',()=>{selected=[];compareUpdate();if(submitted)render();});
+$('compareClose').addEventListener('click',()=>$('compareDialog').close());
+$('shareCompare').addEventListener('click',async()=>{
+ if(selected.length<2)return;
+ const url=new URL(location.href);
+ url.searchParams.delete('codigo');
+ url.searchParams.set('comparar',selected.map(i=>all[i][F.CODE]).join(','));
+ const link=url.toString(),field=$('compareShareLink');
+ field.hidden=false;field.value=link;field.focus();field.select();
+ try{if(!navigator.clipboard?.writeText)throw Error('No clipboard');await navigator.clipboard.writeText(link);
+  $('shareFeedback').textContent='Enlace copiado. Incluye los códigos de los vehículos seleccionados.';
+ }catch{
+  $('shareFeedback').textContent='Selecciona y copia el enlace del campo para compartir la comparación.';
+ }
+});
+window.addEventListener('resize',syncCompareScrollControls);
+$('detailClose').addEventListener('click',()=>$('detailDialog').close());
+$('mobileNav').querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{$('mobileNav').open=false;}));
+$('detailDialog').addEventListener('close',()=>{const url=new URL(location.href);if(url.searchParams.has('codigo')){url.searchParams.delete('codigo');history.replaceState(null,'',url.pathname+url.search+url.hash);}});
+if(window.RindelabSII)window.RindelabSII.family=family;
+updateChargeScenario();
+updateScenarioSummary();
+init();
 })();
-</script>
-</body>
-</html>
