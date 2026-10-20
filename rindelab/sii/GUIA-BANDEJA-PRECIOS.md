@@ -66,6 +66,6 @@ El CSV de 11 conserva `modelo_fuente_3cv`, `codigo_3cv_referencia` y otros campo
 - [Informe Markdown de JAC, Dongfeng y MINI](./LOTE-36-PRECIOS-20261019.md).
 - Se incorpora al JSON comercial un único lote documentado, con 28 versiones JAC convencionales, 1 Dongfeng EV y 7 eléctricos MINI. Los precios están separados de los bonos y no suponen equivalencia 3CV.
 
-## Lote con 1.032 registros comerciales (19/10/2026)
+## Lote con 1.028 registros comerciales (19/10/2026)
 
-El listado de **626 precios adicionales** con fuentes y el cruce documental está en [LOTE-META-1000-20261019.md](./LOTE-META-1000-20261019.md). La base pública solo se actualizará al aprobar GitHub Actions. Las 304 denominaciones de 3CV estudiadas antes siguen siendo un inventario técnico sin relación automática con las versiones de venta.
+El listado de **622 precios adicionales** con fuentes y el cruce documental está en [LOTE-META-1000-20261019.md](./LOTE-META-1000-20261019.md). La base pública solo se actualizará al aprobar GitHub Actions. Las 304 denominaciones de 3CV estudiadas antes siguen siendo un inventario técnico sin relación automática con las versiones de venta.
