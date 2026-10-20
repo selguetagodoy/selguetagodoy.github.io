@@ -648,7 +648,7 @@ await test('Catálogo de precios de lista sin bonos con fuente oficial',async()=
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl|www\.mini\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.cartoni\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl|www\.mini\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -2235,6 +2235,20 @@ for(const pageName of ['index.html','cotizador.html']){
   await p.close();
  });
 }
+await test('Pompeyo: 8 versiones Lynk & Co cotejadas individualmente con Cartoni',async()=>{
+ const sourcePage=await browser.newPage({viewport:{width:1280,height:800}});
+ await sourcePage.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ const candidate=await sourcePage.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ const items=candidate.filter(x=>x.brand==='Lynk & Co');
+ assert.equal(items.length,8);
+ assert.equal(items.filter(x=>x.technology==='PHEV').length,4);
+ assert.equal(items.filter(x=>x.technology==='MHEV').length,1);
+ assert.equal(items.find(x=>x.family==='01'&&x.version==='PRO')?.priceListClp,29490000);
+ assert.equal(items.find(x=>x.family==='08'&&x.version==='HALO')?.priceListClp,43990000);
+ assert.equal(items.find(x=>x.family==='09'&&x.version==='HALO')?.priceListClp,45990000);
+ assert(items.every(x=>x.source.startsWith('https://www.cartoni.cl/nuevo/lynk-co/')));
+ await sourcePage.close();
+});
 await test('Lote 36: comprobar JAC, Dongfeng EV y MINI eléctricos',async()=>{
  const testPage=await browser.newPage({viewport:{width:1280,height:800}});
  await testPage.goto(base+'cotizador.html',{waitUntil:'networkidle'});

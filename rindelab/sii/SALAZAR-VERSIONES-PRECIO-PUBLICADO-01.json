@@ -1,0 +1,717 @@
+{
+  "rows": [
+    {
+      "brand": "byd",
+      "model": "byd-song-plus",
+      "version": "SONG PLUS 1.5T GL",
+      "priceShownClp": 26990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-plus"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-song-plus",
+      "version": "SONG PLUS 1.5T GS",
+      "priceShownClp": 28990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-plus"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-sealion-7-ev",
+      "version": "SEALION 7 EV RWD 440 km GL",
+      "priceShownClp": 36990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-sealion-7-ev"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-sealion-7-ev",
+      "version": "SEALION 7 EV AWD 440 km GS",
+      "priceShownClp": 43990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-sealion-7-ev"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-yuan-plus",
+      "version": "YUAN PLUS GS",
+      "priceShownClp": 22990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-yuan-plus"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-song-pro",
+      "version": "SONG PRO GL",
+      "priceShownClp": 21990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-pro"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-song-pro",
+      "version": "SONG PRO GS",
+      "priceShownClp": 23990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-pro"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-atto-8-dm",
+      "version": "ATTO 8 DM-i GL",
+      "priceShownClp": 43990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-atto-8-dm"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-atto-8-dm",
+      "version": "ATTO 8 DM-p GS",
+      "priceShownClp": 48990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-atto-8-dm"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-cr-v-advanced-hybrid",
+      "version": "CR-V Advanced Hybrid Aut. 4x4",
+      "priceShownClp": 46990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-cr-v-advanced-hybrid"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-zr-v-hybrid",
+      "version": "ZR-V Hybrid 2.0 Aut. 4X2",
+      "priceShownClp": 33990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-zr-v-hybrid"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-cr-v",
+      "version": "New CR-V Touring 1.5 Turbo Aut. 4X4",
+      "priceShownClp": 39990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-cr-v"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-hr-v",
+      "version": "HR-V Touring 1.5 Aut. 4X2",
+      "priceShownClp": 24990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-hr-v"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-nueva-pilot",
+      "version": "PILOT TOURING 3.5 (10) Aut. 4X4",
+      "priceShownClp": 57990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-nueva-pilot"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-nueva-pilot",
+      "version": "PILOT ELITE 3.5 (10) Aut. 4X4",
+      "priceShownClp": 59990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-nueva-pilot"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-jaecoo5",
+      "version": "Jaecoo5 1,5T CVT Elemental",
+      "priceShownClp": 13490000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo5"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-jaecoo5",
+      "version": "Jaecoo5 1,5T CVT Prime",
+      "priceShownClp": 14490000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo5"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-jaecoo5",
+      "version": "Jaecoo5 1,5T CVT Summit",
+      "priceShownClp": 16490000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo5"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-jaecoo6",
+      "version": "Jaecoo6 Andes",
+      "priceShownClp": 22990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Rwd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo6"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-jaecoo6",
+      "version": "Jaecoo6 Patagonia i-WD",
+      "priceShownClp": 28490000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo6"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-j7-shs",
+      "version": "Jaecoo7 1,5T Andes SHS",
+      "priceShownClp": 22990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-j7-shs"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-j7-shs",
+      "version": "Jaecoo7 1,5T Patagonia SHS",
+      "priceShownClp": 25990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-j7-shs"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-jaecoo7",
+      "version": "Jaecoo7 1,6T New Elemental",
+      "priceShownClp": 17490000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo7"
+    },
+    {
+      "brand": "jaecoo",
+      "model": "jaecoo-jaecoo7",
+      "version": "Jaecoo7 1,6T New Prime",
+      "priceShownClp": 20990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo7"
+    },
+    {
+      "brand": "land-rover",
+      "model": "land-rover-defender",
+      "version": "DEFENDER 90 3.0iD S",
+      "priceShownClp": 89900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-defender"
+    },
+    {
+      "brand": "land-rover",
+      "model": "land-rover-defender",
+      "version": "DEFENDER 110 3.0iD S",
+      "priceShownClp": 96900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-defender"
+    },
+    {
+      "brand": "land-rover",
+      "model": "land-rover-defender",
+      "version": "NEW DEFENDER 110 3.0iD X-DYNAMIC SE",
+      "priceShownClp": 117900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-defender"
+    },
+    {
+      "brand": "land-rover",
+      "model": "land-rover-evoque",
+      "version": "RANGE ROVER EVOQUE 2.0iD S",
+      "priceShownClp": 61900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-evoque"
+    },
+    {
+      "brand": "land-rover",
+      "model": "land-rover-range-rover-velar",
+      "version": "RANGE ROVER VELAR 3.0i BELGRAVIA EDITION",
+      "priceShownClp": 84900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover-velar"
+    },
+    {
+      "brand": "land-rover",
+      "model": "land-rover-range-rover",
+      "version": "RANGE ROVER SPORT 3.0iD DYNAMIC HSE",
+      "priceShownClp": 149900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover"
+    },
+    {
+      "brand": "porsche",
+      "model": "porsche-macan",
+      "version": "MACAN R4 III",
+      "priceShownClp": 69900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan"
+    },
+    {
+      "brand": "porsche",
+      "model": "porsche-macan",
+      "version": "MACAN T III",
+      "priceShownClp": 71900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan"
+    },
+    {
+      "brand": "porsche",
+      "model": "porsche-macan",
+      "version": "MACAN S III",
+      "priceShownClp": 89900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan"
+    },
+    {
+      "brand": "porsche",
+      "model": "porsche-macan",
+      "version": "MACAN 4 ELECTRIC",
+      "priceShownClp": 103500000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan"
+    },
+    {
+      "brand": "porsche",
+      "model": "porsche-cayenne",
+      "version": "CAYENNE V6 E3 II BLACK EDITION",
+      "priceShownClp": 104500000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-cayenne"
+    },
+    {
+      "brand": "porsche",
+      "model": "porsche-cayenne",
+      "version": "CAYENNE TURBO ELECTRIC E4",
+      "priceShownClp": 184000000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-cayenne"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-dolphin-mini",
+      "version": "DOLPHIN MINI GL",
+      "priceShownClp": 14990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-dolphin-mini"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-dolphin-mini",
+      "version": "DOLPHIN MINI GS",
+      "priceShownClp": 15990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-dolphin-mini"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-seal",
+      "version": "SEAL GS",
+      "priceShownClp": 49990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-seal"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-yuan-pro-dm-i",
+      "version": "YUAN PRO DM-I GL",
+      "priceShownClp": 18990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-yuan-pro-dm-i"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-yuan-pro-dm-i",
+      "version": "YUAN PRO DM-I GS",
+      "priceShownClp": 21990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-yuan-pro-dm-i"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-wr-v",
+      "version": "New WR-V EX 1.5 Aut.",
+      "priceShownClp": 19990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-wr-v"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-wr-v",
+      "version": "WR-V TOURING 1.5 Aut.",
+      "priceShownClp": 21990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-wr-v"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-civic",
+      "version": "Civic Touring 1,5 T. Lts. Sedan 4P. T/A CVT Otto",
+      "priceShownClp": 29490000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-civic"
+    },
+    {
+      "brand": "honda",
+      "model": "honda-zr-v",
+      "version": "ZR-V TRG 2.0 Aut. 4X2",
+      "priceShownClp": 30990000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-zr-v"
+    },
+    {
+      "brand": "porsche",
+      "model": "porsche-911",
+      "version": "911 CARRERA COUPE 992.2",
+      "priceShownClp": 159900000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Rwd",
+      "source": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911"
+    },
+    {
+      "brand": "seat",
+      "model": "seat-ibiza",
+      "version": "IBIZA STYLE 1.0 TSI MT",
+      "priceShownClp": 21490000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/seat/nuevo/seat-ibiza"
+    },
+    {
+      "brand": "byd",
+      "model": "byd-shark",
+      "version": "SHARK GS DMO",
+      "priceShownClp": 45398100,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-shark"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-tm3",
+      "version": "TM3 CABINA SIMPLE 1.6 Euro VI 2 AirBag",
+      "priceShownClp": 8290000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-tm3",
+      "version": "TM3 CABINA DOBLE 1.6 Euro VI 2 AirBag",
+      "priceShownClp": 8790000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-tm3",
+      "version": "TM3 CARGO BOX",
+      "priceShownClp": 10480000,
+      "priceBasis": "precio_publicado_desde_o_promocional_NO_LISTA",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3"
+    }
+  ],
+  "status": [
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-plus",
+      "count": 2
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-sealion-7-ev",
+      "count": 2
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-yuan-plus",
+      "count": 1
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-pro",
+      "count": 2
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-atto-8-dm",
+      "count": 2
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-cr-v-advanced-hybrid",
+      "count": 1
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-zr-v-hybrid",
+      "count": 1
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-cr-v",
+      "count": 1
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-hr-v",
+      "count": 1
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-nueva-pilot",
+      "count": 2
+    },
+    {
+      "brand": "jaecoo",
+      "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo5",
+      "count": 3
+    },
+    {
+      "brand": "jaecoo",
+      "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo6",
+      "count": 2
+    },
+    {
+      "brand": "jaecoo",
+      "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-j7-shs",
+      "count": 2
+    },
+    {
+      "brand": "jaecoo",
+      "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo7",
+      "count": 2
+    },
+    {
+      "brand": "land-rover",
+      "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-defender",
+      "count": 3
+    },
+    {
+      "brand": "land-rover",
+      "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-evoque",
+      "count": 1
+    },
+    {
+      "brand": "land-rover",
+      "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover-velar",
+      "count": 1
+    },
+    {
+      "brand": "land-rover",
+      "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+      "count": 1
+    },
+    {
+      "brand": "porsche",
+      "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan",
+      "count": 4
+    },
+    {
+      "brand": "porsche",
+      "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-cayenne",
+      "count": 2
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-dolphin-mini",
+      "count": 2
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-seal",
+      "count": 1
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-yuan-pro-dm-i",
+      "count": 2
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-wr-v",
+      "count": 2
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-civic",
+      "count": 1
+    },
+    {
+      "brand": "honda",
+      "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-zr-v",
+      "count": 1
+    },
+    {
+      "brand": "porsche",
+      "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+      "count": 1
+    },
+    {
+      "brand": "seat",
+      "url": "https://www.salazarisrael.cl/marcas/seat/nuevo/seat-ibiza",
+      "count": 1
+    },
+    {
+      "brand": "byd",
+      "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-shark",
+      "count": 1
+    },
+    {
+      "brand": "foton",
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3",
+      "count": 3
+    }
+  ]
+}

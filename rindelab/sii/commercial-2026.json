@@ -11913,5 +11913,98 @@
     "currency": "CLP",
     "priceBasis": "Callegari Chile: precio lista literal por versión separado de bono; campañas sujetas a confirmación.",
     "technology": "HEV"
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "06",
+    "version": "PLUS",
+    "modelYear": null,
+    "priceListClp": 20990000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/06",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Versión a bencina no híbrida confirmada en Pompeyo."
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "06",
+    "version": "PRO",
+    "modelYear": null,
+    "priceListClp": 22990000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/06",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Versión a bencina no híbrida confirmada en Pompeyo."
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "06",
+    "version": "HALO",
+    "modelYear": null,
+    "priceListClp": 25490000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/06",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Versión a bencina no híbrida confirmada en Pompeyo."
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "01",
+    "version": "PRO",
+    "modelYear": null,
+    "priceListClp": 29490000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/CO01",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Sistema híbrido enchufable PHEV confirmado en Pompeyo.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "01",
+    "version": "HALO",
+    "modelYear": null,
+    "priceListClp": 32990000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/CO01",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Sistema híbrido enchufable PHEV confirmado en Pompeyo.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "08",
+    "version": "PRO",
+    "modelYear": null,
+    "priceListClp": 40990000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/08",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Sistema híbrido enchufable PHEV confirmado en Pompeyo.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "08",
+    "version": "HALO",
+    "modelYear": null,
+    "priceListClp": 43990000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/08",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Sistema híbrido enchufable PHEV confirmado en Pompeyo.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Lynk & Co",
+    "family": "09",
+    "version": "HALO",
+    "modelYear": null,
+    "priceListClp": 45990000,
+    "source": "https://www.cartoni.cl/nuevo/lynk-co/09",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio de lista literal publicado por concesionario oficial Cartoni Automotora Chile, específico de modelo y acabado, separado de bono del mes, bono crédito y precio con financiamiento. Cotejado contra catálogo de Pompeyo Carrasco (misma marca/familia). Fecha de consulta 19/10/2026; no garantiza vigencia ni stock. Versión microhíbrida MHEV 48 V confirmada en Pompeyo.",
+    "technology": "MHEV"
   }
 ]

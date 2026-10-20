@@ -69,3 +69,10 @@ El CSV de 11 conserva `modelo_fuente_3cv`, `codigo_3cv_referencia` y otros campo
 ## Lote con 1.028 registros comerciales (19/10/2026)
 
 El listado de **622 precios adicionales** con fuentes y el cruce documental está en [LOTE-META-1000-20261019.md](./LOTE-META-1000-20261019.md). La base pública solo se actualizará al aprobar GitHub Actions. Las 304 denominaciones de 3CV estudiadas antes siguen siendo un inventario técnico sin relación automática con las versiones de venta.
+
+## Pompeyo Carrasco: modelos nuevos y Lynk & Co (19/10/2026)
+
+- [107 fichas accesibles de las seis páginas del catálogo Pompeyo de 111 modelos anunciados](./POMPEYO-111-MODELOS-PENDIENTES-20261019.csv), con estado de cotejo por modelo y 2 Leapmotor ya cargados.
+- [Ocho precios de lista nuevos Lynk & Co por acabado, cotejados individualmente con Cartoni](./LOTE-POMPEYO-LYNKCO-20261019.md).
+- El PR dependiente eleva la base de 1.028 a **1.036 precios**, 48 marcas y 230 electrificados; ni B10 ni C10 se duplicaron, y T03 permanece pendiente de precio comercial chileno.
+- No trasladar importes `+IVA` de vehículos comerciales ni precios `Desde` al catálogo de valores con IVA.

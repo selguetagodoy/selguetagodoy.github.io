@@ -1,0 +1,1526 @@
+{
+  "rows": [
+    {
+      "brand": "audi",
+      "model": "audi-q5-sportback",
+      "version": "New Q5 Sportback TFSI quattro",
+      "priceShownClp": 55400000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5-sportback"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-q5-sportback",
+      "version": "New Q5 Sportback TFSI quattro S line",
+      "priceShownClp": 63400000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5-sportback"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-new-q3-sportback",
+      "version": "New Q3 TFSI Sportback",
+      "priceShownClp": 41900000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3-sportback"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-new-q3-sportback",
+      "version": "New Q3 Sportback 35 TFSI S line",
+      "priceShownClp": 48400000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3-sportback"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-sq5",
+      "version": "New SQ5 TFSI quattro",
+      "priceShownClp": 80900000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-sq5"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-q8",
+      "version": "Q8 55 TFSI",
+      "priceShownClp": 87900000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q8"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-q5",
+      "version": "New Q5 TFSI quattro",
+      "priceShownClp": 52900000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-q5",
+      "version": "New Q5 TFSI quattro S line",
+      "priceShownClp": 60900000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-new-q3",
+      "version": "New Q3 TFSI",
+      "priceShownClp": 39900000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-new-q3",
+      "version": "New Q3 TFSI S line",
+      "priceShownClp": 45900000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-2-pro-max",
+      "version": "TIGGO 2 PRO MAX 1.5 MT GL",
+      "priceShownClp": 8890000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-2-pro-max"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-2-pro-max",
+      "version": "TIGGO 2 PRO MAX 1.5 MT GLX",
+      "priceShownClp": 10690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-2-pro-max"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-2-pro-max",
+      "version": "TIGGO 2 PRO MAX 1.5 CVT GLX",
+      "priceShownClp": 11490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-2-pro-max"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-4-pro-max-hibrido",
+      "version": "TIGGO 4 PRO MAX 1.5 DHT HEV",
+      "priceShownClp": 15990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-4-pro-max-hibrido"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-7-pro",
+      "version": "TIGGO 7 PRO MAX 1.5T 6DCT GLX",
+      "priceShownClp": 15990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7-pro"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-8-pro-max-hibrido",
+      "version": "TIGGO 8 PRO MAX 1.5T DHT PHEV NEW 6C",
+      "priceShownClp": 25690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max-hibrido"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-7",
+      "version": "TIGGO 7 1.5T CVT LIMITED NEW 6C",
+      "priceShownClp": 12990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-9-hibrido",
+      "version": "TIGGO 9 1.5T DHT PHEV",
+      "priceShownClp": 28990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-9-hibrido"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-7-pro-max-hibrido",
+      "version": "TIGGO 7 PRO MAX 1.5T DHT PHEV NEW 6C",
+      "priceShownClp": 21490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Hibrido",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7-pro-max-hibrido"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-8",
+      "version": "TIGGO 8 1.5T MT LIMITED",
+      "priceShownClp": 13990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-8",
+      "version": "TIGGO 8 1.5T DCT LIMITED",
+      "priceShownClp": 14990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-8-pro-max",
+      "version": "TIGGO 8 PRO MAX 1.6T DCT GLS",
+      "priceShownClp": 18990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-8-pro-max",
+      "version": "TIGGO 8 PRO MAX 1.6T DCT GLX",
+      "priceShownClp": 20990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-4-pro-max",
+      "version": "TIGGO 4 PRO MAX 1.5 MT GLS",
+      "priceShownClp": 10990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-4-pro-max"
+    },
+    {
+      "brand": "chery",
+      "model": "chery-tiggo-4-pro-max",
+      "version": "TIGGO 4 PRO MAX 1.5 CVT GLS",
+      "priceShownClp": 12490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-4-pro-max"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-formentor",
+      "version": "Nuevo Formentor 2.0 TSI AT 4Drive 204 hp",
+      "priceShownClp": 33690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-formentor"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-formentor",
+      "version": "Nuevo Formentor VZ 2.0 TSI AT 4Drive",
+      "priceShownClp": 42190000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-formentor"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-formentor",
+      "version": "Formentor VZ 2.0 TSI 333hp Black Rebel",
+      "priceShownClp": 45190000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-formentor"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-terramar",
+      "version": "Terramar 1.5 TSI mHEV AT",
+      "priceShownClp": 37190000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-terramar"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-terramar",
+      "version": "Terramar High 1.5 TSI mHEV AT - 110 kW/150 CV",
+      "priceShownClp": 41190000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-terramar"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-terramar",
+      "version": "Terramar VZ 2.0 TSI AT - kw/HP",
+      "priceShownClp": 45190000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-terramar"
+    },
+    {
+      "brand": "dfsk",
+      "model": "dfsk-e5-plus-phev",
+      "version": "E5 PLUS PHEV",
+      "priceShownClp": 23990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-e5-plus-phev"
+    },
+    {
+      "brand": "dfsk",
+      "model": "dfsk-suv-600-phev",
+      "version": "600 PHEV ELITE",
+      "priceShownClp": 19490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-600-phev"
+    },
+    {
+      "brand": "dfsk",
+      "model": "dfsk-suv-600-phev",
+      "version": "600 PHEV ELITE PRO",
+      "priceShownClp": 21990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-600-phev"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-pulse",
+      "version": "PULSE DRIVE 1.3 MT",
+      "priceShownClp": 11490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-pulse",
+      "version": "PULSE DRIVE 1.3 MT MCA",
+      "priceShownClp": 11990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-pulse",
+      "version": "PULSE DRIVE 1.3 AT MCA",
+      "priceShownClp": 12690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-pulse",
+      "version": "PULSE IMPETUS TURBO AT MCA",
+      "priceShownClp": 14290000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-expedition",
+      "version": "Expedition Platinum",
+      "priceShownClp": 71690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-expedition"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-new-bronco",
+      "version": "BRONCO BADLANDS 2.7L",
+      "priceShownClp": 58990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-new-bronco"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-bronco-sport",
+      "version": "BRONCO SPORT 1.5L BIG BEND",
+      "priceShownClp": 27490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-bronco-sport"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-bronco-sport",
+      "version": "BRONCO SPORT 1.5L OUTER BANKS",
+      "priceShownClp": 29990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-bronco-sport"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-bronco-sport",
+      "version": "BRONCO SPORT 2.0L BADLANDS",
+      "priceShownClp": 34490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-bronco-sport"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-explorer",
+      "version": "Explorer Active 2.3L 4x2",
+      "priceShownClp": 37990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Rwd",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-explorer",
+      "version": "Explorer Active 2.3L 4WD",
+      "priceShownClp": 42890000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-explorer",
+      "version": "Explorer Active 2.3L 4x4",
+      "priceShownClp": 42890000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-explorer",
+      "version": "Explorer Platinum 2.3L 4WD",
+      "priceShownClp": 49690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-explorer",
+      "version": "Explorer Platinum 2.3L Ecoboost",
+      "priceShownClp": 49690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-explorer",
+      "version": "Explorer ST 3.0L 4WD",
+      "priceShownClp": 59490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-explorer",
+      "version": "Explorer ST 3.0L Ecoboost V6",
+      "priceShownClp": 59490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-territory",
+      "version": "Territory Trend 1.5L GTDI 4X2 AT",
+      "priceShownClp": 17990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-territory",
+      "version": "Territory Titanium 1.5L GTDI 4X2 AT",
+      "priceShownClp": 19990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-territory-fhev",
+      "version": "Territory Titanium FHEV 1.5L AT",
+      "priceShownClp": 26990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory-fhev"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-territory-fhev",
+      "version": "Territory Titanium 1.5 FHEV",
+      "priceShownClp": 26990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory-fhev"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-territory-fhev",
+      "version": "Territory Platinum 1.5 FHEV",
+      "priceShownClp": 28590000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory-fhev"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-new-coolray",
+      "version": "NEW COOLRAY 1.5TD COMFORT",
+      "priceShownClp": 13990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-new-coolray"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-new-coolray",
+      "version": "NEW COOLRAY 1.5TD SPORT",
+      "priceShownClp": 16490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-new-coolray"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-okavango",
+      "version": "OKAVANGO Exclusive GK 2.0T 7DCT",
+      "priceShownClp": 20690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-okavango"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-okavango",
+      "version": "OKAVANGO Signature GF 2.0T 7DCT",
+      "priceShownClp": 23690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-okavango"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-ex5",
+      "version": "EX5 PRO",
+      "priceShownClp": 26990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex5"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-ex5",
+      "version": "EX5 MAX",
+      "priceShownClp": 29990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex5"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-coolray-lite",
+      "version": "COOLRAY LITE 1.5 MT POP",
+      "priceShownClp": 9490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-coolray-lite"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-coolray-lite",
+      "version": "COOLRAY LITE 1.5 MT POP +",
+      "priceShownClp": 11290000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-coolray-lite"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-coolray-lite",
+      "version": "COOLRAY LITE 1.5 CVT PRIME",
+      "priceShownClp": 11490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-coolray-lite"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-coolray-lite",
+      "version": "COOLRAY LITE 1.5 CVT PRIME +",
+      "priceShownClp": 12290000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-coolray-lite"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-cityray",
+      "version": "CITYRAY COMFORT",
+      "priceShownClp": 15890000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-cityray"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-cityray",
+      "version": "CITYRAY EXCLUSIVE",
+      "priceShownClp": 16990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-cityray"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-cityray",
+      "version": "CITYRAY SIGNATURE",
+      "priceShownClp": 17890000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-cityray"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-wrangler",
+      "version": "JEEP WRANGLER SPORT 2.0T AT8 4X4",
+      "priceShownClp": 52490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-wrangler"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-wrangler",
+      "version": "JEEP WRANGLER SAHARA 2.0T AT8 4X4",
+      "priceShownClp": 56490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-wrangler"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-wrangler",
+      "version": "JEEP WRANGLER RUBICON 2.0T AT8 4X4",
+      "priceShownClp": 60490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-wrangler"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-avenger",
+      "version": "JEEP AVENGER ALTITUDE 1.2T MT6 FWD",
+      "priceShownClp": 15590000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-avenger",
+      "version": "JEEP AVENGER ALTITUDE 1.2T H DDCT6 FWD",
+      "priceShownClp": 18590000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-avenger",
+      "version": "JEEP AVENGER SUMMIT 1.2T H DDCT6 FWD",
+      "priceShownClp": 21590000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-avenger",
+      "version": "JEEP AVENGER SUMMIT BEV",
+      "priceShownClp": 25990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-renegade",
+      "version": "JEEP RENEGADE MCA ALTITUDE 1.3T AT6 FWD",
+      "priceShownClp": 23190000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-renegade"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-renegade",
+      "version": "JEEP RENEGADE MCA SAHARA 1.3T AT6 FWD",
+      "priceShownClp": 25190000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-renegade"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-compass",
+      "version": "JEEP COMPASS SPORT 1.3T AT6 FDW",
+      "priceShownClp": 22690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-compass"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-compass",
+      "version": "COMPASS LONGITUDE 1.3T AT6 FWD",
+      "priceShownClp": 24690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-compass"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-compass",
+      "version": "JEEP COMPASS LIMITED 1.3T AT6 FDW",
+      "priceShownClp": 27690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-compass"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-compass",
+      "version": "JEEP COMPASS BLACKHAWK 2.0T AT9 4X4",
+      "priceShownClp": 35690000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-compass"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-grand-cherokee",
+      "version": "NEW GRAND CHEROKEE L LIMITED 4X4 3.6L (2 FILAS)",
+      "priceShownClp": 56990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-grand-cherokee"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-grand-cherokee",
+      "version": "NEW GRAND CHEROKEE LIMITED L 3.6L 4X4",
+      "priceShownClp": 59990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-grand-cherokee"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-commander",
+      "version": "JEEP COMMANDER MCA LIMITED 1.3T AT6 FWD",
+      "priceShownClp": 32490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-commander"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-commander",
+      "version": "COMMANDER LIMITED 1.3 AT6 4X2",
+      "priceShownClp": 33990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-commander"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-commander",
+      "version": "JEEP COMMANDER MCA OVERLAND 1.3T AT6 FWD",
+      "priceShownClp": 34490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-commander"
+    },
+    {
+      "brand": "jeep",
+      "model": "jeep-commander",
+      "version": "JEEP COMMANDER MCA BLACKHAWK 2.0T AT9 4X4",
+      "priceShownClp": 39490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-commander"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-actyon",
+      "version": "ACTYON GLX",
+      "priceShownClp": 27490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-actyon"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-actyon",
+      "version": "ACTYON LIMITED",
+      "priceShownClp": 28990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-actyon"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-rexton",
+      "version": "NEW REXTON LX 2.2TD 8AT",
+      "priceShownClp": 29490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-rexton"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-rexton",
+      "version": "NEW REXTON 2.2 AT 4X2 STD DIESEL",
+      "priceShownClp": 31490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-rexton"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-rexton",
+      "version": "NEW REXTON 2.2 AT 4X4 SEMIFULL DIESEL",
+      "priceShownClp": 34990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-rexton"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-rexton",
+      "version": "REXTON 4x4 AT Full DI SA",
+      "priceShownClp": 42990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-rexton"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-torres",
+      "version": "TORRES GLX 1.5T 2WD 6MT",
+      "priceShownClp": 20990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-torres"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-torres",
+      "version": "TORRES GLX 1.5T 2WD 6AT",
+      "priceShownClp": 23990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-torres"
+    },
+    {
+      "brand": "kgm",
+      "model": "kgm-torres",
+      "version": "TORRES DLX",
+      "priceShownClp": 26990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-torres"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-mg-one",
+      "version": "MG ONE 1.5T CVT COM",
+      "priceShownClp": 12490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-one"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-mg-one",
+      "version": "MG ONE 1.5T CVT DLX",
+      "priceShownClp": 14490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-one"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-all-new-mg-zs",
+      "version": "ALL NEW MG ZS 1.5L MT STD",
+      "priceShownClp": 10390000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-all-new-mg-zs",
+      "version": "ALL NEW MG ZS 1.5L CVT STD",
+      "priceShownClp": 10990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-all-new-mg-zs",
+      "version": "ALL NEW MG ZS 1.5L MT COM",
+      "priceShownClp": 11390000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-all-new-mg-zs",
+      "version": "ALL NEW MG ZS 1.5L CVT COM",
+      "priceShownClp": 12290000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-all-new-mg-zs",
+      "version": "ALL NEW MG ZS 1.5T CVT DLX",
+      "priceShownClp": 14990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-new-hs",
+      "version": "ALL NEW MG HS 1.5T HEV LUX",
+      "priceShownClp": 21990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-hs"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-mg-zx",
+      "version": "MG ZX 1.5C MT COM",
+      "priceShownClp": 7990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-zx"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-mg-zx",
+      "version": "MG ZX 1.5C MT DLX",
+      "priceShownClp": 9990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-zx"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-mg-zx",
+      "version": "MG ZX 1.5C CVT COM",
+      "priceShownClp": 12490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-zx"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-all-new-mg-zs-hibrido",
+      "version": "ALL NEW MG ZS 1.5L CVT COM HEV",
+      "priceShownClp": 15990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs-hibrido"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-all-new-mg-zs-hibrido",
+      "version": "ALL NEW MG ZS 1.5L HEV LUX",
+      "priceShownClp": 17490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs-hibrido"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-destinator",
+      "version": "Destinator GL EURO 6C",
+      "priceShownClp": 21490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-destinator",
+      "version": "Destinator GLX EURO 6C",
+      "priceShownClp": 24490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-destinator",
+      "version": "Destinator GLS EURO 6C",
+      "priceShownClp": 29490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-eclipse-cross",
+      "version": "ECLIPSE CROSS RX 1.5 4X2 AT (Euro 6c)",
+      "priceShownClp": 20490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-eclipse-cross"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-eclipse-cross",
+      "version": "ECLIPSE CROSS RT 1.5 4X2 AT (Euro 6c)",
+      "priceShownClp": 22990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-eclipse-cross"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-eclipse-cross",
+      "version": "ECLIPSE CROSS RS 1.5 4X2 AT (Euro 6c)",
+      "priceShownClp": 26490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-eclipse-cross"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-outlander-sport",
+      "version": "OUTLANDER SPORT GL (Euro 6c)",
+      "priceShownClp": 18990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-sport"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-outlander-sport",
+      "version": "OUTLANDER SPORT GLX (Euro 6c)",
+      "priceShownClp": 21990000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-sport"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-outlander-sport",
+      "version": "OUTLANDER SPORT GLS (Euro 6c)",
+      "priceShownClp": 22490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-sport"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-outlander-sport",
+      "version": "OUTLANDER SPORT GLS (MY27) (Euro 6c)",
+      "priceShownClp": 23490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-sport"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mitsubishi-outlander-hibrido",
+      "version": "NEW OUTLANDER PHEV 4X4 AT GLS",
+      "priceShownClp": 40490000,
+      "priceBasis": "precio_publicado_no_confirmado_como_precio_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-hibrido"
+    }
+  ],
+  "status": [
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5-sportback",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3-sportback",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-sq5",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q8",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-2-pro-max",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-4-pro-max-hibrido",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7-pro",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max-hibrido",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-9-hibrido",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7-pro-max-hibrido",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-4-pro-max",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-formentor",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-terramar",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-e5-plus-phev",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-600-phev",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-expedition",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-new-bronco",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-bronco-sport",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer",
+      "count": 7
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory-fhev",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-new-coolray",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-okavango",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex5",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-coolray-lite",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-cityray",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-wrangler",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-renegade",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-compass",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-grand-cherokee",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-commander",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-actyon",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-rexton",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-torres",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-one",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs",
+      "count": 5
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-hs",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-zx",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs-hibrido",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-eclipse-cross",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-sport",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-hibrido",
+      "count": 1
+    }
+  ]
+}

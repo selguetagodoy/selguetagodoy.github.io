@@ -1,0 +1,392 @@
+[
+  {
+    "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-leon",
+    "page": 11,
+    "brand": "cupra",
+    "slug": "cupra-leon"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-500",
+    "page": 11,
+    "brand": "dfsk",
+    "slug": "dfsk-suv-500"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-fastback",
+    "page": 11,
+    "brand": "fiat",
+    "slug": "fiat-fastback"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-500",
+    "page": 11,
+    "brand": "fiat",
+    "slug": "fiat-500"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-mustang",
+    "page": 11,
+    "brand": "ford",
+    "slug": "ford-mustang"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex2",
+    "page": 11,
+    "brand": "geely",
+    "slug": "geely-ex2"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-wr-v",
+    "page": 11,
+    "brand": "honda",
+    "slug": "honda-wr-v"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-civic",
+    "page": 11,
+    "brand": "honda",
+    "slug": "honda-civic"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-zr-v",
+    "page": 11,
+    "brand": "honda",
+    "slug": "honda-zr-v"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-4-electrico",
+    "page": 12,
+    "brand": "mg",
+    "slug": "mg-mg-4-electrico"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-4",
+    "page": 12,
+    "brand": "mg",
+    "slug": "mg-mg-4"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-cyberster",
+    "page": 12,
+    "brand": "mg",
+    "slug": "mg-cyberster"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-s5-electrico",
+    "page": 12,
+    "brand": "mg",
+    "slug": "mg-mg-s5-electrico"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-mg-3-hibrido",
+    "page": 12,
+    "brand": "mg",
+    "slug": "mg-new-mg-3-hibrido"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-mg-3",
+    "page": 12,
+    "brand": "mg",
+    "slug": "mg-new-mg-3"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-versa",
+    "page": 12,
+    "brand": "nissan",
+    "slug": "nissan-versa"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-sentra",
+    "page": 12,
+    "brand": "nissan",
+    "slug": "nissan-sentra"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5-shs",
+    "page": 12,
+    "brand": "omoda",
+    "slug": "omoda-c5-shs"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+    "page": 12,
+    "brand": "porsche",
+    "slug": "porsche-911"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/seat/nuevo/seat-ibiza",
+    "page": 12,
+    "brand": "seat",
+    "slug": "seat-ibiza"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-wrx",
+    "page": 13,
+    "brand": "subaru",
+    "slug": "subaru-all-new-wrx"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-impreza",
+    "page": 13,
+    "brand": "subaru",
+    "slug": "subaru-impreza"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-jetta",
+    "page": 13,
+    "brand": "volkswagen",
+    "slug": "volkswagen-jetta"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-polo",
+    "page": 13,
+    "brand": "volkswagen",
+    "slug": "volkswagen-polo"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-shark",
+    "page": 13,
+    "brand": "byd",
+    "slug": "byd-shark"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-himla",
+    "page": 13,
+    "brand": "chery",
+    "slug": "chery-himla"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-new-pick-up-d1",
+    "page": 13,
+    "brand": "dfsk",
+    "slug": "dfsk-new-pick-up-d1"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-truck-cs",
+    "page": 13,
+    "brand": "dfsk",
+    "slug": "dfsk-truck-cs"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-pick-up-d1",
+    "page": 13,
+    "brand": "dfsk",
+    "slug": "dfsk-pick-up-d1"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-new-z9",
+    "page": 13,
+    "brand": "dfsk",
+    "slug": "dfsk-new-z9"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-raptor",
+    "page": 13,
+    "brand": "ford",
+    "slug": "ford-raptor"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-all-new-f-150",
+    "page": 13,
+    "brand": "ford",
+    "slug": "ford-all-new-f-150"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-all-new-ranger",
+    "page": 14,
+    "brand": "ford",
+    "slug": "ford-all-new-ranger"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-maverick",
+    "page": 14,
+    "brand": "ford",
+    "slug": "ford-maverick"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-tm3"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v9",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-foton-v9"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v7",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-foton-v7"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-ultimate",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-foton-g7-ultimate"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-lite",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-foton-g7-lite"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-g9",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-g9"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-tm5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-midi",
+    "page": 14,
+    "brand": "foton",
+    "slug": "foton-midi"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-gladiator",
+    "page": 14,
+    "brand": "jeep",
+    "slug": "jeep-gladiator"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+    "page": 14,
+    "brand": "kgm",
+    "slug": "kgm-musso"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso-grand",
+    "page": 15,
+    "brand": "kgm",
+    "slug": "kgm-musso-grand"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso-grand",
+    "page": 15,
+    "brand": "kgm",
+    "slug": "kgm-new-musso-grand"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+    "page": 15,
+    "brand": "kgm",
+    "slug": "kgm-new-musso"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-l200-dakar",
+    "page": 15,
+    "brand": "mitsubishi",
+    "slug": "mitsubishi-l200-dakar"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-new-l200",
+    "page": 15,
+    "brand": "mitsubishi",
+    "slug": "mitsubishi-new-l200"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage",
+    "page": 15,
+    "brand": "ram",
+    "slug": "ram-rampage"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-2500",
+    "page": 15,
+    "brand": "ram",
+    "slug": "ram-2500"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-1500",
+    "page": 16,
+    "brand": "ram",
+    "slug": "ram-1500"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700",
+    "page": 16,
+    "brand": "ram",
+    "slug": "ram-700"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-dakota",
+    "page": 16,
+    "brand": "ram",
+    "slug": "ram-dakota"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-amarok",
+    "page": 16,
+    "brand": "volkswagen",
+    "slug": "volkswagen-amarok"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-saveiro",
+    "page": 16,
+    "brand": "volkswagen",
+    "slug": "volkswagen-saveiro"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-f-150-platinum-hev",
+    "page": 16,
+    "brand": "ford",
+    "slug": "ford-f-150-platinum-hev"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-transit-bus",
+    "page": 16,
+    "brand": "ford",
+    "slug": "ford-transit-bus"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-transit",
+    "page": 16,
+    "brand": "ford",
+    "slug": "ford-transit"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-maverick-fhev",
+    "page": 16,
+    "brand": "ford",
+    "slug": "ford-maverick-fhev"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-transit-custom",
+    "page": 16,
+    "brand": "ford",
+    "slug": "ford-transit-custom"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-view-grand",
+    "page": 16,
+    "brand": "foton",
+    "slug": "foton-view-grand"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex5-emi-i",
+    "page": 17,
+    "brand": "geely",
+    "slug": "geely-ex5-emi-i"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-caravelle",
+    "page": 17,
+    "brand": "volkswagen",
+    "slug": "volkswagen-caravelle"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-transporter",
+    "page": 17,
+    "brand": "volkswagen",
+    "slug": "volkswagen-transporter"
+  }
+]
