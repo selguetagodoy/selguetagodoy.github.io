@@ -1,3 +1,9 @@
+# Actualización 20/10/2026 — integración de cobertura comercial
+
+Se integraron **1.504 precios comerciales** distribuidos en **80 marcas**, incluidos Hino, Fuso, Iveco, Uaz, ZNA y Nammi. El archivo `sii/commercial-2026.json` añade `priceType` (lista, desde, oferta, publicado) cuando se conoce, y `taxIncluded:false` para once precios Hino/Fuso publicados **+ IVA**, que se visualizan sin pretender ser precio final de compra; se deshabilitan los totales y cuotas para estas referencias en el cotizador. Las fichas Nammi 001 previamente almacenadas en Dongfeng se reasignaron a Nammi conservando el precio y la fuente. La vista de marcas agrupa alias históricos sin modificar el registro homologado 3CV. El documento `sii/CIERRE-PENDIENTES-COBERTURA-MARCAS-20261020.md` conserva las 124 denominaciones originales y los modelos sin fuente documentada.
+
+---
+
 # RINDELAB · Con las alzas, cada peso cuenta
 
 **RINDELAB v7** es un buscador independiente de vehículos homologados en Chile, creado por **Sebastián Elgueta Godoy**.
