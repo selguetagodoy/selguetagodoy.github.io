@@ -2,7 +2,9 @@
 (()=>{'use strict';
 const api=window.RindelabSII;if(!api)return;
 const originalShow=api.show,originalCompare=api.decorateComparison;
-const clp=n=>Number.isFinite(n)?'
+const clp=n=>Number.isFinite(n)?'$'+Math.round(n).toLocaleString('es-CL'):'Sin precio';
+const displayPrice=p=>clp(p.priceListClp)+(p.taxIncluded===false?' + IVA':'');
+const priceKind=p=>p.priceType==='oferta'?'Oferta publicada':p.priceType==='desde'||p.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos';
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const makeIdentity=p=>norm([p.brand,p.family,p.version,p.modelYear||'N/A'].join(' '));
@@ -116,4 +118,4 @@ window.RindelabCommercial={
  ageWarning
 };
 catalog();
-}})();
+})();
