@@ -37,6 +37,16 @@
 .rinde-explore-actions{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.7rem}
 .rinde-explore-actions button,.rinde-explore-actions a{font:inherit;font-size:.9rem;background:white;color:#143655;border:1px solid #b9c9d9;border-radius:100px;padding:.55rem .85rem;cursor:pointer;text-decoration:none}
 .rinde-explore-actions button:hover,.rinde-explore-actions a:hover{border-color:#0a61a8}
+ .rinde-commercial,.rinde-percentile,.rinde-payback,.rinde-profile{border:1px solid #d6e2eb;border-radius:11px;padding:.9rem;margin:.75rem 0;background:#f7fafc;color:#183753}
+ .rinde-commercial{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;font-size:.86rem}
+ .rinde-commercial strong{font-weight:750;color:#11385b}
+ .rinde-commercial a{color:#086aa3}
+ .rinde-profile-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.6rem}
+ .rinde-profile-fields label{display:grid;gap:.3rem;font-size:.88rem}
+ .rinde-profile-fields input,.rinde-profile-fields select{width:100%;font:inherit;padding:.45rem;min-height:40px}
+ .rinde-resource-nav{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;margin:.5rem 0}
+ .rinde-resource-nav a{color:inherit;text-decoration:underline;text-underline-offset:3px;font-size:.88rem}
+ .rinde-payback h3,.rinde-profile h3{margin:0 0 .45rem}
 </style></head>
 <body>
 <header class="site-header">
@@ -183,6 +193,7 @@
       <div class="field" id="homeShareField"><label for="homeChargeShare">Porcentaje cargado en casa</label><select id="homeChargeShare"><option value="20">20 %</option><option value="40">40 %</option><option value="50">50 %</option><option value="60">60 %</option><option value="80" selected>80 %</option><option value="90">90 %</option></select></div>
       <div class="field"><label for="electricPrice">Tarifa eléctrica aplicada ($/kWh)</label><input id="electricPrice" type="number" min="1" max="10000" step="1" value="252" readonly aria-describedby="chargeStatus"></div>
       </div>
+    </details>
     <details id="homeBillHelper" class="home-bill-helper" hidden>
       <summary>¿No sabes cuánto pagas por kWh en casa? Calcúlalo con tu boleta</summary>
       <p class="bill-help">Usa tu boleta residencial para estimar un precio promedio por kWh. La estimación se basa en el monto de la boleta menos los cargos fijos que ingreses, dividido por los kWh facturados. <strong>No equivale necesariamente al costo marginal de una recarga adicional</strong>, especialmente si hay tramos de consumo, descuentos, subsidios u otros cargos.</p>
@@ -235,7 +246,6 @@
     </details>
     <p id="chargeStatus" class="charge-status" role="status" aria-live="polite">Copec Voltex · AC hasta 22 kW · ciudad, horario valle. Tarifa aplicada: $340/kWh.</p>
     <details class="scenario-method"><summary>Cómo se calculan estos costos y cuáles son sus límites</summary><p class="assumptions-note">Las tarifas de carga pública proceden de <a href="https://copecvoltex.cl/pages/red-de-carga-publica" target="_blank" rel="noopener noreferrer">Copec Voltex</a>, consultadas el 18/10/2026; varían según potencia, ubicación y horario y pueden incluir cargos por tiempo no modelados. Para casa se usa inicialmente el supuesto editable de $230/kWh, NO una tarifa residencial oficial; reemplázalo por tu boleta o estima un valor con el formulario local. Si se borra este valor, los escenarios domiciliario y mixto no generan costos eléctricos. La tarifa residencial depende de comuna, distribuidora, conexión, tramo y cargos variables. La mezcla es una hipótesis sobre proporción de energía cargada, no un patrón de uso verificado. Los valores iniciales de bencina ($1.535/L) y diésel ($1.503/L) son <strong>supuestos editables, no precios nacionales ni en tiempo real</strong>; verifica precios por estación en <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener noreferrer">Bencina en Línea (CNE)</a>. Proyecciones con tarifas constantes, sin pérdidas de carga, cobros por tiempo ni otros costos de propiedad. Las estimaciones derivadas del total de la boleta representan precios medios aproximados, no necesariamente costos incrementales de recarga. <a href="./metodologia.html">Revisar metodología</a>.</p></details>
-    </details>
    </div>
   </details>
  </main>
@@ -261,7 +271,7 @@
   <div class="stats-controls">
    <div class="field"><label for="statsMetric">¿Qué quieres comparar?</label><select id="statsMetric"><option value="cost">Costo energético por 100 km</option><option value="performance">Rendimiento homologado</option><option value="electric" disabled>Rendimiento eléctrico informado (km/kWh) · seleccionar PHEV o REEV</option><option value="weighted" disabled>Rendimiento ponderado informado (km/L) · seleccionar PHEV o REEV</option></select></div>
    <div class="field"><label for="statsTech">Motorización</label><select id="statsTech"><option value="">Todas las motorizaciones</option><option value="Bencina">Bencina</option><option value="Diésel">Diésel</option><option value="MHEV">Híbrido suave (MHEV)</option><option value="HEV">Híbrido (HEV)</option><option value="PHEV">Híbrido enchufable (PHEV)</option><option value="REEV">Extensor de autonomía (REEV)</option><option value="EV">Eléctrico (EV)</option></select></div>
-   <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="station">Station Wagon (3CV)</option><option value="offroad">Jeep / Tipo Jeep (3CV)</option><option value="sedan">Sedán / limusina</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van / minivan</option><option value="bus">Bus / minibús</option></select></div>
+   <div class="field"><label for="statsBody">Tipo de vehículo</label><select id="statsBody"><option value="">Todas las carrocerías</option><option value="suv">SUV / Station Wagon / Todoterreno (agrupación 3CV)</option><option value="station">Station Wagon (3CV)</option><option value="offroad">Jeep / Tipo Jeep (3CV)</option><option value="sedan">Sedán / limusina</option><option value="hatch">Hatchback</option><option value="pickup">Camioneta</option><option value="sport">Coupé / descapotable</option><option value="van">Furgón / van / minivan</option><option value="bus">Bus / minibús</option></select></div>
    <div class="field"><label for="statsCycle">Ciclo de ensayo</label><select id="statsCycle"><option value="WLTP" selected>Solo WLTP (inicial)</option><option value="NEDC">Solo NEDC</option><option value="">Exploración conjunta (no comparable)</option></select></div>
    <div class="field"><label for="statsOrder">Ordenar los 10</label><select id="statsOrder"><option value="asc">Menor a mayor</option><option value="desc">Mayor a menor</option></select></div>
   </div>
@@ -291,6 +301,7 @@
 </dialog>
 <footer class="footer" id="fuentes">
  <div class="shell footer-minimal">
+  <nav aria-label="Explorar más datos RINDELAB" class="rinde-resource-nav"><a href="./versiones.html">Versiones</a><a href="./homologaciones.html">Homologaciones</a><a href="./novedades-3cv.html">Novedades 3CV</a><a href="./cobertura.html">Cobertura de precios</a></nav>
   <span class="footer-credit">RINDELAB <span aria-hidden="true">·</span> Sebastián Elgueta Godoy</span>
   <nav class="footer-links" aria-label="Información y contacto">
    <a href="./metodologia.html">Fuentes y metodología</a>
@@ -301,9 +312,9 @@
  </div>
 </footer>
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
-<script src="./sii/prices.js?v=20261020-1485" defer></script>
+<script src="./sii/prices.js?v=20261020-uxfinal" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261020-uxcompleta" defer></script>
+<script src="./v6.js?v=20261020-uxfinal" defer></script>
 <script>
 /* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
 (function(){
