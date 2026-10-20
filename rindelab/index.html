@@ -48,6 +48,7 @@
  .rinde-resource-nav a{color:inherit;text-decoration:underline;text-underline-offset:3px;font-size:.88rem}
  @media(max-width:600px){.rinde-resource-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.2rem .5rem;width:100%;margin:0}.rinde-resource-nav a{font-size:.78rem;line-height:1.25}.footer-minimal{row-gap:.4rem!important;padding-block:.75rem!important}}
  .rinde-payback h3,.rinde-profile h3{margin:0 0 .45rem}
+.energy-quality-note{padding:.6rem .8rem;background:#fff6ed;border-left:3px solid #b66a22;border-radius:5px;font-size:.87rem;line-height:1.5;color:#5f3b1a;margin:.6rem 0}
 </style></head>
 <body>
 <header class="site-header">
@@ -117,7 +118,7 @@
    </div>
   </form>
  </section>
- <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor costo energético</button><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
+ <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor gasto en energía (WLTP)</button><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
    <a href="#supuestos" id="scenarioAdjust" class="button secondary">Ajustar costos →</a>
   </div>
@@ -126,8 +127,8 @@
    <div><h2 id="resultsTitle">Resultados de búsqueda</h2><p id="resultCount" role="status" aria-live="polite"></p></div>
    <div class="field sort-field"><label for="sort">Ordenar por</label><select id="sort">
     <option value="recent">Homologación más reciente</option>
-    <option value="cheapest">Menor costo estimado</option>
-    <option value="expensive">Mayor costo estimado</option>
+    <option value="cheapest">Menor gasto energético /100 km</option>
+    <option value="expensive">Mayor gasto energético /100 km</option>
     <option value="name">Marca y modelo</option>
    </select></div>
   </div>
@@ -316,7 +317,7 @@
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
 <script src="./sii/prices.js?v=20261020-uxfinal" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261020-uxfinal" defer></script>
+<script src="./v6.js?v=20261020-ranking-ciclos" defer></script>
 <script>
 /* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
 (function(){
