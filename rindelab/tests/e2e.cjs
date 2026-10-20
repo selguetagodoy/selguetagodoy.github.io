@@ -648,7 +648,7 @@ await test('Catálogo de precios de lista sin bonos con fuente oficial',async()=
  for(const item of list){
   assert(Number.isSafeInteger(item.priceListClp)&&item.priceListClp>0);
   assert.equal(item.currency,'CLP');
-  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.cartoni\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl|www\.mini\.cl)\//);
+  assert.match(item.source,/^https:\/\/(www\.hyundai\.cl|tienda\.toyota\.cl|www\.kia\.cl|www\.suzuki\.cl|suzuki\.cl|www\.mgmotor\.cl|www\.changan\.cl|www\.ford\.cl|www\.bmw\.cl|www\.mazda\.cl|www\.subaru\.cl|www\.volkswagen\.cl|www\.gwm\.cl|www\.byd\.com|webstore\.nissan\.cl|chery\.cl|aventuramotors\.chery\.cl|callegari\.chery\.cl|piamonte\.chery\.cl|rosselot\.chery\.cl|gacmotor\.cl|www\.citroen\.cl|mitsubishi-motors\.cl|www\.rosselot\.cl|astararetail\.cl|www\.gildemeisterretail\.cl|www\.geely\.cl|guillermomorales\.cl|callegari\.cl|www\.omodajaecoo\.cl|www\.portillosur\.cl|www\.cartoni\.cl|www\.dfsk\.cl|www\.pdn\.dfsk\.cl|www\.skoda\.cl|www\.jacautoschile\.cl|www\.baic\.cl|www\.dercocenter\.cl|jmcchile\.cl|dongfengindumotora\.cl|mgmotors-prod-s3\.s3\.us-east-2\.amazonaws\.com|www\.audi\.cl|www\.cupraofficial\.cl|www\.mini\.cl)\//);
   const key=[item.brand,item.family,item.version,item.modelYear].join('|');
   assert(!seen.has(key),'Precio de lista duplicado '+key);
   seen.add(key);
@@ -1188,7 +1188,7 @@ await test('Marcas: 134 marcas del 3CV histórico, filtro transparente y CSV',as
  await p.waitForFunction(()=>document.querySelector('#metricBrands')?.textContent==='119',{timeout:30000});
  assert.equal(Number((await p.locator('#metricPrices').textContent()).replace(/\D/g,'')),priceTotal);
  assert.equal(await p.locator('#metricCovered').textContent(),String(catalogBrandTotal));
- assert((await p.locator('#brandRows tr').count())>=119,'No perder ninguna de las 119 marcas del registro histórico 3CV');
+ assert((await p.locator('#brandRows tr').count())>=119,'Se conservan las 119 marcas históricas y se agregan nuevas comerciales');
  await p.fill('#brandSearch','Chevrolet');
  assert.equal(await p.locator('#brandRows tr').count(),1);
  assert.match(await p.locator('#brandRows tr').first().textContent(),/Sin precio documentado/);
@@ -2235,6 +2235,38 @@ for(const pageName of ['index.html','cotizador.html']){
   await p.close();
  });
 }
+await test('Gildemeister amplía GS4 HEV, SWM G05 y Shineray T50 sin bonos',async()=>{
+ const p=await browser.newPage({viewport:{width:1280,height:820}});
+ await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ const all=await p.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert.equal(all.length,priceTotal);
+ assert.equal(all.filter(v=>v.brand==='SWM').length,2);
+ assert.equal(all.find(v=>v.brand==='Gac'&&v.family==='GS4 MAX HEV')?.priceListClp,22490000);
+ assert.equal(all.find(v=>v.brand==='Shineray'&&v.family==='T50 CS')?.priceListClp,12007100);
+ assert.equal(all.find(v=>v.brand==='SWM'&&v.version==='SWM G05 Pro 1.5T DCT Elite')?.priceListClp,16990000);
+ assert.equal(all.find(v=>v.brand==='SWM'&&v.version==='SWM G05 Pro 2.0L Elite')?.priceListClp,14990000);
+ assert.equal(all.filter(v=>v.brand==='Gac'&&v.technology==='HEV').length>=2,true);
+ await p.close();
+});
+await test('Astara y Gildemeister: nueve precios de lista sin bonos',async()=>{
+ const p=await browser.newPage({viewport:{width:1280,height:800}});
+ await p.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ const list=await p.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert.equal(list.length,priceTotal);
+ const gac=list.filter(x=>x.brand==='Gac');
+ for(const [f,v,price] of [['AION ES','AION ES',25990000],['AION Y','AION Y',30990000],['AION UT','Aion UT Basic 44kwh',20990000],['GS4 MAX','GS4 MAX GL 1.5 AT 2WD',17990000]]){
+   const x=gac.find(x=>x.family===f&&x.version===v);assert.equal(x?.priceListClp,price);
+ }
+ assert.equal(gac.filter(x=>['AION ES','AION Y','AION UT'].includes(x.family)&&x.technology==='EV').length,3);
+ assert.equal(list.find(x=>x.brand==='Shineray'&&x.version==='X30 1.5 5MT ELT')?.priceListClp,10936100);
+ assert.equal(list.find(x=>x.brand==='Nissan'&&x.family==='Kait'&&x.version==='Exclusive')?.priceListClp,23990000);
+ const epower=list.find(x=>x.brand==='Nissan'&&x.family==='X-Trail e-POWER'&&x.version==='EXCLUSIVE');
+ assert.equal(epower?.priceListClp,47296472);
+ assert.equal(epower?.technology,'HEV');
+ assert.equal(list.find(x=>x.brand==='Mahindra'&&x.version==='XUV3X0 MT COMFORT')?.priceListClp,12990000);
+ assert.equal(list.find(x=>x.brand==='Mahindra'&&x.version==='XUV3X0 AT ELITE')?.priceListClp,14990000);
+ await p.close();
+});
 await test('Pompeyo: 8 versiones Lynk & Co cotejadas individualmente con Cartoni',async()=>{
  const sourcePage=await browser.newPage({viewport:{width:1280,height:800}});
  await sourcePage.goto(base+'cotizador.html',{waitUntil:'networkidle'});

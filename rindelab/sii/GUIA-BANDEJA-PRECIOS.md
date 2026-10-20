@@ -76,3 +76,13 @@ El listado de **622 precios adicionales** con fuentes y el cruce documental est�
 - [Ocho precios de lista nuevos Lynk & Co por acabado, cotejados individualmente con Cartoni](./LOTE-POMPEYO-LYNKCO-20261019.md).
 - El PR dependiente eleva la base de 1.028 a **1.036 precios**, 48 marcas y 230 electrificados; ni B10 ni C10 se duplicaron, y T03 permanece pendiente de precio comercial chileno.
 - No trasladar importes `+IVA` de vehículos comerciales ni precios `Desde` al catálogo de valores con IVA.
+
+## Precios verificados en Astara Retail y Gildemeister Retail (19/10/2026)
+
+[Expediente de nueve nuevas versiones con precio de lista explícito](./LOTE-ASTARA-GILDEMEISTER-20261019.md). Tres GAC AION EV, GS4 MAX y dos Mahindra XUV 3XO; el cotejo evita duplicar Hyundai Inster, Palisade y JMC EV3. Nuevo total provisional: **1.045** registros en rama dependiente, sujeto a QA de PR #90, PR #91 y este lote.
+
+También se añadieron Nissan Kait Exclusive y X-Trail e-POWER (Astara Retail), más Shineray X30 con A/C (Gildemeister). Ver [expediente actualizado](./LOTE-ASTARA-GILDEMEISTER-20261019.md).
+
+### Extensión Gildemeister 4 versiones (19/10/2026)
+
+GAC GS4 híbrido HEV, Shineray T50 y dos acabados SWM G05, con fuente de lista IVA incluido, documentadas en [LOTE-ASTARA-GILDEMEISTER-20261019.md](./LOTE-ASTARA-GILDEMEISTER-20261019.md). Cuatro registros adicionales elevan la rama dependiente PR #92 a **1.049 precios y 49 marcas**, pero no equivalen a modelos homologados 3CV ni precios publicados hasta fusionar PR #90/91/92.
