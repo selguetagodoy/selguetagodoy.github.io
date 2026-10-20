@@ -31,8 +31,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert.equal(await p.inputValue('#chargeScenario'),'home');
   assert(await p.locator('#scenarioAdvanced').evaluate(el=>el.open));
   assert(await p.locator('#homeChargeField').isVisible());
-  assert.equal(await p.inputValue('#electricPrice'),'');
+  assert.equal(await p.inputValue('#electricPrice'),'230');
+  await p.fill('#homeChargeRate','');
+  assert.equal(await p.inputValue('#electricPrice'),''); // solo queda sin costo si el usuario borra el supuesto
+  await p.fill('#homeChargeRate','230');
   await p.selectOption('#chargeScenario','mixed');
+  assert.equal(await p.inputValue('#electricPrice'),'252');
   assert(await p.locator('#homeShareField').isVisible());
   await p.selectOption('#chargeScenario','public');
   assert.equal(await p.inputValue('#electricPrice'),'340');
