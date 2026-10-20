@@ -1,0 +1,75 @@
+[
+  {
+    "brand": "Landking",
+    "family": "LK 614",
+    "version": "LK 614 Chasis Cabina",
+    "modelYear": null,
+    "priceListClp": 23788100,
+    "source": "https://www.rosselot.cl/nuevos/landking/lk-614",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Rosselot Chile, precio lista literal por versión, separado de descuentos; condición de campaña 2026-10-31. Documento histórico al 19/10/2026.",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "Landking",
+    "family": "LK 614",
+    "version": "LK 614 Pick up",
+    "modelYear": null,
+    "priceListClp": 25811100,
+    "source": "https://www.rosselot.cl/nuevos/landking/lk-614",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Rosselot Chile, precio lista literal por versión, separado de descuentos; condición de campaña 2026-10-31. Documento histórico al 19/10/2026.",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "Landking",
+    "family": "LK 614",
+    "version": "LK 614 Cargo Box",
+    "modelYear": null,
+    "priceListClp": 27596100,
+    "source": "https://www.rosselot.cl/nuevos/landking/lk-614",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Rosselot Chile, precio lista literal por versión, separado de descuentos; condición de campaña 2026-10-31. Documento histórico al 19/10/2026.",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "Opel",
+    "family": "Combo",
+    "version": "Combo Lite Diesel 100HP MT",
+    "modelYear": null,
+    "priceListClp": 22598100,
+    "source": "https://www.rosselot.cl/nuevos/opel/combo",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Rosselot Chile, precio lista literal por versión, separado de descuentos; condición de campaña 2026-10-31. Documento histórico al 19/10/2026.",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "Landking",
+    "family": "LK8 EV",
+    "version": "LK8 EV Cargobox",
+    "modelYear": null,
+    "priceListClp": 62463100,
+    "source": "https://www.rosselot.cl/nuevos/landking/lk8-ev",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Rosselot Chile, precio lista literal por versión, separado de descuentos; condición de campaña 2026-10-31. Documento histórico al 19/10/2026.",
+    "technology": "EV",
+    "sourceOfferEnd": "2026-10-31"
+  },
+  {
+    "brand": "Peugeot",
+    "family": "BOXER MCA",
+    "version": "Boxer MCA Furgón L2H2 Diesel 140hp MT",
+    "modelYear": null,
+    "priceListClp": 37354100,
+    "source": "https://www.rosselot.cl/nuevos/peugeot/boxer-mca",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Rosselot Chile, precio lista literal por versión, separado de descuentos; condición de campaña 2026-10-31. Documento histórico al 19/10/2026.",
+    "sourceOfferEnd": "2026-10-31"
+  }
+]
