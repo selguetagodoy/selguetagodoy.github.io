@@ -737,6 +737,9 @@ await test('143 precios desde por modelo: MD, origen, buscador y cotizador',asyn
  assert.equal(all.length,1467);
  const desde=all.filter(x=>x.version==='Precio desde (versión no especificada)');
  assert.equal(desde.length,143,'Falta un modelo de los lotes MD');
+ const electricClassifications={'Ford|E-Transit Chasis':'EV','Fiat|500e':'EV','Fiat|600e':'EV','Peugeot|e-2008':'EV','Peugeot|Partner Electric':'EV','Volvo|XC40 Pure Electric':'EV','Volvo|XC60 Plug-In Hybrid':'PHEV','Volvo|XC90 Plug-In Hybrid':'PHEV','Volvo|xc60-mild-hybrid':'MHEV','Volvo|xc90-mild-hybrid':'MHEV','Chevrolet|Bolt EUV':'EV'};
+ for(const [key,tech] of Object.entries(electricClassifications)){const row=desde.find(x=>x.brand+'|'+x.family===key);assert.equal(row?.technology,tech,'Etiqueta de tecnología incorrecta para '+key);}
+
  for(const name of ['LOTE-MODELOS-FALTANTES-PRECIO-DESDE-20261020.md','LOTE-MODELOS-MARCAS-MASIVAS-20261020.md']){
   const txt=fs.readFileSync(path.join(__dirname,'../sii',name),'utf8');
   assert(txt.includes('auto.cl'),'El inventario debe indicar el origen');
