@@ -1,0 +1,205 @@
+{
+  "hold": [
+    {
+      "reason": "invalid_price",
+      "key": "BMW|IX1|IX1 XDRIVE 30 COMFORT",
+      "entries": [
+        {
+          "brand": "BMW",
+          "family": "iX1",
+          "version": "iX1 xDrive 30 Comfort",
+          "modelYear": null,
+          "priceListClp": 60,
+          "source": "https://www.bmw.cl/modelos/ix1",
+          "checkedAt": "2026-10-19",
+          "currency": "CLP",
+          "priceBasis": "Precio lista literal BMW Chile, distinto de bono/financiamiento. Campaña por verificar",
+          "technology": "EV",
+          "_batch": "rindelab/sii/BMW-EXTRACCION-02.json"
+        }
+      ]
+    }
+  ],
+  "duplicates": [
+    {
+      "key": "HYUNDAI|INSTER|AX EV PLUS",
+      "year": 2026,
+      "price": 21990000,
+      "preexisting": [
+        21990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "HYUNDAI|INSTER|AX EV DESIGN LR",
+      "year": 2026,
+      "price": 24490000,
+      "preexisting": [
+        24490000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "KGM|ACTYON|LIMITED",
+      "year": 2026,
+      "price": 32990000,
+      "preexisting": [
+        32990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "KGM|ACTYON|DLX",
+      "year": 2026,
+      "price": 34990000,
+      "preexisting": [
+        34990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "KGM|ACTYON|HEV DLX",
+      "year": 2026,
+      "price": 36990000,
+      "preexisting": [
+        36990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "MINI|COUNTRYMAN|SE ALL4 C PREMIUM PACKAGE 4X4",
+      "year": 2027,
+      "price": 58990000,
+      "preexisting": [
+        58990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "MINI|ACEMAN|SE FAVOURED 4X2",
+      "year": 2027,
+      "price": 41990000,
+      "preexisting": [
+        41990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "MINI|ACEMAN|JCW E 4X2",
+      "year": 2027,
+      "price": 46900000,
+      "preexisting": [
+        46900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "BMW|IX2|IX2 XDRIVE30 M SPORT",
+      "year": "null",
+      "price": 75900000,
+      "preexisting": [
+        75900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "BMW|X1|X1 SDRIVE18I COMFORT S",
+      "year": "null",
+      "price": 44900000,
+      "preexisting": [
+        44900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "BMW|X1|X1 SDRIVE18D DYNAMIC",
+      "year": "null",
+      "price": 48900000,
+      "preexisting": [
+        48900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "BMW|X1|X1 SDRIVE18I M SPORT",
+      "year": "null",
+      "price": 51900000,
+      "preexisting": [
+        51900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "BMW|X1|X1 XDRIVE25E DYNAMIC",
+      "year": "null",
+      "price": 53900000,
+      "preexisting": [
+        53900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "BMW|IX1|IX1 EDRIVE 20 COMFORT",
+      "year": "null",
+      "price": 56900000,
+      "preexisting": [
+        56900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "BMW|I4|I4 EDRIVE40 GRAN COUPE M SPORT LCI II",
+      "year": "null",
+      "price": 87900000,
+      "preexisting": [
+        87900000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "TOYOTA|HILUX|4X4 2 8 MT SR DIESEL",
+      "year": 2026,
+      "price": 45890000,
+      "preexisting": [
+        45290000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "TOYOTA|RAIZE|1 2 G CVT",
+      "year": 2026,
+      "price": 18490000,
+      "preexisting": [
+        18490000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "TOYOTA|RAIZE|1 2 E MT",
+      "year": 2026,
+      "price": 15990000,
+      "preexisting": [
+        15990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "TOYOTA|RAIZE|1 2 E CVT",
+      "year": 2026,
+      "price": 16990000,
+      "preexisting": [
+        16990000
+      ],
+      "reason": "same_commercial_version"
+    },
+    {
+      "key": "TOYOTA|YARIS|I MT",
+      "year": 2026,
+      "price": 14990000,
+      "preexisting": [
+        14690000
+      ],
+      "reason": "same_commercial_version"
+    }
+  ]
+}
