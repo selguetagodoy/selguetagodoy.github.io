@@ -1,0 +1,1559 @@
+{
+  "rows": [
+    {
+      "brand": "foton",
+      "model": "foton-foton-v9",
+      "version": "V9 ELITE AT 4X4",
+      "priceShownClp": 21390000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v9"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-foton-v9",
+      "version": "V9 ULTIMATE AT 4X4",
+      "priceShownClp": 25790000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v9"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-foton-v7",
+      "version": "V7 LUXURY MT 4X4",
+      "priceShownClp": 20390000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v7"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-foton-v7",
+      "version": "V7 ELITE AT 4X4",
+      "priceShownClp": 19990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v7"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-foton-g7-ultimate",
+      "version": "G7 ULTIMATE 4X4 EURO VI",
+      "priceShownClp": 14990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-ultimate"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-foton-g7-ultimate",
+      "version": "G7 ULTIMATE 4X4 EURO VI AT",
+      "priceShownClp": 17390000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-ultimate"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-foton-g7-lite",
+      "version": "G7 LITE 4X2 EURO VI",
+      "priceShownClp": 12190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-lite"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-foton-g7-lite",
+      "version": "G7 LITE 4X4 EURO VI",
+      "priceShownClp": 13190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-lite"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-g9",
+      "version": "G9 4X2 MT",
+      "priceShownClp": 14890000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-g9"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-g9",
+      "version": "G9 4X4 MT",
+      "priceShownClp": 15990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-g9"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-g9",
+      "version": "G9 4X4 AT",
+      "priceShownClp": 19090000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-g9"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-tm5",
+      "version": "TM5 CABINA SIMPLE 1.6 Euro VI",
+      "priceShownClp": 10290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-tm5",
+      "version": "TM5 CABINA DOBLE 1.6 Euro VI",
+      "priceShownClp": 10990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-tm5",
+      "version": "TM5 CARGO BOX",
+      "priceShownClp": 12390000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-midi",
+      "version": "MIDI CABINA SIMPLE 1.2 Euro VI",
+      "priceShownClp": 6390000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-midi"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-midi",
+      "version": "MIDI CABINA DOBLE 1.2 Euro VI",
+      "priceShownClp": 7390000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-midi"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-midi",
+      "version": "MIDI CARGO BOX",
+      "priceShownClp": 9490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-midi"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-rampage",
+      "version": "RAMPAGE LARAMIE 2.0 DIESEL 170 HP 4X4 AT",
+      "priceShownClp": 25990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-rampage",
+      "version": "RAMPAGE BIGHORN 2.2 DIESEL 200 HP 4X4 AT",
+      "priceShownClp": 29190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-rampage",
+      "version": "RAMPAGE REBEL 2.2 DIESEL 200 HP 4X4 AT",
+      "priceShownClp": 30190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-rampage",
+      "version": "RAMPAGE LARAMIE 2.2 DIESEL 200 HP 4X4 AT",
+      "priceShownClp": 31190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-rampage",
+      "version": "RAMPAGE R/T 2.2 GASOLINA 272 HP 4X4 AT",
+      "priceShownClp": 33190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-2500",
+      "version": "2500 REBEL 6.7 HO DIESEL 430 HP 4X4 AT",
+      "priceShownClp": 64490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-2500"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-2500",
+      "version": "2500 BIGHORN SPORT 6.7 HO DIESEL 430 HP 4X4 AT",
+      "priceShownClp": 74490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-2500"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-1500",
+      "version": "1500 BIGHORN NIGHT EDITION 3.6 V6 MILD HYBRID 305 HP 4X4 AT",
+      "priceShownClp": 40990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-1500"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-1500",
+      "version": "1500 BIGHORN 3.0 SO 426 HP 4X4 AT",
+      "priceShownClp": 44490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-1500"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-1500",
+      "version": "1500 REBEL 3.0 SO 420 HP 4X4 AT",
+      "priceShownClp": 56990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-1500"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-1500",
+      "version": "1500 LARAMIE 3.0 SO 426 HP 4X4 AT",
+      "priceShownClp": 59990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-1500"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-1500",
+      "version": "1500 RHO 3.0 HO 540 HP 4x4 AT",
+      "priceShownClp": 85990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-1500"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-700",
+      "version": "700 SLT SINGLE CAB 1.3 MT",
+      "priceShownClp": 11290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-700",
+      "version": "700 SLT CREW CAB 1.3 MT",
+      "priceShownClp": 11990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-700",
+      "version": "700 BIGHORN CREW CAB 1.3 MT",
+      "priceShownClp": 13290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-700",
+      "version": "700 BIGHORN CREW CAB 1.3 CVT",
+      "priceShownClp": 15290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-700",
+      "version": "700 LARAMIE CREW CAB 1.0T CVT",
+      "priceShownClp": 16690000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-dakota",
+      "version": "DAKOTA WARLOCK 2.2 DIESEL 200 HP 4X4 AT",
+      "priceShownClp": 31790000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-dakota"
+    },
+    {
+      "brand": "ram",
+      "model": "ram-dakota",
+      "version": "DAKOTA LARAMIE 2.2 DIESEL 200 HP 4X4 AT",
+      "priceShownClp": 33290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Diesel",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-dakota"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-view-grand",
+      "version": "VIEW GRAND CARGO L2H2 MT",
+      "priceShownClp": 18890000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-view-grand"
+    },
+    {
+      "brand": "foton",
+      "model": "foton-view-grand",
+      "version": "VIEW GRAND PASAJERO L2H2 MT",
+      "priceShownClp": 20390000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Diesel",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-view-grand"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-nueva-x-trail",
+      "version": "NEW X-TRAIL SENSE CVT 2R",
+      "priceShownClp": 23990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-x-trail"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-nueva-x-trail",
+      "version": "NEW X-TRAIL SENSE CVT 3R",
+      "priceShownClp": 24990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-x-trail"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-nueva-x-trail",
+      "version": "NEW X-TRAIL EXCLUSIVE CVT 3R AWD",
+      "priceShownClp": 32490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-x-trail"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-nuevo-kicks",
+      "version": "NEW KICKS SENSE PLUS CVT",
+      "priceShownClp": 22490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nuevo-kicks"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-x-trail-e-power",
+      "version": "X-TRAIL EXCLUSIVE E-POWER AWD",
+      "priceShownClp": 40870000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-x-trail-e-power"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-nueva-qashqai",
+      "version": "NEW QASHQAI EXCLUSIVE CVT 4WD",
+      "priceShownClp": 35310000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-qashqai"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-kait",
+      "version": "KAIT SENSE CVT",
+      "priceShownClp": 17990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-kait"
+    },
+    {
+      "brand": "nissan",
+      "model": "nissan-kait",
+      "version": "KAIT EXCLUSIVE CVT",
+      "priceShownClp": 20490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-kait"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-c5",
+      "version": "C5 1,5L Urban",
+      "priceShownClp": 12490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-c5",
+      "version": "C5 1,5T Comfort",
+      "priceShownClp": 13690000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-c5",
+      "version": "C5 1,5T Luxury",
+      "priceShownClp": 15990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-c5",
+      "version": "C5 1,6T Prestige",
+      "priceShownClp": 16990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-e5",
+      "version": "E5 EV",
+      "priceShownClp": 25990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-e5"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-c7",
+      "version": "C7 1,6T Comfort",
+      "priceShownClp": 17740000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c7"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-c7",
+      "version": "C7 1,6T Luxury",
+      "priceShownClp": 18990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c7"
+    },
+    {
+      "brand": "omoda",
+      "model": "omoda-c7",
+      "version": "C7 1,6T Prestige",
+      "priceShownClp": 20990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c7"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-outback",
+      "version": "ALL NEW OUTBACK 2.5i AWD CVT PREMIUM",
+      "priceShownClp": 35990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-outback"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-outback",
+      "version": "ALL NEW OUTBACK 2.5i AWD CVT TOURING",
+      "priceShownClp": 40990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-outback"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-crosstrek",
+      "version": "Crosstrek 2.0i AWD CVT",
+      "priceShownClp": 23790000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-crosstrek",
+      "version": "CROSSTREK 2.0i AWD CVT PLUS",
+      "priceShownClp": 25490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-crosstrek",
+      "version": "Crosstrek 2.0i AWD CVT Dynamic EyeSigh",
+      "priceShownClp": 27990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-crosstrek",
+      "version": "CROSSTREK 2.0 AWD CVT Touring EyeSight HK 360",
+      "priceShownClp": 31190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-evoltis",
+      "version": "NEW EVOLTIS 2.4 AWD CVT Limited 8P Gardx",
+      "priceShownClp": 45990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-evoltis"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-evoltis",
+      "version": "NEW EVOLTIS 2.4 AWD CVT Touring 7P Gardx",
+      "priceShownClp": 47990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-evoltis"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-forester",
+      "version": "ALL NEW FORESTER 2.5 AWD CVT XS ES",
+      "priceShownClp": 26990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-forester",
+      "version": "ALL NEW FORESTER 2.5 AWD CVT DYNAMIC ES",
+      "priceShownClp": 30990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-forester",
+      "version": "ALL NEW FORESTER 2.5 AWD CVT SPORT ES",
+      "priceShownClp": 32990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-forester",
+      "version": "ALL NEW FORESTER 2.5 AWD CVT TOURING ES",
+      "priceShownClp": 34990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-forester-hev",
+      "version": "ALL NEW FORESTER 2.5 HEV AWD CVT SPORT ES",
+      "priceShownClp": 39990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester-hev"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-forester-hev",
+      "version": "ALL NEW FORESTER 2.5 HEV AWD CVT TOURING ES",
+      "priceShownClp": 41990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester-hev"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-crosstrek-hybrid",
+      "version": "CROSSTREK 2.0 HYBRID AWD CVT TOURING HK 360",
+      "priceShownClp": 32190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek-hybrid"
+    },
+    {
+      "brand": "subaru",
+      "model": "subaru-all-new-trailseeker",
+      "version": "ALL NEW TRAILSEEKER TOURING",
+      "priceShownClp": 53990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-trailseeker"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tera",
+      "version": "Tera 1.6 MT Trend",
+      "priceShownClp": 14290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tera"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tera",
+      "version": "Tera 1.6 MT Comfort",
+      "priceShownClp": 15290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tera"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tera",
+      "version": "Tera 1.0 TSI AT Comfort",
+      "priceShownClp": 16290000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tera"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tera",
+      "version": "Tera 1.0 TSI AT High",
+      "priceShownClp": 18490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tera"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tera",
+      "version": "Tera 1.0 TSI AT Outfit",
+      "priceShownClp": 18990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tera"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tiguan",
+      "version": "Tiguan TSI AT Comfortline 150HP",
+      "priceShownClp": 34490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tiguan"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tiguan",
+      "version": "Tiguan 1.4 TSI AT R-Line",
+      "priceShownClp": 37490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tiguan"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-tiguan",
+      "version": "Tiguan 1.5 TSI AT R-Line MHEV",
+      "priceShownClp": 40490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tiguan"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-t-cross",
+      "version": "T-Cross 1.0 TSI AT Comfortline",
+      "priceShownClp": 17490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-t-cross"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-t-cross",
+      "version": "T-Cross 1.0 TSI AT Highline",
+      "priceShownClp": 18990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-t-cross"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-t-cross",
+      "version": "T-Cross 1.0 TSI AT Highline Sport S",
+      "priceShownClp": 20990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-t-cross"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-taos",
+      "version": "Taos 1.5 TSI AT Comfortline",
+      "priceShownClp": 27490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-taos"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-nivus",
+      "version": "Nivus 1.0 TSI AT Comfortline",
+      "priceShownClp": 17490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-nivus"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-nivus",
+      "version": "Nuevo Nivus AT Highline Outfit",
+      "priceShownClp": 17840000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-nivus"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-nivus",
+      "version": "Nivus 1.0 TSI AT Highline",
+      "priceShownClp": 18990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-nivus"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-atlas",
+      "version": "Atlas 2.0 TSI AT Comfort 4Motion",
+      "priceShownClp": 44990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-atlas"
+    },
+    {
+      "brand": "volkswagen",
+      "model": "volkswagen-atlas",
+      "version": "Nuevo Atlas 2.0 TSI AT Limited 4Motion",
+      "priceShownClp": 48890000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-atlas"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-xc40",
+      "version": "XC40 B4 CORE",
+      "priceShownClp": 38900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc40"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-xc40",
+      "version": "XC40 B4 PLUS",
+      "priceShownClp": 42900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc40"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-ex90",
+      "version": "EX90 PLUS",
+      "priceShownClp": 99900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex90"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-ex30",
+      "version": "EX30 E40 CORE",
+      "priceShownClp": 29900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Rwd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-ex30",
+      "version": "EX30 E60 PLUS",
+      "priceShownClp": 36900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Rwd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-ex30",
+      "version": "EX30 E60 ULTRA",
+      "priceShownClp": 39900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Rwd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-ex40",
+      "version": "EX40 P8 ULTRA",
+      "priceShownClp": 56900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex40"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-ex30-cross-country",
+      "version": "EX30 CROSS COUNTRY ULTRA",
+      "priceShownClp": 49900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30-cross-country"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-xc90",
+      "version": "XC90 T8 AWD CORE",
+      "priceShownClp": 84900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc90"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-xc90",
+      "version": "XC90 T8 AWD PLUS",
+      "priceShownClp": 91900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc90"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-xc90",
+      "version": "XC90 T8 AWD ULTRA",
+      "priceShownClp": 96900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc90"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-xc60",
+      "version": "XC60 T8 AWD CORE",
+      "priceShownClp": 54900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60"
+    },
+    {
+      "brand": "volvo",
+      "model": "volvo-xc60",
+      "version": "XC60 T8 AWD ULTRA",
+      "priceShownClp": 71900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Dual",
+      "traction": "Awd",
+      "source": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-a5",
+      "version": "New A5 TFSI",
+      "priceShownClp": 49400000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-a5",
+      "version": "New A5 TFSI quattro S line",
+      "priceShownClp": 56900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-a5",
+      "version": "New S5 TFSI quattro",
+      "priceShownClp": 75900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x4",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-a3-sportback",
+      "version": "A3 Sportback PI 35 TFSI MHEV",
+      "priceShownClp": 29900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a3-sportback"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-a3-sportback",
+      "version": "A3 Sportback PI 35 TFSI Sport MHEV",
+      "priceShownClp": 36900000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a3-sportback"
+    },
+    {
+      "brand": "audi",
+      "model": "audi-a3-sportback",
+      "version": "A3 Sportback PI 35 TFSI S line MHEV S.E",
+      "priceShownClp": 40000000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a3-sportback"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-leon",
+      "version": "Cupra Leon 1.5 TSI mHEV AT (Entry)",
+      "priceShownClp": 27690000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-leon"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-leon",
+      "version": "Nuevo Leon 1.5 TSI mHEV AT 150hp",
+      "priceShownClp": 29190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-leon"
+    },
+    {
+      "brand": "cupra",
+      "model": "cupra-leon",
+      "version": "Nuevo Cupra Leon VZ 2.0 TSI AT",
+      "priceShownClp": 38190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-leon"
+    },
+    {
+      "brand": "dfsk",
+      "model": "dfsk-suv-500",
+      "version": "500 1.5 Comfort",
+      "priceShownClp": 9190000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Mecanica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-500"
+    },
+    {
+      "brand": "dfsk",
+      "model": "dfsk-suv-500",
+      "version": "500 1.5 Luxury",
+      "priceShownClp": 10990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-500"
+    },
+    {
+      "brand": "dfsk",
+      "model": "dfsk-suv-500",
+      "version": "500 1.5 LUXURY CVT SK",
+      "priceShownClp": 11990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-500"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-fastback",
+      "version": "FASTBACK DRIVE TURBO AT",
+      "priceShownClp": 14490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-fastback"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-fastback",
+      "version": "FASTBACK DRIVE TURBO AT MCA",
+      "priceShownClp": 14990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-fastback"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-fastback",
+      "version": "FASTBACK IMPETUS TURBO AT",
+      "priceShownClp": 16990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-fastback"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-fastback",
+      "version": "FASTBACK IMPETUS TURBO AT MCA",
+      "priceShownClp": 17490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-fastback"
+    },
+    {
+      "brand": "fiat",
+      "model": "fiat-500",
+      "version": "500e",
+      "priceShownClp": 19990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-500"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-mustang",
+      "version": "Mustang GT Coupe 5.0L AT",
+      "priceShownClp": 55990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-mustang"
+    },
+    {
+      "brand": "ford",
+      "model": "ford-mustang",
+      "version": "Mustang Dark Horse Premium 5.0L AT",
+      "priceShownClp": 61990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Gasolina",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-mustang"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-ex2",
+      "version": "Ex2 Pro",
+      "priceShownClp": 16990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex2"
+    },
+    {
+      "brand": "geely",
+      "model": "geely-ex2",
+      "version": "Ex2 Max",
+      "priceShownClp": 18490000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "4x2",
+      "source": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex2"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-mg-4-electrico",
+      "version": "MG 4 URBAN EV 43 KWh COM",
+      "priceShownClp": 15990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-4-electrico"
+    },
+    {
+      "brand": "mg",
+      "model": "mg-mg-4-electrico",
+      "version": "MG4 URBAN EV 43 KWh LUX",
+      "priceShownClp": 16990000,
+      "priceBasis": "precio_publicado_no_verificado_como_lista",
+      "transmission": "Automatica",
+      "fuel": "Electrico",
+      "traction": "Fwd",
+      "source": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-4-electrico"
+    }
+  ],
+  "status": [
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v9",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-v7",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-ultimate",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-foton-g7-lite",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-g9",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-midi",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage",
+      "count": 5
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-2500",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-1500",
+      "count": 5
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700",
+      "count": 5
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-dakota",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-view-grand",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-x-trail",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nuevo-kicks",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-x-trail-e-power",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-qashqai",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-kait",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-e5",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c7",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-outback",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-evoltis",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester-hev",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek-hybrid",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-trailseeker",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tera",
+      "count": 5
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tiguan",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-t-cross",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-taos",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-nivus",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-atlas",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc40",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex90",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex40",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30-cross-country",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc90",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a3-sportback",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-leon",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-500",
+      "count": 3
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-fastback",
+      "count": 4
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-500",
+      "count": 1
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-mustang",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex2",
+      "count": 2
+    },
+    {
+      "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-4-electrico",
+      "count": 2
+    }
+  ]
+}

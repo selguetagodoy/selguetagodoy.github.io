@@ -1,0 +1,620 @@
+[
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5-sportback",
+    "page": 1,
+    "brand": "audi",
+    "slug": "audi-q5-sportback"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3-sportback",
+    "page": 1,
+    "brand": "audi",
+    "slug": "audi-new-q3-sportback"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-sq5",
+    "page": 1,
+    "brand": "audi",
+    "slug": "audi-sq5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q8",
+    "page": 1,
+    "brand": "audi",
+    "slug": "audi-q8"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5",
+    "page": 1,
+    "brand": "audi",
+    "slug": "audi-q5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3",
+    "page": 1,
+    "brand": "audi",
+    "slug": "audi-new-q3"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-plus",
+    "page": 1,
+    "brand": "byd",
+    "slug": "byd-song-plus"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-sealion-7-ev",
+    "page": 1,
+    "brand": "byd",
+    "slug": "byd-sealion-7-ev"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-yuan-plus",
+    "page": 1,
+    "brand": "byd",
+    "slug": "byd-yuan-plus"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-song-pro",
+    "page": 1,
+    "brand": "byd",
+    "slug": "byd-song-pro"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-atto-8-dm",
+    "page": 1,
+    "brand": "byd",
+    "slug": "byd-atto-8-dm"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-2-pro-max",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-2-pro-max"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-4-pro-max-hibrido",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-4-pro-max-hibrido"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7-pro",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-7-pro"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max-hibrido",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-8-pro-max-hibrido"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-7"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-9-hibrido",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-9-hibrido"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7-pro-max-hibrido",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-7-pro-max-hibrido"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-8"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-8-pro-max"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-4-pro-max",
+    "page": 2,
+    "brand": "chery",
+    "slug": "chery-tiggo-4-pro-max"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-formentor",
+    "page": 2,
+    "brand": "cupra",
+    "slug": "cupra-formentor"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-terramar",
+    "page": 2,
+    "brand": "cupra",
+    "slug": "cupra-terramar"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-e5-plus-phev",
+    "page": 3,
+    "brand": "dfsk",
+    "slug": "dfsk-e5-plus-phev"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/dfsk/nuevo/dfsk-suv-600-phev",
+    "page": 3,
+    "brand": "dfsk",
+    "slug": "dfsk-suv-600-phev"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse",
+    "page": 3,
+    "brand": "fiat",
+    "slug": "fiat-pulse"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-expedition",
+    "page": 3,
+    "brand": "ford",
+    "slug": "ford-expedition"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-new-bronco",
+    "page": 3,
+    "brand": "ford",
+    "slug": "ford-new-bronco"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-bronco-sport",
+    "page": 3,
+    "brand": "ford",
+    "slug": "ford-bronco-sport"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-explorer",
+    "page": 3,
+    "brand": "ford",
+    "slug": "ford-explorer"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory",
+    "page": 3,
+    "brand": "ford",
+    "slug": "ford-territory"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/ford/nuevo/ford-territory-fhev",
+    "page": 3,
+    "brand": "ford",
+    "slug": "ford-territory-fhev"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-new-coolray",
+    "page": 4,
+    "brand": "geely",
+    "slug": "geely-new-coolray"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-okavango",
+    "page": 4,
+    "brand": "geely",
+    "slug": "geely-okavango"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex5",
+    "page": 4,
+    "brand": "geely",
+    "slug": "geely-ex5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-coolray-lite",
+    "page": 4,
+    "brand": "geely",
+    "slug": "geely-coolray-lite"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-cityray",
+    "page": 4,
+    "brand": "geely",
+    "slug": "geely-cityray"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-cr-v-advanced-hybrid",
+    "page": 4,
+    "brand": "honda",
+    "slug": "honda-cr-v-advanced-hybrid"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-zr-v-hybrid",
+    "page": 4,
+    "brand": "honda",
+    "slug": "honda-zr-v-hybrid"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-cr-v",
+    "page": 4,
+    "brand": "honda",
+    "slug": "honda-cr-v"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-hr-v",
+    "page": 4,
+    "brand": "honda",
+    "slug": "honda-hr-v"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-nueva-pilot",
+    "page": 4,
+    "brand": "honda",
+    "slug": "honda-nueva-pilot"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo5",
+    "page": 4,
+    "brand": "jaecoo",
+    "slug": "jaecoo-jaecoo5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo6",
+    "page": 5,
+    "brand": "jaecoo",
+    "slug": "jaecoo-jaecoo6"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-j7-shs",
+    "page": 5,
+    "brand": "jaecoo",
+    "slug": "jaecoo-j7-shs"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jaecoo/nuevo/jaecoo-jaecoo7",
+    "page": 5,
+    "brand": "jaecoo",
+    "slug": "jaecoo-jaecoo7"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-wrangler",
+    "page": 5,
+    "brand": "jeep",
+    "slug": "jeep-wrangler"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger",
+    "page": 5,
+    "brand": "jeep",
+    "slug": "jeep-avenger"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-renegade",
+    "page": 5,
+    "brand": "jeep",
+    "slug": "jeep-renegade"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-compass",
+    "page": 5,
+    "brand": "jeep",
+    "slug": "jeep-compass"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-grand-cherokee",
+    "page": 5,
+    "brand": "jeep",
+    "slug": "jeep-grand-cherokee"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-commander",
+    "page": 5,
+    "brand": "jeep",
+    "slug": "jeep-commander"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-actyon",
+    "page": 5,
+    "brand": "kgm",
+    "slug": "kgm-actyon"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-rexton",
+    "page": 5,
+    "brand": "kgm",
+    "slug": "kgm-rexton"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-torres",
+    "page": 5,
+    "brand": "kgm",
+    "slug": "kgm-torres"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-defender",
+    "page": 6,
+    "brand": "land-rover",
+    "slug": "land-rover-defender"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-evoque",
+    "page": 7,
+    "brand": "land-rover",
+    "slug": "land-rover-evoque"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover-velar",
+    "page": 7,
+    "brand": "land-rover",
+    "slug": "land-rover-range-rover-velar"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+    "page": 7,
+    "brand": "land-rover",
+    "slug": "land-rover-range-rover"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-one",
+    "page": 7,
+    "brand": "mg",
+    "slug": "mg-mg-one"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs",
+    "page": 7,
+    "brand": "mg",
+    "slug": "mg-all-new-mg-zs"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-hs",
+    "page": 7,
+    "brand": "mg",
+    "slug": "mg-new-hs"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-zx",
+    "page": 7,
+    "brand": "mg",
+    "slug": "mg-mg-zx"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-all-new-mg-zs-hibrido",
+    "page": 7,
+    "brand": "mg",
+    "slug": "mg-all-new-mg-zs-hibrido"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator",
+    "page": 7,
+    "brand": "mitsubishi",
+    "slug": "mitsubishi-destinator"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-eclipse-cross",
+    "page": 7,
+    "brand": "mitsubishi",
+    "slug": "mitsubishi-eclipse-cross"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-sport",
+    "page": 8,
+    "brand": "mitsubishi",
+    "slug": "mitsubishi-outlander-sport"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-outlander-hibrido",
+    "page": 7,
+    "brand": "mitsubishi",
+    "slug": "mitsubishi-outlander-hibrido"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-x-trail",
+    "page": 8,
+    "brand": "nissan",
+    "slug": "nissan-nueva-x-trail"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nuevo-kicks",
+    "page": 8,
+    "brand": "nissan",
+    "slug": "nissan-nuevo-kicks"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-x-trail-e-power",
+    "page": 8,
+    "brand": "nissan",
+    "slug": "nissan-x-trail-e-power"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-nueva-qashqai",
+    "page": 8,
+    "brand": "nissan",
+    "slug": "nissan-nueva-qashqai"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-kait",
+    "page": 8,
+    "brand": "nissan",
+    "slug": "nissan-kait"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5",
+    "page": 8,
+    "brand": "omoda",
+    "slug": "omoda-c5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-e5",
+    "page": 8,
+    "brand": "omoda",
+    "slug": "omoda-e5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c7",
+    "page": 8,
+    "brand": "omoda",
+    "slug": "omoda-c7"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan",
+    "page": 8,
+    "brand": "porsche",
+    "slug": "porsche-macan"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-cayenne",
+    "page": 8,
+    "brand": "porsche",
+    "slug": "porsche-cayenne"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-outback",
+    "page": 8,
+    "brand": "subaru",
+    "slug": "subaru-all-new-outback"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek",
+    "page": 9,
+    "brand": "subaru",
+    "slug": "subaru-crosstrek"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-evoltis",
+    "page": 9,
+    "brand": "subaru",
+    "slug": "subaru-evoltis"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester",
+    "page": 9,
+    "brand": "subaru",
+    "slug": "subaru-all-new-forester"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-forester-hev",
+    "page": 9,
+    "brand": "subaru",
+    "slug": "subaru-all-new-forester-hev"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-crosstrek-hybrid",
+    "page": 9,
+    "brand": "subaru",
+    "slug": "subaru-crosstrek-hybrid"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/subaru/nuevo/subaru-all-new-trailseeker",
+    "page": 9,
+    "brand": "subaru",
+    "slug": "subaru-all-new-trailseeker"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tera",
+    "page": 9,
+    "brand": "volkswagen",
+    "slug": "volkswagen-tera"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tiguan",
+    "page": 9,
+    "brand": "volkswagen",
+    "slug": "volkswagen-tiguan"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-t-cross",
+    "page": 9,
+    "brand": "volkswagen",
+    "slug": "volkswagen-t-cross"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-taos",
+    "page": 9,
+    "brand": "volkswagen",
+    "slug": "volkswagen-taos"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-nivus",
+    "page": 9,
+    "brand": "volkswagen",
+    "slug": "volkswagen-nivus"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-atlas",
+    "page": 9,
+    "brand": "volkswagen",
+    "slug": "volkswagen-atlas"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc40",
+    "page": 10,
+    "brand": "volvo",
+    "slug": "volvo-xc40"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex90",
+    "page": 10,
+    "brand": "volvo",
+    "slug": "volvo-ex90"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30",
+    "page": 10,
+    "brand": "volvo",
+    "slug": "volvo-ex30"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex40",
+    "page": 10,
+    "brand": "volvo",
+    "slug": "volvo-ex40"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-ex30-cross-country",
+    "page": 10,
+    "brand": "volvo",
+    "slug": "volvo-ex30-cross-country"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc90",
+    "page": 10,
+    "brand": "volvo",
+    "slug": "volvo-xc90"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60",
+    "page": 10,
+    "brand": "volvo",
+    "slug": "volvo-xc60"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5",
+    "page": 10,
+    "brand": "audi",
+    "slug": "audi-a5"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a3-sportback",
+    "page": 10,
+    "brand": "audi",
+    "slug": "audi-a3-sportback"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-dolphin-mini",
+    "page": 10,
+    "brand": "byd",
+    "slug": "byd-dolphin-mini"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-seal",
+    "page": 10,
+    "brand": "byd",
+    "slug": "byd-seal"
+  },
+  {
+    "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-yuan-pro-dm-i",
+    "page": 10,
+    "brand": "byd",
+    "slug": "byd-yuan-pro-dm-i"
+  }
+]
