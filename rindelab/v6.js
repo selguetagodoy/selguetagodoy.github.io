@@ -752,6 +752,7 @@ function renderStatistics(){
    '<small>'+safe(row[F.TECH])+' · '+safe(row[F.BODY]||'Carrocería no informada')+
    ' <span class="rank-cycle" data-cycle="'+safe(row[F.CYCLE]||'')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></small>'+
    (isPlugInTechnology(tech)?'<small class="rank-metrics">'+safe(valuesExtra)+'</small>':'')+
+   (reviewedEnergyCodes.has(row[F.CODE])?'<small class="energy-quality-note">Dato NEDC atípico, sujeto a revisión de fuente.</small>':'')+
    (cycle?'<span class="rank-track"><span class="rank-fill" style="width:'+Math.max(4,value/maxValue*100).toFixed(2)+'%"></span></span>':'')+'</span>'+
    '<span class="rank-value">'+safe(label)+'<span class="rank-arrow" aria-hidden="true">↗</span></span>';
   ranking.append(item);
@@ -829,6 +830,7 @@ $('resetButton').addEventListener('click',()=>{
 });
 for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
  if(id==='brand')$('model').value='';
+ if(id==='cycle')costSortCycleNotice='';
  if(id!=='model')choices();
  $('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';
 });
