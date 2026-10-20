@@ -702,7 +702,7 @@ await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicad
 });
 await test('Ocho marcas agregadas con Markdown, precio de lista y origen comercial',async()=>{
  const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(data.length,1224);
+ assert.equal(data.length,1324);
  const counts={'Porsche':67,'Honda':9,'Lexus':11,'Mercedes-Benz':11,'Tesla':5,'DS':8,'Alfa Romeo':2,'Jaguar':2};
  for(const [brand,n] of Object.entries(counts)){
   const items=data.filter(x=>x.brand===brand);
@@ -712,7 +712,25 @@ await test('Ocho marcas agregadas con Markdown, precio de lista y origen comerci
  for(const pathFile of ['LOTE-PORSCHE-20261020.md','LOTE-HONDA-20261020.md','LOTE-LEXUS-MERCEDES-20261020.md','LOTE-TESLA-20261020.md','LOTE-DS-ALFA-JAGUAR-20261020.md','PENDIENTES-CATALOGO-NUEVOS-20261020.md']){
   assert(fs.existsSync(path.join(__dirname,'../sii',pathFile)),'MD no generado '+pathFile);
  }
- assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.224'));
+ assert(fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8').includes('1.324'));
+});
+await test('Segunda ola: 100 precios en MD comercial con origen para quince marcas',async()=>{
+ const rows=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
+ assert.equal(rows.length,1324);
+ const counts={'Land Rover':17,'Smart':2,'Deepal':3,'Exeed':10,'Kaiyi':6,'Karry':8,'Kyc':8,'Seat':11,'Avatr':1,'Livan':2,'Riddara':2,'Zxauto':2,'Maserati':9,'Aston Martin':12,'Ferrari':7};
+ for(const [brand,n] of Object.entries(counts)){
+  const match=rows.filter(x=>x.brand===brand);
+  assert.equal(match.length,n,'Incompleto '+brand);
+  assert(match.every(x=>Number.isSafeInteger(x.priceListClp)&&x.priceListClp>0&&x.source.startsWith('https://www.auto.cl/nuevos/')),'Origen comercial inválido '+brand);
+ }
+ for(const md of ['LOTE-LANDROVER-SMART-20261020.md','LOTE-DEEPAL-EXEED-KAIYI-KARRY-KYC-SEAT-20261020.md','LOTE-AVATR-LIVAN-RIDDARA-ZXAUTO-LUJO-20261020.md']){
+  assert(fs.existsSync(path.join(__dirname,'../sii',md)),'Falta inventario documental '+md);
+ }
+ assert(rows.some(x=>x.brand==='Deepal'&&x.technology==='REEV'));
+ assert(rows.some(x=>x.brand==='Avatr'&&x.technology==='EV'));
+ assert(rows.some(x=>x.brand==='Riddara'&&x.technology==='EV'));
+ const master=fs.readFileSync(path.join(__dirname,'../sii/BASE-MAESTRA-PRECIOS-CON-ORIGEN-20261020.md'),'utf8');
+ assert(master.includes('1.324')&&master.includes('74'));
 });
 await test('Cinco marcas nuevas: 27 versiones, precio sin bono y fuente comercial identificada',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
