@@ -297,6 +297,9 @@ await test('El filtro opcional permite WLTP o NEDC sin separar el ranking conjun
  assert((await page.locator('.rank-cycle').allTextContents()).every(x=>x==='NEDC'));
  await page.selectOption('#statsCycle','');
  assert.equal(await page.inputValue('#statsCycle'),'');
+ assert.match(await page.locator('#statsSummaryTitle').textContent(),/sin ranking/i);
+ assert.match(await page.locator('#statsNotice').textContent(),/SIN RANKING/i);
+ assert((await page.locator('.rank-number').allTextContents()).every(x=>x==='—'));
  await page.locator('#statsClose').click();
 });
 await test('PHEV muestra 264 fichas y rendimiento eléctrico y ponderado sin costo inventado',async()=>{
@@ -584,16 +587,37 @@ await test('Edición de precios modifica costos, sin bloquear el ordenamiento',a
  assert.notEqual(first,second);
  await page.selectOption('#sort','cheapest');assert.equal(await page.inputValue('#sort'),'cheapest');
 });
-await test('Orden global mezcla ciclos y muestra su etiqueta individual',async()=>{
+await test('Ordenar por gasto requiere un único ciclo y prioriza WLTP, sin mezclar NEDC',async()=>{
  await page.click('#resetButton');
  await page.click('#searchButton');
  await page.selectOption('#sort','cheapest');
+ assert.equal(await page.inputValue('#cycle'),'WLTP');
  await page.click('#more');
  const labels=await page.locator('#resultList .cycle-badge').allTextContents();
  assert(labels.length===20);
- assert(labels.every(x=>x==='WLTP'||x==='NEDC'||x==='Ciclo no informado'));
- assert.equal(await page.locator('.group-label').count(),0);
- assert.match(await page.locator('#sortNote').textContent(),/Orden único/);
+ assert(labels.every(x=>x==='WLTP'),'No puede aparecer NEDC en el orden de menor gasto WLTP: '+JSON.stringify(labels));
+ assert.match(await page.locator('#sortNote').textContent(),/sin mezclar NEDC y WLTP/);
+ assert.match(await page.locator('#sortNote').textContent(),/No incluye precio de compra/);
+});
+await test('La búsqueda rápida de menor gasto no declara ganador absoluto al BMW NEDC',async()=>{
+ await page.click('#resetButton');
+ await page.locator('[data-rinde-explore="lowest"]').click();
+ assert.equal(await page.inputValue('#cycle'),'WLTP');
+ assert.equal(await page.inputValue('#sort'),'cheapest');
+ const codes=await page.locator('.vehicle-card .vehicle-meta').allTextContents();
+ assert(codes.every(x=>!x.includes('1224S00-3')));
+ assert((await page.locator('.vehicle-card .cycle-badge').allTextContents()).every(x=>x==='WLTP'));
+});
+await test('La ficha BMW i4 conserva rendimiento NEDC oficial y exhibe advertencia de calidad',async()=>{
+ await page.click('#resetButton');
+ await page.fill('#query','BMW i4 eDrive40');
+ await page.click('#searchButton');
+ const specific=page.locator('.vehicle-card').filter({hasText:'1224S00-3'});
+ assert.equal(await specific.count(),1);
+ assert.match(await specific.locator('.energy-quality-note').textContent(),/atípico.*10,6 km\/kWh/i);
+ await specific.locator('button[data-detail]').click();
+ assert.match(await page.locator('#detailContent .energy-quality-note').textContent(),/otra homologación NEDC.*6,3 km\/kWh/i);
+ await page.locator('#detailClose').click();
 });
 await test('Consulta SII requiere año y selección expresa antes de mostrar tasación',async()=>{
  await page.click('#resetButton');
