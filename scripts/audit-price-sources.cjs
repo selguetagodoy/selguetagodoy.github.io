@@ -7,7 +7,7 @@ const file=path.join(__dirname,'../rindelab/sii/commercial-2026.json');
 const entries=JSON.parse(fs.readFileSync(file,'utf8'));
 const reportArg=process.argv.find(a=>a.startsWith('--report-json='));
 const reportFile=reportArg?path.resolve(reportArg.slice('--report-json='.length)):null;
-const allowed=new Set(['tienda.toyota.cl','www.hyundai.cl','www.kia.cl','www.suzuki.cl','suzuki.cl','www.mgmotor.cl','www.changan.cl','www.ford.cl','www.bmw.cl','www.mazda.cl','www.subaru.cl','www.volkswagen.cl','www.gwm.cl','www.byd.com','webstore.nissan.cl','chery.cl','aventuramotors.chery.cl','callegari.chery.cl','piamonte.chery.cl','rosselot.chery.cl','gacmotor.cl','www.citroen.cl','mitsubishi-motors.cl','www.rosselot.cl','astararetail.cl','www.gildemeisterretail.cl','www.geely.cl','guillermomorales.cl','callegari.cl','www.omodajaecoo.cl','www.portillosur.cl','www.cartoni.cl','www.dfsk.cl','www.pdn.dfsk.cl','www.skoda.cl','www.jacautoschile.cl','www.baic.cl','www.dercocenter.cl','jmcchile.cl','dongfengindumotora.cl','mgmotors-prod-s3.s3.us-east-2.amazonaws.com','www.audi.cl','www.cupraofficial.cl','www.mini.cl','www.autocosmos.cl','compare.porsche.com','autos.honda.cl','lexus.cl','www.kaufmann.cl','www.tesla.com','www.auto.cl']);
+const allowed=new Set(['tienda.toyota.cl','www.hyundai.cl','www.kia.cl','www.suzuki.cl','suzuki.cl','www.mgmotor.cl','www.changan.cl','www.ford.cl','www.bmw.cl','www.mazda.cl','www.subaru.cl','www.volkswagen.cl','www.gwm.cl','www.byd.com','webstore.nissan.cl','chery.cl','aventuramotors.chery.cl','callegari.chery.cl','piamonte.chery.cl','rosselot.chery.cl','gacmotor.cl','www.citroen.cl','mitsubishi-motors.cl','www.rosselot.cl','astararetail.cl','www.gildemeisterretail.cl','www.geely.cl','guillermomorales.cl','callegari.cl','www.omodajaecoo.cl','www.portillosur.cl','www.cartoni.cl','www.dfsk.cl','www.pdn.dfsk.cl','www.skoda.cl','www.jacautoschile.cl','www.baic.cl','www.dercocenter.cl','jmcchile.cl','dongfengindumotora.cl','mgmotors-prod-s3.s3.us-east-2.amazonaws.com','www.audi.cl','www.cupraofficial.cl','www.mini.cl','www.autocosmos.cl','compare.porsche.com','autos.honda.cl','lexus.cl','www.kaufmann.cl','www.tesla.com','www.auto.cl','www.hino.cl','www.fuso.cl']);
 const ages=[],sources=new Set(),errors=[],warnings=[],keys=new Set(),today=Date.now();
 const staleRecords=[],brandCounts=new Map();
 const iso=/^\d{4}-\d{2}-\d{2}$/;
@@ -19,6 +19,9 @@ for(const [index,r] of entries.entries()){
  if(keys.has(key))errors.push(place+': registro duplicado');
  keys.add(key);
  if(!r.brand||!r.family||!r.version||!Number.isSafeInteger(r.priceListClp)||r.priceListClp<=0||r.currency!=='CLP')errors.push(place+': datos de precio o versión inválidos');
+ if(r.taxIncluded!==undefined&&typeof r.taxIncluded!=='boolean')errors.push(place+': estado IVA inválido');
+ if(r.priceType!==undefined&&!['lista','desde','oferta','publicado'].includes(r.priceType))errors.push(place+': tipo de precio inválido');
+ if(['Hino','Fuso'].includes(r.brand)&&r.taxIncluded!==false)errors.push(place+': precio + IVA sin marca fiscal');
  try{
   const u=new URL(r.source);
   if(u.protocol!=='https:'||!allowed.has(u.hostname))errors.push(place+': fuente no autorizada '+r.source);
