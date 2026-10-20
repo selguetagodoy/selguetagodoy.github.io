@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('es-CL')
 const money=n=>'$'+fmt(n);
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const techNames={EV:'100 % eléctrico',HEV:'Híbrido',PHEV:'Híbrido enchufable',REEV:'Eléctrico con extensor',MHEV:'Híbrido suave'};
-const brandAlias={'LEAPMOTOR':'Leapmotor','M. Benz':'Mercedes-Benz','Gac Gonow':'Gac'};
+const brandAlias={'LEAPMOTOR':'Leapmotor','M. Benz':'Mercedes-Benz','Gac Gonow':'Gac','Lynk Co':'Lynk & Co','ZX Auto':'Zxauto','Ssangyong':'KGM','Haval':'Great Wall','DFM':'Dongfeng'};
 let prices=[],audit=null,page=30,gapExpanded=false;
 function td(tr,value){const c=document.createElement('td');c.textContent=String(value);tr.append(c);return c}
 function status(msg){$('electroStatus').textContent=msg}
@@ -25,7 +25,7 @@ function priceRows(){
   const description=document.createElement('small');description.textContent=p.version+(p.modelYear?' · año modelo '+p.modelYear:'');
   name.append(title,description);
   const t=td(tr,'');const badge=document.createElement('span');badge.className='tag';badge.textContent=techNames[p.technology]||p.technology;t.append(badge);
-  const cost=td(tr,money(p.priceListClp));cost.className='price';
+  const cost=td(tr,money(p.priceListClp)+(p.taxIncluded===false?' + IVA':''));cost.className='price';
   const src=td(tr,'');const link=document.createElement('a');link.href=p.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Ver fuente ↗';const date=document.createElement('small');date.textContent='Consultado: '+p.checkedAt+(p.sourceOfferEnd?' · campaña informada hasta '+p.sourceOfferEnd:'');src.append(link,date);
   $('electroRows').append(tr);
  }
@@ -52,7 +52,7 @@ function gapRows(){
 async function init(){
  try{
   const [p,a]=await Promise.all([
-   fetch('./sii/commercial-2026.json?v=20261020-electro1485').then(r=>{if(!r.ok)throw Error('catálogo inaccesible');return r.json();}),
+   fetch('./sii/commercial-2026.json?v=20261020-electro1504').then(r=>{if(!r.ok)throw Error('catálogo inaccesible');return r.json();}),
    fetch('./data/electromobility-3cv-audit-20261019.json').then(r=>{if(!r.ok)throw Error('auditoría no disponible');return r.json();})
   ]);
   if(!Array.isArray(p)||!a||!Array.isArray(a.brands))throw Error('estructura no válida');
