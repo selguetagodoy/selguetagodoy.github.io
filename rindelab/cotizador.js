@@ -59,6 +59,8 @@ function render(){
   const active=chosen&&identity(x)===identity(chosen);
   card.innerHTML='<div><strong>'+safe(x.brand+' '+x.family)+'</strong><span>'+safe(x.version)+(x.modelYear?' · modelo '+safe(x.modelYear):' · año no indicado')+'</span>'+
    '<small>'+safe(statusText(x))+'</small></div><div class="quote-version-price"><strong>'+displayPrice(x)+'</strong><span>'+safe(priceKind(x))+'</span></div>';
+  const photo=window.RindelabPhotos?.commercialNode(x);
+  if(photo){card.classList.add('has-photo');card.prepend(photo);}
   const actions=document.createElement('div');actions.className='quote-version-actions';
   const btn=document.createElement('button');btn.type='button';btn.className='button '+(active?'primary':'secondary');btn.textContent=active?'Versión seleccionada':'Cotizar esta versión';
   btn.disabled=!!active;btn.addEventListener('click',()=>select(x));

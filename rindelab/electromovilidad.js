@@ -23,6 +23,8 @@ function priceRows(){
   const name=td(tr,p.brand+' '+p.family);name.replaceChildren();
   const title=document.createElement('strong');title.textContent=p.brand+' '+p.family;
   const description=document.createElement('small');description.textContent=p.version+(p.modelYear?' · año modelo '+p.modelYear:'');
+  const photo=window.RindelabPhotos?.commercialNode(p);
+  if(photo){photo.classList.add('rinde-photo-compact');name.append(photo);}
   name.append(title,description);
   const t=td(tr,'');const badge=document.createElement('span');badge.className='tag';badge.textContent=techNames[p.technology]||p.technology;t.append(badge);
   const cost=td(tr,money(p.priceListClp)+(p.taxIncluded===false?' + IVA':''));cost.className='price';
