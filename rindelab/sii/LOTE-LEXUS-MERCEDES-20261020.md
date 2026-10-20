@@ -22,3 +22,14 @@ Registro de precios comerciales expresamente publicados en CLP; conservar enlace
 | Mercedes-Benz | Clase C | C 200 Avantgarde | $54.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/clase-c) |
 
 **Fuera de esta carga:** Mercedes con precios únicamente en USD y modelos Lexus sin precio individual documentado en CLP. No convertir divisas automáticamente.
+
+## Segundo barrido Kaufmann — GLC y CLE Coupé
+
+| Marca | Modelo | Versión | Precio CLP | Origen |
+|---|---|---|---:|---|
+| Mercedes-Benz | GLC | GLC 200 4MATIC | $62.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/glc) |
+| Mercedes-Benz | GLC | GLC 220d 4MATIC | $67.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/glc) |
+| Mercedes-Benz | GLC | GLC 200 4MATIC Advanced | $63.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) |
+| Mercedes-Benz | GLC | GLC 220d 4MATIC Advanced | $68.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/glc) |
+| Mercedes-Benz | CLE Coupé | CLE 200 Coupé | $64.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) |
+| Mercedes-Benz | CLE Coupé | CLE 300 Coupé | $72.900.000 | [Kaufmann](https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe) |
