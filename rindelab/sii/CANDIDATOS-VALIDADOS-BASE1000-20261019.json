@@ -25,6 +25,18 @@
   {
     "brand": "Mini",
     "family": "COOPER",
+    "version": "SE Favoured 4x2",
+    "modelYear": 2027,
+    "priceListClp": 40990000,
+    "source": "https://www.portillosur.cl/mini/cooper",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV.",
+    "technology": "EV"
+  },
+  {
+    "brand": "Mini",
+    "family": "COOPER",
     "version": "C 3P Favoured 4x2",
     "modelYear": 2027,
     "priceListClp": 36990000,
@@ -110,6 +122,18 @@
     "checkedAt": "2026-10-19",
     "currency": "CLP",
     "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV."
+  },
+  {
+    "brand": "Mini",
+    "family": "COOPER",
+    "version": "JCW E 4x2",
+    "modelYear": 2027,
+    "priceListClp": 48990000,
+    "source": "https://www.portillosur.cl/mini/cooper",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV.",
+    "technology": "EV"
   },
   {
     "brand": "Mini",
@@ -289,6 +313,17 @@
   },
   {
     "brand": "KGM",
+    "family": "NEW MUSSO GRAND",
+    "version": "LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D)",
+    "modelYear": 2026,
+    "priceListClp": 45208100,
+    "source": "https://www.portillosur.cl/kgm/newmussogrand",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV."
+  },
+  {
+    "brand": "KGM",
     "family": "MUSSO",
     "version": "GLX 2.2 TD 6MT 4WD (Euro 6B)",
     "modelYear": 2026,
@@ -326,6 +361,17 @@
     "version": "LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6B)",
     "modelYear": 2026,
     "priceListClp": 42233100,
+    "source": "https://www.portillosur.cl/kgm/musso",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV."
+  },
+  {
+    "brand": "KGM",
+    "family": "MUSSO",
+    "version": "LIMITED PLUS 2.2 TD 6AT 4WD (Euro 6D)",
+    "modelYear": 2026,
+    "priceListClp": 43423100,
     "source": "https://www.portillosur.cl/kgm/musso",
     "checkedAt": "2026-10-19",
     "currency": "CLP",
@@ -508,6 +554,40 @@
     "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV."
   },
   {
+    "brand": "KGM",
+    "family": "TORRES",
+    "version": "GLX 1.5T 2WD 6AT",
+    "modelYear": 2026,
+    "priceListClp": 26990000,
+    "source": "https://www.portillosur.cl/kgm/torres",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV."
+  },
+  {
+    "brand": "KGM",
+    "family": "TORRES",
+    "version": "DLX",
+    "modelYear": 2026,
+    "priceListClp": 29990000,
+    "source": "https://www.portillosur.cl/kgm/torres",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV."
+  },
+  {
+    "brand": "KGM",
+    "family": "TORRES",
+    "version": "HEV DLX",
+    "modelYear": 2026,
+    "priceListClp": 32990000,
+    "source": "https://www.portillosur.cl/kgm/torres",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur (concesionario Chile), tabla explícita Precio lista; cifra sin crédito, bono ni precio desde. Captura documental 19/10/2026, sin acreditar equivalencia 3CV.",
+    "technology": "HEV"
+  },
+  {
     "brand": "Chery",
     "family": "HIMLA",
     "version": "2.3T MT 4x2 FORCE (Original)",
@@ -620,6 +700,18 @@
   },
   {
     "brand": "Chery",
+    "family": "TIGGO 8 PRO MAX HÍBRIDO",
+    "version": "1.5T DHT PHEV",
+    "modelYear": 2026,
+    "priceListClp": 28990000,
+    "source": "https://www.portillosur.cl/chery/tiggo8promaxhibrido",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada.",
+    "technology": "PHEV"
+  },
+  {
+    "brand": "Chery",
     "family": "TIGGO 8 PRO MAX",
     "version": "1.6T DCT GLS",
     "modelYear": 2026,
@@ -661,6 +753,18 @@
     "checkedAt": "2026-10-19",
     "currency": "CLP",
     "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada."
+  },
+  {
+    "brand": "Chery",
+    "family": "TIGGO 7 HÍBRIDO",
+    "version": "1.5T DHT PHEV",
+    "modelYear": 2026,
+    "priceListClp": 25990000,
+    "source": "https://www.portillosur.cl/chery/tiggo7hibrido",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada.",
+    "technology": "PHEV"
   },
   {
     "brand": "Chery",
@@ -887,6 +991,17 @@
   {
     "brand": "Mitsubishi",
     "family": "OUTLANDER",
+    "version": "4X4 AT GLS",
+    "modelYear": 2026,
+    "priceListClp": 35490000,
+    "source": "https://www.portillosur.cl/mitsubishi/outlander",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada."
+  },
+  {
+    "brand": "Mitsubishi",
+    "family": "OUTLANDER",
     "version": "4X4 AT GLS (MY27",
     "modelYear": 2027,
     "priceListClp": 35490000,
@@ -968,6 +1083,39 @@
     "modelYear": 2026,
     "priceListClp": 26990000,
     "source": "https://www.portillosur.cl/mitsubishi/eclipsecross",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada."
+  },
+  {
+    "brand": "Mitsubishi",
+    "family": "OUTLANDER SPORT",
+    "version": "GL",
+    "modelYear": 2026,
+    "priceListClp": 21490000,
+    "source": "https://www.portillosur.cl/mitsubishi/outlandersport",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada."
+  },
+  {
+    "brand": "Mitsubishi",
+    "family": "OUTLANDER SPORT",
+    "version": "GLX",
+    "modelYear": 2026,
+    "priceListClp": 23490000,
+    "source": "https://www.portillosur.cl/mitsubishi/outlandersport",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada."
+  },
+  {
+    "brand": "Mitsubishi",
+    "family": "OUTLANDER SPORT",
+    "version": "GLS",
+    "modelYear": 2026,
+    "priceListClp": 24990000,
+    "source": "https://www.portillosur.cl/mitsubishi/outlandersport",
     "checkedAt": "2026-10-19",
     "currency": "CLP",
     "priceBasis": "Portillo Sur, Precio lista literal por versión, separado de bonos, crédito y precio desde; capturado 19/10/2026. Sin homologación 3CV equiparada."
@@ -1107,6 +1255,17 @@
   {
     "brand": "BMW",
     "family": "X1",
+    "version": "sDrive18i Comfort",
+    "modelYear": 2027,
+    "priceListClp": 41900000,
+    "source": "https://www.portillosur.cl/bmw/x1",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, tabla de Precio lista por versión, sin bonos ni financiamiento; 19/10/2026. No equiparar a registro 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "X1",
     "version": "sDrive 18d Dynamic",
     "modelYear": 2026,
     "priceListClp": 48900000,
@@ -1121,6 +1280,17 @@
     "version": "sDrive18i Dynamic",
     "modelYear": 2026,
     "priceListClp": 46900000,
+    "source": "https://www.portillosur.cl/bmw/x1",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Portillo Sur Chile, tabla de Precio lista por versión, sin bonos ni financiamiento; 19/10/2026. No equiparar a registro 3CV."
+  },
+  {
+    "brand": "BMW",
+    "family": "X1",
+    "version": "sDrive18i M Sport",
+    "modelYear": 2026,
+    "priceListClp": 51900000,
     "source": "https://www.portillosur.cl/bmw/x1",
     "checkedAt": "2026-10-19",
     "currency": "CLP",
@@ -1539,6 +1709,18 @@
   },
   {
     "brand": "Toyota",
+    "family": "Corolla Sedan Híbrido",
+    "version": "SEG 1.8 CVT HEV",
+    "modelYear": 2026,
+    "priceListClp": 28490000,
+    "source": "https://tienda.toyota.cl/index.php?id_product=200&id_product_attribute=5181&rewrite=corolla-hibrido&controller=product#/31-combustible-hibrido/142-modelo-corolla_sedan_hibrido",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio base Precio lista literal en Tienda Toyota Chile octubre 2026, sin bonos ni financiar; no incluye gastos adicionales de patentamiento. Registro documental, no stock garantizado.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Toyota",
     "family": "Hilux",
     "version": "4x2 2.4 MT SR Diesel",
     "modelYear": 2026,
@@ -1621,6 +1803,18 @@
     "modelYear": 2026,
     "priceListClp": 27990000,
     "source": "https://tienda.toyota.cl/index.php?id_product=533&id_product_attribute=5171&rewrite=corolla-cross&controller=product#/31-combustible-hibrido/141-modelo-corolla_cross_hibrido",
+    "checkedAt": "2026-10-19",
+    "currency": "CLP",
+    "priceBasis": "Precio base Precio lista literal en Tienda Toyota Chile octubre 2026, sin bonos ni financiar; no incluye gastos adicionales de patentamiento. Registro documental, no stock garantizado.",
+    "technology": "HEV"
+  },
+  {
+    "brand": "Toyota",
+    "family": "Corolla Cross Híbrido",
+    "version": "SEG 1.8 HEV",
+    "modelYear": 2026,
+    "priceListClp": 29990000,
+    "source": "https://tienda.toyota.cl/index.php?id_product=676&id_product_attribute=3138&rewrite=corolla-cross&controller=product#/31-combustible-hibrido/61-modelo-corolla_cross",
     "checkedAt": "2026-10-19",
     "currency": "CLP",
     "priceBasis": "Precio base Precio lista literal en Tienda Toyota Chile octubre 2026, sin bonos ni financiar; no incluye gastos adicionales de patentamiento. Registro documental, no stock garantizado.",
