@@ -1,6 +1,6 @@
 # RINDELAB — Modelos pendientes de precio por marca (no inventar)
 
-**Fecha:** 20-10-2026. Este registro complementa la base de **1.218 precios y 59 marcas** con modelos anunciados o mostrados en catálogos, **sin incorporar importes no comprobados**. La ausencia de precio no demuestra ausencia del modelo en el mercado.
+**Fecha:** 20-10-2026. Este registro complementa la base de **1.224 precios y 59 marcas** con modelos anunciados o mostrados en catálogos, **sin incorporar importes no comprobados**. La ausencia de precio no demuestra ausencia del modelo en el mercado.
 
 | Marca | Modelo / familia | Estado del precio | Publicación de origen |
 |---|---|---|---|
