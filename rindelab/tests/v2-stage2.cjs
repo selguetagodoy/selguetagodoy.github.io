@@ -30,7 +30,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    await p.locator('#resetButton').click();await p.fill('#query',term);await p.click('#searchButton');
    const photo=p.locator('.vehicle-card .vehicle-photo img').first();
    assert((await photo.count())>0,'Falta foto de '+term);
-   assert.match(await photo.getAttribute('src'),/commons\.wikimedia\.org\/wiki\/Special:FilePath\//);
+   assert.match(await photo.getAttribute('src'),/images\/commons\//);await photo.scrollIntoViewIfNeeded();await photo.evaluate(el=>el.decode());assert((await photo.evaluate(el=>el.naturalWidth))>0);
    assert.match(await photo.getAttribute('alt'),/no acredita la versión homologada/);
    assert(await p.locator('.vehicle-card .vehicle-photo-credit a').first().count()>0);
    assert.match(await p.locator('.vehicle-card .vehicle-photo-credit').first().textContent(),/CC BY|CC0/);
@@ -55,6 +55,22 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert((await ev.locator('#electroRows .rinde-photo-thumb img').count())>0,'Sin fotos en electromovilidad Kia EV5');
   assert.match(await ev.locator('#electroRows .rinde-photo-attribution').first().textContent(),/CC0/);
   await ev.close();
+ });
+ await check('Las 32 nuevas fotos locales tienen atribución y bytes íntegros',async()=>{
+  const fs=require('node:fs');const path=require('node:path');const hash=require('node:crypto').createHash;
+  const dir=path.join(__dirname,'../images/commons');const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
+  assert.equal(m.downloaded,32);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,32);
+  for(const entry of m.results){assert(entry.source.startsWith('https://commons.wikimedia.org/'));assert(entry.author);assert(entry.license);
+   const bytes=fs.readFileSync(path.join(__dirname,'..',entry.path.slice(2)));
+   assert.equal(bytes.length,entry.bytes);assert.equal(hash('sha256').update(bytes).digest('hex'),entry.sha256);}
+ });
+ await check('Lote adicional identifica Tucson, Sonet, Ranger, RAV4, X1 y Fronx sin fotos cruzadas',async()=>{
+  const list=[['Hyundai','Tucson 1.6 TGDI','Bencina','2024-01-01'],['Kia','Sonet 1.5','Bencina','2025-01-01'],
+   ['Ford','Ranger P703 XLT','Diésel','2025-01-01'],['Toyota','RAV4 HEV','HEV','2023-01-01'],
+   ['BMW','X1 xDrive20d','Diésel','2024-01-01'],['Suzuki','Fronx 1.5','MHEV','2025-01-01']];
+  const results=await p.evaluate(list=>list.map(([brand,model,tech,date])=>{const x=window.RindelabPhotos.find([brand,model,tech,'','','','','',date],{BRAND:0,MODEL:1,TECH:2,DATE:8});return x?.src||''}),list);
+  assert(results.every(x=>x.startsWith('./images/commons/')),JSON.stringify(results));
+  assert(results.every(src=>src.includes('/images/commons/')));
  });
  await check('El escenario desplegable mantiene las tarifas y cálculos originales',async()=>{
   await p.locator('#supuestos').evaluate(el=>el.open=true);
