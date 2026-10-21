@@ -53,58 +53,58 @@ Origen: commercial-2026.json y fotografías con atribución documental de RINDEL
 | 45 | Audi | Q2 | SIN INFORMAR | 1 | $33.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/audi) |
 | 46 | Audi | Q4 Sportback e-tron | EV | 1 | $70.990.000 | No | Pendiente | Sí | [Fuente](https://www.audi.cl/q4/q4-sportback-e-tron/Lista-de-precios) |
 | 47 | Audi | Q5 | SIN INFORMAR | 1 | $57.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/audi) |
-| 48 | Audi | Q5 Sportback | SIN INFORMAR | 1 | $59.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/audi) |
-| 49 | Audi | Q6 e-tron | EV | 1 | $87.990.000 | No | Pendiente | Sí | [Fuente](https://www.audi.cl/q6-e-tron/q6-e-tron/lista-de-precios) |
-| 50 | Audi | Q6 Sportback e-tron | EV | 1 | $90.490.000 | No | Pendiente | Sí | [Fuente](https://www.audi.cl/q6-e-tron/q6-sportback-e-tron/Lista-de-precios) |
-| 51 | Audi | Q8 | SIN INFORMAR | 1 | $84.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/audi) |
-| 52 | Audi | RS5 | SIN INFORMAR | 1 | $109.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/audi) |
-| 53 | Baic | BJ30 | HEV | 1 | $27.990.000 | No | Pendiente | Sí | [Fuente](https://www.baic.cl/modelos/bj30/) |
-| 54 | Baic | BJ30 | SIN INFORMAR | 1 | $25.990.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
-| 55 | Baic | BJ60 | MHEV | 3 | $41.490.000 | No | Pendiente | Sí | [Fuente](https://www.baic.cl/modelos/bj60/) |
-| 56 | Baic | EU5 | EV | 1 | $23.790.000 | No | Pendiente | Sí | [Fuente](https://www.baic.cl/modelos/eu5/) |
-| 57 | Baic | U5 Plus | SIN INFORMAR | 3 | $12.990.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
-| 58 | Baic | X35 | SIN INFORMAR | 2 | $14.590.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
-| 59 | Baic | X55 | SIN INFORMAR | 1 | $18.490.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
-| 60 | Baic | X7 | SIN INFORMAR | 2 | $24.990.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
-| 61 | BMW | M135i | SIN INFORMAR | 1 | $59.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m135i) |
-| 62 | BMW | M2 | SIN INFORMAR | 1 | $104.900.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
-| 63 | BMW | M240i | SIN INFORMAR | 1 | $70.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m240i) |
-| 64 | BMW | M3 | SIN INFORMAR | 1 | $126.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m3) |
-| 65 | BMW | M4 | SIN INFORMAR | 1 | $132.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m4) |
-| 66 | BMW | Serie 3 | PHEV | 1 | $65.900.000 | No | Pendiente | Sí | [Fuente](https://www.bmw.cl/modelos/3) |
-| 67 | BMW | Serie 4 Convertible | SIN INFORMAR | 2 | $59.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/4-convertible) |
-| 68 | BMW | Serie 4 Gran Coupé | SIN INFORMAR | 1 | $52.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/4-gran-coupe) |
-| 69 | BMW | Serie 8 Coupe | SIN INFORMAR | 1 | $144.000.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
-| 70 | BMW | X4 | SIN INFORMAR | 1 | $57.900.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
-| 71 | BMW | Z4 | SIN INFORMAR | 1 | $91.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/z4) |
-| 72 | BYD | Atto 8 | PHEV | 2 | $44.990.000 | No | Pendiente | Sí | [Fuente](https://www.byd.com/cl/legal/terminos-condiciones-promocion) |
-| 73 | Changan | Alsvin | SIN INFORMAR | 1 | $9.590.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 74 | Changan | Cs15 | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 75 | Changan | CS35 Max | SIN INFORMAR | 4 | $14.490.000 | No | Pendiente | No | [Fuente](https://www.changan.cl/vehiculo/cs35-max/) |
-| 76 | Changan | Serie M | SIN INFORMAR | 1 | $8.080.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 77 | Changan | Serie M Cargo BOX | SIN INFORMAR | 1 | $9.329.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 78 | Changan | Serie M Furgon | SIN INFORMAR | 1 | $8.496.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 79 | Changan | star-truck-plus-cargo-box | SIN INFORMAR | 1 | $12.316.500 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 80 | Changan | star-truck-plus-pick-up-cabina-doble | SIN INFORMAR | 1 | $11.714.360 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 81 | Changan | star-truck-plus-pick-up-cabina-simple | SIN INFORMAR | 1 | $11.055.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 82 | Changan | uni-k | SIN INFORMAR | 1 | $24.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 83 | Changan | UNI-T | SIN INFORMAR | 1 | $19.690.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 84 | Chery | cl-tiggo-2-pro | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
-| 85 | Chery | cl-tiggo-3-pro | SIN INFORMAR | 1 | $13.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
-| 86 | Chery | Tiggo 7 | SIN INFORMAR | 5 | $15.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/chery/tiggo-7) |
-| 87 | Chevrolet | Colorado | SIN INFORMAR | 1 | $34.665.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 88 | Chevrolet | N400 Cargo | SIN INFORMAR | 1 | $12.302.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 89 | Chevrolet | Sail Sedan | SIN INFORMAR | 1 | $12.290.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 90 | Chevrolet | sail-hatchback | SIN INFORMAR | 1 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 91 | Chevrolet | Silverado CD | SIN INFORMAR | 1 | $60.298.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 92 | Chevrolet | Suburban | SIN INFORMAR | 1 | $78.287.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 93 | Chevrolet | Tahoe | SIN INFORMAR | 1 | $74.221.400 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 94 | Chevrolet | Traverse | SIN INFORMAR | 1 | $46.190.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 95 | Citroen | Berlingo Multispace | SIN INFORMAR | 3 | $22.590.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/citroen/berlingo-multispace) |
-| 96 | Citroen | Berlingo Multispace MCA | SIN INFORMAR | 1 | $22.590.000 | No | Pendiente | No | [Fuente](https://callegari.cl/nuevos/berlingo-multispace-mca/) |
-| 97 | Citroen | C3 | SIN INFORMAR | 5 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/citroen/c3) |
-| 98 | Citroen | C3 Aircross | SIN INFORMAR | 2 | $16.190.000 | No | Pendiente | No | [Fuente](https://www.citroen.cl/modelos/pasajeros/c3-aircross/configura.html) |
-| 99 | Citroen | C5 Aircross | SIN INFORMAR | 1 | $25.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/citroen) |
-| 100 | Citroen | Jumper | SIN INFORMAR | 3 | $36.640.100 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/citroen/jumper) |
+| 48 | Audi | Q6 e-tron | EV | 1 | $87.990.000 | No | Pendiente | Sí | [Fuente](https://www.audi.cl/q6-e-tron/q6-e-tron/lista-de-precios) |
+| 49 | Audi | Q6 Sportback e-tron | EV | 1 | $90.490.000 | No | Pendiente | Sí | [Fuente](https://www.audi.cl/q6-e-tron/q6-sportback-e-tron/Lista-de-precios) |
+| 50 | Audi | Q8 | SIN INFORMAR | 1 | $84.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/audi) |
+| 51 | Audi | RS5 | SIN INFORMAR | 1 | $109.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/audi) |
+| 52 | Baic | BJ30 | HEV | 1 | $27.990.000 | No | Pendiente | Sí | [Fuente](https://www.baic.cl/modelos/bj30/) |
+| 53 | Baic | BJ30 | SIN INFORMAR | 1 | $25.990.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
+| 54 | Baic | BJ60 | MHEV | 3 | $41.490.000 | No | Pendiente | Sí | [Fuente](https://www.baic.cl/modelos/bj60/) |
+| 55 | Baic | EU5 | EV | 1 | $23.790.000 | No | Pendiente | Sí | [Fuente](https://www.baic.cl/modelos/eu5/) |
+| 56 | Baic | U5 Plus | SIN INFORMAR | 3 | $12.990.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
+| 57 | Baic | X35 | SIN INFORMAR | 2 | $14.590.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
+| 58 | Baic | X55 | SIN INFORMAR | 1 | $18.490.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
+| 59 | Baic | X7 | SIN INFORMAR | 2 | $24.990.000 | No | Pendiente | No | [Fuente](https://www.baic.cl/legales-modelos/) |
+| 60 | BMW | M135i | SIN INFORMAR | 1 | $59.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m135i) |
+| 61 | BMW | M2 | SIN INFORMAR | 1 | $104.900.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
+| 62 | BMW | M240i | SIN INFORMAR | 1 | $70.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m240i) |
+| 63 | BMW | M3 | SIN INFORMAR | 1 | $126.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m3) |
+| 64 | BMW | M4 | SIN INFORMAR | 1 | $132.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/m4) |
+| 65 | BMW | Serie 3 | PHEV | 1 | $65.900.000 | No | Pendiente | Sí | [Fuente](https://www.bmw.cl/modelos/3) |
+| 66 | BMW | Serie 4 Convertible | SIN INFORMAR | 2 | $59.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/4-convertible) |
+| 67 | BMW | Serie 4 Gran Coupé | SIN INFORMAR | 1 | $52.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/4-gran-coupe) |
+| 68 | BMW | Serie 8 Coupe | SIN INFORMAR | 1 | $144.000.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
+| 69 | BMW | X4 | SIN INFORMAR | 1 | $57.900.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
+| 70 | BMW | Z4 | SIN INFORMAR | 1 | $91.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/z4) |
+| 71 | BYD | Atto 8 | PHEV | 2 | $44.990.000 | No | Pendiente | Sí | [Fuente](https://www.byd.com/cl/legal/terminos-condiciones-promocion) |
+| 72 | Changan | Alsvin | SIN INFORMAR | 1 | $9.590.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 73 | Changan | Cs15 | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 74 | Changan | CS35 Max | SIN INFORMAR | 4 | $14.490.000 | No | Pendiente | No | [Fuente](https://www.changan.cl/vehiculo/cs35-max/) |
+| 75 | Changan | Serie M | SIN INFORMAR | 1 | $8.080.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 76 | Changan | Serie M Cargo BOX | SIN INFORMAR | 1 | $9.329.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 77 | Changan | Serie M Furgon | SIN INFORMAR | 1 | $8.496.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 78 | Changan | star-truck-plus-cargo-box | SIN INFORMAR | 1 | $12.316.500 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 79 | Changan | star-truck-plus-pick-up-cabina-doble | SIN INFORMAR | 1 | $11.714.360 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 80 | Changan | star-truck-plus-pick-up-cabina-simple | SIN INFORMAR | 1 | $11.055.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 81 | Changan | uni-k | SIN INFORMAR | 1 | $24.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 82 | Changan | UNI-T | SIN INFORMAR | 1 | $19.690.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 83 | Chery | cl-tiggo-2-pro | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
+| 84 | Chery | cl-tiggo-3-pro | SIN INFORMAR | 1 | $13.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
+| 85 | Chery | Tiggo 7 | SIN INFORMAR | 5 | $15.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/chery/tiggo-7) |
+| 86 | Chevrolet | Colorado | SIN INFORMAR | 1 | $34.665.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 87 | Chevrolet | N400 Cargo | SIN INFORMAR | 1 | $12.302.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 88 | Chevrolet | Sail Sedan | SIN INFORMAR | 1 | $12.290.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 89 | Chevrolet | sail-hatchback | SIN INFORMAR | 1 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 90 | Chevrolet | Silverado CD | SIN INFORMAR | 1 | $60.298.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 91 | Chevrolet | Suburban | SIN INFORMAR | 1 | $78.287.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 92 | Chevrolet | Tahoe | SIN INFORMAR | 1 | $74.221.400 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 93 | Chevrolet | Traverse | SIN INFORMAR | 1 | $46.190.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 94 | Citroen | Berlingo Multispace | SIN INFORMAR | 3 | $22.590.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/citroen/berlingo-multispace) |
+| 95 | Citroen | Berlingo Multispace MCA | SIN INFORMAR | 1 | $22.590.000 | No | Pendiente | No | [Fuente](https://callegari.cl/nuevos/berlingo-multispace-mca/) |
+| 96 | Citroen | C3 | SIN INFORMAR | 5 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/citroen/c3) |
+| 97 | Citroen | C3 Aircross | SIN INFORMAR | 2 | $16.190.000 | No | Pendiente | No | [Fuente](https://www.citroen.cl/modelos/pasajeros/c3-aircross/configura.html) |
+| 98 | Citroen | C5 Aircross | SIN INFORMAR | 1 | $25.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/citroen) |
+| 99 | Citroen | Jumper | SIN INFORMAR | 3 | $36.640.100 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/citroen/jumper) |
+| 100 | Citroen | Spacetourer | SIN INFORMAR | 2 | $36.640.100 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/citroen/spacetourer) |
 
 Revisión: contrastar tecnología y generación con el fabricante; obtener imagen con licencia y atribución verificadas; actualizar fecha de comprobación exclusivamente si se revalida la fuente.
