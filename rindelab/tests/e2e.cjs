@@ -1805,7 +1805,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  assert(archive.every(x=>x.brand==='Suzuki'&&/^https:\/\//.test(x.statusSource)));
  assert(prices.filter(x=>x.brand==='Suzuki'&&x.family==='Jimny').every(x=>x.commercialStatus!=='discontinued-cl'));
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(lifecycle.models.length,31);
+ assert.equal(lifecycle.models.length,52);
  assert.equal(lifecycle.models.find(x=>x.model==='Jimny 5 puertas').match,'variant-only-manual');
  const quote=await browser.newPage({viewport:{width:390,height:844}});
  await quote.goto(base+'cotizador.html',{waitUntil:'networkidle'});
@@ -1847,12 +1847,17 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'No marcar la familia Golf completa como descontinuada; GTI regresó');
  await p.close();
 });
-await test('Tercera revisión 3CV: 31 retirados sin falsos positivos en variantes vigentes',async()=>{
+await test('Cuarta revisión 3CV: 52 casos sin falsos positivos en variantes vigentes',async()=>{
  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(data.models.length,31);
- assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,31);
+ assert.equal(data.models.length,52);
+ assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,52);
  assert(data.models.every(x=>/^https:\/\//.test(x.sourceUrl)&&x.status&&x.match));
- assert.equal(data.models.filter(x=>x.match==='previous-generation-cutoff').length,2);
+ assert.equal(data.models.filter(x=>x.match==='previous-generation-cutoff').length,6);
+ assert(['Kia|Rio','Kia|Cerato','Mazda|CX-9','Audi|TT','Volkswagen|Scirocco','Mitsubishi|i-MiEV'].every(k=>data.models.some(x=>x.brand+'|'+x.model===k)), 'El cuarto lote debe estar integrado');
+ assert(data.models.some(x=>x.brand==='BMW'&&x.familyPrefix==='i3'&&x.homologationCutoff==='2022-12-31'),'El i3 urbano tiene fecha de corte');
+ assert(data.models.some(x=>x.brand==='Subaru'&&x.model.startsWith('XV')&&x.homologationCutoff==='2023-12-31'),'XV debe ser generación histórica, no Crosstrek');
+ assert(!data.models.some(x=>x.brand==='Porsche'&&x.model.startsWith('718')),'No declarar Porsche 718 retirado mientras exista oferta chilena sin resolver');
+ assert(!data.models.some(x=>x.brand==='Nissan'&&x.model==='GT-R'),'GT-R no pertenece al registro de modelos antes comercializados oficialmente en Chile');
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
@@ -1877,20 +1882,24 @@ await test('Tercera revisión 3CV: 31 retirados sin falsos positivos en variante
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Corolla Cross no equivale a Corolla Sport HB');
  await p.close();
 });
-await test('Directorio de modelos descontinuados: 31 casos, filtros y ancho móvil',async()=>{
+await test('Directorio de modelos descontinuados: 52 casos, filtros y ancho móvil',async()=>{
  const p=await browser.newPage({viewport:{width:390,height:844}});
  await p.goto(base+'descontinuados.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('31 modelos'),{timeout:30000});
- assert.equal(await p.locator('#modelRows tr').count(),31);
+ await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('52 modelos'),{timeout:30000});
+ assert.equal(await p.locator('#modelRows tr').count(),52);
+ await p.fill('#searchModel','Kia Rio');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
+ await p.fill('#searchModel','Subaru XV');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
  await p.fill('#searchModel','Chevrolet Spark');
  assert.equal(await p.locator('#modelRows tr').count(),1);
  assert.match(await p.locator('#modelRows').textContent(),/Spark antiguo/);
  await p.fill('#searchModel','');
  await p.selectOption('#statusFilter','previous-generation-cl');
- assert.equal(await p.locator('#modelRows tr').count(),2);
+ assert.equal(await p.locator('#modelRows tr').count(),6);
  await p.selectOption('#statusFilter','discontinued-cl');
- assert.equal(await p.locator('#modelRows tr').count(),29);
- assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),29);
+ assert.equal(await p.locator('#modelRows tr').count(),46);
+ assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),46);
  const dimensions=await p.evaluate(()=>({w:window.innerWidth,doc:document.documentElement.scrollWidth}));
  assert(dimensions.doc<=dimensions.w+3,'El directorio no debe desbordar la pantalla '+JSON.stringify(dimensions));
  await p.close();
