@@ -18,12 +18,13 @@ const fixed=n=>number(n)?Number(n).toLocaleString('es-CL',{maximumFractionDigits
 let all=[],results=[],selected=[],submitted=false,limit=10,cut='2026-05-08';
 let discontinuedModels=[];
 function archivedModel(row){
- if(normalize(row[F.BRAND])!=='suzuki')return null;
- const name=normalize(row[F.MODEL]);
+ const brand=normalize(row[F.BRAND]),name=normalize(row[F.MODEL]);
  return discontinuedModels.find(item=>{
+  if(normalize(item.brand)!==brand)return false;
   const target=normalize(item.model);
   if(item.match==='whole-family')return name===target||name.startsWith(target+' ');
-  return item.match==='variant-only-manual'&&name.startsWith('jimny ')&&/\b(5p|5d|5 puertas)\b/.test(name);
+  // Solo Jimny 5P, sin confundir Jimny 3P; se exige mención inequívoca de puertas.
+  return item.match==='variant-only-manual'&&brand==='suzuki'&&name.startsWith('jimny ')&&/\b(5p|5d|5 puertas)\b/.test(name);
  })||null;
 }
 let costSortCycleNotice='';
