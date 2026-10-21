@@ -3,13 +3,15 @@
  * NO transacciones cerradas ni tasaciones tributarias SII. */
 (()=>{'use strict';
 const DATA='./sii/data/used-market-20261021.json';
+const LIFECYCLE='./sii/data/used-discontinued-families-20261021.json';
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' y ').replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
 const key=(b,m)=>norm(b)+'|'+norm(m);
 const clp=n=>Number.isFinite(n)?'$'+n.toLocaleString('es-CL'):'N/D';
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let available=[],ready=false;
 const toFamily=x=>norm(x).replace(/^(all new|new|nuevo|nueva) /,'');
-const known=new Map();
+const known=new Map(),discontinuedFamilies=new Map();
+const discontinued=p=>discontinuedFamilies.get(familyKey(p.brandSlug,p.modelSlug.replace(/-/g,' ')))||null;
 const alias=new Map([
  ['citroen|c3 aircross','citroen|c3 aircross'],
  ['hyundai|veloster','hyundai|veloster'],
@@ -89,13 +91,19 @@ function mount(section,b,m){
  if(!ready){box.textContent='Cargando referencias del mercado de usados…';loaded.then(()=>{if(box.isConnected)renderBody(box,b,m,selectedYear(b,m));});}
  else renderBody(box,b,m,selectedYear(b,m));
 }
-const loaded=fetch(DATA).then(r=>{if(!r.ok)throw Error('No disponible');return r.json()}).then(obj=>{
+const loaded=Promise.all([
+ fetch(DATA).then(r=>{if(!r.ok)throw Error('No disponible');return r.json()}),
+ fetch(LIFECYCLE).then(r=>r.ok?r.json():{records:[]}).catch(()=>({records:[]}))
+]).then(([obj,statuses])=>{
  if(obj.schemaVersion!==1||!Array.isArray(obj.records))throw Error('Fuente de usados inválida');
- available=obj.records.filter(x=>x.year>=1980&&x.year<=2026&&/^(AutoExplora|Autofact)$/.test(x.source)&&x.sourceUrl.startsWith('https://'));
+ if(!Array.isArray(statuses.records))throw Error('Estados comerciales inválidos');
+ discontinuedFamilies.clear();
+ for(const p of statuses.records){if(p.brand&&p.family&&p.statusLabel==='Descontinuado en Chile')discontinuedFamilies.set(familyKey(p.brand,p.family),p);}
+ available=obj.records.filter(x=>x.year>=1980&&x.year<=2026&&/^(AutoExplora|Autofact)$/.test(x.source)&&x.sourceUrl.startsWith('https://')&&x.qualityStatus!=='held-for-manual-review');
  known.clear();
  for(const p of available){const k=familyKey(p.brandSlug,p.modelSlug.replace(/-/g,' '));if(!known.has(k))known.set(k,[]);known.get(k).push(p);}
  for(const arr of known.values())arr.sort((a,b)=>b.year-a.year);
  ready=true;
 }).catch(()=>{ready=true;known.clear()});
-window.RindelabUsed=Object.freeze({mount,selected,selectedYear,selectYear,marketFor,marketLabel,ready:loaded,count:()=>available.length,records:()=>available.slice()});
+window.RindelabUsed=Object.freeze({mount,selected,selectedYear,selectYear,marketFor,marketLabel,discontinued,ready:loaded,count:()=>available.length,records:()=>available.slice(),knownDiscontinued:()=>discontinuedFamilies.size});
 })();
