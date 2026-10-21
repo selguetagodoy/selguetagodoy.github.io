@@ -155,6 +155,9 @@ jobs:
       - name: Verify new dealers, prices, photos and two viewport sizes
         run: node rindelab/tests/dealer-browse.cjs
 
+      - name: Validate observed used price references without fabricated median or SII mappings
+        run: node rindelab/tests/used-market-data.cjs
+
       - name: Verify prices of used and discontinued cars with SII year
         run: |
           node --check rindelab/used-market.js
