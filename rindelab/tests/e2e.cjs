@@ -1847,6 +1847,36 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'No marcar la familia Golf completa como descontinuada; GTI regresó');
  await p.close();
 });
+await test('Tercera revisión 3CV: 31 retirados sin falsos positivos en variantes vigentes',async()=>{
+ const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
+ assert.equal(data.models.length,31);
+ assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,31);
+ assert(data.models.every(x=>/^https:\/\//.test(x.sourceUrl)&&x.status&&x.match));
+ assert.equal(data.models.filter(x=>x.match==='previous-generation-cutoff').length,2);
+ const p=await browser.newPage();
+ await p.goto(base,{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ for(const name of ['Nissan March','Kia Soul','Ford Focus','Hyundai Veloster','Peugeot 508','Changan CX70','Mercedes-Benz X 350d']){
+  await p.fill('#query',name);await p.click('#searchButton');
+  assert((await p.locator('.vehicle-lifecycle').count())>0,name+' debe exhibir condición histórica');
+ }
+ await p.fill('#query','Jeep Cherokee');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-lifecycle').count())>0);
+ assert.match(await p.locator('.vehicle-lifecycle').first().textContent(),/Generación anterior retirada/);
+ await p.fill('#query','Jeep Grand Cherokee');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Grand Cherokee no es Cherokee retirado');
+ await p.fill('#query','Hyundai Accent BN7i');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Accent sedán nuevo debe mantenerse vigente');
+ await p.fill('#query','Chevrolet Spark EUV');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Spark EUV nuevo no equivale a Spark GT antiguo');
+ await p.fill('#query','Toyota Corolla Cross');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Corolla Cross no equivale a Corolla Sport HB');
+ await p.close();
+});
 await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
