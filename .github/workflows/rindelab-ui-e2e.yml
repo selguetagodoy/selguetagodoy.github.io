@@ -64,6 +64,12 @@ jobs:
       - name: Validar identidad comercial, vigencia y fotografías
         run: node rindelab/tests/catalog-identity.cjs
 
+      - name: Verificar cola comercial y fotografía del catálogo nacional
+        run: |
+          node --check rindelab/market-catalog.js
+          node --check scripts/rindelab-market-queue.cjs
+          node scripts/rindelab-market-queue.cjs --check
+
       - name: Validar integridad y exportación del informe de precios
         run: |
           node scripts/audit-price-sources.cjs --report-json=price-audit.json
@@ -134,6 +140,9 @@ jobs:
 
       - name: Verify commercial scope and price associations
         run: node rindelab/tests/catalog-ui.cjs
+
+      - name: Verify nationwide commercial catalog and five-model comparison
+        run: node rindelab/tests/market-stages.cjs
 
       - name: Verify RINDELAB V2 design and licensed photographs
         run: |

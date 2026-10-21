@@ -7,7 +7,7 @@ const normal=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').to
 const positive=s=>s!==''&&s!==null&&Number.isFinite(Number(s))&&Number(s)>=0?Number(s):null;
 const identity=x=>[x.brand,x.family,x.version,x.modelYear??''].join('|');
 const displayPrice=x=>clp(x.priceListClp)+(x.taxIncluded===false?' + IVA':'');
-const priceKind=x=>x.commercialStatus==='discontinued-cl'?'Precio histórico · descontinuado':x.taxIncluded===false?(x.priceType==='desde'?'Desde · + IVA':'Publicado · + IVA'):x.priceType==='oferta'?'Oferta publicada':x.priceType==='desde'||x.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos';
+const priceKind=x=>x.commercialStatus==='discontinued-cl'?'Precio histórico · descontinuado':x.taxIncluded===false?(x.priceType==='desde'?'Desde · + IVA':'Publicado · + IVA'):x.priceType==='oferta'?'Oferta publicada':x.priceType==='desde'||x.version.startsWith('Precio desde')?'Precio desde publicado':x.priceType==='lista'?'Precio de lista acreditado':'Precio publicado · tipo sin acreditar';
 const searchAliases={'Mercedes-Benz':'M. Benz','Great Wall':'Haval','KGM':'Ssangyong','Dongfeng':'DFM','Lynk & Co':'Lynk Co','Zxauto':'ZX Auto','Fuso':'Mitsubishi Fuso','Exeed':'Exeed Born For More'};
 let catalog=[],visible=[],chosen=null,limit=24;
 const dealerPages={Hyundai:'https://www.hyundai.cl/cotizador/',Changan:'https://www.changan.cl/formulario/cotizacion/'};

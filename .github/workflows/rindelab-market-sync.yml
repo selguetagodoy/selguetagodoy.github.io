@@ -1,0 +1,68 @@
+name: RINDELAB — vigilancia oficial y cobertura fotográfica
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 12 * * 1' # lunes 12:45 UTC
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      RINDELAB_3CV_FEED_URL: ${{ vars.RINDELAB_3CV_FEED_URL }}
+      RINDELAB_MTT_FEED_URL: ${{ vars.RINDELAB_MTT_FEED_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar cola fotográfica y consistencia del catálogo
+        run: |
+          node scripts/rindelab-market-queue.cjs --check
+          node rindelab/tests/catalog-identity.cjs
+      - name: Revisar feeds oficiales configurados sin alterar la base
+        run: node scripts/rindelab-incremental-watch.cjs
+      - name: Publicar expediente de diferencias
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rindelab-vigilancia-incremental-oficial
+          path: |
+            rindelab-incremental-audit.json
+            rindelab-incremental-audit.md
+            rindelab/data/catalog-coverage-20261021.json
+            rindelab/sii/LOTE-PENDIENTES-100-20261021.md
+          retention-days: 90
+      - name: Abrir incidencia cuando falte fuente oficial o existan altas
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs=require('fs');
+            if(!fs.existsSync('rindelab-incremental-audit.json'))return;
+            const report=JSON.parse(fs.readFileSync('rindelab-incremental-audit.json','utf8'));
+            const missing=report.checks.filter(x=>x.status==='NOT_CONFIGURED');
+            const newCount=report.pending.length;
+            if(!missing.length&&!newCount)return;
+            const title=newCount?'RINDELAB — nuevas homologaciones por comprobar':'RINDELAB — configurar fuentes oficiales de datos';
+            const {owner,repo}=context.repo;
+            const issues=await github.paginate(github.rest.issues.listForRepo,{owner,repo,state:'open',per_page:100});
+            const current=issues.find(i=>!i.pull_request&&i.title===title);
+            const link='https://github.com/'+owner+'/'+repo+'/actions/runs/'+context.runId;
+            const body=[
+              '## Control de fuentes del catálogo nacional',
+              '',
+              'Nuevos códigos: **'+newCount+'**. Feeds oficiales pendientes de configurar: **'+missing.map(x=>x.name).join(', ')+'**.',
+              '',
+              'El análisis produce candidatos para revisión, **no incorpora automáticamente datos externos al registro oficial**.',
+              '',
+              'Para activar consultas incrementales automáticas, verificar primero la URL de un JSON público del organismo competente y configurar las variables del repositorio RINDELAB_3CV_FEED_URL y RINDELAB_MTT_FEED_URL.',
+              '',
+              '[Expediente de la ejecución]('+link+')'
+            ].join('\n');
+            if(current)await github.rest.issues.update({owner,repo,issue_number:current.number,body});
+            else await github.rest.issues.create({owner,repo,title,body});
