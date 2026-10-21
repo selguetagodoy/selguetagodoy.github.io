@@ -23,6 +23,10 @@
 .used-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:1rem}
 .used-result{border:1px solid #d3e2ea;border-radius:11px;padding:14px;min-width:0;background:white}
 .used-result h3{margin:0 0 8px;font-size:1.08rem}
+.used-retired-status{margin:6px 0 10px;color:#4f6675;font-size:.75rem}
+.used-retired-status a{color:#4f6675;text-decoration:underline;text-decoration-thickness:1px}
+.used-focusbar{display:flex;gap:.7rem;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid #d3e4ec;font-size:.88rem;color:#1b415b}
+.used-focusbar label{display:flex;gap:.6rem;align-items:center;cursor:pointer}.used-focusbar input{width:18px;height:18px;flex-shrink:0}
 .used-result h3 small{font-size:.75em;font-weight:normal;color:#587084}
 .used-result-main{font-size:1.4rem;font-weight:850;color:#0d5e80}
 .used-result-metrics{font-size:.81rem;color:#45667c;line-height:1.55;margin:8px 0 14px}
@@ -36,17 +40,18 @@
 </style>
 <script src="./sii/sii.js?v=20261021-used-market" defer></script>
 <script src="./used-market.js?v=20261021-used-values1" defer></script>
-<script src="./usados.js?v=20261021-used-directory1" defer></script>
+<script src="./usados.js?v=20261021-used-directory2" defer></script>
 </head><body>
 <main class="used-page">
 <nav class="used-topnav" aria-label="Navegación RINDELAB"><a href="./index.html">RINDE<span>LAB</span></a><a href="./index.html#buscador">Buscar fichas 3CV</a><a href="./cotizador.html">Precios de autos nuevos</a></nav>
 <section class="used-hero">
 <h1>¿Cuánto vale un auto usado?</h1>
-<p class="used-subtitle">Consulta referencias comerciales observadas en Chile por marca, modelo y año, incluidos vehículos y generaciones que ya no se venden nuevos. También puedes revisar la tasación fiscal del SII y el permiso de circulación, con la versión tributaria que selecciones.</p>
+<p class="used-subtitle">Consulta referencias comerciales observadas en Chile por marca, modelo y año, priorizando vehículos que ya no se venden nuevos. También puedes revisar la tasación fiscal del SII y el permiso de circulación, con la versión tributaria que selecciones.</p>
 <p class="used-source-note">Los precios de publicación no son transacciones cerradas. El mercado cambia, y la versión, estado, kilometraje y región influyen en el valor. Solo mostramos cifras con fuente y fecha documentadas.</p>
 </section>
 <section class="used-filter-panel" aria-label="Filtrar autos usados">
 <div class="used-filters"><label>Buscar marca o modelo<input id="usedQuery" type="search" placeholder="Ej. Nissan March, Ford Focus" autocomplete="off"></label><label>Marca<select id="usedBrand"><option value="">Todas las marcas</option></select></label><label>Año de fabricación<select id="usedYear"><option value="">Todos los años</option></select></label></div>
+<div class="used-focusbar"><label><input id="usedOnlyDiscontinued" type="checkbox" checked> Mostrar primero solo modelos cuya salida de la oferta chilena esté documentada</label></div>
 </section>
 <div class="used-summary" id="usedCount" role="status" aria-live="polite">Cargando referencias verificadas…</div>
 <section class="used-grid" id="usedGrid" aria-label="Valores observados por modelo y año"></section>
