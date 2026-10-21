@@ -1,6 +1,6 @@
 /* Precios de lista nuevos — fuentes oficiales por versión; nunca se asocian automáticamente a fichas 3CV. */
 (()=>{'use strict';
-const api=window.RindelabSII;if(!api)return;
+const api=window.RindelabSII,C=window.RindelabIdentity;if(!api||!C)return;
 const originalShow=api.show,originalCompare=api.decorateComparison;
 const clp=n=>Number.isFinite(n)?'$'+Math.round(n).toLocaleString('es-CL'):'Sin precio';
 const displayPrice=p=>clp(p.priceListClp)+(p.taxIncluded===false?' + IVA':'');
@@ -18,44 +18,37 @@ function ageWarning(record){
  return days!==null&&days>=30?'Datos revisados hace '+days+' días. Confirma el precio de lista en el sitio enlazado antes de comparar o comprar.':'';
 }
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
-let promise=null,loaded=[];
+let promise=null,loaded=[],byFamily=new Map();
 function catalog(){
  return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1504').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
-  loaded=list.filter(p=>p&&/^https:\/\//.test(p.source)&&p.currency==='CLP'&&p.brand&&p.family&&p.version&&Number.isInteger(p.priceListClp)&&p.priceListClp>0);
+  loaded=list.filter(C.valid);byFamily=C.index(loaded);
   window.dispatchEvent(new Event("rindelab:prices-ready"));
   return loaded;
  }).catch(()=>{loaded=[];return []}));
 }
-function canonicalFamily(brand,family){
- const key=norm(family),b=norm(brand);
- if(b==='MAZDA'&&/^CX\s*-?\s*(3|5|30)$/.test(key))return 'CX-'+key.match(/(30|3|5)$/)[1];
- if(b==='MG'&&key==='MGZS')return 'ZS';
- if(b==='MG'&&key==='MGS5')return 'S5';
- return key;
-}
-function match(row,family,items){
- const b=norm(row[0]),f=canonicalFamily(row[0],family);
- return items.filter(x=>x.commercialStatus!=='discontinued-cl'&&norm(x.brand)===b&&canonicalFamily(x.brand,x.family)===f);
+function match(row,family){
+ return C.familyRecords(byFamily,row,family);
 }
 function selected(row){
- try{const key=localStorage.getItem(storageKey(row));return loaded.find(x=>x.commercialStatus!=='discontinued-cl'&&makeIdentity(x)===key)||null;}catch{return null;}
+ try{const key=localStorage.getItem(storageKey(row));return loaded.find(x=>C.active(x)&&C.compatible(row,x)&&makeIdentity(x)===key)||null;}catch{return null;}
 }
 function persist(row,p){try{localStorage.setItem(storageKey(row),makeIdentity(p));}catch{}}
 function clear(row){try{localStorage.removeItem(storageKey(row));}catch{}}
 function render(section,row,family){
  const dst=section.querySelector('#siiCommercial');if(!dst)return;
- const available=match(row,family,loaded),chosen=selected(row);
+ const available=match(row,family),compatible=available.filter(p=>C.compatible(row,p)),chosen=selected(row);
  dst.replaceChildren();
  const title=document.createElement('div');title.className='sii-price-head';
  title.innerHTML='<small>PRECIOS COMERCIALES PUBLICADOS · REVISAR CONDICIONES</small>'+
- '<p>Valores publicados por marca y versión. Ofertas, importes desde y precios + IVA no equivalen necesariamente al valor final de compra. Revisa cargos y condiciones en la fuente. No son tasaciones de usados.</p>';
+ '<p>Precios documentados de familias comerciales. No prueban equivalencia con la ficha homologada ni disponibilidad vigente. Se muestran otras motorizaciones únicamente como referencias de la familia y no pueden seleccionarse para esta ficha; las motorizaciones no informadas deben verificarse. Revisa vigencia, IVA y condiciones en la fuente.</p>';
  dst.append(title);
  if(chosen){
   const summary=document.createElement('div');summary.className='sii-selected-price';
   summary.innerHTML='<small>VERSIÓN COMERCIAL SELECCIONADA</small><strong>'+displayPrice(chosen)+'</strong>'+
    '<p>'+esc(chosen.brand+' '+chosen.family+' · '+chosen.version)+(chosen.modelYear?' · modelo '+chosen.modelYear:' · año de modelo no informado')+'</p>'+
    '<p class="sii-small">Fuente consultada: '+esc(chosen.checkedAt)+(chosen.sourceOfferEnd?' · Campaña documentada hasta '+esc(chosen.sourceOfferEnd):'')+'. El fabricante puede modificar el precio sin previo aviso.</p>'+
+   (C.expired(chosen)?'<p class="sii-price-age" role="status">Campaña documentada terminada; precio histórico sin vigencia confirmada.</p>':'')+
    (ageWarning(chosen)?'<p class="sii-price-age" role="status">'+esc(ageWarning(chosen))+'</p>':'')+
    '<a href="'+esc(chosen.source)+'" target="_blank" rel="noopener noreferrer">Ver precio publicado ↗</a>';
   const remove=document.createElement('button');remove.type='button';remove.className='button secondary';remove.textContent='Quitar versión comercial';
@@ -67,7 +60,7 @@ function render(section,row,family){
   summary.append(remove,quote);dst.append(summary);
  }else if(available.length){
   const p=document.createElement('p');p.className='sii-pending';
-  p.textContent='Hay '+available.length+' versión(es) con precio de lista. Elige manualmente la que corresponda; no se asigna un precio a esta homologación por coincidencia de nombre.';
+  p.textContent=compatible.length?'Hay '+compatible.length+' referencia(s) comerciales compatibles o sin motorización declarada. Elige manualmente la versión: no se certifica equivalencia con la homologación 3CV.': 'Esta familia tiene precios publicados, pero ninguno declara la misma motorización: se presentan solo como referencia, sin permitir asociarlos a esta homologación.';
   dst.append(p);
  }
  if(!available.length){
@@ -76,13 +69,17 @@ function render(section,row,family){
  }
  const list=document.createElement('div');list.className='sii-price-list';
  for(const p of available){
+  const otherTech=!C.compatible(row,p);
   const item=document.createElement('article');item.className='sii-price-item';
   item.innerHTML='<div><strong>'+esc(p.version)+'</strong><span>'+esc(p.brand+' '+p.family)+(p.modelYear?' · modelo '+p.modelYear:' · año no informado')+'</span><span>'+priceKind(p)+(p.taxIncluded===false?' · + IVA no incluido':'')+' · fuente consultada '+esc(p.checkedAt)+'</span>'+ (p.sourceOfferEnd?'<span class="sii-price-age">Campaña documentada hasta '+esc(p.sourceOfferEnd)+'</span>':'')+
+    (otherTech?'<span class="sii-price-age">Otra motorización: no seleccionable para esta ficha 3CV</span>':'')+
+    (C.expired(p)?'<span class="sii-price-age">Campaña finalizada: referencia histórica, verificar valor actual</span>':'')+
+    (!p.technology?'<span class="sii-price-age">Motorización no informada por la fuente comercial</span>':'')+
     (ageWarning(p)?'<span class="sii-price-age">'+esc(ageWarning(p))+'</span>':'')+
     '</div><div class="sii-price-amount">'+displayPrice(p)+'</div>';
   const actions=document.createElement('div');actions.className='sii-price-actions';
   const choose=document.createElement('button');choose.type='button';choose.className='button secondary';choose.textContent='Elegir esta versión';
-  choose.disabled=!!chosen&&makeIdentity(chosen)===makeIdentity(p);
+  choose.disabled=otherTech||(!!chosen&&makeIdentity(chosen)===makeIdentity(p));
   choose.addEventListener('click',()=>{persist(row,p);render(section,row,family);});
   const a=document.createElement('a');a.href=p.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ver fuente ↗';
   actions.append(choose,a);item.append(actions);list.append(item);
@@ -92,7 +89,7 @@ function render(section,row,family){
 api.show=async function(row,family){
  await originalShow(row,family);
  const section=document.getElementById('siiSection');if(!section)return;
- const prices=await catalog();if(!section.isConnected)return;
+ await catalog();if(!section.isConnected)return;
  render(section,row,family);
 };
 api.decorateComparison=function(vehicles){
@@ -108,12 +105,10 @@ api.decorateComparison=function(vehicles){
 window.RindelabCommercial={
  ready:catalog,
  selected,
- available:(row,family)=>match(row,family,loaded),
- minimum:(row,family)=>{
-   const items=match(row,family,loaded);if(!items.length)return null;
-   return items.reduce((a,b)=>a.priceListClp<=b.priceListClp?a:b);
- },
- cleanPrice:record=>record&&record.commercialStatus!=='discontinued-cl'&&record.taxIncluded!==false&&record.priceType!=='oferta'&&record.priceType!=='desde'&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
+ available:(row,family)=>match(row,family),
+ hasReference:(row,family)=>C.familyRecords(byFamily,row,family).length>0,
+ minimum:(row,family)=>C.priceReference(byFamily,row,family),
+ cleanPrice:record=>record&&C.active(record)&&!C.expired(record)&&record.taxIncluded!==false&&record.priceType!=='oferta'&&record.priceType!=='desde'&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
  clp,
  ageWarning
 };

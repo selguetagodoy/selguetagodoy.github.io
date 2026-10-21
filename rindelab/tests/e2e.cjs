@@ -30,6 +30,9 @@ async function open(width,height){
  const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));page.on('console',m=>{if(m.type()==='error')errors.push('Console: '+m.text())});
  const r=await page.goto(base,{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
  await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325' && document.querySelector('#searchButton')?.disabled===false,{timeout:25000});
+ await page.locator('.hero-image img').evaluate(el=>el.decode());
+ // La regresión histórica comprueba todo el universo 3CV. El filtro comercial tiene pruebas propias.
+ await page.selectOption('#catalogScope','all');
  // Los tests del motor abren explícitamente los ajustes; la interfaz real comienza plegada.
  await page.locator('#supuestos').evaluate(el=>el.open=true);
  await page.locator('#scenarioAdvanced').evaluate(el=>el.open=true);
@@ -781,14 +784,14 @@ await test('161 precios desde por modelo: MD, origen, buscador y cotizador',asyn
   assert(txt.includes('auto.cl'),'El inventario debe indicar el origen');
  }
  const mdA=fs.readFileSync(path.join(__dirname,'../sii/LOTE-MODELOS-FALTANTES-PRECIO-DESDE-20261020.md'),'utf8');
- const linesA=mdA.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Alta |'));
+ const linesA=mdA.replace(/\r/g,'').split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Alta |'));
  assert.equal(linesA.length,64);
  for(const line of linesA){const c=line.split('|').map(x=>x.trim());const item=desde.find(x=>x.brand===c[1]&&x.family===c[2]);assert(item,'Falta '+c[1]+' '+c[2]);assert.equal(item.priceListClp,Number(c[4].replace(/[^0-9]/g,'')));assert.equal(item.source,c[5].split('](')[1]?.split(')')[0]);}
  const mdB=fs.readFileSync(path.join(__dirname,'../sii/LOTE-MODELOS-MARCAS-MASIVAS-20261020.md'),'utf8');
- const linesB=mdB.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Agregar |'));
+ const linesB=mdB.replace(/\r/g,'').split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Agregar |'));
  assert.equal(linesB.length,79);
  const mdC=fs.readFileSync(path.join(__dirname,'../sii/LOTE-BMW-RAM-CITROEN-CUPRA-20261020.md'),'utf8');
- const linesC=mdC.split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Alta |'));
+ const linesC=mdC.replace(/\r/g,'').split(String.fromCharCode(10)).filter(x=>x.startsWith('| ')&&x.endsWith(' | Alta |'));
  assert.equal(linesC.length,18);
  for(const line of linesC){const c=line.split('|').map(x=>x.trim());const row=desde.find(x=>x.brand===c[1]&&x.family===c[2]);assert(row,'Sin ficha '+c[1]+' '+c[2]);assert.equal(row.priceListClp,Number(c[4].replace(/[^0-9]/g,'')));assert.equal(row.source,c[5].split('](')[1]?.split(')')[0]);}
 
@@ -1052,7 +1055,7 @@ await test('Lote multimarca: 15 Chery, 14 Gac y 1 Citroen documentados sin bonos
 });
 await test('No asigna precio de lista automáticamente y permite elegir o quitar versión',async()=>{
  await page.click('#resetButton');await page.fill('#query','Corolla Cross');await page.click('#searchButton');
- await page.locator('.vehicle-card button[data-detail]').nth(1).click();
+ await page.locator('.vehicle-card').filter({has:page.locator('.vehicle-tech[data-tech="HEV"]')}).first().locator('button[data-detail]').click();
  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length>=2);
  assert.match(await page.locator('#siiCommercial').textContent(),/Elige solamente|Elige manualmente|Elige manualmente la versión/i);
  assert.equal(await page.locator('.sii-selected-price').count(),0);

@@ -11,6 +11,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   const r=await page.goto(base,{waitUntil:'domcontentloaded',timeout:30000});
   assert.equal(r.status(),200);
   await page.waitForFunction(()=>document.getElementById('recordCount')?.textContent==='8.325',{timeout:30000});
+  await page.locator('.hero-image img').evaluate(el=>el.decode());
   const layout=await page.evaluate(()=>{
    const box=s=>document.querySelector(s).getBoundingClientRect();
    return {overflow:document.documentElement.scrollWidth-innerWidth,
