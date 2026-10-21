@@ -59,7 +59,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  await check('Las 32 nuevas fotos locales tienen atribución y bytes íntegros',async()=>{
   const fs=require('node:fs');const path=require('node:path');const hash=require('node:crypto').createHash;
   const dir=path.join(__dirname,'../images/commons');const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
-  assert.equal(m.downloaded,146);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,146);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),150);
+  assert.equal(m.downloaded,196);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,196);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),200);
   for(const entry of m.results){assert(entry.source.startsWith('https://commons.wikimedia.org/'));assert(entry.author);assert(entry.license);
    const bytes=fs.readFileSync(path.join(__dirname,'..',entry.path.slice(2)));
    assert.equal(bytes.length,entry.bytes);assert.equal(hash('sha256').update(bytes).digest('hex'),entry.sha256);}
@@ -91,6 +91,15 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert(found.every(src=>src?.startsWith('./images/commons/')),JSON.stringify(found));
   const wrong=await p.evaluate(()=>window.RindelabPhotos.find(['Ford','Transit Courier','','','','','','','2024-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8}));
   assert.equal(wrong,null,'No asociar foto de Ford Transit a Ford Transit Courier');
+ });
+ await check('200 referencias: coincidencias por familia y exclusión de generaciones equivocadas',async()=>{
+  const targets=[['Subaru','Forester AWD','Bencina','2024-01-01'],['Volkswagen','T-Cross 1.0','Bencina','2025-01-01'],
+    ['BYD','Dolphin EV','EV','2025-01-01'],['BYD','Atto 3 EV','EV','2024-01-01'],
+    ['Ford','Maverick HEV','HEV','2025-01-01'],['KGM','Rexton 2.2','Diésel','2024-01-01']];
+  const results=await p.evaluate(targets=>targets.map(([brand,model,tech,date])=>window.RindelabPhotos.find([brand,model,tech,'','','','','',date],{BRAND:0,MODEL:1,TECH:2,DATE:8})?.src||null),targets);
+  assert(results.every(src=>src?.startsWith('./images/commons/')),JSON.stringify(results));
+  const old=await p.evaluate(()=>window.RindelabPhotos.find(['Volvo','XC60 2.4','Diésel','','','','','','2010-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8}));
+  assert.equal(old,null,'No asociar fotografías 2024 a una generación Volvo 2010');
  });
  await check('El escenario desplegable mantiene las tarifas y cálculos originales',async()=>{
   await p.locator('#supuestos').evaluate(el=>el.open=true);

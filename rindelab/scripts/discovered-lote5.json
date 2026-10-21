@@ -1,0 +1,1163 @@
+{
+  "matches": [
+    {
+      "brand": "Subaru",
+      "pattern": "\\bForester\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2022 Subaru Forester Wilderness in Crystal Black Silica, front left.jpg",
+      "model": "Subaru Forester",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Subaru Forester SK SUV"
+    },
+    {
+      "brand": "Subaru",
+      "pattern": "\\bCrosstrek\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2024 Subaru Crosstrek Wilderness, front NYIAS 2023.jpg",
+      "model": "Subaru Crosstrek",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Subaru Crosstrek"
+    },
+    {
+      "brand": "Subaru",
+      "pattern": "\\bOutback\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2023 Subaru Outback Wilderness, front left, 09-12-2026.jpg",
+      "model": "Subaru Outback",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2023 Subaru Outback"
+    },
+    {
+      "brand": "Subaru",
+      "pattern": "\\bImpreza\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2024 Subaru Impreza in Ice Silver Metallic, front left, 07-02-2026.jpg",
+      "model": "Subaru Impreza",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Subaru Impreza hatchback"
+    },
+    {
+      "brand": "Volkswagen",
+      "pattern": "\\bTera\\b",
+      "from": "2025",
+      "to": "2026",
+      "file": "Volkswagen Tera 170 TSi Comfort 2026 Front.jpg",
+      "model": "Volkswagen Tera",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 Volkswagen Tera"
+    },
+    {
+      "brand": "Volkswagen",
+      "pattern": "\\bT[\\s.-]*Cross\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Volkswagen T-Cross 1.0 TSI (2024) (54525595267).jpg",
+      "model": "Volkswagen T-Cross",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Volkswagen T-Cross"
+    },
+    {
+      "brand": "Volkswagen",
+      "pattern": "\\bNivus\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Volkswagen Taos Nivus Curitiba 20240222 151358.jpg",
+      "model": "Volkswagen Nivus",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Volkswagen Nivus"
+    },
+    {
+      "brand": "Volkswagen",
+      "pattern": "\\bAmarok\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "Volkswagen Amarok Mk2 Auto Zuerich 2023 1X7A1337.jpg",
+      "model": "Volkswagen Amarok",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2023 Volkswagen Amarok"
+    },
+    {
+      "brand": "Volkswagen",
+      "pattern": "\\bPolo\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2024 Volkswagen Polo Life front.jpg",
+      "model": "Volkswagen Polo",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Volkswagen Polo"
+    },
+    {
+      "brand": "Volkswagen",
+      "pattern": "\\bTiguan\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "2024 SAIC-Volkswagen Tiguan L Pro.jpg",
+      "model": "Volkswagen Tiguan",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Volkswagen Tiguan SUV"
+    },
+    {
+      "brand": "Jeep",
+      "pattern": "\\bAvenger\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "Jeep Avenger Altitude (2024) (54520788892).jpg",
+      "model": "Jeep Avenger",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Jeep Avenger"
+    },
+    {
+      "brand": "Jeep",
+      "pattern": "\\bCompass\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2021 Jeep Compass Limited 4WD in Billet Silver Metallic, front left.jpg",
+      "model": "Jeep Compass",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Jeep Compass"
+    },
+    {
+      "brand": "Jeep",
+      "pattern": "\\bWrangler\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2024 Jeep Wrangler Unlimited Rubicon, front NYIAS 2023.jpg",
+      "model": "Jeep Wrangler",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Jeep Wrangler"
+    },
+    {
+      "brand": "Jeep",
+      "pattern": "\\bGrand[\\s.-]*Cherokee\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "Jeep Grand Cherokee, Auto 2024, Zurich (PANA0125).jpg",
+      "model": "Jeep Grand Cherokee",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Jeep Grand Cherokee"
+    },
+    {
+      "brand": "Volvo",
+      "pattern": "\\bXC40\\b",
+      "from": "2020",
+      "to": "2026",
+      "file": "2024 Volvo XC40 B4 facelift front.jpg",
+      "model": "Volvo XC40",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Volvo XC40"
+    },
+    {
+      "brand": "Volvo",
+      "pattern": "\\bXC60\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2009 Volvo XC60 SE Lux D5 AWD - 2400cc 2.4 (205PS) Diesel - Black - 11-2024, Front.jpg",
+      "model": "Volvo XC60",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Volvo XC60"
+    },
+    {
+      "brand": "Volvo",
+      "pattern": "\\bXC90\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2025 Volvo XC90 B5 Dark AWD front.jpg",
+      "model": "Volvo XC90",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Volvo XC90"
+    },
+    {
+      "brand": "Land Rover",
+      "pattern": "\\bDefender\\b",
+      "from": "2020",
+      "to": "2026",
+      "file": "2024 Land Rover Defender OCTA.jpg",
+      "model": "Land Rover Defender",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Land Rover Defender"
+    },
+    {
+      "brand": "Land Rover",
+      "pattern": "\\bEvoque\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2017 Range Rover Evoque SE Tech eD4 - 1999cc 2.0 (150PS) Diesel - Fuji White - 04-2024, Front.jpg",
+      "model": "Land Rover Range Rover Evoque",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Range Rover Evoque"
+    },
+    {
+      "brand": "Land Rover",
+      "pattern": "\\bRange[\\s.-]*Rover[\\s.-]*Sport\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "Range Rover Sport HSE (front) 24 September 2024.jpg",
+      "model": "Land Rover Range Rover Sport",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Range Rover Sport"
+    },
+    {
+      "brand": "Land Rover",
+      "pattern": "\\bDiscovery[\\s.-]*Sport\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Land Rover Discovery Sport Dynamic SE P250 (2024) (side) in Osaka.jpg",
+      "model": "Land Rover Discovery Sport",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Land Rover Discovery Sport"
+    },
+    {
+      "brand": "Land Rover",
+      "pattern": "\\bVelar\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2023 Land Rover Range Rover Velar S in Varesine Blue Metallic, front right.jpg",
+      "model": "Land Rover Range Rover Velar",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Range Rover Velar"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bDolphin\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2024 BYD Dolphin Premium Standard Range in Coral Pink 01.jpg",
+      "model": "BYD Dolphin",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BYD Dolphin car"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bAtto[\\s.-]*3\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2023 BYD Atto 3 Comfort - 60kWh (203PS) Electric - Parkour Red - 02-2024, Front.jpg",
+      "model": "BYD Atto 3",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BYD Atto 3"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bSealion[\\s.-]*7\\b",
+      "from": "2025",
+      "to": "2026",
+      "file": "2025 BYD Sealion 7 Performance front.jpg",
+      "model": "BYD Sealion 7",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 BYD Sealion 7"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bSong[\\s.-]*Plus\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2023 BYD Song Plus DM-i front view.png",
+      "model": "BYD Song Plus",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BYD Song Plus"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bYuan[\\s.-]*Plus\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "BYD YUAN PLUS EV (front).png",
+      "model": "BYD Yuan Plus",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BYD Yuan Plus"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bSeagull\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2025 BYD Seagull EV in Sprout Green, front left.jpg",
+      "model": "BYD Seagull",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BYD Seagull"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bSealion[\\s.-]*6\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "BYD Sealion 6 DM-i 1.5 Premium 2025.jpg",
+      "model": "BYD Sealion 6",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 BYD Sealion 6"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bHan\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2020 BYD Han EV front.jpg",
+      "model": "BYD Han",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2023 BYD Han sedan"
+    },
+    {
+      "brand": "BYD",
+      "pattern": "\\bTang\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2024 BYD Tang EV in Silver Sand Black, front left.jpg",
+      "model": "BYD Tang",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BYD Tang SUV"
+    },
+    {
+      "brand": "Geely",
+      "pattern": "\\bCoolray\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "Geely Coolray 1.5 Premium 2024 (7).jpg",
+      "model": "Geely Coolray",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Geely Coolray"
+    },
+    {
+      "brand": "Geely",
+      "pattern": "\\bEmgrand\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "Geely Emgrand 1.5 Comfort 2024 (1).jpg",
+      "model": "Geely Emgrand",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Geely Emgrand"
+    },
+    {
+      "brand": "Geely",
+      "pattern": "\\bEX5\\b",
+      "from": "2025",
+      "to": "2026",
+      "file": "2025 Geely EX5 Inspire front.jpg",
+      "model": "Geely EX5",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 Geely EX5"
+    },
+    {
+      "brand": "KGM",
+      "pattern": "\\bTorres\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "Ssangyong Torres Limited 2025 (54314556947).jpg",
+      "model": "KGM Torres",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 SsangYong Torres"
+    },
+    {
+      "brand": "KGM",
+      "pattern": "\\bRexton\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2024 Ssangyong Rexton Auto.jpg",
+      "model": "KGM Rexton",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 SsangYong Rexton"
+    },
+    {
+      "brand": "KGM",
+      "pattern": "\\bMusso\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Ssangyong Grand Musso 220 eXDi GLX 2024 (54353305921).jpg",
+      "model": "KGM Musso",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 SsangYong Musso pickup"
+    },
+    {
+      "brand": "KGM",
+      "pattern": "\\bActyon\\b",
+      "from": "2025",
+      "to": "2026",
+      "file": "KGM Actyon AMA Marbach 2025 DSC 8612.jpg",
+      "model": "KGM Actyon",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 KGM Actyon SUV"
+    },
+    {
+      "brand": "Ford",
+      "pattern": "\\bF[\\s.-]*150\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2024 Ford F-150 Lariat front view.jpg",
+      "model": "Ford F-150",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Ford F-150 pickup"
+    },
+    {
+      "brand": "Ford",
+      "pattern": "\\bMaverick\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2024 Ford Maverick XL, front left, 08-21-2026.jpg",
+      "model": "Ford Maverick",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Ford Maverick pickup"
+    },
+    {
+      "brand": "Ford",
+      "pattern": "\\bTerritory\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2024 Ford Territory 1.5 Sport in Crystal Pearl White, 06-26-2024.jpg",
+      "model": "Ford Territory",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Ford Territory SUV"
+    },
+    {
+      "brand": "Ford",
+      "pattern": "\\bBronco[\\s.-]*Sport\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Ford Bronco Sport Big Bend (2024) (53620395827).jpg",
+      "model": "Ford Bronco Sport",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Ford Bronco Sport"
+    },
+    {
+      "brand": "Ford",
+      "pattern": "\\bExplorer\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Ford Explorer EV Auto Zuerich 2024 DSC 6360.jpg",
+      "model": "Ford Explorer",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Ford Explorer"
+    },
+    {
+      "brand": "Ford",
+      "pattern": "\\bRanger[\\s.-]*Raptor\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "Ford Ranger 2.0 Turbo Raptor 4x4 AT 2024 sideG.jpg",
+      "model": "Ford Ranger Raptor",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Ford Ranger Raptor"
+    },
+    {
+      "brand": "Ford",
+      "pattern": "\\bTransit\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2023 Ford Transit Courier Limited TDCi - 1499cc 1.5 (100PS) Diesel - Chrome Blue - 02-2024, Front.jpg",
+      "model": "Ford Transit",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Ford Transit van"
+    },
+    {
+      "brand": "Mazda",
+      "pattern": "\\bMazda[\\s.-]*3\\b",
+      "from": "2020",
+      "to": "2026",
+      "file": "Mazda 3 Sport 2.0 Core 2024 (53725925169).jpg",
+      "model": "Mazda Mazda3",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mazda 3 BP hatchback"
+    },
+    {
+      "brand": "Mazda",
+      "pattern": "\\bCX[\\s.-]*60\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2025 Mazda CX-60 3.3 e-Skyactiv-G AWD HEV Turbo in Soul Red Crystal, front left.jpg",
+      "model": "Mazda CX-60",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mazda CX-60"
+    },
+    {
+      "brand": "Mazda",
+      "pattern": "\\bMazda[\\s.-]*2\\b",
+      "from": "2020",
+      "to": "2026",
+      "file": "2009 Mazda 2 Sport - 1498cc 1.5 (103PS) Petrol - Silver - 02-2024, Front.jpg",
+      "model": "Mazda Mazda2",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mazda 2 hatchback"
+    },
+    {
+      "brand": "Mazda",
+      "pattern": "\\bCX[\\s.-]*90\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2024 Mazda CX-90, front 1.18.23.jpg",
+      "model": "Mazda CX-90",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mazda CX-90"
+    },
+    {
+      "brand": "Mazda",
+      "pattern": "\\bCX[\\s.-]*50\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2024 Mazda CX-50 Premium 4WD in Wind Chill Pearl, front left.jpg",
+      "model": "Mazda CX-50",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mazda CX-50"
+    },
+    {
+      "brand": "Honda",
+      "pattern": "\\bHR[\\s.-]*V\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2019 Honda HR-V Sport i-VTEC - 1498cc 1.5 (182PS) Petrol - Black - 02-2024, Front.jpg",
+      "model": "Honda HR-V",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Honda HR-V"
+    },
+    {
+      "brand": "Honda",
+      "pattern": "\\bCR[\\s.-]*V\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2017-2022 Honda CR-V Facelift (Front).jpg",
+      "model": "Honda CR-V",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Honda CR-V"
+    },
+    {
+      "brand": "Honda",
+      "pattern": "\\bCivic\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2024 Honda Civic Type R, front right, 06-15-2024.jpg",
+      "model": "Honda Civic",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Honda Civic"
+    },
+    {
+      "brand": "Honda",
+      "pattern": "\\bWR[\\s.-]*V\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2024 Honda WR-V RS (front), Pakuwon Trade Center, West Surabaya.jpg",
+      "model": "Honda WR-V",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Honda WR-V"
+    },
+    {
+      "brand": "Honda",
+      "pattern": "\\bPilot\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2015 Honda Pilot Special Edition 4WD in Modern Steel Metallic, Front Left, 2024-03-08.jpg",
+      "model": "Honda Pilot",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Honda Pilot"
+    },
+    {
+      "brand": "Nissan",
+      "pattern": "\\bNavara\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2024 Nissan Navara 2.5 Calibre-X 4x2 in Aspen Pearl White, front right, 06-08-2024.jpg",
+      "model": "Nissan Navara",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Nissan Navara D23"
+    },
+    {
+      "brand": "Nissan",
+      "pattern": "\\bPathfinder\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2024 Nissan Pathfinder Rock Creek, front right, 02-02-2025.jpg",
+      "model": "Nissan Pathfinder",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Nissan Pathfinder"
+    },
+    {
+      "brand": "Nissan",
+      "pattern": "\\bJuke\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2019 Nissan Juke Tekna - 1598cc 1.6 (110PS) Petrol - Black - 02-2024, Front.jpg",
+      "model": "Nissan Juke",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Nissan Juke"
+    },
+    {
+      "brand": "Mitsubishi",
+      "pattern": "\\bPajero[\\s.-]*Sport\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2023 Mitsubishi Pajero Sport 2.4 Dakar 4x2 (front), Citraland, West Surabaya.jpg",
+      "model": "Mitsubishi Montero Sport",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mitsubishi Pajero Sport"
+    },
+    {
+      "brand": "Mitsubishi",
+      "pattern": "\\bOutlander[\\s.-]*Sport\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "Mitsubishi Outlander Sport (GA) Washington DC Metro Area, USA.jpg",
+      "model": "Mitsubishi Outlander Sport",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 Mitsubishi Outlander Sport"
+    },
+    {
+      "brand": "Mitsubishi",
+      "pattern": "\\bLancer\\b",
+      "from": "2017",
+      "to": "2020",
+      "file": "2017 Mitsubishi Lancer ES in Rally Red Metallic, front left, 2023-09-20.jpg",
+      "model": "Mitsubishi Lancer",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2017 Mitsubishi Lancer"
+    },
+    {
+      "brand": "JAC",
+      "pattern": "\\bJS3\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "JAC JS3 1.6 Advance 2023 (53570296866).jpg",
+      "model": "JAC JS3",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 JAC JS3"
+    },
+    {
+      "brand": "JMC",
+      "pattern": "\\bGrand[\\s.-]*Avenue\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "JMC Grand Avenue 2.3d Turbo 2025 (cropped).jpg",
+      "model": "JMC Grand Avenue",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 JMC Grand Avenue"
+    },
+    {
+      "brand": "RAM",
+      "pattern": "\\b1500\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2025 Ram 1500 front view.jpg",
+      "model": "RAM 1500",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 RAM 1500 pickup"
+    },
+    {
+      "brand": "RAM",
+      "pattern": "\\b700\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Ram 700 Laramie 2023.jpg",
+      "model": "RAM 700",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 RAM 700 pickup"
+    },
+    {
+      "brand": "Gac",
+      "pattern": "\\bGS8\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "GAC GS8 2.0T 2024 (53414865456).jpg",
+      "model": "Gac GS8",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 GAC GS8 SUV"
+    },
+    {
+      "brand": "Gac",
+      "pattern": "\\bEmzoom\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "GAC EMzoom 1.5T GL R-style 2024 (53494434461).jpg",
+      "model": "Gac Emzoom",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 GAC Emzoom"
+    },
+    {
+      "brand": "Gac",
+      "pattern": "\\bEmkoo\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "GAC Emkoo 1.5 GL 2024 (2).jpg",
+      "model": "Gac Emkoo",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 GAC Emkoo SUV"
+    },
+    {
+      "brand": "Gac",
+      "pattern": "\\bAion[\\s.-]*V\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "GAC AION V at IIMS 2025 in Indonesia.jpg",
+      "model": "Gac Aion V",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2025 GAC Aion V"
+    },
+    {
+      "brand": "Gac",
+      "pattern": "\\bAion[\\s.-]*Y\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2023 GAC AION Y Plus front.jpg",
+      "model": "Gac Aion Y",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 GAC Aion Y"
+    },
+    {
+      "brand": "Great Wall",
+      "pattern": "\\bPoer\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Great Wall Poer Plus Elite 2024.jpg",
+      "model": "Great Wall Poer",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Great Wall Poer pickup"
+    },
+    {
+      "brand": "Great Wall",
+      "pattern": "\\bWingle[\\s.-]*7\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Great Wall Wingle 7 Elite 2023.jpg",
+      "model": "Great Wall Wingle 7",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Great Wall Wingle 7"
+    },
+    {
+      "brand": "Lexus",
+      "pattern": "\\bNX\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "Lexus NX 260 (front), November 8, 2024.jpg",
+      "model": "Lexus NX",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Lexus NX"
+    },
+    {
+      "brand": "Lexus",
+      "pattern": "\\bRX\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "Lexus RX 270 (front), November 7, 2024.jpg",
+      "model": "Lexus RX",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Lexus RX"
+    },
+    {
+      "brand": "Lexus",
+      "pattern": "\\bUX\\b",
+      "from": "2020",
+      "to": "2026",
+      "file": "2024 Lexus UX 250h F Sport Design in Redline, front right.jpg",
+      "model": "Lexus UX",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Lexus UX"
+    },
+    {
+      "brand": "Lexus",
+      "pattern": "\\bES\\b",
+      "from": "2020",
+      "to": "2026",
+      "file": "Lexus ES 200 (front) 24 September 2024.jpg",
+      "model": "Lexus ES",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Lexus ES"
+    },
+    {
+      "brand": "Lexus",
+      "pattern": "\\bLBX\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "2024 Lexus LBX Relax in Sonic Quartz, front right.jpg",
+      "model": "Lexus LBX",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Lexus LBX"
+    },
+    {
+      "brand": "Lexus",
+      "pattern": "\\bLX\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "Lexus LX 470 UZJ100, front right, 05-24-2024.jpg",
+      "model": "Lexus LX",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Lexus LX SUV"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "pattern": "\\bCLA\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Mercedes-Benz CLA 200 Coupé (C118, 2024) (54858012038).jpg",
+      "model": "Mercedes-Benz CLA",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mercedes CLA"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "pattern": "\\bEQB\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2023 Mercedes-Benz EQB 300 AMG Line Premium 4Matic - 66kWh (228PS) Electric - Polar White - 02-2024, Front.jpg",
+      "model": "Mercedes-Benz EQB",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mercedes EQB electric"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "pattern": "\\bEQA\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2021 Mercedes-Benz EQA 250 AMG Line - 66kWh (190PS) Electric - Mountain Grey - 02-2024, Front.jpg",
+      "model": "Mercedes-Benz EQA",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mercedes EQA electric"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "pattern": "\\bEQE\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "2023 Mercedes AMG EQE in Alpine Grey, front left.jpg",
+      "model": "Mercedes-Benz EQE",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mercedes EQE"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "pattern": "\\bE[\\s.-]*Class\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "MERCEDES-BENZ E CLASS LWB (W214) China.jpg",
+      "model": "Mercedes-Benz Clase E",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mercedes E-Class W214"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "pattern": "\\bGLS\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2024 Mercedes-Benz GLS 450d 4MATIC front.jpg",
+      "model": "Mercedes-Benz GLS",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Mercedes GLS"
+    },
+    {
+      "brand": "BMW",
+      "pattern": "\\biX1\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "BMW iX1 xDrive30 xLINE (U11) front.jpg",
+      "model": "BMW iX1",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BMW iX1 SUV"
+    },
+    {
+      "brand": "BMW",
+      "pattern": "\\biX2\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "BMW iX2 xDrive30 M Sport (U10) front.jpg",
+      "model": "BMW iX2",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BMW iX2 SUV"
+    },
+    {
+      "brand": "BMW",
+      "pattern": "\\biX\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "BMW I20 iX xDrive50 Sport Mineral White Metallic (3).jpg",
+      "model": "BMW iX",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BMW iX electric"
+    },
+    {
+      "brand": "BMW",
+      "pattern": "\\bi5\\b",
+      "from": "2024",
+      "to": "2026",
+      "file": "PIMS 2024 - BMW i5 M60 Touring (front).jpg",
+      "model": "BMW i5",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BMW i5"
+    },
+    {
+      "brand": "BMW",
+      "pattern": "\\bi7\\b",
+      "from": "2023",
+      "to": "2026",
+      "file": "2023 BMW i7 M70 xDrive.jpg",
+      "model": "BMW i7",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BMW i7"
+    },
+    {
+      "brand": "BMW",
+      "pattern": "\\b4[\\s.-]*Series\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2024 BMW 4 Series Gran Coupé (G26) IMG 2400.jpg",
+      "model": "BMW Serie 4",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 BMW 4 Series"
+    },
+    {
+      "brand": "BMW",
+      "pattern": "\\bX4\\b",
+      "from": "2020",
+      "to": "2025",
+      "file": "BMW X4 M Competition (G02) FL 1X7A6446.jpg",
+      "model": "BMW X4",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2023 BMW X4 SUV"
+    },
+    {
+      "brand": "Audi",
+      "pattern": "\\bQ4[\\s.-]*e[\\s.-]*tron\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "2024 Audi Q4 e-tron Vorsprung 45.jpg",
+      "model": "Audi Q4 e-tron",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Audi Q4 e-tron"
+    },
+    {
+      "brand": "Audi",
+      "pattern": "\\bQ8\\b",
+      "from": "2020",
+      "to": "2026",
+      "file": "2023 Audi Q8 quattro, 06-02-2024.jpg",
+      "model": "Audi Q8",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Audi Q8 SUV"
+    },
+    {
+      "brand": "Audi",
+      "pattern": "\\bQ2\\b",
+      "from": "2021",
+      "to": "2026",
+      "file": "Audi Q2.png",
+      "model": "Audi Q2",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Audi Q2 SUV"
+    },
+    {
+      "brand": "Audi",
+      "pattern": "\\be[\\s.-]*tron[\\s.-]*GT\\b",
+      "from": "2022",
+      "to": "2026",
+      "file": "Audi e-tron GT side 20240410.jpg",
+      "model": "Audi e-tron GT",
+      "author": "",
+      "license": "",
+      "discovery": "Commons HTML search 2024 Audi e-tron GT"
+    }
+  ],
+  "misses": [
+    {
+      "brand": "Volvo",
+      "model": "EX30",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Geely",
+      "model": "Monjaro",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Geely",
+      "model": "Starray",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Corolla Cross",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Yaris Cross",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Raize",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Prius",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Land Cruiser Prado",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Corolla",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "C-HR",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Toyota",
+      "model": "bZ4X",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "JAC",
+      "model": "X200",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "JAC",
+      "model": "JS6",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "JAC",
+      "model": "EJS1",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "JMC",
+      "model": "Vigus",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Foton",
+      "model": "G7",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Foton",
+      "model": "Tunland",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Foton",
+      "model": "V7",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Foton",
+      "model": "Wonder",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Great Wall",
+      "model": "Haval H6 PHEV",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Great Wall",
+      "model": "Tank 700",
+      "reason": "no credible title"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "Clase A",
+      "reason": "no credible title"
+    }
+  ],
+  "attempted": 117,
+  "totalTargets": 166
+}
