@@ -30,7 +30,7 @@
 <script src="./v2-premium.js?v=20261018-rc1" defer></script>
 <script src="./v2-claridad.js?v=20261018-v1" defer></script>
 <script src="./v2-polish.js?v=20261018-v1" defer></script>
-<script src="./v2-photos.js?v=20261021-local205" defer></script>
+<script src="./v2-photos.js?v=20261021-local224-batch" defer></script>
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 <style>
 .rinde-explore{margin:1.1rem 0;padding:1rem 1.25rem;border:1px solid #d5dde7;border-radius:12px;background:#f6f9fc;color:#162d4b}
@@ -117,7 +117,7 @@
     <button type="button" class="button secondary" id="resetButton">Limpiar</button>
    </div>
   </form>
-  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Modelos con información comercial u homologación</option><option value="commercial">Catálogo comercial completo (con y sin precio)</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Incluye modelos publicados por concesionarias aunque no tengan precio de lista o ficha 3CV; los importes no certifican vigencia ni equivalencia exacta de versión.</small></div>
+  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Modelos con información comercial u homologación</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Incluye modelos publicados por concesionarias aunque no tengan precio de lista o ficha 3CV; los importes no certifican vigencia ni equivalencia exacta de versión.</small></div>
  </section>
  <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor gasto en energía (WLTP)</button><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
@@ -324,9 +324,9 @@
 <script src="./sii/catalog-identity.js?v=20261021-normalized1" defer></script>
  <script src="./sii/prices.js?v=20261021-normalized1" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261021-dealer-expansion" defer></script>
+<script src="./v6.js?v=20261021-reconciled-networks" defer></script>
 <link rel="stylesheet" href="./market.css?v=20261021-etapas234">
-<script src="./market-catalog.js?v=20261021-dealer-expansion" defer></script>
+<script src="./market-catalog.js?v=20261021-reconciled-networks" defer></script>
 <script>
 /* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
 (function(){
