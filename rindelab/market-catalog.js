@@ -80,7 +80,7 @@ function renderGroup(group){
   '<small>Publicación revisada '+safe(p.checkedAt||'sin fecha')+' · Sin rendimiento homologado vinculado a esta versión</small></div>'+
   '<div class="market-card-actions"><a class="button secondary" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">Fuente ↗</a>'+
   (p.dealerObserved?'':'<a class="button secondary" href="./cotizador.html?marca='+encodeURIComponent(group.brand)+'&modelo='+encodeURIComponent(group.family)+'">Ver versiones</a>')+
-  '<button type="button" class="button primary" data-market-compare="'+safe(group.key)+'" aria-pressed="'+selected+'">'+(selected?'Quitar de comparación':'Comparar compra +')+'</button></div>';
+  '<button type="button" class="button secondary" data-market-sii="'+safe(group.key)+'">Tasación y permiso SII</button>'+'<button type="button" class="button primary" data-market-compare="'+safe(group.key)+'" aria-pressed="'+selected+'">'+(selected?'Quitar de comparación':'Comparar compra +')+'</button></div>';
  const photo=window.RindelabPhotos?.commercialNode(p);
  if(photo){const img=photo.querySelector('img');if(img){img.loading='lazy';}article.prepend(photo);}
  return article;
@@ -123,6 +123,8 @@ function comparison(){
  ['Precio publicado de referencia',x=>money(x.ref.priceListClp)+(x.ref.taxIncluded===false?' + IVA':'')],
  ['Tipo de precio',x=>x.ref.dealerObserved?(x.ref.priceListClp?'Lista publicada por familia, sin versión identificada':'No publicado como precio de lista'):(x.ref.priceType||'No acreditado')],
  ['Campaña documentada',x=>C.expired(x.ref)?'Finalizada; verificar':x.ref.sourceOfferEnd?'Hasta '+x.ref.sourceOfferEnd:'Sin fecha de término acreditada'],
+ ['Tasación fiscal SII 2026 (selección manual)',x=>{const r=window.RindelabSII?.getCommercialSelection?.(x.brand,x.family,x.tech);return r?money(r[5])+' · SII '+r[0]:'Sin versión SII seleccionada'}],
+ ['Permiso de circulación 2026 (selección manual)',x=>{const r=window.RindelabSII?.getCommercialSelection?.(x.brand,x.family,x.tech);return r?money(r[6])+' · año fabricación '+r[1]:'Sin versión SII seleccionada'}],
  ['Referencias disponibles',x=>fmt(x.items.length)],
  ['Fecha de revisión',x=>x.ref.checkedAt||'Sin fecha'],
  ['Rendimiento 3CV de esta versión',()=> 'Sin correspondencia técnica certificada'],
@@ -131,10 +133,12 @@ function comparison(){
  let table='<table class="market-compare-table"><thead><tr><th>Indicador</th>'+xs.map(x=>'<th>'+safe(x.brand+' '+x.family)+'<br>'+safe(labelTech(x.tech))+'</th>').join('')+'</tr></thead><tbody>';
  table+=rows.map(([label,get])=>'<tr><th>'+safe(label)+'</th>'+xs.map(x=>'<td>'+safe(get(x))+'</td>').join('')+'</tr>').join('');
  table+='<tr><th>Fuente de referencia</th>'+xs.map(x=>'<td><a href="'+safe(x.ref.source)+'" target="_blank" rel="noopener noreferrer">Consultar fuente ↗</a></td>').join('')+'</tr></tbody></table>';
- compareBody.innerHTML='<p class="market-comparison-warning">Comparación comercial de familias, no de versiones homologadas. Precios publicados sujetos a vigencia, IVA y condiciones; sin equivalencia 3CV ni estimaciones energéticas inventadas.</p><div class="market-table-scroll" role="region" tabindex="0" aria-label="Tabla comercial desplazable">'+table+'</div>';
+ compareBody.innerHTML='<p class="market-comparison-warning">Comparación comercial de familias, no de versiones homologadas. La tasación y el permiso solo aparecen después de elegir manualmente un año, versión y código SII desde cada tarjeta. Esa elección tampoco certifica equivalencia con el código 3CV. Precios comerciales sujetos a vigencia, IVA y condiciones.</p><div class="market-table-scroll" role="region" tabindex="0" aria-label="Tabla comercial desplazable">'+table+'</div>';
  compareDialog.showModal();
 }
-$('commercialResultList').addEventListener('click',event=>{const b=event.target.closest('[data-market-compare]');if(b)toggle(b.dataset.marketCompare);});
+$('commercialResultList').addEventListener('click',event=>{const sii=event.target.closest('[data-market-sii]');
+ if(sii){const g=groupIndex.get(sii.dataset.marketSii);if(g)window.RindelabSII?.openCommercial?.(g.brand,g.family,g.tech);return;}
+ const b=event.target.closest('[data-market-compare]');if(b)toggle(b.dataset.marketCompare);});
 $('commercialMore').addEventListener('click',()=>{shown+=12;render();updateTray();});
 $('commercialSort').addEventListener('change',()=>{shown=12;render();updateTray();});
 $('commercialOpenCompare').addEventListener('click',comparison);
