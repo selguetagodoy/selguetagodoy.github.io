@@ -48,6 +48,7 @@ function matches(r,item){
  if(item.match==='whole-family')return same;
  if(item.match==='model-prefix-exclusions')return same&&!(item.excludePrefixes||[]).some(p=>{const k=norm(p);return name===k||name.startsWith(k+' ')});
  if(item.match==='model-prefix-list')return (item.modelPrefixes||[]).some(p=>{const k=norm(p);return name===k||name.startsWith(k+' ')});
+ if(item.match==='model-prefix-list-cutoff')return r[8]<=item.homologationCutoff&&(item.modelPrefixes||[]).some(p=>{const k=norm(p);return name===k||name.startsWith(k+' ')});
  if(item.match==='body-style-hatchback')return same&&/\b(?:HB|HATCHBACK)\b/.test(name);
  if(item.match==='previous-generation-cutoff')return same&&r[8]<=item.homologationCutoff;
  if(item.match==='variant-only-manual')return same&&/\b(?:5P|5D|5 PUERTAS)\b/.test(name);
