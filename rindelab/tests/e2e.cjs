@@ -1380,6 +1380,30 @@ await test('Marcas: denominaciones 3CV consolidadas, filtro transparente y CSV',
  assert(sizes.page<=sizes.screen+3,JSON.stringify(sizes));
  await p.close();
 });
+await test('Marcas: histórico separado de descontinuado, fuente primaria y exportación',async()=>{
+ const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/brand-commercial-status-2026.json'),'utf8'));
+ assert.equal(data.schemaVersion,1);
+ assert.equal(Object.keys(data.statuses).length,1);
+ assert.equal(data.statuses.Infiniti.status,'discontinued-cl');
+ assert.match(data.statuses.Infiniti.sourceUrl,/^https:\/\/www\.infiniti\.com\/regions\/es-cl\.html$/);
+ const p=await browser.newPage({viewport:{width:390,height:844}});
+ await p.goto(base+'marcas.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#metricDiscontinued')?.textContent==='1');
+ assert.equal(await p.locator('#metricHistorical').textContent(),'35');
+ await p.selectOption('#brandStatus','discontinued');
+ assert.equal(await p.locator('#brandRows tr').count(),1);
+ assert.match(await p.locator('#brandRows tr').first().textContent(),/Infiniti.*Descontinuado en Chile/);
+ assert.equal(await p.locator('#brandRows tr a.state-source').first().getAttribute('href'),data.statuses.Infiniti.sourceUrl);
+ await p.selectOption('#brandStatus','historical');
+ assert.equal(await p.locator('#brandRows tr').count(),35);
+ await p.fill('#brandSearch','Borgward');
+ assert.equal(await p.locator('#brandRows tr').count(),1);
+ assert.match(await p.locator('#brandRows tr').textContent(),/Histórico · vigencia no verificada/);
+ await p.fill('#brandSearch','');
+ await p.selectOption('#brandStatus','available');
+ assert.equal(await p.locator('#brandRows tr').count(),catalogBrandTotal);
+ await p.close();
+});
 await test('Cobertura 3CV: familias auditadas sin equivalencia automática',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const issues=[];p.on('pageerror',e=>issues.push(e.message));
