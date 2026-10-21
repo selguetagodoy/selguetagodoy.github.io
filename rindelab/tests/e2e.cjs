@@ -503,7 +503,7 @@ await test('Ventana de cinco columnas permite scroll, quitar uno y agregar otro'
  await page.click('#compareOpen');
  assert(await page.locator('#compareDialog').evaluate(e=>e.open));
  assert.equal(await page.locator('.comparison-table thead th').count(),6);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),14);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),15);
  assert.equal(await page.locator('.compare-model-cell').count(),5);
  const horizontal=await page.locator('.compare-scroller').evaluate(e=>({width:e.scrollWidth,visible:e.clientWidth,start:e.scrollLeft}));
  if(horizontal.width>horizontal.visible+2){
@@ -661,11 +661,12 @@ await test('Tasación y permiso seleccionados aparecen en comparación de dos ve
  await page.locator('.vehicle-card button[data-compare]').nth(1).click();
  await page.click('#compareOpen');
  const data=await page.locator('#compareContent').textContent();
+ assert.match(data,/Valor de mercado usado \(año elegido\)/);
  assert.match(data,/Tasación fiscal SII 2026/);
  assert.match(data,/Permiso de circulación 2026/);
  assert(data.includes('Precio de lista nuevo (sin bonos)'));
  assert.match(data,/27\.990\.000/);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),14);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),15);
  assert.match(data,/22.354.806|23.139.460|21.570.147|18.775.083|20.189.698/);
  await page.locator('#compareClose').click();
  await page.click('#compareClear');
