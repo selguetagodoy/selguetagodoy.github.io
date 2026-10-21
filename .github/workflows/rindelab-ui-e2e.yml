@@ -68,7 +68,6 @@ jobs:
         run: |
           node scripts/reconcile-commercial-names.cjs --check
           node scripts/report-network-reconciliation.cjs --check
-          node rindelab/tests/more-networks.cjs
 
       - name: Verificar ampliación de concesionarias y licencias fotográficas
         run: |
@@ -158,6 +157,9 @@ jobs:
 
       - name: Verify nationwide commercial catalog and five-model comparison
         run: node rindelab/tests/market-stages.cjs
+
+      - name: Verify four-network reconciled catalog, licensing and responsive behavior
+        run: node rindelab/tests/more-networks.cjs
 
       - name: Verify RINDELAB V2 design and licensed photographs
         run: |
