@@ -1877,6 +1877,24 @@ await test('Tercera revisión 3CV: 31 retirados sin falsos positivos en variante
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Corolla Cross no equivale a Corolla Sport HB');
  await p.close();
 });
+await test('Directorio de modelos descontinuados: 31 casos, filtros y ancho móvil',async()=>{
+ const p=await browser.newPage({viewport:{width:390,height:844}});
+ await p.goto(base+'descontinuados.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('31 modelos'),{timeout:30000});
+ assert.equal(await p.locator('#modelRows tr').count(),31);
+ await p.fill('#searchModel','Chevrolet Spark');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
+ assert.match(await p.locator('#modelRows').textContent(),/Spark antiguo/);
+ await p.fill('#searchModel','');
+ await p.selectOption('#statusFilter','previous-generation-cl');
+ assert.equal(await p.locator('#modelRows tr').count(),2);
+ await p.selectOption('#statusFilter','discontinued-cl');
+ assert.equal(await p.locator('#modelRows tr').count(),29);
+ assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),29);
+ const dimensions=await p.evaluate(()=>({w:window.innerWidth,doc:document.documentElement.scrollWidth}));
+ assert(dimensions.doc<=dimensions.w+3,'El directorio no debe desbordar la pantalla '+JSON.stringify(dimensions));
+ await p.close();
+});
 await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
