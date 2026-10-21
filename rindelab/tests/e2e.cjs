@@ -1805,7 +1805,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  assert(archive.every(x=>x.brand==='Suzuki'&&/^https:\/\//.test(x.statusSource)));
  assert(prices.filter(x=>x.brand==='Suzuki'&&x.family==='Jimny').every(x=>x.commercialStatus!=='discontinued-cl'));
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(lifecycle.models.length,8);
+ assert.equal(lifecycle.models.length,31);
  assert.equal(lifecycle.models.find(x=>x.model==='Jimny 5 puertas').match,'variant-only-manual');
  const quote=await browser.newPage({viewport:{width:390,height:844}});
  await quote.goto(base+'cotizador.html',{waitUntil:'networkidle'});
@@ -1828,7 +1828,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
 });
 await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por modelo, Golf no afectado',async()=>{
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- const added=lifecycle.models.filter(x=>['Ford','Chevrolet'].includes(x.brand));
+ const added=lifecycle.models.filter(x=>['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze'].includes(x.brand+' '+x.model));
  assert.equal(added.length,4);
  assert.deepEqual(added.map(x=>x.brand+' '+x.model).sort(),['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze'].sort());
  assert(added.every(x=>x.match==='whole-family'&&x.status==='discontinued-cl'&&/^https:\/\//.test(x.sourceUrl)));
@@ -1860,7 +1860,7 @@ await test('Tercera revisión 3CV: 31 retirados sin falsos positivos en variante
   await p.fill('#query',name);await p.click('#searchButton');
   assert((await p.locator('.vehicle-lifecycle').count())>0,name+' debe exhibir condición histórica');
  }
- await p.fill('#query','Jeep Cherokee');await p.click('#searchButton');
+ await p.fill('#query','Cherokee Longitude');await p.click('#searchButton');
  assert((await p.locator('.vehicle-lifecycle').count())>0);
  assert.match(await p.locator('.vehicle-lifecycle').first().textContent(),/Generación anterior retirada/);
  await p.fill('#query','Jeep Grand Cherokee');await p.click('#searchButton');
