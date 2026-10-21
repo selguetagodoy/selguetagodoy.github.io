@@ -45,6 +45,7 @@ $('usedGrid').addEventListener('click',e=>{
  const b=e.target.closest('[data-used-sii]');if(!b)return;
  const p=filtered[Number(b.dataset.usedSii)];if(!p)return;
  const x=display(p);
+ window.RindelabUsed?.selectYear?.(x.brand,x.model,p.year);
  window.RindelabSII?.openCommercial?.(x.brand,x.model);
 });
 $('usedMore').addEventListener('click',()=>{count+=18;render()});
