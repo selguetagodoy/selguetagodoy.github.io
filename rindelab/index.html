@@ -30,7 +30,7 @@
 <script src="./v2-premium.js?v=20261018-rc1" defer></script>
 <script src="./v2-claridad.js?v=20261018-v1" defer></script>
 <script src="./v2-polish.js?v=20261018-v1" defer></script>
-<script src="./v2-photos.js?v=20261021-local200" defer></script>
+<script src="./v2-photos.js?v=20261021-local205" defer></script>
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 <style>
 .rinde-explore{margin:1.1rem 0;padding:1rem 1.25rem;border:1px solid #d5dde7;border-radius:12px;background:#f6f9fc;color:#162d4b}
@@ -117,7 +117,7 @@
     <button type="button" class="button secondary" id="resetButton">Limpiar</button>
    </div>
   </form>
-  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Modelos con precio comercial registrado</option><option value="commercial">Catálogo de precios comerciales completo</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">El precio es una referencia publicada por marca o concesionaria; no acredita que la versión homologada siga a la venta.</small></div>
+  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Modelos con información comercial u homologación</option><option value="commercial">Catálogo comercial completo (con y sin precio)</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Incluye modelos publicados por concesionarias aunque no tengan precio de lista o ficha 3CV; los importes no certifican vigencia ni equivalencia exacta de versión.</small></div>
  </section>
  <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor gasto en energía (WLTP)</button><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
@@ -156,7 +156,7 @@
    <div class="market-head"><div><h3 id="commercialTitle">Catálogo comercial independiente</h3><p id="commercialResultCount" role="status"></p></div>
     <div class="field"><label for="commercialSort">Ordenar precios publicados</label><select id="commercialSort"><option value="name">Marca y familia</option><option value="low">Precio menor a mayor</option><option value="high">Precio mayor a menor</option></select></div>
    </div>
-   <p class="market-note">Estas referencias comerciales no prueban disponibilidad actual ni identifican una versión homologada. Si la fuente no informa tecnología, se señala expresamente; no se calcula gasto energético sin ficha oficial enlazada.</p>
+   <p class="market-note">Publicaciones comerciales de Chile. Se distingue entre precio de lista documentado, otras referencias y modelos sin precio verificable. El modelo anunciado no acredita stock vigente ni correspondencia con una versión 3CV.</p>
    <div id="commercialResultList" class="market-grid"></div>
    <div class="load-more"><button type="button" id="commercialMore" class="button secondary" hidden>Mostrar 12 modelos comerciales más</button></div>
   </section>
@@ -324,9 +324,9 @@
 <script src="./sii/catalog-identity.js?v=20261021-normalized1" defer></script>
  <script src="./sii/prices.js?v=20261021-normalized1" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261021-etapas234" defer></script>
+<script src="./v6.js?v=20261021-dealer-expansion" defer></script>
 <link rel="stylesheet" href="./market.css?v=20261021-etapas234">
-<script src="./market-catalog.js?v=20261021-etapas234" defer></script>
+<script src="./market-catalog.js?v=20261021-dealer-expansion" defer></script>
 <script>
 /* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
 (function(){
