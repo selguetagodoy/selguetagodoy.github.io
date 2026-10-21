@@ -43,6 +43,7 @@ async function show(row,family){
  '<div id="siiCommercial" class="sii-commercial"><small>Precio comercial nuevo</small><p>Buscando precios oficiales documentados…</p></div>'+
  '<div class="sii-links"><a href="'+siiUrl+'" target="_blank" rel="noopener noreferrer">Consulta oficial SII ↗</a><a href="'+siiFile+'" target="_blank" rel="noopener noreferrer">Planilla SII 2026 ↗</a></div>';
  detail.append(section);
+ window.RindelabUsed?.mount(section,row[0],family);
  const button=section.querySelector('#siiShowLookup');
  button.addEventListener('click',()=>openLookup(section,row,family));
  section.querySelector('#siiClear').addEventListener('click',()=>{
@@ -94,6 +95,7 @@ function openCommercial(brand,family,technology=''){
   '<div class="sii-links"><a href="'+siiUrl+'" target="_blank" rel="noopener noreferrer">Consulta oficial SII ↗</a>'+
   '<a href="'+siiFile+'" target="_blank" rel="noopener noreferrer">Planilla SII 2026 ↗</a></div></section>';
  const section=dialog.querySelector('.sii-section');
+ window.RindelabUsed?.mount(section,brand,family);
  dialog.querySelector('#siiCommercialClose').addEventListener('click',()=>dialog.close());
  dialog.querySelector('#siiCommercialSearch').addEventListener('click',()=>openLookup(section,row,family));
  dialog.querySelector('#siiClear').addEventListener('click',()=>{
@@ -173,6 +175,7 @@ function decorateComparison(vehicles){
  const tuples=vehicles.map(x=>x.row||x);
  const commercial=window.__rindelabCommercial||[];
  const rowDefs=[
+  ['Valor de mercado usado (año elegido)',r=>{const p=window.RindelabUsed?.selected(r[0],window.RindelabSII.family?.(r)||String(r[1]).split(' ')[0]);return p?window.RindelabUsed.marketLabel(p):'Sin año/precio de usado seleccionado'}],
   ['Tasación fiscal SII 2026',r=>{const o=getStored(r);return o?clp(o.entry[5]):'Seleccionar versión SII en ficha'}],
   ['Permiso de circulación 2026',r=>{const o=getStored(r);return o?clp(o.entry[6]):'Seleccionar versión SII en ficha'}],
   ['Precio comercial nuevo (desde)',r=>{const m=commercialFor(r,window.RindelabSII.family?.(r)||String(r[1]).split(' ')[0],commercial);return m?clp(m.price)+' · por modelo':'Sin precio publicado verificado'}]
