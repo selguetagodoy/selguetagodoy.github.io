@@ -53,7 +53,7 @@ function matches(r,item){
  if(item.match==='variant-only-manual')return same&&/\b(?:5P|5D|5 PUERTAS)\b/.test(name);
  return false;
 }
-function evaluate({manifest,files,commercial,lifecycle}){
+function evaluate({manifest,files,commercial,lifecycle,marketExclusions=[]}){
  if(!manifest?.files||!Array.isArray(files)||!Array.isArray(commercial)||!Array.isArray(lifecycle?.models))throw Error('Fuentes incompletas');
  const input=files.flat();
  if(input.length!==manifest.count)throw Error('El número de filas 3CV cambió');
@@ -67,6 +67,7 @@ function evaluate({manifest,files,commercial,lifecycle}){
   if(!pricesByBrand.has(b))pricesByBrand.set(b,new Set());
   pricesByBrand.get(b).add(norm(p.family));
  }
+ const excludedNoSale=new Map(marketExclusions.map(e=>[canonical(e.brand)+'|'+norm(e.family),e]));
  const groups=new Map();let taggedCodes=0;
  for(const r of rows){
   const b=canonical(r[0]),name=clean(r[0],r[1]),prices=[...(pricesByBrand.get(b)||[])];
@@ -85,7 +86,9 @@ function evaluate({manifest,files,commercial,lifecycle}){
   const priceFamilies=[...(pricesByBrand.get(g.brand)||[])];
   const priced=priceFamilies.some(f=>f===g.family||f.startsWith(g.family+' ')||g.family.startsWith(f+' '));
   let status,score=0;
-  if(g.tagged===g.count)status='clasificado_con_fuente';
+  const noSale=excludedNoSale.get(g.brand+'|'+g.family);
+  if(noSale)status='homologado_sin_venta_comercial';
+  else if(g.tagged===g.count)status='clasificado_con_fuente';
   else if(priced)status='familia_con_precio_registrado';
   else if(g.family.length<2||/^\d+$/.test(g.family))status='familia_por_normalizar';
   else if(g.last<='2020-12-31'){status='candidato_antiguo_prioridad_alta';score=100}
@@ -94,7 +97,8 @@ function evaluate({manifest,files,commercial,lifecycle}){
   if(g.tagged>0&&g.tagged<g.count)score+=25;
   score+=Math.min(25,g.codes.size);
   candidates.push({brand:g.brand,family:g.family,threeCvRecords:g.codes.size,firstHomologation:g.first,lastHomologation:g.last,
-   examples:[...g.examples],status,priorityScore:score,hasPriceReference:priced,alreadyTaggedCodes:g.tagged});
+   examples:[...g.examples],status,priorityScore:score,hasPriceReference:priced,alreadyTaggedCodes:g.tagged,
+   evidenceUrl:noSale?noSale.sourceUrl:null});
  }
  candidates.sort((a,b)=>b.priorityScore-a.priorityScore||b.threeCvRecords-a.threeCvRecords||a.brand.localeCompare(b.brand,'es')||a.family.localeCompare(b.family,'es'));
  const tally={};for(const x of candidates)tally[x.status]=(tally[x.status]||0)+1;
@@ -114,6 +118,7 @@ function asMarkdown(report){
   '- Códigos históricos alcanzados por etiquetas editoriales existentes: '+s.tagged3cvRecords+'. Familias nominales generadas: '+s.families+'.',
   '','## Resultado por estado',''];
  for(const [state,n] of Object.entries(s.counts))lines.push('- '+state+': **'+n+'** familias.');
+ lines.push('','**Excepciones verificadas:** Los casos homologados sin venta regular en Chile no son descontinuados. Incluyen Borgward BX5 y BX7.');
  lines.push('','## Candidatos con revisión prioritaria','',
   '| Marca | Familia orientativa | Homologaciones | Última homologación | Grupo | Ejemplo |',
   '|---|---|---:|---|---|---|');
@@ -132,7 +137,8 @@ function main(){
  const manifest=read('vehiculos/data/manifest.json');
  const result=evaluate({manifest,files:manifest.files.map(p=>read('vehiculos/'+p)),
   commercial:read('rindelab/sii/commercial-2026.json'),
-  lifecycle:read('rindelab/sii/model-lifecycle-2026.json')});
+  lifecycle:read('rindelab/sii/model-lifecycle-2026.json'),
+  marketExclusions:read('rindelab/sii/lifecycle-exceptions-2026.json').cases});
  const args=process.argv.slice(2),json=(args.find(x=>x.startsWith('--json='))||'--json=discontinued-triage.json').slice(7),
  md=(args.find(x=>x.startsWith('--md='))||'--md=discontinued-triage.md').slice(5);
  fs.writeFileSync(json,JSON.stringify(result,null,2)+'\n');

@@ -32,4 +32,9 @@ assert.equal(report.candidates.find(x=>x.brand==='KIA'&&x.family==='K3 CROSS').s
 assert.equal(report.candidates.find(x=>x.brand==='CHEVROLET'&&x.family==='SPARK').status,'clasificado_con_fuente');
 assert.match(asMarkdown(report),/NO una nómina acreditada/);
 assert(!report.candidates.some(x=>x.status==='discontinued-cl'));
+const exception=evaluate({manifest:{count:1,excluded:0,published:'2026-05-08',files:['test']},
+ files:[[['Borgward','BX7 2.0',null,null,null,null,null,null,'2017-01-01','BX7-1']]],
+ commercial:[],lifecycle:{models:[]},marketExclusions:[{brand:'Borgward',family:'BX7',sourceUrl:'https://noticias.autocosmos.cl/2022/04/13/nuevamente-es-el-fin-del-camino-para-borgward'}]});
+assert.equal(exception.candidates[0].status,'homologado_sin_venta_comercial');
+assert.equal(exception.candidates[0].evidenceUrl.startsWith('https://'),true);
 console.log('OK: alias, versiones vigentes, corte temporal, candidatos sin baja automática');
