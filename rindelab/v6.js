@@ -21,7 +21,7 @@ function archivedModel(row){
  const brand=normalize(row[F.BRAND]),name=normalize(row[F.MODEL]);
  return discontinuedModels.find(item=>{
   if(normalize(item.brand)!==brand)return false;
-  const target=normalize(item.model);
+  const target=normalize(item.familyPrefix||item.model);
   if(item.match==='whole-family')return name===target||name.startsWith(target+' ');
   // Solo Jimny 5P, sin confundir Jimny 3P; se exige mención inequívoca de puertas.
   return item.match==='variant-only-manual'&&brand==='suzuki'&&name.startsWith('jimny ')&&/\b(5p|5d|5 puertas)\b/.test(name);
@@ -787,7 +787,7 @@ async function init(){
   const additional=window.RindelabOfficialAPI.load(officialFiles,legacy);
   for(const row of additional)officialCodes.add(row[F.CODE]);
   all=legacy.concat(additional).map(cleanRow);
-  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261020-modelos8');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
+  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261020-modelos31');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
   $('statsOpen').disabled=false;
