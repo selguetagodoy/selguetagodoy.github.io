@@ -2632,7 +2632,9 @@
       "highClp": 8039083,
       "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/suzuki/kizashi/2015",
       "observedAt": "2026-10-21",
-      "scope": "approximate-published-range"
+      "scope": "approximate-published-range",
+      "qualityStatus": "held-for-manual-review",
+      "qualityNote": "Proveedor publica un mínimo y un máximo idénticos y no permite corroborar tamaño muestral; retener el dato hasta verificarlo."
     },
     {
       "source": "Autofact",
