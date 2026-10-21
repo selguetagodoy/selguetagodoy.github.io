@@ -43,7 +43,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  assert.match(await page.locator('#siiCommercialDialog #siiCurrentValue').textContent(),/Tasación fiscal SII 2026/);
  assert.match(await page.locator('#siiCommercialDialog #siiCurrentValue').textContent(),/Permiso circulación 2026/);
  // Valor comercial del usado y tasación fiscal son fuentes distintas.
- await page.waitForFunction(()=>window.RindelabUsed?.count()>=26,{timeout:25000});
+ await page.waitForFunction(()=>window.RindelabUsed?.count()>=160,{timeout:25000});
  await page.selectOption('#siiCommercialDialog .sii-used-year','2023');
  assert.match(await page.locator('#siiCommercialDialog .sii-used-market').textContent(),/17\.990\.000/);
  assert.match(await page.locator('#siiCommercialDialog .sii-used-market').textContent(),/7 avisos/);
