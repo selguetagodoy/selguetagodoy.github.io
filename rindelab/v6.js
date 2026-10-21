@@ -388,7 +388,7 @@ function render(){
   const flaggedEnergy=reviewedEnergyCodes.has(row[F.CODE]);
   const flaggedNote=flaggedEnergy?'<p class="energy-quality-note" role="note">Dato atípico pendiente de revisión documental: 10,6 km/kWh en NEDC. No equiparar con valores WLTP ni considerarlo el vehículo más eficiente del mercado.</p>':'';
   const status=archivedModel(row);
-  const lifecycleHTML=status?'<p class="vehicle-lifecycle">Modelo descontinuado en la oferta chilena · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
+  const lifecycleHTML=status?'<p class="vehicle-lifecycle">'+(status.status==='previous-generation-cl'?'Generación anterior retirada de la oferta chilena':'Modelo descontinuado en la oferta chilena')+' · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
   const offer=window.RindelabCommercial?.minimum(row,family(row));
   const offerHTML=offer?'<div class="rinde-commercial"><small>Precio comercial desde (familia, no versión homologada)</small> <strong>'+safe(money(offer.priceListClp))+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
