@@ -1,0 +1,16 @@
+/* RINDELAB · usado observado versus tasación fiscal. */
+.sii-used-market{border-bottom:1px solid #d9e5ec;padding:8px 0 18px;margin:0 0 20px}
+.sii-used-market .sii-section-head{margin-bottom:8px}
+.sii-used-market .sii-lookup{margin-top:10px}
+.sii-used-market .sii-actions{margin:10px 0 12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.sii-used-market .sii-used-year{width:160px;max-width:100%;padding:10px;border:1px solid #a7c0cf;border-radius:7px;background:white;color:#17384d;margin-left:8px}
+.sii-used-market .sii-used-records{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}
+.sii-used-market .sii-used-records .sii-item{min-width:0;display:flex;gap:10px;flex-direction:column;align-items:stretch;padding:12px;border:1px solid #d5e4ed;border-radius:9px}
+.sii-used-market .sii-used-records .sii-item div{min-width:0;overflow-wrap:anywhere}
+.sii-used-market .sii-used-records .sii-item .sii-item-values{align-items:start}
+.sii-used-market .sii-used-market-price{font-size:1.16rem;display:block;color:#0e5270;line-height:1.4}
+.sii-used-market .sii-used-records .sii-item span{font-size:.8rem;line-height:1.5;color:#466278;display:block}
+.sii-used-market .sii-used-records .sii-item p{margin:6px 0}
+.sii-used-market .sii-used-records .sii-item a{text-decoration:underline;overflow-wrap:anywhere}
+.sii-used-market .sii-links{font-size:.81rem;margin-top:14px}
+@media(max-width:500px){.sii-used-market .sii-used-year{width:100%;margin:7px 0 0}.sii-used-market .sii-actions label{width:100%}}
