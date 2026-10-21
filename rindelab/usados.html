@@ -17,7 +17,7 @@
 .used-hero{padding:1.4rem 0 1rem}
 .used-subtitle{max-width:820px;color:#405f70}
 .used-filter-panel{padding:1rem 1.2rem;border:1px solid #d3e4ec;border-radius:12px;background:#f7fafc}
-.used-filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;align-items:end}
+.used-filters{display:grid;grid-template-columns:1.2fr 1.8fr 1fr 1fr;gap:12px;align-items:end}
 .used-filters label{display:grid;gap:6px;font-size:.87rem;font-weight:600}
 .used-filters input,.used-filters select{padding:11px;min-height:44px;width:100%;font:inherit;border:1px solid #a8bdca;border-radius:7px;background:white;color:#14354c}
 .used-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:1rem}
@@ -31,12 +31,12 @@
 .used-source-note{font-size:.81rem;color:#587084}
 .used-summary{margin-top:1rem;font-size:.93rem}
 .used-footnotes{margin:1.5rem 0 0;border-top:1px solid #d6e4ea;padding-top:1rem;font-size:.83rem}
-@media(max-width:760px){.used-grid{grid-template-columns:1fr}.used-filters{grid-template-columns:1fr 1fr}.used-filters label:first-child{grid-column:1/-1}}
+.used-status{display:inline-block;padding:5px 9px;border:1px solid #aec0cf;border-radius:6px;font-size:.82rem;font-weight:650;background:#f3f7fb}.used-price-year{font-size:.83rem;margin:.85rem 0 .35rem}.used-unavailable{font-weight:650;color:#4b5965;line-height:1.5;padding:8px 0}.used-history-card{display:flex;flex-direction:column;align-items:flex-start}.used-history-card .used-result-links{margin-top:auto}.used-history-card .used-result-main{font-size:1.14rem}@media(max-width:760px){.used-grid{grid-template-columns:1fr}.used-filters{grid-template-columns:1fr 1fr}.used-filters label:first-child{grid-column:1/-1}}
 @media(max-width:390px){.used-filters{grid-template-columns:1fr}.used-filters label:first-child{grid-column:auto}}
 </style>
 <script src="./sii/sii.js?v=20261021-used-market" defer></script>
-<script src="./used-market.js?v=20261021-used-values1" defer></script>
-<script src="./usados.js?v=20261021-used-directory1" defer></script>
+<script src="./used-market.js?v=20261021-expanded106" defer></script>
+<script src="./usados.js?v=20261021-legacy106" defer></script>
 </head><body>
 <main class="used-page">
 <nav class="used-topnav" aria-label="Navegación RINDELAB"><a href="./index.html">RINDE<span>LAB</span></a><a href="./index.html#buscador">Buscar fichas 3CV</a><a href="./cotizador.html">Precios de autos nuevos</a></nav>
@@ -46,12 +46,12 @@
 <p class="used-source-note">Los precios de publicación no son transacciones cerradas. El mercado cambia, y la versión, estado, kilometraje y región influyen en el valor. Solo mostramos cifras con fuente y fecha documentadas.</p>
 </section>
 <section class="used-filter-panel" aria-label="Filtrar autos usados">
-<div class="used-filters"><label>Buscar marca o modelo<input id="usedQuery" type="search" placeholder="Ej. Nissan March, Ford Focus" autocomplete="off"></label><label>Marca<select id="usedBrand"><option value="">Todas las marcas</option></select></label><label>Año de fabricación<select id="usedYear"><option value="">Todos los años</option></select></label></div>
+<div class="used-filters"><label>Tipo de consulta<select id="usedScope"><option value="discontinued">Modelos y generaciones descontinuadas</option><option value="priced">Todas las referencias con valor comercial</option><option value="missing">Descontinuados sin precio respaldado</option></select></label><label>Buscar marca o modelo<input id="usedQuery" type="search" placeholder="Ej. Nissan March, Ford Focus" autocomplete="off"></label><label>Marca<select id="usedBrand"><option value="">Todas las marcas</option></select></label><label>Año de fabricación<select id="usedYear"><option value="">Todos los años</option></select></label></div><p class="used-source-note">Los estados de retiro provienen del registro histórico de RINDELAB; no prueban que no existan unidades residuales. No se extrapolan precios entre generaciones ni años.</p>
 </section>
 <div class="used-summary" id="usedCount" role="status" aria-live="polite">Cargando referencias verificadas…</div>
 <section class="used-grid" id="usedGrid" aria-label="Valores observados por modelo y año"></section>
 <button type="button" id="usedMore" class="button secondary" hidden style="margin-top:1rem">Mostrar más referencias</button>
-<p id="usedEmpty" hidden>Sin referencia comercial documentada para esos filtros. Prueba otro año o consulta el mercado en <a href="https://www.autoexplora.cl/precios" target="_blank" rel="noopener noreferrer">AutoExplora</a> y <a href="https://www.autofact.cl/valor-comercial-autos.href" target="_blank" rel="noopener noreferrer">Autofact</a>.</p>
+<p id="usedEmpty" hidden>Sin referencia comercial documentada para esos filtros. Prueba otro año o consulta el mercado en <a href="https://www.autoexplora.cl/precios" target="_blank" rel="noopener noreferrer">AutoExplora</a> y <a href="https://www.autofact.cl/valor-comercial-autos" target="_blank" rel="noopener noreferrer">Autofact</a>.</p>
 <section class="used-footnotes"><p><strong>Cómo leer los datos.</strong> AutoExplora informa mediana y rango p10–p90 sobre al menos cinco publicaciones. Autofact informa un rango comercial aproximado y no publica el tamaño de muestra en estas consultas. Ninguno representa una cotización de compra, valor asegurado ni una tasación fiscal. No interpolamos precios entre años.</p>
 <p>Fuente tributaria: <a href="https://www.sii.cl/servicios_online/1049-3526.html" target="_blank" rel="noopener noreferrer">Servicio de Impuestos Internos</a>. La base interna es el corte de tasaciones SII 2026; el año de fabricación y versión exacta deben seleccionarse manualmente.</p></section>
 </main>

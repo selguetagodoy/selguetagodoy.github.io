@@ -6,6 +6,7 @@ on:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
       - "scripts/audit-price-sources.cjs"
+      - "scripts/audit-used-market.cjs"
       - "scripts/rindelab-price-queue.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
@@ -20,6 +21,7 @@ on:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
       - "scripts/audit-price-sources.cjs"
+      - "scripts/audit-used-market.cjs"
       - "scripts/rindelab-price-queue.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
@@ -61,8 +63,20 @@ jobs:
             node --check "$file"
           done
 
+      - name: Validar mercado de usados, fuentes y cortes históricos
+        run: |
+          node --check rindelab/usados.js
+          node --check scripts/watch-used-market.cjs
+          node scripts/expand-used-market.cjs --check
+          node scripts/used-market-qa.cjs --check
+
       - name: Validar identidad comercial, vigencia y fotografías
         run: node rindelab/tests/catalog-identity.cjs
+
+      - name: Auditar 106 referencias de usados y cobertura de modelos retirados
+        run: |
+          node rindelab/tests/used-market-data.cjs
+          node scripts/audit-used-market.cjs --check
 
       - name: Verificar conciliación conservadora y 224 fotografías locales
         run: |

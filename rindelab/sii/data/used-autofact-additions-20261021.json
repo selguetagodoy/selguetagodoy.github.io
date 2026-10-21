@@ -1,0 +1,973 @@
+{
+  "schemaVersion": 1,
+  "cutoff": "2026-10-21",
+  "methodology": "Autofact approximate min/max ranges, not transactions, not medians, not equivalent to SII, not necessarily identical trim.",
+  "records": [
+    {
+      "source": "Autofact",
+      "brandSlug": "alfa-romeo",
+      "modelSlug": "giulietta",
+      "year": 2015,
+      "lowClp": 7897547,
+      "highClp": 8849025,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/alfa-romeo/giulietta/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "alfa-romeo",
+      "modelSlug": "giulietta",
+      "year": 2017,
+      "lowClp": 11016400,
+      "highClp": 13392633,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/alfa-romeo/giulietta/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "alfa-romeo",
+      "modelSlug": "mito",
+      "year": 2016,
+      "lowClp": 9826210,
+      "highClp": 11871900,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/alfa-romeo/mito/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "audi",
+      "modelSlug": "r8",
+      "year": 2017,
+      "lowClp": 103834800,
+      "highClp": 108164750,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/audi/r8/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "audi",
+      "modelSlug": "tt",
+      "year": 2015,
+      "lowClp": 20645400,
+      "highClp": 26976400,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/audi/tt/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "bmw",
+      "modelSlug": "i3",
+      "year": 2017,
+      "lowClp": 20215675,
+      "highClp": 23914675,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/bmw/i3/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "bmw",
+      "modelSlug": "i3",
+      "year": 2019,
+      "lowClp": 21000000,
+      "highClp": 26500000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/bmw/i3/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "bmw",
+      "modelSlug": "i8",
+      "year": 2017,
+      "lowClp": 101453900,
+      "highClp": 105684500,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/bmw/i8/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "changan",
+      "modelSlug": "cx70",
+      "year": 2019,
+      "lowClp": 6707003,
+      "highClp": 9193071,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/changan/cx70/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chevrolet",
+      "modelSlug": "camaro",
+      "year": 2015,
+      "lowClp": 24825520,
+      "highClp": 30241540,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chevrolet/camaro/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chevrolet",
+      "modelSlug": "cruze",
+      "year": 2017,
+      "lowClp": 7408913,
+      "highClp": 8505158,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chevrolet/cruze/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chevrolet",
+      "modelSlug": "cruze",
+      "year": 2019,
+      "lowClp": 8539045,
+      "highClp": 11163498,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chevrolet/cruze/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chevrolet",
+      "modelSlug": "orlando",
+      "year": 2014,
+      "lowClp": 5042178,
+      "highClp": 7122088,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chevrolet/orlando/2014",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chevrolet",
+      "modelSlug": "sail",
+      "year": 2018,
+      "lowClp": 4160000,
+      "highClp": 7500000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chevrolet/sail/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chevrolet",
+      "modelSlug": "sonic",
+      "year": 2017,
+      "lowClp": 5706645,
+      "highClp": 7269797,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chevrolet/sonic/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chrysler",
+      "modelSlug": "300c",
+      "year": 2012,
+      "lowClp": 12722800,
+      "highClp": 14790100,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chrysler/300c/2012",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chrysler",
+      "modelSlug": "300c",
+      "year": 2015,
+      "lowClp": 15829800,
+      "highClp": 20571800,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chrysler/300c/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "citroen",
+      "modelSlug": "c4-cactus",
+      "year": 2017,
+      "lowClp": 7554164,
+      "highClp": 8912827,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/citroen/c4-cactus/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "citroen",
+      "modelSlug": "c4-cactus",
+      "year": 2019,
+      "lowClp": 8779389,
+      "highClp": 10626768,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/citroen/c4-cactus/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "dodge",
+      "modelSlug": "journey",
+      "year": 2016,
+      "lowClp": 7715000,
+      "highClp": 9122500,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/dodge/journey/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "fiat",
+      "modelSlug": "cronos",
+      "year": 2022,
+      "lowClp": 6258390,
+      "highClp": 9913325,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/fiat/cronos/2022",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "fiat",
+      "modelSlug": "punto",
+      "year": 2013,
+      "lowClp": 4901295,
+      "highClp": 6581655,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/fiat/punto/2013",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "ford",
+      "modelSlug": "ecosport",
+      "year": 2017,
+      "lowClp": 5998000,
+      "highClp": 8517580,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/ford/ecosport/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "ford",
+      "modelSlug": "fiesta",
+      "year": 2015,
+      "lowClp": 4281090,
+      "highClp": 5997773,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/ford/fiesta/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "ford",
+      "modelSlug": "fiesta",
+      "year": 2017,
+      "lowClp": 6066896,
+      "highClp": 7698952,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/ford/fiesta/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "ford",
+      "modelSlug": "fiesta",
+      "year": 2019,
+      "lowClp": 6280000,
+      "highClp": 8651429,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/ford/fiesta/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "ford",
+      "modelSlug": "fusion",
+      "year": 2018,
+      "lowClp": 9245000,
+      "highClp": 14325000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/ford/fusion/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "honda",
+      "modelSlug": "fit",
+      "year": 2017,
+      "lowClp": 8607820,
+      "highClp": 10759800,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/honda/fit/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "hyundai",
+      "modelSlug": "accent",
+      "year": 2017,
+      "lowClp": 6819344,
+      "highClp": 8932034,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/hyundai/accent/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "hyundai",
+      "modelSlug": "ioniq",
+      "year": 2018,
+      "lowClp": 9616780,
+      "highClp": 13885600,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/hyundai/ioniq/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "hyundai",
+      "modelSlug": "veloster",
+      "year": 2017,
+      "lowClp": 8800000,
+      "highClp": 10000000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/hyundai/veloster/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "hyundai",
+      "modelSlug": "veloster",
+      "year": 2019,
+      "lowClp": 12838517,
+      "highClp": 13580286,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/hyundai/veloster/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "infiniti",
+      "modelSlug": "q50",
+      "year": 2017,
+      "lowClp": 16201950,
+      "highClp": 19593575,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/infiniti/q50/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "infiniti",
+      "modelSlug": "q70",
+      "year": 2016,
+      "lowClp": 17178600,
+      "highClp": 20971900,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/infiniti/q70/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "infiniti",
+      "modelSlug": "qx30",
+      "year": 2017,
+      "lowClp": 13030300,
+      "highClp": 18324100,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/infiniti/qx30/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "infiniti",
+      "modelSlug": "qx50",
+      "year": 2019,
+      "lowClp": 15594940,
+      "highClp": 16461300,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/infiniti/qx50/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "infiniti",
+      "modelSlug": "qx60",
+      "year": 2017,
+      "lowClp": 18566350,
+      "highClp": 22486900,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/infiniti/qx60/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "infiniti",
+      "modelSlug": "qx70",
+      "year": 2016,
+      "lowClp": 14900000,
+      "highClp": 15000000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/infiniti/qx70/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "infiniti",
+      "modelSlug": "qx80",
+      "year": 2016,
+      "lowClp": 22780700,
+      "highClp": 29118500,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/infiniti/qx80/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "jaguar",
+      "modelSlug": "f-type",
+      "year": 2018,
+      "lowClp": 72209767,
+      "highClp": 77014117,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/jaguar/f-type/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "kia",
+      "modelSlug": "cerato",
+      "year": 2017,
+      "lowClp": 7505000,
+      "highClp": 11080000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/kia/cerato/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "kia",
+      "modelSlug": "cerato",
+      "year": 2020,
+      "lowClp": 10650000,
+      "highClp": 11995000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/kia/cerato/2020",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "kia",
+      "modelSlug": "optima",
+      "year": 2015,
+      "lowClp": 9079767,
+      "highClp": 10195280,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/kia/optima/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "kia",
+      "modelSlug": "optima",
+      "year": 2018,
+      "lowClp": 12352933,
+      "highClp": 12803800,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/kia/optima/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "kia",
+      "modelSlug": "soul",
+      "year": 2015,
+      "lowClp": 6636723,
+      "highClp": 7918143,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/kia/soul/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "kia",
+      "modelSlug": "soul",
+      "year": 2019,
+      "lowClp": 9959531,
+      "highClp": 10860812,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/kia/soul/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "kia",
+      "modelSlug": "stinger",
+      "year": 2019,
+      "lowClp": 24832400,
+      "highClp": 33942700,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/kia/stinger/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "mazda",
+      "modelSlug": "cx-9",
+      "year": 2021,
+      "lowClp": 20623688,
+      "highClp": 24843413,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/mazda/cx-9/2021",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "mitsubishi",
+      "modelSlug": "lancer",
+      "year": 2013,
+      "lowClp": 5478721,
+      "highClp": 6871117,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/mitsubishi/lancer/2013",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "mitsubishi",
+      "modelSlug": "lancer",
+      "year": 2015,
+      "lowClp": 6153945,
+      "highClp": 7809898,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/mitsubishi/lancer/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "juke",
+      "year": 2015,
+      "lowClp": 8454885,
+      "highClp": 8627618,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/juke/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "march",
+      "year": 2017,
+      "lowClp": 5222973,
+      "highClp": 6603108,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/march/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "march",
+      "year": 2020,
+      "lowClp": 7435433,
+      "highClp": 8854383,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/march/2020",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "note",
+      "year": 2017,
+      "lowClp": 5903645,
+      "highClp": 7452770,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/note/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "tiida",
+      "year": 2012,
+      "lowClp": 3386259,
+      "highClp": 5278964,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/tiida/2012",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "tiida",
+      "year": 2015,
+      "lowClp": 3487560,
+      "highClp": 5412395,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/tiida/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "opel",
+      "modelSlug": "insignia",
+      "year": 2017,
+      "lowClp": 13023283,
+      "highClp": 18847033,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/opel/insignia/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "peugeot",
+      "modelSlug": "508",
+      "year": 2018,
+      "lowClp": 12616900,
+      "highClp": 16020667,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/peugeot/508/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "renault",
+      "modelSlug": "alaskan",
+      "year": 2021,
+      "lowClp": 16785340,
+      "highClp": 22804980,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/renault/alaskan/2021",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "renault",
+      "modelSlug": "clio",
+      "year": 2018,
+      "lowClp": 7667599,
+      "highClp": 9566421,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/renault/clio/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "renault",
+      "modelSlug": "fluence",
+      "year": 2015,
+      "lowClp": 4857750,
+      "highClp": 6988173,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/renault/fluence/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "renault",
+      "modelSlug": "zoe",
+      "year": 2018,
+      "lowClp": 12352700,
+      "highClp": 15821300,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/renault/zoe/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "renault",
+      "modelSlug": "zoe",
+      "year": 2019,
+      "lowClp": 8642870,
+      "highClp": 11593200,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/renault/zoe/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "skoda",
+      "modelSlug": "yeti",
+      "year": 2015,
+      "lowClp": 8411880,
+      "highClp": 11487150,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/skoda/yeti/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "skoda",
+      "modelSlug": "yeti",
+      "year": 2016,
+      "lowClp": 8040230,
+      "highClp": 10271358,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/skoda/yeti/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "subaru",
+      "modelSlug": "legacy",
+      "year": 2017,
+      "lowClp": 11143025,
+      "highClp": 15306900,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/subaru/legacy/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "suzuki",
+      "modelSlug": "baleno",
+      "year": 2019,
+      "lowClp": 6200000,
+      "highClp": 10450000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/suzuki/baleno/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "suzuki",
+      "modelSlug": "baleno",
+      "year": 2021,
+      "lowClp": 7650000,
+      "highClp": 11798000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/suzuki/baleno/2021",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "suzuki",
+      "modelSlug": "grand-vitara",
+      "year": 2017,
+      "lowClp": 8864407,
+      "highClp": 10798034,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/suzuki/grand-vitara/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "suzuki",
+      "modelSlug": "kizashi",
+      "year": 2012,
+      "lowClp": 5711018,
+      "highClp": 7590782,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/suzuki/kizashi/2012",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "suzuki",
+      "modelSlug": "s-presso",
+      "year": 2023,
+      "lowClp": 5322123,
+      "highClp": 8540478,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/suzuki/s-presso/2023",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "toyota",
+      "modelSlug": "aygo",
+      "year": 2018,
+      "lowClp": 4752782,
+      "highClp": 6777912,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/toyota/aygo/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volkswagen",
+      "modelSlug": "beetle",
+      "year": 2016,
+      "lowClp": 11418540,
+      "highClp": 18169500,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volkswagen/beetle/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volkswagen",
+      "modelSlug": "beetle",
+      "year": 2018,
+      "lowClp": 15312900,
+      "highClp": 15864960,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volkswagen/beetle/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volkswagen",
+      "modelSlug": "scirocco",
+      "year": 2016,
+      "lowClp": 11968233,
+      "highClp": 14617367,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volkswagen/scirocco/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volvo",
+      "modelSlug": "c30",
+      "year": 2011,
+      "lowClp": 4534193,
+      "highClp": 7905615,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volvo/c30/2011",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volvo",
+      "modelSlug": "s40",
+      "year": 2011,
+      "lowClp": 5469991,
+      "highClp": 7491444,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volvo/s40/2011",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volvo",
+      "modelSlug": "s80",
+      "year": 2014,
+      "lowClp": 13844675,
+      "highClp": 17372650,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volvo/s80/2014",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volvo",
+      "modelSlug": "v40",
+      "year": 2016,
+      "lowClp": 9833040,
+      "highClp": 12101690,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volvo/v40/2016",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "volvo",
+      "modelSlug": "xc70",
+      "year": 2013,
+      "lowClp": 8626826,
+      "highClp": 10218522,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/volvo/xc70/2013",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    }
+  ],
+  "candidatesWithoutUsableRange": [
+    {
+      "brand": "kia",
+      "model": "rio",
+      "year": 2019,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact KIA RIO 2019"
+    },
+    {
+      "brand": "toyota",
+      "model": "prius-c",
+      "year": 2018,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact TOYOTA PRIUS C 2018"
+    },
+    {
+      "brand": "jaguar",
+      "model": "f-type",
+      "year": 2017,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact JAGUAR F TYPE 2017"
+    },
+    {
+      "brand": "mercedes-benz",
+      "model": "clase-x",
+      "year": 2019,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact MERCEDES BENZ CLASE X 2019"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "i-miev",
+      "year": 2016,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact MITSUBISHI I MIEV 2016"
+    },
+    {
+      "brand": "opel",
+      "model": "meriva",
+      "year": 2011,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact OPEL MERIVA 2011"
+    },
+    {
+      "brand": "opel",
+      "model": "zafira",
+      "year": 2015,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact OPEL ZAFIRA 2015"
+    },
+    {
+      "brand": "toyota",
+      "model": "prius-c",
+      "year": 2020,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact TOYOTA PRIUS C 2020"
+    },
+    {
+      "brand": "mini",
+      "model": "clubman",
+      "year": 2017,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact MINI CLUBMAN 2017"
+    },
+    {
+      "brand": "kia",
+      "model": "rio",
+      "year": 2020,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact KIA RIO 2020"
+    },
+    {
+      "brand": "kia",
+      "model": "rio",
+      "year": 2017,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact KIA RIO 2017"
+    },
+    {
+      "brand": "lexus",
+      "model": "rc",
+      "year": 2017,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact LEXUS RC 2017"
+    },
+    {
+      "brand": "lexus",
+      "model": "gs",
+      "year": 2015,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact LEXUS GS 2015"
+    },
+    {
+      "brand": "mini",
+      "model": "paceman",
+      "year": 2014,
+      "title": "Valores Comerciales de Vehículos y Tasación | Autofact MINI PACEMAN 2014"
+    }
+  ]
+}
