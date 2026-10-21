@@ -2,7 +2,7 @@
 
 **Corte documental: 21 de octubre de 2026.**
 
-Se consolidaron **270 referencias con URL individual**, correspondientes a **91 familias** y **27 marcas**. Hay **268 referencias publicables** y dos en revisión por valores atípicos.
+Se consolidaron **270 referencias con URL individual**, correspondientes a **91 familias** y **27 marcas**. Hay **267 referencias publicables** y tres en revisión por valores atípicos.
 
 AutoExplora aporta medianas de precios pedidos, rangos p10–p90 y muestras documentadas de al menos cinco avisos. Autofact aporta bandas comerciales aproximadas mínimo–máximo sin medianas ni tamaño de muestra equiparable. Son precios de referencia, **no ventas cerradas, tasaciones SII ni precios individuales garantizados**. No se interpola ni extrapola entre años o versiones.
 
@@ -245,7 +245,7 @@ El estado de descontinuación se presenta solo si coincide exactamente la marca 
 | suzuki | grand-vitara | 2018 | Autofact | No publicada | $9.973.791 a $10.890.104 (mín–máx aprox.) | N/D | Descontinuado | Publicado | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/grand-vitara/2018) |
 | suzuki | grand-vitara | 2016 | Autofact | No publicada | $8.481.421 a $10.220.943 (mín–máx aprox.) | N/D | Descontinuado | Publicado | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/grand-vitara/2016) |
 | suzuki | grand-vitara | 2014 | Autofact | No publicada | $7.033.484 a $8.675.012 (mín–máx aprox.) | N/D | Descontinuado | Publicado | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/grand-vitara/2014) |
-| suzuki | kizashi | 2015 | Autofact | No publicada | $8.039.083 a $8.039.083 (mín–máx aprox.) | N/D | Descontinuado | Publicado | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/kizashi/2015) |
+| suzuki | kizashi | 2015 | Autofact | No publicada | $8.039.083 a $8.039.083 (extremos idénticos; no usar como banda) | N/D | Descontinuado | Retenido para revisión | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/kizashi/2015) |
 | suzuki | kizashi | 2014 | Autofact | No publicada | $6.533.253 a $8.317.947 (mín–máx aprox.) | N/D | Descontinuado | Publicado | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/kizashi/2014) |
 | suzuki | s-presso | 2023 | Autofact | No publicada | $5.322.123 a $8.540.478 (mín–máx aprox.) | N/D | Descontinuado | Publicado | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/s-presso/2023) |
 | suzuki | s-presso | 2022 | Autofact | No publicada | $5.766.667 a $7.196.667 (mín–máx aprox.) | N/D | Descontinuado | Publicado | [Ver fuente](https://www.autofact.cl/valor-comercial-autos/suzuki/s-presso/2022) |
@@ -283,6 +283,6 @@ El estado de descontinuación se presenta solo si coincide exactamente la marca 
 
 ## Controles y límites
 
-Los rangos de Audi R8 2016 y BMW i8 2016 permanecen almacenados para revisión, pero no se muestran al usuario. La tasación fiscal y el permiso SII se consultan separadamente mediante selección expresa de año, versión tributaria y código. La observación comercial no demuestra equivalencia de versión 3CV.
+Los rangos de Audi R8 2016 y BMW i8 2016, y la referencia de Suzuki Kizashi 2015 con mínimo y máximo idénticos, permanecen almacenados para revisión, pero no se muestran al usuario. La tasación fiscal y el permiso SII se consultan separadamente mediante selección expresa de año, versión tributaria y código. La observación comercial no demuestra equivalencia de versión 3CV.
 
 Archivo estructurado: `rindelab/sii/data/used-market-20261021.json`. Control de datos: `node rindelab/tests/used-market-data.cjs`.
