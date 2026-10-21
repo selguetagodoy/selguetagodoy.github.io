@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "market": "Chile",
+  "checkedAt": "2026-10-21",
+  "scope": "Whole-family discontinuations only: no previous-generation or trim-level inference",
+  "records": [
+    {
+      "brand": "Suzuki",
+      "family": "Baleno",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "sourceDate": "2026-07-10"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "S-Presso",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "sourceDate": "2026-07-10"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "Grand Vitara",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "sourceDate": "2026-07-10"
+    },
+    {
+      "brand": "Ford",
+      "family": "Fiesta",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/10/26/el-ford-fiesta-dira-adios-tras-casi-medio-siglo-en-produccion",
+      "sourceDate": "2022-10-26"
+    },
+    {
+      "brand": "Ford",
+      "family": "EcoSport",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.sernac.cl/portal/619/w3-article-87624.html",
+      "sourceDate": "2025-10-24"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Camaro",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/mar/0322-camaro.html",
+      "sourceDate": "2023-03-22"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Cruze",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://news.chevrolet.com.ar/newsroom.detail.html/Pages/news/ar/es/2023/jun/9jun_Trackerindustria.html",
+      "sourceDate": "2023-06-09"
+    },
+    {
+      "brand": "Kia",
+      "family": "Soul",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Nissan",
+      "family": "March",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Nissan",
+      "family": "Note",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Subaru",
+      "family": "Legacy",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Ford",
+      "family": "Fusion",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Veloster",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Renault",
+      "family": "Alaskan",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Aygo",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Fiat",
+      "family": "Cronos",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "family": "Giulietta",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "sourceDate": "2021-06-16"
+    },
+    {
+      "brand": "Nissan",
+      "family": "Tiida",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/07/10/aunque-no-lo-creas-el-nissan-tiida-sigue-mas-vivo-que-nunca",
+      "sourceDate": "2021-07-10"
+    },
+    {
+      "brand": "Honda",
+      "family": "Fit",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/01/27/honda-trae-a-la-vida-nuevamente-al-querido-fit",
+      "sourceDate": "2026-01-27"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Yeti",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2017/05/19/conoce-al-nuevo-suv-compacto-de-skoda-el-karoq",
+      "sourceDate": "2017-05-19"
+    },
+    {
+      "brand": "Ford",
+      "family": "Focus",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/listado?t=Focus",
+      "sourceDate": "2025-03-13"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Prius C",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2025/09/03/toyota-presento-en-japon-su-actualizado-prius-c",
+      "sourceDate": "2025-09-03"
+    },
+    {
+      "brand": "Peugeot",
+      "family": "508",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2025/12/24/peugeot-planea-lanzar-un-sucesor-de-su-descontinuado-508",
+      "sourceDate": "2025-12-24"
+    },
+    {
+      "brand": "Audi",
+      "family": "TT",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/01/25/audi-trae-a-chile-la-ultima-partida-del-coupe-tt",
+      "sourceDate": "2022-01-25"
+    },
+    {
+      "brand": "Audi",
+      "family": "R8",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/01/03/estos-son-algunos-de-los-autos-que-dejaron-de-fabricarse-en-2023",
+      "sourceDate": "2024-01-03"
+    },
+    {
+      "brand": "BMW",
+      "family": "i8",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/03/12/el-bmw-i8-se-despide-dejando-su-huella",
+      "sourceDate": "2020-03-12"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Sonic",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/07/11/los-autos-sigue-muriendo-chevrolet-despide-al-sonic",
+      "sourceDate": "2020-07-11"
+    },
+    {
+      "brand": "Citroen",
+      "family": "C4 Cactus",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/05/12/citroen-prepara-un-c4-con-silueta-estilo-coupe",
+      "sourceDate": "2020-05-12"
+    },
+    {
+      "brand": "Jaguar",
+      "family": "F-Type",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/06/17/jaguar-finaliza-la-produccion-del-f-type",
+      "sourceDate": "2024-06-17"
+    },
+    {
+      "brand": "Kia",
+      "family": "Rio",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/12/17/kia-finaliza-la-produccion-del-rio-en-mexico-y-comienza-la-era-k3",
+      "sourceDate": "2023-12-17"
+    },
+    {
+      "brand": "Kia",
+      "family": "Cerato",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/02/28/kia-k3-2024-en-chile-un-sedan-que-propone",
+      "sourceDate": "2024-02-28"
+    },
+    {
+      "brand": "Kia",
+      "family": "Stinger",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/12/22/kia-despide-al-espectacular-stinger-con-una-edicion-especial-limitada",
+      "sourceDate": "2022-12-22"
+    },
+    {
+      "brand": "Kia",
+      "family": "Optima",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/07/02/kia-adios-optima-bienvenido-k5-2021",
+      "sourceDate": "2020-07-02"
+    },
+    {
+      "brand": "Lexus",
+      "family": "RC",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/01/02/los-modelos-que-nos-dijeron-adios-en-2025",
+      "sourceDate": "2026-01-02"
+    },
+    {
+      "brand": "Mazda",
+      "family": "CX-9",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/10/12/experiencia-e-2023-mazda-le-quita-el-velo-a-su-buque-insignia-el-nuevo-cx-90",
+      "sourceDate": "2023-10-12"
+    },
+    {
+      "brand": "Mini",
+      "family": "Clubman",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/03/23/el-mini-clubman-se-despide-con-una-edicion-especial",
+      "sourceDate": "2023-03-23"
+    },
+    {
+      "brand": "Mitsubishi",
+      "family": "i-MiEV",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2019/06/29/dongfeng-s50-ev-2019-es-el-electrico-de-mayor-autonomia-en-chile",
+      "sourceDate": "2019-06-29"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Scirocco",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/05/14/volkswagen-scirocco-cumple-50-anos",
+      "sourceDate": "2024-05-14"
+    },
+    {
+      "brand": "Infiniti",
+      "family": "QX80",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16"
+    },
+    {
+      "brand": "Infiniti",
+      "family": "QX60",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16"
+    },
+    {
+      "brand": "Infiniti",
+      "family": "QX30",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16"
+    },
+    {
+      "brand": "Infiniti",
+      "family": "QX50",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16"
+    },
+    {
+      "brand": "Infiniti",
+      "family": "Q70",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16"
+    },
+    {
+      "brand": "Infiniti",
+      "family": "QX70",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16"
+    },
+    {
+      "brand": "Infiniti",
+      "family": "G37",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16"
+    },
+    {
+      "brand": "Volvo",
+      "family": "C30",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/c30//",
+      "sourceDate": null
+    },
+    {
+      "brand": "Volvo",
+      "family": "S40",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/s40-generation-2//",
+      "sourceDate": null
+    },
+    {
+      "brand": "Volvo",
+      "family": "S80",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/pr/cars/legacy-models/s80/",
+      "sourceDate": null
+    },
+    {
+      "brand": "Volvo",
+      "family": "XC70",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/xc70-classic-xc70-cross-country/",
+      "sourceDate": null
+    },
+    {
+      "brand": "Mini",
+      "family": "Paceman",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2017/05/11/mini-countryman-2017-ahora-mucho-mas-suv",
+      "sourceDate": "2017-05-11"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "Kizashi",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.sernac.cl/portal/618/w3-article-13293.html",
+      "sourceDate": "2018-07-03"
+    },
+    {
+      "brand": "Opel",
+      "family": "Adam",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/es-es/opel/press/opel-lanzara-ocho-modelos-nuevos-o-renovados-hasta-2020",
+      "sourceDate": null
+    },
+    {
+      "brand": "Opel",
+      "family": "Cascada",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/em-en/opel/press/opel-to-launch-eight-all-new-or-refreshed-models-by-2020",
+      "sourceDate": null
+    },
+    {
+      "brand": "Opel",
+      "family": "Meriva",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/es-es/opel/press/la-planta-de-zaragoza-incrementa-un-6-su-produccion-1632576110",
+      "sourceDate": null
+    },
+    {
+      "brand": "Opel",
+      "family": "Insignia",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.autoscout24.es/informacion/noticias/fin-de-produccion-del-opel-insignia-en-2022/",
+      "sourceDate": null
+    },
+    {
+      "brand": "Opel",
+      "family": "Antara",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.sernac.cl/portal/618/w3-article-4169.html",
+      "sourceDate": null
+    },
+    {
+      "brand": "Alfa Romeo",
+      "family": "MiTo",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/04/29/alfa-romeo-podria-resucitar-el-mito-en-formato-electrico",
+      "sourceDate": null
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "CLS",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.mercedes-benz.co.uk/passengercars/models/discontinued/cls.html",
+      "sourceDate": null
+    },
+    {
+      "brand": "Peugeot",
+      "family": "108",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/it-it/peugeot/press/esce-di-scena-la-peugeot-108-la-piu-piccola-e-personalizzabile-auto-del-leone",
+      "sourceDate": null
+    },
+    {
+      "brand": "Lexus",
+      "family": "GS",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://global.toyota/jp/newsroom/lexus/32231442.html",
+      "sourceDate": null
+    },
+    {
+      "brand": "Fiat",
+      "family": "Bravo (2007-2016)",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.autotrader.co.za/car-research/fiat/bravo/619",
+      "sourceDate": null
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Equus (VI)",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.hyundai.com/worldwide/en/footer/corporate/vehicle-history/1990/centennial",
+      "sourceDate": null
+    },
+    {
+      "brand": "Renault",
+      "family": "Zoe (original)",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.autocar.co.uk/car-news/new-cars/renault-zoe-taken-sale-uk-after-11-years",
+      "sourceDate": null
+    },
+    {
+      "brand": "Renault",
+      "family": "Fluence",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.sernac.cl/portal/618/w3-article-5168.html",
+      "sourceDate": null
+    },
+    {
+      "brand": "Mitsubishi",
+      "family": "Lancer (sedán original)",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.mitsubishicars.com/lancer-history",
+      "sourceDate": null
+    }
+  ]
+}
