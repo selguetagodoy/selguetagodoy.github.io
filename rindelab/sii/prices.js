@@ -36,7 +36,7 @@ function canonicalFamily(brand,family){
 }
 function match(row,family,items){
  const b=norm(row[0]),f=canonicalFamily(row[0],family);
- return items.filter(x=>norm(x.brand)===b&&canonicalFamily(x.brand,x.family)===f);
+ return items.filter(x=>x.commercialStatus!=='discontinued-cl'&&norm(x.brand)===b&&canonicalFamily(x.brand,x.family)===f);
 }
 function selected(row){
  try{const key=localStorage.getItem(storageKey(row));return loaded.find(x=>makeIdentity(x)===key)||null;}catch{return null;}
