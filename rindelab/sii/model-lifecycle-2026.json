@@ -3,7 +3,7 @@
   "market": "Chile",
   "checkedAt": "2026-10-21",
   "semantics": "Estado de la oferta oficial chilena de vehículos nuevos; no implica inexistencia de unidades de remanente o usados ni el cese de fabricación mundial. Para Fiesta, EcoSport, Camaro y Cruze se documenta además el fin de producción y/o la salida de la oferta chilena; no descarta unidades residuales ya inscritas.",
-  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente. Cuarto lote: normalización por familia, prefijos inequívocos y cierre de generación para i3 original, Orlando, Clio y XV. No se infiere un recuento nuevo de fichas históricas 3CV sin ejecutar el cruce completo del origen oficial. Quinto lote con evidencia primaria de cese comercial de la marca Infiniti en Chile y fichas de modelos históricos de Volvo; se preservan variantes posteriores y no se etiqueta Borgward BX5/BX7 porque nunca se comercializaron oficialmente pese a estar homologados. Sexto lote: se incorporan 12 casos con antecedentes de marca o lanzamiento en Chile y cierre productivo/reemplazo verificable. IONIQ original se limita a prefijos AE; Zafira monovolumen y Journey 2007-2020 se acotan por fecha y no retiran familias posteriores.",
+  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente. Cuarto lote: normalización por familia, prefijos inequívocos y cierre de generación para i3 original, Orlando, Clio y XV. No se infiere un recuento nuevo de fichas históricas 3CV sin ejecutar el cruce completo del origen oficial. Quinto lote con evidencia primaria de cese comercial de la marca Infiniti en Chile y fichas de modelos históricos de Volvo; se preservan variantes posteriores y no se etiqueta Borgward BX5/BX7 porque nunca se comercializaron oficialmente pese a estar homologados. Sexto lote: se incorporan 12 casos con antecedentes de marca o lanzamiento en Chile y cierre productivo/reemplazo verificable. IONIQ original se limita a prefijos AE; Zafira monovolumen y Journey 2007-2020 se acotan por fecha y no retiran familias posteriores. Séptimo lote: se aplica model-prefix-list-cutoff para múltiples grafías de Navara D23 y Mazda6 GJ junto a corte temporal; Juke se limita a la generación F15 en Chile. Las futuras denominaciones Navara Pro, Mazda6e y Juke eléctrico no se retiran ni se afectan por la clasificación histórica.",
   "models": [
     {
       "brand": "Suzuki",
@@ -944,7 +944,125 @@
       "sourceDate": null,
       "effectiveNote": "Toyota/Lexus anunció oficialmente el fin de fabricación del Lexus GS en agosto 2020. Engloba GS 200t, GS 350 y GS-F y excluye LS, ES e IS. Lexus GS se comercializó en Chile.",
       "additionalSourceUrl": "https://noticias.autocosmos.cl/2016/07/19/el-lexus-gs-2016-llega-a-chile-en-tres-versiones"
+    },
+    {
+      "brand": "Nissan",
+      "model": "Navara D23 / NP300 D23 (anterior)",
+      "match": "model-prefix-list-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "Navara D23/NP300 dejó de comercializarse como nuevo en Chile durante 2025. Nissan presentó una generación distinta Navara Pro/Frontier Pro con llegada regional anunciada en octubre de 2026; no se hereda el retiro al nuevo vehículo.",
+      "sourceDate": null,
+      "sourceUrl": "https://noticias.autocosmos.cl/2025/11/07/nissan-saca-del-mercado-chileno-a-su-historica-pick-up",
+      "modelPrefixes": [
+        "Navara (D23)",
+        "NP300 NAVARA (D23)",
+        "NP300 (D23)"
+      ],
+      "homologationCutoff": "2025-12-31",
+      "additionalSourceUrl": "https://global.nissannews.com/en/releases/frontier-pro-and-navara-pro-usher-in-new-generation-of-nissan-pickup-performance"
+    },
+    {
+      "brand": "Nissan",
+      "model": "Juke F15 (primera generación Chile)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "Nissan vendió el Juke de primera generación en Chile pero canceló la llegada de la segunda; el Juke europeo permaneció en producción. Sólo se etiquetan las fichas históricas chilenas F15, no el eventual Juke eléctrico anunciado para 2027.",
+      "sourceDate": null,
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/02/14/nissan-juke-2024-sigue-con-vida-en-europa",
+      "familyPrefix": "Juke",
+      "homologationCutoff": "2018-12-31",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2026/04/21/nuevo-nissan-juke-tercera-generacion-100-electrica-mas-radical-y-disruptivo"
+    },
+    {
+      "brand": "Mazda",
+      "model": "Mazda6 / Mazda 6 (GJ tercera generación)",
+      "match": "model-prefix-list-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "El representante chileno confirmó 7.389 Mazda6 GJ comercializados de 2013 a 2025, con último stock edición 20 aniversario vendido a enero de 2025. El Mazda 6e/EZ-6 eléctrico posterior es producto diferente y no se declara retirado.",
+      "sourceDate": null,
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/02/26/chile-sale-a-la-venta-un-escaso-ejemplar-del-mazda-6-20-aniversario",
+      "modelPrefixes": [
+        "Mazda6",
+        "Mazda 6"
+      ],
+      "homologationCutoff": "2025-12-31",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2026/09/10/que-hay-de-nuevo-en-el-mazda-6e-2027"
+    },
+    {
+      "brand": "Fiat",
+      "model": "Punto / Grande Punto",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Stellantis documenta que el último Fiat Punto salió de Melfi en agosto de 2018. Chile comercializó oficialmente Punto y Grande Punto; se protege cualquier futura reedición diferenciada de esta denominación.",
+      "sourceDate": null,
+      "sourceUrl": "https://www.media.stellantis.com/em-en/heritage-hub-italy/press/heritage-celebrates-the-30th-anniversary-of-the-legendary-fiat-punto",
+      "modelPrefixes": [
+        "Punto",
+        "Grande Punto"
+      ],
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2018/06/01/fca-fiat-se-concentrara-en-latinoamerica"
+    },
+    {
+      "brand": "Fiat",
+      "model": "Bravo (2007-2016)",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "La segunda generación del Bravo salió de producción europea en 2014 y brasileña en 2016. Su venta en Chile está documentada desde 2008. No afecta Fiat Brava ni futuros modelos de nombre distinto.",
+      "sourceDate": null,
+      "sourceUrl": "https://www.autotrader.co.za/car-research/fiat/bravo/619",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/listado?c=Lanzamientos&pidx=55"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Equus (VI)",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Hyundai señala que Equus/Centennial evolucionó al Genesis G90 bajo marca independiente; Equus fue vendido en Chile al menos hasta su edición renovada de 2015. No marcar el nuevo Genesis G90 como retirado.",
+      "sourceDate": null,
+      "sourceUrl": "https://www.hyundai.com/worldwide/en/footer/corporate/vehicle-history/1990/centennial",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2015/05/26/hyundai-equus-2015-llega-a-chile-el-renovado-sedan-premium-de-la-marca"
+    },
+    {
+      "brand": "Renault",
+      "model": "Zoe (original)",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Renault confirmó el fin de producción del Zoe en 2024; en Chile se había comercializado oficialmente al menos desde 2014. El Renault 5 E-Tech y otras líneas nuevas no corresponden a Zoe.",
+      "sourceDate": null,
+      "sourceUrl": "https://www.autocar.co.uk/car-news/new-cars/renault-zoe-taken-sale-uk-after-11-years",
+      "familyPrefix": "Zoe",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2016/10/05/renault-zoe-2017-ahora-con-mayor-autonomia"
+    },
+    {
+      "brand": "Renault",
+      "model": "Fluence",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "SERNAC confirma la venta chilena de Fluence años 2015-2016; la producción terminó a fines de la década de 2010 y fue sucedido por otros sedanes Renault en mercados diferentes. No afecta Renault Megane ni Koleos.",
+      "sourceDate": null,
+      "sourceUrl": "https://www.sernac.cl/portal/618/w3-article-5168.html",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2015/02/23/nuevo-renault-fluence-version-2015-ya-esta-en-chile"
+    },
+    {
+      "brand": "Mitsubishi",
+      "model": "Lancer (sedán original)",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Mitsubishi Motors confirma que Lancer sedán terminó producción para la mayoría de los mercados en agosto de 2017 (Lancer Evolution en 2015). Mitsubishi Chile registra históricamente lanzamiento de Evolution y ya no ofrece Lancer nuevo. No confundir con prototipos, Grand Lancer regional o futuros relanzamientos.",
+      "sourceDate": null,
+      "sourceUrl": "https://www.mitsubishicars.com/lancer-history",
+      "familyPrefix": "Lancer",
+      "additionalSourceUrl": "https://mitsubishi-motors.cl/sobre-nosotros/"
     }
   ],
-  "methodVersion": 5
+  "methodVersion": 6
 }
