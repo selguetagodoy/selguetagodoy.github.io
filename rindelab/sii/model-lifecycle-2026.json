@@ -3,7 +3,7 @@
   "market": "Chile",
   "checkedAt": "2026-10-20",
   "semantics": "Estado de la oferta oficial chilena de vehículos nuevos; no implica inexistencia de unidades de remanente o usados ni el cese de fabricación mundial. Para Fiesta, EcoSport, Camaro y Cruze se documenta además el fin de producción y/o la salida de la oferta chilena; no descarta unidades residuales ya inscritas.",
-  "matchingPolicy": "Solo identificación inequívoca de modelo: nunca usar edad de homologación para inferir descontinuación; Jimny 3P es vigente y el 5P no debe vincularse automáticamente a una ficha Jimny sin carrocería. Ford Fiesta/EcoSport y Chevrolet Camaro/Cruze se identifican por familia completa; los registros 3CV continúan sin alterar y VW Golf GTI actual NO es modelo descontinuado por la antigua salida del Golf VII.",
+  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente.",
   "models": [
     {
       "brand": "Suzuki",
@@ -94,6 +94,275 @@
       "sourceUrl": "https://news.chevrolet.com.ar/newsroom.detail.html/Pages/news/ar/es/2023/jun/9jun_Trackerindustria.html",
       "additionalSourceUrl": "https://es.chevrolet.com/discontinued-vehicles",
       "manufacturerCurrentCatalogUrl": "https://www.chevrolet.cl/"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Spark antiguo",
+      "match": "model-prefix-exclusions",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Spark GT, Activ y sedán/hatchback anteriores ya retirados de la oferta local. Excluir completamente Spark EUV 2025/2026.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.chevrolet.cl/",
+      "excludePrefixes": [
+        "Spark EUV"
+      ],
+      "familyPrefix": "Spark"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Accent Hatchback",
+      "match": "body-style-hatchback",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Solo variante hatchback (HC/RB). El Accent Sedán BN7i 2026 sigue comercializándose en Chile.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.hyundai.cl/",
+      "familyPrefix": "Accent"
+    },
+    {
+      "brand": "Jeep",
+      "model": "Cherokee (generación anterior)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "Solo Cherokee convencional 2.4/3.2 con homologaciones hasta 2023; no es Grand Cherokee ni la nueva Cherokee híbrida 2026 destinada a Latinoamérica.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.jeep.cl/",
+      "familyPrefix": "Cherokee",
+      "homologationCutoff": "2023-12-31",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2026/02/10/el-jeep-cherokee-hibrido-comienza-a-fabricarse-en-mexico-para-la-region"
+    },
+    {
+      "brand": "Kia",
+      "model": "Soul",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Retirado de Chile al sustituirse localmente por Sonet; incluye Soul EV de generación anterior en el histórico.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado"
+    },
+    {
+      "brand": "Nissan",
+      "model": "March",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fuera de la oferta chilena de 0 km desde 2021; las fichas March K13 se mantienen históricas.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.nissan.cl/"
+    },
+    {
+      "brand": "Nissan",
+      "model": "Note",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Note E12 dejó de integrar la oferta chilena; no equivale a cesación de fabricación global.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.nissan.cl/"
+    },
+    {
+      "brand": "Subaru",
+      "model": "Legacy",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Sedán Legacy retirado de Chile, sin confundirlo con Outback.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.subaru.cl/"
+    },
+    {
+      "brand": "Ford",
+      "model": "Fusion",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fusion fue retirado de la oferta chilena como sedán; producción global concluida.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.ford.cl/"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Veloster",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Veloster normal y N históricos sin comercialización de nuevos actualmente en Chile.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.hyundai.cl/"
+    },
+    {
+      "brand": "Renault",
+      "model": "Alaskan",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Camioneta Alaskan retirada de la oferta chilena; conserva registros de homologación sin precio nuevo.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.renault.cl/"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Aygo",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Aygo clásico vendido anteriormente en Chile, ya ausente de la oferta local. No inferir cese mundial del Aygo X.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://toyota.cl/"
+    },
+    {
+      "brand": "Fiat",
+      "model": "Cronos",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "El Cronos dejó de formar parte de la oferta chilena, aunque hubo homologaciones posteriores y sigue fabricándose/vendiéndose en otros mercados.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://www.fiat.cl/",
+      "additionalSourceUrl": "https://www.fiat.cl/"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "model": "Giulietta",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Hatchback Giulietta salió de la gama chilena; no confundir con SUV actuales Tonale/Stelvio.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado"
+    },
+    {
+      "brand": "Nissan",
+      "model": "Tiida",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Tiida producido en México hasta 2018 y retirado de Chile; una variante taiwanesa no equivale a retorno chileno.",
+      "sourceDate": "2021-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/07/10/aunque-no-lo-creas-el-nissan-tiida-sigue-mas-vivo-que-nunca",
+      "manufacturerCurrentCatalogUrl": "https://www.nissan.cl/"
+    },
+    {
+      "brand": "Changan",
+      "model": "CX70",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "CX70 y derivados CX70T/CX70 Plus históricos fueron reemplazados en Chile por X7 Plus; no afecta X7 Plus.",
+      "sourceDate": "2023-10-31",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/10/31/changan-x7-plus-2024-en-chile-llega-el-relevo-del-popular-cx70",
+      "manufacturerCurrentCatalogUrl": "https://www.changan.cl/"
+    },
+    {
+      "brand": "Honda",
+      "model": "Fit",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fit chileno fue reemplazado por otros modelos hacia 2016; Fit actualizado en China no constituye venta nueva en Chile.",
+      "sourceDate": "2026-01-27",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/01/27/honda-trae-a-la-vida-nuevamente-al-querido-fit",
+      "manufacturerCurrentCatalogUrl": "https://autos.honda.cl/"
+    },
+    {
+      "brand": "Skoda",
+      "model": "Yeti",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Yeti fue sucedido por Karoq; solo se conserva en registros históricos.",
+      "sourceDate": "2017-05-19",
+      "sourceUrl": "https://noticias.autocosmos.cl/2017/05/19/conoce-al-nuevo-suv-compacto-de-skoda-el-karoq",
+      "manufacturerCurrentCatalogUrl": "https://www.skoda.cl/"
+    },
+    {
+      "brand": "Ford",
+      "model": "Focus",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Focus comercializado históricamente en Chile; Ford anunció término definitivo de fabricación en 2025. No confundir con SUV Focus China.",
+      "sourceDate": "2025-03-13",
+      "sourceUrl": "https://noticias.autocosmos.cl/listado?t=Focus",
+      "manufacturerCurrentCatalogUrl": "https://www.ford.cl/"
+    },
+    {
+      "brand": "Ford",
+      "model": "Edge (generación anterior)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "Solo Edge 2.0/2.7 EcoBoost generación previa, cuya producción terminó en 2024. La nueva Edge china fue presentada en México, sin confirmación de venta en Chile al corte.",
+      "sourceDate": "2025-11-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2025/11/10/asi-es-la-nueva-generacion-de-ford-edge-llegara-a-chile",
+      "manufacturerCurrentCatalogUrl": "https://www.ford.cl/",
+      "familyPrefix": "Edge",
+      "homologationCutoff": "2024-12-31"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Prius C",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Prius C terminó comercialización chilena hacia 2019-2020. Toyota Aqua 2026 sigue vigente en Japón, no en catálogo chileno.",
+      "sourceDate": "2025-09-03",
+      "sourceUrl": "https://noticias.autocosmos.cl/2025/09/03/toyota-presento-en-japon-su-actualizado-prius-c",
+      "manufacturerCurrentCatalogUrl": "https://toyota.cl/"
+    },
+    {
+      "brand": "Peugeot",
+      "model": "508",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Peugeot 508 dejó de venderse en Chile; su producción terminó globalmente. No equiparar hipotético sucesor.",
+      "sourceDate": "2025-12-24",
+      "sourceUrl": "https://noticias.autocosmos.cl/2025/12/24/peugeot-planea-lanzar-un-sucesor-de-su-descontinuado-508",
+      "manufacturerCurrentCatalogUrl": "https://www.peugeot.cl/"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "Clase X",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Camioneta Clase X 250d/350d dejó de producirse en 2020; M. Benz es alias oficial de homologación.",
+      "sourceDate": "2020-02-14",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/02/14/carlex-le-da-una-lujosa-despedida-a-la-mercedes-clase-x",
+      "manufacturerCurrentCatalogUrl": "https://www.mercedes-benz.cl/",
+      "modelPrefixes": [
+        "X 250d",
+        "X 350d",
+        "Clase X"
+      ]
+    },
+    {
+      "brand": "Toyota",
+      "model": "Corolla Sport Hatchback",
+      "match": "body-style-hatchback",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Solo carrocería Corolla Hatchback (Sport) que salió de la gama chilena; Corolla Sedán y Corolla Cross están vigentes.",
+      "sourceDate": "2021-06-16",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
+      "manufacturerCurrentCatalogUrl": "https://toyota.cl/",
+      "familyPrefix": "Corolla"
     }
-  ]
+  ],
+  "methodVersion": 2
 }
