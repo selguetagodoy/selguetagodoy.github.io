@@ -714,12 +714,13 @@
       "status": "discontinued-cl",
       "statusLabel": "Descontinuado en Chile",
       "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/v40-generation-2/",
-      "sourceDate": "2019-12-31",
+      "sourceDate": null,
       "effectiveNote": "Volvo Cars Chile clasifica al V40 y V40 Cross Country como automóviles históricos cuya producción concluyó en 2019. No afecta Volvo V60, XC40 ni EX40.",
       "modelPrefixes": [
         "V40",
         "V40CC"
-      ]
+      ],
+      "sourceDateNote": "La página oficial del fabricante no consigna fecha de publicación; el año de fin de producción aparece en su texto."
     },
     {
       "brand": "Volvo",
@@ -728,8 +729,9 @@
       "status": "discontinued-cl",
       "statusLabel": "Descontinuado en Chile",
       "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/c30//",
-      "sourceDate": "2013-12-31",
-      "effectiveNote": "Volvo clasifica el C30 como histórico, con producción terminada en 2013 y sustituido por el V40; no afecta otros hatchbacks actuales."
+      "sourceDate": null,
+      "effectiveNote": "Volvo clasifica el C30 como histórico, con producción terminada en 2013 y sustituido por el V40; no afecta otros hatchbacks actuales.",
+      "sourceDateNote": "La página oficial del fabricante no consigna fecha de publicación; el año de fin de producción aparece en su texto."
     },
     {
       "brand": "Volvo",
@@ -738,8 +740,9 @@
       "status": "discontinued-cl",
       "statusLabel": "Descontinuado en Chile",
       "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/s40-generation-2//",
-      "sourceDate": "2012-12-31",
-      "effectiveNote": "Volvo Cars Chile documenta la segunda generación del S40 como producida entre 2003 y 2012; no es Volvo S60."
+      "sourceDate": null,
+      "effectiveNote": "Volvo Cars Chile documenta la segunda generación del S40 como producida entre 2003 y 2012; no es Volvo S60.",
+      "sourceDateNote": "La página oficial del fabricante no consigna fecha de publicación; el año de fin de producción aparece en su texto."
     },
     {
       "brand": "Volvo",
@@ -748,8 +751,9 @@
       "status": "discontinued-cl",
       "statusLabel": "Descontinuado en Chile",
       "sourceUrl": "https://www.volvocars.com/pr/cars/legacy-models/s80/",
-      "sourceDate": "2016-12-31",
-      "effectiveNote": "Volvo documenta el fin de producción del S80 en 2016 y su sustitución por el S90. No confundir ambos sedanes."
+      "sourceDate": null,
+      "effectiveNote": "Volvo documenta el fin de producción del S80 en 2016 y su sustitución por el S90. No confundir ambos sedanes.",
+      "sourceDateNote": "La página oficial del fabricante no consigna fecha de publicación; el año de fin de producción aparece en su texto."
     },
     {
       "brand": "Volvo",
@@ -758,8 +762,9 @@
       "status": "discontinued-cl",
       "statusLabel": "Descontinuado en Chile",
       "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/xc70-classic-xc70-cross-country/",
-      "sourceDate": "2016-12-31",
-      "effectiveNote": "Volvo documenta fin de producción del XC70 en 2016, reemplazado por el V90 Cross Country; XC90 y XC60 no están afectados."
+      "sourceDate": null,
+      "effectiveNote": "Volvo documenta fin de producción del XC70 en 2016, reemplazado por el V90 Cross Country; XC90 y XC60 no están afectados.",
+      "sourceDateNote": "La página oficial del fabricante no consigna fecha de publicación; el año de fin de producción aparece en su texto."
     },
     {
       "brand": "Mini",
