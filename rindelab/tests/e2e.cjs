@@ -1811,7 +1811,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  assert(archive.every(x=>x.brand==='Suzuki'&&/^https:\/\//.test(x.statusSource)));
  assert(prices.filter(x=>x.brand==='Suzuki'&&x.family==='Jimny').every(x=>x.commercialStatus!=='discontinued-cl'));
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(lifecycle.models.length,81);
+ assert.equal(lifecycle.models.length,90);
  assert.equal(lifecycle.models.find(x=>x.model==='Jimny 5 puertas').match,'variant-only-manual');
  const quote=await browser.newPage({viewport:{width:390,height:844}});
  await quote.goto(base+'cotizador.html',{waitUntil:'networkidle'});
@@ -1855,12 +1855,16 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'No marcar la familia Golf completa como descontinuada; GTI regresó');
  await p.close();
 });
-await test('Sexta revisión 3CV: 81 casos sin falsos positivos en variantes vigentes',async()=>{
+await test('Séptima revisión 3CV: 90 casos sin falsos positivos en variantes vigentes',async()=>{
  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(data.models.length,81);
- assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,81);
+ assert.equal(data.models.length,90);
+ assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,90);
  assert(data.models.every(x=>/^https:\/\//.test(x.sourceUrl)&&x.status&&x.match));
- assert.equal(data.models.filter(x=>x.match==='previous-generation-cutoff').length,8);
+ assert.equal(data.models.filter(x=>x.match==='previous-generation-cutoff').length,9);
+ assert.equal(data.models.filter(x=>x.match==='model-prefix-list-cutoff').length,2,'Dos generaciones con varias grafías protegidas');
+ assert.equal(data.models.filter(x=>x.status==='previous-generation-cl').length,11,'Generaciones anteriores identificadas');
+ assert.equal(data.models.filter(x=>x.status==='discontinued-cl').length,79,'Casos descontinuados documentados');
+ assert(['Nissan|Navara D23 / NP300 D23 (anterior)','Nissan|Juke F15 (primera generación Chile)','Mazda|Mazda6 / Mazda 6 (GJ tercera generación)','Fiat|Punto / Grande Punto','Fiat|Bravo (2007-2016)','Hyundai|Equus (VI)','Renault|Zoe (original)','Renault|Fluence','Mitsubishi|Lancer (sedán original)'].every(k=>data.models.some(x=>x.brand+'|'+x.model===k)),'Lote 7 integrado');
  assert(['Q50','Q60','QX30','QX50','QX60','QX70','QX80','Q70','G37'].every(m=>data.models.some(x=>x.brand==='Infiniti'&&x.model===m)),'Nueve modelos históricos Infiniti con fuente primaria');
  assert(data.models.filter(x=>x.brand==='Volvo'&&['C30','S40','S80','XC70','V40 / V40 Cross Country'].includes(x.model)).length===5);
  assert(!data.models.some(x=>x.brand==='Borgward'),'Los Borgward BX5/BX7 nunca fueron vehículos nuevos comercializados en Chile');
@@ -1894,6 +1898,12 @@ await test('Sexta revisión 3CV: 81 casos sin falsos positivos en variantes vige
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'IONIQ5 vigente no corresponde al IONIQ original AE');
  await p.fill('#query','Ioniq AE');await p.click('#searchButton');
  assert((await p.locator('.vehicle-lifecycle').count())>0,'IONIQ original AE debe mostrar cierre de fabricación');
+ await p.fill('#query','Navara (D23)');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-lifecycle').count())>0,'Navara D23 histórica debe mostrar estado por generación');
+ await p.fill('#query','Mazda6');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-lifecycle').count())>0,'Mazda6 GJ debe mostrar condición histórica');
+ await p.fill('#query','Juke (F15)');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-lifecycle').count())>0,'Juke F15 debe identificarse como anterior');
  await p.fill('#query','Hyundai Accent BN7i');await p.click('#searchButton');
  assert((await p.locator('.vehicle-card').count())>0);
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Accent sedán nuevo debe mantenerse vigente');
@@ -1905,11 +1915,17 @@ await test('Sexta revisión 3CV: 81 casos sin falsos positivos en variantes vige
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Corolla Cross no equivale a Corolla Sport HB');
  await p.close();
 });
-await test('Directorio de modelos descontinuados: 81 casos, filtros y ancho móvil',async()=>{
+await test('Directorio de modelos descontinuados: 90 casos, filtros y ancho móvil',async()=>{
  const p=await browser.newPage({viewport:{width:390,height:844}});
  await p.goto(base+'descontinuados.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('81 modelos'),{timeout:30000});
- assert.equal(await p.locator('#modelRows tr').count(),81);
+ await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('90 modelos'),{timeout:30000});
+ assert.equal(await p.locator('#modelRows tr').count(),90);
+ await p.fill('#searchModel','Nissan Navara D23');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
+ await p.fill('#searchModel','Mazda6');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
+ await p.fill('#searchModel','Fiat Punto');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
  await p.fill('#searchModel','Opel Insignia');
  assert.equal(await p.locator('#modelRows tr').count(),1);
  await p.fill('#searchModel','Hyundai IONIQ original');
@@ -1927,10 +1943,10 @@ await test('Directorio de modelos descontinuados: 81 casos, filtros y ancho móv
  assert.match(await p.locator('#modelRows').textContent(),/Spark antiguo/);
  await p.fill('#searchModel','');
  await p.selectOption('#statusFilter','previous-generation-cl');
- assert.equal(await p.locator('#modelRows tr').count(),8);
+ assert.equal(await p.locator('#modelRows tr').count(),11);
  await p.selectOption('#statusFilter','discontinued-cl');
- assert.equal(await p.locator('#modelRows tr').count(),73);
- assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),73);
+ assert.equal(await p.locator('#modelRows tr').count(),79);
+ assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),79);
  const dimensions=await p.evaluate(()=>({w:window.innerWidth,doc:document.documentElement.scrollWidth}));
  assert(dimensions.doc<=dimensions.w+3,'El directorio no debe desbordar la pantalla '+JSON.stringify(dimensions));
  await p.close();

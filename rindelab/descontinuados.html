@@ -62,7 +62,7 @@ function render(){
  $('modelCount').textContent=filtered.length+' de '+models.length+' modelos, carrocerías o generaciones documentadas';
 }
 $('searchModel').addEventListener('input',render);$('statusFilter').addEventListener('change',render);
-fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos81').then(r=>{if(!r.ok)throw Error('Listado no disponible');return r.json()}).then(d=>{
+fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos90').then(r=>{if(!r.ok)throw Error('Listado no disponible');return r.json()}).then(d=>{
  if(d.schemaVersion!==1||!Array.isArray(d.models))throw Error('Archivo de estados no válido');
  models=d.models.slice().sort((a,b)=>a.brand.localeCompare(b.brand,'es')||a.model.localeCompare(b.model,'es'));render();
 }).catch(e=>{const row=document.createElement('tr'),td=cell(row,'No fue posible cargar el listado. '+e.message);td.colSpan=4;$('modelRows').replaceChildren(row)});

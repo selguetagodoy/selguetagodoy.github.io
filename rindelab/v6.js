@@ -26,6 +26,7 @@ function archivedModel(row){
   if(item.match==='whole-family')return sameFamily;
   if(item.match==='model-prefix-exclusions')return sameFamily&&!(item.excludePrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
   if(item.match==='model-prefix-list')return (item.modelPrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
+  if(item.match==='model-prefix-list-cutoff')return String(row[F.DATE]||'')<=item.homologationCutoff&&(item.modelPrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
   if(item.match==='body-style-hatchback')return sameFamily&&(/hatchback| hb /.test(' '+name+' '));
   if(item.match==='previous-generation-cutoff')return sameFamily&&String(row[F.DATE]||'')<=item.homologationCutoff;
   // Solo Jimny 5P, sin confundir Jimny 3P; se exige mención inequívoca de puertas.
@@ -794,7 +795,7 @@ async function init(){
   const additional=window.RindelabOfficialAPI.load(officialFiles,legacy);
   for(const row of additional)officialCodes.add(row[F.CODE]);
   all=legacy.concat(additional).map(cleanRow);
-  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos81');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
+  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos90');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
   const prices=await window.RindelabCommercial?.ready?.();

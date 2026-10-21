@@ -110,6 +110,14 @@ jobs:
       - name: Install Playwright and Chromium
         run: |
           npm install --no-save playwright
+          # Ubuntu 24.04 trae repositorios Microsoft ajenos a Chromium.
+          # Si responden 403, bloquean apt y con ello toda la suite.
+          # Desactivar sólo la lista de paquetes Microsoft, sin alterar fuentes Ubuntu.
+          for src in /etc/apt/sources.list.d/*; do
+            if [ -f "$src" ] && grep -q 'packages.microsoft.com/ubuntu/24.04/prod' "$src"; then
+              sudo mv "$src" "$src.disabled"
+            fi
+          done
           npx playwright install --with-deps chromium
 
       - name: Launch static web server
