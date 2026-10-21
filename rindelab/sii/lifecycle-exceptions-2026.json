@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-21",
+  "semantics": "Homologado en Chile sin ingreso acreditado a venta comercial regular; no equivale a modelo descontinuado de la oferta.",
+  "cases": [
+    {
+      "brand": "Borgward",
+      "family": "BX5",
+      "status": "homologado-sin-venta",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/04/13/nuevamente-es-el-fin-del-camino-para-borgward",
+      "sourceDate": "2022-04-13",
+      "effectiveNote": "Homologado por un importador potencial, pero la venta comercial en Chile no se concretó."
+    },
+    {
+      "brand": "Borgward",
+      "family": "BX7",
+      "status": "homologado-sin-venta",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/04/13/nuevamente-es-el-fin-del-camino-para-borgward",
+      "sourceDate": "2022-04-13",
+      "effectiveNote": "Homologación de prueba/introducción prevista, sin venta regular al público en Chile."
+    }
+  ]
+}
