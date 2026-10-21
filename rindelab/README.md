@@ -1,6 +1,6 @@
 # Autos usados: precios documentados y descontinuados · 21/10/2026
 
-La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) reúne **268 referencias habilitadas** sobre **270 registros documentados** por modelo y año, en **27 marcas y 91 familias**. El lote concilia 178 referencias previamente publicadas con 92 registros adicionales no duplicados. Dos rangos de vehículos de alta gama están retenidos para revisión y no aparecen como valores comerciales válidos.
+La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) reúne **267 referencias habilitadas** sobre **270 registros documentados** por modelo y año, en **27 marcas y 91 familias**. El lote concilia 178 referencias previamente publicadas con 92 registros adicionales no duplicados. Tres referencias están retenidas para revisión (Audi R8 2016, BMW i8 2016 y Suzuki Kizashi 2015) y no aparecen como valores comerciales válidos.
 
 AutoExplora aporta **20 medianas de precios pedidos en avisos**, con bandas p10–p90 y tamaño de muestra verificado; Autofact aporta **250 rangos comerciales aproximados** sin imputar medianas. Cada observación conserva año y URL de fuente. No se inventa depreciación ni se extrapolan montos entre años.
 
