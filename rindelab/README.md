@@ -1,3 +1,13 @@
+# Conciliación multired y fotografías · 21/10/2026
+
+RINDELAB agrega dos redes adicionales, **Portillo (111 publicaciones documentadas de vehículos nuevos)** y **Gildemeister Retail (53 fichas comerciales del catálogo público)**, sumadas a las 301 publicaciones previas de Pompeyo Carrasco y Salazar Israel. Total: **465 observaciones comerciales con URL** en cuatro redes. Se incorporaron **29 equivalencias explícitas de denominación a nivel de familia** sin fundir generaciones ni motorizaciones. El catálogo comercial muestra **881 grupos de familia/tecnología**, frente a 837 antes de esta actualización; un grupo no representa necesariamente un modelo único nuevo.
+
+La biblioteca fotográfica llega a **224 referencias** con **19 fotografías adicionales licenciadas y atribuidas desde Wikimedia Commons**. Todas son referenciales, nunca pruebas de versión o generación exacta. El inventario de pendientes sigue abierto y se conserva en `sii/CONCILIACION-REDES-COMERCIALES-20261021.md` con enlaces fuente y excepciones.
+
+**Replicación:** `node scripts/reconcile-commercial-names.cjs --check`, `node scripts/report-network-reconciliation.cjs --check`, `node rindelab/tests/more-networks.cjs`. La vigilancia semanal de redes produce diferencias auditables, sin modificar automáticamente precios ni declarar modelos retirados.
+
+---
+
 # Actualización 21/10/2026 — redes de distribución y fotografías verificadas
 
 La búsqueda comercial incorpora un snapshot de **301 publicaciones identificadas como vehículos nuevos** (107 Pompeyo Carrasco y 194 Salazar Israel), cada una con enlace de concesionaria. De ellas, **98 publicaciones de Pompeyo** presentan explícitamente un precio etiquetado «Precio lista». No se importaron importes con bonos de Salazar como precios de lista. El cruce contra las 1.504 referencias anteriores encuentra **108 denominaciones sin coincidencia textual de familia**: son candidatos a conciliar, no 108 vehículos inequívocamente nuevos ni stock asegurado. El archivo fuente es `data/dealer-new-models-20261021.json` y el informe reproducible se mantiene en `sii/AMPLIACION-OFERTA-CHILE-20261021.md`.

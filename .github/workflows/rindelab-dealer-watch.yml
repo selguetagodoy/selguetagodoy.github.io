@@ -21,8 +21,19 @@ jobs:
         run: python -m pip install --quiet requests beautifulsoup4
       - name: Revisar nuevas publicaciones comerciales por fuente
         run: python scripts/snapshot-dealer-models.py --output=dealer-live-snapshot.json
-      - name: Comparar contra registro publicado sin modificarlo
-        run: node scripts/audit-dealer-changes.cjs --live=dealer-live-snapshot.json --out=dealer-change-review.json
+      - name: Preparar navegador para catálogo Gildemeister
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - name: Revisar Portillo y Gildemeister
+        run: |
+          python scripts/snapshot-portillo.py --output=dealer-portillo-live.json
+          node scripts/snapshot-gildemeister.cjs --out=dealer-gildemeister-live.json
+      - name: Comparar los cuatro distribuidores contra sus respectivos cortes
+        run: |
+          node scripts/audit-dealer-changes.cjs --live=dealer-live-snapshot.json --out=dealer-change-review.json
+          node scripts/audit-dealer-changes.cjs --baseline=rindelab/data/dealer-portillo-20261021.json --live=dealer-portillo-live.json --out=dealer-portillo-review.json
+          node scripts/audit-dealer-changes.cjs --baseline=rindelab/data/dealer-gildemeister-20261021.json --live=dealer-gildemeister-live.json --out=dealer-gildemeister-review.json
       - name: Guardar documentos verificables
         if: always()
         uses: actions/upload-artifact@v4
@@ -31,6 +42,10 @@ jobs:
           path: |
             dealer-live-snapshot.json
             dealer-change-review.json
+            dealer-portillo-live.json
+            dealer-portillo-review.json
+            dealer-gildemeister-live.json
+            dealer-gildemeister-review.json
           retention-days: 90
           if-no-files-found: warn
       - name: Abrir o actualizar incidencia para revisión
@@ -48,8 +63,10 @@ jobs:
               core.warning('No hay informe completo de rastreo; revisar la ejecución antes de modificar la base.');
               return;
             }
-            const r=JSON.parse(fs.readFileSync('dealer-change-review.json','utf8'));
-            const newItems=r.newListingCandidates||[],changed=r.changedPublishedListPrices||[];
+            const audits=['dealer-change-review.json','dealer-portillo-review.json','dealer-gildemeister-review.json']
+              .filter(x=>fs.existsSync(x)).map(x=>JSON.parse(fs.readFileSync(x,'utf8')));
+            const newItems=audits.flatMap(x=>x.newListingCandidates||[]);
+            const changed=audits.flatMap(x=>x.changedPublishedListPrices||[]);
             if(!newItems.length&&!changed.length){
               core.info('No hay publicaciones nuevas ni precios de lista cambiados en esta revisión.');
               return;
@@ -60,7 +77,7 @@ jobs:
               '',
               '- Nuevas URL de modelo: **'+newItems.length+'**',
               '- Cambios de precio explícitamente etiquetado como lista: **'+changed.length+'**',
-              '- Fuente: Pompeyo Carrasco y Salazar Israel',
+              '- Fuentes: Pompeyo Carrasco, Salazar Israel, Portillo y Gildemeister Retail',
               '',
               '### Nuevas publicaciones',
               ...show(newItems,x=>'- '+x.brand+' '+x.family+' — '+x.retailer+' · '+x.source),

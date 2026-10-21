@@ -8,7 +8,8 @@ const $=id=>document.getElementById(id);
 const fmt=n=>Number(n).toLocaleString('es-CL');
 const money=n=>Number.isFinite(n)&&n>0?'$'+fmt(Math.round(n)):'Consultar precio en fuente';
 const safe=s=>String(s??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-const keyOf=p=>C.key(p.brand,p.family)+'|'+(p.technology||'?');
+let familyAliases=new Map();
+const keyOf=p=>{const original=C.key(p.brand,p.family);return (familyAliases.get(original)||original)+'|'+(p.technology||'?');};
 const labelTech=t=>({Bencina:'Bencina','Diésel':'Diésel',MHEV:'Híbrido suave',HEV:'Híbrido',PHEV:'Híbrido enchufable',REEV:'Eléctrico de rango extendido',EV:'Eléctrico'})[t]||'Motorización no documentada';
 let groups=[],selection=[],shown=12,lastCriteria=null,lastOfficial=[],filtered=[],dealerListings=[];
 const groupIndex=new Map();
@@ -147,12 +148,18 @@ $('commercialShare').addEventListener('click',()=>{
  else $('commercialShareMessage').textContent='Selecciona y copia el enlace.';
 });
 $('resetButton').addEventListener('click',()=>{shown=12;lastCriteria=null;$('commercialResults').hidden=true;});
-window.RindelabMarket=Object.freeze({render,rebuild,resetPage:()=>shown=12,getCount:()=>filtered.length,records:()=>dealerListings.slice(),getTotal:()=>groups.length});
+window.RindelabMarket=Object.freeze({render,rebuild,resetPage:()=>shown=12,getCount:()=>filtered.length,records:()=>dealerListings.slice(),getTotal:()=>groups.length,getAliasCount:()=>familyAliases.size});
 Promise.all([
  api.ready(),
- fetch('./data/dealer-new-models-20261021.json?v=20261021-discovery').then(r=>{if(!r.ok)throw Error('sin snapshot de distribuidores');return r.json();}).catch(()=>({records:[]}))
-]).then(([,snapshot])=>{
- dealerListings=(snapshot.records||[]).filter(x=>x.listing==='new'&&x.brand&&x.family&&/^https:\/\/www\.(pompeyo\.cl\/producto\/|salazarisrael\.cl\/marcas\/)/.test(x.source))
+ ...[
+  './data/dealer-new-models-20261021.json?v=20261021-discovery',
+  './data/dealer-portillo-20261021.json?v=20261021-expansion',
+  './data/dealer-gildemeister-20261021.json?v=20261021-expansion'
+ ].map(url=>fetch(url).then(r=>{if(!r.ok)throw Error('Snapshot no disponible '+url);return r.json();}).catch(()=>({records:[]}))),
+ fetch('./data/commercial-family-aliases-20261021.json?v=20261021-review').then(r=>r.ok?r.json():{aliases:[]}).catch(()=>({aliases:[]}))
+]).then(([,first,portillo,gildemeister,aliases])=>{
+ familyAliases=new Map((aliases.aliases||[]).map(a=>[a.sourceKey,a.canonicalKey]));
+ dealerListings=[...(first.records||[]),...(portillo.records||[]),...(gildemeister.records||[])].filter(x=>x.listing==='new'&&x.brand&&x.family&&/^https:\/\/www\.(pompeyo\.cl\/producto\/|salazarisrael\.cl\/marcas\/|portillo\.cl\/marcas\/|gildemeisterretail\.cl\/marcas\/)/.test(x.source))
   .map(x=>({
    ...x,priceListClp:Number.isSafeInteger(x.listPriceClp)&&x.listPriceClp>0?x.listPriceClp:null,
    version:'Publicado como vehículo nuevo por concesionaria; versión no identificada',

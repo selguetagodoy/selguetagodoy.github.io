@@ -64,6 +64,12 @@ jobs:
       - name: Validar identidad comercial, vigencia y fotografías
         run: node rindelab/tests/catalog-identity.cjs
 
+      - name: Verificar conciliación conservadora y 224 fotografías locales
+        run: |
+          node scripts/reconcile-commercial-names.cjs --check
+          node scripts/report-network-reconciliation.cjs --check
+          node rindelab/tests/more-networks.cjs
+
       - name: Verificar ampliación de concesionarias y licencias fotográficas
         run: |
           node scripts/tests/rindelab-dealer-expansion.test.cjs

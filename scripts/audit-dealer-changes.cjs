@@ -3,9 +3,9 @@
 const fs=require('node:fs'),path=require('node:path');
 const base=path.resolve(__dirname,'..');
 const arg=k=>process.argv.find(x=>x.startsWith('--'+k+'='))?.slice(k.length+3);
-const old=require('../rindelab/data/dealer-new-models-20261021.json');
+const old=JSON.parse(fs.readFileSync(arg('baseline')||path.join(base,'rindelab/data/dealer-new-models-20261021.json'),'utf8'));
 const current=JSON.parse(fs.readFileSync(arg('live')||'dealer-live-snapshot.json','utf8'));
-if(!Array.isArray(current.records)||current.records.length<180||current.errors?.length)throw Error('Búsqueda remota incompleta: no revisar diferencias hasta obtener un snapshot válido');
+if(!Array.isArray(current.records)||current.records.length<Math.max(20,Math.floor(old.records.length*0.80))||current.errors?.length)throw Error('Búsqueda remota incompleta: no revisar diferencias hasta obtener un snapshot válido');
 const index=arr=>new Map(arr.map(x=>[x.source,x]));
 const oldMap=index(old.records),newMap=index(current.records);
 const added=current.records.filter(x=>!oldMap.has(x.source));

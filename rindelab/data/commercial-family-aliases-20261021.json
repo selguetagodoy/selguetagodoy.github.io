@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-21",
+  "scope": "family-only; versions, technical generation, engines and homologation are never inferred",
+  "aliases": [
+    {
+      "brand": "BYD",
+      "sourceFamily": "Atto 8 Dm",
+      "canonicalFamily": "Atto 8",
+      "sourceKey": "BYD|ATTO 8 DM",
+      "canonicalKey": "BYD|ATTO 8",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "BYD",
+      "sourceFamily": "Sealion 7 Ev",
+      "canonicalFamily": "Sealion 7",
+      "sourceKey": "BYD|SEALION 7 EV",
+      "canonicalKey": "BYD|SEALION 7",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Chery",
+      "sourceFamily": "Tiggo 4 Pro Max Hibrido",
+      "canonicalFamily": "TIGGO 4 PRO MAX",
+      "sourceKey": "CHERY|TIGGO 4 PRO MAX HIBRIDO",
+      "canonicalKey": "CHERY|TIGGO 4 PRO MAX",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Chery",
+      "sourceFamily": "Tiggo 7 Pro Max Hibrido",
+      "canonicalFamily": "tiggo 7 pro max hybrid",
+      "sourceKey": "CHERY|TIGGO 7 PRO MAX HIBRIDO",
+      "canonicalKey": "CHERY|TIGGO 7 PRO MAX HYBRID",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "DFSK",
+      "sourceFamily": "E5 Plus Phev",
+      "canonicalFamily": "E5 Plus",
+      "sourceKey": "DFSK|E5 PLUS PHEV",
+      "canonicalKey": "DFSK|E5 PLUS",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "DFSK",
+      "sourceFamily": "SUV E5 PLUS",
+      "canonicalFamily": "E5 Plus",
+      "sourceKey": "DFSK|SUV E5 PLUS",
+      "canonicalKey": "DFSK|E5 PLUS",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Ford",
+      "sourceFamily": "Maverick Fhev",
+      "canonicalFamily": "Maverick",
+      "sourceKey": "FORD|MAVERICK FHEV",
+      "canonicalKey": "FORD|MAVERICK",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Ford",
+      "sourceFamily": "Territory Fhev",
+      "canonicalFamily": "Territory",
+      "sourceKey": "FORD|TERRITORY FHEV",
+      "canonicalKey": "FORD|TERRITORY",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Geely",
+      "sourceFamily": "Ex5 Emi-i",
+      "canonicalFamily": "EX5-EMi",
+      "sourceKey": "GEELY|EX5 EMI I",
+      "canonicalKey": "GEELY|EX5 EMI",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Honda",
+      "sourceFamily": "Zr-v Hybrid",
+      "canonicalFamily": "ZR-V",
+      "sourceKey": "HONDA|ZR V HYBRID",
+      "canonicalKey": "HONDA|ZR V",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Honda",
+      "sourceFamily": "Cr-v Advanced Hybrid",
+      "canonicalFamily": "CR-V",
+      "sourceKey": "HONDA|CR V ADVANCED HYBRID",
+      "canonicalKey": "HONDA|CR V",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Kia",
+      "sourceFamily": "Carnival Hev",
+      "canonicalFamily": "Carnival",
+      "sourceKey": "KIA|CARNIVAL HEV",
+      "canonicalKey": "KIA|CARNIVAL",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Kia",
+      "sourceFamily": "CARNIVAL HÍBRIDO",
+      "canonicalFamily": "Carnival",
+      "sourceKey": "KIA|CARNIVAL HIBRIDO",
+      "canonicalKey": "KIA|CARNIVAL",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Kia",
+      "sourceFamily": "Sorento Hev",
+      "canonicalFamily": "Sorento",
+      "sourceKey": "KIA|SORENTO HEV",
+      "canonicalKey": "KIA|SORENTO",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Kia",
+      "sourceFamily": "SORENTO HÍBRIDO",
+      "canonicalFamily": "Sorento",
+      "sourceKey": "KIA|SORENTO HIBRIDO",
+      "canonicalKey": "KIA|SORENTO",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Kia",
+      "sourceFamily": "Sportage Hev",
+      "canonicalFamily": "Sportage",
+      "sourceKey": "KIA|SPORTAGE HEV",
+      "canonicalKey": "KIA|SPORTAGE",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Kia",
+      "sourceFamily": "NUEVO SPORTAGE HÍBRIDO",
+      "canonicalFamily": "Sportage",
+      "sourceKey": "KIA|SPORTAGE HIBRIDO",
+      "canonicalKey": "KIA|SPORTAGE",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Kia",
+      "sourceFamily": "TASMAN",
+      "canonicalFamily": "All New TASMAN",
+      "sourceKey": "KIA|TASMAN",
+      "canonicalKey": "KIA|ALL NEW TASMAN",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "MG",
+      "sourceFamily": "NEW MG3 HYBRID+",
+      "canonicalFamily": "MG3",
+      "sourceKey": "MG|MG3 HYBRID",
+      "canonicalKey": "MG|MG3",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "MG",
+      "sourceFamily": "NEW MG HS HYBRID+",
+      "canonicalFamily": "HS Hybrid",
+      "sourceKey": "MG|MG HS HYBRID",
+      "canonicalKey": "MG|HS HYBRID",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "MG",
+      "sourceFamily": "MG S5 EV",
+      "canonicalFamily": "S5",
+      "sourceKey": "MG|S5 EV",
+      "canonicalKey": "MG|S5",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "MG",
+      "sourceFamily": "Mg S5 Electrico",
+      "canonicalFamily": "S5",
+      "sourceKey": "MG|S5 ELECTRICO",
+      "canonicalKey": "MG|S5",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Mitsubishi",
+      "sourceFamily": "L200 Dakar",
+      "canonicalFamily": "L200",
+      "sourceKey": "MITSUBISHI|L200 DAKAR",
+      "canonicalKey": "MITSUBISHI|L200",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Subaru",
+      "sourceFamily": "CROSSTREK HÍBRIDO",
+      "canonicalFamily": "Crosstrek",
+      "sourceKey": "SUBARU|CROSSTREK HIBRIDO",
+      "canonicalKey": "SUBARU|CROSSTREK",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Subaru",
+      "sourceFamily": "Crosstrek Hybrid",
+      "canonicalFamily": "Crosstrek",
+      "sourceKey": "SUBARU|CROSSTREK HYBRID",
+      "canonicalKey": "SUBARU|CROSSTREK",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Subaru",
+      "sourceFamily": "WRX SEDAN",
+      "canonicalFamily": "WRX",
+      "sourceKey": "SUBARU|WRX SEDAN",
+      "canonicalKey": "SUBARU|WRX",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Land Rover",
+      "sourceFamily": "Evoque",
+      "canonicalFamily": "Range Rover Evoque",
+      "sourceKey": "LAND ROVER|EVOQUE",
+      "canonicalKey": "LAND ROVER|RANGE ROVER EVOQUE",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "RAM",
+      "sourceFamily": "2500",
+      "canonicalFamily": "ram2500",
+      "sourceKey": "RAM|2500",
+      "canonicalKey": "RAM|RAM2500",
+      "level": "same-commercial-family-only"
+    },
+    {
+      "brand": "Landking",
+      "sourceFamily": "Lk5 Ev",
+      "canonicalFamily": "LK5",
+      "sourceKey": "LANDKING|LK5 EV",
+      "canonicalKey": "LANDKING|LK5",
+      "level": "same-commercial-family-only"
+    }
+  ],
+  "pending": []
+}
