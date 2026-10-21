@@ -59,7 +59,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  await check('Las 32 nuevas fotos locales tienen atribución y bytes íntegros',async()=>{
   const fs=require('node:fs');const path=require('node:path');const hash=require('node:crypto').createHash;
   const dir=path.join(__dirname,'../images/commons');const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
-  assert.equal(m.downloaded,32);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,32);
+  assert.equal(m.downloaded,96);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,96);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),100);
   for(const entry of m.results){assert(entry.source.startsWith('https://commons.wikimedia.org/'));assert(entry.author);assert(entry.license);
    const bytes=fs.readFileSync(path.join(__dirname,'..',entry.path.slice(2)));
    assert.equal(bytes.length,entry.bytes);assert.equal(hash('sha256').update(bytes).digest('hex'),entry.sha256);}
@@ -71,6 +71,15 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   const results=await p.evaluate(list=>list.map(([brand,model,tech,date])=>{const x=window.RindelabPhotos.find([brand,model,tech,'','','','','',date],{BRAND:0,MODEL:1,TECH:2,DATE:8});return x?.src||''}),list);
   assert(results.every(x=>x.startsWith('./images/commons/')),JSON.stringify(results));
   assert(results.every(src=>src.includes('/images/commons/')));
+ });
+ await check('Las fotos nuevas cubren familias masivas y premium, sin cruzar versiones',async()=>{
+  const cases=[['Porsche','Cayenne 3.0 V6','Bencina','2025-01-01'],['Mini','Cooper S 5P','Bencina','2025-01-01'],
+    ['BMW','X5 xDrive30d','Diésel','2025-01-01'],['Chery','Tiggo 7 Pro Max 1.5','Bencina','2025-01-01'],
+    ['Chevrolet','Tracker 1.2 Turbo','Bencina','2025-01-01'],['Kia','Sportage 1.6 HEV','HEV','2025-01-01']];
+  const values=await p.evaluate(cases=>cases.map(([brand,model,tech,date])=>{const x=window.RindelabPhotos.find([brand,model,tech,'','','','','',date],{BRAND:0,MODEL:1,TECH:2,DATE:8});return x?.src||null}),cases);
+  assert(values.every(x=>x&&x.startsWith('./images/commons/')),JSON.stringify(values));
+  const mismatch=await p.evaluate(()=>window.RindelabPhotos.find(['Porsche','911 Carrera','','','','','','','2025-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8}));
+  assert(mismatch?.model.includes('911'));
  });
  await check('El escenario desplegable mantiene las tarifas y cálculos originales',async()=>{
   await p.locator('#supuestos').evaluate(el=>el.open=true);
