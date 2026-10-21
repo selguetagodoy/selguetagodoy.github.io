@@ -60,7 +60,7 @@ function renderBody(box,b,m,year){
   const focus=valid?arr.filter(x=>x.year===year):arr;
   const small=document.createElement('div');small.className='sii-used-records';
   for(const p of focus){
-   const card=document.createElement('article');card.className='sii-item';
+   const card=document.createElement('article');card.className='used-market-quote';
    const title=document.createElement('strong');title.textContent=b+' '+m+' · '+p.year;
    const stats=document.createElement('div');stats.className='sii-item-values';
    const main=document.createElement('b');main.className='sii-used-market-price';main.textContent=p.medianClp?clp(p.medianClp):clp(p.lowClp)+' – '+clp(p.highClp);
