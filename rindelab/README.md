@@ -1,10 +1,12 @@
-# Cobertura de autos usados descontinuados · 21/10/2026
+# Autos usados: precios documentados y descontinuados · 21/10/2026
 
-La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) reúne **178 referencias documentales** de precios por modelo y año (**175 combinaciones únicas de modelo/año**, en 19 marcas y 52 familias). AutoExplora aporta **20 medianas de precios solicitados por avisos**, acompañadas de sus bandas p10–p90 y tamaño muestral mínimo de cinco anuncios; Autofact aporta **158 rangos mínimos–máximos aproximados** sin que se imputen medianas ni tamaños de muestra. Se conserva la fuente individual de cada observación.
+La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) reúne **267 referencias habilitadas** sobre **270 registros documentados** por modelo y año, en **27 marcas y 91 familias**. El lote concilia 178 referencias previamente publicadas con 92 registros adicionales no duplicados. Tres referencias están retenidas para revisión (Audi R8 2016, BMW i8 2016 y Suzuki Kizashi 2015) y no aparecen como valores comerciales válidos.
 
-**118 observaciones** coinciden exactamente con modelos descontinuados de la oferta chilena, conforme a las reglas de familia completa del expediente de ciclo de vida. Se incorporó el filtro **Solo descontinuados**, activo inicialmente y desactivable para consultar también familias vigentes. No se retiran generaciones nuevas, ni se presume que una marca/modelo haya desaparecido de todo el mundo.
+AutoExplora aporta **20 medianas de precios pedidos en avisos**, con bandas p10–p90 y tamaño de muestra verificado; Autofact aporta **250 rangos comerciales aproximados** sin imputar medianas. Cada observación conserva año y URL de fuente. No se inventa depreciación ni se extrapolan montos entre años.
 
-El precio de mercado de usado es distinto de la **tasación fiscal SII 2026** (81.697 registros y 264 marcas) y del **permiso de circulación**. RINDELAB no calcula depreciaciones ni empareja automáticamente una versión tributaria con un código 3CV. La evidencia completa está en sii/USADOS-VALOR-COMERCIAL-20261021.md; las reglas se verifican con node rindelab/tests/used-market-data.cjs y la navegación móvil/escritorio con node rindelab/tests/used-prices.cjs.
+El directorio prioriza familias documentadas como descontinuadas en Chile mediante el filtro inicial «Solo descontinuados», desactivable para ver todas las referencias. Un retiro se clasifica únicamente con alcance de familia completa y antecedente trazable; no se retiran generaciones o motorizaciones por suposición.
+
+El precio comercial usado sigue separado de la **tasación fiscal SII 2026** (81.697 registros, 264 marcas) y del permiso de circulación. Para una tasación fiscal se selecciona manualmente año, versión tributaria y código. Fuentes por modelo y año: `sii/USADOS-VALOR-COMERCIAL-20261021.md`; QA: `rindelab/tests/used-market-data.cjs` y `rindelab/tests/used-prices.cjs`.
 
 ---
 

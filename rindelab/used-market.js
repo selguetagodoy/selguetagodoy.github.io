@@ -2,7 +2,7 @@
  * Los precios son avisos o rangos de terceros observados en su fecha documental,
  * NO transacciones cerradas ni tasaciones tributarias SII. */
 (()=>{'use strict';
-const DATA='./sii/data/used-market-20261021.json';
+const DATA='./sii/data/used-market-20261021.json?v=20261021-union270';
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' y ').replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
 const key=(b,m)=>norm(b)+'|'+norm(m);
 const clp=n=>Number.isFinite(n)?'$'+n.toLocaleString('es-CL'):'N/D';
@@ -91,7 +91,7 @@ function mount(section,b,m){
 }
 const loaded=fetch(DATA).then(r=>{if(!r.ok)throw Error('No disponible');return r.json()}).then(obj=>{
  if(obj.schemaVersion!==1||!Array.isArray(obj.records))throw Error('Fuente de usados inválida');
- available=obj.records.filter(x=>x.year>=1980&&x.year<=2026&&/^(AutoExplora|Autofact)$/.test(x.source)&&x.sourceUrl.startsWith('https://'));
+ available=obj.records.filter(x=>x.year>=1980&&x.year<=2026&&/^(AutoExplora|Autofact)$/.test(x.source)&&x.sourceUrl.startsWith('https://')&&x.qualityStatus!=='held-for-manual-review');
  known.clear();
  for(const p of available){const k=familyKey(p.brandSlug,p.modelSlug.replace(/-/g,' '));if(!known.has(k))known.set(k,[]);known.get(k).push(p);}
  for(const arr of known.values())arr.sort((a,b)=>b.year-a.year);
