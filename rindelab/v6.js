@@ -134,7 +134,7 @@ function renderMTT(){
  // MTT sin rendimiento no es resultado comparable ni oferta comercial.
  // Un enlace al expediente aparece solo al buscar explícitamente su código o modelo.
  const section=$('mttSearchSection'),q=normalize($('query').value);
- const matches=q.length>=4?mttMatches:[];
+ const matches=mttMatches.filter(item=>q===normalize(item.source.code)||(q.length>=10&&normalize(item.source.model).includes(q)));
  section.hidden=!matches.length;
  if(matches.length)$('mttSearchLink').href='./novedades-3cv.html?codigo='+encodeURIComponent(matches[0].source.code);
 }
