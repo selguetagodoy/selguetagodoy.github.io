@@ -1,3 +1,13 @@
+# Cobertura de autos usados descontinuados · 21/10/2026
+
+La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) reúne **178 referencias documentales** de precios por modelo y año (**175 combinaciones únicas de modelo/año**, en 19 marcas y 52 familias). AutoExplora aporta **20 medianas de precios solicitados por avisos**, acompañadas de sus bandas p10–p90 y tamaño muestral mínimo de cinco anuncios; Autofact aporta **158 rangos mínimos–máximos aproximados** sin que se imputen medianas ni tamaños de muestra. Se conserva la fuente individual de cada observación.
+
+**118 observaciones** coinciden exactamente con modelos descontinuados de la oferta chilena, conforme a las reglas de familia completa del expediente de ciclo de vida. Se incorporó el filtro **Solo descontinuados**, activo inicialmente y desactivable para consultar también familias vigentes. No se retiran generaciones nuevas, ni se presume que una marca/modelo haya desaparecido de todo el mundo.
+
+El precio de mercado de usado es distinto de la **tasación fiscal SII 2026** (81.697 registros y 264 marcas) y del **permiso de circulación**. RINDELAB no calcula depreciaciones ni empareja automáticamente una versión tributaria con un código 3CV. La evidencia completa está en sii/USADOS-VALOR-COMERCIAL-20261021.md; las reglas se verifican con node rindelab/tests/used-market-data.cjs y la navegación móvil/escritorio con node rindelab/tests/used-prices.cjs.
+
+---
+
 # Conciliación multired y fotografías · 21/10/2026
 
 RINDELAB agrega dos redes adicionales, **Portillo (111 publicaciones documentadas de vehículos nuevos)** y **Gildemeister Retail (53 fichas comerciales del catálogo público)**, sumadas a las 301 publicaciones previas de Pompeyo Carrasco y Salazar Israel. Total: **465 observaciones comerciales con URL** en cuatro redes. Se incorporaron **29 equivalencias explícitas de denominación a nivel de familia** sin fundir generaciones ni motorizaciones. El catálogo comercial muestra **881 grupos de familia/tecnología**, frente a 837 antes de esta actualización; un grupo no representa necesariamente un modelo único nuevo.
