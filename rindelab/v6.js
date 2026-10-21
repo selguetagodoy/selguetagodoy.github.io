@@ -169,8 +169,13 @@ function choices(){
  const t=$('tech').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value,scope=$('catalogScope').value;
  const pool=all.filter(r=>matchesScope(r,scope)&&(!t||r[F.TECH]===t)&&bodyFits(body,r[F.BODY])&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
  const mtPool=scope==='all'&&!body&&!cycle?mttRecords.filter(item=>(!t||item.row[F.TECH]===t)&&(!year||item.row[F.DATE].slice(0,4)>=year)):[];
- const commercial=scope!=='all'?(window.RindelabCommercial?.records()||[]).filter(x=>x.commercialStatus!=='discontinued-cl'&&(!t||x.technology===t)&&!body&&!cycle&&!year):[];
- const brands=[...new Set([...pool.map(r=>r[F.BRAND]),...mtPool.map(item=>item.row[F.BRAND]),...commercial.map(x=>x.brand)])].sort((a,b)=>a.localeCompare(b,'es')).map(x=>({value:x}));
+ const commercial=scope!=='all'?[...(window.RindelabCommercial?.records()||[]),...(window.RindelabMarket?.records()||[])].filter(x=>x.commercialStatus!=='discontinued-cl'&&(!t||x.technology===t)&&!body&&!cycle&&!year):[];
+ const brandNames=new Map();
+ for(const name of [...pool.map(r=>r[F.BRAND]),...mtPool.map(item=>item.row[F.BRAND]),...commercial.map(x=>x.brand)]){
+  const key=window.RindelabIdentity?.brand(name)||normalize(name);
+  if(!brandNames.has(key))brandNames.set(key,name);
+ }
+ const brands=[...brandNames.values()].sort((a,b)=>a.localeCompare(b,'es')).map(x=>({value:x}));
  const brandCleared=setOptions('brand',brands,'Todas las marcas');
  const activeBrand=$('brand').value;
  const modelSelect=$('model');
@@ -179,7 +184,7 @@ function choices(){
   const families=new Map();
   for(const r of pool){if(r[F.BRAND]!==activeBrand)continue;const label=family(r),k=normalize(label);if(!k)continue;families.set(k,label);}
   for(const item of mtPool){const r=item.row;if(r[F.BRAND]!==activeBrand)continue;const label=family(r),k=normalize(label);if(k&&!families.has(k))families.set(k,label);}
-  for(const p of commercial){if(p.brand!==activeBrand)continue;const k=normalize(p.family);if(k&&!families.has(k))families.set(k,p.family);}
+  for(const p of commercial){if((window.RindelabIdentity?.brand(p.brand)||normalize(p.brand))!==(window.RindelabIdentity?.brand(activeBrand)||normalize(activeBrand)))continue;const k=normalize(p.family);if(k&&!families.has(k))families.set(k,p.family);}
   const items=[...families].sort((a,b)=>a[1].localeCompare(b[1],'es',{numeric:true})).map(([value,label])=>({value,label}));
   setOptions('model',items,'Todos los modelos');modelSelect.disabled=!items.length;
  }
@@ -861,6 +866,7 @@ $('sort').addEventListener('change',()=>{ensureCostSortCycle();render();});
 
 for(const id of ['gasPrice','dieselPrice','annualKm'])$(id).addEventListener('change',refreshEnergyViews);
 window.addEventListener('rindelab:prices-ready',()=>{choices();if(submitted)render();if($('compareDialog').open)renderComparisonContent();});
+window.addEventListener('rindelab:market-ready',()=>{choices();if(submitted)render();});
 document.querySelectorAll('[data-rinde-explore]').forEach(button=>button.addEventListener('click',()=>{
  if(!all.length)return;
  for(const id of ['query','brand','model','bodytype','cycle','year'])$(id).value='';

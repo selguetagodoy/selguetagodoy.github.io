@@ -2851,6 +2851,78 @@ const licensed=[
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
  }
 ];
+// Lote de fotografías Commons de modelos nuevos; imágenes referenciales, no versiones exactas.
+const additionalLicensed20261021=[
+  {
+    "brand": "Subaru",
+    "pattern": "\\b(?:ALL\\s+NEW\\s+)?TRAILSEEKER\\b",
+    "tech": "EV",
+    "from": "2026",
+    "to": "2027",
+    "file": "Subaru Trailseeker Limited AWD (2026) (55213484063).jpg",
+    "model": "Subaru Trailseeker (fotografía referencial)",
+    "author": "Charles from Port Chester, New York",
+    "license": "CC0",
+    "localSrc": "./images/commons/rindelab-subaru-trailseeker-licensed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Subaru_Trailseeker_Limited_AWD_(2026)_(55213484063).jpg",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  {
+    "brand": "BYD",
+    "pattern": "\\bSEALION[\\s-]*7\\b",
+    "tech": "EV",
+    "from": "2025",
+    "to": "2027",
+    "file": "BYD Sealion 7 Performance AWD Shark Grey.jpg",
+    "model": "BYD Sealion 7 (fotografía referencial)",
+    "author": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "localSrc": "./images/commons/rindelab-byd-sealion-7-licensed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_7_Performance_AWD_Shark_Grey.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "brand": "Honda",
+    "pattern": "\\bZR[\\s-]*V\\b",
+    "tech": "HEV",
+    "from": "2023",
+    "to": "2027",
+    "file": "Honda ZR-V e-HEV IAA 2023 1X7A0542.jpg",
+    "model": "Honda ZR-V (fotografía referencial)",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "localSrc": "./images/commons/rindelab-honda-zr-v-licensed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Honda_ZR-V_e-HEV_IAA_2023_1X7A0542.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bQ5\\s+SPORTBACK\\b",
+    "from": "2025",
+    "to": "2027",
+    "file": "Audi Q5 Sportback GU DSC 9268.jpg",
+    "model": "Audi Q5 Sportback (fotografía referencial)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "localSrc": "./images/commons/rindelab-audi-q5-sportback-licensed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_Q5_Sportback_GU_DSC_9268.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "brand": "MG",
+    "pattern": "\\b(?:MG\\s*)?S5\\b",
+    "tech": "EV",
+    "from": "2025",
+    "to": "2027",
+    "file": "MGS5 EV DSC 2703.jpg",
+    "model": "MG S5 EV (fotografía referencial)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "localSrc": "./images/commons/rindelab-mg-s5-ev-licensed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MGS5_EV_DSC_2703.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  }
+];
 const licenseUrls={
  'CC0 1.0':'https://creativecommons.org/publicdomain/zero/1.0/',
  'CC BY 3.0':'https://creativecommons.org/licenses/by/3.0/',
@@ -2860,7 +2932,7 @@ const licenseUrls={
 };
 const commonsFile=p=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file.replace(/ /g,'_'))+'?width=720';
 const commonsSource=p=>'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(p.file.replace(/ /g,'_'));
-const entries=localEntries.concat(licensed.map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 function find(row,F){
  const brand=String(row[F.BRAND]||''),model=String(row[F.MODEL]||''),tech=String(row[F.TECH]||''),year=String(row[F.DATE]||'').slice(0,4);

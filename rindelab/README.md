@@ -1,3 +1,11 @@
+# Actualización 21/10/2026 — redes de distribución y fotografías verificadas
+
+La búsqueda comercial incorpora un snapshot de **301 publicaciones identificadas como vehículos nuevos** (107 Pompeyo Carrasco y 194 Salazar Israel), cada una con enlace de concesionaria. De ellas, **98 publicaciones de Pompeyo** presentan explícitamente un precio etiquetado «Precio lista». No se importaron importes con bonos de Salazar como precios de lista. El cruce contra las 1.504 referencias anteriores encuentra **108 denominaciones sin coincidencia textual de familia**: son candidatos a conciliar, no 108 vehículos inequívocamente nuevos ni stock asegurado. El archivo fuente es `data/dealer-new-models-20261021.json` y el informe reproducible se mantiene en `sii/AMPLIACION-OFERTA-CHILE-20261021.md`.
+
+Se añadieron **5 fotografías nuevas con licencia y atribución de Wikimedia Commons** (Subaru Trailseeker, BYD Sealion 7, Honda ZR-V, Audi Q5 Sportback y MG S5 EV), elevando la biblioteca a **205 referencias**, sin atribuir imágenes a versiones exactas. El catálogo comercial independiente puede presentar modelos sin precio documentado y los distingue expresamente; el comparador no les asigna cifras inexistentes.
+
+---
+
 # Actualización 20/10/2026 — integración de cobertura comercial
 
 Se integraron **1.504 precios comerciales** distribuidos en **80 marcas**, incluidos Hino, Fuso, Iveco, Uaz, ZNA y Nammi. El archivo `sii/commercial-2026.json` añade `priceType` (lista, desde, oferta, publicado) cuando se conoce, y `taxIncluded:false` para once precios Hino/Fuso publicados **+ IVA**, que se visualizan sin pretender ser precio final de compra; se deshabilitan los totales y cuotas para estas referencias en el cotizador. Las fichas Nammi 001 previamente almacenadas en Dongfeng se reasignaron a Nammi conservando el precio y la fuente. La vista de marcas agrupa alias históricos sin modificar el registro homologado 3CV. El documento `sii/CIERRE-PENDIENTES-COBERTURA-MARCAS-20261020.md` conserva las 124 denominaciones originales y los modelos sin fuente documentada.

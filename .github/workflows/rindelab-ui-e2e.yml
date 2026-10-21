@@ -64,6 +64,12 @@ jobs:
       - name: Validar identidad comercial, vigencia y fotografías
         run: node rindelab/tests/catalog-identity.cjs
 
+      - name: Verificar ampliación de concesionarias y licencias fotográficas
+        run: |
+          node scripts/tests/rindelab-dealer-expansion.test.cjs
+          node scripts/report-dealer-expansion.cjs --check
+          node --check rindelab/v2-photos.js
+
       - name: Verificar cola comercial y fotografía del catálogo nacional
         run: |
           node --check rindelab/market-catalog.js
@@ -140,6 +146,9 @@ jobs:
 
       - name: Verify commercial scope and price associations
         run: node rindelab/tests/catalog-ui.cjs
+
+      - name: Verify new dealers, prices, photos and two viewport sizes
+        run: node rindelab/tests/dealer-browse.cjs
 
       - name: Verify nationwide commercial catalog and five-model comparison
         run: node rindelab/tests/market-stages.cjs

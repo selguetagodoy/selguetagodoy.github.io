@@ -1,0 +1,76 @@
+name: RINDELAB — nuevas publicaciones 0 km
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 13 * * 1' # una vez por semana (UTC)
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar lector de fuentes públicas
+        run: python -m pip install --quiet requests beautifulsoup4
+      - name: Revisar nuevas publicaciones comerciales por fuente
+        run: python scripts/snapshot-dealer-models.py --output=dealer-live-snapshot.json
+      - name: Comparar contra registro publicado sin modificarlo
+        run: node scripts/audit-dealer-changes.cjs --live=dealer-live-snapshot.json --out=dealer-change-review.json
+      - name: Guardar documentos verificables
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rindelab-distribuidores-0km
+          path: |
+            dealer-live-snapshot.json
+            dealer-change-review.json
+          retention-days: 90
+          if-no-files-found: warn
+      - name: Abrir o actualizar incidencia para revisión
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs=require('fs');
+            const {owner,repo}=context.repo;
+            const title='RINDELAB — nuevas publicaciones comerciales por revisar';
+            const issues=await github.paginate(github.rest.issues.listForRepo,{owner,repo,state:'open',per_page:100});
+            const previous=issues.find(x=>!x.pull_request&&x.title===title);
+            const link='https://github.com/'+owner+'/'+repo+'/actions/runs/'+context.runId;
+            if(!fs.existsSync('dealer-change-review.json')){
+              core.warning('No hay informe completo de rastreo; revisar la ejecución antes de modificar la base.');
+              return;
+            }
+            const r=JSON.parse(fs.readFileSync('dealer-change-review.json','utf8'));
+            const newItems=r.newListingCandidates||[],changed=r.changedPublishedListPrices||[];
+            if(!newItems.length&&!changed.length){
+              core.info('No hay publicaciones nuevas ni precios de lista cambiados en esta revisión.');
+              return;
+            }
+            const show=(xs,render)=>xs.slice(0,30).map(render);
+            const body=[
+              '## Rastreo de concesionarios chilenos',
+              '',
+              '- Nuevas URL de modelo: **'+newItems.length+'**',
+              '- Cambios de precio explícitamente etiquetado como lista: **'+changed.length+'**',
+              '- Fuente: Pompeyo Carrasco y Salazar Israel',
+              '',
+              '### Nuevas publicaciones',
+              ...show(newItems,x=>'- '+x.brand+' '+x.family+' — '+x.retailer+' · '+x.source),
+              '',
+              '### Revisiones de precios de lista',
+              ...show(changed,x=>'- '+x.brand+' '+x.family+': '+(x.previous??'sin dato')+' → '+(x.new??'sin dato')+' · '+x.source),
+              '',
+              '[Informe completo del rastreo]('+link+')',
+              '',
+              '**Política:** no importar automáticamente precios bonificados ni inferir tecnología; comprobar la publicación vigente antes de añadir datos a RINDELAB.'
+            ].join('\n');
+            if(previous)await github.rest.issues.update({owner,repo,issue_number:previous.number,body});
+            else await github.rest.issues.create({owner,repo,title,body});
