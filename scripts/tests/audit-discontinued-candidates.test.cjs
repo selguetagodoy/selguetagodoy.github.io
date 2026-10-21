@@ -49,4 +49,21 @@ assert(!matches(['Mazda','Mazda6 2.5',null,null,null,null,null,null,'2026-02-01'
 const jukeF15={brand:'Nissan',match:'previous-generation-cutoff',familyPrefix:'Juke',homologationCutoff:'2018-12-31'};
 assert(matches(['Nissan','Juke (F15) 1.6',null,null,null,null,null,null,'2015-04-02','J1'],jukeF15));
 assert(!matches(['Nissan','Juke eléctrico 2027',null,null,null,null,null,null,'2026-01-01','J2'],jukeF15));
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'../..');
+const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const manifest=load('vehiculos/data/manifest.json');
+const all=manifest.files.flatMap(p=>load('vehiculos/'+p)).filter(r=>r[8]<=manifest.published);
+const current=load('rindelab/sii/model-lifecycle-2026.json');
+assert.equal(all.length,8053);
+assert.equal(current.models.length,90);
+const latest=current.models.slice(-9),counts=[27,6,13,7,3,1,1,5,3];
+const seen=new Set();
+latest.forEach((item,index)=>{
+ const rows=all.filter(r=>matches(r,item));
+ assert.equal(rows.length,counts[index],item.brand+' '+item.model+' con correspondencia 3CV incorrecta');
+ rows.forEach(r=>{assert(!seen.has(r[9]),'El mismo código fue asignado dos veces dentro del lote 7');seen.add(r[9])});
+});
+assert.equal(seen.size,66,'El séptimo lote debe vincular exactamente 66 códigos únicos');
+console.log('OK: lote 7, 9 casos y 66 códigos 3CV conciliados');
 console.log('OK: alias, versiones vigentes, corte temporal, candidatos sin baja automática');
