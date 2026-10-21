@@ -28,7 +28,7 @@ const compounds=[
  /^COROLLA CROSS\b/,/^GR COROLLA\b/,/^YARIS CROSS\b/,
  /^CRETA GRAND\b/,/^BRONCO SPORT\b/,/^MUSTANG MACH E\b/,
  /^S PRESSO\b/,/^S CROSS\b/,/^NEW BEETLE\b/,
- /^C4 CACTUS\b/,/^K3 CROSS\b/,/^CS 35 (?:PLUS|MAX)\b/,
+ /^C4 CACTUS\b/,/^SPARK EUV\b/,/^K3 CROSS\b/,/^CS 35 (?:PLUS|MAX)\b/,
  /^CS 55 PLUS\b/,/^JOLION MAX\b/,/^TANK [0-9]+\b/,
  /^HAVAL H[0-9]+\b/,/^HAVAL JOLION\b/,/^ORA 03\b/
 ];
