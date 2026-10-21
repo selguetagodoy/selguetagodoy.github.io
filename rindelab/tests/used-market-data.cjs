@@ -8,9 +8,9 @@ assert.equal(data.schemaVersion,1);
 assert.equal(data.records.length,270,'Los dos lotes comerciales deben conservar los 270 registros');
 const rows=data.records,unique=new Set();const bySource={};
 const held=rows.filter(r=>r.qualityStatus==='held-for-manual-review');
-assert.deepEqual(held.map(r=>r.brandSlug+'|'+r.modelSlug+'|'+r.year).sort(),['audi|r8|2016','bmw|i8|2016']);
+assert.deepEqual(held.map(r=>r.brandSlug+'|'+r.modelSlug+'|'+r.year).sort(),['audi|r8|2016','bmw|i8|2016','suzuki|kizashi|2015']);
 assert(held.every(r=>r.qualityNote?.length>30));
-assert.equal(rows.filter(r=>!r.qualityStatus).length,268);
+assert.equal(rows.filter(r=>!r.qualityStatus).length,267);
 for(const r of rows){
  const key=r.source+'|'+r.brandSlug+'|'+r.modelSlug+'|'+r.year;
  assert(!unique.has(key),'Duplicate source/model/year '+key);unique.add(key);
