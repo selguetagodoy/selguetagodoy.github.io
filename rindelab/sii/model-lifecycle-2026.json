@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "market": "Chile",
-  "checkedAt": "2026-10-20",
+  "checkedAt": "2026-10-21",
   "semantics": "Estado de la oferta oficial chilena de vehículos nuevos; no implica inexistencia de unidades de remanente o usados ni el cese de fabricación mundial. Para Fiesta, EcoSport, Camaro y Cruze se documenta además el fin de producción y/o la salida de la oferta chilena; no descarta unidades residuales ya inscritas.",
-  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente.",
+  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente. Cuarto lote: normalización por familia, prefijos inequívocos y cierre de generación para i3 original, Orlando, Clio y XV. No se infiere un recuento nuevo de fichas históricas 3CV sin ejecutar el cruce completo del origen oficial.",
   "models": [
     {
       "brand": "Suzuki",
@@ -366,7 +366,240 @@
       "sourceUrl": "https://noticias.autocosmos.cl/2021/06/16/vuela-alto-10-autos-que-se-despiden-de-nuestro-mercado",
       "manufacturerCurrentCatalogUrl": "https://toyota.cl/",
       "familyPrefix": "Corolla"
+    },
+    {
+      "brand": "Audi",
+      "model": "TT",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Audi comercializó en Chile el lote final TT S; fabricación concluida en noviembre de 2023. No afecta otros Audi deportivos.",
+      "sourceDate": "2022-01-25",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/01/25/audi-trae-a-chile-la-ultima-partida-del-coupe-tt"
+    },
+    {
+      "brand": "Audi",
+      "model": "R8",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Deportivos R8 de generaciones concluidas; modelo de producción terminada. No afecta TT ni RS de otras familias.",
+      "sourceDate": "2024-01-03",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/01/03/estos-son-algunos-de-los-autos-que-dejaron-de-fabricarse-en-2023"
+    },
+    {
+      "brand": "BMW",
+      "model": "i3 hatchback (primera generación)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "Solo i3 urbano hatchback/REX original hasta 2022. El i3 sedán Neue Klasse presentado en 2026 es una familia/generación diferente, no se marca como retirado.",
+      "sourceDate": "2022-07-01",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/07/01/bmw-despide-al-revolucionario-i3-de-las-lineas-de-ensamblaje",
+      "familyPrefix": "i3",
+      "homologationCutoff": "2022-12-31",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2026/03/18/bmw-i3-2027-el-comienzo-de-una-nueva-era"
+    },
+    {
+      "brand": "BMW",
+      "model": "i8",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Deportivo híbrido enchufable i8 finalizó producción en 2020; no confundir con i4 ni iX.",
+      "sourceDate": "2020-03-12",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/03/12/el-bmw-i8-se-despide-dejando-su-huella"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Sonic",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Sonic sedán y hatch dejaron de venderse en Chile antes de 2020; no se extrapola al Onix.",
+      "sourceDate": "2020-07-11",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/07/11/los-autos-sigue-muriendo-chevrolet-despide-al-sonic"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Orlando (primera generación)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "Orlando original comercializado en Chile desde 2011, desaparecido de producción; el relanzamiento chino no acredita nueva venta en Chile.",
+      "sourceDate": "2018-07-30",
+      "sourceUrl": "https://noticias.autocosmos.cl/2018/07/30/chevrolet-orlando-2019-resucita-en-china",
+      "familyPrefix": "Orlando",
+      "homologationCutoff": "2018-12-31"
+    },
+    {
+      "brand": "Citroen",
+      "model": "C4 Cactus",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "C4 Cactus reemplazado en estrategia mundial por C4; el C4 y sus derivados no son C4 Cactus.",
+      "sourceDate": "2020-05-12",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/05/12/citroen-prepara-un-c4-con-silueta-estilo-coupe",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2018/08/27/citroen-c4-cactus-2019-en-chile-un-nuevo-rol-para-el-hatchback-de-los-airbumps"
+    },
+    {
+      "brand": "Chrysler",
+      "model": "300C",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Se terminó producción del sedán 300C; clasificación limitada a 300C explícito, sin capturar denominaciones genéricas 300.",
+      "sourceDate": "2024-01-03",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/01/03/estos-son-algunos-de-los-autos-que-dejaron-de-fabricarse-en-2023",
+      "modelPrefixes": [
+        "300C",
+        "300 C"
+      ]
+    },
+    {
+      "brand": "Jaguar",
+      "model": "F-Type",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Deportivo F-Type coupé y convertible lanzado en Chile en 2013. Producción terminó en junio de 2024; no extender a Jaguar futuros.",
+      "sourceDate": "2024-06-17",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/06/17/jaguar-finaliza-la-produccion-del-f-type",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2013/08/10/jaguar-f-type-poderoso-biplaza-descapotable-inicia-venta-en-chile"
+    },
+    {
+      "brand": "Kia",
+      "model": "Rio",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Rio 4 sedán y hatchback fabricados para Chile dejaron paso a K3 sedán y K3 Cross en 2024; no clasificar K3 como descontinuado.",
+      "sourceDate": "2023-12-17",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/12/17/kia-finaliza-la-produccion-del-rio-en-mexico-y-comienza-la-era-k3",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2024/04/26/kia-k3-cross-en-chile-segmento-nuevo-para-la-marca-coreana"
+    },
+    {
+      "brand": "Kia",
+      "model": "Cerato",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Kia K3 sustituyó al Rio 4 y Cerato en la oferta chilena. El nombre Cerato/Forte fue sucedido por K4 en otros mercados; no retirar K3/K4.",
+      "sourceDate": "2024-02-28",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/02/28/kia-k3-2024-en-chile-un-sedan-que-propone",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2024/03/21/kia-revela-el-diseno-exterior-e-interior-del-nuevo-k4-2025"
+    },
+    {
+      "brand": "Kia",
+      "model": "Stinger",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Stinger vendido en Chile desde 2018, descontinuado tras una sola generación; no equiparar con EV6 GT.",
+      "sourceDate": "2022-12-22",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/12/22/kia-despide-al-espectacular-stinger-con-una-edicion-especial-limitada"
+    },
+    {
+      "brand": "Kia",
+      "model": "Optima",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "La denominación Optima fue reemplazada por K5 en una generación diferente; el Optima HEV tuvo venta documentada en Chile hasta 2018.",
+      "sourceDate": "2020-07-02",
+      "sourceUrl": "https://noticias.autocosmos.cl/2020/07/02/kia-adios-optima-bienvenido-k5-2021",
+      "additionalSourceUrl": "https://www.sernac.cl/portal/619/w3-article-84529.html"
+    },
+    {
+      "brand": "Lexus",
+      "model": "RC",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Coupés RC y RC F dejaron la línea productiva en 2025; se documentó su comercialización original en Chile.",
+      "sourceDate": "2026-01-02",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/01/02/los-modelos-que-nos-dijeron-adios-en-2025",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2015/06/16/nuevos-lexus-rc-y-rc-f-inician-venta-en-chile"
+    },
+    {
+      "brand": "Mazda",
+      "model": "CX-9",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Mazda introdujo CX-90 en Chile como reemplazo de CX-9; CX-90 no se etiqueta como descontinuado.",
+      "sourceDate": "2023-10-12",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/10/12/experiencia-e-2023-mazda-le-quita-el-velo-a-su-buque-insignia-el-nuevo-cx-90"
+    },
+    {
+      "brand": "Mini",
+      "model": "Clubman",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Familiar Clubman descontinuado al cerrar su ciclo de producto; MINI Countryman y Cooper son familias diferentes.",
+      "sourceDate": "2023-03-23",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/03/23/el-mini-clubman-se-despide-con-una-edicion-especial"
+    },
+    {
+      "brand": "Mitsubishi",
+      "model": "i-MiEV",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "El Mitsubishi i-MiEV fue vendido en Chile y ya no se comercializaba en 2019. Mantener su ficha histórica sin confundir con nuevos EV.",
+      "sourceDate": "2019-06-29",
+      "sourceUrl": "https://noticias.autocosmos.cl/2019/06/29/dongfeng-s50-ev-2019-es-el-electrico-de-mayor-autonomia-en-chile"
+    },
+    {
+      "brand": "Renault",
+      "model": "Clio (hasta quinta generación)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "La quinta generación del Clio se vendió en Chile hasta inicios de 2024; el Clio VI europeo no está acreditado como nueva oferta chilena.",
+      "sourceDate": "2025-09-09",
+      "sourceUrl": "https://noticias.autocosmos.cl/2025/09/09/iaa-munich-2025-renault-devela-la-sexta-generacion-del-clio",
+      "familyPrefix": "Clio",
+      "homologationCutoff": "2024-12-31"
+    },
+    {
+      "brand": "Subaru",
+      "model": "XV (denominación anterior)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "effectiveNote": "El Subaru XV pasó a la generación con nombre Crosstrek presentada en Chile en 2023; Crosstrek sigue vigente y no es descontinuado.",
+      "sourceDate": "2023-05-12",
+      "sourceUrl": "https://noticias.autocosmos.cl/2023/05/12/subaru-destapa-en-chile-al-nuevo-crosstrek-2023",
+      "familyPrefix": "XV",
+      "homologationCutoff": "2023-12-31"
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Beetle",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Escarabajo moderno Beetle/New Beetle terminó producción en 2019; no afecta Volkswagen Tera, Golf o Taos.",
+      "sourceDate": "2018-09-14",
+      "sourceUrl": "https://noticias.autocosmos.cl/2018/09/14/volkswagen-beetle-se-despide-con-una-edicion-final",
+      "modelPrefixes": [
+        "Beetle",
+        "New Beetle"
+      ]
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Scirocco",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Scirocco III se comercializó en Chile hasta 2020, agotadas las existencias tras su descontinuación; no extrapolar al Golf.",
+      "sourceDate": "2024-05-14",
+      "sourceUrl": "https://noticias.autocosmos.cl/2024/05/14/volkswagen-scirocco-cumple-50-anos"
     }
   ],
-  "methodVersion": 2
+  "methodVersion": 3
 }
