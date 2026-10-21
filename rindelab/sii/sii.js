@@ -130,6 +130,7 @@ async function openLookup(section,row,family){
   if(found)brand.value=found.name;
   options(year,Array.from({length:52},(_,i)=>({label:String(2026-i),value:String(2026-i)})),'Selecciona año');
   const stored=getStored(row);if(stored&&stored.entry[1])year.value=String(stored.entry[1]);
+  else {const chosen=window.RindelabUsed?.selectedYear?.(row[0],family);if(chosen&&[...year.options].some(o=>o.value===String(chosen)))year.value=String(chosen);}
   query.value=family||'';
   area.querySelector('#siiSearch').addEventListener('click',()=>lookup(area,index,row));
  }catch(e){area.textContent='No se pudo cargar la base SII: '+e.message+'. Puedes utilizar el enlace de consulta oficial.'}
