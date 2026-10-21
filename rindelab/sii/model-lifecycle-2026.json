@@ -3,7 +3,7 @@
   "market": "Chile",
   "checkedAt": "2026-10-21",
   "semantics": "Estado de la oferta oficial chilena de vehículos nuevos; no implica inexistencia de unidades de remanente o usados ni el cese de fabricación mundial. Para Fiesta, EcoSport, Camaro y Cruze se documenta además el fin de producción y/o la salida de la oferta chilena; no descarta unidades residuales ya inscritas.",
-  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente. Cuarto lote: normalización por familia, prefijos inequívocos y cierre de generación para i3 original, Orlando, Clio y XV. No se infiere un recuento nuevo de fichas históricas 3CV sin ejecutar el cruce completo del origen oficial. Quinto lote con evidencia primaria de cese comercial de la marca Infiniti en Chile y fichas de modelos históricos de Volvo; se preservan variantes posteriores y no se etiqueta Borgward BX5/BX7 porque nunca se comercializaron oficialmente pese a estar homologados.",
+  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente. Cuarto lote: normalización por familia, prefijos inequívocos y cierre de generación para i3 original, Orlando, Clio y XV. No se infiere un recuento nuevo de fichas históricas 3CV sin ejecutar el cruce completo del origen oficial. Quinto lote con evidencia primaria de cese comercial de la marca Infiniti en Chile y fichas de modelos históricos de Volvo; se preservan variantes posteriores y no se etiqueta Borgward BX5/BX7 porque nunca se comercializaron oficialmente pese a estar homologados. Sexto lote: se incorporan 12 casos con antecedentes de marca o lanzamiento en Chile y cierre productivo/reemplazo verificable. IONIQ original se limita a prefijos AE; Zafira monovolumen y Journey 2007-2020 se acotan por fecha y no retiran familias posteriores.",
   "models": [
     {
       "brand": "Suzuki",
@@ -802,7 +802,149 @@
       "sourceDate": "2018-07-03",
       "effectiveNote": "El SERNAC documenta la comercialización chilena de Kizashi 2013-2017. El sedán no integra la oferta nueva actual de Suzuki Chile; su fabricación terminó y no debe confundirse con Dzire o Ciaz.",
       "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Opel",
+      "model": "Adam",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/es-es/opel/press/opel-lanzara-ocho-modelos-nuevos-o-renovados-hasta-2020",
+      "sourceDate": null,
+      "effectiveNote": "Opel confirmó la salida del Adam sin sucesor tras finalizar su vida comercial en 2019. Llegó oficialmente a Chile en 2014.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2014/09/27/opel-adam-estreno-oficial-en-chile",
+      "manufacturerCurrentCatalogUrl": "https://www.opel.cl/tools/brochures-price-lists.html"
+    },
+    {
+      "brand": "Opel",
+      "model": "Cascada",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/em-en/opel/press/opel-to-launch-eight-all-new-or-refreshed-models-by-2020",
+      "sourceDate": null,
+      "effectiveNote": "El comunicado de Opel confirma la cancelación del Cascada después de 2019 sin sustituto. El convertible tuvo preventa oficial en Chile en 2013.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2013/07/10/opel-cascada-inicia-pre-venta-en-chile",
+      "manufacturerCurrentCatalogUrl": "https://www.opel.cl/tools/brochures-price-lists.html"
+    },
+    {
+      "brand": "Opel",
+      "model": "Meriva",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/es-es/opel/press/la-planta-de-zaragoza-incrementa-un-6-su-produccion-1632576110",
+      "sourceDate": null,
+      "effectiveNote": "El fabricante informa que dejó de fabricar Meriva en marzo de 2017. Opel señala al Crossland X como sucesor; no se afecta Crossland.",
+      "additionalSourceUrl": "https://www.media.stellantis.com/es-es/opel/press/press-kit-familia-x-de-opel-aventurera-versatil-elegante-y-sobre-todo-de-exito",
+      "chileHistoricalSourceUrl": "https://noticias.autocosmos.cl/2013/05/19/opel-cumple-un-ano-de-su-reingreso-oficial-a-chile"
+    },
+    {
+      "brand": "Opel",
+      "model": "Insignia",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.autoscout24.es/informacion/noticias/fin-de-produccion-del-opel-insignia-en-2022/",
+      "sourceDate": null,
+      "effectiveNote": "La marca confirmó el cierre productivo en 2022. Su comercialización en Chile fue documentada por la renovación de 2014. Astra y Grandland no son sucesores equivalentes a esta familia.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2014/09/04/opel-insignia-2015-version-renovada-ya-esta-en-chile",
+      "manufacturerCurrentCatalogUrl": "https://www.opel.cl/tools/brochures-price-lists.html"
+    },
+    {
+      "brand": "Opel",
+      "model": "Antara",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.sernac.cl/portal/618/w3-article-4169.html",
+      "sourceDate": null,
+      "effectiveNote": "El SERNAC acredita la comercialización chilena del Antara entre noviembre de 2012 y mayo de 2015. La gama nueva de Opel Chile ya no contempla Antara; no se afecta Grandland o Mokka.",
+      "additionalSourceUrl": "https://www.opel.cl/tools/brochures-price-lists.html"
+    },
+    {
+      "brand": "Opel",
+      "model": "Zafira monovolumen anterior",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "sourceUrl": "https://www.media.stellantis.com/es-es/opel/press/nuevo-opel-zafira-life-el-modelo-de-referencia-llega-a-su-cuarta-generacion",
+      "sourceDate": null,
+      "effectiveNote": "Solo el Zafira monovolumen previo a 2019; la nueva línea Zafira Life utiliza otra base de vehículo y no queda descontinuada por esta regla.",
+      "familyPrefix": "Zafira",
+      "homologationCutoff": "2018-12-31",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2019/01/21/la-opel-zafira-2019-es-una-van-hecha-y-derecha"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "IONIQ original AE",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.hyundai.news/eu/articles/press-releases/hyundai-announces-end-of-production-for-first-ioniq-series.html",
+      "sourceDate": null,
+      "effectiveNote": "Hyundai confirma cese mundial de producción del IONIQ original en julio 2022; fue vendido en Chile en variantes EV e híbrida. Los IONIQ 5/6/9 de la nueva línea permanecen fuera de la regla.",
+      "modelPrefixes": [
+        "IONIQ AE"
+      ],
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2017/07/18/test-drive-hyundai-ioniq-ev-2017"
+    },
+    {
+      "brand": "Alfa Romeo",
+      "model": "MiTo",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/04/29/alfa-romeo-podria-resucitar-el-mito-en-formato-electrico",
+      "sourceDate": null,
+      "effectiveNote": "El MiTo original cerró su producción en 2018. En Chile tuvo lanzamiento oficial en 2010. Eventuales desarrollos eléctricos posteriores no acreditan una reedición comercial del MiTo.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2010/5/19/alfa-romeo-mito-ya-esta-en-chile"
+    },
+    {
+      "brand": "Dodge",
+      "model": "Journey (generación original)",
+      "match": "previous-generation-cutoff",
+      "status": "previous-generation-cl",
+      "statusLabel": "Generación anterior retirada",
+      "sourceUrl": "https://noticias.autocosmos.cl/2021/10/04/conoce-a-fondo-la-nueva-generacion-del-dodge-journey",
+      "sourceDate": null,
+      "effectiveNote": "El Journey original dejó de producirse y venderse en Chile durante 2020. La posterior generación comercializada en México bajo mismo nombre no puede tratarse como ese vehículo retirado.",
+      "familyPrefix": "Journey",
+      "homologationCutoff": "2020-12-31",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2020/07/06/vuela-alto-dodge-journey-y-grand-caravan-se-despiden-del-mercado"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "CLS",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.mercedes-benz.co.uk/passengercars/models/discontinued/cls.html",
+      "sourceDate": null,
+      "effectiveNote": "Mercedes-Benz señala que el CLS Coupé terminó de producirse en agosto de 2023. El sedán no se debe confundir con clase C, CLA, CLE o Clase E."
+    },
+    {
+      "brand": "Peugeot",
+      "model": "108",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.media.stellantis.com/it-it/peugeot/press/esce-di-scena-la-peugeot-108-la-piu-piccola-e-personalizzabile-auto-del-leone",
+      "sourceDate": null,
+      "effectiveNote": "Peugeot documenta la salida de su gama de la serie 108 en enero de 2022, sin una nueva generación. El 108 aparece en 3CV Chile; Peugeot 208 continúa como una familia diferente.",
+      "additionalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1605484/000160548423000020/stellantis-20221231.htm"
+    },
+    {
+      "brand": "Lexus",
+      "model": "GS",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://global.toyota/jp/newsroom/lexus/32231442.html",
+      "sourceDate": null,
+      "effectiveNote": "Toyota/Lexus anunció oficialmente el fin de fabricación del Lexus GS en agosto 2020. Engloba GS 200t, GS 350 y GS-F y excluye LS, ES e IS. Lexus GS se comercializó en Chile.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2016/07/19/el-lexus-gs-2016-llega-a-chile-en-tres-versiones"
     }
   ],
-  "methodVersion": 4
+  "methodVersion": 5
 }

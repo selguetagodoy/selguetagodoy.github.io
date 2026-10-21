@@ -792,7 +792,7 @@ async function init(){
   const additional=window.RindelabOfficialAPI.load(officialFiles,legacy);
   for(const row of additional)officialCodes.add(row[F.CODE]);
   all=legacy.concat(additional).map(cleanRow);
-  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos69');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
+  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos81');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
   $('statsOpen').disabled=false;
