@@ -59,7 +59,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  await check('Las 32 nuevas fotos locales tienen atribución y bytes íntegros',async()=>{
   const fs=require('node:fs');const path=require('node:path');const hash=require('node:crypto').createHash;
   const dir=path.join(__dirname,'../images/commons');const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
-  assert.equal(m.downloaded,96);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,96);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),100);
+  assert.equal(m.downloaded,146);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,146);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),150);
   for(const entry of m.results){assert(entry.source.startsWith('https://commons.wikimedia.org/'));assert(entry.author);assert(entry.license);
    const bytes=fs.readFileSync(path.join(__dirname,'..',entry.path.slice(2)));
    assert.equal(bytes.length,entry.bytes);assert.equal(hash('sha256').update(bytes).digest('hex'),entry.sha256);}
@@ -82,6 +82,15 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert(mismatch?.model.includes('911'));
   const countryman=await p.evaluate(()=>window.RindelabPhotos.find(['Mini','Countryman Cooper S','Bencina','','','','','','2025-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8})?.model);
   assert.equal(countryman,'Mini Countryman');
+ });
+ await check('150 referencias: fotos locales de eléctricos, SUV y nuevos modelos',async()=>{
+  const targets=[['Nissan','X-Trail 2.5','Bencina','2025-01-01'],['MG','S5 EV','EV','2025-01-01'],
+    ['Hyundai','Inster EV','EV','2025-01-01'],['Kia','Niro HEV','HEV','2025-01-01'],
+    ['Peugeot','408 1.6','Bencina','2024-01-01'],['Jeep','Commander Limited','Bencina','2025-01-01']];
+  const found=await p.evaluate(targets=>targets.map(([brand,model,tech,date])=>window.RindelabPhotos.find([brand,model,tech,'','','','','',date],{BRAND:0,MODEL:1,TECH:2,DATE:8})?.src||null),targets);
+  assert(found.every(src=>src?.startsWith('./images/commons/')),JSON.stringify(found));
+  const wrong=await p.evaluate(()=>window.RindelabPhotos.find(['Ford','Transit Courier','','','','','','','2024-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8}));
+  assert.equal(wrong,null,'No asociar foto de Ford Transit a Ford Transit Courier');
  });
  await check('El escenario desplegable mantiene las tarifas y cálculos originales',async()=>{
   await p.locator('#supuestos').evaluate(el=>el.open=true);
