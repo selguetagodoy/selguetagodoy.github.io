@@ -1,0 +1,51 @@
+name: RINDELAB - triaje historico masivo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 12 * * 1"
+  pull_request:
+    paths:
+      - "scripts/audit-discontinued-candidates.cjs"
+      - "scripts/tests/audit-discontinued-candidates.test.cjs"
+      - "vehiculos/data/**"
+      - "rindelab/sii/commercial-2026.json"
+      - "rindelab/sii/model-lifecycle-2026.json"
+      - ".github/workflows/rindelab-discontinued-triage.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit-discontinued-candidates.cjs"
+      - "scripts/tests/audit-discontinued-candidates.test.cjs"
+      - "vehiculos/data/**"
+      - "rindelab/sii/commercial-2026.json"
+      - "rindelab/sii/model-lifecycle-2026.json"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validar sintaxis y alcance seguro
+        run: |
+          node --check scripts/audit-discontinued-candidates.cjs
+          node scripts/tests/audit-discontinued-candidates.test.cjs
+      - name: Cruzar 3CV historico, precios y clasificaciones documentadas
+        run: |
+          node scripts/audit-discontinued-candidates.cjs --json=discontinued-triage.json --md=discontinued-triage.md
+          node -e "const r=require('./discontinued-triage.json');if(r.summary.valid3cvRecords!==8053||r.summary.priceReferences<1504||r.summary.knownLifecycleCases<52||r.candidates.length<150)process.exit(1)"
+      - name: Publicar bandeja de revision como artefacto privado del flujo
+        uses: actions/upload-artifact@v4
+        with:
+          name: rindelab-triaje-modelos-historicos
+          path: |
+            discontinued-triage.json
+            discontinued-triage.md
+          retention-days: 90
