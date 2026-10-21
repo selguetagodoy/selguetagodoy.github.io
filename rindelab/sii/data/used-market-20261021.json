@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "observedAt": "2026-10-21",
   "kind": "published-used-asking-prices",
-  "notes": "AutoExplora median and p10/p90 of asking prices by family/year; not transaction or specific trim. Autofact observations are approximate min/max ranges and must not be interpreted as p10/p90 or a median.",
+  "notes": "AutoExplora median and p10/p90 of asking prices by family/year; not transaction or specific trim. Autofact observations are approximate min/max ranges and must not be interpreted as p10/p90 or a median. Dos observaciones materialmente anómalas se conservan para auditoría pero permanecen ocultas en el módulo público hasta revisión.",
   "records": [
     {
       "source": "Autofact",
@@ -57,7 +57,9 @@
       "highClp": 18540900,
       "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/audi/r8/2016",
       "observedAt": "2026-10-21",
-      "scope": "approximate-published-range"
+      "scope": "approximate-published-range",
+      "qualityStatus": "held-for-manual-review",
+      "qualityNote": "Rango publicado que presenta una anomalía material para el modelo; requiere comprobar identidad de versión y mercado antes de exhibir un precio."
     },
     {
       "source": "Autofact",
@@ -112,7 +114,9 @@
       "highClp": 64980000,
       "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/bmw/i8/2016",
       "observedAt": "2026-10-21",
-      "scope": "approximate-published-range"
+      "scope": "approximate-published-range",
+      "qualityStatus": "held-for-manual-review",
+      "qualityNote": "Rango publicado que presenta una anomalía material para el modelo; requiere comprobar identidad de versión y mercado antes de exhibir un precio."
     },
     {
       "source": "Autofact",
