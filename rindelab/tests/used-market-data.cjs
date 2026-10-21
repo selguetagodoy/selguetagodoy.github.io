@@ -29,7 +29,7 @@ for(const r of rows){
   assert(!('lowClp' in r)&&!('highClp' in r),'Do not rebrand bands');
  }else{
   assert.equal(r.source,'Autofact');assert.equal(u.hostname,'www.autofact.cl');
-  assert(r.lowClp>=1000000&&r.lowClp<r.highClp&&r.highClp<250000000);
+  assert(r.lowClp>=1000000&&r.highClp<250000000&&(r.lowClp<r.highClp||(r.lowClp===r.highClp&&r.qualityStatus==='held-for-manual-review')),'Rango no fiable sin retención '+key);
   assert(!('medianClp' in r)&&!('sampleSize' in r),'Do not invent median/sample');
  }
  bySource[r.source]=(bySource[r.source]||0)+1;
