@@ -97,5 +97,5 @@ const loaded=fetch(DATA).then(r=>{if(!r.ok)throw Error('No disponible');return r
  for(const arr of known.values())arr.sort((a,b)=>b.year-a.year);
  ready=true;
 }).catch(()=>{ready=true;known.clear()});
-window.RindelabUsed=Object.freeze({mount,selected,selectedYear,marketFor,marketLabel,ready:loaded,count:()=>available.length});
+window.RindelabUsed=Object.freeze({mount,selected,selectedYear,marketFor,marketLabel,ready:loaded,count:()=>available.length,records:()=>available.slice()});
 })();
