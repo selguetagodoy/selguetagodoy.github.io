@@ -21,8 +21,13 @@ function archivedModel(row){
  const brand=normalize(row[F.BRAND]),name=normalize(row[F.MODEL]);
  return discontinuedModels.find(item=>{
   if(normalize(item.brand)!==brand)return false;
-  const target=normalize(item.model);
-  if(item.match==='whole-family')return name===target||name.startsWith(target+' ');
+  const target=normalize(item.familyPrefix||item.model);
+  const sameFamily=name===target||name.startsWith(target+' ');
+  if(item.match==='whole-family')return sameFamily;
+  if(item.match==='model-prefix-exclusions')return sameFamily&&!(item.excludePrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
+  if(item.match==='model-prefix-list')return (item.modelPrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
+  if(item.match==='body-style-hatchback')return sameFamily&&(/hatchback| hb /.test(' '+name+' '));
+  if(item.match==='previous-generation-cutoff')return sameFamily&&String(row[F.DATE]||'')<=item.homologationCutoff;
   // Solo Jimny 5P, sin confundir Jimny 3P; se exige mención inequívoca de puertas.
   return item.match==='variant-only-manual'&&brand==='suzuki'&&name.startsWith('jimny ')&&/\b(5p|5d|5 puertas)\b/.test(name);
  })||null;
@@ -383,7 +388,7 @@ function render(){
   const flaggedEnergy=reviewedEnergyCodes.has(row[F.CODE]);
   const flaggedNote=flaggedEnergy?'<p class="energy-quality-note" role="note">Dato atípico pendiente de revisión documental: 10,6 km/kWh en NEDC. No equiparar con valores WLTP ni considerarlo el vehículo más eficiente del mercado.</p>':'';
   const status=archivedModel(row);
-  const lifecycleHTML=status?'<p class="vehicle-lifecycle">Modelo descontinuado en la oferta chilena · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
+  const lifecycleHTML=status?'<p class="vehicle-lifecycle">'+(status.status==='previous-generation-cl'?'Generación anterior retirada de la oferta chilena':'Modelo descontinuado en la oferta chilena')+' · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
   const offer=window.RindelabCommercial?.minimum(row,family(row));
   const offerHTML=offer?'<div class="rinde-commercial"><small>Precio comercial desde (familia, no versión homologada)</small> <strong>'+safe(money(offer.priceListClp))+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
@@ -787,7 +792,7 @@ async function init(){
   const additional=window.RindelabOfficialAPI.load(officialFiles,legacy);
   for(const row of additional)officialCodes.add(row[F.CODE]);
   all=legacy.concat(additional).map(cleanRow);
-  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261020-modelos8');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
+  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261020-modelos31');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
   $('statsOpen').disabled=false;

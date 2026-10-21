@@ -1805,7 +1805,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  assert(archive.every(x=>x.brand==='Suzuki'&&/^https:\/\//.test(x.statusSource)));
  assert(prices.filter(x=>x.brand==='Suzuki'&&x.family==='Jimny').every(x=>x.commercialStatus!=='discontinued-cl'));
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(lifecycle.models.length,8);
+ assert.equal(lifecycle.models.length,31);
  assert.equal(lifecycle.models.find(x=>x.model==='Jimny 5 puertas').match,'variant-only-manual');
  const quote=await browser.newPage({viewport:{width:390,height:844}});
  await quote.goto(base+'cotizador.html',{waitUntil:'networkidle'});
@@ -1828,7 +1828,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
 });
 await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por modelo, Golf no afectado',async()=>{
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- const added=lifecycle.models.filter(x=>['Ford','Chevrolet'].includes(x.brand));
+ const added=lifecycle.models.filter(x=>['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze'].includes(x.brand+' '+x.model));
  assert.equal(added.length,4);
  assert.deepEqual(added.map(x=>x.brand+' '+x.model).sort(),['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze'].sort());
  assert(added.every(x=>x.match==='whole-family'&&x.status==='discontinued-cl'&&/^https:\/\//.test(x.sourceUrl)));
@@ -1845,6 +1845,54 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  await p.fill('#query','Volkswagen Golf');await p.click('#searchButton');
  assert((await p.locator('.vehicle-card').count())>0);
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'No marcar la familia Golf completa como descontinuada; GTI regresó');
+ await p.close();
+});
+await test('Tercera revisión 3CV: 31 retirados sin falsos positivos en variantes vigentes',async()=>{
+ const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
+ assert.equal(data.models.length,31);
+ assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,31);
+ assert(data.models.every(x=>/^https:\/\//.test(x.sourceUrl)&&x.status&&x.match));
+ assert.equal(data.models.filter(x=>x.match==='previous-generation-cutoff').length,2);
+ const p=await browser.newPage();
+ await p.goto(base,{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ for(const name of ['Nissan March','Kia Soul','Ford Focus','Hyundai Veloster','Peugeot 508','Changan CX70','Mercedes-Benz X 350d']){
+  await p.fill('#query',name);await p.click('#searchButton');
+  assert((await p.locator('.vehicle-lifecycle').count())>0,name+' debe exhibir condición histórica');
+ }
+ await p.fill('#query','Cherokee Longitude');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-lifecycle').count())>0);
+ assert.match(await p.locator('.vehicle-lifecycle').first().textContent(),/Generación anterior retirada/);
+ await p.fill('#query','Jeep Grand Cherokee');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Grand Cherokee no es Cherokee retirado');
+ await p.fill('#query','Hyundai Accent BN7i');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Accent sedán nuevo debe mantenerse vigente');
+ await p.fill('#query','Chevrolet Spark EUV');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Spark EUV nuevo no equivale a Spark GT antiguo');
+ await p.fill('#query','Toyota Corolla Cross');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Corolla Cross no equivale a Corolla Sport HB');
+ await p.close();
+});
+await test('Directorio de modelos descontinuados: 31 casos, filtros y ancho móvil',async()=>{
+ const p=await browser.newPage({viewport:{width:390,height:844}});
+ await p.goto(base+'descontinuados.html',{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('31 modelos'),{timeout:30000});
+ assert.equal(await p.locator('#modelRows tr').count(),31);
+ await p.fill('#searchModel','Chevrolet Spark');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
+ assert.match(await p.locator('#modelRows').textContent(),/Spark antiguo/);
+ await p.fill('#searchModel','');
+ await p.selectOption('#statusFilter','previous-generation-cl');
+ assert.equal(await p.locator('#modelRows tr').count(),2);
+ await p.selectOption('#statusFilter','discontinued-cl');
+ assert.equal(await p.locator('#modelRows tr').count(),29);
+ assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),29);
+ const dimensions=await p.evaluate(()=>({w:window.innerWidth,doc:document.documentElement.scrollWidth}));
+ assert(dimensions.doc<=dimensions.w+3,'El directorio no debe desbordar la pantalla '+JSON.stringify(dimensions));
  await p.close();
 });
 await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
