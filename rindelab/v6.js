@@ -397,7 +397,7 @@ function render(){
   const flaggedEnergy=reviewedEnergyCodes.has(row[F.CODE]);
   const flaggedNote=flaggedEnergy?'<p class="energy-quality-note" role="note">Dato atípico pendiente de revisión documental: 10,6 km/kWh en NEDC. No equiparar con valores WLTP ni considerarlo el vehículo más eficiente del mercado.</p>':'';
   const status=archivedModel(row);
-  const lifecycleHTML=status?'<p class="vehicle-lifecycle">'+(status.status==='previous-generation-cl'?'Generación anterior retirada de la oferta chilena':'Modelo descontinuado en la oferta chilena')+' · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
+  const lifecycleHTML=status?'<p class="vehicle-lifecycle">'+(status.status==='previous-generation-cl'?'Generación anterior retirada de la oferta chilena':'Modelo descontinuado en la oferta chilena')+' · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a> · <a href="./usados.html?modo=discontinued&amp;modelo='+encodeURIComponent(row[F.BRAND]+' '+family(row))+'">Consultar valor usado ↗</a></p>':'';
   const offer=!status?window.RindelabCommercial?.minimum(row,family(row)):null;
   const offerCaption=offer?(offer.campaignExpired?'Referencia con campaña terminada · ': 'Precio publicado · ')+(offer.association==='same-tech'?'misma tecnología, versión sin verificar':'motorización de fuente no informada'):'';
   const offerHTML=offer?'<div class="rinde-commercial"><small>'+safe(offerCaption)+'</small> <strong>'+safe(money(offer.priceListClp))+(offer.taxIncluded===false?' + IVA':'')+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';

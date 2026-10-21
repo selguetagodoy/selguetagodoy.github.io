@@ -1,3 +1,13 @@
+# Autos usados y modelos descontinuados — corte 21/10/2026
+
+La página `usados.html` ahora da prioridad a los **90 casos de modelos o generaciones retiradas** documentados en `sii/model-lifecycle-2026.json`. El cruce estrictamente por familia de los precios observados encontró **47 casos con alguna referencia comercial vincuable** y **43 sin valor automático**; en 25 casos el retiro se limita a generación, versión, prefijo o carrocería y se evita asignar un precio genérico. El catálogo de valor usado crece de **26 a 106 observaciones de modelo/año/fuente**, de 76 denominaciones distintas: 20 medianas p10–p90 de AutoExplora (muestras de al menos 5 avisos) y 86 rangos aproximados publicados por Autofact (muestra no informada), con 80 referencias de Autofact verificadas en este lote. **No son tasaciones SII, ni precios de venta cerrada, ni se infieren precios para otros años.**
+
+La consulta separa modelos retirados, todos los precios documentados y retirados sin referencia; muestra el año exacto del precio, fuente, fecha y tamaño de muestra cuando está publicado. Las fichas históricas incluyen acceso directo a precios usados. La base oficial tributaria SII 2026 sigue independiente; para equiparar versiones debe seleccionarse manualmente año y registro SII. Un proceso semanal `rindelab-used-market-watch.yml` revisa las 20 fuentes AutoExplora mediante `scripts/watch-used-market.cjs` y prepara expediente de diferencias sin publicar nuevos valores automáticamente; no fuerza solicitudes a Autofact, cuyo sitio limita consultas automatizadas.
+
+**QA reproducible:** `node scripts/expand-used-market.cjs --check`; `node scripts/used-market-qa.cjs --check`; `node rindelab/tests/used-prices.cjs`. Matriz de los 90 casos y fuentes: `sii/USADOS-MERCADO-QA-20261021.md`.
+
+---
+
 # Conciliación multired y fotografías · 21/10/2026
 
 RINDELAB agrega dos redes adicionales, **Portillo (111 publicaciones documentadas de vehículos nuevos)** y **Gildemeister Retail (53 fichas comerciales del catálogo público)**, sumadas a las 301 publicaciones previas de Pompeyo Carrasco y Salazar Israel. Total: **465 observaciones comerciales con URL** en cuatro redes. Se incorporaron **29 equivalencias explícitas de denominación a nivel de familia** sin fundir generaciones ni motorizaciones. El catálogo comercial muestra **881 grupos de familia/tecnología**, frente a 837 antes de esta actualización; un grupo no representa necesariamente un modelo único nuevo.
