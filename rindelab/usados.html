@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RINDELAB | Valor comercial de autos usados en Chile</title>
+<meta name="description" content="Consulta referencias publicadas de autos usados en Chile por marca, modelo y año y la tasación fiscal SII 2026 sin confundir ambos valores.">
+<link rel="stylesheet" href="./v6.css?v=20261021-etapas234">
+<link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
+<link rel="stylesheet" href="./used-market.css?v=20261021-usados1">
+<style>
+.used-page{max-width:1100px;margin:auto;padding:1.5rem 1rem 4rem;color:#16374e;font-family:Inter,system-ui,Arial,sans-serif}
+.used-page h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.14;margin:1.3rem 0 1rem}
+.used-page p{line-height:1.58}
+.used-topnav{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
+.used-topnav a{color:#16425f}
+.used-topnav a:first-child{font-weight:850;text-decoration:none}
+.used-topnav a:first-child span{color:#1b8cad}
+.used-hero{padding:1.4rem 0 1rem}
+.used-subtitle{max-width:820px;color:#405f70}
+.used-filter-panel{padding:1rem 1.2rem;border:1px solid #d3e4ec;border-radius:12px;background:#f7fafc}
+.used-filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;align-items:end}
+.used-filters label{display:grid;gap:6px;font-size:.87rem;font-weight:600}
+.used-filters input,.used-filters select{padding:11px;min-height:44px;width:100%;font:inherit;border:1px solid #a8bdca;border-radius:7px;background:white;color:#14354c}
+.used-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:1rem}
+.used-result{border:1px solid #d3e2ea;border-radius:11px;padding:14px;min-width:0;background:white}
+.used-result h3{margin:0 0 8px;font-size:1.08rem}
+.used-result h3 small{font-size:.75em;font-weight:normal;color:#587084}
+.used-result-main{font-size:1.4rem;font-weight:850;color:#0d5e80}
+.used-result-metrics{font-size:.81rem;color:#45667c;line-height:1.55;margin:8px 0 14px}
+.used-result-links{display:flex;flex-wrap:wrap;gap:9px}
+.used-result-links a,.used-result-links button{border:1px solid #9ebaca;border-radius:7px;padding:9px 11px;background:#fff;color:#124765;min-height:42px;cursor:pointer;font:inherit;font-size:.81rem;text-decoration:none}
+.used-source-note{font-size:.81rem;color:#587084}
+.used-summary{margin-top:1rem;font-size:.93rem}
+.used-footnotes{margin:1.5rem 0 0;border-top:1px solid #d6e4ea;padding-top:1rem;font-size:.83rem}
+@media(max-width:760px){.used-grid{grid-template-columns:1fr}.used-filters{grid-template-columns:1fr 1fr}.used-filters label:first-child{grid-column:1/-1}}
+@media(max-width:390px){.used-filters{grid-template-columns:1fr}.used-filters label:first-child{grid-column:auto}}
+</style>
+<script src="./sii/sii.js?v=20261021-used-market" defer></script>
+<script src="./used-market.js?v=20261021-used-values1" defer></script>
+<script src="./usados.js?v=20261021-used-directory1" defer></script>
+</head><body>
+<main class="used-page">
+<nav class="used-topnav" aria-label="Navegación RINDELAB"><a href="./index.html">RINDE<span>LAB</span></a><a href="./index.html#buscador">Buscar fichas 3CV</a><a href="./cotizador.html">Precios de autos nuevos</a></nav>
+<section class="used-hero">
+<h1>¿Cuánto vale un auto usado?</h1>
+<p class="used-subtitle">Consulta referencias comerciales observadas en Chile por marca, modelo y año, incluidos vehículos y generaciones que ya no se venden nuevos. También puedes revisar la tasación fiscal del SII y el permiso de circulación, con la versión tributaria que selecciones.</p>
+<p class="used-source-note">Los precios de publicación no son transacciones cerradas. El mercado cambia, y la versión, estado, kilometraje y región influyen en el valor. Solo mostramos cifras con fuente y fecha documentadas.</p>
+</section>
+<section class="used-filter-panel" aria-label="Filtrar autos usados">
+<div class="used-filters"><label>Buscar marca o modelo<input id="usedQuery" type="search" placeholder="Ej. Nissan March, Ford Focus" autocomplete="off"></label><label>Marca<select id="usedBrand"><option value="">Todas las marcas</option></select></label><label>Año de fabricación<select id="usedYear"><option value="">Todos los años</option></select></label></div>
+</section>
+<div class="used-summary" id="usedCount" role="status" aria-live="polite">Cargando referencias verificadas…</div>
+<section class="used-grid" id="usedGrid" aria-label="Valores observados por modelo y año"></section>
+<button type="button" id="usedMore" class="button secondary" hidden style="margin-top:1rem">Mostrar más referencias</button>
+<p id="usedEmpty" hidden>Sin referencia comercial documentada para esos filtros. Prueba otro año o consulta el mercado en <a href="https://www.autoexplora.cl/precios" target="_blank" rel="noopener noreferrer">AutoExplora</a> y <a href="https://www.autofact.cl/valor-comercial-autos.href" target="_blank" rel="noopener noreferrer">Autofact</a>.</p>
+<section class="used-footnotes"><p><strong>Cómo leer los datos.</strong> AutoExplora informa mediana y rango p10–p90 sobre al menos cinco publicaciones. Autofact informa un rango comercial aproximado y no publica el tamaño de muestra en estas consultas. Ninguno representa una cotización de compra, valor asegurado ni una tasación fiscal. No interpolamos precios entre años.</p>
+<p>Fuente tributaria: <a href="https://www.sii.cl/servicios_online/1049-3526.html" target="_blank" rel="noopener noreferrer">Servicio de Impuestos Internos</a>. La base interna es el corte de tasaciones SII 2026; el año de fabricación y versión exacta deben seleccionarse manualmente.</p></section>
+</main>
+</body></html>

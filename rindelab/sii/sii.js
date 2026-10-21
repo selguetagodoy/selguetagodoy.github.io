@@ -43,6 +43,7 @@ async function show(row,family){
  '<div id="siiCommercial" class="sii-commercial"><small>Precio comercial nuevo</small><p>Buscando precios oficiales documentados…</p></div>'+
  '<div class="sii-links"><a href="'+siiUrl+'" target="_blank" rel="noopener noreferrer">Consulta oficial SII ↗</a><a href="'+siiFile+'" target="_blank" rel="noopener noreferrer">Planilla SII 2026 ↗</a></div>';
  detail.append(section);
+ window.RindelabUsed?.mount(section,row[0],family);
  const button=section.querySelector('#siiShowLookup');
  button.addEventListener('click',()=>openLookup(section,row,family));
  section.querySelector('#siiClear').addEventListener('click',()=>{
@@ -59,6 +60,51 @@ async function show(row,family){
  }else{
   dest.innerHTML='<small>Precio comercial NUEVO</small><p>No hay un precio de venta nuevo verificado para esta versión en el catálogo de RINDELAB. Puede estar descontinuada; no se infiere un precio desde la tasación SII.</p>';
  }
+}
+/* Acceso independiente para publicaciones comerciales sin ficha 3CV.
+ * La asignación SII requiere año y selección explícita de versión, nunca automática. */
+function commercialRow(brand,family,technology=''){
+ const row=Array(10).fill('');
+ row[0]=brand;row[1]=family;row[9]='COMERCIAL-'+clean(technology||'NO INFORMADA');
+ return row;
+}
+function getCommercialSelection(brand,family,technology=''){
+ return getStored(commercialRow(brand,family,technology))?.entry||null;
+}
+function openCommercial(brand,family,technology=''){
+ if(!brand||!family)return;
+ const row=commercialRow(brand,family,technology);
+ let dialog=$('siiCommercialDialog');
+ if(!dialog){
+  dialog=document.createElement('dialog');
+  dialog.id='siiCommercialDialog';dialog.className='modal sii-standalone-modal';
+  dialog.setAttribute('aria-labelledby','siiCommercialTitle');
+  dialog.style.width='min(860px,calc(100% - 20px))';
+  dialog.style.maxHeight='90vh';dialog.style.overflowY='auto';
+  document.body.append(dialog);
+ }
+ if(dialog.open)dialog.close();
+ const stored=getStored(row);
+ dialog.innerHTML='<div class="modal-head"><div><h2 id="siiCommercialTitle">Tasación y permiso SII 2026</h2><p>'+escapeHTML(brand+' '+family)+'</p></div>'+
+  '<button class="button secondary" id="siiCommercialClose" type="button">Cerrar ×</button></div>'+
+  '<section class="sii-section"><p class="sii-small">Selecciona el año de fabricación y la versión que coincida con el registro del SII. Una denominación comercial no acredita identidad con el código tributario ni con una homologación 3CV. Los vehículos nuevos de 2026 pueden requerir su factura según las reglas del SII.</p>'+
+  '<div id="siiCurrentValue">'+(stored?reportSelected(stored):'<p class="sii-pending">Sin versión tributaria elegida. La tasación fiscal no es el precio comercial del vehículo.</p>')+'</div>'+
+  '<div class="sii-actions"><button type="button" class="button primary" id="siiCommercialSearch">Buscar tasación 2026</button>'+
+  '<button type="button" class="button secondary" id="siiClear" '+(stored?'':'hidden')+'>Quitar selección</button></div>'+
+  '<div id="siiLookup" class="sii-lookup" hidden></div>'+
+  '<div class="sii-links"><a href="'+siiUrl+'" target="_blank" rel="noopener noreferrer">Consulta oficial SII ↗</a>'+
+  '<a href="'+siiFile+'" target="_blank" rel="noopener noreferrer">Planilla SII 2026 ↗</a></div></section>';
+ const section=dialog.querySelector('.sii-section');
+ window.RindelabUsed?.mount(section,brand,family);
+ dialog.querySelector('#siiCommercialClose').addEventListener('click',()=>dialog.close());
+ dialog.querySelector('#siiCommercialSearch').addEventListener('click',()=>openLookup(section,row,family));
+ dialog.querySelector('#siiClear').addEventListener('click',()=>{
+  remove(row);
+  section.querySelector('#siiCurrentValue').innerHTML='<p class="sii-pending">Sin versión SII seleccionada.</p>';
+  section.querySelector('#siiClear').hidden=true;
+ });
+ dialog.showModal();
+ openLookup(section,row,family);
 }
 function options(select,list,placeholder){
  select.replaceChildren(new Option(placeholder,''),...list.map(x=>new Option(x.label,x.value)));
@@ -84,6 +130,7 @@ async function openLookup(section,row,family){
   if(found)brand.value=found.name;
   options(year,Array.from({length:52},(_,i)=>({label:String(2026-i),value:String(2026-i)})),'Selecciona año');
   const stored=getStored(row);if(stored&&stored.entry[1])year.value=String(stored.entry[1]);
+  else {const chosen=window.RindelabUsed?.selectedYear?.(row[0],family);if(chosen&&[...year.options].some(o=>o.value===String(chosen)))year.value=String(chosen);}
   query.value=family||'';
   area.querySelector('#siiSearch').addEventListener('click',()=>lookup(area,index,row));
  }catch(e){area.textContent='No se pudo cargar la base SII: '+e.message+'. Puedes utilizar el enlace de consulta oficial.'}
@@ -129,6 +176,7 @@ function decorateComparison(vehicles){
  const tuples=vehicles.map(x=>x.row||x);
  const commercial=window.__rindelabCommercial||[];
  const rowDefs=[
+  ['Valor de mercado usado (año elegido)',r=>{const p=window.RindelabUsed?.selected(r[0],window.RindelabSII.family?.(r)||String(r[1]).split(' ')[0]);return p?window.RindelabUsed.marketLabel(p):'Sin año/precio de usado seleccionado'}],
   ['Tasación fiscal SII 2026',r=>{const o=getStored(r);return o?clp(o.entry[5]):'Seleccionar versión SII en ficha'}],
   ['Permiso de circulación 2026',r=>{const o=getStored(r);return o?clp(o.entry[6]):'Seleccionar versión SII en ficha'}],
   ['Precio comercial nuevo (desde)',r=>{const m=commercialFor(r,window.RindelabSII.family?.(r)||String(r[1]).split(' ')[0],commercial);return m?clp(m.price)+' · por modelo':'Sin precio publicado verificado'}]
@@ -141,5 +189,5 @@ function decorateComparison(vehicles){
  }
 }
 loadCommercial().then(a=>{window.__rindelabCommercial=a});
-window.RindelabSII={show,decorateComparison};
+window.RindelabSII={show,decorateComparison,openCommercial,getCommercialSelection};
 })();
