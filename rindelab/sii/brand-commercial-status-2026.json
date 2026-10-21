@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-20",
+  "market": "Chile",
+  "scope": "Comercialización de vehículos nuevos; clasificación de marca, no condición de cada vehículo ni producción global.",
+  "methodology": "Un registro 3CV histórico y la ausencia de precio no acreditan por sí solos descontinuación. Solo las marcas con fuente explícita se categorizan 'Descontinuado en Chile'. La ausencia de una marca en este archivo implica vigencia no verificada, no cese.",
+  "statuses": {
+    "Infiniti": {
+      "status": "discontinued-cl",
+      "label": "Venta nueva descontinuada en Chile",
+      "sourceName": "INFINITI Chile (fabricante)",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "evidence": "La venta de vehículos nuevos ha cesado en Chile. Mantiene servicio y mantenimiento a propietarios.",
+      "checkedAt": "2026-10-20"
+    }
+  }
+}
