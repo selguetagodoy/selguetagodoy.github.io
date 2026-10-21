@@ -1,10 +1,9 @@
-# RINDELAB — archivos fotográficos con atribución
+# RINDELAB â€” archivos fotogrÃ¡ficos con atribuciÃ³n
 
-Fotos locales Commons: 146 + 4 anteriores = 150 referencias.
+Fotos locales Commons: 196 + 4 anteriores = 200 referencias.
 Licencia, autor, fuente, archivo y SHA-256 disponible en manifest.json.
-Imágenes referenciales del modelo; no certifican la versión exacta.
+ImÃ¡genes referenciales del modelo; no certifican la versiÃ³n exacta.
 
-Candidatos descartados: 2
+Candidatos descartados: 1
 
-- Nissan Navara: Sin licencia y autor verificables: Public domain / Bull-Doser
 - Ford Ranger Raptor: Sin licencia y autor verificables: CC BY-SA 4.0 / 
