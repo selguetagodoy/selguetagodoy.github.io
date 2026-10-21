@@ -5,8 +5,12 @@ const data=require('../sii/data/used-market-20261021.json');
 const life=require('../sii/model-lifecycle-2026.json');
 const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 assert.equal(data.schemaVersion,1);
-assert(data.records.length>=178,'Catalog observation count dropped');
+assert.equal(data.records.length,270,'Los dos lotes comerciales deben conservar los 270 registros');
 const rows=data.records,unique=new Set();const bySource={};
+const held=rows.filter(r=>r.qualityStatus==='held-for-manual-review');
+assert.deepEqual(held.map(r=>r.brandSlug+'|'+r.modelSlug+'|'+r.year).sort(),['audi|r8|2016','bmw|i8|2016']);
+assert(held.every(r=>r.qualityNote?.length>30));
+assert.equal(rows.filter(r=>!r.qualityStatus).length,268);
 for(const r of rows){
  const key=r.source+'|'+r.brandSlug+'|'+r.modelSlug+'|'+r.year;
  assert(!unique.has(key),'Duplicate source/model/year '+key);unique.add(key);
