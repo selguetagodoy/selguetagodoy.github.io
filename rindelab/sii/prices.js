@@ -4,7 +4,7 @@ const api=window.RindelabSII,C=window.RindelabIdentity;if(!api||!C)return;
 const originalShow=api.show,originalCompare=api.decorateComparison;
 const clp=n=>Number.isFinite(n)?'$'+Math.round(n).toLocaleString('es-CL'):'Sin precio';
 const displayPrice=p=>clp(p.priceListClp)+(p.taxIncluded===false?' + IVA':'');
-const priceKind=p=>p.priceType==='oferta'?'Oferta publicada':p.priceType==='desde'||p.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos';
+const priceKind=p=>p.priceType==='oferta'?'Oferta publicada':p.priceType==='desde'||p.version.startsWith('Precio desde')?'Precio desde publicado':p.priceType==='lista'?'Precio de lista acreditado':'Precio publicado · tipo sin acreditar';
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const makeIdentity=p=>norm([p.brand,p.family,p.version,p.modelYear||'N/A'].join(' '));
@@ -104,6 +104,7 @@ api.decorateComparison=function(vehicles){
 };
 window.RindelabCommercial={
  ready:catalog,
+ records:()=>loaded.slice(),
  selected,
  available:(row,family)=>match(row,family),
  hasReference:(row,family)=>C.familyRecords(byFamily,row,family).length>0,

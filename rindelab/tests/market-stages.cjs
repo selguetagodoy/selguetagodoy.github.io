@@ -1,0 +1,38 @@
+/* RINDELAB: fases 2-4, catálogo sin 3CV y comparación comercial responsable. */
+'use strict';
+const {chromium}=require('playwright'),assert=require('node:assert/strict');
+(async()=>{
+ const b=await chromium.launch(process.platform==='win32'?{channel:'chrome',headless:true}:{headless:true,args:['--no-sandbox']});
+ const page=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(process.env.RINDELAB_BASE_URL||'http://127.0.0.1:8765/rindelab/',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>!document.getElementById('searchButton').disabled,{timeout:90000}).catch(async e=>{console.log('DIAGNOSTIC',await page.evaluate(()=>({notice:document.querySelector('#filterHint')?.textContent,srcs:[...document.scripts].map(s=>s.src).slice(-3),market:!!window.RindelabMarket,commercial:!!window.RindelabCommercial,records:document.querySelector('#recordCount')?.textContent,ready:!document.querySelector('#searchButton')?.disabled})),errors);throw e;});
+ await page.selectOption('#catalogScope','commercial');
+ await page.fill('#query','Porsche');
+ await page.click('#searchButton');
+ assert.equal(await page.locator('.vehicle-card').count(),0,'El modo comercial mezcla fichas 3CV');
+ assert(await page.locator('.market-card').count()>1,'Catálogo comercial sin resultados');
+ assert(await page.locator('#commercialResultCount').textContent().then(x=>/familias/.test(x)));
+ const description=await page.locator('.market-card').first().textContent();
+ assert.match(description,/Sin rendimiento homologado vinculado/i);
+ const a=page.locator('.market-card [data-market-compare]');
+ await a.nth(0).click();await a.nth(1).click();
+ assert.equal(await page.locator('#commercialOpenCompare').isDisabled(),false);
+ await page.locator('#commercialOpenCompare').click();
+ assert(await page.locator('#commercialCompareDialog').evaluate(el=>el.open));
+ assert.equal(await page.locator('.market-compare-table thead th').count(),3);
+ assert.match(await page.locator('#commercialCompareContent').textContent(),/Sin correspondencia técnica certificada/);
+ await page.locator('#commercialShare').click();
+ assert.match(await page.locator('#commercialShareLink').inputValue(),/comerciales=/);
+ await page.locator('#commercialCloseCompare').click();
+ await page.selectOption('#catalogScope','priced');
+ await page.fill('#query','Porsche');await page.click('#searchButton');
+ assert(await page.locator('#results').isVisible());
+ await page.selectOption('#catalogScope','all');await page.click('#searchButton');
+ assert(await page.locator('#commercialResults').isHidden(),'El histórico no debe mezclar resultados comerciales');
+ const x=await page.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
+ assert(x.doc<=x.view+3,'Overflow móvil '+JSON.stringify(x));
+ assert.deepEqual(errors,[]);
+ console.log('PASS mercado comercial independiente, comparación 2/5, enlace, histórico y 390px');
+ await b.close();
+})().catch(e=>{console.error(e.stack);process.exit(1)});
