@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "observedAt": "2026-10-21",
   "kind": "published-used-asking-prices",
-  "notes": "AutoExplora median and p10/p90 of asking prices by family/year; not transaction or specific trim.",
+  "notes": "AutoExplora median and p10/p90 of asking prices by family/year; not transaction or specific trim. Autofact observations are approximate min/max ranges and must not be interpreted as p10/p90 or a median.",
   "records": [
     {
       "source": "AutoExplora",
@@ -263,6 +263,72 @@
       "medianKm": 61673,
       "sourceUrl": "https://www.autoexplora.cl/precios/chevrolet/onix/2022",
       "observedAt": "2026-10-21"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "march",
+      "year": 2018,
+      "lowClp": 5100000,
+      "highClp": 7400000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/march/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "nissan",
+      "modelSlug": "march",
+      "year": 2019,
+      "lowClp": 6824798,
+      "highClp": 8212360,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/nissan/march/2019",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "ford",
+      "modelSlug": "focus",
+      "year": 2017,
+      "lowClp": 6986608,
+      "highClp": 9746364,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/ford/focus/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "ford",
+      "modelSlug": "focus",
+      "year": 2018,
+      "lowClp": 8291502,
+      "highClp": 10646393,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/ford/focus/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "hyundai",
+      "modelSlug": "veloster",
+      "year": 2015,
+      "lowClp": 7739415,
+      "highClp": 9860475,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos.href/hyundai/veloster/2015",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "chevrolet",
+      "modelSlug": "spark-gt",
+      "year": 2020,
+      "lowClp": 5052500,
+      "highClp": 7527500,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/chevrolet/spark-gt/2020",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
     }
   ]
 }
