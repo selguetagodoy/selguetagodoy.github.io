@@ -80,7 +80,7 @@ function renderGroup(group){
   '<small>Publicación revisada '+safe(p.checkedAt||'sin fecha')+' · Sin rendimiento homologado vinculado a esta versión</small></div>'+
   '<div class="market-card-actions"><a class="button secondary" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">Fuente ↗</a>'+
   (p.dealerObserved?'':'<a class="button secondary" href="./cotizador.html?marca='+encodeURIComponent(group.brand)+'&modelo='+encodeURIComponent(group.family)+'">Ver versiones</a>')+
-  '<button type="button" class="button secondary" data-market-sii="'+safe(group.key)+'">Tasación y permiso SII</button>'+'<button type="button" class="button primary" data-market-compare="'+safe(group.key)+'" aria-pressed="'+selected+'">'+(selected?'Quitar de comparación':'Comparar compra +')+'</button></div>';
+  '<button type="button" class="button secondary" data-market-sii="'+safe(group.key)+'">Ver precio usado y tasación SII</button>'+'<button type="button" class="button primary" data-market-compare="'+safe(group.key)+'" aria-pressed="'+selected+'">'+(selected?'Quitar de comparación':'Comparar compra +')+'</button></div>';
  const photo=window.RindelabPhotos?.commercialNode(p);
  if(photo){const img=photo.querySelector('img');if(img){img.loading='lazy';}article.prepend(photo);}
  return article;
@@ -123,6 +123,7 @@ function comparison(){
  ['Precio publicado de referencia',x=>money(x.ref.priceListClp)+(x.ref.taxIncluded===false?' + IVA':'')],
  ['Tipo de precio',x=>x.ref.dealerObserved?(x.ref.priceListClp?'Lista publicada por familia, sin versión identificada':'No publicado como precio de lista'):(x.ref.priceType||'No acreditado')],
  ['Campaña documentada',x=>C.expired(x.ref)?'Finalizada; verificar':x.ref.sourceOfferEnd?'Hasta '+x.ref.sourceOfferEnd:'Sin fecha de término acreditada'],
+ ['Valor comercial usado (año seleccionado)',x=>{const p=window.RindelabUsed?.selected(x.brand,x.family);return p?window.RindelabUsed.marketLabel(p)+' · '+p.year+' · '+p.source:'Sin año/valor de usado seleccionado'}],
  ['Tasación fiscal SII 2026 (selección manual)',x=>{const r=window.RindelabSII?.getCommercialSelection?.(x.brand,x.family,x.tech);return r?money(r[5])+' · SII '+r[0]:'Sin versión SII seleccionada'}],
  ['Permiso de circulación 2026 (selección manual)',x=>{const r=window.RindelabSII?.getCommercialSelection?.(x.brand,x.family,x.tech);return r?money(r[6])+' · año fabricación '+r[1]:'Sin versión SII seleccionada'}],
  ['Referencias disponibles',x=>fmt(x.items.length)],
