@@ -36,10 +36,10 @@ function canonicalFamily(brand,family){
 }
 function match(row,family,items){
  const b=norm(row[0]),f=canonicalFamily(row[0],family);
- return items.filter(x=>norm(x.brand)===b&&canonicalFamily(x.brand,x.family)===f);
+ return items.filter(x=>x.commercialStatus!=='discontinued-cl'&&norm(x.brand)===b&&canonicalFamily(x.brand,x.family)===f);
 }
 function selected(row){
- try{const key=localStorage.getItem(storageKey(row));return loaded.find(x=>makeIdentity(x)===key)||null;}catch{return null;}
+ try{const key=localStorage.getItem(storageKey(row));return loaded.find(x=>x.commercialStatus!=='discontinued-cl'&&makeIdentity(x)===key)||null;}catch{return null;}
 }
 function persist(row,p){try{localStorage.setItem(storageKey(row),makeIdentity(p));}catch{}}
 function clear(row){try{localStorage.removeItem(storageKey(row));}catch{}}
@@ -113,7 +113,7 @@ window.RindelabCommercial={
    const items=match(row,family,loaded);if(!items.length)return null;
    return items.reduce((a,b)=>a.priceListClp<=b.priceListClp?a:b);
  },
- cleanPrice:record=>record&&record.taxIncluded!==false&&record.priceType!=='oferta'&&record.priceType!=='desde'&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
+ cleanPrice:record=>record&&record.commercialStatus!=='discontinued-cl'&&record.taxIncluded!==false&&record.priceType!=='oferta'&&record.priceType!=='desde'&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
  clp,
  ageWarning
 };
