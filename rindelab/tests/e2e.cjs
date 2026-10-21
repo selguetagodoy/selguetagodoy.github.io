@@ -1796,6 +1796,36 @@ await test('Filtros oficiales de octubre incluyen JIM Re-Max y Kia Sportage HEV'
  assert((await p.locator('.vehicle-card').count())>=2);
  await p.close();
 });
+await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas vigente',async()=>{
+ const prices=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/commercial-2026.json'),'utf8'));
+ assert.equal(prices.length,1504);
+ const archive=prices.filter(x=>x.commercialStatus==='discontinued-cl');
+ assert.equal(archive.length,3);
+ assert.deepEqual(archive.map(x=>x.family).sort(),['Baleno','S-PRESSO','grand vitara'].sort());
+ assert(archive.every(x=>x.brand==='Suzuki'&&/^https:\/\//.test(x.statusSource)));
+ assert(prices.filter(x=>x.brand==='Suzuki'&&x.family==='Jimny').every(x=>x.commercialStatus!=='discontinued-cl'));
+ const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
+ assert.equal(lifecycle.models.length,4);
+ assert.equal(lifecycle.models.find(x=>x.model==='Jimny 5 puertas').match,'variant-only-manual');
+ const quote=await browser.newPage({viewport:{width:390,height:844}});
+ await quote.goto(base+'cotizador.html',{waitUntil:'networkidle'});
+ await quote.fill('#quoteSearch','Suzuki Baleno');
+ await quote.waitForFunction(()=>document.querySelector('.quote-discontinued'));
+ assert.match(await quote.locator('.quote-discontinued').textContent(),/Descontinuado en Chile/);
+ assert.equal(await quote.locator('.quote-discontinued button').isDisabled(),true);
+ await quote.fill('#quoteSearch','Suzuki Jimny');
+ await quote.waitForFunction(()=>document.querySelector('.quote-version')?.textContent?.includes('Jimny'));
+ assert.equal(await quote.locator('.quote-discontinued').count(),0);
+ assert.equal(await quote.locator('.quote-version-actions button').first().isDisabled(),false);
+ await quote.close();
+ const p=await browser.newPage();
+ await p.goto(base,{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.fill('#query','Suzuki Baleno');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-lifecycle').count())>=1);
+ assert.match(await p.locator('.vehicle-lifecycle').first().textContent(),/descontinuado/i);
+ await p.close();
+});
 await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
