@@ -7,9 +7,17 @@ const money=x=>'$'+fmt(x);
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cap=x=>x.split(' ').map(w=>w.length<4&&/^\d+$/.test(w)?w:w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
 const display=p=>({brand:cap(p.brandSlug.replace(/-/g,' ')),model:cap(p.modelSlug.replace(/-/g,' '))});
-let all=[],filtered=[],count=18;
-function populate(){
- all=window.RindelabUsed.records().sort((a,b)=>a.brandSlug.localeCompare(b.brandSlug,'es')||a.modelSlug.localeCompare(b.modelSlug,'es')||b.year-a.year);
+let all=[],filtered=[],count=18,retired=new Map(),lifecycleReady=false;
+const isRetired=p=>retired.has(clean(p.brandSlug)+'|'+clean(p.modelSlug));
+function populate(lifecycle){
+ retired=new Map((lifecycle?.models||[])
+  .filter(x=>x.match==='whole-family'&&x.status==='discontinued-cl'&&x.sourceUrl?.startsWith('https://'))
+  .map(x=>[clean(x.brand)+'|'+clean(x.model),x]));
+ lifecycleReady=retired.size>0;
+ $('usedOnlyDiscontinued').disabled=!lifecycleReady;
+ if(!lifecycleReady)$('usedOnlyDiscontinued').checked=false;
+ all=window.RindelabUsed.records().sort((a,b)=>Number(isRetired(b))-Number(isRetired(a))||
+  a.brandSlug.localeCompare(b.brandSlug,'es')||a.modelSlug.localeCompare(b.modelSlug,'es')||b.year-a.year);
  const brands=[...new Set(all.map(x=>x.brandSlug))].sort((a,b)=>a.localeCompare(b,'es'));
  for(const b of brands)$('usedBrand').append(new Option(cap(b),b));
  const years=[...new Set(all.map(x=>x.year))].sort((a,b)=>b-a);
@@ -20,17 +28,19 @@ function populate(){
  render();
 }
 function render(){
- const query=clean($('usedQuery').value),brand=$('usedBrand').value,year=Number($('usedYear').value)||null;
- filtered=all.filter(x=>(!brand||x.brandSlug===brand)&&(!year||x.year===year)&&
+ const query=clean($('usedQuery').value),brand=$('usedBrand').value,year=Number($('usedYear').value)||null,onlyRetired=$('usedOnlyDiscontinued').checked;
+ filtered=all.filter(x=>(!brand||x.brandSlug===brand)&&(!year||x.year===year)&&(!onlyRetired||isRetired(x))&&
   (!query||clean(x.brandSlug.replace(/-/g,' ')+' '+x.modelSlug.replace(/-/g,' ')).includes(query)));
- $('usedCount').textContent=fmt(filtered.length)+' referencias observadas, por modelo y año · corte 21-10-2026';
+ $('usedCount').textContent=fmt(filtered.length)+' referencias observadas, por modelo y año'+(onlyRetired?' · solo familias descontinuadas acreditadas':'')+' · corte 21-10-2026';
  const list=$('usedGrid');list.replaceChildren();
  for(const [i,p] of filtered.slice(0,count).entries()){
   const x=display(p),card=document.createElement('article');card.className='used-result';
   const price=p.source==='AutoExplora'?money(p.medianClp):money(p.lowClp)+' – '+money(p.highClp);
   const description=p.source==='AutoExplora'?'Mediana · p10–p90: '+money(p.p10Clp)+' a '+money(p.p90Clp)+' · '+p.sampleSize+' avisos'+(p.medianKm?' · '+fmt(p.medianKm)+' km medianos':''):
     'Mínimo–máximo aproximado · muestra no informada';
+  const archived=retired.get(clean(p.brandSlug)+'|'+clean(p.modelSlug));
   card.innerHTML='<h3>'+esc(x.brand+' '+x.model)+' <small>'+p.year+'</small></h3>'+
+   (archived?'<p class="used-retired-status"><a href="'+esc(archived.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Fuera de la oferta chilena de autos nuevos · Ver antecedente ↗</a></p>':'')+
    '<div class="used-result-main">'+esc(price)+'</div>'+
    '<p class="used-result-metrics">'+esc(description)+'</p>'+
    '<p class="used-source-note">Fuente: '+esc(p.source)+' · consulta registrada '+esc(p.observedAt)+' · no precio de transacción</p>'+
@@ -49,6 +59,8 @@ $('usedGrid').addEventListener('click',e=>{
  window.RindelabSII?.openCommercial?.(x.brand,x.model);
 });
 $('usedMore').addEventListener('click',()=>{count+=18;render()});
-for(const id of ['usedQuery','usedBrand','usedYear'])$(id).addEventListener(id==='usedQuery'?'input':'change',()=>{count=18;render()});
-window.RindelabUsed?.ready.then(populate);
+for(const id of ['usedQuery','usedBrand','usedYear','usedOnlyDiscontinued'])$(id).addEventListener(id==='usedQuery'?'input':'change',()=>{count=18;render()});
+Promise.all([window.RindelabUsed?.ready,
+ fetch('./sii/model-lifecycle-2026.json').then(r=>{if(!r.ok)throw Error('Sin catálogo de ciclo de vida');return r.json()}).catch(()=>({models:[]}))
+]).then(([,lifecycle])=>populate(lifecycle));
 })();
