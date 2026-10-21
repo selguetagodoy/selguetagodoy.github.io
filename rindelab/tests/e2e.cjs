@@ -2289,7 +2289,7 @@ await test('Fuentes 3CV permanecen accesibles mediante aviso compacto',async()=>
  await p.locator('#sourceLegend summary').click();
  assert(await p.locator('#sourceLegend').evaluate(x=>x.open));
  assert.match(await p.locator('#sourceLegend').textContent(),/NEDC o WLTP/);
- assert.match(await p.locator('#sourceLegend').textContent(),/Homologaciones MTT pendientes/);
+ assert.match(await p.locator('#sourceLegend').textContent(),/Homologaciones y fichas oficiales/);
  assert.match(await p.locator('#sourceLegend').textContent(),/kilometraje seleccionado/);
  assert.equal(await p.locator('#sourceLegend a[href="./metodologia.html"]').count(),1);
  await p.close();
