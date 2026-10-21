@@ -3,7 +3,7 @@
   "market": "Chile",
   "checkedAt": "2026-10-21",
   "semantics": "Estado de la oferta oficial chilena de vehículos nuevos; no implica inexistencia de unidades de remanente o usados ni el cese de fabricación mundial. Para Fiesta, EcoSport, Camaro y Cruze se documenta además el fin de producción y/o la salida de la oferta chilena; no descarta unidades residuales ya inscritas.",
-  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente. Cuarto lote: normalización por familia, prefijos inequívocos y cierre de generación para i3 original, Orlando, Clio y XV. No se infiere un recuento nuevo de fichas históricas 3CV sin ejecutar el cruce completo del origen oficial.",
+  "matchingPolicy": "Se compara marca canónica y alcance exacto de familia, carrocería, prefijos o corte de generación. Una homologación antigua por sí sola nunca acredita retiro. Las fichas de generaciones anteriores no se extrapolan a sucesores: Jeep Grand Cherokee/Jeep Cherokee 2026, Spark EUV, Hyundai Accent sedán, Corolla sedán/Cross, Suzuki Jimny 3P, VW Golf GTI y VW Amarok continúan separados. Todo caso guarda la fuente. Cuarto lote: normalización por familia, prefijos inequívocos y cierre de generación para i3 original, Orlando, Clio y XV. No se infiere un recuento nuevo de fichas históricas 3CV sin ejecutar el cruce completo del origen oficial. Quinto lote con evidencia primaria de cese comercial de la marca Infiniti en Chile y fichas de modelos históricos de Volvo; se preservan variantes posteriores y no se etiqueta Borgward BX5/BX7 porque nunca se comercializaron oficialmente pese a estar homologados.",
   "models": [
     {
       "brand": "Suzuki",
@@ -599,7 +599,205 @@
       "effectiveNote": "Scirocco III se comercializó en Chile hasta 2020, agotadas las existencias tras su descontinuación; no extrapolar al Golf.",
       "sourceDate": "2024-05-14",
       "sourceUrl": "https://noticias.autocosmos.cl/2024/05/14/volkswagen-scirocco-cumple-50-anos"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "QX80",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "Infiniti Chile confirma el cese de la venta de vehículos nuevos en el país desde 2021; conserva solamente servicios a propietarios. El registro histórico corresponde al modelo QX80. No debe inferirse cese mundial de esta denominación.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "QX60",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "Infiniti Chile confirma el cese de la venta de vehículos nuevos en el país desde 2021; conserva solamente servicios a propietarios. El registro histórico corresponde al modelo QX60. No debe inferirse cese mundial de esta denominación.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "QX30",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "Infiniti Chile confirma el cese de la venta de vehículos nuevos en el país desde 2021; conserva solamente servicios a propietarios. El registro histórico corresponde al modelo QX30. No debe inferirse cese mundial de esta denominación.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "QX50",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "Infiniti Chile confirma el cese de la venta de vehículos nuevos en el país desde 2021; conserva solamente servicios a propietarios. El registro histórico corresponde al modelo QX50. No debe inferirse cese mundial de esta denominación.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "Q70",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "Infiniti Chile confirma el cese de la venta de vehículos nuevos en el país desde 2021; conserva solamente servicios a propietarios. El registro histórico corresponde al modelo Q70. No debe inferirse cese mundial de esta denominación.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "QX70",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "Infiniti Chile confirma el cese de la venta de vehículos nuevos en el país desde 2021; conserva solamente servicios a propietarios. El registro histórico corresponde al modelo QX70. No debe inferirse cese mundial de esta denominación.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "G37",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "Infiniti Chile confirma el cese de la venta de vehículos nuevos en el país desde 2021; conserva solamente servicios a propietarios. El registro histórico corresponde al modelo G37. No debe inferirse cese mundial de esta denominación.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "Q50",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "La marca cesó venta de vehículos nuevos en Chile en 2021. Abarca Q50 y Q50S de 3CV, pero no otras familias o variantes SUV.",
+      "modelPrefixes": [
+        "Q50",
+        "Q50S"
+      ],
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Infiniti",
+      "model": "Q60",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.infiniti.com/regions/es-cl.html",
+      "sourceDate": "2021-08-16",
+      "effectiveNote": "La marca cesó venta de vehículos nuevos en Chile en 2021. Abarca Q60 y Q60S históricos de 3CV; no generalizar a QX60.",
+      "modelPrefixes": [
+        "Q60",
+        "Q60S"
+      ],
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2021/08/16/adios-para-siempre-infiniti-deja-de-comercializar-autos-en-chile"
+    },
+    {
+      "brand": "Volvo",
+      "model": "V40 / V40 Cross Country",
+      "match": "model-prefix-list",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/v40-generation-2/",
+      "sourceDate": "2019-12-31",
+      "effectiveNote": "Volvo Cars Chile clasifica al V40 y V40 Cross Country como automóviles históricos cuya producción concluyó en 2019. No afecta Volvo V60, XC40 ni EX40.",
+      "modelPrefixes": [
+        "V40",
+        "V40CC"
+      ]
+    },
+    {
+      "brand": "Volvo",
+      "model": "C30",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/c30//",
+      "sourceDate": "2013-12-31",
+      "effectiveNote": "Volvo clasifica el C30 como histórico, con producción terminada en 2013 y sustituido por el V40; no afecta otros hatchbacks actuales."
+    },
+    {
+      "brand": "Volvo",
+      "model": "S40",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/s40-generation-2//",
+      "sourceDate": "2012-12-31",
+      "effectiveNote": "Volvo Cars Chile documenta la segunda generación del S40 como producida entre 2003 y 2012; no es Volvo S60."
+    },
+    {
+      "brand": "Volvo",
+      "model": "S80",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/pr/cars/legacy-models/s80/",
+      "sourceDate": "2016-12-31",
+      "effectiveNote": "Volvo documenta el fin de producción del S80 en 2016 y su sustitución por el S90. No confundir ambos sedanes."
+    },
+    {
+      "brand": "Volvo",
+      "model": "XC70",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/legacy-models/xc70-classic-xc70-cross-country/",
+      "sourceDate": "2016-12-31",
+      "effectiveNote": "Volvo documenta fin de producción del XC70 en 2016, reemplazado por el V90 Cross Country; XC90 y XC60 no están afectados."
+    },
+    {
+      "brand": "Mini",
+      "model": "Paceman",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2017/05/11/mini-countryman-2017-ahora-mucho-mas-suv",
+      "sourceDate": "2017-05-11",
+      "effectiveNote": "MINI Paceman vendido oficialmente en Chile desde 2013, pero excluido del catálogo MINI de cinco familias presentado en 2017. No confundir con Countryman ni Clubman.",
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2013/07/14/mini-john-cooper-works-paceman-inicia-venta-en-chile"
+    },
+    {
+      "brand": "Peugeot",
+      "model": "RCZ (coupé histórico)",
+      "match": "model-prefix-exclusions",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/10/13/paris-2026-peugeot-rcz-vision-un-deportivo-conceptual-que-evoca-el-original",
+      "sourceDate": "2026-10-13",
+      "effectiveNote": "El RCZ de serie se comercializó entre 2009 y 2015 y dejó de producirse. El RCZ Vision 2026 es conceptual, no un relanzamiento de venta en Chile. Incluye denominaciones históricas RCZ y RCZ-R.",
+      "familyPrefix": "RCZ",
+      "excludePrefixes": [
+        "RCZ Vision"
+      ],
+      "additionalSourceUrl": "https://noticias.autocosmos.cl/2015/05/19/peugeot-408-gt-el-arma-secreta-de-la-marca-para-el-ano-2016"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Kizashi",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "sourceUrl": "https://www.sernac.cl/portal/618/w3-article-13293.html",
+      "sourceDate": "2018-07-03",
+      "effectiveNote": "El SERNAC documenta la comercialización chilena de Kizashi 2013-2017. El sedán no integra la oferta nueva actual de Suzuki Chile; su fabricación terminó y no debe confundirse con Dzire o Ciaz.",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
     }
   ],
-  "methodVersion": 3
+  "methodVersion": 4
 }
