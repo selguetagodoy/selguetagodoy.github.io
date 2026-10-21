@@ -7,7 +7,7 @@ const normal=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').to
 const positive=s=>s!==''&&s!==null&&Number.isFinite(Number(s))&&Number(s)>=0?Number(s):null;
 const identity=x=>[x.brand,x.family,x.version,x.modelYear??''].join('|');
 const displayPrice=x=>clp(x.priceListClp)+(x.taxIncluded===false?' + IVA':'');
-const priceKind=x=>x.taxIncluded===false?(x.priceType==='desde'?'Desde · + IVA':'Publicado · + IVA'):x.priceType==='oferta'?'Oferta publicada':x.priceType==='desde'||x.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos';
+const priceKind=x=>x.commercialStatus==='discontinued-cl'?'Precio histórico · descontinuado':x.taxIncluded===false?(x.priceType==='desde'?'Desde · + IVA':'Publicado · + IVA'):x.priceType==='oferta'?'Oferta publicada':x.priceType==='desde'||x.version.startsWith('Precio desde')?'Precio desde publicado':'Lista sin bonos';
 const searchAliases={'Mercedes-Benz':'M. Benz','Great Wall':'Haval','KGM':'Ssangyong','Dongfeng':'DFM','Lynk & Co':'Lynk Co','Zxauto':'ZX Auto','Fuso':'Mitsubishi Fuso','Exeed':'Exeed Born For More'};
 let catalog=[],visible=[],chosen=null,limit=24;
 const dealerPages={Hyundai:'https://www.hyundai.cl/cotizador/',Changan:'https://www.changan.cl/formulario/cotizacion/'};
@@ -56,16 +56,17 @@ function render(){
  if(!visible.length){const p=document.createElement('p');p.className='quote-empty';p.textContent='No hay versiones con precio de lista documentado para esos filtros. No se inventa una cotización.';box.append(p);}
  visible.slice(0,limit).forEach(x=>{
   const card=document.createElement('article');card.className='quote-version';
-  const active=chosen&&identity(x)===identity(chosen);
+  const active=chosen&&identity(x)===identity(chosen),retired=x.commercialStatus==='discontinued-cl';
+  if(retired)card.classList.add('quote-discontinued');
   card.innerHTML='<div><strong>'+safe(x.brand+' '+x.family)+'</strong><span>'+safe(x.version)+(x.modelYear?' · modelo '+safe(x.modelYear):' · año no indicado')+'</span>'+
-   '<small>'+safe(statusText(x))+'</small></div><div class="quote-version-price"><strong>'+displayPrice(x)+'</strong><span>'+safe(priceKind(x))+'</span></div>';
+   '<small>'+safe(retired?'Descontinuado en Chile · precio histórico; no es una oferta actual':statusText(x))+'</small></div><div class="quote-version-price"><strong>'+displayPrice(x)+'</strong><span>'+safe(priceKind(x))+'</span></div>';
   const photo=window.RindelabPhotos?.commercialNode(x);
   if(photo){card.classList.add('has-photo');card.prepend(photo);}
   const actions=document.createElement('div');actions.className='quote-version-actions';
-  const btn=document.createElement('button');btn.type='button';btn.className='button '+(active?'primary':'secondary');btn.textContent=active?'Versión seleccionada':'Cotizar esta versión';
-  btn.disabled=!!active;btn.addEventListener('click',()=>select(x));
+  const btn=document.createElement('button');btn.type='button';btn.className='button '+(active?'primary':'secondary');btn.textContent=retired?'Modelo descontinuado':active?'Versión seleccionada':'Cotizar esta versión';
+  btn.disabled=retired||!!active;btn.addEventListener('click',()=>{if(!retired)select(x);});
   const a=document.createElement('a');a.href=x.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ver fuente ↗';
-  actions.append(btn,a);card.append(actions);box.append(card);
+  actions.append(btn,a);if(retired&&/^https:\/\//.test(x.statusSource||'')){const source=document.createElement('a');source.href=x.statusSource;source.target='_blank';source.rel='noopener noreferrer';source.textContent='Ver retiro del catálogo ↗';actions.append(source);}card.append(actions);box.append(card);
  });
  $('quoteMore').hidden=limit>=visible.length;
 }
@@ -75,7 +76,7 @@ function extras(){
 }
 function amount(){
  const other=extras();
- return chosen&&chosen.taxIncluded!==false&&other!==null?chosen.priceListClp+other:null;
+ return chosen&&chosen.commercialStatus!=='discontinued-cl'&&chosen.taxIncluded!==false&&other!==null?chosen.priceListClp+other:null;
 }
 function finance(total){
  const out=$('quoteFinanceOut');

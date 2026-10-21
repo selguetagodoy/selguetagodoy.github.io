@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "market": "Chile",
+  "checkedAt": "2026-10-20",
+  "semantics": "Estado de la oferta oficial chilena de vehículos nuevos; no implica inexistencia de unidades de remanente o usados ni el cese de fabricación mundial. Para Fiesta, EcoSport, Camaro y Cruze se documenta además el fin de producción y/o la salida de la oferta chilena; no descarta unidades residuales ya inscritas.",
+  "matchingPolicy": "Solo identificación inequívoca de modelo: nunca usar edad de homologación para inferir descontinuación; Jimny 3P es vigente y el 5P no debe vincularse automáticamente a una ficha Jimny sin carrocería. Ford Fiesta/EcoSport y Chevrolet Camaro/Cruze se identifican por familia completa; los registros 3CV continúan sin alterar y VW Golf GTI actual NO es modelo descontinuado por la antigua salida del Golf VII.",
+  "models": [
+    {
+      "brand": "Suzuki",
+      "model": "Baleno",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fuera de la oferta oficial Suzuki Chile desde julio de 2026",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "S-Presso",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fuera de la oferta oficial Suzuki Chile desde julio de 2026",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Grand Vitara",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fuera de la oferta oficial Suzuki Chile desde julio de 2026; no confundir con e VITARA",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Jimny 5 puertas",
+      "match": "variant-only-manual",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Solo carrocería 5 puertas; el Jimny 3 puertas continúa en la oferta. No atribuir por defecto a códigos 3CV que no indiquen número de puertas",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Ford",
+      "model": "Fiesta",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Dejó de comercializarse en Chile tras el fin de producción regional en 2019; la producción mundial terminó posteriormente.",
+      "sourceDate": "2022-10-26",
+      "sourceUrl": "https://noticias.autocosmos.cl/2022/10/26/el-ford-fiesta-dira-adios-tras-casi-medio-siglo-en-produccion",
+      "manufacturerCurrentCatalogUrl": "https://www.ford.cl/todos/autos/"
+    },
+    {
+      "brand": "Ford",
+      "model": "EcoSport",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Última comercialización identificada en Chile hasta julio 2022; fabricación y comercialización mundial discontinuadas. No confundir con SUV Ford actualmente ofertados.",
+      "sourceDate": "2025-10-24",
+      "sourceUrl": "https://www.sernac.cl/portal/619/w3-article-87624.html",
+      "additionalSourceUrl": "https://es.ford.com/suvs-crossovers/ecosport/",
+      "manufacturerCurrentCatalogUrl": "https://www.ford.cl/todos/suvs-crossovers/"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Camaro",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "GM finalizó la producción de la sexta generación Camaro para el año modelo 2024; no se presenta como oferta nueva vigente en Chevrolet Chile.",
+      "sourceDate": "2023-03-22",
+      "sourceUrl": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/mar/0322-camaro.html",
+      "manufacturerCurrentCatalogUrl": "https://www.chevrolet.cl/"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Cruze",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "GM anunció término de producción del Cruze en Argentina al cierre de 2023, último ciclo productivo regional. Conserva posventa y repuestos.",
+      "sourceDate": "2023-06-09",
+      "sourceUrl": "https://news.chevrolet.com.ar/newsroom.detail.html/Pages/news/ar/es/2023/jun/9jun_Trackerindustria.html",
+      "additionalSourceUrl": "https://es.chevrolet.com/discontinued-vehicles",
+      "manufacturerCurrentCatalogUrl": "https://www.chevrolet.cl/"
+    }
+  ]
+}

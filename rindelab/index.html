@@ -23,7 +23,7 @@
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./v6.css?v=20261018-imagen-v78"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
+<link rel="stylesheet" href="./v6.css?v=20261020-descontinuados"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
 <link rel="stylesheet" href="./v2-premium.css?v=20261018-rc1">
 <link rel="stylesheet" href="./v2-claridad.css?v=20261018-v1">
 <link rel="stylesheet" href="./v2-polish.css?v=20261018-v1">
@@ -137,20 +137,11 @@
    <summary><span>Sobre estos resultados</span><span class="source-legend-link">Ver detalles <span aria-hidden="true">⌄</span></span></summary>
    <div class="source-legend-details">
     <p><strong>Rendimientos oficiales.</strong> Base histórica 3CV de mayo y 272 registros adicionales de la API oficial de octubre de 2026. Cada ficha muestra su ciclo NEDC o WLTP; sus valores no son directamente equivalentes.</p>
-    <p><strong>Homologaciones MTT pendientes.</strong> Un código de septiembre continúa sin ficha energética en la consulta de octubre. No recibe costos estimados ni se mezcla con fichas con rendimiento.</p>
+    <p><strong>Homologaciones y fichas oficiales.</strong> El buscador principal calcula costos únicamente cuando existe un rendimiento oficial. Las homologaciones sin ficha se consultan en <a href="./novedades-3cv.html">Novedades 3CV ↗</a>, sin inventar consumos.</p>
     <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="./metodologia.html">Metodología completa ↗</a></p>
    </div>
   </details>
-  <section id="mttSearchSection" class="mtt-search-section" aria-labelledby="mttSearchTitle" hidden>
-   <div class="mtt-search-heading">
-    <div><p class="mtt-search-eyebrow">NÓMINA MTT · 28 DE SEPTIEMBRE DE 2026</p><h3 id="mttSearchTitle">Homologaciones recientes sin ficha de rendimiento</h3>
-    <p id="mttSearchCount" role="status" aria-live="polite"></p></div>
-    <a href="./novedades-3cv.html" class="mtt-search-all">Ver nómina completa ↗</a>
-   </div>
-   <p class="mtt-search-explainer">Este registro aparece en la nómina MTT de septiembre pero no se encuentra en la consulta energética oficial del 18 de octubre. Conservamos código, certificado y fecha, <strong>sin inventar rendimiento ni costo por kilómetro</strong>. No se puede incorporar a una comparación energética.</p>
-   <div id="mttSearchList" class="mtt-search-list"></div>
-   <button id="mttSearchMore" type="button" class="button secondary" hidden>Mostrar más homologaciones MTT</button>
-  </section>
+  <p id="mttSearchSection" class="mtt-search-notice" role="note" hidden><strong>Solo homologación, sin rendimiento oficial.</strong> El modelo buscado aparece en una nómina técnica, pero no tiene ficha de consumo comparable. <a id="mttSearchLink" href="./novedades-3cv.html">Ver registro en novedades 3CV ↗</a></p>
   <p id="mttLoadNotice" class="mtt-load-notice" role="status" hidden></p>
   <div id="emptyState" class="empty" hidden></div>
   <div id="suggested" class="suggested" hidden></div>
@@ -315,9 +306,9 @@
  </div>
 </footer>
 <script src="./sii/sii.js?v=20261017-sii12" defer></script>
-<script src="./sii/prices.js?v=20261020-1504-iva" defer></script>
+<script src="./sii/prices.js?v=20261020-descontinuados" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261020-1504-ranking-ciclos-alias" defer></script>
+<script src="./v6.js?v=20261020-modelos-ford-chevrolet-v2" defer></script>
 <script>
 /* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
 (function(){

@@ -122,3 +122,6 @@
 .quote-version .rinde-photo-attribution a{color:#496279;text-decoration:underline;font-size:inherit}
 .quote-version .rinde-photo-unavailable{font-size:11px;color:#64748b}
 @media(max-width:620px){.quote-version.has-photo{grid-template-columns:80px minmax(0,1fr);gap:7px 11px}.quote-version.has-photo>.quote-version-price{grid-column:2;text-align:left}.quote-version.has-photo>.rinde-photo-thumb{grid-row:1 / span 2}.quote-version .rinde-photo-thumb img{height:62px}.quote-version .rinde-photo-attribution{font-size:8px}}
+
+/* Precios documentados que ya no pertenecen a oferta oficial de vehículos nuevos. */
+.quote-version.quote-discontinued{border-color:#f1d3ad;background:#fffaf3}.quote-version.quote-discontinued>div small{color:#98410c;font-weight:700}.quote-version.quote-discontinued .quote-version-price span{color:#98410c;font-weight:700}.quote-version.quote-discontinued button:disabled{opacity:1;background:#efe6da;color:#815638;cursor:not-allowed}

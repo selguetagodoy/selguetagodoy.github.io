@@ -712,3 +712,6 @@ input,select,textarea{font-size:16px}
  .visual-hero .hero-copy>p:last-of-type{line-height:1.35}
  .search-card{margin-top:6px}
 }
+
+/* Estados editoriales: conservar homologación, distinguir oferta retirada */
+.vehicle-lifecycle{margin:7px 0 2px;padding:7px 10px;background:#fff2e5;border:1px solid #f4d5b0;border-radius:7px;font-size:12px;font-weight:650;color:#874309;line-height:1.55}.vehicle-lifecycle a{color:#81400b;text-decoration:underline}.mtt-search-notice{padding:12px 15px;border:1px solid #d6e2f0;border-radius:9px;background:#f7faff;font-size:13px;line-height:1.6}.mtt-search-notice strong{font-weight:750}
