@@ -80,6 +80,8 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert(values.every(x=>x&&x.startsWith('./images/commons/')),JSON.stringify(values));
   const mismatch=await p.evaluate(()=>window.RindelabPhotos.find(['Porsche','911 Carrera','','','','','','','2025-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8}));
   assert(mismatch?.model.includes('911'));
+  const countryman=await p.evaluate(()=>window.RindelabPhotos.find(['Mini','Countryman Cooper S','Bencina','','','','','','2025-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8})?.model);
+  assert.equal(countryman,'Mini Countryman');
  });
  await check('El escenario desplegable mantiene las tarifas y cálculos originales',async()=>{
   await p.locator('#supuestos').evaluate(el=>el.open=true);

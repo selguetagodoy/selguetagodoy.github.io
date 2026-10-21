@@ -1427,7 +1427,8 @@ const entries=localEntries.concat(licensed.map(p=>({...p,re:new RegExp(p.pattern
 
 function find(row,F){
  const brand=String(row[F.BRAND]||''),model=String(row[F.MODEL]||''),tech=String(row[F.TECH]||''),year=String(row[F.DATE]||'').slice(0,4);
- return entries.find(p=>p.brand.toLowerCase()===brand.toLowerCase()&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech))&&year>=p.from&&year<=p.to)||null;
+ // Ante coincidencias múltiples, priorizar el nombre de familia más específico.
+ return entries.filter(p=>p.brand.toLowerCase()===brand.toLowerCase()&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech))&&year>=p.from&&year<=p.to).sort((a,b)=>b.re.source.length-a.re.source.length)[0]||null;
 }
 function findCommercial(p){
  if(!p||!p.brand||!p.family)return null;
