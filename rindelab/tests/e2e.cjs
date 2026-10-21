@@ -2644,7 +2644,7 @@ for(const pageName of ['index.html','cotizador.html']){
   await p.locator('#mobileNav summary').click();
   const nav=p.locator('#mobileNav nav');
   assert(await nav.isVisible());
-  assert.equal(await nav.locator('a').count(),6);
+  assert.equal(await nav.locator('a').count(),pageName==='index.html'?7:6);
   const targets=await nav.locator('a').allTextContents();
   assert(targets.some(x=>x.includes('Cotizador')));
   const bounds=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth}));
