@@ -14,7 +14,8 @@
  const family=(s,b='')=>{
   let v=norm(s),bn=brand(b);
   if(bn&&v.startsWith(bn+' '))v=v.slice(bn.length+1);
-  v=v.replace(/^(THE NEW|ALL NEW|NUEVA|NUEVO|NEW|CL)\s+/,'');
+  // «All New» indica una familia/generación distinta en ciertos catálogos (p. ej. Subaru Forester).
+  v=v.replace(/^(THE NEW|NUEVA|NUEVO|NEW|CL)\s+/,'');
   if(bn==='MAZDA'&&/^CX (3|5|30)$/.test(v))return v;
   if(bn==='MG'&&/^MG (ZS|S5)$/.test(v))return v.slice(3);
   if(bn==='GREAT WALL'&&v.startsWith('HAVAL '))v=v.slice(6);

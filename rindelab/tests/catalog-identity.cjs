@@ -8,6 +8,7 @@ const idx=C.index(records),today='2026-10-21';
 assert.equal(C.key('Peugeot','new 2008'),C.key('Peugeot','2008'));
 assert.equal(C.key('Chery','cl-tiggo-2-pro'),C.key('Chery','Tiggo 2 Pro'));
 assert.notEqual(C.key('Toyota','Corolla Cross'),C.key('Toyota','Corolla'));
+assert.notEqual(C.key('Subaru','All New Forester'),C.key('Subaru','Forester'));
 assert.notEqual(C.key('Chery','Tiggo 2 Pro Max'),C.key('Chery','Tiggo 2 Pro'));
 const examples=[
  {brand:'Hyundai',model:'Kona',tech:'EV',minTech:'EV'},

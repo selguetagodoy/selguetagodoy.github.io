@@ -1054,6 +1054,7 @@ await test('Lote multimarca: 15 Chery, 14 Gac y 1 Citroen documentados sin bonos
  assert.deepEqual(mappings,['Tiggo 4 Pro Max','Tiggo 4 Pro Max','Tiggo 8 Pro Max','GS3 Power','GS8','C3 Aircross']);
 });
 await test('No asigna precio de lista automáticamente y permite elegir o quitar versión',async()=>{
+ await page.evaluate(()=>Object.keys(localStorage).filter(k=>k.startsWith('rindelab:priceList2026:')).forEach(k=>localStorage.removeItem(k)));
  await page.click('#resetButton');await page.fill('#query','Corolla Cross');await page.click('#searchButton');
  await page.locator('.vehicle-card').filter({has:page.locator('.vehicle-tech[data-tech="HEV"]')}).first().locator('button[data-detail]').click();
  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length>=2);
@@ -1759,6 +1760,7 @@ await test('Deepal S05 REEV tiene ahora ficha energética 3CV oficial de octubre
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.fill('#query','CN10637E60826S00-7');await p.click('#searchButton');
  assert.equal(await p.locator('.mtt-result-card').count(),0);
@@ -1778,6 +1780,7 @@ await test('Deepal S05 REEV tiene ahora ficha energética 3CV oficial de octubre
 await test('Filtros oficiales de octubre incluyen JIM Re-Max y Kia Sportage HEV',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  const brands=await p.locator('#brand option').allTextContents();
  assert(brands.includes('JIM'));
@@ -1823,6 +1826,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  await quote.close();
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.fill('#query','Suzuki Baleno');await p.click('#searchButton');
  assert((await p.locator('.vehicle-lifecycle').count())>=1);
@@ -1838,6 +1842,7 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  assert(!lifecycle.models.some(x=>x.brand==='Volkswagen'&&x.model==='Golf'));
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  for(const q of ['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze']){
   await p.fill('#query',q);
@@ -1867,6 +1872,7 @@ await test('Quinta revisión 3CV: 69 casos sin falsos positivos en variantes vig
  assert(!data.models.some(x=>x.brand==='Nissan'&&x.model==='GT-R'),'GT-R no pertenece al registro de modelos antes comercializados oficialmente en Chile');
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  for(const name of ['Nissan March','Kia Soul','Ford Focus','Hyundai Veloster','Peugeot 508','Changan CX70','Mercedes-Benz X 350d']){
   await p.fill('#query',name);await p.click('#searchButton');
@@ -1918,6 +1924,7 @@ await test('Directorio de modelos descontinuados: 69 casos, filtros y ancho móv
 await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.click('#searchButton');
  assert(await p.locator('#mttSearchSection').isHidden(),'La portada no muestra ficha MTT aislada al listar todos los vehículos');
@@ -1938,6 +1945,7 @@ await test('Leapmotor B03X muestra rendimiento eléctrico oficial en móvil 320p
  const p=await browser.newPage({viewport:{width:320,height:720},isMobile:true,hasTouch:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.fill('#query','Leapmotor B03X');await p.click('#searchButton');
  assert((await p.locator('.vehicle-card').count())>=1);
@@ -1952,6 +1960,7 @@ await test('Leyenda distingue fuente histórica mayo de API oficial octubre',asy
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
  await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
  assert(await p.locator('#sourceLegend').isVisible());
@@ -1998,6 +2007,7 @@ await test('Estados y expediente en móvil de 320 píxeles no desbordan',async()
  const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>!document.querySelector('#searchButton')?.disabled,{timeout:30000});
  await p.fill('#query','Leapmotor B03X');await p.click('#searchButton');
  assert(await p.locator('#sourceLegend').isVisible());
@@ -2169,7 +2179,7 @@ await test('Buscador expone precio por familia comercial sin equiparar códigos 
  await p.fill('#query','Corolla Cross');await p.click('#searchButton');
  const prices=p.locator('.rinde-commercial');
  assert(await prices.count()>0);
- assert.match(await prices.first().textContent(),/Precio comercial desde.*familia.*no versión homologada/i);
+ assert.match(await prices.first().textContent(),/Precio publicado.*misma tecnología.*versión sin verificar|motorización de fuente no informada/i);
  assert.match(await prices.first().locator('a').getAttribute('href'),/cotizador\.html/);
  assert.deepEqual(issues,[]);
  await p.close();
@@ -2452,6 +2462,7 @@ await test('Inter autoalojada: WOFF2 real disponible, sin solicitudes a Google F
  p.on('request',r=>{if(/fonts\\.(?:googleapis|gstatic)\\.com/.test(r.url()))external.push(r.url())});
  p.on('pageerror',e=>errors.push(e.message));
  const response=await p.goto(base,{waitUntil:'networkidle'});
+ await p.selectOption('#catalogScope','all');
  assert.equal(response.status(),200);
  const result=await p.evaluate(async()=>{
   await document.fonts.ready;
