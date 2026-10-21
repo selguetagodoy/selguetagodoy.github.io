@@ -1805,7 +1805,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  assert(archive.every(x=>x.brand==='Suzuki'&&/^https:\/\//.test(x.statusSource)));
  assert(prices.filter(x=>x.brand==='Suzuki'&&x.family==='Jimny').every(x=>x.commercialStatus!=='discontinued-cl'));
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(lifecycle.models.length,4);
+ assert.equal(lifecycle.models.length,8);
  assert.equal(lifecycle.models.find(x=>x.model==='Jimny 5 puertas').match,'variant-only-manual');
  const quote=await browser.newPage({viewport:{width:390,height:844}});
  await quote.goto(base+'cotizador.html',{waitUntil:'networkidle'});
@@ -1824,6 +1824,27 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  await p.fill('#query','Suzuki Baleno');await p.click('#searchButton');
  assert((await p.locator('.vehicle-lifecycle').count())>=1);
  assert.match(await p.locator('.vehicle-lifecycle').first().textContent(),/descontinuado/i);
+ await p.close();
+});
+await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por modelo, Golf no afectado',async()=>{
+ const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
+ const added=lifecycle.models.filter(x=>['Ford','Chevrolet'].includes(x.brand));
+ assert.equal(added.length,4);
+ assert.deepEqual(added.map(x=>x.brand+' '+x.model).sort(),['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze'].sort());
+ assert(added.every(x=>x.match==='whole-family'&&x.status==='discontinued-cl'&&/^https:\/\//.test(x.sourceUrl)));
+ assert(!lifecycle.models.some(x=>x.brand==='Volkswagen'&&x.model==='Golf'));
+ const p=await browser.newPage();
+ await p.goto(base,{waitUntil:'networkidle'});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ for(const q of ['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze']){
+  await p.fill('#query',q);
+  await p.click('#searchButton');
+  assert((await p.locator('.vehicle-lifecycle').count())>0,q+' debe llevar estado editorial');
+  assert.match(await p.locator('.vehicle-lifecycle').first().textContent(),/descontinuado/i);
+ }
+ await p.fill('#query','Volkswagen Golf');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card').count())>0);
+ assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'No marcar la familia Golf completa como descontinuada; GTI regresó');
  await p.close();
 });
 await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
