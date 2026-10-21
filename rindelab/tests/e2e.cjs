@@ -1354,7 +1354,7 @@ await test('Integración 20/10: 1504 precios, 80 marcas, Nammi y +IVA sin total 
  await m.goto(base+'marcas.html',{waitUntil:'networkidle'});
  await m.fill('#brandSearch','M. Benz');
  await m.waitForFunction(()=>document.querySelector('#brandRows')?.textContent?.includes('Mercedes-Benz'));
- assert.match(await m.locator('#brandRows').textContent(),/Precio documentado/);
+ assert.match(await m.locator('#brandRows').textContent(),/Con precio/);
  await m.close();
 });
 await test('Marcas: denominaciones 3CV consolidadas, filtro transparente y CSV',async()=>{
@@ -1366,16 +1366,16 @@ await test('Marcas: denominaciones 3CV consolidadas, filtro transparente y CSV',
  assert((await p.locator('#brandRows tr').count())>=100,'La vista conserva grupos históricos y nuevas marcas comerciales');
  await p.fill('#brandSearch','Chevrolet');
  assert.equal(await p.locator('#brandRows tr').count(),1);
- assert.match(await p.locator('#brandRows tr').first().textContent(),/Precio documentado/);
+ assert.match(await p.locator('#brandRows tr').first().textContent(),/Con precio/);
  await p.fill('#brandSearch','Chery');
  assert.equal(await p.locator('#brandRows tr').count(),1);
- assert.match(await p.locator('#brandRows tr').first().textContent(),/Precio documentado/);
+ assert.match(await p.locator('#brandRows tr').first().textContent(),/Con precio/);
  await p.fill('#brandSearch','');
  await p.selectOption('#brandStatus','available');
  assert.equal(await p.locator('#brandRows tr').count(),catalogBrandTotal);
  const download=p.waitForEvent('download');
  await p.locator('#exportBrands').click();
- assert.match((await download).suggestedFilename(),/rindelab-cobertura-marcas/);
+ assert.match((await download).suggestedFilename(),/rindelab-marcas-y-precios/);
  const sizes=await p.evaluate(()=>({page:document.documentElement.scrollWidth,screen:innerWidth}));
  assert(sizes.page<=sizes.screen+3,JSON.stringify(sizes));
  await p.close();
@@ -1392,13 +1392,13 @@ await test('Marcas: histórico separado de descontinuado, fuente primaria y expo
  assert.equal(await p.locator('#metricHistorical').textContent(),'35');
  await p.selectOption('#brandStatus','discontinued');
  assert.equal(await p.locator('#brandRows tr').count(),1);
- assert.match(await p.locator('#brandRows tr').first().textContent(),/Infiniti.*Descontinuado en Chile/);
+ assert.match(await p.locator('#brandRows tr').first().textContent(),/Infiniti.*Descontinuada/);
  assert.equal(await p.locator('#brandRows tr a.state-source').first().getAttribute('href'),data.statuses.Infiniti.sourceUrl);
  await p.selectOption('#brandStatus','historical');
  assert.equal(await p.locator('#brandRows tr').count(),35);
  await p.fill('#brandSearch','Borgward');
  assert.equal(await p.locator('#brandRows tr').count(),1);
- assert.match(await p.locator('#brandRows tr').textContent(),/Histórico · vigencia no verificada/);
+ assert.match(await p.locator('#brandRows tr').textContent(),/Sin precio/);
  await p.fill('#brandSearch','');
  await p.selectOption('#brandStatus','available');
  assert.equal(await p.locator('#brandRows tr').count(),catalogBrandTotal);
