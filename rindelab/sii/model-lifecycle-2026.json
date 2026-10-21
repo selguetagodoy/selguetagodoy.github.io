@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "market": "Chile",
+  "checkedAt": "2026-10-20",
+  "semantics": "Estado de la oferta oficial chilena de vehículos nuevos; no implica inexistencia de unidades de remanente o usados ni el cese de fabricación mundial.",
+  "matchingPolicy": "Solo identificación inequívoca de modelo: nunca usar edad de homologación para inferir descontinuación; Jimny 3P es vigente y el 5P no debe vincularse automáticamente a una ficha Jimny sin carrocería.",
+  "models": [
+    {
+      "brand": "Suzuki",
+      "model": "Baleno",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fuera de la oferta oficial Suzuki Chile desde julio de 2026",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "S-Presso",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fuera de la oferta oficial Suzuki Chile desde julio de 2026",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Grand Vitara",
+      "match": "whole-family",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Fuera de la oferta oficial Suzuki Chile desde julio de 2026; no confundir con e VITARA",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Jimny 5 puertas",
+      "match": "variant-only-manual",
+      "status": "discontinued-cl",
+      "statusLabel": "Descontinuado en Chile",
+      "effectiveNote": "Solo carrocería 5 puertas; el Jimny 3 puertas continúa en la oferta. No atribuir por defecto a códigos 3CV que no indiquen número de puertas",
+      "sourceDate": "2026-07-10",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/07/10/suzuki-ajusta-su-oferta-de-modelos-en-chile-en-virtud-de-la-normativa-de-emisiones",
+      "manufacturerCurrentCatalogUrl": "https://www.suzuki.cl/categorias-autos-suzuki/"
+    }
+  ]
+}
