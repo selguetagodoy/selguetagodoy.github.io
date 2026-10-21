@@ -16,6 +16,16 @@ const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
 const number=n=>n!==null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>0?Number(n):null;
 const fixed=n=>number(n)?Number(n).toLocaleString('es-CL',{maximumFractionDigits:2}):'N/D';
 let all=[],results=[],selected=[],submitted=false,limit=10,cut='2026-05-08';
+let discontinuedModels=[];
+function archivedModel(row){
+ if(normalize(row[F.BRAND])!=='suzuki')return null;
+ const name=normalize(row[F.MODEL]);
+ return discontinuedModels.find(item=>{
+  const target=normalize(item.model);
+  if(item.match==='whole-family')return name===target||name.startsWith(target+' ');
+  return item.match==='variant-only-manual'&&name.startsWith('jimny ')&&/\b(5p|5d|5 puertas)\b/.test(name);
+ })||null;
+}
 let costSortCycleNotice='';
 const reviewedEnergyCodes=new Set(['BM9746EL1224S00-3']); // 10,6 km/kWh NEDC: verificación del documento original pendiente.
 let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
@@ -371,11 +381,13 @@ function render(){
   const annualKm=Number($('annualKm').value);
   const flaggedEnergy=reviewedEnergyCodes.has(row[F.CODE]);
   const flaggedNote=flaggedEnergy?'<p class="energy-quality-note" role="note">Dato atípico pendiente de revisión documental: 10,6 km/kWh en NEDC. No equiparar con valores WLTP ni considerarlo el vehículo más eficiente del mercado.</p>':'';
+  const status=archivedModel(row);
+  const lifecycleHTML=status?'<p class="vehicle-lifecycle">Modelo descontinuado en la oferta chilena · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
   const offer=window.RindelabCommercial?.minimum(row,family(row));
   const offerHTML=offer?'<div class="rinde-commercial"><small>Precio comercial desde (familia, no versión homologada)</small> <strong>'+safe(money(offer.priceListClp))+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
   article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p></div>'+
+   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p>'+lifecycleHTML+'</div>'+
    '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'" title="Categoría declarada en 3CV: '+safe(row[F.TECH])+'">'+safe(techHuman[row[F.TECH]]||row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'" title="'+safe(row[F.CYCLE]==='NEDC'?'Ensayo NEDC; no es directamente comparable con WLTP':row[F.CYCLE]==='WLTP'?'Ensayo WLTP; no es directamente comparable con NEDC':'Ciclo no informado')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
    '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
@@ -774,6 +786,7 @@ async function init(){
   const additional=window.RindelabOfficialAPI.load(officialFiles,legacy);
   for(const row of additional)officialCodes.add(row[F.CODE]);
   all=legacy.concat(additional).map(cleanRow);
+  try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261020a');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
   $('statsOpen').disabled=false;
