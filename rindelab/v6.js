@@ -26,6 +26,7 @@ function archivedModel(row){
   if(item.match==='whole-family')return sameFamily;
   if(item.match==='model-prefix-exclusions')return sameFamily&&!(item.excludePrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
   if(item.match==='model-prefix-list')return (item.modelPrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
+  if(item.match==='model-prefix-list-cutoff')return String(row[F.DATE]||'')<=item.homologationCutoff&&(item.modelPrefixes||[]).some(x=>{const k=normalize(x);return name===k||name.startsWith(k+' ');});
   if(item.match==='body-style-hatchback')return sameFamily&&(/hatchback| hb /.test(' '+name+' '));
   if(item.match==='previous-generation-cutoff')return sameFamily&&String(row[F.DATE]||'')<=item.homologationCutoff;
   // Solo Jimny 5P, sin confundir Jimny 3P; se exige mención inequívoca de puertas.
