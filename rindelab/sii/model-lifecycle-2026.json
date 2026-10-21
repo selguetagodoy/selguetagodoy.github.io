@@ -259,13 +259,17 @@
     {
       "brand": "Changan",
       "model": "CX70",
-      "match": "whole-family",
+      "match": "model-prefix-list",
       "status": "discontinued-cl",
       "statusLabel": "Descontinuado en Chile",
       "effectiveNote": "CX70 y derivados CX70T/CX70 Plus históricos fueron reemplazados en Chile por X7 Plus; no afecta X7 Plus.",
       "sourceDate": "2023-10-31",
       "sourceUrl": "https://noticias.autocosmos.cl/2023/10/31/changan-x7-plus-2024-en-chile-llega-el-relevo-del-popular-cx70",
-      "manufacturerCurrentCatalogUrl": "https://www.changan.cl/"
+      "manufacturerCurrentCatalogUrl": "https://www.changan.cl/",
+      "modelPrefixes": [
+        "CX70",
+        "CX70T"
+      ]
     },
     {
       "brand": "Honda",
