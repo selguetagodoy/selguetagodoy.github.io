@@ -2,7 +2,7 @@ name: RINDELAB — vigilancia oficial y cobertura fotográfica
 on:
   workflow_dispatch:
   schedule:
-    - cron: '45 12 * * 1' # lunes 12:45 UTC
+    - cron: '45 12 * * *' # control diario, 12:45 UTC
 
 permissions:
   contents: read
@@ -60,7 +60,7 @@ jobs:
               '',
               'El análisis produce candidatos para revisión, **no incorpora automáticamente datos externos al registro oficial**.',
               '',
-              'Para activar consultas incrementales automáticas, verificar primero la URL de un JSON público del organismo competente y configurar las variables del repositorio RINDELAB_3CV_FEED_URL y RINDELAB_MTT_FEED_URL.',
+              'La API 3CV del Ministerio de Energía ya se consulta por defecto con paginación oficial. Para añadir la nómina MTT, verificar primero su URL JSON oficial y configurar la variable RINDELAB_MTT_FEED_URL. La consulta del 3CV puede sobreescribirse mediante RINDELAB_3CV_FEED_URL solo con una URL oficial comprobada.',
               '',
               '[Expediente de la ejecución]('+link+')'
             ].join('\n');
