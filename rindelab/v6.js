@@ -408,7 +408,7 @@ function render(){
    '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
    offerHTML+flaggedNote+
-   '<div class="vehicle-actions"><button type="button" class="button primary" data-detail="'+index+'">Ver ficha</button>'+
+   '<div class="vehicle-actions"><button type="button" class="button primary" data-detail="'+index+'">'+(status?'Consultar valor usado y ficha':'Ver ficha')+'</button>'+
    '<button type="button" class="button secondary" data-compare="'+index+'" aria-pressed="'+selectedNow+'">'+(selectedNow?'Quitar':'Comparar +')+'</button></div>'+
    '<div class="vehicle-annual"><div class="vehicle-monthly"><small>Gasto mensual estimado</small><strong class="vehicle-monthly-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual/12)))+'</strong></div><small>Gasto energético anual estimado</small><strong class="vehicle-annual-value'+(annual===null?' no-data':'')+'">'+(annual===null?'No estimable':safe(money(annual)))+'</strong>'+
    '<span>'+(annual===null?'Faltan datos de rendimiento o tarifa para calcularlo':'Con '+safe(fmt(annualKm))+' km al año · tarifas constantes')+'</span></div>'+
