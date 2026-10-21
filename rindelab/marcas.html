@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Marcas y cobertura | RINDELAB</title>
+<title>Marcas y precios | RINDELAB</title>
 <meta name="description" content="Consulta precios documentados, registros históricos 3CV y marcas cuya venta nueva cesó en Chile según fuente confirmada.">
 <link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -18,22 +18,22 @@ table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}thead{b
 </style><link rel="stylesheet" href="./v2-secondary.css?v=20261019-v2a"></head><body class="rindelab-brand-directory">
 <header><div class="head-inner"><nav><a class="logo" href="./index.html">RINDE<span>LAB</span></a><a href="./electromovilidad.html">Electromovilidad</a><a href="./cotizador.html">Cotizar auto ↗</a></nav></div></header>
 <main>
-<p class="muted">TRANSPARENCIA DE DATOS · CHILE</p><h1>Marcas y cobertura documental</h1>
-<p class="brand-summary">Separamos los precios publicados, las marcas presentes solo en registros históricos y los casos con venta nueva descontinuada en Chile acreditada por una fuente.</p><details class="brand-about"><summary>¿Qué significa cada estado?</summary><p><strong>Con precio documentado:</strong> existe una publicación de precio; no confirma stock ni disponibilidad actual. <strong>Histórico · vigencia no verificada:</strong> figura en el registro 3CV, pero no hay un precio comercial asociado; <strong>no implica que la marca esté descontinuada</strong>. <strong>Descontinuado en Chile:</strong> el cese de comercialización de vehículos nuevos está respaldado por una fuente identificada, cuya URL aparece en la fila. Las homologaciones 3CV son antecedentes históricos y no equivalen a una oferta de vehículos nuevos.</p></details>
+<p class="muted">TRANSPARENCIA DE DATOS · CHILE</p><h1>Marcas y precios</h1>
+<p class="brand-summary">Busca una marca y revisa si tenemos precios publicados o si su comercialización en Chile está descontinuada.</p><details class="brand-about"><summary>¿Cómo se clasifican las marcas?</summary><p><strong>Con precio:</strong> encontramos al menos un precio publicado, aunque eso no confirma stock actual. <strong>Sin precio:</strong> todavía no encontramos un precio; puede tratarse de una marca antigua o una que aún vende vehículos en Chile. <strong>Descontinuada:</strong> tenemos una fuente que confirma que dejó de vender vehículos nuevos en Chile. Las fichas del 3CV son históricas y no indican por sí solas que un modelo siga a la venta.</p></details>
 <section class="metrics" aria-label="Indicadores de cobertura">
-<div class="metric"><strong id="metricBrands">—</strong><span>Marcas agrupadas 3CV</span></div>
-<div class="metric"><strong id="metricCovered">—</strong><span>Marcas con precio documentado</span></div>
-<div class="metric"><strong id="metricPrices">—</strong><span>Precios publicados</span></div>
-<div class="metric"><strong id="metricHistorical">—</strong><span>Históricas por verificar</span></div>
-<div class="metric"><strong id="metricDiscontinued">—</strong><span>Descontinuadas acreditadas</span></div>
+<div class="metric"><strong id="metricBrands">—</strong><span>Marcas 3CV</span></div>
+<div class="metric"><strong id="metricCovered">—</strong><span>Con precio</span></div>
+<div class="metric"><strong id="metricPrices">—</strong><span>Precios registrados</span></div>
+<div class="metric"><strong id="metricHistorical">—</strong><span>Sin precio</span></div>
+<div class="metric"><strong id="metricDiscontinued">—</strong><span>Descontinuadas</span></div>
 </section>
 <section class="panel" aria-label="Buscador de cobertura de marcas">
 <div class="controls">
 <div class="field"><label for="brandSearch">Buscar marca</label><input id="brandSearch" type="search" placeholder="Ej. Chery, Chevrolet, Renault"></div>
-<div class="field"><label for="brandStatus">Estado de cobertura</label><select id="brandStatus"><option value="all">Todas las marcas</option><option value="available">Con precio documentado</option><option value="historical">Históricas / vigencia por verificar</option><option value="discontinued">Descontinuadas en Chile (acreditadas)</option><option value="pending">Sin precio documentado (todas)</option></select></div>
+<div class="field"><label for="brandStatus">Mostrar</label><select id="brandStatus"><option value="all">Todas</option><option value="available">Con precio</option><option value="historical">Sin precio</option><option value="discontinued">Descontinuadas</option></select></div>
 <button type="button" id="exportBrands">Exportar CSV</button>
 </div>
-<div class="scroller"><table><thead><tr><th>Marca comercial (alias 3CV)</th><th style="text-align:right">Fichas 3CV mayo</th><th style="text-align:right">Precios comerciales</th><th>Estado comercial documentado</th></tr></thead><tbody id="brandRows"><tr><td colspan="4">Cargando fuentes documentales…</td></tr></tbody></table></div>
+<div class="scroller"><table><thead><tr><th>Marca</th><th style="text-align:right">Registros 3CV</th><th style="text-align:right">Precios</th><th>Situación</th></tr></thead><tbody id="brandRows"><tr><td colspan="4">Cargando fuentes documentales…</td></tr></tbody></table></div>
 <div class="foot"><span id="brandCount" aria-live="polite">Cargando marcas…</span> · <a href="./cotizador.html">Consultar versiones y precios</a></div>
 </section>
 <p><small>Fuentes: <a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">archivo 3CV 08/05/2026</a> y catálogo comercial de RINDELAB con URLs por versión. No se certifica ninguna equivalencia técnica entre códigos de homologación y versiones comerciales. Esta tabla comprende el corte histórico de mayo; las fichas adicionales de la API de octubre se consultan en el buscador principal.</small></p>
@@ -44,16 +44,16 @@ const $=x=>document.getElementById(x),norm=x=>String(x||'').normalize('NFD').rep
 const brandAliases=new Map([['m. benz','Mercedes-Benz'],['haval','Great Wall'],['ssangyong','KGM'],['lynk co','Lynk & Co'],['zx auto','Zxauto'],['dfm','Dongfeng'],['mitsubishi fuso','Fuso'],['exeed born for more','Exeed']]);
 const canonicalBrand=x=>brandAliases.get(norm(x))||x;
 let all=[],visible=[];
-const statusLabels={available:'Precio documentado',historical:'Histórico · vigencia no verificada',discontinued:'Descontinuado en Chile'};
+const statusLabels={available:'Con precio',historical:'Sin precio',discontinued:'Descontinuada'};
 function commercialState(b,verified){const record=verified[b.brand];if(record?.status==='discontinued-cl'&&/^https:\/\//.test(record.sourceUrl||''))return 'discontinued';return b.priceCount>0?'available':'historical';}
 function td(text,className){const el=document.createElement('td');el.textContent=String(text);if(className)el.className=className;return el;}
 function render(){
 const q=norm($('brandSearch').value).trim(),status=$('brandStatus').value;
-visible=all.filter(x=>norm([x.brand,...(x.aliases||[])].join(' ')).includes(q)&&(status==='all'||(status==='pending'?x.priceCount===0:x.status===status)));
+visible=all.filter(x=>norm([x.brand,...(x.aliases||[])].join(' ')).includes(q)&&(status==='all'||x.status===status));
 $('brandRows').replaceChildren();
 const frag=document.createDocumentFragment();for(const b of visible){
  const tr=document.createElement('tr'),state=td(statusLabels[b.status],b.status==='available'?'ready':b.status==='discontinued'?'discontinued':'historical');
-  if(b.sourceUrl){const a=document.createElement('a');a.className='state-source';a.textContent='Ver fuente ↗';a.href=b.sourceUrl;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label','Ver fuente de estado comercial de '+b.brand);state.append(a);}
+  if(b.sourceUrl){const a=document.createElement('a');a.className='state-source';a.textContent='Ver fuente ↗';a.href=b.sourceUrl;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label','Ver fuente de comercialización de '+b.brand);state.append(a);}
   tr.append(td(b.brand+(b.aliases?.length?' · también '+b.aliases.join(', '):'')),td(num(b.homologationRecords),'num'),td(num(b.priceCount),'num'),state);frag.append(tr);
 }
 if(!visible.length){const tr=document.createElement('tr'),cell=td('No hay marcas con esos filtros.');cell.colSpan=4;tr.append(cell);frag.append(tr);}
@@ -62,8 +62,8 @@ $('brandRows').append(frag);$('brandCount').textContent=num(visible.length)+' de
 $('brandSearch').addEventListener('input',render);$('brandStatus').addEventListener('change',render);
 $('exportBrands').addEventListener('click',()=>{
  const esc=x=>'"'+String(x).replace(/"/g,'""')+'"';
- const body=['Marca,Homologaciones 3CV mayo 2026,Precios comerciales documentados,Estado comercial,Fuente del estado',...visible.map(b=>[b.brand,b.homologationRecords,b.priceCount,statusLabels[b.status],b.sourceUrl||''].map(esc).join(','))].join('\r\n');
- const url=URL.createObjectURL(new Blob(['\ufeff'+body],{type:'text/csv;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='rindelab-cobertura-marcas-estados-20261020.csv';document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
+ const body=['Marca,Homologaciones 3CV mayo 2026,Precios comerciales publicados,Situación,Fuente del estado',...visible.map(b=>[b.brand,b.homologationRecords,b.priceCount,statusLabels[b.status],b.sourceUrl||''].map(esc).join(','))].join('\r\n');
+ const url=URL.createObjectURL(new Blob(['\ufeff'+body],{type:'text/csv;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='rindelab-marcas-y-precios-20261020.csv';document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
 });
 Promise.all([fetch('./brand-index-3cv-20260508.json').then(r=>{if(!r.ok)throw Error('Índice 3CV no disponible');return r.json()}),fetch('./sii/commercial-2026.json?v=20261020-list1504').then(r=>{if(!r.ok)throw Error('Catálogo comercial no disponible');return r.json()}),fetch('./sii/brand-commercial-status-2026.json?v=20261020a').then(r=>{if(!r.ok)throw Error('Fuentes de estado comercial no disponibles');return r.json()})]).then(([m,prices,registry])=>{
  if(!m||m.records!==8053||!Array.isArray(m.brands)||!Array.isArray(prices)||registry?.schemaVersion!==1||!registry.statuses)throw Error('Fuentes incompletas');
