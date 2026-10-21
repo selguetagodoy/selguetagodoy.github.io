@@ -462,7 +462,7 @@ await test('Comparar exactamente dos vehículos y limpiar selección',async()=>{
  await page.locator('.vehicle-card button[data-compare]').nth(1).click();
  assert(await page.locator('#compareOpen').isEnabled());await page.locator('#compareOpen').click();
  assert(await page.locator('#compareDialog').evaluate(x=>x.open));
- assert.equal(await page.locator('#compareContent .compare-row').count(),15);
+ assert.equal(await page.locator('#compareContent .compare-row').count(),16);
  await page.locator('#shareCompare').click();
  assert((await page.inputValue('#compareShareLink')).includes('comparar='));
  assert(await page.locator('#compareShareLink').isVisible());
@@ -581,7 +581,7 @@ await test('Comparación enchufable y eléctrico desglosa rendimientos sin infer
  assert(labels.includes('Rendimiento eléctrico (km/kWh)'));
  assert(labels.includes('Rendimiento ponderado (km/L)'));
  assert.equal(await page.locator('.comparison-table thead th').count(),4);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),16);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),17);
  const note=await page.locator('#compareContent').textContent();
  assert.match(note,/Sin dato comparable/);
  await page.click('#compareClose');
