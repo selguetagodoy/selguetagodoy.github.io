@@ -1805,7 +1805,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  assert(archive.every(x=>x.brand==='Suzuki'&&/^https:\/\//.test(x.statusSource)));
  assert(prices.filter(x=>x.brand==='Suzuki'&&x.family==='Jimny').every(x=>x.commercialStatus!=='discontinued-cl'));
  const lifecycle=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(lifecycle.models.length,52);
+ assert.equal(lifecycle.models.length,69);
  assert.equal(lifecycle.models.find(x=>x.model==='Jimny 5 puertas').match,'variant-only-manual');
  const quote=await browser.newPage({viewport:{width:390,height:844}});
  await quote.goto(base+'cotizador.html',{waitUntil:'networkidle'});
@@ -1847,12 +1847,16 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'No marcar la familia Golf completa como descontinuada; GTI regresó');
  await p.close();
 });
-await test('Cuarta revisión 3CV: 52 casos sin falsos positivos en variantes vigentes',async()=>{
+await test('Quinta revisión 3CV: 69 casos sin falsos positivos en variantes vigentes',async()=>{
  const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/model-lifecycle-2026.json'),'utf8'));
- assert.equal(data.models.length,52);
- assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,52);
+ assert.equal(data.models.length,69);
+ assert.equal(new Set(data.models.map(x=>x.brand+'|'+x.model)).size,69);
  assert(data.models.every(x=>/^https:\/\//.test(x.sourceUrl)&&x.status&&x.match));
  assert.equal(data.models.filter(x=>x.match==='previous-generation-cutoff').length,6);
+ assert(['Q50','Q60','QX30','QX50','QX60','QX70','QX80','Q70','G37'].every(m=>data.models.some(x=>x.brand==='Infiniti'&&x.model===m)),'Nueve modelos históricos Infiniti con fuente primaria');
+ assert(data.models.filter(x=>x.brand==='Volvo'&&['C30','S40','S80','XC70','V40 / V40 Cross Country'].includes(x.model)).length===5);
+ assert(!data.models.some(x=>x.brand==='Borgward'),'Los Borgward BX5/BX7 nunca fueron vehículos nuevos comercializados en Chile');
+ assert(data.models.some(x=>x.brand==='Peugeot'&&x.model.includes('RCZ')&&x.excludePrefixes.includes('RCZ Vision')));
  assert(['Kia|Rio','Kia|Cerato','Mazda|CX-9','Audi|TT','Volkswagen|Scirocco','Mitsubishi|i-MiEV'].every(k=>data.models.some(x=>x.brand+'|'+x.model===k)), 'El cuarto lote debe estar integrado');
  assert(data.models.some(x=>x.brand==='BMW'&&x.familyPrefix==='i3'&&x.homologationCutoff==='2022-12-31'),'El i3 urbano tiene fecha de corte');
  assert(data.models.some(x=>x.brand==='Subaru'&&x.model.startsWith('XV')&&x.homologationCutoff==='2023-12-31'),'XV debe ser generación histórica, no Crosstrek');
@@ -1882,11 +1886,15 @@ await test('Cuarta revisión 3CV: 52 casos sin falsos positivos en variantes vig
  assert.equal(await p.locator('.vehicle-lifecycle').count(),0,'Corolla Cross no equivale a Corolla Sport HB');
  await p.close();
 });
-await test('Directorio de modelos descontinuados: 52 casos, filtros y ancho móvil',async()=>{
+await test('Directorio de modelos descontinuados: 69 casos, filtros y ancho móvil',async()=>{
  const p=await browser.newPage({viewport:{width:390,height:844}});
  await p.goto(base+'descontinuados.html',{waitUntil:'networkidle'});
- await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('52 modelos'),{timeout:30000});
- assert.equal(await p.locator('#modelRows tr').count(),52);
+ await p.waitForFunction(()=>document.querySelector('#modelCount')?.textContent?.includes('69 modelos'),{timeout:30000});
+ assert.equal(await p.locator('#modelRows tr').count(),69);
+ await p.fill('#searchModel','Infiniti Q50');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
+ await p.fill('#searchModel','Volvo V40');
+ assert.equal(await p.locator('#modelRows tr').count(),1);
  await p.fill('#searchModel','Kia Rio');
  assert.equal(await p.locator('#modelRows tr').count(),1);
  await p.fill('#searchModel','Subaru XV');
@@ -1898,8 +1906,8 @@ await test('Directorio de modelos descontinuados: 52 casos, filtros y ancho móv
  await p.selectOption('#statusFilter','previous-generation-cl');
  assert.equal(await p.locator('#modelRows tr').count(),6);
  await p.selectOption('#statusFilter','discontinued-cl');
- assert.equal(await p.locator('#modelRows tr').count(),46);
- assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),46);
+ assert.equal(await p.locator('#modelRows tr').count(),63);
+ assert.equal(await p.locator('#modelRows a[target="_blank"]').count(),63);
  const dimensions=await p.evaluate(()=>({w:window.innerWidth,doc:document.documentElement.scrollWidth}));
  assert(dimensions.doc<=dimensions.w+3,'El directorio no debe desbordar la pantalla '+JSON.stringify(dimensions));
  await p.close();
