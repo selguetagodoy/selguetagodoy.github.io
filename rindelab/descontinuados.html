@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modelos descontinuados en Chile | RINDELAB</title>
+<meta name="description" content="Consulta modelos de autos retirados del mercado chileno, generaciones anteriores y fuentes que documentan su historial.">
+<link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Inter;src:url('./fonts/inter-latin-wght-normal.woff2') format('woff2');font-weight:100 900;font-display:swap}
+:root{font-family:Inter,Arial,sans-serif;color:#122841;background:#f8fafc;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}header{background:#102a43;color:white}header>div,main,footer{max-width:1120px;margin:auto;padding:20px 24px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700}.logo{font-size:25px;letter-spacing:-.055em}.logo span{color:#7bd5ec}
+main{padding-top:36px;padding-bottom:46px}.eyebrow{color:#2563eb;font-size:12px;letter-spacing:.1em;font-weight:750}
+h1{font-size:clamp(29px,4vw,43px);letter-spacing:-.05em;line-height:1.12;margin:8px 0 13px}
+p{line-height:1.65;max-width:86ch;color:#526077;font-size:14px}.intro{max-width:79ch}
+.panel{background:#fff;border:1px solid #dbe3ed;border-radius:13px;margin:26px 0 18px;overflow:hidden}
+.controls{padding:18px 20px;display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+.field{display:grid;gap:6px;flex:1 1 220px}.field label{font-size:12px;font-weight:700;color:#334155}
+input,select{border:1px solid #cbd5e1;border-radius:7px;padding:12px;font:inherit;font-size:14px;background:#fff;min-width:0;color:#142539}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;text-align:left;font-size:13px;min-width:700px}
+th{background:#edf2f8;text-align:left;font-size:12px;color:#334155;padding:13px 16px}td{border-top:1px solid #e7edf3;padding:14px 16px;vertical-align:top}
+td b{font-weight:750}td span{font-size:12px;color:#526176}.status{font-weight:700}.status.previous{color:#856023}.status.retired{color:#8a2e38}
+td a{color:#1d4ed8;text-decoration:underline;text-underline-offset:3px;font-weight:650;white-space:nowrap}
+.panel-footer{border-top:1px solid #e7edf3;padding:13px 20px;color:#64748b;font-size:13px}
+.note{border-top:1px solid #dbe3ed;margin-top:25px;padding-top:15px}footer{color:#64748b;font-size:12px}
+@media(max-width:600px){header>div,main,footer{padding-left:16px;padding-right:16px}.controls{padding:14px}.panel{margin-top:20px}}
+</style>
+</head><body>
+<header><div><nav><a class="logo" href="./index.html">RINDE<span>LAB</span></a><a href="./marcas.html">Marcas y precios</a><a href="./cotizador.html">Cotizar autos ↗</a></nav></div></header>
+<main>
+<p class="eyebrow">HISTORIAL DE MODELOS · CHILE</p>
+<h1>Modelos descontinuados</h1>
+<p class="intro">Autos que formaron parte de la oferta chilena de vehículos nuevos y posteriormente salieron del catálogo. Algunos casos corresponden solo a una carrocería o generación: se distingue expresamente para no confundirlos con modelos actuales que conservan el nombre.</p>
+<section class="panel" aria-label="Directorio de modelos retirados">
+<div class="controls">
+<div class="field"><label for="searchModel">Buscar marca o modelo</label><input id="searchModel" type="search" placeholder="Ej. Fiesta, Spark, Hyundai"></div>
+<div class="field"><label for="statusFilter">Mostrar</label><select id="statusFilter"><option value="all">Todos</option><option value="discontinued-cl">Descontinuados</option><option value="previous-generation-cl">Generaciones anteriores</option></select></div>
+</div>
+<div class="table-wrap"><table><thead><tr><th>Marca</th><th>Modelo o variante</th><th>Situación</th><th>Fuente</th></tr></thead><tbody id="modelRows"><tr><td colspan="4">Cargando listado…</td></tr></tbody></table></div>
+<div class="panel-footer" id="modelCount" role="status" aria-live="polite"></div>
+</section>
+<p class="note"><strong>Qué significa «descontinuado»:</strong> modelo o variante que ya no forma parte de la oferta de vehículos nuevos en Chile según antecedentes identificados. No significa que haya dejado de fabricarse en todos los países, ni que no existan unidades usadas o remanentes. La fecha de una homologación 3CV no prueba que un modelo se siga vendiendo. <a href="./novedades-3cv.html">Consulta técnica de homologaciones ↗</a></p>
+</main><footer>RINDELAB · Inventario editorial independiente; revisa la fuente de cada caso.</footer>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let models=[];
+function cell(tr,value){const td=document.createElement('td');td.textContent=String(value);tr.append(td);return td}
+function render(){
+ const q=norm($('searchModel').value).trim(),status=$('statusFilter').value;
+ const filtered=models.filter(x=>(status==='all'||x.status===status)&&norm(x.brand+' '+x.model+' '+x.effectiveNote).includes(q));
+ const body=$('modelRows'),frag=document.createDocumentFragment();
+ for(const x of filtered){
+  const tr=document.createElement('tr');cell(tr,x.brand);const model=cell(tr,x.model);model.style.fontWeight='750';
+  const state=cell(tr,x.status==='previous-generation-cl'?'Generación anterior':'Descontinuado');state.className='status '+(x.status==='previous-generation-cl'?'previous':'retired');
+  const proof=document.createElement('td');const a=document.createElement('a');
+  if(/^https:\/\//.test(x.sourceUrl)){a.href=x.sourceUrl;a.textContent='Consultar fuente ↗';a.target='_blank';a.rel='noopener noreferrer';proof.append(a);}
+  const note=document.createElement('div');note.textContent=x.effectiveNote;note.style.cssText='font-size:12px;color:#64748b;line-height:1.5;margin-top:5px';proof.append(note);tr.append(proof);frag.append(tr);
+ }
+ if(!filtered.length){const tr=document.createElement('tr'),td=cell(tr,'No hay resultados con esos filtros.');td.colSpan=4;frag.append(tr)}
+ body.replaceChildren(frag);
+ $('modelCount').textContent=filtered.length+' de '+models.length+' modelos, carrocerías o generaciones documentadas';
+}
+$('searchModel').addEventListener('input',render);$('statusFilter').addEventListener('change',render);
+fetch('./sii/model-lifecycle-2026.json?v=20261020-modelos31').then(r=>{if(!r.ok)throw Error('Listado no disponible');return r.json()}).then(d=>{
+ if(d.schemaVersion!==1||!Array.isArray(d.models))throw Error('Archivo de estados no válido');
+ models=d.models.slice().sort((a,b)=>a.brand.localeCompare(b.brand,'es')||a.model.localeCompare(b.model,'es'));render();
+}).catch(e=>{const row=document.createElement('tr'),td=cell(row,'No fue posible cargar el listado. '+e.message);td.colSpan=4;$('modelRows').replaceChildren(row)});
+})();
+</script></body></html>
