@@ -15,7 +15,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    const march=page.locator('#modelRows tr').filter({hasText:/March/});
    assert.equal(await march.count(),1);
    assert.match(await march.locator('.retired-market').textContent(),/Rango|Mediana/);
-   assert.match(await march.locator('.retired-market').textContent(),/20(17|18|19|20)/);
+   assert.match(await march.locator('.retired-market').textContent(),/2021/);
    await page.selectOption('#priceFilter','missing');
    await page.fill('#searchModel','Suzuki Jimny 5 puertas');
    assert.equal(await page.locator('#modelRows tr').count(),1);
