@@ -34,6 +34,21 @@ function archivedModel(row){
  })||null;
 }
 let costSortCycleNotice='';
+// Fichas 3CV nuevas sin precio equivalente NO son vehículos descontinuados.
+const RECENT_DAYS=365;
+const recentCutoff=()=>{
+ const d=new Date(),utc=Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate());
+ return new Date(utc-RECENT_DAYS*86400000).toISOString().slice(0,10);
+};
+function validCurrentPrice(row){
+ const price=window.RindelabCommercial?.minimum(row,family(row));
+ return Boolean(price&&!price.campaignExpired&&price.priceListClp>0&&
+  window.RindelabIdentity?.techKnown(price)===row[F.TECH]);
+}
+function recentNoPrice(row){
+ return Boolean(!archivedModel(row)&&/^20\d\d-\d\d-\d\d$/.test(row[F.DATE]||'')&&
+  row[F.DATE]>=recentCutoff()&&!validCurrentPrice(row));
+}
 const reviewedEnergyCodes=new Set(['BM9746EL1224S00-3']); // 10,6 km/kWh NEDC: verificación del documento original pendiente.
 let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
 const officialCodes=new Set();
@@ -105,7 +120,12 @@ function inputCriteria(){
  return {q:normalize($('query').value),brand:$('brand').value,model:$('model').value,tech:$('tech').value,body:$('bodytype').value,cycle:$('cycle').value,year:$('year').value,scope:$('catalogScope').value};
 }
 const groupSUV=['Station Wagon','Jeep','Tipo Jeep'];
-function matchesScope(row,scope){return scope==='all'||(scope!=='commercial'&&!archivedModel(row)&&!!window.RindelabCommercial?.hasReference(row,family(row)));}
+function matchesScope(row,scope){
+ if(scope==='all')return true;
+ if(scope==='commercial')return false;
+ if(scope==='recent-no-price')return recentNoPrice(row);
+ return !archivedModel(row)&&(validCurrentPrice(row)||recentNoPrice(row));
+}
 function bodyFits(selectedBody,actual){return !selectedBody||selectedBody==='__SUV_GROUP__'?(!selectedBody||groupSUV.includes(actual)):actual===selectedBody;}
 function matchesFilters(row,f){
  return (!f.brand||row[F.BRAND]===f.brand)&&(!f.model||normalize(family(row))===f.model)&&
@@ -146,15 +166,18 @@ function prepareMTT(source){
 function filterMTT(f){
  // La nómina MTT no informa carrocería ni ciclo de rendimiento equiparables.
  if(f.body||f.cycle)return [];
- return mttRecords.filter(item=>matchesText(item.row,f.q)&&matchesFilters(item.row,f));
+ return mttRecords.filter(item=>(f.scope!=='recent-no-price'||recentNoPrice(item.row))&&matchesText(item.row,f.q)&&matchesFilters(item.row,f));
 }
 function renderMTT(){
  // MTT sin rendimiento no es resultado comparable ni oferta comercial.
  // Un enlace al expediente aparece solo al buscar explícitamente su código o modelo.
- const section=$('mttSearchSection'),q=normalize($('query').value);
- const matches=mttMatches.filter(item=>q===normalize(item.source.code)||(q.length>=10&&normalize(item.source.model).includes(q)));
+ const section=$('mttSearchSection'),q=normalize($('query').value),fScope=$('catalogScope').value;
+ const matches=mttMatches.filter(item=>fScope==='recent-no-price'||q===normalize(item.source.code)||(q.length>=10&&normalize(item.source.model).includes(q)));
  section.hidden=!matches.length;
- if(matches.length)$('mttSearchLink').href='./novedades-3cv.html?codigo='+encodeURIComponent(matches[0].source.code);
+ if(matches.length){$('mttSearchLink').href='./novedades-3cv.html?codigo='+encodeURIComponent(matches[0].source.code);
+  $('mttNoticeHeading').textContent=fScope==='recent-no-price'?'Homologado recientemente · Sin precio disponible.':'Solo homologación, sin rendimiento oficial.';
+  $('mttNoticeBody').textContent=fScope==='recent-no-price'?matches.map(x=>x.row[F.BRAND]+' '+x.row[F.MODEL]).join(' · ')+' · Ficha energética y venta en Chile pendientes de comprobación.':'El modelo buscado aparece en una nómina técnica, pero no tiene ficha de consumo comparable.';
+ }
 }
 
 function setOptions(id,items,placeholder){
@@ -168,8 +191,8 @@ function choices(){
  // Only compatible brand/model options; never quietly invent or repeat empty entries.
  const t=$('tech').value,body=$('bodytype').value,cycle=$('cycle').value,year=$('year').value,scope=$('catalogScope').value;
  const pool=all.filter(r=>matchesScope(r,scope)&&(!t||r[F.TECH]===t)&&bodyFits(body,r[F.BODY])&&(!cycle||r[F.CYCLE]===cycle)&&(!year||r[F.DATE].slice(0,4)>=year));
- const mtPool=scope==='all'&&!body&&!cycle?mttRecords.filter(item=>(!t||item.row[F.TECH]===t)&&(!year||item.row[F.DATE].slice(0,4)>=year)):[];
- const commercial=scope!=='all'?[...(window.RindelabCommercial?.records()||[]),...(window.RindelabMarket?.records()||[])].filter(x=>x.commercialStatus!=='discontinued-cl'&&(!t||x.technology===t)&&!body&&!cycle&&!year):[];
+ const mtPool=(scope==='all'||scope==='recent-no-price')&&!body&&!cycle?mttRecords.filter(item=>(!t||item.row[F.TECH]===t)&&(!year||item.row[F.DATE].slice(0,4)>=year)):[];
+ const commercial=(scope==='priced'||scope==='commercial')?[...(window.RindelabCommercial?.records()||[]),...(window.RindelabMarket?.records()||[])].filter(x=>x.commercialStatus!=='discontinued-cl'&&(!t||x.technology===t)&&!body&&!cycle&&!year):[];
  const brandNames=new Map();
  for(const name of [...pool.map(r=>r[F.BRAND]),...mtPool.map(item=>item.row[F.BRAND]),...commercial.map(x=>x.brand)]){
   const key=window.RindelabIdentity?.brand(name)||normalize(name);
@@ -398,12 +421,14 @@ function render(){
   const flaggedNote=flaggedEnergy?'<p class="energy-quality-note" role="note">Dato atípico pendiente de revisión documental: 10,6 km/kWh en NEDC. No equiparar con valores WLTP ni considerarlo el vehículo más eficiente del mercado.</p>':'';
   const status=archivedModel(row);
   const lifecycleHTML=status?'<p class="vehicle-lifecycle">'+(status.status==='previous-generation-cl'?'Generación anterior retirada de la oferta chilena':'Modelo descontinuado en la oferta chilena')+' · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
-  const offer=!status?window.RindelabCommercial?.minimum(row,family(row)):null;
+  const recent=recentNoPrice(row);
+  if(recent)article.classList.add('vehicle-card-recent');
+  const offer=!status&&!recent?window.RindelabCommercial?.minimum(row,family(row)):null;
   const offerCaption=offer?(offer.campaignExpired?'Referencia con campaña terminada · ': 'Precio publicado · ')+(offer.association==='same-tech'?'misma tecnología, versión sin verificar':'motorización de fuente no informada'):'';
-  const offerHTML=offer?'<div class="rinde-commercial"><small>'+safe(offerCaption)+'</small> <strong>'+safe(money(offer.priceListClp))+(offer.taxIncluded===false?' + IVA':'')+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';
+  const offerHTML=recent?'<div class="rinde-commercial rinde-recent" role="note"><strong>Homologado recientemente · Sin precio disponible</strong><small>Llegada comercial a Chile por confirmar. Sin precio de la misma motorización ni stock verificado; no implica descontinuación ni lanzamiento anunciado.</small></div>':offer?'<div class="rinde-commercial"><small>'+safe(offerCaption)+'</small> <strong>'+safe(money(offer.priceListClp))+(offer.taxIncluded===false?' + IVA':'')+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
   article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p>'+lifecycleHTML+'</div>'+
+   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p>'+lifecycleHTML+(recent?'<span class="rinde-status-recent">Homologación reciente · Precio pendiente</span>':'')+'</div'+'>'+
    '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'" title="Categoría declarada en 3CV: '+safe(row[F.TECH])+'">'+safe(techHuman[row[F.TECH]]||row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'" title="'+safe(row[F.CYCLE]==='NEDC'?'Ensayo NEDC; no es directamente comparable con WLTP':row[F.CYCLE]==='WLTP'?'Ensayo WLTP; no es directamente comparable con NEDC':'Ciclo no informado')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
    '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
@@ -745,12 +770,15 @@ function renderStatistics(){
   note.textContent='No se estima un costo combinado de PHEV o REEV desde consumos ponderados. Elige rendimiento eléctrico o rendimiento ponderado, ambos disponibles en la fuente.';
   return;
  }
+ // Ranking técnico de consumos homologados: excluir las fichas recientes sin precio
+ // comercial de motorización coincidente. El ranking NO acredita stock físico.
  const candidate=all.filter(row=>(!tech||row[F.TECH]===tech)&&(!cycle||row[F.CYCLE]===cycle)&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
- const scored=candidate.filter(row=>!reviewedEnergyCodes.has(row[F.CODE])).map(row=>({row,value:rankingValue(row,metric)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
+ const measured=candidate.filter(row=>!reviewedEnergyCodes.has(row[F.CODE])).map(row=>({row,value:rankingValue(row,metric)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
+ const scored=measured.filter(({row})=>!recentNoPrice(row));
  scored.sort((a,b)=>(cycle?(ascending?a.value-b.value:b.value-a.value):0)||b.row[F.DATE].localeCompare(a.row[F.DATE])||(a.row[F.BRAND]+' '+a.row[F.MODEL]).localeCompare(b.row[F.BRAND]+' '+b.row[F.MODEL],'es'));
- $('statsResultCount').textContent=fmt(scored.length)+' fichas con esta medida';
+ $('statsResultCount').textContent=fmt(measured.length)+' fichas con esta medida · nuevas sin precio excluidas del ranking · stock no verificado';
  if(!scored.length){
-  ranking.innerHTML='<div class="stats-empty"><strong>No hay fichas con esta medida y esos filtros.</strong><p>Prueba otro ciclo, carrocería o motorización.</p></div>';
+  ranking.innerHTML='<div class="stats-empty"><strong>No hay fichas comparables en este filtro.</strong><p>Las homologaciones recientes sin precio quedan fuera del ranking, pero siguen consultables en Buscar. El ranking no acredita stock.</p></div>';
   return;
  }
  if(metric==='cost')note.textContent=cycle?

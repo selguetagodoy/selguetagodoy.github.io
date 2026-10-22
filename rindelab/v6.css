@@ -718,3 +718,10 @@ input,select,textarea{font-size:16px}
 
 /* Selector de cobertura comercial/histórica */
 .rinde-catalog-scope{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px;padding:10px 12px;border:1px solid var(--line,#dae1ec);border-radius:12px}.rinde-catalog-scope label{font-weight:700}.rinde-catalog-scope select{flex:1;min-width:min(100%,240px);max-width:420px;border-radius:8px;padding:10px}.rinde-catalog-scope small{flex-basis:100%;line-height:1.5;color:var(--muted,#596678)}
+
+/* Homologaciones recientes sin precio de la misma motorizacion. */
+.vehicle-card-recent{border-color:#b8cddd}
+.rinde-status-recent{display:inline-block;margin-top:8px;padding:5px 9px;border:1px solid #b7cfdf;border-radius:7px;background:#edf5fa;color:#234965;font-size:12px;font-weight:700}
+.rinde-commercial.rinde-recent{display:flex;flex-direction:column;align-items:flex-start;gap:5px;background:#f2f7fa;border-color:#c7dbe9}
+.rinde-commercial.rinde-recent strong{font-size:14px;color:#18435c}
+.rinde-commercial.rinde-recent small{font-size:12px;line-height:1.5}

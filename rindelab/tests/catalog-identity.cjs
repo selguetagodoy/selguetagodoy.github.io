@@ -22,6 +22,17 @@ for(const x of examples){
  assert(selected,'Sin precio de prueba: '+JSON.stringify(x));
  assert.equal(selected.technology,x.minTech,'Precio de tecnología ajena: '+JSON.stringify(x));
 }
+// Regresion: el Opel Mokka Electric homologado no puede heredar precios gasolina.
+const mokkaEV=['Opel','New Mokka Electric GS','EV'];
+const mokkaGas=['Opel','Mokka GS Gasolina','Bencina'];
+assert.equal(C.priceReference(idx,mokkaEV,'Mokka',today),null,
+ 'Mokka Electric con precio ajeno al tipo de motorizacion');
+assert.equal(C.priceReference(idx,mokkaGas,'Mokka',today)?.priceListClp,22890000,
+ 'El Mokka a gasolina debe conservar su referencia comercial');
+assert.equal(C.compatible(mokkaEV,{version:'Mokka Elegance Gasolina 130HP AT'}),false);
+assert.equal(C.compatible(mokkaEV,{version:'Precio desde sin especificacion'}),false,
+ 'Motorizacion no informada no acredita precio exacto');
+assert.equal(C.techKnown({version:'Mokka Elegance Gasolina 130HP AT'}),'Bencina');
 const expired=records.filter(r=>C.expired(r,today));
 assert(expired.length>=200,'No se detectaron campañas comerciales documentadas como vencidas');
 const photoScript=fs.readFileSync(path.join(root,'v2-photos.js'),'utf8');
