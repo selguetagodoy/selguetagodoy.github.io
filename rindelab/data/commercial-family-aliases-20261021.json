@@ -5,14 +5,6 @@
   "aliases": [
     {
       "brand": "BYD",
-      "sourceFamily": "Atto 8 Dm",
-      "canonicalFamily": "Atto 8",
-      "sourceKey": "BYD|ATTO 8 DM",
-      "canonicalKey": "BYD|ATTO 8",
-      "level": "same-commercial-family-only"
-    },
-    {
-      "brand": "BYD",
       "sourceFamily": "Sealion 7 Ev",
       "canonicalFamily": "Sealion 7",
       "sourceKey": "BYD|SEALION 7 EV",
@@ -236,5 +228,15 @@
       "level": "same-commercial-family-only"
     }
   ],
-  "pending": []
+  "pending": [
+    {
+      "brand": "BYD",
+      "sourceFamily": "Atto 8 Dm",
+      "canonicalFamily": "Atto 8",
+      "sourceKey": "BYD|ATTO 8 DM",
+      "canonicalKey": "BYD|ATTO 8",
+      "level": "same-commercial-family-only",
+      "reason": "unconfirmed-canonical-family"
+    }
+  ]
 }
