@@ -3598,6 +3598,271 @@ const reviewedOct22Batch3=[
     ]
   }
 ];
+const auditedBatch4Oct22=[
+  {
+    "brand": "Seat",
+    "pattern": "^(?:IBIZA)$",
+    "from": "2021",
+    "to": "2027",
+    "model": "Seat Ibiza · foto referencial de generación",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-seat-ibiza-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Seat_Ibiza_6F_Facelift_IMG_0117.jpg",
+    "file": "Seat Ibiza 6F Facelift IMG 0117.jpg",
+    "bytes": 199910,
+    "sha256": "d0dfd558918ffc37b3b397bcaf74afbd1d46f8ac813e663f69690518c1886f4a",
+    "qualityStatus": "source-verified-version-restricted",
+    "excludeTech": [
+      "EV",
+      "PHEV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Great Wall",
+    "pattern": "^(?:POER PLUS)$",
+    "from": "2022",
+    "to": "2027",
+    "model": "Great Wall Poer Plus · foto referencial de generación",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-great-wall-poer-plus-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_Poer_Plus_Elite_2025.jpg",
+    "file": "Great Wall Poer Plus Elite 2025.jpg",
+    "bytes": 260997,
+    "sha256": "4238270f289342ca0704bffc1d36fcf54e65ac8ba31d78eb7f0391eeb6158a14",
+    "qualityStatus": "source-verified-version-restricted",
+    "excludeTech": [
+      "EV",
+      "HEV",
+      "PHEV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Mazda",
+    "pattern": "^(?:CX[- ]?5)$",
+    "from": "2021",
+    "to": "2026",
+    "model": "Mazda CX-5 · foto referencial de generación",
+    "author": "Charles from Port Chester, New York",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "localSrc": "./images/commons/new-mazda-cx-5-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-5_(2024)_(53939321110).jpg",
+    "file": "Mazda CX-5 (2024) (53939321110).jpg",
+    "bytes": 177525,
+    "sha256": "26ed3568e0420952a295f7518d2b0b6f56aa4d46a74d182622922b3ad1ab8747",
+    "qualityStatus": "source-verified-version-restricted",
+    "excludeTech": [
+      "EV",
+      "PHEV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Mini",
+    "pattern": "^(?:COUNTRYMAN)$",
+    "from": "2024",
+    "to": "2027",
+    "model": "Mini COUNTRYMAN · foto referencial de generación",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-mini-countryman-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mini_Countryman_(U25)_1X7A1821.jpg",
+    "file": "Mini Countryman (U25) 1X7A1821.jpg",
+    "bytes": 199195,
+    "sha256": "b77d6ea2ba82988497fc599d7c6b00c81c022729c30deb3916eae46d9531614d",
+    "qualityStatus": "source-verified-version-restricted"
+  },
+  {
+    "brand": "Porsche",
+    "pattern": "^(?:MACAN)$",
+    "from": "2024",
+    "to": "2027",
+    "model": "Porsche Macan EV · foto referencial de generación",
+    "author": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-porsche-macan-ev-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Porsche_Macan_Electric_XAB_Jet_Black_Metallic_01.jpg",
+    "file": "Porsche Macan Electric XAB Jet Black Metallic 01.jpg",
+    "bytes": 159463,
+    "sha256": "1b5713e160123095131ed890ad134b628e2f6c3902e3f40081a31f883d969c25",
+    "qualityStatus": "source-verified-version-restricted",
+    "tech": "EV"
+  },
+  {
+    "brand": "Mahindra",
+    "pattern": "^(?:XUV\\s?3XO)$",
+    "from": "2024",
+    "to": "2027",
+    "model": "Mahindra XUV 3XO · foto referencial de generación",
+    "author": "LuvsMG481",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-mahindra-xuv-3xo-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Mahindra_XUV_3XO_AX7L_front.jpg",
+    "file": "2025 Mahindra XUV 3XO AX7L front.jpg",
+    "bytes": 95157,
+    "sha256": "ba6e952a22deb1b06cf677ae198252df9cda86f1e90c6a04e4d5293a9d129277",
+    "qualityStatus": "source-verified-version-restricted",
+    "excludeTech": [
+      "EV",
+      "PHEV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Maserati",
+    "pattern": "^(?:LEVANTE)$",
+    "from": "2022",
+    "to": "2026",
+    "model": "Maserati Levante · foto referencial de generación",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "localSrc": "./images/commons/new-maserati-levante-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Maserati_Levante%2C_Berlin_(LRM_20240315_125046).jpg",
+    "file": "Maserati Levante, Berlin (LRM 20240315 125046).jpg",
+    "bytes": 240034,
+    "sha256": "91784cbb2406d52e5436db4d4930afb065d776f808e6d3ca803881cddc02e8f9",
+    "qualityStatus": "source-verified-version-restricted",
+    "excludeTech": [
+      "EV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Opel",
+    "pattern": "^(?:CORSA)$",
+    "from": "2023",
+    "to": "2027",
+    "model": "Opel corsa · foto referencial de generación",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-opel-corsa-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Opel_Corsa_F_Auto_Zuerich_2023_1X7A1113.jpg",
+    "file": "2023 Opel Corsa F Auto Zuerich 2023 1X7A1113.jpg",
+    "bytes": 156286,
+    "sha256": "fbbffb434d49e14767bf1d2b6ab77d67ca4cc87c699b38fbeb9767c7c10ef375",
+    "qualityStatus": "source-verified-version-restricted",
+    "excludeTech": [
+      "EV",
+      "PHEV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Land Rover",
+    "pattern": "^(?:RANGE ROVER EVOQUE)$",
+    "from": "2023",
+    "to": "2027",
+    "model": "Land Rover Range Rover Evoque · foto referencial de generación",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-land-rover-range-rover-evoque-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Range_Rover_Evoque_(L551)_IMG_3586.jpg",
+    "file": "2023 Range Rover Evoque (L551) IMG 3586.jpg",
+    "bytes": 174197,
+    "sha256": "d7099416dda3cbe17fea173dadc2e4139087c2d85a1cbd8b2f3b0ac03e49ed5a",
+    "qualityStatus": "source-verified-version-restricted"
+  },
+  {
+    "brand": "Aston Martin",
+    "pattern": "^(?:VANTAGE)$",
+    "from": "2024",
+    "to": "2027",
+    "model": "Aston Martin Vantage · foto referencial de generación",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-aston-martin-vantage-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Aston_Martin_Vantage_(2024)_IMG_0002.jpg",
+    "file": "Aston Martin Vantage (2024) IMG 0002.jpg",
+    "bytes": 157083,
+    "sha256": "56efa57071bfb732a213c700fd8823e9ea8bd0ede323acd343c238108e64c482",
+    "qualityStatus": "source-verified-version-restricted"
+  },
+  {
+    "brand": "Great Wall",
+    "pattern": "^(?:HAVAL JOLION)$",
+    "from": "2024",
+    "to": "2027",
+    "model": "Great Wall Haval Jolion · foto referencial de generación",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "localSrc": "./images/commons/new-great-wall-haval-jolion-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Haval_Jolion_HEV_Elite_2024_(53403989745).jpg",
+    "file": "Haval Jolion HEV Elite 2024 (53403989745).jpg",
+    "bytes": 100777,
+    "sha256": "4f3db2c71aea55c281343adf836c3bd00c3fe8cd36ab9ef56ff692040546c781",
+    "qualityStatus": "source-verified-version-restricted",
+    "tech": "HEV"
+  },
+  {
+    "brand": "Mini",
+    "pattern": "^(?:COOPER)$",
+    "from": "2025",
+    "to": "2027",
+    "model": "Mini COOPER · foto referencial de generación",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-mini-cooper-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_MINI_Cooper_SE_Hightrim.jpg",
+    "file": "2025 MINI Cooper SE Hightrim.jpg",
+    "bytes": 179312,
+    "sha256": "d3c0041b0edc821bc577360fdb910fd064f72d5097c2b441769b8e6258fcf21c",
+    "qualityStatus": "source-verified-version-restricted",
+    "tech": "EV"
+  },
+  {
+    "brand": "Seat",
+    "pattern": "^(?:ARONA)$",
+    "from": "2021",
+    "to": "2027",
+    "model": "Seat Arona · foto referencial de generación",
+    "author": "© M 93",
+    "license": "CC BY-SA 3.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "localSrc": "./images/commons/new-seat-arona-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Seat_Arona_FR_(Facelift)_%E2%80%93_f_01032025.jpg",
+    "file": "Seat Arona FR (Facelift) – f 01032025.jpg",
+    "bytes": 183260,
+    "sha256": "e394f018ca6afdecebcc52c41fdc7586e71e4eba7ee737ac3c50c31dcdbe459f",
+    "qualityStatus": "source-verified-version-restricted",
+    "excludeTech": [
+      "EV",
+      "PHEV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Subaru",
+    "pattern": "^(?:FORESTER)$",
+    "from": "2025",
+    "to": "2027",
+    "model": "Subaru Forester HEV · foto referencial de generación",
+    "author": "Mr.ちゅらさん",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-subaru-forester-hev-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Subaru_Forester_2025_Spring.jpg",
+    "file": "Subaru Forester 2025 Spring.jpg",
+    "bytes": 218522,
+    "sha256": "41db86bf597d046310861e28473dd33c3394a1032222368bdc03626b25a86175",
+    "qualityStatus": "source-verified-version-restricted",
+    "tech": "HEV"
+  }
+];
 const licenseUrls={
  'CC0 1.0':'https://creativecommons.org/publicdomain/zero/1.0/',
  'CC BY 3.0':'https://creativecommons.org/licenses/by/3.0/',
@@ -3607,7 +3872,7 @@ const licenseUrls={
 };
 const commonsFile=p=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file.replace(/ /g,'_'))+'?width=720';
 const commonsSource=p=>'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(p.file.replace(/ /g,'_'));
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
