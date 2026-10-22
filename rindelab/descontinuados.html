@@ -23,9 +23,18 @@ td a{color:#1d4ed8;text-decoration:underline;text-underline-offset:3px;font-weig
 .panel-footer{border-top:1px solid #e7edf3;padding:13px 20px;color:#64748b;font-size:13px}
 .note{border-top:1px solid #dbe3ed;margin-top:25px;padding-top:15px}footer{color:#64748b;font-size:12px}
 @media(max-width:600px){header>div,main,footer{padding-left:16px;padding-right:16px}.controls{padding:14px}.panel{margin-top:20px}}
+.retired-market{min-width:205px;font-size:13px;line-height:1.48}
+.retired-value{font-size:14px;display:block;font-weight:800;color:#145477;margin:4px 0}
+.retired-no-price{font-size:12px;color:#657589;font-weight:650}
+.retired-market small{color:#67788a;display:block;margin:5px 0}
+.retired-market a{white-space:normal;text-decoration:underline}
+.retired-market button{display:block;margin-top:8px;padding:6px 8px;border:1px solid #9ab5ca;border-radius:6px;color:#145477;background:white;font:inherit;cursor:pointer}
 </style>
+<link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
+<script src="./sii/sii.js?v=20261021-used-market" defer></script>
+<script src="./used-market.js?v=20261021-union270" defer></script>
 </head><body>
-<header><div><nav><a class="logo" href="./index.html">RINDE<span>LAB</span></a><a href="./marcas.html">Marcas y precios</a><a href="./cotizador.html">Cotizar autos ↗</a></nav></div></header>
+<header><div><nav><a class="logo" href="./index.html">RINDE<span>LAB</span></a><a href="./marcas.html">Marcas y precios</a><a href="./usados.html">Valores de usados ↗</a><a href="./cotizador.html">Cotizar autos ↗</a></nav></div></header>
 <main>
 <p class="eyebrow">HISTORIAL DE MODELOS · CHILE</p>
 <h1>Modelos descontinuados</h1>
@@ -33,38 +42,91 @@ td a{color:#1d4ed8;text-decoration:underline;text-underline-offset:3px;font-weig
 <section class="panel" aria-label="Directorio de modelos retirados">
 <div class="controls">
 <div class="field"><label for="searchModel">Buscar marca o modelo</label><input id="searchModel" type="search" placeholder="Ej. Fiesta, Spark, Hyundai"></div>
-<div class="field"><label for="statusFilter">Mostrar</label><select id="statusFilter"><option value="all">Todos</option><option value="discontinued-cl">Descontinuados</option><option value="previous-generation-cl">Generaciones anteriores</option></select></div>
+<div class="field"><label for="statusFilter">Mostrar</label><select id="statusFilter"><option value="all">Todos</option><option value="discontinued-cl">Descontinuados</option><option value="previous-generation-cl">Generaciones anteriores</option></select></div><div class="field"><label for="priceFilter">Valor usado</label><select id="priceFilter"><option value="all">Todos, incluso sin precio</option><option value="priced">Con referencia comercial</option><option value="missing">Sin valor asignable</option></select></div>
 </div>
-<div class="table-wrap"><table><thead><tr><th>Marca</th><th>Modelo o variante</th><th>Situación</th><th>Fuente</th></tr></thead><tbody id="modelRows"><tr><td colspan="4">Cargando listado…</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Marca</th><th>Modelo o variante</th><th>Situación</th><th>Valor comercial usado</th><th>Fuente del retiro</th></tr></thead><tbody id="modelRows"><tr><td colspan="5">Cargando listado…</td></tr></tbody></table></div>
 <div class="panel-footer" id="modelCount" role="status" aria-live="polite"></div>
 </section>
+<p class="note"><strong>Precios de usados:</strong> se muestra únicamente un valor documentado por modelo y año, sin representar la transacción final. Para generaciones acotadas no se asigna automáticamente un precio genérico de familia. La tasación y el permiso SII requieren seleccionar año y versión tributaria. <a href="./usados.html">Comparar otros años y consultar fuentes ↗</a></p>
 <p class="note"><strong>Qué significa «descontinuado»:</strong> modelo o variante que ya no forma parte de la oferta de vehículos nuevos en Chile según antecedentes identificados. No significa que haya dejado de fabricarse en todos los países, ni que no existan unidades usadas o remanentes. La fecha de una homologación 3CV no prueba que un modelo se siga vendiendo. <a href="./novedades-3cv.html">Consulta técnica de homologaciones ↗</a></p>
 </main><footer>RINDELAB · Inventario editorial independiente; revisa la fuente de cada caso.</footer>
 <script>
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const money=n=>'$'+Number(n).toLocaleString('es-CL');
 let models=[];
-function cell(tr,value){const td=document.createElement('td');td.textContent=String(value);tr.append(td);return td}
-function render(){
- const q=norm($('searchModel').value).trim(),status=$('statusFilter').value;
- const filtered=models.filter(x=>(status==='all'||x.status===status)&&norm(x.brand+' '+x.model+' '+x.effectiveNote).includes(q));
- const body=$('modelRows'),frag=document.createDocumentFragment();
- for(const x of filtered){
-  const tr=document.createElement('tr');cell(tr,x.brand);const model=cell(tr,x.model);model.style.fontWeight='750';
-  const state=cell(tr,x.status==='previous-generation-cl'?'Generación anterior':'Descontinuado');state.className='status '+(x.status==='previous-generation-cl'?'previous':'retired');
-  const proof=document.createElement('td');const a=document.createElement('a');
-  if(/^https:\/\//.test(x.sourceUrl)){a.href=x.sourceUrl;a.textContent='Consultar fuente ↗';a.target='_blank';a.rel='noopener noreferrer';proof.append(a);}
-  const note=document.createElement('div');note.textContent=x.effectiveNote;note.style.cssText='font-size:12px;color:#64748b;line-height:1.5;margin-top:5px';proof.append(note);tr.append(proof);frag.append(tr);
- }
- if(!filtered.length){const tr=document.createElement('tr'),td=cell(tr,'No hay resultados con esos filtros.');td.colSpan=4;frag.append(tr)}
- body.replaceChildren(frag);
- $('modelCount').textContent=filtered.length+' de '+models.length+' modelos, carrocerías o generaciones documentadas';
+function cell(tr,value){const td=document.createElement('td');td.textContent=String(value);tr.append(td);return td;}
+function applicable(x){
+ // Never treat a version/generation-specific retirement as a whole-family price.
+ if(x.match!=='whole-family')return null;
+ const references=window.RindelabUsed?.marketFor(x.brand,x.model)||[];
+ return references.length?[...references].sort((a,b)=>b.year-a.year||(a.source==='AutoExplora'?-1:1))[0]:null;
 }
-$('searchModel').addEventListener('input',render);$('statusFilter').addEventListener('change',render);
-fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos90').then(r=>{if(!r.ok)throw Error('Listado no disponible');return r.json()}).then(d=>{
- if(d.schemaVersion!==1||!Array.isArray(d.models))throw Error('Archivo de estados no válido');
- models=d.models.slice().sort((a,b)=>a.brand.localeCompare(b.brand,'es')||a.model.localeCompare(b.model,'es'));render();
-}).catch(e=>{const row=document.createElement('tr'),td=cell(row,'No fue posible cargar el listado. '+e.message);td.colSpan=4;$('modelRows').replaceChildren(row)});
+function render(){
+ const q=norm($('searchModel').value).trim(),status=$('statusFilter').value,market=$('priceFilter').value;
+ const filtered=models.filter(x=>(status==='all'||x.status===status)&&norm(x.brand+' '+x.model+' '+x.effectiveNote).includes(q)&&
+  (market==='all'||(market==='priced')===Boolean(applicable(x))));
+ const body=$('modelRows'),frag=document.createDocumentFragment();
+ let withPrice=0;
+ for(const x of filtered){
+  const tr=document.createElement('tr');cell(tr,x.brand);
+  const model=cell(tr,x.model);model.style.fontWeight='750';
+  const state=cell(tr,x.status==='previous-generation-cl'?'Generación anterior':'Descontinuado');state.className='status '+(x.status==='previous-generation-cl'?'previous':'retired');
+  const value=document.createElement('td');value.className='retired-market';
+  const price=applicable(x);
+  if(price){
+   withPrice++;
+   const label=document.createElement('strong');label.className='retired-value';
+   label.textContent=price.source==='AutoExplora'?'Mediana '+money(price.medianClp):money(price.lowClp)+' – '+money(price.highClp);
+   value.append(label);
+   const detail=document.createElement('small');
+   detail.textContent='Año '+price.year+' · '+price.source+(price.source==='AutoExplora'?' · '+price.sampleSize+' avisos':' · rango aproximado')+' · corte '+price.observedAt;
+   value.append(detail);
+   const link=document.createElement('a');link.href=price.sourceUrl;
+   link.textContent='Ver precio en fuente ↗';value.append(link);
+   const allYears=document.createElement('a');allYears.href='./usados.html?modelo='+encodeURIComponent(x.brand+' '+x.model);
+   allYears.textContent=' · Otros años';value.append(allYears);
+  }else{
+   const missing=document.createElement('strong');missing.className='retired-no-price';
+   missing.textContent='Sin valor de mercado documentado para asignar';value.append(missing);
+   if(x.match!=='whole-family'){
+    const note=document.createElement('small');
+    note.textContent='Retiro acotado a generación o variante: no extrapolar precio de familia.';value.append(note);
+   }
+  }
+  const button=document.createElement('button');button.type='button';
+  button.textContent='Buscar tasación SII';
+  button.addEventListener('click',()=>window.RindelabSII?.openCommercial?.(x.brand,x.model));
+  value.append(button);tr.append(value);
+  const proof=document.createElement('td'),a=document.createElement('a');
+  if(/^https:\/\//.test(x.sourceUrl)){
+   a.href=x.sourceUrl;a.textContent='Consultar fuente ↗';a.target='_blank';a.rel='noopener noreferrer';proof.append(a);
+  }
+  const note=document.createElement('div');note.textContent=x.effectiveNote;
+  note.style.cssText='font-size:12px;color:#64748b;line-height:1.5;margin-top:5px';proof.append(note);
+  tr.append(proof);frag.append(tr);
+ }
+ if(!filtered.length){const tr=document.createElement('tr'),td=cell(tr,'No hay resultados con esos filtros.');td.colSpan=5;frag.append(tr);}
+ body.replaceChildren(frag);
+ $('modelCount').textContent=filtered.length+' de '+models.length+' modelos y generaciones documentadas · '+withPrice+' con valor comercial vinculado a nivel de familia';
+}
+$('searchModel').addEventListener('input',render);
+$('statusFilter').addEventListener('change',render);
+$('priceFilter').addEventListener('change',render);
+window.addEventListener('DOMContentLoaded',()=>{
+ const url=new URL(location.href),q=url.searchParams.get('modelo');
+ if(q)$('searchModel').value=q;
+ Promise.all([
+  window.RindelabUsed?.ready,
+  fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos90').then(r=>{if(!r.ok)throw Error('Listado no disponible');return r.json();})
+ ]).then(([,d])=>{
+  if(d.schemaVersion!==1||!Array.isArray(d.models))throw Error('Archivo de estados no válido');
+  models=d.models.slice().sort((a,b)=>a.brand.localeCompare(b.brand,'es')||a.model.localeCompare(b.model,'es'));render();
+ }).catch(e=>{
+  const row=document.createElement('tr'),td=cell(row,'No fue posible cargar el listado. '+e.message);
+  td.colSpan=5;$('modelRows').replaceChildren(row);
+ });
+});
 })();
 </script></body></html>
