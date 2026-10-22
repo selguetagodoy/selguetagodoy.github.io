@@ -633,7 +633,12 @@ await test('Consulta SII requiere año y selección expresa antes de mostrar tas
  await page.fill('#query','Corolla Cross');await page.click('#searchButton');
  await page.locator('.vehicle-card button[data-detail]').first().click();
  assert(await page.locator('#siiSection').isVisible());
- assert.match(await page.locator('#siiCurrentValue').textContent(),/Elige el año y la versión/);
+ assert.match(await page.locator('#siiCurrentValue').textContent(),/No has fijado una versión tributaria/);
+ assert(await page.locator('#siiDirectInline').isVisible());
+ await page.locator('#siiDirectInline select[aria-label="Año de fabricación para tasación SII"]').selectOption('2025');
+ await page.waitForFunction(()=>document.querySelector('#siiDirectInline .used-sii-values')?.textContent.includes('Tasación:'),{timeout:15000});
+ assert.match(await page.locator('#siiDirectInline').textContent(),/Permiso:/);
+ assert.match(await page.locator('#siiShowLookup').textContent(),/Búsqueda avanzada/);
  await page.click('#siiShowLookup');
  await page.waitForFunction(()=>!!document.querySelector('#siiBrand option[value="TOYOTA"]'));
  assert.equal(await page.inputValue('#siiBrand'),'TOYOTA');
