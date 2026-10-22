@@ -164,6 +164,9 @@ jobs:
           node --check rindelab/usados.js
           node rindelab/tests/used-prices.cjs
 
+      - name: Verify used-market prices within 90 discontinued cases and SII
+        run: node rindelab/tests/retired-used-prices.cjs
+
       - name: Verify nationwide commercial catalog and five-model comparison
         run: node rindelab/tests/market-stages.cjs
 
