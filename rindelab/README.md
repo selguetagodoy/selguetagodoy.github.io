@@ -1,3 +1,8 @@
+# Modelos descontinuados: precios de usados y SII · 21/10/2026
+
+El directorio [Modelos descontinuados](https://selguetagodoy.github.io/rindelab/descontinuados.html) ahora muestra los 90 casos históricos, incluidos los que no tienen precio comercial verificable. Agrega referencias comerciales por año y fuente **solo si el estado afecta la familia completa**; para generaciones, variantes o carrocerías acotadas no asigna importes generales. Cada fila da acceso a la consulta SII, que exige la selección independiente de la versión tributaria. Esta ampliación **no altera las 270 referencias documentales del mercado usado ni los 81.697 registros fiscales SII 2026**.
+
+---
 # Autos usados: precios documentados y descontinuados · 21/10/2026
 
 La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) reúne **267 referencias habilitadas** sobre **270 registros documentados** por modelo y año, en **27 marcas y 91 familias**. El lote concilia 178 referencias previamente publicadas con 92 registros adicionales no duplicados. Tres referencias están retenidas para revisión (Audi R8 2016, BMW i8 2016 y Suzuki Kizashi 2015) y no aparecen como valores comerciales válidos.
