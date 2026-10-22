@@ -1,0 +1,33 @@
+'use strict';
+const assert=require('node:assert/strict'),C=require('../sii/catalog-identity.js');
+const old=require('../data/market-price-unresolved-after-fifthpass-20261022.json');
+const next=require('../data/market-price-sixthpass-20261022.json');
+const queue=require('../data/market-price-unresolved-after-sixthpass-20261022.json');
+const id=x=>C.norm(x.model)+'|'+x.homologationDate+'|'+x.homologationCodeSuffix;
+assert.equal(old.records.length,206);assert.equal(next.baselinePending,206);
+assert.equal(next.newFamilyReferences,13);assert.equal(next.pendingAfter,193);
+assert.equal(next.totalWithReferences,379);assert.equal(next.records.length,13);
+assert.equal(queue.records.length,193);assert.equal(queue.withFamilyReferences,379);
+assert.deepEqual(queue.categoryCounts,{'unmatched-catalog':176,'expired-price-reference':14,'other-powertrain':3});
+const map=new Map(old.records.map(x=>[id(x),x])),seen=new Set();
+for(const r of next.records){
+ const k=id(r);assert(!seen.has(k));seen.add(k);assert(map.has(k));
+ assert.equal(r.priceAssignedTo3CV,false);
+ assert.equal(r.previousCategory,map.get(k).category);
+ assert.match(r.reference.sourceUrl,/^https:\/\//);
+ assert(Number.isSafeInteger(r.reference.priceListClp)&&r.reference.priceListClp>0);
+ assert(r.reference.commercialVersion&&r.reference.notes);
+}
+const find=n=>next.records.filter(x=>C.norm(x.model)===C.norm(n));
+assert.equal(find('Mahindra Pik Up 2.2 CRDe C/S 2P 6MT 4x2 E6c')[0].reference.priceListClp,16648100);
+assert.equal(find('Mahindra Pik Up 2.2 CRDe D/C 4P 6MT 4x4 E6c')[0].reference.priceListClp,17838100);
+assert.equal(find('Mahindra Pik Up 2.2 CRDe C/S 2P 6MT 4x4 E6c').length,0,'SC 4x4 no puede copiar el precio DC');
+assert.equal(find('Jeep G Cherokee L Limited')[0].reference.validUntil,'2026-09-30');
+assert.equal(find('Jeep G Cherokee L Summit').length,0,'Summit no debe heredar Limited');
+assert.equal(find('Baic BJ40 Pro Diesel')[0].reference.validUntil,'2026-09-14');
+assert.equal(find('Baic U5 Plus MT')[0].reference.priceListClp,12990000);
+assert.equal(find('Baic U5 Plus CVT')[0].reference.priceListClp,14990000);
+assert.match(find('BMW 750e xDrive')[0].reference.notes,/tracción|xDrive/i);
+assert.equal(find('BMW 420i Gran Coupe')[0].reference.priceListClp,52900000);
+assert.equal(new Set([...seen,...queue.records.map(id)]).size,206);
+console.log('PASS sexta revisión: 13 referencias, 379 total familia, 193 pendientes; BMW xDrive discrepante, BJ40 Pro vencido, SC4x4/Summit no imputados');

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "methodology": "Sexto cruce: fichas de marca BMW/BAIC, catálogo chileno de Mahindra y concesionario Jeep. Todos los precios son referencias comerciales de versiones, no importes imputados a código de homologación 3CV; se identifican promociones vencidas.",
+  "baselinePending": 206,
+  "newFamilyReferences": 13,
+  "pendingAfter": 193,
+  "totalWithReferences": 379,
+  "categoryCountsPending": {
+    "unmatched-catalog": 176,
+    "expired-price-reference": 14,
+    "other-powertrain": 3
+  },
+  "records": [
+    {
+      "brand": "Mahindra",
+      "model": "Mahindra Pik Up 2.2 CRDe C/S 2P 6MT 4x2 E6c",
+      "homologationDate": "2026-08-11",
+      "homologationCodeSuffix": "0726M03-8",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Pik Up Refresh 2.2L Cabina Simple 4x2 Work",
+        "priceListClp": 16648100,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/vigente/mahindra/pik-up",
+        "priceKind": "portal-lista",
+        "matchedLevel": "motor-cabina-traccion-transmision-faltan-acabado-ano",
+        "notes": "Precio lista informado por directorio de vehículos nuevos; motor diésel 2.2 y 6MT, acabado Work no acreditado por el 3CV.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Mahindra",
+      "model": "Mahindra Pik Up 2.2 CRDe D/C 4P 6MT 4x2 E6c",
+      "homologationDate": "2026-08-11",
+      "homologationCodeSuffix": "0726M01-9",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Pik Up Cabina Doble Refresh 2.2L 4x2 Work",
+        "priceListClp": 16291100,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/vigente/mahindra/pik-up-cabina-doble",
+        "priceKind": "portal-lista",
+        "matchedLevel": "motor-cabina-traccion-transmision-faltan-acabado-ano",
+        "notes": "La red publica 4x2 Work 2.2; homologación no identifica acabado Work.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Mahindra",
+      "model": "Mahindra Pik Up 2.2 CRDe D/C 4P 6MT 4x4 E6c",
+      "homologationDate": "2026-08-11",
+      "homologationCodeSuffix": "0726M00-4",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Pik Up Cabina Doble Refresh 2.2L 4x4 Full",
+        "priceListClp": 17838100,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/vigente/mahindra/pik-up-cabina-doble",
+        "priceKind": "portal-lista",
+        "matchedLevel": "motor-cabina-traccion-transmision-faltan-acabado-ano",
+        "notes": "La ficha técnica separa AT de MT; precio de 4x4 Full comercial, no de 4x4 automática.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Jeep",
+      "model": "Jeep G Cherokee L Limited",
+      "homologationDate": "2026-07-30",
+      "homologationCodeSuffix": "0326M01-8",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Grand Cherokee L Limited 3.6 AT8 4x4",
+        "priceListClp": 62990000,
+        "sourceUrl": "https://www.rosselot.cl/nuevos/jeep/grand-cherokee",
+        "priceKind": "lista-con-campana-vencida",
+        "matchedLevel": "familia-acabado-motor-desconocido-en-3cv",
+        "notes": "Fuente de concesionario de SEPTIEMBRE de 2026, campaña comercial vencida. El acabado coincide nominalmente, no se verificó que la homologación 3CV sea motor 3.6 AT8. No asignar precio actual.",
+        "validUntil": "2026-09-30",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Jeep",
+      "model": "Jeep G Cherokee Altitude",
+      "homologationDate": "2026-06-23",
+      "homologationCodeSuffix": "0326M01-K",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Grand Cherokee Altitude 3.6 AT8 4x4",
+        "priceListClp": 55990000,
+        "sourceUrl": "https://www.rosselot.cl/nuevos/jeep/grand-cherokee",
+        "priceKind": "lista-con-campana-vencida",
+        "matchedLevel": "familia-acabado-motor-desconocido-en-3cv",
+        "notes": "Fuente de concesionario de SEPTIEMBRE de 2026, campaña comercial vencida. El acabado coincide nominalmente, no se verificó que la homologación 3CV sea motor 3.6 AT8. No asignar precio actual.",
+        "validUntil": "2026-09-30",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Jeep",
+      "model": "Jeep G Cherokee Limited",
+      "homologationDate": "2026-06-23",
+      "homologationCodeSuffix": "0326M00-4",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Grand Cherokee Limited 3.6 AT8 4x4",
+        "priceListClp": 60990000,
+        "sourceUrl": "https://www.rosselot.cl/nuevos/jeep/grand-cherokee",
+        "priceKind": "lista-con-campana-vencida",
+        "matchedLevel": "familia-acabado-motor-desconocido-en-3cv",
+        "notes": "Fuente de concesionario de SEPTIEMBRE de 2026, campaña comercial vencida. El acabado coincide nominalmente, no se verificó que la homologación 3CV sea motor 3.6 AT8. No asignar precio actual.",
+        "validUntil": "2026-09-30",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Baic",
+      "model": "Baic U5 Plus MT",
+      "homologationDate": "2025-12-26",
+      "homologationCodeSuffix": "0925S00-3",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "U5 PLUS Luxury 1.5L MT (5MT)",
+        "priceListClp": 12990000,
+        "sourceUrl": "https://www.baic.cl/modelos/u5-plus/",
+        "priceKind": "lista-marca",
+        "matchedLevel": "caja-motor-falta-acabado",
+        "notes": "BAIC publica U5 PLUS Luxury MT, no versión genérica MT. Precio lista distinto del precio con financiamiento.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Baic",
+      "model": "Baic BJ40 Pro Diesel",
+      "homologationDate": "2025-12-12",
+      "homologationCodeSuffix": "1025M00-4",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "BAIC BJ40 PRO Diesel",
+        "priceListClp": 39990000,
+        "sourceUrl": "https://www.baic.cl/legales-modelos/",
+        "priceKind": "lista-historica-vencida",
+        "matchedLevel": "motor-de-diesel-acabado-por-comprobar",
+        "notes": "Lista marca asociada a campaña válida solo hasta el 14-09-2026; **NO representa precio vigente**. No confundir con BJ40 no-Pro, cuyo precio es distinto.",
+        "validUntil": "2026-09-14",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Baic",
+      "model": "Baic BAIC BJ40 Pro",
+      "homologationDate": "2025-12-04",
+      "homologationCodeSuffix": "1025S00-9",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "BAIC BJ40 PRO gasolina",
+        "priceListClp": 38990000,
+        "sourceUrl": "https://www.baic.cl/legales-modelos/",
+        "priceKind": "lista-historica-vencida",
+        "matchedLevel": "familia-pro-motor-por-acreditar",
+        "notes": "Precio de BJ40 PRO Bencina en condiciones de septiembre; la ficha 3CV no acredita por nombre cuál motorización es. Fuente vencida 14-09-2026.",
+        "validUntil": "2026-09-14",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "BMW",
+      "model": "BMW 750e xDrive",
+      "homologationDate": "2025-12-02",
+      "homologationCodeSuffix": "0925M00-6",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "BMW 750e Berlina Pure Excellence",
+        "priceListClp": 175900000,
+        "sourceUrl": "https://www.bmw.cl/modelos/7",
+        "priceKind": "lista-vigente-octubre",
+        "matchedLevel": "familia-motor-traccion-no-comprobada",
+        "notes": "Oferta BMW octubre 2026. El catálogo describe «tracción trasera» y la ficha 3CV indica xDrive. No atribuir el precio a esta versión hasta aclarar esa contradicción.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "Baic",
+      "model": "Baic U5 Plus CVT",
+      "homologationDate": "2025-11-24",
+      "homologationCodeSuffix": "0925S00-0",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "U5 PLUS Luxury 1.5L CVT",
+        "priceListClp": 14990000,
+        "sourceUrl": "https://www.baic.cl/modelos/u5-plus/",
+        "priceKind": "lista-marca",
+        "matchedLevel": "caja-motor-falta-acabado",
+        "notes": "Lista corresponde a CVT Luxury; existe un CVT Honor con distinto precio, así que la homologación CVT sin acabado no admite valor definitivo.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "BMW",
+      "model": "BMW 520i Berlina",
+      "homologationDate": "2025-11-10",
+      "homologationCodeSuffix": "0925S00-1",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "BMW 520i Berlina Heritage",
+        "priceListClp": 68900000,
+        "sourceUrl": "https://www.bmw.cl/modelos/5",
+        "priceKind": "lista-vigente-octubre",
+        "matchedLevel": "familia-carroceria-motor-sin-acabado-3cv",
+        "notes": "BMW distingue 520i de 530e PHEV; la homologación Berlina no acredita acabado Heritage.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    },
+    {
+      "brand": "BMW",
+      "model": "BMW 420i Gran Coupe",
+      "homologationDate": "2025-10-27",
+      "homologationCodeSuffix": "0625S00-0",
+      "previousCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "BMW 420i Gran Coupé Dynamic LCI II",
+        "priceListClp": 52900000,
+        "sourceUrl": "https://www.bmw.cl/modelos/4-gran-coupe",
+        "priceKind": "lista-vigente-octubre",
+        "matchedLevel": "familia-carroceria-motor-sin-acabado-3cv",
+        "notes": "Sitio oficial identifica 420i Gran Coupé Dynamic LCI II; promoción octubre 2026. No equivale a 420i Cabriolet.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "priceAssignedTo3CV": false,
+      "status": "commercial-family-reference-with-version-uncertainty"
+    }
+  ]
+}
