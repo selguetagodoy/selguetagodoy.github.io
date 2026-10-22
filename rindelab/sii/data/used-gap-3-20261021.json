@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "cutoff": "2026-10-21",
+  "baseline": 299,
+  "added": 3,
+  "result": 302,
+  "methodology": "Exact manufacturer/model/year URLs from publicly published approximate minimum–maximum Autofact ranges, not concluded sales nor SII valuations.",
+  "records": [
+    {
+      "source": "Autofact",
+      "brandSlug": "hyundai",
+      "modelSlug": "equus",
+      "year": 2013,
+      "lowClp": 20723300,
+      "highClp": 25617000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/hyundai/equus/2013",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "mitsubishi",
+      "modelSlug": "lancer",
+      "year": 2014,
+      "lowClp": 5792538,
+      "highClp": 7989970,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/mitsubishi/lancer/2014",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "peugeot",
+      "modelSlug": "108",
+      "year": 2017,
+      "lowClp": 5142500,
+      "highClp": 6222500,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/peugeot/108/2017",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    }
+  ]
+}
