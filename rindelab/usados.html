@@ -26,7 +26,7 @@
 .used-retired-status{margin:6px 0 10px;color:#4f6675;font-size:.75rem}
 .used-retired-status a{color:#4f6675;text-decoration:underline;text-decoration-thickness:1px}
 .used-focusbar{display:flex;gap:.7rem;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid #d3e4ec;font-size:.88rem;color:#1b415b}
-.used-focusbar label{display:flex;gap:.6rem;align-items:center;cursor:pointer}.used-focusbar input{width:18px;height:18px;flex-shrink:0}
+.used-focusbar label{display:flex;gap:.6rem;align-items:center;cursor:pointer;flex-wrap:wrap}.used-focusbar input{width:18px;height:18px;flex-shrink:0}.used-focusbar select{max-width:100%;min-height:44px;padding:8px;border-radius:7px;border:1px solid #a8bdca;background:#fff;color:#14354c}.used-retired-card{display:flex;flex-direction:column;align-items:flex-start;gap:6px}.used-retired-card .used-result-links{margin-top:auto}.used-retired-card .used-result-main{font-size:1.2rem}.used-no-value{color:#54677a;font-size:.89rem;font-weight:650}.used-retired-context{font-size:.8rem;line-height:1.5;color:#506779}.used-retired-context a{overflow-wrap:anywhere}.used-retired-card .used-source-note{margin:4px 0}
 .used-result h3 small{font-size:.75em;font-weight:normal;color:#587084}
 .used-result-main{font-size:1.4rem;font-weight:850;color:#0d5e80}
 .used-result-metrics{font-size:.81rem;color:#45667c;line-height:1.55;margin:8px 0 14px}
@@ -40,7 +40,7 @@
 </style>
 <script src="./sii/sii.js?v=20261021-used-market" defer></script>
 <script src="./used-market.js?v=20261021-supplement299" defer></script>
-<script src="./usados.js?v=20261021-used-directory2" defer></script>
+<script src="./usados.js?v=20261021-retirements-90" defer></script>
 </head><body>
 <main class="used-page">
 <nav class="used-topnav" aria-label="Navegación RINDELAB"><a href="./index.html">RINDE<span>LAB</span></a><a href="./index.html#buscador">Buscar fichas 3CV</a><a href="./cotizador.html">Precios de autos nuevos</a></nav>
@@ -51,12 +51,12 @@
 </section>
 <section class="used-filter-panel" aria-label="Filtrar autos usados">
 <div class="used-filters"><label>Buscar marca o modelo<input id="usedQuery" type="search" placeholder="Ej. Nissan March, Ford Focus" autocomplete="off"></label><label>Marca<select id="usedBrand"><option value="">Todas las marcas</option></select></label><label>Año de fabricación<select id="usedYear"><option value="">Todos los años</option></select></label></div>
-<div class="used-focusbar"><label><input id="usedOnlyDiscontinued" type="checkbox" checked> Mostrar primero solo modelos cuya salida de la oferta chilena esté documentada</label></div>
+<div class="used-focusbar"><label for="usedHistoryView">Qué consultar <select id="usedHistoryView" aria-label="Qué consultar"><option value="prices">Referencias con precio</option><option value="retired">Todos los modelos y generaciones retirados</option><option value="missing">Retiros sin precio documentado</option></select></label><label id="usedActiveOnlyLabel"><input id="usedOnlyDiscontinued" type="checkbox" checked> Solo familias descontinuadas acreditadas</label></div>
 </section>
 <div class="used-summary" id="usedCount" role="status" aria-live="polite">Cargando referencias verificadas…</div>
 <section class="used-grid" id="usedGrid" aria-label="Valores observados por modelo y año"></section>
 <button type="button" id="usedMore" class="button secondary" hidden style="margin-top:1rem">Mostrar más referencias</button>
-<p id="usedEmpty" hidden>Sin referencia comercial documentada para esos filtros. Prueba otro año o consulta el mercado en <a href="https://www.autoexplora.cl/precios" target="_blank" rel="noopener noreferrer">AutoExplora</a> y <a href="https://www.autofact.cl/valor-comercial-autos.href" target="_blank" rel="noopener noreferrer">Autofact</a>.</p>
+<p id="usedEmpty" hidden>Sin registros documentados para esos filtros. Prueba otro año o consulta el mercado en <a href="https://www.autoexplora.cl/precios" target="_blank" rel="noopener noreferrer">AutoExplora</a> y <a href="https://www.autofact.cl/valor-comercial-autos.href" target="_blank" rel="noopener noreferrer">Autofact</a>.</p>
 <section class="used-footnotes"><p><strong>Cómo leer los datos.</strong> AutoExplora informa mediana y rango p10–p90 sobre al menos cinco publicaciones. Autofact informa un rango comercial aproximado y no publica el tamaño de muestra en estas consultas. Ninguno representa una cotización de compra, valor asegurado ni una tasación fiscal. No interpolamos precios entre años.</p>
 <p>Fuente tributaria: <a href="https://www.sii.cl/servicios_online/1049-3526.html" target="_blank" rel="noopener noreferrer">Servicio de Impuestos Internos</a>. La base interna es el corte de tasaciones SII 2026; el año de fabricación y versión exacta deben seleccionarse manualmente.</p></section>
 </main>

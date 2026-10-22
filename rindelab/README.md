@@ -1,3 +1,11 @@
+# RINDELAB — Retiros y valor comercial de usados (21/10/2026)
+
+La consulta independiente de autos usados (usados.html) conserva los **299 registros documentados** de la base actual: 296 habilitados y tres apartados por anomalías de calidad. Permite alternar entre referencias con precio, **los 90 casos de modelos/generaciones retirados** y los retirados sin valor verificable. La falta de precio no oculta el modelo ni se interpreta como precio cero. Se mantienen separados los 65 retiros de familia completa de los 25 retiros limitados a generaciones, carrocerías o variantes. Solo los primeros son candidatos a mostrar precios por familia y año; los segundos exigen evidencia específica.
+
+La auditoría reproducible node scripts/audit-used-lifecycle.cjs --check documenta **53 familias retiradas con referencias para al menos un año** y **12 sin referencia para ningún año**, con URL de retiro. No se extrapolan valores entre años, motorizaciones ni generaciones. El SII fiscal 2026 continúa accesible como consulta tributaria independiente y requiere selección manual de año y versión.
+
+---
+
 # Autos usados: precios documentados y descontinuados · 21/10/2026
 
 La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) consolida **296 referencias comerciales habilitadas sobre 299 registros de origen** (293 combinaciones únicas de modelo/año, en **28 marcas y 92 familias**). La actualización conservó los 270 registros previos y añadió 29 fuentes no duplicadas. Los tres casos anómalos (Audi R8 2016, BMW i8 2016 y Suzuki Kizashi 2015) siguen retenidos y no se muestran como valores válidos.

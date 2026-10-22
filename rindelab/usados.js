@@ -7,29 +7,66 @@ const money=x=>'$'+fmt(x);
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cap=x=>x.split(' ').map(w=>w.length<4&&/^\d+$/.test(w)?w:w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
 const display=p=>({brand:cap(p.brandSlug.replace(/-/g,' ')),model:cap(p.modelSlug.replace(/-/g,' '))});
-let all=[],filtered=[],count=18,retired=new Map(),lifecycleReady=false;
+let all=[],filtered=[],count=18,retired=new Map(),lifecycleReady=false,retirementRecords=[];
 const isRetired=p=>retired.has(clean(p.brandSlug)+'|'+clean(p.modelSlug));
 function populate(lifecycle){
- retired=new Map((lifecycle?.models||[])
-  .filter(x=>x.match==='whole-family'&&x.status==='discontinued-cl'&&x.sourceUrl?.startsWith('https://'))
+ retirementRecords=(lifecycle?.models||[]).filter(x=>x.brand&&x.model&&x.sourceUrl?.startsWith('https://')&&['discontinued-cl','previous-generation-cl'].includes(x.status))
+  .sort((a,b)=>(a.brand+' '+a.model).localeCompare(b.brand+' '+b.model,'es'));
+ retired=new Map(retirementRecords
+  .filter(x=>x.match==='whole-family'&&x.status==='discontinued-cl')
   .map(x=>[clean(x.brand)+'|'+clean(x.model),x]));
  lifecycleReady=retired.size>0;
  $('usedOnlyDiscontinued').disabled=!lifecycleReady;
  if(!lifecycleReady)$('usedOnlyDiscontinued').checked=false;
  all=window.RindelabUsed.records().sort((a,b)=>Number(isRetired(b))-Number(isRetired(a))||
   a.brandSlug.localeCompare(b.brandSlug,'es')||a.modelSlug.localeCompare(b.modelSlug,'es')||b.year-a.year);
- const brands=[...new Set(all.map(x=>x.brandSlug))].sort((a,b)=>a.localeCompare(b,'es'));
+ const brands=[...new Set([...all.map(x=>x.brandSlug),...retirementRecords.map(x=>clean(x.brand).replace(/\s+/g,'-'))])].sort((a,b)=>a.localeCompare(b,'es'));
  for(const b of brands)$('usedBrand').append(new Option(cap(b),b));
- const years=[...new Set(all.map(x=>x.year))].sort((a,b)=>b-a);
+ const years=[...new Set([...all.map(x=>x.year),...Array.from({length:37},(_,i)=>2026-i)])].sort((a,b)=>b-a);
  for(const y of years)$('usedYear').append(new Option(y,y));
  const url=new URL(location.href);
  const q=url.searchParams.get('modelo');if(q)$('usedQuery').value=q;
+ const mode=url.searchParams.get('modo');if(['prices','retired','missing'].includes(mode))$('usedHistoryView').value=mode;
  const year=url.searchParams.get('anio');if(year&&years.includes(Number(year)))$('usedYear').value=year;
  render();
 }
+function familyValues(record,year){
+ // Cuando el retiro se refiere solo a una generación o variante, no se
+ // adjudican valores de toda la familia por coincidencia del nombre.
+ if(record.match!=='whole-family'||record.status!=='discontinued-cl')return [];
+ const records=window.RindelabUsed?.marketFor(record.brand,record.model)||[];
+ return records.filter(p=>!year||p.year===year);
+}
+function renderRetirements(list,items,year){
+ for(const [i,r] of items.slice(0,count).entries()){
+  const family=familyValues(r,year);
+  const price=family[0]||null; // Orden documental: no calcular medias o depreciaciones.
+  const card=document.createElement('article');card.className='used-result used-retired-card';
+  const historyUrl=r.sourceUrl?.startsWith('https://')?r.sourceUrl:null;
+  const precise=r.match!=='whole-family';
+  const label=r.statusLabel||'Salida de la oferta de nuevos en Chile';
+  const range=price?(price.source==='AutoExplora'?money(price.medianClp):money(price.lowClp)+' – '+money(price.highClp)):'';
+  card.innerHTML='<h3>'+esc(r.brand+' '+r.model)+'</h3>'+
+   '<p class="used-retired-context"><strong>'+esc(label)+'</strong> · '+esc(r.effectiveNote||'Antecedente histórico documentado')+'</p>'+
+   (price?'<p class="used-source-note">Referencia por familia / año '+price.year+' · '+esc(price.source)+' · No identifica versión ni generación exacta</p><div class="used-result-main">'+esc(range)+'</div>':
+    '<p class="used-no-value">Sin precio comercial documentado'+(year?' para '+year:'')+'. No se calcula depreciación.</p>')+
+   (precise?'<p class="used-retired-context">Retiro limitado a generación, carrocería o variante; no se asigna el valor de otra generación.</p>':'')+
+   '<div class="used-result-links">'+(price?'<a href="'+esc(price.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Fuente del precio ↗</a>':'')+
+   (historyUrl?'<a href="'+esc(historyUrl)+'" target="_blank" rel="noopener noreferrer">Antecedente del retiro ↗</a>':'')+
+   '<button type="button" data-retired-sii="'+i+'">Buscar tasación fiscal SII</button></div>';
+  list.append(card);
+ }
+}
 function render(){
- const query=clean($('usedQuery').value),brand=$('usedBrand').value,year=Number($('usedYear').value)||null,onlyRetired=$('usedOnlyDiscontinued').checked;
- filtered=all.filter(x=>(!brand||x.brandSlug===brand)&&(!year||x.year===year)&&(!onlyRetired||isRetired(x))&&
+ const query=clean($('usedQuery').value),brand=$('usedBrand').value,year=Number($('usedYear').value)||null,onlyRetired=$('usedOnlyDiscontinued').checked,mode=$('usedHistoryView').value;
+ $('usedActiveOnlyLabel').hidden=mode!=='prices';
+ if(mode!=='prices'){
+  filtered=retirementRecords.filter(r=>(!brand||clean(r.brand)===clean(brand))&&(!query||clean(r.brand+' '+r.model).includes(query))&&(mode!=='missing'||!familyValues(r,year).length));
+  $('usedCount').textContent=fmt(filtered.length)+' modelos o generaciones retirados'+(mode==='missing'?' sin precio documentado'+(year?' para '+year:''):'')+' · registro histórico Chile';
+  const list=$('usedGrid');list.replaceChildren();renderRetirements(list,filtered,year);
+  $('usedMore').hidden=filtered.length<=count;$('usedEmpty').hidden=filtered.length>0;return;
+ }
+ filtered=all.filter(x=>(!brand||clean(x.brandSlug)===clean(brand))&&(!year||x.year===year)&&(!onlyRetired||isRetired(x))&&
   (!query||clean(x.brandSlug.replace(/-/g,' ')+' '+x.modelSlug.replace(/-/g,' ')).includes(query)));
  $('usedCount').textContent=fmt(filtered.length)+' referencias observadas, por modelo y año'+(onlyRetired?' · solo familias descontinuadas acreditadas':'')+' · corte 21-10-2026';
  const list=$('usedGrid');list.replaceChildren();
@@ -52,6 +89,15 @@ function render(){
  $('usedEmpty').hidden=filtered.length>0;
 }
 $('usedGrid').addEventListener('click',e=>{
+ const historic=e.target.closest('[data-retired-sii]');
+ if(historic){
+  const r=filtered[Number(historic.dataset.retiredSii)];
+  if(!r)return;
+  const year=Number($('usedYear').value)||null;
+  if(year)window.RindelabUsed?.selectYear?.(r.brand,r.model,year);
+  window.RindelabSII?.openCommercial?.(r.brand,r.model);
+  return;
+ }
  const b=e.target.closest('[data-used-sii]');if(!b)return;
  const p=filtered[Number(b.dataset.usedSii)];if(!p)return;
  const x=display(p);
@@ -59,7 +105,7 @@ $('usedGrid').addEventListener('click',e=>{
  window.RindelabSII?.openCommercial?.(x.brand,x.model);
 });
 $('usedMore').addEventListener('click',()=>{count+=18;render()});
-for(const id of ['usedQuery','usedBrand','usedYear','usedOnlyDiscontinued'])$(id).addEventListener(id==='usedQuery'?'input':'change',()=>{count=18;render()});
+for(const id of ['usedQuery','usedBrand','usedYear','usedOnlyDiscontinued','usedHistoryView'])$(id).addEventListener(id==='usedQuery'?'input':'change',()=>{count=18;render()});
 Promise.all([window.RindelabUsed?.ready,
  fetch('./sii/model-lifecycle-2026.json').then(r=>{if(!r.ok)throw Error('Sin catálogo de ciclo de vida');return r.json()}).catch(()=>({models:[]}))
 ]).then(([,lifecycle])=>populate(lifecycle));
