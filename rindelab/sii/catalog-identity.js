@@ -46,7 +46,7 @@
  const compatible=(row,p)=>{
   const tech=techKnown(p),reported=String(row[2]||'').trim(),derived=declaredVersionTech(p);
   // Una familia sin motorizacion identificada no acredita el precio de la version 3CV.
-  return Boolean(tech&&reported&&tech===reported&&(!p?.technology||!derived||String(p.technology)===derived));
+  return Boolean(reported&&((tech&&tech===reported)||(!tech&&['Bencina','Diésel'].includes(reported)))&&(!p?.technology||!derived||String(p.technology)===derived));
  };
  const tier=(row,p)=>techKnown(p)?(compatible(row,p)?'same-tech':'other-tech'):'unspecified-tech';
  function index(list){
@@ -62,7 +62,7 @@
   return (map.get(key(row[0],familyName))||[]).filter(active);
  }
  function priceReference(map,row,familyName,today=dateOnly()){
-  const items=familyRecords(map,row,familyName).filter(p=>compatible(row,p));
+  const items=familyRecords(map,row,familyName).filter(p=>techKnown(p)&&compatible(row,p));
   if(!items.length)return null;
   const same=items.filter(p=>tier(row,p)==='same-tech');
   const selection=same.length?same:items;

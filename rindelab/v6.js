@@ -770,14 +770,15 @@ function renderStatistics(){
   note.textContent='No se estima un costo combinado de PHEV o REEV desde consumos ponderados. Elige rendimiento eléctrico o rendimiento ponderado, ambos disponibles en la fuente.';
   return;
  }
- // Ranking comercial: exigir precio de la misma tecnologia y no campana terminada.
- // No se infiere stock fisico a partir de un precio publicado.
- const candidate=all.filter(row=>!archivedModel(row)&&validCurrentPrice(row)&&(!tech||row[F.TECH]===tech)&&(!cycle||row[F.CYCLE]===cycle)&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
- const scored=candidate.filter(row=>!reviewedEnergyCodes.has(row[F.CODE])).map(row=>({row,value:rankingValue(row,metric)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
+ // Ranking técnico de consumos homologados: excluir las fichas recientes sin precio
+ // comercial de motorización coincidente. El ranking NO acredita stock físico.
+ const candidate=all.filter(row=>(!tech||row[F.TECH]===tech)&&(!cycle||row[F.CYCLE]===cycle)&&(!body||(rankingBodies[body]||[]).includes(row[F.BODY])));
+ const measured=candidate.filter(row=>!reviewedEnergyCodes.has(row[F.CODE])).map(row=>({row,value:rankingValue(row,metric)})).filter(entry=>entry.value!==null&&Number.isFinite(entry.value)&&entry.value>0);
+ const scored=measured.filter(({row})=>!recentNoPrice(row));
  scored.sort((a,b)=>(cycle?(ascending?a.value-b.value:b.value-a.value):0)||b.row[F.DATE].localeCompare(a.row[F.DATE])||(a.row[F.BRAND]+' '+a.row[F.MODEL]).localeCompare(b.row[F.BRAND]+' '+b.row[F.MODEL],'es'));
- $('statsResultCount').textContent=fmt(scored.length)+' fichas con precio comercial compatible · stock no verificado';
+ $('statsResultCount').textContent=fmt(measured.length)+' fichas con esta medida · nuevas sin precio excluidas del ranking · stock no verificado';
  if(!scored.length){
-  ranking.innerHTML='<div class="stats-empty"><strong>No hay versiones con precio compatible y esa medida.</strong><p>Las homologaciones recientes sin precio permanecen en Buscar y fuera del ranking. No se certifica stock físico con un precio publicado.</p></div>';
+  ranking.innerHTML='<div class="stats-empty"><strong>No hay fichas comparables en este filtro.</strong><p>Las homologaciones recientes sin precio quedan fuera del ranking, pero siguen consultables en Buscar. El ranking no acredita stock.</p></div>';
   return;
  }
  if(metric==='cost')note.textContent=cycle?
