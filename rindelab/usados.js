@@ -20,7 +20,7 @@ function populate(lifecycle){
   a.brandSlug.localeCompare(b.brandSlug,'es')||a.modelSlug.localeCompare(b.modelSlug,'es')||b.year-a.year);
  const brands=[...new Set(all.map(x=>x.brandSlug))].sort((a,b)=>a.localeCompare(b,'es'));
  for(const b of brands)$('usedBrand').append(new Option(cap(b),b));
- const years=[...new Set(all.map(x=>x.year))].sort((a,b)=>b-a);
+ const years=[...new Set([...all.map(x=>x.year),...Array.from({length:37},(_,i)=>2026-i)])].sort((a,b)=>b-a);
  for(const y of years)$('usedYear').append(new Option(y,y));
  const url=new URL(location.href);
  const q=url.searchParams.get('modelo');if(q)$('usedQuery').value=q;
