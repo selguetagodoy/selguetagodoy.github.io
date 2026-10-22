@@ -59,52 +59,52 @@ Origen: commercial-2026.json y fotografías con atribución documental de RINDEL
 | 51 | BMW | Serie 8 Coupe | SIN INFORMAR | 1 | $144.000.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
 | 52 | BMW | X4 | SIN INFORMAR | 1 | $57.900.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/bmw) |
 | 53 | BMW | Z4 | SIN INFORMAR | 1 | $91.900.000 | No | Pendiente | No | [Fuente](https://www.bmw.cl/modelos/z4) |
-| 54 | BYD | Atto 8 | PHEV | 2 | $44.990.000 | No | Pendiente | Sí | [Fuente](https://www.byd.com/cl/legal/terminos-condiciones-promocion) |
-| 55 | Changan | Alsvin | SIN INFORMAR | 1 | $9.590.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 56 | Changan | Cs15 | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 57 | Changan | CS35 Max | SIN INFORMAR | 4 | $14.490.000 | No | Pendiente | No | [Fuente](https://www.changan.cl/vehiculo/cs35-max/) |
-| 58 | Changan | Serie M | SIN INFORMAR | 1 | $8.080.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 59 | Changan | Serie M Cargo BOX | SIN INFORMAR | 1 | $9.329.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 60 | Changan | Serie M Furgon | SIN INFORMAR | 1 | $8.496.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 61 | Changan | star-truck-plus-cargo-box | SIN INFORMAR | 1 | $12.316.500 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 62 | Changan | star-truck-plus-pick-up-cabina-doble | SIN INFORMAR | 1 | $11.714.360 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 63 | Changan | star-truck-plus-pick-up-cabina-simple | SIN INFORMAR | 1 | $11.055.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 64 | Changan | uni-k | SIN INFORMAR | 1 | $24.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 65 | Changan | UNI-T | SIN INFORMAR | 1 | $19.690.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
-| 66 | Chery | cl-tiggo-2-pro | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
-| 67 | Chery | cl-tiggo-3-pro | SIN INFORMAR | 1 | $13.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
-| 68 | Chery | Tiggo 7 | SIN INFORMAR | 5 | $15.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/chery/tiggo-7) |
-| 69 | Chevrolet | Colorado | SIN INFORMAR | 1 | $34.665.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 70 | Chevrolet | N400 Cargo | SIN INFORMAR | 1 | $12.302.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 71 | Chevrolet | Sail Sedan | SIN INFORMAR | 1 | $12.290.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 72 | Chevrolet | sail-hatchback | SIN INFORMAR | 1 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 73 | Chevrolet | Silverado CD | SIN INFORMAR | 1 | $60.298.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 74 | Chevrolet | Suburban | SIN INFORMAR | 1 | $78.287.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 75 | Chevrolet | Tahoe | SIN INFORMAR | 1 | $74.221.400 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 76 | Chevrolet | Traverse | SIN INFORMAR | 1 | $46.190.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
-| 77 | Citroen | C3 | SIN INFORMAR | 5 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/citroen/c3) |
-| 78 | Citroen | Jumper | SIN INFORMAR | 3 | $36.640.100 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/citroen/jumper) |
-| 79 | Citroen | Spacetourer | SIN INFORMAR | 2 | $36.640.100 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/citroen/spacetourer) |
-| 80 | Cupra | Ateca | SIN INFORMAR | 1 | $41.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/cupra) |
-| 81 | Cupra | Formentor | PHEV | 1 | $40.990.000 | No | Pendiente | Sí | [Fuente](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) |
-| 82 | Cupra | Leon | MHEV | 1 | $29.990.000 | No | Pendiente | Sí | [Fuente](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) |
-| 83 | Cupra | Tavascan | EV | 2 | $50.990.000 | No | Pendiente | Sí | [Fuente](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) |
-| 84 | Cupra | Terramar | MHEV | 2 | $39.990.000 | No | Pendiente | Sí | [Fuente](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) |
-| 85 | DFSK | Cargo Van EC35 | EV | 1 | $29.738.100 | No | Pendiente | Sí | [Fuente](https://www.dfsk.cl/precios-y-especificaciones-por-modelo/) |
-| 86 | DFSK | E5 Plus | PHEV | 1 | $29.990.000 | No | Pendiente | Sí | [Fuente](https://www.dfsk.cl/vehiculos/dfsk/e5-plus/) |
-| 87 | DFSK | SUV600 PHEV | PHEV | 2 | $24.990.000 | No | Pendiente | Sí | [Fuente](https://www.pdn.dfsk.cl/pasajeros/vehiculo/600-phev/) |
-| 88 | Dongfeng | AEOLUS GS | SIN INFORMAR | 1 | $13.990.000 | No | Pendiente | No | [Fuente](https://www.portillosur.cl/dong-feng/aeolusgs) |
-| 89 | Dongfeng | Huge | SIN INFORMAR | 1 | $19.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/dongfeng/huge) |
-| 90 | Dongfeng | MAGE | SIN INFORMAR | 3 | $15.590.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/dongfeng/mage) |
-| 91 | Dongfeng | T5 L | SIN INFORMAR | 3 | $14.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/dongfeng/t5-l) |
-| 92 | DS | 4 | SIN INFORMAR | 2 | $33.490.000 | No | Pendiente | No | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/ds) |
-| 93 | DS | 7 | SIN INFORMAR | 2 | $38.990.000 | No | Pendiente | No | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/ds) |
-| 94 | Exeed | LX | SIN INFORMAR | 3 | $19.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/lx) |
-| 95 | Exeed | RX | SIN INFORMAR | 2 | $26.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/rx) |
-| 96 | Exeed | TXL | SIN INFORMAR | 2 | $30.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/txl) |
-| 97 | Exeed | VX | SIN INFORMAR | 3 | $29.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/vx) |
-| 98 | Ferrari | 812 | SIN INFORMAR | 1 | $395.419.400 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/812) |
-| 99 | Ferrari | F8 | SIN INFORMAR | 1 | $271.276.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/f8) |
-| 100 | Ferrari | Portofino | SIN INFORMAR | 1 | $225.297.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/portofino) |
+| 54 | Changan | Alsvin | SIN INFORMAR | 1 | $9.590.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 55 | Changan | Cs15 | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 56 | Changan | CS35 Max | SIN INFORMAR | 4 | $14.490.000 | No | Pendiente | No | [Fuente](https://www.changan.cl/vehiculo/cs35-max/) |
+| 57 | Changan | Serie M | SIN INFORMAR | 1 | $8.080.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 58 | Changan | Serie M Cargo BOX | SIN INFORMAR | 1 | $9.329.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 59 | Changan | Serie M Furgon | SIN INFORMAR | 1 | $8.496.600 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 60 | Changan | star-truck-plus-cargo-box | SIN INFORMAR | 1 | $12.316.500 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 61 | Changan | star-truck-plus-pick-up-cabina-doble | SIN INFORMAR | 1 | $11.714.360 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 62 | Changan | star-truck-plus-pick-up-cabina-simple | SIN INFORMAR | 1 | $11.055.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 63 | Changan | uni-k | SIN INFORMAR | 1 | $24.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 64 | Changan | UNI-T | SIN INFORMAR | 1 | $19.690.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/changan) |
+| 65 | Chery | cl-tiggo-2-pro | SIN INFORMAR | 1 | $10.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
+| 66 | Chery | cl-tiggo-3-pro | SIN INFORMAR | 1 | $13.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chery) |
+| 67 | Chery | Tiggo 7 | SIN INFORMAR | 5 | $15.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/chery/tiggo-7) |
+| 68 | Chevrolet | Colorado | SIN INFORMAR | 1 | $34.665.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 69 | Chevrolet | N400 Cargo | SIN INFORMAR | 1 | $12.302.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 70 | Chevrolet | Sail Sedan | SIN INFORMAR | 1 | $12.290.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 71 | Chevrolet | sail-hatchback | SIN INFORMAR | 1 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 72 | Chevrolet | Silverado CD | SIN INFORMAR | 1 | $60.298.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 73 | Chevrolet | Suburban | SIN INFORMAR | 1 | $78.287.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 74 | Chevrolet | Tahoe | SIN INFORMAR | 1 | $74.221.400 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 75 | Chevrolet | Traverse | SIN INFORMAR | 1 | $46.190.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/chevrolet) |
+| 76 | Citroen | C3 | SIN INFORMAR | 5 | $12.890.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/public/nuevos/citroen/c3) |
+| 77 | Citroen | Jumper | SIN INFORMAR | 3 | $36.640.100 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/citroen/jumper) |
+| 78 | Citroen | Spacetourer | SIN INFORMAR | 2 | $36.640.100 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/citroen/spacetourer) |
+| 79 | Cupra | Ateca | SIN INFORMAR | 1 | $41.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/cupra) |
+| 80 | Cupra | Formentor | PHEV | 1 | $40.990.000 | No | Pendiente | Sí | [Fuente](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) |
+| 81 | Cupra | Leon | MHEV | 1 | $29.990.000 | No | Pendiente | Sí | [Fuente](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) |
+| 82 | Cupra | Terramar | MHEV | 2 | $39.990.000 | No | Pendiente | Sí | [Fuente](https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1) |
+| 83 | DFSK | Cargo Van EC35 | EV | 1 | $29.738.100 | No | Pendiente | Sí | [Fuente](https://www.dfsk.cl/precios-y-especificaciones-por-modelo/) |
+| 84 | DFSK | E5 Plus | PHEV | 1 | $29.990.000 | No | Pendiente | Sí | [Fuente](https://www.dfsk.cl/vehiculos/dfsk/e5-plus/) |
+| 85 | DFSK | SUV600 PHEV | PHEV | 2 | $24.990.000 | No | Pendiente | Sí | [Fuente](https://www.pdn.dfsk.cl/pasajeros/vehiculo/600-phev/) |
+| 86 | Dongfeng | AEOLUS GS | SIN INFORMAR | 1 | $13.990.000 | No | Pendiente | No | [Fuente](https://www.portillosur.cl/dong-feng/aeolusgs) |
+| 87 | Dongfeng | Huge | SIN INFORMAR | 1 | $19.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/dongfeng/huge) |
+| 88 | Dongfeng | MAGE | SIN INFORMAR | 3 | $15.590.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/dongfeng/mage) |
+| 89 | Dongfeng | T5 L | SIN INFORMAR | 3 | $14.990.000 | No | Pendiente | No | [Fuente](https://www.rosselot.cl/nuevos/dongfeng/t5-l) |
+| 90 | DS | 4 | SIN INFORMAR | 2 | $33.490.000 | No | Pendiente | No | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/ds) |
+| 91 | DS | 7 | SIN INFORMAR | 2 | $38.990.000 | No | Pendiente | No | [Fuente](https://www.autocosmos.cl/catalogo/segmentos/ds) |
+| 92 | Exeed | LX | SIN INFORMAR | 3 | $19.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/lx) |
+| 93 | Exeed | RX | SIN INFORMAR | 2 | $26.990.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/rx) |
+| 94 | Exeed | TXL | SIN INFORMAR | 2 | $30.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/txl) |
+| 95 | Exeed | VX | SIN INFORMAR | 3 | $29.490.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/exeed/vx) |
+| 96 | Ferrari | 812 | SIN INFORMAR | 1 | $395.419.400 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/812) |
+| 97 | Ferrari | F8 | SIN INFORMAR | 1 | $271.276.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/f8) |
+| 98 | Ferrari | Portofino | SIN INFORMAR | 1 | $225.297.100 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/portofino) |
+| 99 | Ferrari | Roma | SIN INFORMAR | 1 | $243.688.700 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/roma) |
+| 100 | Ferrari | Roma Spider | SIN INFORMAR | 1 | $274.426.000 | No | Pendiente | No | [Fuente](https://www.auto.cl/nuevos/ferrari/roma-spider) |
 
 Revisión: contrastar tecnología y generación con el fabricante; obtener imagen con licencia y atribución verificadas; actualizar fecha de comprobación exclusivamente si se revalida la fuente.
