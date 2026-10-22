@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path');
 const priceCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/commercial-2026.json'),'utf8'));
 const priceTotal=priceCatalog.length;
 const catalogBrandTotal=new Set(priceCatalog.map(x=>x.brand)).size;
-const electrifiedTotal=priceCatalog.filter(x=>x.technology).length;
+const electrifiedTotal=priceCatalog.filter(x=>['EV','HEV','PHEV','REEV','MHEV'].includes(x.technology)&&Number.isSafeInteger(x.priceListClp)&&x.priceListClp>0&&/^https:\/\//.test(x.source)).length;
 const familyTotal=new Set(priceCatalog.map(x=>x.brand+'|'+x.family)).size;
 const checkedTodayTotal=priceCatalog.filter(x=>x.checkedAt==='2026-10-19').length;
 (async()=>{
@@ -747,7 +747,7 @@ await test('MD Chevrolet Maxus: 25 nuevas versiones trazables a precios publicad
 });
 await test('Ocho marcas agregadas con Markdown, precio de lista y origen comercial',async()=>{
  const data=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(data.length,1504);
+ assert.equal(data.length,1514);
  const counts={'Porsche':67,'Honda':9,'Lexus':11,'Mercedes-Benz':11,'Tesla':5,'DS':8,'Alfa Romeo':2,'Jaguar':2};
  for(const [brand,n] of Object.entries(counts)){
   const items=data.filter(x=>x.brand===brand);
@@ -761,7 +761,7 @@ await test('Ocho marcas agregadas con Markdown, precio de lista y origen comerci
 });
 await test('Segunda ola: 100 precios en MD comercial con origen para quince marcas',async()=>{
  const rows=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(rows.length,1504);
+ assert.equal(rows.length,1514);
  const counts={'Land Rover':17,'Smart':2,'Deepal':3,'Exeed':10,'Kaiyi':6,'Karry':8,'Kyc':8,'Seat':11,'Avatr':1,'Livan':2,'Riddara':2,'Zxauto':2,'Maserati':9,'Aston Martin':12,'Ferrari':7};
  for(const [brand,n] of Object.entries(counts)){
   const match=rows.filter(x=>x.brand===brand);
@@ -779,7 +779,7 @@ await test('Segunda ola: 100 precios en MD comercial con origen para quince marc
 });
 await test('161 precios desde por modelo: MD, origen, buscador y cotizador',async()=>{
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json').then(r=>r.json()));
- assert.equal(all.length,1504);
+ assert.equal(all.length,1514);
  const desde=all.filter(x=>x.version==='Precio desde (versión no especificada)');
  assert.equal(desde.length,161,'Falta un modelo de los lotes MD');
  const electricClassifications={'Ford|E-Transit Chasis':'EV','Fiat|500e':'EV','Fiat|600e':'EV','Peugeot|e-2008':'EV','Peugeot|Partner Electric':'EV','Volvo|XC40 Pure Electric':'EV','Volvo|XC60 Plug-In Hybrid':'PHEV','Volvo|XC90 Plug-In Hybrid':'PHEV','Volvo|xc60-mild-hybrid':'MHEV','Volvo|xc90-mild-hybrid':'MHEV','Chevrolet|Bolt EUV':'EV'};
@@ -849,7 +849,7 @@ await test('Omoda y Jaecoo: cinco precios de lista con tecnología comprobada',a
 await test('Electromovilidad: 40 precios nuevos, 384 homologaciones recientes y filtro EV/HEV/REEV',async()=>{
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  assert.equal(all.length,priceTotal);
- assert.equal(all.filter(x=>x.technology).length,electrifiedTotal);
+ assert.equal(all.filter(x=>['EV','HEV','PHEV','REEV','MHEV'].includes(x.technology)).length,electrifiedTotal);
  const expected={Kia:12,MG:8,Geely:7,Leapmotor:4,Hyundai:6,Toyota:1,BMW:4};
  for(const [brand,count] of Object.entries(expected))assert(all.filter(p=>p.brand===brand&&p.checkedAt==='2026-10-19').length>=count,brand);
  assert.equal(all.filter(p=>p.checkedAt==='2026-10-19').length,checkedTodayTotal);
@@ -885,8 +885,8 @@ await test('Electromovilidad: 40 precios nuevos, 384 homologaciones recientes y 
 await test('BYD y Volvo: dieciséis precios de lista literales sin deducir bonos',async()=>{
  const list=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  const latest=list.filter(x=>x.checkedAt==='2026-10-19'&&(x.brand==='BYD'||(x.brand==='Volvo'&&x.modelYear===2026&&['EX30','EX40','EC40'].includes(x.family))));
- assert.equal(latest.length,16);
- assert.equal(latest.filter(x=>x.brand==='BYD').length,9);
+ assert.equal(latest.length,14);
+ assert.equal(latest.filter(x=>x.brand==='BYD').length,7);
  assert.equal(latest.filter(x=>x.brand==='Volvo').length,7);
  assert(list.filter(x=>x.brand==='BYD').length>=12);
  assert(list.filter(x=>x.brand==='Volvo').length>=7);
@@ -1072,9 +1072,13 @@ await test('No asigna precio de lista automáticamente y permite elegir o quitar
  assert.equal(await page.locator('.sii-selected-price').count(),0);
  await page.click('#detailClose');
  await page.click('#resetButton');await page.fill('#query','Hilux');await page.click('#searchButton');
- await page.locator('.vehicle-card button[data-detail]').first().click();
+ // La Hilux BEV nueva tiene su propia versión eléctrica; no atribuirle lista diésel.
+ const hiluxEV=page.locator('.vehicle-card').filter({has:page.locator('.vehicle-tech[data-tech="EV"]')}).first();
+ assert(await hiluxEV.count()>0,'No se encontró la Hilux BEV en la búsqueda general');
+ await hiluxEV.locator('button[data-detail]').click();
  await page.waitForFunction(()=>document.querySelectorAll('.sii-price-item').length>=1);
- assert.match(await page.locator('#siiCommercial').textContent(),/45\.290\.000/);
+ assert.match(await page.locator('#siiCommercial').textContent(),/68\.990\.000/);
+ assert.doesNotMatch(await page.locator('#siiCommercial').textContent(),/45\.290\.000/);
  await page.click('#detailClose');
 });
 await test('Kia Morning: cinco precios de lista distintos y fuente verificable',async()=>{
@@ -1266,7 +1270,7 @@ await test('Ford Maverick ofrece cuatro versiones sin atribuir precio por coinci
 await test('Mazda: 12 precios de lista CX-30/CX-3/CX-5 con modelo 2027 confirmado',async()=>{
  const all=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
  const mazda=all.filter(x=>x.brand==='Mazda'&&x.source.startsWith('https://www.mazda.cl/'));
- assert.equal(mazda.length,12);
+ assert.equal(mazda.length,18);
  for(const [family,n] of [['CX-30',5],['CX-3',2],['CX-5',5]]){
   assert.equal(mazda.filter(x=>x.family===family).length,n);
  }
@@ -1346,7 +1350,7 @@ await test('Subaru Impreza: tres versiones con precio de lista y selección manu
 });
 await test('Integración 20/10: 1504 precios, 80 marcas, Nammi y +IVA sin total engañoso',async()=>{
  const all=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/commercial-2026.json'),'utf8'));
- assert.equal(all.length,1504);
+ assert.equal(all.length,1514);
  assert.equal(new Set(all.map(x=>x.brand)).size,80);
  assert.equal(all.filter(x=>x.taxIncluded===false).length,11);
  assert.equal(all.filter(x=>x.brand==='Nammi').length,4);
@@ -1815,7 +1819,7 @@ await test('Filtros oficiales de octubre incluyen JIM Re-Max y Kia Sportage HEV'
 });
 await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas vigente',async()=>{
  const prices=JSON.parse(fs.readFileSync(path.join(__dirname,'../sii/commercial-2026.json'),'utf8'));
- assert.equal(prices.length,1504);
+ assert.equal(prices.length,1514);
  const archive=prices.filter(x=>x.commercialStatus==='discontinued-cl');
  assert.equal(archive.length,3);
  assert.deepEqual(archive.map(x=>x.family).sort(),['Baleno','S-PRESSO','grand vitara'].sort());
