@@ -20,7 +20,7 @@ function ageWarning(record){
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[],byFamily=new Map();
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261020-list1504').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261022-list1514').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(C.valid);byFamily=C.index(loaded);
   window.dispatchEvent(new Event("rindelab:prices-ready"));
