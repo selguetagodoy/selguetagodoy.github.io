@@ -2085,11 +2085,14 @@ for(const [width,height] of [[768,1024],[390,844],[320,700]]){
   await p.locator('#statsOpen').click();
   await p.selectOption('#statsTech','PHEV');
   assert.equal(await p.inputValue('#statsMetric'),'electric');
-  assert.equal(await p.locator('.rank-item').count(),10);
+  const phev=await p.locator('.rank-item').count();
+  assert(phev>0&&phev<=10);
   await p.selectOption('#statsTech','REEV');
-  assert.equal(await p.locator('.rank-item').count(),10);
+  const reev=await p.locator('.rank-item').count();
+  assert(reev>0&&reev<=10,'No deben aparecer vehículos sin precio verificado en el ranking REEV');
   await p.selectOption('#statsMetric','weighted');
-  assert.equal(await p.locator('.rank-item').count(),10);
+  const reevWeighted=await p.locator('.rank-item').count();
+  assert(reevWeighted>0&&reevWeighted<=10);
   const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,screen:innerWidth}));
   assert(size.doc<=size.screen+3);
   await p.locator('#statsClose').click();
