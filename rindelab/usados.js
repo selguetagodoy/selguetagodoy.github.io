@@ -59,8 +59,11 @@ function renderRetirements(list,items,year){
    (precise?'<p class="used-retired-context">Retiro limitado a generación, carrocería o variante; no se asigna el valor de otra generación.</p>':'')+
    '<div class="used-result-links">'+(price?'<a href="'+esc(price.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Fuente del precio ↗</a>':'')+
    (historyUrl?'<a href="'+esc(historyUrl)+'" target="_blank" rel="noopener noreferrer">Antecedente del retiro ↗</a>':'')+
-   '<button type="button" data-retired-sii="'+i+'">Buscar tasación fiscal SII</button></div>';
+   '</div>';
   list.append(card);
+  const fiscalModel=r.model==='Lancer (sedán original)'?'Lancer':r.model;
+  window.RindelabDirectSII?.mount(card,{brand:r.brand,model:fiscalModel,year,body:r.model==='Lancer (sedán original)'?'Sedán':''});
+  window.RindelabHistoricPhotos?.mount(card,{brand:r.brand,model:fiscalModel,year});
  }
 }
 function render(){
@@ -72,8 +75,10 @@ function render(){
   const list=$('usedGrid');list.replaceChildren();
   for(const [i,p] of filtered.slice(0,count).entries()){
    const c=document.createElement('article');c.className='used-result';
-   c.innerHTML='<h3>'+esc(cap(p.brandSlug)+' '+p.variant)+' <small>'+p.year+'</small></h3><div class="used-result-main">'+esc(docAmount(p))+'</div><p class="used-result-metrics">'+esc(docLabel(p))+' · '+esc(p.identityStatus==='requires-generation-confirmation'?'Generación por confirmar':'Familia identificada; variante separada')+'</p><p class="used-source-note">'+esc(p.source)+' · fuente documental '+esc(p.observedAt)+(p.sourcePrecision==='paged-list-not-permalink'?' · enlace a listado paginado, no a ficha individual':'')+'</p><div class="used-result-links"><a href="'+esc(p.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Consultar antecedente ↗</a><button type="button" data-doc-sii="'+i+'">Consultar SII por separado</button></div>';
+   c.innerHTML='<h3>'+esc(cap(p.brandSlug)+' '+p.variant)+' <small>'+p.year+'</small></h3><div class="used-result-main">'+esc(docAmount(p))+'</div><p class="used-result-metrics">'+esc(docLabel(p))+' · '+esc(p.identityStatus==='requires-generation-confirmation'?'Generación por confirmar':'Familia identificada; variante separada')+'</p><p class="used-source-note">'+esc(p.source)+' · fuente documental '+esc(p.observedAt)+(p.sourcePrecision==='paged-list-not-permalink'?' · enlace a listado paginado, no a ficha individual':'')+'</p><div class="used-result-links"><a href="'+esc(p.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Consultar antecedente ↗</a></div>';
    list.append(c);
+   window.RindelabDirectSII?.mount(c,{brand:p.brandSlug,model:p.modelSlug,year:p.year,variant:p.kind==='archived-range'?p.variant:''});
+   window.RindelabHistoricPhotos?.mount(c,{brand:p.brandSlug,model:p.modelSlug,year:p.year,variant:p.variant});
   }
   $('usedMore').hidden=filtered.length<=count;$('usedEmpty').hidden=filtered.length>0;return;
  }
@@ -99,30 +104,14 @@ function render(){
    '<p class="used-result-metrics">'+esc(description)+'</p>'+
    '<p class="used-source-note">Fuente: '+esc(p.source)+' · consulta registrada '+esc(p.observedAt)+' · no precio de transacción</p>'+
    '<div class="used-result-links"><a href="'+esc(p.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver fuente actual ↗</a>'+
-   '<button type="button" data-used-sii="'+i+'">Tasación y permiso SII</button></div>';
+   '</div>';
   list.append(card);
+  window.RindelabDirectSII?.mount(card,{brand:x.brand,model:x.model,year:p.year});
+  window.RindelabHistoricPhotos?.mount(card,{brand:x.brand,model:x.model,year:p.year});
  }
  $('usedMore').hidden=filtered.length<=count;
  $('usedEmpty').hidden=filtered.length>0;
 }
-$('usedGrid').addEventListener('click',e=>{
- const doc=e.target.closest('[data-doc-sii]');
- if(doc){const r=filtered[Number(doc.dataset.docSii)];if(r)window.RindelabSII?.openCommercial?.(cap(r.brandSlug),r.modelSlug);return;}
- const historic=e.target.closest('[data-retired-sii]');
- if(historic){
-  const r=filtered[Number(historic.dataset.retiredSii)];
-  if(!r)return;
-  const year=Number($('usedYear').value)||null;
-  if(year)window.RindelabUsed?.selectYear?.(r.brand,r.model,year);
-  window.RindelabSII?.openCommercial?.(r.brand,r.model);
-  return;
- }
- const b=e.target.closest('[data-used-sii]');if(!b)return;
- const p=filtered[Number(b.dataset.usedSii)];if(!p)return;
- const x=display(p);
- window.RindelabUsed?.selectYear?.(x.brand,x.model,p.year);
- window.RindelabSII?.openCommercial?.(x.brand,x.model);
-});
 $('usedMore').addEventListener('click',()=>{count+=18;render()});
 for(const id of ['usedQuery','usedBrand','usedYear','usedOnlyDiscontinued','usedHistoryView'])$(id).addEventListener(id==='usedQuery'?'input':'change',()=>{count=18;render()});
 Promise.all([window.RindelabUsed?.ready,
