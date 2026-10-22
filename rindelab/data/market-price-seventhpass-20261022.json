@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "baselinePending": 193,
+  "newFamilyReferences": 11,
+  "totalWithReferences": 390,
+  "pendingAfter": 182,
+  "categoryCountsPending": {
+    "unmatched-catalog": 165,
+    "expired-price-reference": 14,
+    "other-powertrain": 3
+  },
+  "methodology": "Séptimo cruce, páginas vigentes del importador CIDEF. Se documenta una versión comercial de familia, no equivalencia homologada por código; precios de lista distintos de financiamiento/bonos. T5 EVO Family 5/6 sin versión ni capacidad de asientos comprobada.",
+  "records": [
+    {
+      "brand": "DFLM",
+      "model": "DFLM DFLM SX6 1.6MT",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "0326S00-2",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "New SX6 1.6 7 pasajeros",
+        "priceListClp": 11990000,
+        "sourceUrl": "https://cidef.cl/modelo/new-sx6/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-engine-name-collision",
+        "notes": "CIDEF publica NEW SX6 1.6 $11.990.000 lista, con bonos separados. Falta confirmar que el prefijo NEW, acabado y generación sean los mismos de la ficha 3CV.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM T5L 1.5T",
+      "homologationDate": "2026-02-05",
+      "homologationCodeSuffix": "1224S03-0",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "T5 L MT 1.5T",
+        "priceListClp": 14990000,
+        "sourceUrl": "https://cidef.cl/modelo/t5-l/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-motor-transmission-unverified",
+        "notes": "Importador ofrece MT 1.5T lista $14.990.000 y AT 1.5T $16.990.000. La homologación no declara caja ni acabado; cifra es solo versión de referencia.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM T5L 1.5T 5P",
+      "homologationDate": "2026-02-05",
+      "homologationCodeSuffix": "1224S04-4",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "T5 L MT 1.5T",
+        "priceListClp": 14990000,
+        "sourceUrl": "https://cidef.cl/modelo/t5-l/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-motor-transmission-unverified",
+        "notes": "Importador ofrece MT 1.5T lista $14.990.000 y AT 1.5T $16.990.000. La homologación no declara caja ni acabado; cifra es solo versión de referencia.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM T5 EVO MT",
+      "homologationDate": "2026-02-05",
+      "homologationCodeSuffix": "1224S05-8",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "T5 EVO MT LUXURY 1.5T",
+        "priceListClp": 15990000,
+        "sourceUrl": "https://cidef.cl/modelo/t5-evo/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-motor-and-transmission-not-trim",
+        "notes": "CIDEF publica precios de lista para MT Luxury $15.990.000, AT Luxury $19.990.000 y Noble $21.690.000; el registro 3CV Family 5/6 no identifica acabado ni número de asientos equivalente. No imputar este valor al código.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM T5 EVO Family",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S04-4",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "T5 EVO LUXURY 1.5T DCT7",
+        "priceListClp": 19990000,
+        "sourceUrl": "https://cidef.cl/modelo/t5-evo/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-only-no-family-trim",
+        "notes": "CIDEF publica precios de lista para MT Luxury $15.990.000, AT Luxury $19.990.000 y Noble $21.690.000; el registro 3CV Family 5/6 no identifica acabado ni número de asientos equivalente. No imputar este valor al código.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM T5 EVO Family 6",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S05-8",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "T5 EVO LUXURY 1.5T DCT7",
+        "priceListClp": 19990000,
+        "sourceUrl": "https://cidef.cl/modelo/t5-evo/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-only-no-family-trim",
+        "notes": "CIDEF publica precios de lista para MT Luxury $15.990.000, AT Luxury $19.990.000 y Noble $21.690.000; el registro 3CV Family 5/6 no identifica acabado ni número de asientos equivalente. No imputar este valor al código.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM T5 EVO Family 5",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S06-1",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "T5 EVO LUXURY 1.5T DCT7",
+        "priceListClp": 19990000,
+        "sourceUrl": "https://cidef.cl/modelo/t5-evo/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-only-no-family-trim",
+        "notes": "CIDEF publica precios de lista para MT Luxury $15.990.000, AT Luxury $19.990.000 y Noble $21.690.000; el registro 3CV Family 5/6 no identifica acabado ni número de asientos equivalente. No imputar este valor al código.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM T5 EVO AT",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S07-5",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "T5 EVO LUXURY 1.5T AT7",
+        "priceListClp": 19990000,
+        "sourceUrl": "https://cidef.cl/modelo/t5-evo/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-motor-and-transmission-not-trim",
+        "notes": "CIDEF publica precios de lista para MT Luxury $15.990.000, AT Luxury $19.990.000 y Noble $21.690.000; el registro 3CV Family 5/6 no identifica acabado ni número de asientos equivalente. No imputar este valor al código.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "DFLM",
+      "model": "DFLM SX6 1.6L",
+      "homologationDate": "2025-12-22",
+      "homologationCodeSuffix": "0925S00-7",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "New SX6 1.6 7 pasajeros",
+        "priceListClp": 11990000,
+        "sourceUrl": "https://cidef.cl/modelo/new-sx6/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-engine-name-collision",
+        "notes": "CIDEF publica NEW SX6 1.6 $11.990.000 lista, con bonos separados. Falta confirmar que el prefijo NEW, acabado y generación sean los mismos de la ficha 3CV.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "Dongfeng",
+      "model": "Dongfeng AEOLUS GS CROSS",
+      "homologationDate": "2025-10-23",
+      "homologationCodeSuffix": "0825S00-3",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "AEOLUS GS Cross lista de familia",
+        "priceListClp": 13990000,
+        "sourceUrl": "https://cidef.cl/marca/dongfeng/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-only-variant-unspecified",
+        "notes": "Importador anuncia precio lista familiar $13.990.000. No permite elegir versión ni corroborar correspondencia exacta 3CV.",
+        "taxTreatment": "IVA incluido"
+      }
+    },
+    {
+      "brand": "Dongfeng",
+      "model": "Dongfeng AEOLUS Y3 AT",
+      "homologationDate": "2025-10-23",
+      "homologationCodeSuffix": "0825S01-8",
+      "previousCategory": "unmatched-catalog",
+      "priceAssignedTo3CV": false,
+      "reference": {
+        "commercialVersion": "AEOLUS Y3 AT COMFORT",
+        "priceListClp": 12590000,
+        "sourceUrl": "https://cidef.cl/modelo/aeolus-y3/",
+        "observedAt": "2026-10-22",
+        "priceKind": "lista-importador",
+        "matchConfidence": "family-engine-transmission-not-trim",
+        "notes": "Y3 AT COMFORT $12.590.000 lista; Y3 AT LUXURY $13.290.000. El código 3CV solo dice AT: no se conoce el acabado.",
+        "taxTreatment": "IVA incluido"
+      }
+    }
+  ]
+}
