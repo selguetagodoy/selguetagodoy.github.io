@@ -49,7 +49,7 @@ function fiscalValues(container,rows,selected=null){
  val.append(node('div','','Tasación: '+money(a)+(a===b?'':' – '+money(b))),node('div','','Permiso: '+money(c)+(c===d?'':' – '+money(d))));
  container.append(val,node('small','used-sii-caption','Intervalos entre '+rows.length+' registros tributarios del mismo modelo/año, no una tasación de versión específica.'));
 }
-function mount(card,{brand,model,year,variant='',body=''}) {
+function mount(card,{brand,model,year,variant='',body='',onSelected=null}) {
  if(!card)return;
  const section=node('section','used-sii-direct');
  section.setAttribute('aria-label','Tasación fiscal SII del vehículo');
@@ -78,7 +78,11 @@ function mount(card,{brand,model,year,variant='',body=''}) {
    const detail=node('div','used-sii-exact');
    select.addEventListener('change',()=>{
     detail.replaceChildren();
-    if(select.value!=='')fiscalValues(detail,[ordered[Number(select.value)]],ordered[Number(select.value)]);
+    if(select.value!==''){
+     const choice=ordered[Number(select.value)];
+     fiscalValues(detail,[choice],choice);
+     if(typeof onSelected==='function')onSelected(choice);
+    }
    });
    label.append(select);section.append(label,detail);
   }
@@ -87,5 +91,21 @@ function mount(card,{brand,model,year,variant='',body=''}) {
   if(section.isConnected){section.replaceChildren(node('strong','used-sii-title','Tasación fiscal y permiso SII 2026'),node('p','used-sii-muted','No se pudo cargar la información tributaria.'));const a=node('a','used-sii-source','Consultar SII ↗');a.href=source;a.target='_blank';a.rel='noopener noreferrer';section.append(a);}
  });
 }
-window.RindelabDirectSII=Object.freeze({mount,hits,get});
+function mountYearPicker(card,{brand,model,variant='',body='',onSelected=null}){
+ if(!card)return;
+ const section=node('section','used-sii-direct');
+ section.append(node('strong','used-sii-title','Tasación fiscal y permiso SII 2026'));
+ const label=node('label','used-sii-select-label','Año de fabricación');
+ const select=node('select','used-sii-select');select.setAttribute('aria-label','Año de fabricación para tasación SII');
+ select.append(new Option('Selecciona el año de fabricación',''));
+ for(let y=2026;y>=1975;y--)select.append(new Option(String(y),String(y)));
+ const output=node('div','used-sii-by-year');
+ label.append(select);section.append(label,node('p','used-sii-muted','El modelo ya está identificado. Selecciona únicamente el año; los valores de todas las versiones SII compatibles se cargarán aquí.'),output);
+ select.addEventListener('change',()=>{
+  output.replaceChildren();const y=Number(select.value);
+  if(y)mount(output,{brand,model,variant,body,year:y,onSelected});
+ });
+ card.append(section);
+}
+window.RindelabDirectSII=Object.freeze({mount,mountYearPicker,hits,get});
 })();
