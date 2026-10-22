@@ -33,7 +33,7 @@ assert(publishedListPrices>=95,'No se extrajeron precios de lista publicados');
 assert(newGroups.size>=75,'No se generó una ampliación útil de nombres comerciales');
 const photoJs=fs.readFileSync(path.join(root,'rindelab/v2-photos.js'),'utf8');
 const window={};vm.runInNewContext(photoJs,{window,document:{addEventListener(){}}});
-assert.equal(window.RindelabPhotos.count,238,'Biblioteca fotográfica incompleta');
+assert.equal(window.RindelabPhotos.count,245,'Biblioteca fotográfica incompleta');
 const targets=['rindelab-subaru-trailseeker-licensed-20261021.jpg','rindelab-byd-sealion-7-licensed-20261021.jpg','rindelab-honda-zr-v-licensed-20261021.jpg','rindelab-audi-q5-sportback-licensed-20261021.jpg','rindelab-mg-s5-ev-licensed-20261021.jpg'];
 for(const f of targets){
  const p=path.join(root,'rindelab/images/commons',f);

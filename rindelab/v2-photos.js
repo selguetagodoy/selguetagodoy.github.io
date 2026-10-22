@@ -3452,6 +3452,152 @@ const reviewedModelsOct21=[
     "qualityStatus": "reference-photo-manually-reviewed"
   }
 ];
+const reviewedOct22Batch3=[
+  {
+    "brand": "Toyota",
+    "pattern": "\\bHILUX\\b",
+    "from": "2021",
+    "to": "2026",
+    "model": "Toyota Hilux diésel, carrocería 2024 referencial",
+    "author": "الدعوة السلفية في السعودية 2025",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-toyota-hilux-reviewed-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_Hilux_2024_(48021).jpg",
+    "file": "Toyota Hilux 2024 (48021).jpg",
+    "bytes": 176497,
+    "sha256": "a62ef09047dfd10721d0089f74f39806f50fcf4583f7970601872f8ed341e1b1",
+    "qualityStatus": "model-family-photo-reviewed",
+    "excludeTech": [
+      "EV",
+      "REEV",
+      "PHEV",
+      "HEV"
+    ]
+  },
+  {
+    "brand": "Dongfeng",
+    "pattern": "\\bT5\\s*EVO\\b",
+    "from": "2021",
+    "to": "2026",
+    "model": "Dongfeng Forthing T5 EVO, carrocería de referencia",
+    "author": "Jengtingchen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-dongfeng-t5-evo-reviewed-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Forthing_T5_EVO_001.jpg",
+    "file": "Forthing T5 EVO 001.jpg",
+    "bytes": 147399,
+    "sha256": "c0db3411d87584e1d6a5c643b78c4bc14ecc891c73183a276b32f527029faf9e",
+    "qualityStatus": "model-family-photo-reviewed",
+    "excludeTech": [
+      "EV",
+      "REEV",
+      "PHEV"
+    ]
+  },
+  {
+    "brand": "Gac",
+    "pattern": "\\bEMKOO\\b",
+    "from": "2023",
+    "to": "2026",
+    "model": "GAC Emkoo 1.5T 2024; referencia de versión gasolina",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "localSrc": "./images/commons/new-gac-emkoo-reviewed-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:GAC_EMkoo_1.5_eTurbo_GE_2024_(53362133142).jpg",
+    "file": "GAC EMkoo 1.5 eTurbo GE 2024 (53362133142).jpg",
+    "bytes": 103655,
+    "sha256": "7a451f8edc9e6a60b3a2f3dc8a0507687e7afa51305682a390099b13015d0057",
+    "qualityStatus": "model-family-photo-reviewed",
+    "excludeTech": [
+      "HEV",
+      "EV",
+      "REEV",
+      "PHEV"
+    ]
+  },
+  {
+    "brand": "Jetour",
+    "pattern": "\\bDASHING\\b",
+    "from": "2023",
+    "to": "2026",
+    "model": "Jetour Dashing 2025; referencia de carrocería, no versión exacta",
+    "author": "Retired electrician",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "localSrc": "./images/commons/new-jetour-dashing-reviewed-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Moscow%2C_Jetour_Dashing_red%2C_Aug_2025_01.jpg",
+    "file": "Moscow, Jetour Dashing red, Aug 2025 01.jpg",
+    "bytes": 219355,
+    "sha256": "e0d4e9aadf7d7e737a5cc2b313cc197497d55a8395d2a1993a579b23a0bd4dcc",
+    "qualityStatus": "model-family-photo-reviewed",
+    "excludeTech": [
+      "EV",
+      "REEV",
+      "PHEV"
+    ]
+  },
+  {
+    "brand": "Volvo",
+    "pattern": "\\bEX30\\b",
+    "from": "2024",
+    "to": "2026",
+    "model": "Volvo EX30 eléctrico 2024, exterior referencial",
+    "author": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-volvo-ex30-ev-reviewed-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Volvo_EX30_Front.jpg",
+    "file": "2024 Volvo EX30 Front.jpg",
+    "bytes": 116905,
+    "sha256": "d263016131bc8b2bcafd00e50ededf1f549959d6c7d5a722b226c3bc00c51b79",
+    "qualityStatus": "model-family-photo-reviewed",
+    "tech": "EV"
+  },
+  {
+    "brand": "Maserati",
+    "pattern": "\\bGRECALE\\b",
+    "from": "2022",
+    "to": "2026",
+    "model": "Maserati Grecale GT (2024), referencia de familia",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-maserati-grecale-reviewed-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Maserati_Grecale_GT_1X7A6371.jpg",
+    "file": "Maserati Grecale GT 1X7A6371.jpg",
+    "bytes": 186331,
+    "sha256": "1c05b24ac2c1e4be23925a42138970926704657b8bac03db883bda5c4e122d5e",
+    "qualityStatus": "model-family-photo-reviewed",
+    "excludeTech": [
+      "EV",
+      "REEV"
+    ]
+  },
+  {
+    "brand": "Peugeot",
+    "pattern": "\\bBOXER\\b",
+    "from": "2024",
+    "to": "2026",
+    "model": "Peugeot Boxer 2024, furgón de referencia",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-peugeot-boxer-reviewed-20261022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Peugeot_Boxer_(2024)_DSC_8785.jpg",
+    "file": "Peugeot Boxer (2024) DSC 8785.jpg",
+    "bytes": 174430,
+    "sha256": "cb4dbe24e9c26b7ee233e2cf13bd9c0ee9bfb6b7afaf084f7a18a37bf48ee9f3",
+    "qualityStatus": "model-family-photo-reviewed",
+    "excludeTech": [
+      "EV",
+      "REEV",
+      "PHEV"
+    ]
+  }
+];
 const licenseUrls={
  'CC0 1.0':'https://creativecommons.org/publicdomain/zero/1.0/',
  'CC BY 3.0':'https://creativecommons.org/licenses/by/3.0/',
@@ -3461,7 +3607,7 @@ const licenseUrls={
 };
 const commonsFile=p=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file.replace(/ /g,'_'))+'?width=720';
 const commonsSource=p=>'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(p.file.replace(/ /g,'_'));
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
