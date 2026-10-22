@@ -23,7 +23,7 @@
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./v6.css?v=20261022-recent-no-price"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2"><link rel="stylesheet" href="./used-market.css?v=20261021-mobile-dialog-fix">
+<link rel="stylesheet" href="./v6.css?v=20261022-commercial-status2"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2"><link rel="stylesheet" href="./used-market.css?v=20261021-mobile-dialog-fix">
 <link rel="stylesheet" href="./v2-premium.css?v=20261018-rc1">
 <link rel="stylesheet" href="./v2-claridad.css?v=20261018-v1">
 <link rel="stylesheet" href="./v2-polish.css?v=20261018-v1">
@@ -117,7 +117,7 @@
     <button type="button" class="button secondary" id="resetButton">Limpiar</button>
    </div>
   </form>
-  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Con precio comercial o homologación reciente sin precio</option><option value="recent-no-price">Homologado recientemente · Sin precio disponible</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Una homologación de los últimos 365 días sin precio compatible se identifica aparte y no entra en rankings comerciales. El precio publicado no prueba existencia de stock ni confirma un lanzamiento futuro.</small></div>
+  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Con precio comercial o homologación reciente sin precio</option><option value="upcoming">Próximamente en Chile · Lanzamiento anunciado</option><option value="market-price-unmatched">Oferta comercial en Chile · Precio de versión por conciliar</option><option value="recent-no-price">Homologado recientemente · Sin precio disponible</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Separamos anuncios de lanzamiento en Chile, homologaciones recientes sin precio y modelos con oferta comercial cuya versión aún no se ha conciliado. No se atribuyen automáticamente precios, acabados, stock ni disponibilidad.</small></div>
  </section>
  <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor gasto en energía (WLTP)</button><a href="./usados.html">💰 Tasación y precio usado</a><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
@@ -326,9 +326,9 @@
 <script src="./sii/catalog-identity.js?v=20261022-tech-verified" defer></script>
  <script src="./sii/prices.js?v=20261022-tech-verified" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261022-recent-no-price" defer></script>
+<script src="./v6.js?v=20261022-commercial-status2" defer></script>
 <link rel="stylesheet" href="./market.css?v=20261021-etapas234">
-<script src="./market-catalog.js?v=20261021-used-values1" defer></script>
+<script src="./market-catalog.js?v=20261022-commercial-status2" defer></script>
 <script>
 /* Accesibilidad del enlace directo a los supuestos, incluidos accesos desde otras páginas. */
 (function(){
