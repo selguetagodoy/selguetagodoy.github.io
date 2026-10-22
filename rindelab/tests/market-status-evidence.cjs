@@ -1,0 +1,62 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+const root=path.join(__dirname,'..');
+const evidence=JSON.parse(fs.readFileSync(path.join(root,'data','market-status-evidence-20261022.json'),'utf8'));
+assert.equal(evidence.schemaVersion,1);
+assert.equal(evidence.records.length,17);
+assert.equal(evidence.records.filter(x=>x.kind==='upcoming').length,11);
+assert.equal(evidence.records.filter(x=>x.kind==='market-price-unmatched').length,6);
+assert.equal(new Set(evidence.records.map(x=>x.model.toUpperCase())).size,17);
+for(const r of evidence.records){
+ assert.match(r.sourceUrl,/^https:\/\//);
+ assert.match(r.verifiedAt,/^2026-\d\d-\d\d$/);
+ assert(r.note.length>25&&r.launchWindow.length>10);
+}
+(async()=>{
+ const browser=await chromium.launch(process.platform==='win32'?{channel:'chrome',headless:true}:{headless:true,args:['--no-sandbox']});
+ const page=await browser.newPage({viewport:{width:1280,height:900}});
+ const failures=[];
+ page.on('pageerror',e=>failures.push(e.message));
+ const base=process.env.RINDELAB_BASE_URL||'http://127.0.0.1:8765/rindelab/';
+ try{
+  await page.goto(base,{waitUntil:'networkidle',timeout:45000});
+  await page.waitForFunction(()=>document.querySelector('#searchButton')?.disabled===false,{timeout:45000});
+  const count=async()=>Number((await page.locator('#resultCount').innerText()).match(/^[\d.]+/)[0].replace(/\./g,''));
+  const query=async(q)=>{await page.locator('#query').fill(q);await page.locator('#searchButton').click();};
+  await page.selectOption('#catalogScope','upcoming');
+  await query('');
+  assert.equal(await count(),11,'Lanzamientos anunciados: total incorrecto');
+  await query('Peugeot 3008');
+  assert.equal(await count(),2);
+  assert.equal(await page.locator('.rinde-market-status[data-market-status="upcoming"]').count(),2);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/1 de noviembre de 2026/);
+  assert.equal(await page.locator('.rinde-market-status a[target="_blank"]').count(),2);
+  await query('Lepas');
+  assert.equal(await count(),3);
+  assert((await page.locator('.vehicle-card').allInnerTexts()).every(x=>/primer semestre de 2027/.test(x)));
+  await query('Volvo EX60');
+  assert.equal(await count(),3);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/Inscripción de interés/);
+  await page.selectOption('#catalogScope','market-price-unmatched');
+  await query('');
+  assert.equal(await count(),6,'Ofertas comerciales pendientes de conciliación: total incorrecto');
+  await query('Mazda CX-5');
+  assert.equal(await count(),1);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/falta conciliar/i);
+  await query('BYD ATTO 8');
+  assert.equal(await count(),2);
+  await page.selectOption('#catalogScope','recent-no-price');
+  await query('');
+  assert.equal(await count(),572,'589 - (11+6) debe ser 572');
+  await query('Mokka Electric');
+  assert.equal(await count(),1);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/Homologado recientemente · Sin precio disponible/);
+  await query('Peugeot 3008 Allure 180HP');
+  assert.equal(await count(),0,'No duplicar la variante anunciada en categoria sin anuncio');
+  await page.selectOption('#catalogScope','all');
+  await query('Mokka Electric');
+  assert.equal(await count(),1);
+  assert.deepEqual(failures,[],'Errores de JavaScript');
+  console.log('PASS mercado Chile: 11 fichas anunciadas, 6 en oferta pendientes de conciliación, 572 sin anuncio/precio, Mokka sin dato ajeno; 17 fuentes verificables');
+ } finally {await browser.close();}
+})().catch(error=>{console.error(error.stack);process.exit(1)});

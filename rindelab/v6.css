@@ -725,3 +725,11 @@ input,select,textarea{font-size:16px}
 .rinde-commercial.rinde-recent{display:flex;flex-direction:column;align-items:flex-start;gap:5px;background:#f2f7fa;border-color:#c7dbe9}
 .rinde-commercial.rinde-recent strong{font-size:14px;color:#18435c}
 .rinde-commercial.rinde-recent small{font-size:12px;line-height:1.5}
+
+/* Respaldos de lanzamiento comercial y precios pendientes por versión (octubre 2026). */
+.rinde-market-status{gap:7px}
+.rinde-market-status a{font-size:12px;text-decoration:underline;text-underline-offset:2px}
+.rinde-market-status[data-market-status="upcoming"]{border-color:#b3d5c6;background:#f2f8f5}
+.rinde-market-status[data-market-status="upcoming"] strong{color:#21634d}
+.rinde-market-status[data-market-status="market-price-unmatched"]{border-color:#d8d7b3;background:#fbfaf1}
+.rinde-market-status[data-market-status="market-price-unmatched"] strong{color:#665b27}

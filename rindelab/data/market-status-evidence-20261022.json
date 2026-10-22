@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "methodology": "Registros por modelo exacto (marca y denominación 3CV); el anuncio de familia/motorización no acredita todos los acabados ni stock. No se atribuyen precios sin conciliación.",
+  "records": [
+    {
+      "id": "peugeot-3008-16t",
+      "model": "Peugeot 3008 Allure 180HP AT",
+      "kind": "upcoming",
+      "launchWindow": "Desde el 1 de noviembre de 2026",
+      "note": "La marca anunció el motor 1.6 Turbo de 180 hp. Los acabados específicos homologados todavía no tienen confirmación comercial individual.",
+      "sourceUrl": "https://www.autoguia.cl/noticias/2026/10/20/peugeot-3008-16-turbo-180-hp-y-llegada-anticipada-a-chile-desde-noviembre.html",
+      "sourceDate": "2026-10-20",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "peugeot-3008-16t",
+      "model": "Peugeot 3008 GT 180HP AT",
+      "kind": "upcoming",
+      "launchWindow": "Desde el 1 de noviembre de 2026",
+      "note": "La marca anunció el motor 1.6 Turbo de 180 hp. Los acabados específicos homologados todavía no tienen confirmación comercial individual.",
+      "sourceUrl": "https://www.autoguia.cl/noticias/2026/10/20/peugeot-3008-16-turbo-180-hp-y-llegada-anticipada-a-chile-desde-noviembre.html",
+      "sourceDate": "2026-10-20",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "changan-nevo-q05",
+      "model": "Changan Nevo Q05 S",
+      "kind": "upcoming",
+      "launchWindow": "Primer semestre de 2027",
+      "note": "Llegada del Nevo Q05 eléctrico anunciada; las versiones locales específicas aún requieren confirmación.",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/10/12/paris-2026-con-el-q05-se-inicia-la-era-de-changan-nevo",
+      "sourceDate": "2026-10-12",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "changan-nevo-q05",
+      "model": "Changan Nevo Q05 EV",
+      "kind": "upcoming",
+      "launchWindow": "Primer semestre de 2027",
+      "note": "Llegada del Nevo Q05 eléctrico anunciada; las versiones locales específicas aún requieren confirmación.",
+      "sourceUrl": "https://noticias.autocosmos.cl/2026/10/12/paris-2026-con-el-q05-se-inicia-la-era-de-changan-nevo",
+      "sourceDate": "2026-10-12",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "volvo-ex60",
+      "model": "Volvo EX60 P10 AWD Plus",
+      "kind": "upcoming",
+      "launchWindow": "Inscripción de interés abierta en Chile · fecha de venta pendiente",
+      "note": "Volvo publica el EX60 para Chile; no acredita el inicio de ventas ni la disponibilidad individual de los acabados Core, Plus y Ultra.",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/ex60-electric/",
+      "sourceDate": "2026-10-22",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "volvo-ex60",
+      "model": "Volvo EX60 P10 AWD Core",
+      "kind": "upcoming",
+      "launchWindow": "Inscripción de interés abierta en Chile · fecha de venta pendiente",
+      "note": "Volvo publica el EX60 para Chile; no acredita el inicio de ventas ni la disponibilidad individual de los acabados Core, Plus y Ultra.",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/ex60-electric/",
+      "sourceDate": "2026-10-22",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "volvo-ex60",
+      "model": "Volvo EX60 P10 AWD Ultra",
+      "kind": "upcoming",
+      "launchWindow": "Inscripción de interés abierta en Chile · fecha de venta pendiente",
+      "note": "Volvo publica el EX60 para Chile; no acredita el inicio de ventas ni la disponibilidad individual de los acabados Core, Plus y Ultra.",
+      "sourceUrl": "https://www.volvocars.com/cl/cars/ex60-electric/",
+      "sourceDate": "2026-10-22",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "lepas-l4",
+      "model": "Lepas L4 1.5T DCT",
+      "kind": "upcoming",
+      "launchWindow": "Desembarco de LEPAS previsto para el primer semestre de 2027",
+      "note": "El L4 fue identificado entre los modelos en homologación en Chile; la marca aún no confirma el catálogo final por versión.",
+      "sourceUrl": "https://www.chileautos.cl/noticias/detalle/arriban-a-chile-los-primeros-lepas-l6-y-l4-para-homologacion--30260/",
+      "sourceDate": "2026-06-11",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "lepas-l4",
+      "model": "Lepas L4 1.5L MT",
+      "kind": "upcoming",
+      "launchWindow": "Desembarco de LEPAS previsto para el primer semestre de 2027",
+      "note": "El L4 fue identificado entre los modelos en homologación en Chile; la marca aún no confirma el catálogo final por versión.",
+      "sourceUrl": "https://www.chileautos.cl/noticias/detalle/arriban-a-chile-los-primeros-lepas-l6-y-l4-para-homologacion--30260/",
+      "sourceDate": "2026-06-11",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "lepas-l6",
+      "model": "Lepas L6 1.5T DCT",
+      "kind": "upcoming",
+      "launchWindow": "Desembarco de LEPAS previsto para el primer semestre de 2027",
+      "note": "L6 contemplado en el ingreso de la marca; el anuncio reciente destaca L6 EV y no certifica esta motorización 1.5T DCT en la oferta final.",
+      "sourceUrl": "https://www.autoguia.cl/noticias/2026/10/14/lepas-prepara-su-llegada-a-chile-en-2027-con-estreno-mundial-y-pruebas-del-l6-ev.html",
+      "sourceDate": "2026-10-14",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "renault-filante",
+      "model": "Renault FILANTE",
+      "kind": "upcoming",
+      "launchWindow": "Despliegue regional anunciado; fecha chilena pendiente",
+      "note": "Renault incluye expresamente a Chile en el despliegue latinoamericano, sin fecha ni precio específico.",
+      "sourceUrl": "https://media.renault.com/renault-filante-the-charismatic-and-bold-crossover-new-international-flagship-model/?lang=eng",
+      "sourceDate": "2026-01-13",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "mazda-cx5-25awd",
+      "model": "Mazda CX-5 2.5 AWD",
+      "kind": "market-price-unmatched",
+      "launchWindow": "Venta o preventa publicada en Chile",
+      "note": "Mazda ofrece el All New CX-5 2.5 AWD con precios por acabado; falta conciliar esta ficha 3CV con un acabado exacto.",
+      "sourceUrl": "https://www.mazda.cl/vehiculo/all-new-mazda-cx-5/",
+      "sourceDate": "2026-10-22",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "renault-boreal",
+      "model": "Renault Boreal",
+      "kind": "market-price-unmatched",
+      "launchWindow": "Preventa publicada en Chile desde el 21 de octubre de 2026",
+      "note": "Existen precios por versiones Evolution, Techno e Iconic, pero la ficha 3CV aún no se ha vinculado a una de ellas.",
+      "sourceUrl": "https://publimicro.cl/renault-boreal-llega-a-chile-desde-24-990-000-nuevo-suv-ofrece-motor-turbo-y-tres-versiones/",
+      "sourceDate": "2026-10-21",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "toyota-hilux-bev",
+      "model": "Toyota Hilux BEV",
+      "kind": "market-price-unmatched",
+      "launchWindow": "Oferta publicada en Chile",
+      "note": "Toyota Chile ofrece Hilux BEV; el precio de la versión homologada debe reconciliarse sin asignación automática.",
+      "sourceUrl": "https://toyota.cl/modelos/pickup/",
+      "sourceDate": "2026-10-22",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "cupra-tavascan",
+      "model": "Cupra Tavascan 82 kWh 286 CV RWD",
+      "kind": "market-price-unmatched",
+      "launchWindow": "Precio publicado en Chile (septiembre de 2026)",
+      "note": "Hay precios de lista de Tavascan por versión comercial; aún no se acredita correspondencia exacta con esta ficha homologada.",
+      "sourceUrl": "https://cupra.mjh.cl/lista-de-precio/",
+      "sourceDate": "2026-09-01",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "byd-atto8",
+      "model": "BYD BYD ATTO 8 DM-i",
+      "kind": "market-price-unmatched",
+      "launchWindow": "Venta y precios publicados en Chile",
+      "note": "BYD publicó condiciones y precios por versiones DM-i GL y DM-p GS. La homologación no identifica automáticamente el acabado comercial.",
+      "sourceUrl": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+      "sourceDate": "2026-10-22",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "byd-atto8",
+      "model": "BYD BYD ATTO 8 DM-p",
+      "kind": "market-price-unmatched",
+      "launchWindow": "Venta y precios publicados en Chile",
+      "note": "BYD publicó condiciones y precios por versiones DM-i GL y DM-p GS. La homologación no identifica automáticamente el acabado comercial.",
+      "sourceUrl": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+      "sourceDate": "2026-10-22",
+      "verifiedAt": "2026-10-22"
+    }
+  ]
+}

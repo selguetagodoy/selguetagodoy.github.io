@@ -49,6 +49,12 @@ function recentNoPrice(row){
  return Boolean(!archivedModel(row)&&/^20\d\d-\d\d-\d\d$/.test(row[F.DATE]||'')&&
   row[F.DATE]>=recentCutoff()&&!validCurrentPrice(row));
 }
+// Evidencia editorial por modelo 3CV exacto. No implica coincidencia automática
+// de versión, precio, stock o fecha comercial.
+let marketEvidence=new Map();
+function marketEvidenceFor(row){
+ return marketEvidence.get(normalize(row[F.BRAND]+' '+row[F.MODEL]))||null;
+}
 const reviewedEnergyCodes=new Set(['BM9746EL1224S00-3']); // 10,6 km/kWh NEDC: verificación del documento original pendiente.
 let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
 const officialCodes=new Set();
@@ -123,8 +129,10 @@ const groupSUV=['Station Wagon','Jeep','Tipo Jeep'];
 function matchesScope(row,scope){
  if(scope==='all')return true;
  if(scope==='commercial')return false;
- if(scope==='recent-no-price')return recentNoPrice(row);
- return !archivedModel(row)&&(validCurrentPrice(row)||recentNoPrice(row));
+ const pending=recentNoPrice(row);
+ if(scope==='upcoming'||scope==='market-price-unmatched')return pending&&marketEvidenceFor(row)?.kind===scope;
+ if(scope==='recent-no-price')return pending&&!marketEvidenceFor(row);
+ return !archivedModel(row)&&(validCurrentPrice(row)||pending);
 }
 function bodyFits(selectedBody,actual){return !selectedBody||selectedBody==='__SUV_GROUP__'?(!selectedBody||groupSUV.includes(actual)):actual===selectedBody;}
 function matchesFilters(row,f){
@@ -165,8 +173,8 @@ function prepareMTT(source){
 }
 function filterMTT(f){
  // La nómina MTT no informa carrocería ni ciclo de rendimiento equiparables.
- if(f.body||f.cycle)return [];
- return mttRecords.filter(item=>(f.scope!=='recent-no-price'||recentNoPrice(item.row))&&matchesText(item.row,f.q)&&matchesFilters(item.row,f));
+ if(f.body||f.cycle||f.scope==='upcoming'||f.scope==='market-price-unmatched')return [];
+ return mttRecords.filter(item=>(f.scope!=='recent-no-price'||(recentNoPrice(item.row)&&!marketEvidenceFor(item.row)))&&matchesText(item.row,f.q)&&matchesFilters(item.row,f));
 }
 function renderMTT(){
  // MTT sin rendimiento no es resultado comparable ni oferta comercial.
@@ -422,13 +430,16 @@ function render(){
   const status=archivedModel(row);
   const lifecycleHTML=status?'<p class="vehicle-lifecycle">'+(status.status==='previous-generation-cl'?'Generación anterior retirada de la oferta chilena':'Modelo descontinuado en la oferta chilena')+' · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
   const recent=recentNoPrice(row);
+  const evidence=recent?marketEvidenceFor(row):null;
   if(recent)article.classList.add('vehicle-card-recent');
   const offer=!status&&!recent?window.RindelabCommercial?.minimum(row,family(row)):null;
   const offerCaption=offer?(offer.campaignExpired?'Referencia con campaña terminada · ': 'Precio publicado · ')+(offer.association==='same-tech'?'misma tecnología, versión sin verificar':'motorización de fuente no informada'):'';
-  const offerHTML=recent?'<div class="rinde-commercial rinde-recent" role="note"><strong>Homologado recientemente · Sin precio disponible</strong><small>Llegada comercial a Chile por confirmar. Sin precio de la misma motorización ni stock verificado; no implica descontinuación ni lanzamiento anunciado.</small></div>':offer?'<div class="rinde-commercial"><small>'+safe(offerCaption)+'</small> <strong>'+safe(money(offer.priceListClp))+(offer.taxIncluded===false?' + IVA':'')+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'';
+  const evidenceTitle=evidence?.kind==='upcoming'?'Próximamente en Chile · Lanzamiento anunciado':'Modelo con oferta en Chile · Precio de versión por conciliar';
+  const evidencedHTML=evidence?'<div class="rinde-commercial rinde-recent rinde-market-status" data-market-status="'+safe(evidence.kind)+'" role="note"><strong>'+safe(evidenceTitle)+'</strong><small>'+safe(evidence.launchWindow)+'</small><small>'+safe(evidence.note)+'</small><small>Verificación: '+safe(evidence.verifiedAt)+' · sin stock ni precio atribuido a esta versión.</small><a href="'+safe(evidence.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver fuente del estado comercial ↗</a></div>':'';
+  const offerHTML=evidencedHTML||(recent?'<div class="rinde-commercial rinde-recent" role="note"><strong>Homologado recientemente · Sin precio disponible</strong><small>Llegada comercial a Chile por confirmar. Sin precio de la misma motorización ni stock verificado; no implica descontinuación ni lanzamiento anunciado.</small></div>':offer?'<div class="rinde-commercial"><small>'+safe(offerCaption)+'</small> <strong>'+safe(money(offer.priceListClp))+(offer.taxIncluded===false?' + IVA':'')+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'');
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
   article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
-   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p>'+lifecycleHTML+(recent?'<span class="rinde-status-recent">Homologación reciente · Precio pendiente</span>':'')+'</div'+'>'+
+   '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p>'+lifecycleHTML+(recent?'<span class="rinde-status-recent">'+safe(evidence?.kind==='upcoming'?'Lanzamiento anunciado en Chile':evidence?.kind==='market-price-unmatched'?'Oferta chilena · Precio de versión por conciliar':'Homologación reciente · Precio pendiente')+'</span>':'')+'</div'+'>'+
    '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'" title="Categoría declarada en 3CV: '+safe(row[F.TECH])+'">'+safe(techHuman[row[F.TECH]]||row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'" title="'+safe(row[F.CYCLE]==='NEDC'?'Ensayo NEDC; no es directamente comparable con WLTP':row[F.CYCLE]==='WLTP'?'Ensayo WLTP; no es directamente comparable con NEDC':'Ciclo no informado')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
    '<div class="vehicle-cell vehicle-performance"><small>Rendimiento oficial</small><strong>'+safe(metric(row))+'</strong></div>'+
    '<div class="vehicle-cell vehicle-cost"><small>Costo estimado /100 km</small><strong'+(per100===null?' class="no-data"':'')+'>'+safe(money(per100))+'</strong><small class="annual-result" aria-hidden="true">'+(annual===null?'Sin proyección de energía':safe(money(annual))+' / año · '+safe(money(fiveYears))+' / 5 años')+'</small></div>'+
@@ -842,6 +853,23 @@ async function init(){
   $('recordCount').textContent=fmt(all.length);
   const prices=await window.RindelabCommercial?.ready?.();
   if(!prices?.length){$('catalogScope').value='all';$('catalogScopeHint').textContent='No se pudo cargar el catálogo comercial; se presenta la base oficial 3CV completa.';}
+  // Evidencia comercial externa: en fallos de red conservar la clasificación prudente.
+  try{
+   const response=await fetch('./data/market-status-evidence-20261022.json?v=20261022-status1');
+   if(!response.ok)throw Error('Evidencia comercial no disponible');
+   const dataset=await response.json();
+   if(dataset.schemaVersion!==1||!Array.isArray(dataset.records))throw Error('Esquema inválido');
+   const next=new Map();
+   for(const item of dataset.records){
+    if(!item||!['upcoming','market-price-unmatched'].includes(item.kind)||
+     !/^https:\/\//.test(item.sourceUrl||'')||!item.model||!item.note||
+     !item.launchWindow||!/^2026-\d\d-\d\d$/.test(item.verifiedAt||''))continue;
+    const key=normalize(item.model);
+    if(next.has(key))throw Error('Evidencia duplicada: '+key);
+    next.set(key,item);
+   }
+   marketEvidence=next;
+  }catch(error){marketEvidence=new Map();console.warn('RINDELAB: evidencia comercial opcional no disponible',error.message);}
   const availableYears=[...new Set(all.map(r=>String(r[F.DATE]).slice(0,4)).filter(y=>/^20\d\d$/.test(y)))].sort().reverse();
   $('year').replaceChildren(new Option('Todo el historial',''),...availableYears.map(y=>new Option(y,y)));
   $('statsOpen').disabled=false;
