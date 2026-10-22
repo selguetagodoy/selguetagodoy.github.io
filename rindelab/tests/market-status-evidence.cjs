@@ -56,18 +56,24 @@ for(const r of evidence.records){
   await query('Cupra Tavascan');
   assert.equal(await count(),1);
   assert.match(await page.locator('.vehicle-card').first().innerText(),/50\.990\.000/);
+  await page.selectOption('#catalogScope','family-price-review');
+  await query('');
+  assert.equal(await count(),272,'Familias con precio pero motorización sin acreditar');
+  await query('Volvo XC60');
+  assert.equal(await count(),4,'Volvo XC60 T8 se revisa sin atribuir precio de otro motor');
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/no acreditan el precio/i);
   await page.selectOption('#catalogScope','recent-no-price');
   await query('');
-  assert.equal(await count(),572,'589 - (11+6) debe ser 572');
+  assert.equal(await count(),300,'572 - 272 en revisión de precios de familia');
   await query('Mokka Electric');
   assert.equal(await count(),1);
-  assert.match(await page.locator('.vehicle-card').first().innerText(),/Homologado recientemente · Sin precio disponible/);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/Referencias antiguas de la familia · Motor y vigencia por revisar/);
   await query('Peugeot 3008 Allure 180HP');
   assert.equal(await count(),0,'No duplicar la variante anunciada en categoria sin anuncio');
   await page.selectOption('#catalogScope','all');
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.deepEqual(failures,[],'Errores de JavaScript');
-  console.log('PASS mercado Chile: 11 anunciadas, 6 con precios publicados (Mazda, Renault, Toyota, Cupra, BYD), 572 sin precio/anuncio; 1514 referencias; Mokka protegido');
+  console.log('PASS mercado Chile: 11 anunciadas, 6 con precios publicados (Mazda, Renault, Toyota, Cupra, BYD), 272 con precio de familia por conciliar y 300 sin precio de versión verificado; 1514 referencias; Mokka protegido');
  } finally {await browser.close();}
 })().catch(error=>{console.error(error.stack);process.exit(1)});
