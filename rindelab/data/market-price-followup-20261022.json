@@ -1,0 +1,4428 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "methodology": "Segundo chequeo: 465 anuncios de tres redes chilenas y referencias oficiales/comerciales revisadas. Cada importe corresponde a la versión comercial citada, nunca a la ficha 3CV sin conciliación exacta. Promociones caducadas, precio 'desde', IVA y diferencias de motorización se mantienen diferenciados.",
+  "sourceFamilies": 22,
+  "sourceDealerRecords": 465,
+  "summary": {
+    "auditedHomologations": 572,
+    "officialFamilyReferenceRows": 51,
+    "originallyUnmatchedWithOfficialPriceAndPowertrain": 25,
+    "originallyUnmatchedDealerOnlyRows": 18,
+    "originallyUnmatchedAnySeller": 53,
+    "originallyUnmatchedDealerPublishedPrice": 1
+  },
+  "records": [
+    {
+      "model": "Chery Tiggo 7 CSH",
+      "homologationDate": "2026-10-13",
+      "homologationCodeSuffix": "0926S00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volvo XC60 T8 AWD ULTRA DARK",
+      "homologationDate": "2026-10-01",
+      "homologationCodeSuffix": "0926S03-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.portillosur.cl/volvo/xc60",
+        "commercialVersion": "XC60 T8 AWD Core",
+        "referencePriceClp": 64900000,
+        "priceType": "lista-dealer",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "La tienda etiqueta T8 solo como «híbrido», sin especificar PHEV; no inferir el motor"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volvo XC60 T8 AWD ULTRA",
+      "homologationDate": "2026-10-01",
+      "homologationCodeSuffix": "0926S02-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.portillosur.cl/volvo/xc60",
+        "commercialVersion": "XC60 T8 AWD Core",
+        "referencePriceClp": 64900000,
+        "priceType": "lista-dealer",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "La tienda etiqueta T8 solo como «híbrido», sin especificar PHEV; no inferir el motor"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volvo XC60 T8 AWD PLUS",
+      "homologationDate": "2026-10-01",
+      "homologationCodeSuffix": "0926S01-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.portillosur.cl/volvo/xc60",
+        "commercialVersion": "XC60 T8 AWD Core",
+        "referencePriceClp": 64900000,
+        "priceType": "lista-dealer",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "La tienda etiqueta T8 solo como «híbrido», sin especificar PHEV; no inferir el motor"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volvo XC60 T8 AWD CORE",
+      "homologationDate": "2026-10-01",
+      "homologationCodeSuffix": "0926S00-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.portillosur.cl/volvo/xc60",
+        "commercialVersion": "XC60 T8 AWD Core",
+        "referencePriceClp": 64900000,
+        "priceType": "lista-dealer",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "La tienda etiqueta T8 solo como «híbrido», sin especificar PHEV; no inferir el motor"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc60",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Seltos 1.5L GSL 6MT SP3",
+      "homologationDate": "2026-09-29",
+      "homologationCodeSuffix": "0726S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-nuevo-seltos.html",
+        "commercialVersion": "Seltos LX 1.5L 6MT",
+        "referencePriceClp": 18490000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Referencia de septiembre; motorización y acabado SP3 no acreditados"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/seltos/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 18490000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-seltos",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "JIM RE-MAX 4x2 MT",
+      "homologationDate": "2026-09-24",
+      "homologationCodeSuffix": "0726M01-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jim/jim-remax",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "JIM RE-MAX 4x4 MT",
+      "homologationDate": "2026-09-24",
+      "homologationCodeSuffix": "0726M00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jim/jim-remax",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover Velar 3.0i Autobiography MHEV",
+      "homologationDate": "2026-09-23",
+      "homologationCodeSuffix": "0826S03-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover-velar",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover Velar 3.0i Belgravia Edition Satin MHEV",
+      "homologationDate": "2026-09-23",
+      "homologationCodeSuffix": "0826S02-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover-velar",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover Velar 3.0i S MHEV",
+      "homologationDate": "2026-09-23",
+      "homologationCodeSuffix": "0826S01-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover-velar",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover Velar 3.0i Belgravia Edition MHEV",
+      "homologationDate": "2026-09-23",
+      "homologationCodeSuffix": "0826S00-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover-velar",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "JIM RE-MAX 4x2 AT",
+      "homologationDate": "2026-09-14",
+      "homologationCodeSuffix": "0726M01-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jim/jim-remax",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "JIM RE-MAX 4x4 AT",
+      "homologationDate": "2026-09-14",
+      "homologationCodeSuffix": "0726M00-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jim/jim-remax",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Seltos 1.5T GSL 8AT SP3",
+      "homologationDate": "2026-09-08",
+      "homologationCodeSuffix": "0826S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-nuevo-seltos.html",
+        "commercialVersion": "Seltos LX 1.5L 6MT",
+        "referencePriceClp": 18490000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Referencia de septiembre; motorización y acabado SP3 no acreditados"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/seltos/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 18490000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-seltos",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac GS4 MAX (GB) 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0726S01-5",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://gacmotor.cl/modelos/",
+        "commercialVersion": "GS4 Power precio desde",
+        "referencePriceClp": 14490000,
+        "priceType": "desde",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Valor desde sujeto a condiciones; no acredita GS4 MAX, motor ni precio lista"
+      },
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/gs4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac GS4 MAX (GL) 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0726S00-0",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://gacmotor.cl/modelos/",
+        "commercialVersion": "GS4 Power precio desde",
+        "referencePriceClp": 14490000,
+        "priceType": "desde",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Valor desde sujeto a condiciones; no acredita GS4 MAX, motor ni precio lista"
+      },
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/gs4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0i PHEV SV",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0826M03-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0i PHEV HSE",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0826M02-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0i PHEV SE",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0826M01-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0i PHEV Autobiography",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0826M00-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Cupra Leon 1.5 TSI MHEV",
+      "homologationDate": "2026-09-04",
+      "homologationCodeSuffix": "0826S00-5",
+      "originalCategory": "expired-price-reference",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-leon",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Mitsubishi L200 2.4 Dakar XRL 4x4 AT",
+      "homologationDate": "2026-09-04",
+      "homologationCodeSuffix": "0926M05-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-new-l200",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Seltos 1.5T DSL 6MT SP3",
+      "homologationDate": "2026-08-27",
+      "homologationCodeSuffix": "0726S00-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/seltos/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 18490000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-seltos",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Seltos 1.5T DSL 6AT SP3",
+      "homologationDate": "2026-08-27",
+      "homologationCodeSuffix": "0726S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/seltos/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 18490000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-seltos",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac T9 2.0 PHEV D/C AT 4WD E6d",
+      "homologationDate": "2026-08-25",
+      "homologationCodeSuffix": "0726M00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jac/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jeep Avenger Limited HYB",
+      "homologationDate": "2026-08-25",
+      "homologationCodeSuffix": "0726S02-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jeep/nuevo/jeep-avenger",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jeep Avenger Altit HYB",
+      "homologationDate": "2026-08-25",
+      "homologationCodeSuffix": "0726S01-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jeep/nuevo/jeep-avenger",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jeep Avenger Longt HYB",
+      "homologationDate": "2026-08-25",
+      "homologationCodeSuffix": "0726S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-avenger",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jeep/nuevo/jeep-avenger",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Cupra Terramar 2.0 AT 265 CV 4DRIVE",
+      "homologationDate": "2026-08-13",
+      "homologationCodeSuffix": "0726S00-7",
+      "originalCategory": "expired-price-reference",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-terramar",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac GS8 (GL) 2.0T GDI 8AT 2WD E6c",
+      "homologationDate": "2026-07-24",
+      "homologationCodeSuffix": "0726S02-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/gs8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac GS8 (GX KIT) 2.0T GDI 8AT 4WD E6c",
+      "homologationDate": "2026-07-24",
+      "homologationCodeSuffix": "0726S01-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/gs8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac GS8 (GX) 2.0T GDI 8AT 4WD E6c",
+      "homologationDate": "2026-07-24",
+      "homologationCodeSuffix": "0726S00-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/gs8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Opel CORSA GASOLINA 100 HP MT",
+      "homologationDate": "2026-07-23",
+      "homologationCodeSuffix": "0626S00-4",
+      "originalCategory": "expired-price-reference",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/nuevo-corsa/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 17390000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/opel/nuevo/opel-new-corsa",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 4.4 LWB Autobiography MHEV",
+      "homologationDate": "2026-07-21",
+      "homologationCodeSuffix": "0726M04-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Geely Starray 2.0T DCT",
+      "homologationDate": "2026-07-20",
+      "homologationCodeSuffix": "0326S00-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/starray/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 23990000,
+          "taxIncluded": true
+        }
+      ]
+    },
+    {
+      "model": "Volkswagen Tiguan 1.5 eTSI AT",
+      "homologationDate": "2026-07-09",
+      "homologationCodeSuffix": "0526S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-tiguan",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac Emkoo GE 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-07-09",
+      "homologationCodeSuffix": "0626S01-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/emkoo",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac Emkoo GL 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-07-09",
+      "homologationCodeSuffix": "0626S00-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/emkoo",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac Emzoom R-Style 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-07-07",
+      "homologationCodeSuffix": "0626S03-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/emzoom",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac Emzoom (GB) 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-07-07",
+      "homologationCodeSuffix": "0626S02-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/emzoom",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac Emzoom (GS) 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-07-07",
+      "homologationCodeSuffix": "0626S01-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/emzoom",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac Emzoom (GL) 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-07-07",
+      "homologationCodeSuffix": "0626S00-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/emzoom",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Changan Hunter REEV ECE 4x2",
+      "homologationDate": "2026-06-22",
+      "homologationCodeSuffix": "0526M01-2",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.changan.cl/vehiculo/new-hunter-reev/",
+        "commercialVersion": "Hunter E REEV 4x2 Luxury",
+        "referencePriceClp": 32990000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio lista y campaña documentados hasta el 5 de noviembre de 2026; cotejar acabado ECE"
+      },
+      "dealers": []
+    },
+    {
+      "model": "Changan Hunter REEV 4x4 ECE",
+      "homologationDate": "2026-06-22",
+      "homologationCodeSuffix": "0526M00-8",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.changan.cl/vehiculo/new-hunter-reev/",
+        "commercialVersion": "Hunter E REEV 4x4 Elite",
+        "referencePriceClp": 36990000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "Toyota RAV4 2.5 PHEV AWD",
+      "homologationDate": "2026-06-22",
+      "homologationCodeSuffix": "0526S00-1",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/toyota/nuevo/toyota-rav4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Peugeot Boxer SC Chasis CAB L4",
+      "homologationDate": "2026-06-12",
+      "homologationCodeSuffix": "0725M00-0",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/boxer/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 31390000,
+          "taxIncluded": false
+        }
+      ]
+    },
+    {
+      "model": "MG HS HEV COM",
+      "homologationDate": "2026-06-08",
+      "homologationCodeSuffix": "0626S01-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac T8 2.0 CRDI D/C 6MT 2WD E6d",
+      "homologationDate": "2026-06-05",
+      "homologationCodeSuffix": "0626M03-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-t8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jac/jac-t8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac T8 2.0 CRDI D/C 6MT 4WD E6d",
+      "homologationDate": "2026-06-05",
+      "homologationCodeSuffix": "0626M02-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-t8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jac/jac-t8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Grand LX 2.2 TD 6MT 2WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M05-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Grand GLX 2.2 TD 6MT 2WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M04-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Grand GLX 2.2 TD 6MT 4WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M03-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso GLX 2.2 TD 6AT 4WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M11-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Ltd 2.2 TD 6AT 4WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M10-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Ltd Plus 2.2 TD 6AT 4WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M09-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Grand GLX 2.2 TD 6AT 2WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M08-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Grand Ltd 2.2 TD 6AT 4WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M07-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso Grand Ltd Plus 2.2 TD 6AT 4WD",
+      "homologationDate": "2026-06-02",
+      "homologationCodeSuffix": "0626M06-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Turbo S Coupé 992.2 2P",
+      "homologationDate": "2026-05-28",
+      "homologationCodeSuffix": "0526S02-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Turbo S Cabriolet 992.2",
+      "homologationDate": "2026-05-28",
+      "homologationCodeSuffix": "0526S01-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Turbo S Coupé 992.2",
+      "homologationDate": "2026-05-28",
+      "homologationCodeSuffix": "0526S00-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Hyundai Grand-i10 AI3 1.2 HB AT E6d",
+      "homologationDate": "2026-05-28",
+      "homologationCodeSuffix": "0526S01-0",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/hatchback-y-citycar/new-grand-i10-hatchback/precios-y-financiamiento/",
+        "commercialVersion": "Grand i10 HB 1.2 MT GO FL",
+        "referencePriceClp": 10690000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de la versión MT, no necesariamente de la AT"
+      },
+      "dealers": []
+    },
+    {
+      "model": "Hyundai Grand-i10 AI3 1.2 SDN AT E6d",
+      "homologationDate": "2026-05-28",
+      "homologationCodeSuffix": "0526S00-6",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/sedan/new-grand-i10-sedan/precios-y-financiamiento/",
+        "commercialVersion": "Grand i10 AI3 Sedan 1.2 MT Plus FL",
+        "referencePriceClp": 12490000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de sedán manual, no necesariamente automático"
+      },
+      "dealers": []
+    },
+    {
+      "model": "Hyundai Grand-i10 AI3 1.2 HB MT E6d",
+      "homologationDate": "2026-05-27",
+      "homologationCodeSuffix": "0526S01-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/hatchback-y-citycar/new-grand-i10-hatchback/precios-y-financiamiento/",
+        "commercialVersion": "Grand i10 HB 1.2 MT GO FL",
+        "referencePriceClp": 10690000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de la versión MT, no necesariamente de la AT"
+      },
+      "dealers": []
+    },
+    {
+      "model": "Hyundai Grand-i10 AI3 1.2 SDN MT E6d",
+      "homologationDate": "2026-05-27",
+      "homologationCodeSuffix": "0526S00-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/sedan/new-grand-i10-sedan/precios-y-financiamiento/",
+        "commercialVersion": "Grand i10 AI3 Sedan 1.2 MT Plus FL",
+        "referencePriceClp": 12490000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de sedán manual, no necesariamente automático"
+      },
+      "dealers": []
+    },
+    {
+      "model": "MG MG HS Hybrid",
+      "homologationDate": "2026-05-15",
+      "homologationCodeSuffix": "1025S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Cupra Terramar 1.5 TSI MHEV",
+      "homologationDate": "2026-05-15",
+      "homologationCodeSuffix": "0925S00-5",
+      "originalCategory": "expired-price-reference",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/cupra/nuevo/cupra-terramar",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "RAM RAM RAMPAGE REBEL DS",
+      "homologationDate": "2026-05-08",
+      "homologationCodeSuffix": "0326M00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-rampage",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/ram/nuevo/ram-rampage",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Soluto 1.4L 5MT e",
+      "homologationDate": "2026-05-05",
+      "homologationCodeSuffix": "0326S00-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/soluto/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 10990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-soluto",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Soluto 1.4L 4AT e",
+      "homologationDate": "2026-05-05",
+      "homologationCodeSuffix": "0326S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/soluto/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 10990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-soluto",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Actyon GLX 1.5T 2WD 6AT",
+      "homologationDate": "2026-04-22",
+      "homologationCodeSuffix": "0426S03-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-actyon",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Actyon Limited Plus 1.5T 4WD 6AT",
+      "homologationDate": "2026-04-22",
+      "homologationCodeSuffix": "0426S07-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-actyon",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Honda ZR-V Hybrid",
+      "homologationDate": "2026-04-15",
+      "homologationCodeSuffix": "0226S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-zr-v",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Frontier Pick Up 2.5T DSL 6MT",
+      "homologationDate": "2026-04-14",
+      "homologationCodeSuffix": "0226M00-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-frontier.html",
+        "commercialVersion": "Frontier C/C LX 2.5L 6MT AV AB",
+        "referencePriceClp": 21840336,
+        "priceType": "lista+IVA",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de cabina/chasis y sin IVA; no corresponde automáticamente al Pick Up"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/frontier/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 21840336,
+          "taxIncluded": false
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-frontier",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Frontier CC 2.5T DSL 6MT EXT",
+      "homologationDate": "2026-04-14",
+      "homologationCodeSuffix": "0226M01-9",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-frontier.html",
+        "commercialVersion": "Frontier C/C LX 2.5L 6MT AV AB",
+        "referencePriceClp": 21840336,
+        "priceType": "lista+IVA",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de cabina/chasis y sin IVA; no corresponde automáticamente al Pick Up"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/frontier/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 21840336,
+          "taxIncluded": false
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-frontier",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Frontier CC 2.5T DSL 6MT E",
+      "homologationDate": "2026-04-14",
+      "homologationCodeSuffix": "0226M02-3",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-frontier.html",
+        "commercialVersion": "Frontier C/C LX 2.5L 6MT AV AB",
+        "referencePriceClp": 21840336,
+        "priceType": "lista+IVA",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de cabina/chasis y sin IVA; no corresponde automáticamente al Pick Up"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/frontier/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 21840336,
+          "taxIncluded": false
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-frontier",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jeep Renegade Sahar T270",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "0426S02-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-renegade",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jeep/nuevo/jeep-renegade",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jeep Renegade Altit T270",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "0426S03-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-renegade",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jeep/nuevo/jeep-renegade",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jeep Renegade Longi T270",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "0426S04-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/jeep/nuevo/jeep-renegade",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jeep/nuevo/jeep-renegade",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Geely EX5 eMi",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "1025S00-K",
+      "originalCategory": "other-powertrain",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/ex5/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 30990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Geely EX5 EM-i 30Kw",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "0226S00-9",
+      "originalCategory": "other-powertrain",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/ex5/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 30990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-ex5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Chery TIGGO 8 PRO MAX 1.6T DCT GLS",
+      "homologationDate": "2026-04-08",
+      "homologationCodeSuffix": "0625S02-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Chery TIGGO 8 PRO MAX 1.6T DCT GLX",
+      "homologationDate": "2026-04-08",
+      "homologationCodeSuffix": "0625S03-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8-pro-max",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Omoda C5 1.5T DCT",
+      "homologationDate": "2026-04-02",
+      "homologationCodeSuffix": "1225S00-3",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden 2.0 MT 4WD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M00-9",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Luxury 2.0 MT RWD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M01-3",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Advance 2.0 MT 4WD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M02-8",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Advance 2.0 MT RWD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M03-2",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Luxury 2.0 MT RWD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M04-7",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Pro 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M00-5",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Advance 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M01-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Luxury 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M02-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden Adventure 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M03-9",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Sinotruk Bolden 2.0 AT 2WD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M04-3",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/sinotruk/nuevo/sinotruk-bolden",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "BMW M440i xDrive LCI II coupé",
+      "homologationDate": "2026-03-11",
+      "homologationCodeSuffix": "0226S00-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/modelos/4-coupe",
+        "commercialVersion": "M440i xDrive Coupé LCI II",
+        "referencePriceClp": 85900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "BMW M340i cDrive LCI II Sedán",
+      "homologationDate": "2026-03-11",
+      "homologationCodeSuffix": "0226S01-9",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/modelos/serie-3",
+        "commercialVersion": "M340i xDrive Berlina 50th LCI II",
+        "referencePriceClp": 79900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "BMW M340i xDrive LCI II Berlina",
+      "homologationDate": "2026-03-11",
+      "homologationCodeSuffix": "0226S02-3",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/modelos/serie-3",
+        "commercialVersion": "M340i xDrive Berlina 50th LCI II",
+        "referencePriceClp": 79900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "BMW M440i xDrive LCI II Gran Coupé",
+      "homologationDate": "2026-03-11",
+      "homologationCodeSuffix": "0226S03-8",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/configurador/trim-levels/",
+        "commercialVersion": "M440i Gran Coupé",
+        "referencePriceClp": 86900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "BMW M440i xDrive LCI II Cabriolet",
+      "homologationDate": "2026-03-11",
+      "homologationCodeSuffix": "0226S04-2",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/terminos-y-condiciones",
+        "commercialVersion": "M440i xDrive Cabriolet LCI II",
+        "referencePriceClp": 89900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "Nissan Nissan Kait",
+      "homologationDate": "2026-03-10",
+      "homologationCodeSuffix": "0126S00-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-kait",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/nissan/nuevo/nissan-kait",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Nissan Versa N19 CVT",
+      "homologationDate": "2026-03-10",
+      "homologationCodeSuffix": "1225S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-versa",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/nissan/nuevo/nissan-versa",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Nissan Versa N19 MT",
+      "homologationDate": "2026-03-10",
+      "homologationCodeSuffix": "1225S00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-versa",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/nissan/nuevo/nissan-versa",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac T9 2.0 CRDI D/C 6MT 4WD E6d",
+      "homologationDate": "2026-03-09",
+      "homologationCodeSuffix": "0226M00-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jac/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac T9 2.0 CRDI D/C 6MT 2WD E6d",
+      "homologationDate": "2026-03-09",
+      "homologationCodeSuffix": "0226M01-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jac/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac T9 2.0 CRDI D/C 6MT 4WD E6d",
+      "homologationDate": "2026-03-09",
+      "homologationCodeSuffix": "0226M00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jac/jac-t9",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 GT3 992.2",
+      "homologationDate": "2026-03-06",
+      "homologationCodeSuffix": "0226S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 GT3 Touring 992.2",
+      "homologationDate": "2026-03-06",
+      "homologationCodeSuffix": "0226S01-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 GT3 Touring 992.2 2 P",
+      "homologationDate": "2026-03-06",
+      "homologationCodeSuffix": "0226S02-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New Q3 Sportback TFSI MHEV",
+      "homologationDate": "2026-02-27",
+      "homologationCodeSuffix": "0226S00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New Q3 TFSI MHEV",
+      "homologationDate": "2026-02-27",
+      "homologationCodeSuffix": "0226S01-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-new-q3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "BMW 330e Sedán",
+      "homologationDate": "2026-02-25",
+      "homologationCodeSuffix": "0126S00-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/modelos/3-hibrido",
+        "commercialVersion": "330e Berlina Dynamic LCI II",
+        "referencePriceClp": 65900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "BMW 330e Berlina",
+      "homologationDate": "2026-02-25",
+      "homologationCodeSuffix": "0126S01-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/modelos/3-hibrido",
+        "commercialVersion": "330e Berlina Dynamic LCI II",
+        "referencePriceClp": 65900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "Toyota RAV4 2.0 CVT AWD",
+      "homologationDate": "2026-02-24",
+      "homologationCodeSuffix": "1225S00-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Modelo-All+New+Rav4",
+        "commercialVersion": "All New RAV4 2.0 XLE 4x2",
+        "referencePriceClp": 32490000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio lista de versión 4x2; no atribuir automáticamente a AWD"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/toyota/nuevo/toyota-rav4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "BYD Dolphin Mini 5S GS",
+      "homologationDate": "2026-02-17",
+      "homologationCodeSuffix": "0126S00-6",
+      "originalCategory": "expired-price-reference",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-dolphin-mini",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "BYD Dolphin Mini 5S GL",
+      "homologationDate": "2026-02-17",
+      "homologationCodeSuffix": "0126S01-0",
+      "originalCategory": "expired-price-reference",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/byd/nuevo/byd-dolphin-mini",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac Refine M3 EV AT",
+      "homologationDate": "2026-02-17",
+      "homologationCodeSuffix": "0325M00-1",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-refine",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volvo XC90 T8 AWD Ultra Dark",
+      "homologationDate": "2026-02-13",
+      "homologationCodeSuffix": "0226M04-3",
+      "originalCategory": "other-powertrain",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc90",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Toyota RAV4 2.5 HEV AWD",
+      "homologationDate": "2026-02-12",
+      "homologationCodeSuffix": "1225S00-3",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://tienda.toyota.cl/index.php?controller=product&id_product=989&rewrite=all-new-rav4",
+        "commercialVersion": "All New RAV4 2.5 HEV LE 4x2",
+        "referencePriceClp": 33490000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio lista de versión HEV 4x2; no atribuir a AWD"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/toyota/nuevo/toyota-rav4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Toyota RAV4 2.0 CVT",
+      "homologationDate": "2026-02-10",
+      "homologationCodeSuffix": "1125S00-5",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&q=Modelo-All+New+Rav4",
+        "commercialVersion": "All New RAV4 2.0 XLE 4x2",
+        "referencePriceClp": 32490000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio lista de versión 4x2; no atribuir automáticamente a AWD"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/toyota/nuevo/toyota-rav4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Hyundai PORTER HR 2.5 CRDI C/S 2P 6MT E6d",
+      "homologationDate": "2026-02-09",
+      "homologationCodeSuffix": "1225M00-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/comerciales/porter/precios-y-financiamiento/",
+        "commercialVersion": "Porter 2.5 CRDI 6MT GLS Chasis",
+        "referencePriceClp": 26168100,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de chasis, no necesariamente de carrocería distinta"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/hyundai/nuevo/hyundai-porter",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/hyundai/porter",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Hyundai Porter HR 2.5 CRDI Chasis Cabina Simple 2P 6MT E6d",
+      "homologationDate": "2026-02-09",
+      "homologationCodeSuffix": "1225M01-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/comerciales/porter/precios-y-financiamiento/",
+        "commercialVersion": "Porter 2.5 CRDI 6MT GLS Chasis",
+        "referencePriceClp": 26168100,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de chasis, no necesariamente de carrocería distinta"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/hyundai/nuevo/hyundai-porter",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/hyundai/porter",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Mitsubishi L200 2.4 Katana XM 4x2 MT",
+      "homologationDate": "2026-02-05",
+      "homologationCodeSuffix": "0125M06-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-new-l200",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Toyota RAV4 2.5 HEV",
+      "homologationDate": "2026-02-05",
+      "homologationCodeSuffix": "1125S00-7",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://tienda.toyota.cl/index.php?controller=product&id_product=989&rewrite=all-new-rav4",
+        "commercialVersion": "All New RAV4 2.5 HEV LE 4x2",
+        "referencePriceClp": 33490000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio lista de versión HEV 4x2; no atribuir a AWD"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/toyota/nuevo/toyota-rav4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New A5",
+      "homologationDate": "2026-01-29",
+      "homologationCodeSuffix": "1225S00-7",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.audi.cl/a5/nuevo-a5/Lista-de-precios",
+        "commercialVersion": "New A5 TFSI",
+        "referencePriceClp": 55400000,
+        "priceType": "lista-vencida",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Lista de septiembre de 2026, caducada; no usar como precio de octubre"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New A5 Avant",
+      "homologationDate": "2026-01-29",
+      "homologationCodeSuffix": "1225S01-1",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.audi.cl/a5/nuevo-a5/Lista-de-precios",
+        "commercialVersion": "New A5 TFSI",
+        "referencePriceClp": 55400000,
+        "priceType": "lista-vencida",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Lista de septiembre de 2026, caducada; no usar como precio de octubre"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New A5 quattro",
+      "homologationDate": "2026-01-28",
+      "homologationCodeSuffix": "1225S00-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.audi.cl/a5/nuevo-a5/Lista-de-precios",
+        "commercialVersion": "New A5 TFSI",
+        "referencePriceClp": 55400000,
+        "priceType": "lista-vencida",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Lista de septiembre de 2026, caducada; no usar como precio de octubre"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New A5 quattro Avant",
+      "homologationDate": "2026-01-28",
+      "homologationCodeSuffix": "1225S01-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.audi.cl/a5/nuevo-a5/Lista-de-precios",
+        "commercialVersion": "New A5 TFSI",
+        "referencePriceClp": 55400000,
+        "priceType": "lista-vencida",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Lista de septiembre de 2026, caducada; no usar como precio de octubre"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-a5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Chery Tiggo 8 1.5T MT LIMITED",
+      "homologationDate": "2026-01-26",
+      "homologationCodeSuffix": "1025S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New SQ5 quattro",
+      "homologationDate": "2026-01-20",
+      "homologationCodeSuffix": "1225S00-6",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-sq5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New SQ5 Sportback quattro",
+      "homologationDate": "2026-01-20",
+      "homologationCodeSuffix": "1225S01-0",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-sq5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera Coupe 992.2",
+      "homologationDate": "2026-01-08",
+      "homologationCodeSuffix": "1225S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera Coupe 992.2 2 asientos",
+      "homologationDate": "2026-01-08",
+      "homologationCodeSuffix": "1225S01-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera Cabrio 992.2",
+      "homologationDate": "2026-01-08",
+      "homologationCodeSuffix": "1225S02-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Chery Tiggo 8 1.5T DCT Limited",
+      "homologationDate": "2026-01-07",
+      "homologationCodeSuffix": "1025S00-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-8",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Targa 4S 992.2",
+      "homologationDate": "2025-12-30",
+      "homologationCodeSuffix": "1225S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera 4S Coupe 992.2",
+      "homologationDate": "2025-12-30",
+      "homologationCodeSuffix": "1225S01-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera 4S Coupe 992.2 4 Asientos",
+      "homologationDate": "2025-12-30",
+      "homologationCodeSuffix": "1225S02-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera 4S Cabriolet 992.2",
+      "homologationDate": "2025-12-30",
+      "homologationCodeSuffix": "1225S03-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Omoda C5 1.5T HEV",
+      "homologationDate": "2025-12-29",
+      "homologationCodeSuffix": "0925S00-6",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM3 CARGOBOX",
+      "homologationDate": "2025-12-29",
+      "homologationCodeSuffix": "0825M00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM3 REFRIGERADO",
+      "homologationDate": "2025-12-29",
+      "homologationCodeSuffix": "0825M01-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM3 DCAB",
+      "homologationDate": "2025-12-29",
+      "homologationCodeSuffix": "0825M02-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM3 CS",
+      "homologationDate": "2025-12-29",
+      "homologationCodeSuffix": "0825M03-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Opel New Mokka Electric GS",
+      "homologationDate": "2025-12-26",
+      "homologationCodeSuffix": "1025S00-4",
+      "originalCategory": "expired-price-reference",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/opel-mokka/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 22890000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/new-mokka/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 21690000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/opel/nuevo/opel-mokka",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volkswagen Taos 1.5T AT",
+      "homologationDate": "2025-12-22",
+      "homologationCodeSuffix": "1125S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-taos",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Omoda C7 1.5T PHEV",
+      "homologationDate": "2025-12-22",
+      "homologationCodeSuffix": "0825S00-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/omoda/nuevo/omoda-c7",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Chery Tiggo 7 1.5 CVT LIMITED",
+      "homologationDate": "2025-12-19",
+      "homologationCodeSuffix": "1025S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/chery/nuevo/chery-tiggo-7",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New Q5 quattro",
+      "homologationDate": "2025-12-17",
+      "homologationCodeSuffix": "1125S00-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Audi New Q5 Sportback TFSI quattro",
+      "homologationDate": "2025-12-17",
+      "homologationCodeSuffix": "1125S01-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/audi/nuevo/audi-q5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volvo XC90 T8 AWD ARMOURED 5 Asientos",
+      "homologationDate": "2025-12-15",
+      "homologationCodeSuffix": "1225M03-6",
+      "originalCategory": "other-powertrain",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volvo/nuevo/volvo-xc90",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.4L AT MPI",
+      "homologationDate": "2025-12-11",
+      "homologationCodeSuffix": "0825S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 1.4L AT MPI",
+      "homologationDate": "2025-12-11",
+      "homologationCodeSuffix": "0825S01-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.4L AT MPI HB",
+      "homologationDate": "2025-12-11",
+      "homologationCodeSuffix": "0825S02-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.6L MT MPI",
+      "homologationDate": "2025-12-10",
+      "homologationCodeSuffix": "0825S00-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 1.6L MPI 6MT",
+      "homologationDate": "2025-12-10",
+      "homologationCodeSuffix": "0825S01-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.6L MT MPI HB",
+      "homologationDate": "2025-12-10",
+      "homologationCodeSuffix": "0825S02-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.4L MT MPI",
+      "homologationDate": "2025-12-10",
+      "homologationCodeSuffix": "0825S00-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 1.4L MT MPI",
+      "homologationDate": "2025-12-10",
+      "homologationCodeSuffix": "0825S01-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.4L MT MPI HB",
+      "homologationDate": "2025-12-10",
+      "homologationCodeSuffix": "0825S02-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche Macan GTS III",
+      "homologationDate": "2025-12-05",
+      "homologationCodeSuffix": "1025S00-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Geely Coolray 1.5 DCT",
+      "homologationDate": "2025-12-05",
+      "homologationCodeSuffix": "0725S00-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/new-coolray/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 15490000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/geely/nuevo/geely-new-coolray",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac GS4 MAX 1.5T AT GL",
+      "homologationDate": "2025-11-25",
+      "homologationCodeSuffix": "0825S00-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://gacmotor.cl/modelos/",
+        "commercialVersion": "GS4 Power precio desde",
+        "referencePriceClp": 14490000,
+        "priceType": "desde",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Valor desde sujeto a condiciones; no acredita GS4 MAX, motor ni precio lista"
+      },
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/gs4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Gac GS4 MAX 1.5T AT GB",
+      "homologationDate": "2025-11-25",
+      "homologationCodeSuffix": "0825S01-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://gacmotor.cl/modelos/",
+        "commercialVersion": "GS4 Power precio desde",
+        "referencePriceClp": 14490000,
+        "priceType": "desde",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Valor desde sujeto a condiciones; no acredita GS4 MAX, motor ni precio lista"
+      },
+      "dealers": [
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/gac/gs4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Nissan Sentra (B19) CVT",
+      "homologationDate": "2025-11-25",
+      "homologationCodeSuffix": "1025S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/nissan/nuevo/nissan-sentra",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/nissan/nuevo/nissan-sentra",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Mitsubishi Destinator AT GLS",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Mitsubishi Destinator AT GLX",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S01-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Mitsubishi Destinator AT GL",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S02-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mitsubishi/nuevo/mitsubishi-destinator",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera S Coupe 992.2",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S00-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera S Cabrio 992.2",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S01-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 GT3 Touring 992.2 MT 4 Asientos",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 GT3 Touring 992.2 MT",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S01-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 GT3 992.2 MT",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S02-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Targa 4 GTS 992.2",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera 4 GTS Cabrio 992.2",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S01-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera 4 GTS Coupe 992.2",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1025S02-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 GT3 Touring Chile Edition 992.2 MT",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "0926S01-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Honda WR-V EX",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1125S03-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-wr-v",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Honda WR-V Touring",
+      "homologationDate": "2025-11-21",
+      "homologationCodeSuffix": "1125S02-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/honda/nuevo/honda-wr-v",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0iD SE MHEV",
+      "homologationDate": "2025-11-19",
+      "homologationCodeSuffix": "0925M00-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0iD HSE MHEV",
+      "homologationDate": "2025-11-19",
+      "homologationCodeSuffix": "0925M01-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0iD Autobiography MHEV",
+      "homologationDate": "2025-11-19",
+      "homologationCodeSuffix": "0925M02-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.6L AT MPI",
+      "homologationDate": "2025-11-19",
+      "homologationCodeSuffix": "0725S00-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 1.6L MPI 6AT",
+      "homologationDate": "2025-11-19",
+      "homologationCodeSuffix": "0725S01-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia K3 Cross 1.6L AT MPI",
+      "homologationDate": "2025-11-19",
+      "homologationCodeSuffix": "0725S02-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": {
+        "url": "https://www.kia.cl/promociones/kia-k3-cross.html",
+        "commercialVersion": "K3 Cross LX 1.4L 6MT",
+        "referencePriceClp": 16990000,
+        "priceType": "lista-septiembre",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Precio lista de un 1.4 manual; documento con bonos de septiembre; no aplicar a 1.6"
+      },
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/k3/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 16990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-k3",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Morning 1.2L 5AMT",
+      "homologationDate": "2025-11-18",
+      "homologationCodeSuffix": "0825S00-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-morning",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/morning/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 10990000,
+          "taxIncluded": true
+        }
+      ]
+    },
+    {
+      "model": "Kia Morning 1.0 5MT",
+      "homologationDate": "2025-11-18",
+      "homologationCodeSuffix": "0925S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-morning",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/morning/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 10990000,
+          "taxIncluded": true
+        }
+      ]
+    },
+    {
+      "model": "Hyundai Grand-i10 AI3 1.2 SDN MT E6c",
+      "homologationDate": "2025-11-17",
+      "homologationCodeSuffix": "0825S00-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/sedan/new-grand-i10-sedan/precios-y-financiamiento/",
+        "commercialVersion": "Grand i10 AI3 Sedan 1.2 MT Plus FL",
+        "referencePriceClp": 12490000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de sedán manual, no necesariamente automático"
+      },
+      "dealers": []
+    },
+    {
+      "model": "Hyundai Grand-i10 AI3 1.2 HB MT E6c",
+      "homologationDate": "2025-11-17",
+      "homologationCodeSuffix": "0825S01-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.hyundai.cl/nuestros-modelos/hatchback-y-citycar/new-grand-i10-hatchback/precios-y-financiamiento/",
+        "commercialVersion": "Grand i10 HB 1.2 MT GO FL",
+        "referencePriceClp": 10690000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio de la versión MT, no necesariamente de la AT"
+      },
+      "dealers": []
+    },
+    {
+      "model": "MG MG ONE 1.5 CVT",
+      "homologationDate": "2025-11-17",
+      "homologationCodeSuffix": "0825S00-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/mg-one/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 17990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-mg-one",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/mg/nuevo/mg-mg-one",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "MG MG HS 1.5T MT",
+      "homologationDate": "2025-11-11",
+      "homologationCodeSuffix": "0825S00-2",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0i PHEV Autobiography",
+      "homologationDate": "2025-11-11",
+      "homologationCodeSuffix": "1025M00-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0i PHEV SE",
+      "homologationDate": "2025-11-11",
+      "homologationCodeSuffix": "1025M01-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 3.0i PHEV HSE",
+      "homologationDate": "2025-11-11",
+      "homologationCodeSuffix": "1025M02-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia CARENS LX 1.5 6MT 7P",
+      "homologationDate": "2025-11-11",
+      "homologationCodeSuffix": "0625S00-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/carens/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 20990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-carens",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/nueva-carens/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 23990000,
+          "taxIncluded": true
+        }
+      ]
+    },
+    {
+      "model": "Kia CARENS LX 1.5 6MT 6P",
+      "homologationDate": "2025-11-11",
+      "homologationCodeSuffix": "0625S01-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/carens/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 20990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-carens",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/nueva-carens/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 23990000,
+          "taxIncluded": true
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera T 992.2 MT",
+      "homologationDate": "2025-11-10",
+      "homologationCodeSuffix": "1025S00-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche 911 Carrera T Cabrio 992.2 MT",
+      "homologationDate": "2025-11-10",
+      "homologationCodeSuffix": "1025S01-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-911",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Soluto 1.4L 5MT",
+      "homologationDate": "2025-11-07",
+      "homologationCodeSuffix": "0925S00-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/soluto/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 10990000,
+          "taxIncluded": true
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-soluto",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Fiat Pulse Drive 1.3 MT5 BZ",
+      "homologationDate": "2025-11-07",
+      "homologationCodeSuffix": "0825S00-8",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/fiat/nuevo/fiat-pulse",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Kia Morning 1.2 EX 5MT",
+      "homologationDate": "2025-11-06",
+      "homologationCodeSuffix": "0725S00-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kia/nuevo/kia-morning",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Pompeyo Carrasco",
+          "url": "https://www.pompeyo.cl/producto/morning/",
+          "observedAt": "2026-10-21",
+          "listPriceClp": 10990000,
+          "taxIncluded": true
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso L GLX 2.2 TD 6MT 4WD",
+      "homologationDate": "2025-11-05",
+      "homologationCodeSuffix": "0625M00-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso L GLX 2.2 TD 6MT 4WD",
+      "homologationDate": "2025-11-05",
+      "homologationCodeSuffix": "0625M01-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "KGM Musso L GLX 2.2 TD 6MT 4WD",
+      "homologationDate": "2025-11-05",
+      "homologationCodeSuffix": "0625M02-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/kgm/nuevo/kgm-new-musso",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "RAM 700 Bighorn CD CVT 1.3 8V Bz",
+      "homologationDate": "2025-11-05",
+      "homologationCodeSuffix": "0825S00-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/ram/nuevo/ram-700",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/ram/nuevo/ram-700",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 4.4 Autobiography MHEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "1025M00-K",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 4.4 SE MHEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "1025M01-4",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 4.4 HSE MHEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "1025M02-9",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Land Rover Range Rover 4.4 SV MHEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "1025M03-3",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/land-rover/nuevo/land-rover-range-rover",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Toyota BZ4X BEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "0925S00-8",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://toyota.cl/terminos-y-condiciones-comerciales-por-modelo/",
+        "commercialVersion": "BZ4X BEV 4x2",
+        "referencePriceClp": 43490000,
+        "priceType": "lista-vencida",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Valor publicado con financiamiento y vigencia finalizada el 30 de septiembre de 2026"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/toyota/nuevo/toyota-bz4x",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Toyota BZ4X AWD BEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "0925S00-6",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://toyota.cl/terminos-y-condiciones-comerciales-por-modelo/",
+        "commercialVersion": "BZ4X BEV AWD",
+        "referencePriceClp": 48490000,
+        "priceType": "lista-vencida",
+        "observedAt": "2026-10-22",
+        "samePowertrain": false,
+        "note": "Referencia de septiembre con financiamiento, no precio actual"
+      },
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/toyota/nuevo/toyota-bz4x",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Porsche Macan S III",
+      "homologationDate": "2025-10-29",
+      "homologationCodeSuffix": "0925S00-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/porsche/nuevo/porsche-macan",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volkswagen Amarok PA2 V6",
+      "homologationDate": "2025-10-29",
+      "homologationCodeSuffix": "0825M00-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.volkswagen.cl/amarok/amarok",
+        "commercialVersion": "Amarok 3.0 V6 AT Comfortline",
+        "referencePriceClp": 44490000,
+        "priceType": "lista+IVA",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio antes de IVA de la versión Comfortline; condiciones publicadas para octubre de 2026"
+      },
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-amarok",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM5 CARGOBOX",
+      "homologationDate": "2025-10-29",
+      "homologationCodeSuffix": "0825M00-7",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM5 REFRIGERADO",
+      "homologationDate": "2025-10-29",
+      "homologationCodeSuffix": "0825M01-1",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM5 DCAB",
+      "homologationDate": "2025-10-29",
+      "homologationCodeSuffix": "0825M02-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Foton TM5 CS",
+      "homologationDate": "2025-10-29",
+      "homologationCodeSuffix": "0825M03-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/foton/nuevo/foton-tm5",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volkswagen Polo 1.6 MPI",
+      "homologationDate": "2025-10-28",
+      "homologationCodeSuffix": "0525S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-polo",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Volkswagen Polo Track 1.6 MT",
+      "homologationDate": "2025-10-28",
+      "homologationCodeSuffix": "0525S01-5",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/volkswagen/nuevo/volkswagen-polo",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "MG MG HS 1.5T DCT",
+      "homologationDate": "2025-10-28",
+      "homologationCodeSuffix": "0925S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/mg/nuevo/mg-new-hs",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "BMW 320i Berlina",
+      "homologationDate": "2025-10-27",
+      "homologationCodeSuffix": "0625S02-K",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/modelos/serie-3",
+        "commercialVersion": "320i Berlina Urban LCI II",
+        "referencePriceClp": 47900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "BMW 320i Sedan",
+      "homologationDate": "2025-10-27",
+      "homologationCodeSuffix": "0625S03-4",
+      "originalCategory": "unmatched-catalog",
+      "reference": {
+        "url": "https://www.bmw.cl/modelos/serie-3",
+        "commercialVersion": "320i Berlina Urban LCI II",
+        "referencePriceClp": 47900000,
+        "priceType": "lista",
+        "observedAt": "2026-10-22",
+        "samePowertrain": true,
+        "note": "Precio publicado de la versión comercial mencionada; no acredita correspondencia exacta del código 3CV."
+      },
+      "dealers": []
+    },
+    {
+      "model": "Fiat Pulse Drive 1.3 CVT BZ",
+      "homologationDate": "2025-10-23",
+      "homologationCodeSuffix": "0825S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Salazar Israel",
+          "url": "https://www.salazarisrael.cl/marcas/fiat/nuevo/fiat-pulse",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/fiat/nuevo/fiat-pulse",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Hyundai Tucson NX4c 2.0 MPI 6AT 2WD E6c",
+      "homologationDate": "2025-10-23",
+      "homologationCodeSuffix": "0825S00-6",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/hyundai/nuevo/hyundai-tucson",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/hyundai/the-new-tucson",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    },
+    {
+      "model": "Jac JS4 1.5T MPI CVT 5P E6c",
+      "homologationDate": "2025-10-22",
+      "homologationCodeSuffix": "0925S00-0",
+      "originalCategory": "family-price-undocumented-tech",
+      "reference": null,
+      "dealers": [
+        {
+          "seller": "Portillo",
+          "url": "https://www.portillo.cl/marcas/jac/nuevo/jac-js4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        },
+        {
+          "seller": "Gildemeister Retail",
+          "url": "https://www.gildemeisterretail.cl/marcas/jac/jac-js4",
+          "observedAt": "2026-10-21",
+          "listPriceClp": null,
+          "taxIncluded": null
+        }
+      ]
+    }
+  ]
+}
