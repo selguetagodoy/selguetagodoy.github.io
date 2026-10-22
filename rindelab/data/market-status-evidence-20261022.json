@@ -116,62 +116,68 @@
     {
       "id": "mazda-cx5-25awd",
       "model": "Mazda CX-5 2.5 AWD",
-      "kind": "market-price-unmatched",
-      "launchWindow": "Venta o preventa publicada en Chile",
-      "note": "Mazda ofrece el All New CX-5 2.5 AWD con precios por acabado; falta conciliar esta ficha 3CV con un acabado exacto.",
+      "kind": "market-priced",
+      "launchWindow": "Lista Mazda Chile, octubre de 2026",
+      "note": "All New CX-5 2.5 AWD: Core $27.790.000; High $30.290.000; High Plus $31.190.000; Premium $33.590.000; Signature/Signature Tan $34.990.000. Acabado 3CV por identificar; generación anterior separada.",
       "sourceUrl": "https://www.mazda.cl/vehiculo/all-new-mazda-cx-5/",
       "sourceDate": "2026-10-22",
-      "verifiedAt": "2026-10-22"
+      "verifiedAt": "2026-10-22",
+      "homologationDate": "2026-10-13"
     },
     {
       "id": "renault-boreal",
       "model": "Renault Boreal",
-      "kind": "market-price-unmatched",
-      "launchWindow": "Preventa publicada en Chile desde el 21 de octubre de 2026",
-      "note": "Existen precios por versiones Evolution, Techno e Iconic, pero la ficha 3CV aún no se ha vinculado a una de ellas.",
-      "sourceUrl": "https://publimicro.cl/renault-boreal-llega-a-chile-desde-24-990-000-nuevo-suv-ofrece-motor-turbo-y-tres-versiones/",
+      "kind": "market-priced",
+      "launchWindow": "Preventa chilena del 21 de octubre de 2026",
+      "note": "Evolution $24.990.000; Techno $26.990.000; Iconic $29.990.000 sin financiamiento; información de Rutamotor. El 3CV no especifica acabado.",
+      "sourceUrl": "https://www.rutamotor.com/noticias/el-renault-boreal-arranca-su-aventura-en-chile-con-una-especial-preventa/",
       "sourceDate": "2026-10-21",
-      "verifiedAt": "2026-10-22"
+      "verifiedAt": "2026-10-22",
+      "homologationDate": "2026-03-27"
     },
     {
       "id": "toyota-hilux-bev",
       "model": "Toyota Hilux BEV",
-      "kind": "market-price-unmatched",
-      "launchWindow": "Oferta publicada en Chile",
-      "note": "Toyota Chile ofrece Hilux BEV; el precio de la versión homologada debe reconciliarse sin asignación automática.",
-      "sourceUrl": "https://toyota.cl/modelos/pickup/",
+      "kind": "market-priced",
+      "launchWindow": "Precio publicado por Toyota Chile",
+      "note": "Hilux 4x4 BEV $68.990.000 con IVA. El sitio de términos comerciales mantiene vigencia anterior a octubre; confirmar condiciones con la marca.",
+      "sourceUrl": "https://toyota.cl/terminos-y-condiciones-comerciales-por-modelo/",
       "sourceDate": "2026-10-22",
-      "verifiedAt": "2026-10-22"
+      "verifiedAt": "2026-10-22",
+      "homologationDate": "2026-04-10"
     },
     {
       "id": "cupra-tavascan",
       "model": "Cupra Tavascan 82 kWh 286 CV RWD",
-      "kind": "market-price-unmatched",
-      "launchWindow": "Precio publicado en Chile (septiembre de 2026)",
-      "note": "Hay precios de lista de Tavascan por versión comercial; aún no se acredita correspondencia exacta con esta ficha homologada.",
-      "sourceUrl": "https://cupra.mjh.cl/lista-de-precio/",
-      "sourceDate": "2026-09-01",
-      "verifiedAt": "2026-10-22"
+      "kind": "market-priced",
+      "launchWindow": "Lista oficial CUPRA, octubre de 2026",
+      "note": "Adrenaline 82 kWh 286 hp: $50.990.000; Extreme 82 kWh 286 hp: $53.990.000; precios lista con IVA, sin bonos. La ficha 3CV no define acabado.",
+      "sourceUrl": "https://www.cupraofficial.cl/quiero-un-cupra/lista-de-precios-1",
+      "sourceDate": "2026-10-01",
+      "verifiedAt": "2026-10-22",
+      "homologationDate": "2026-07-08"
     },
     {
       "id": "byd-atto8",
       "model": "BYD BYD ATTO 8 DM-i",
-      "kind": "market-price-unmatched",
-      "launchWindow": "Venta y precios publicados en Chile",
-      "note": "BYD publicó condiciones y precios por versiones DM-i GL y DM-p GS. La homologación no identifica automáticamente el acabado comercial.",
+      "kind": "market-priced",
+      "launchWindow": "Precios oficiales BYD, octubre de 2026",
+      "note": "Atto 8 DM-i GL: precio lista $44.990.000 y con financiamiento $43.990.000. No equivale a DM-p.",
       "sourceUrl": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
       "sourceDate": "2026-10-22",
-      "verifiedAt": "2026-10-22"
+      "verifiedAt": "2026-10-22",
+      "homologationDate": "2026-01-23"
     },
     {
       "id": "byd-atto8",
       "model": "BYD BYD ATTO 8 DM-p",
-      "kind": "market-price-unmatched",
-      "launchWindow": "Venta y precios publicados en Chile",
-      "note": "BYD publicó condiciones y precios por versiones DM-i GL y DM-p GS. La homologación no identifica automáticamente el acabado comercial.",
+      "kind": "market-priced",
+      "launchWindow": "Precios oficiales BYD, octubre de 2026",
+      "note": "Atto 8 DM-p GS: precio lista $49.990.000 y con financiamiento $48.990.000. No equivale a DM-i.",
       "sourceUrl": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
       "sourceDate": "2026-10-22",
-      "verifiedAt": "2026-10-22"
+      "verifiedAt": "2026-10-22",
+      "homologationDate": "2026-01-07"
     }
   ]
 }

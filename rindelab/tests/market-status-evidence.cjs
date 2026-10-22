@@ -5,7 +5,7 @@ const evidence=JSON.parse(fs.readFileSync(path.join(root,'data','market-status-e
 assert.equal(evidence.schemaVersion,1);
 assert.equal(evidence.records.length,17);
 assert.equal(evidence.records.filter(x=>x.kind==='upcoming').length,11);
-assert.equal(evidence.records.filter(x=>x.kind==='market-price-unmatched').length,6);
+assert.equal(evidence.records.filter(x=>x.kind==='market-priced').length,6);
 assert.equal(new Set(evidence.records.map(x=>x.model.toUpperCase())).size,17);
 for(const r of evidence.records){
  assert.match(r.sourceUrl,/^https:\/\//);
@@ -37,14 +37,25 @@ for(const r of evidence.records){
   await query('Volvo EX60');
   assert.equal(await count(),3);
   assert.match(await page.locator('.vehicle-card').first().innerText(),/Inscripción de interés/);
-  await page.selectOption('#catalogScope','market-price-unmatched');
+  await page.selectOption('#catalogScope','market-priced');
   await query('');
-  assert.equal(await count(),6,'Ofertas comerciales pendientes de conciliación: total incorrecto');
+  assert.equal(await count(),6,'Seis fichas con precios comerciales publicados');
   await query('Mazda CX-5');
   assert.equal(await count(),1);
-  assert.match(await page.locator('.vehicle-card').first().innerText(),/falta conciliar/i);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/27\.790\.000/);
   await query('BYD ATTO 8');
   assert.equal(await count(),2);
+  const byr=await page.locator('.vehicle-card').allInnerTexts();
+  assert(byr.some(s=>s.includes('44.990.000'))&&byr.some(s=>s.includes('49.990.000')),'No mezclar BYD DM-i y DM-p');
+  await query('Toyota Hilux BEV');
+  assert.equal(await count(),1);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/68\.990\.000/);
+  await query('Renault Boreal');
+  assert.equal(await count(),1);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/24\.990\.000/);
+  await query('Cupra Tavascan');
+  assert.equal(await count(),1);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/50\.990\.000/);
   await page.selectOption('#catalogScope','recent-no-price');
   await query('');
   assert.equal(await count(),572,'589 - (11+6) debe ser 572');
@@ -57,6 +68,6 @@ for(const r of evidence.records){
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.deepEqual(failures,[],'Errores de JavaScript');
-  console.log('PASS mercado Chile: 11 fichas anunciadas, 6 en oferta pendientes de conciliación, 572 sin anuncio/precio, Mokka sin dato ajeno; 17 fuentes verificables');
+  console.log('PASS mercado Chile: 11 anunciadas, 6 con precios publicados (Mazda, Renault, Toyota, Cupra, BYD), 572 sin precio/anuncio; 1514 referencias; Mokka protegido');
  } finally {await browser.close();}
 })().catch(error=>{console.error(error.stack);process.exit(1)});
