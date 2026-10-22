@@ -3,9 +3,11 @@
 const {strict:assert}=require('node:assert');
 const data=require('../sii/data/used-market-20261021.json');
 const life=require('../sii/model-lifecycle-2026.json');
+const manifest=require('../sii/data/used-market-merge-46-20261021.json');
 const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 assert.equal(data.schemaVersion,1);
-assert(data.records.length>=178,'Catalog observation count dropped');
+assert(data.records.length>=224,'Catalog observation count dropped');
+assert.equal(manifest.records.length,46,'Cross-branch source audit is incomplete');
 const rows=data.records,unique=new Set();const bySource={};
 for(const r of rows){
  const key=r.source+'|'+r.brandSlug+'|'+r.modelSlug+'|'+r.year;
@@ -15,7 +17,7 @@ for(const r of rows){
  assert.equal(r.observedAt,data.observedAt);
  const u=new URL(r.sourceUrl);
  assert.equal(u.protocol,'https:');
- assert(u.pathname.endsWith('/'+r.brandSlug+'/'+r.modelSlug+'/'+r.year));
+ assert.equal(u.pathname,(r.source==='Autofact'?'/valor-comercial-autos/':'/precios/')+r.brandSlug+'/'+r.modelSlug+'/'+r.year,'Malformed source URL');
  if(r.source==='AutoExplora'){
   assert.equal(u.hostname,'www.autoexplora.cl');
   assert(Number.isInteger(r.sampleSize)&&r.sampleSize>=5);
@@ -31,11 +33,17 @@ for(const r of rows){
  bySource[r.source]=(bySource[r.source]||0)+1;
 }
 assert(bySource.AutoExplora>=20);
-assert(bySource.Autofact>=150);
+assert(bySource.Autofact>=204);
+for(const item of manifest.records){
+ const exact=rows.find(x=>x.source===item.source&&x.brandSlug===item.brandSlug&&x.modelSlug===item.modelSlug&&x.year===item.year);
+ assert(exact,'Missing verified new reference '+item.sourceUrl);
+ assert.deepEqual(exact,item,'Price or provenance altered after verification');
+}
 const archived=new Set(life.models.filter(x=>x.match==='whole-family'&&x.status==='discontinued-cl').map(x=>norm(x.brand)+'|'+norm(x.model)));
 const retired=rows.filter(x=>archived.has(norm(x.brandSlug)+'|'+norm(x.modelSlug)));
 assert(retired.length>=110);
 assert(rows.some(x=>x.brandSlug==='ford'&&x.modelSlug==='focus'&&x.year===2017&&x.source==='Autofact'));
+assert(rows.some(x=>x.brandSlug==='volvo'&&x.modelSlug==='s80'&&x.year===2014&&x.lowClp===13844675&&x.highClp===17372650));
 assert(rows.some(x=>x.brandSlug==='toyota'&&x.modelSlug==='yaris'&&x.year===2022&&x.source==='AutoExplora'));
 const families=new Set(rows.map(x=>x.brandSlug+'|'+x.modelSlug));
 const years=new Set(rows.map(x=>x.brandSlug+'|'+x.modelSlug+'|'+x.year));
