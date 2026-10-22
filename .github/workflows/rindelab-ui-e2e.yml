@@ -162,6 +162,7 @@ jobs:
           node rindelab/tests/market-price-thirdpass.cjs
           node rindelab/tests/market-price-final-review.cjs
           node rindelab/tests/market-price-fifthpass.cjs
+          node rindelab/tests/market-price-sixthpass.cjs
 
       - name: Verify announced launches, local offers and recent homologations
         run: node rindelab/tests/market-status-evidence.cjs
