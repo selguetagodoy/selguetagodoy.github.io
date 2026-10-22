@@ -2,7 +2,7 @@
  * Los precios son avisos o rangos de terceros observados en su fecha documental,
  * NO transacciones cerradas ni tasaciones tributarias SII. */
 (()=>{'use strict';
-const DATA='./sii/data/used-market-20261021.json';
+const DATA='./sii/data/used-market-20261021.json?v=20261021-union224';
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' y ').replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
 const key=(b,m)=>norm(b)+'|'+norm(m);
 const clp=n=>Number.isFinite(n)?'$'+n.toLocaleString('es-CL'):'N/D';
@@ -77,7 +77,7 @@ function renderBody(box,b,m,year){
   if(!valid){const note=document.createElement('p');note.className='sii-small';note.textContent='Valores disponibles para los años indicados; selecciona el año real de fabricación para utilizarlo en el comparador.';box.append(note);}
  }
  const links=document.createElement('p');links.className='sii-links';
- links.innerHTML='<a href="https://www.autoexplora.cl/precios" target="_blank" rel="noopener noreferrer">Ver referencias actualizadas en AutoExplora ↗</a> · <a href="https://www.autofact.cl/valor-comercial-autos.href" target="_blank" rel="noopener noreferrer">Consultar otro modelo en Autofact ↗</a>';
+ links.innerHTML='<a href="https://www.autoexplora.cl/precios" target="_blank" rel="noopener noreferrer">Ver referencias actualizadas en AutoExplora ↗</a> · <a href="https://www.autofact.cl/valor-comercial-autos" target="_blank" rel="noopener noreferrer">Consultar otro modelo en Autofact ↗</a>';
  box.append(links);
 }
 function mount(section,b,m){
