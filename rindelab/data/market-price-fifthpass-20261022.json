@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "cutoff": "fifth-pass",
+  "methodology": "Revisión de listados oficiales Maxus GAC Citroën Foton Audi y catálogo nacional Autocosmos KYC; precios de otras versiones documentadas por identidad de familia / especificaciones técnicas. La promoción vencida nunca se considera precio corriente. No se asigna ninguna referencia a homologación 3CV exacta.",
+  "baselinePending": 227,
+  "newFamilyReferences": 21,
+  "pendingAfter": 206,
+  "withFamilyReferences": 366,
+  "categoryCountsPending": {
+    "unmatched-catalog": 189,
+    "expired-price-reference": 14,
+    "other-powertrain": 3
+  },
+  "records": [
+    {
+      "brand": "Gac",
+      "model": "Gac GS4 MAX (GB) 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0726S01-5",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "GS4 MAX GL 1.5 AT 2WD",
+        "priceListClp": 17990000,
+        "sourceUrl": "https://www.gacautos.cl/terminos-y-condiciones/",
+        "priceKind": "lista",
+        "matchedLevel": "familia-motor-caja-acabado-solo-GL",
+        "notes": "Fabricante publica GL 1.5T 7DCT 2WD, no variante GB. Si la homologación indica GB, este valor solo documenta la familia, no es precio de versión GB. Los $15.490.000 son con financiamiento; $17.990.000 corresponde a lista. Condiciones hasta 31 octubre.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Gac",
+      "model": "Gac GS4 MAX (GL) 1.5T GDI 7DCT E6c",
+      "homologationDate": "2026-09-07",
+      "homologationCodeSuffix": "0726S00-0",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "GS4 MAX GL 1.5 AT 2WD",
+        "priceListClp": 17990000,
+        "sourceUrl": "https://www.gacautos.cl/terminos-y-condiciones/",
+        "priceKind": "lista",
+        "matchedLevel": "familia-motor-caja-acabado-solo-GL",
+        "notes": "Fabricante publica GL 1.5T 7DCT 2WD, no variante GB. Si la homologación indica GB, este valor solo documenta la familia, no es precio de versión GB. Los $15.490.000 son con financiamiento; $17.990.000 corresponde a lista. Condiciones hasta 31 octubre.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Foton",
+      "model": "Foton Miler 314 2.0 MT CS",
+      "homologationDate": "2026-08-03",
+      "homologationCodeSuffix": "0626M00-6",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Foton Miler 314 cabina simple chasis",
+        "priceListClp": 11490000,
+        "sourceUrl": "https://foton.cl/w/foton-miler-nuevo-camion-clase-b-que-eleva-el-estandar-del-segmento",
+        "priceKind": "precio-lanzamiento-historico",
+        "matchedLevel": "familia-motor-chasis-por-verificar",
+        "notes": "Precio lanzamiento con bono de marca y financiamiento, publicado por importador; sin vigencia octubre acreditada. No usar como precio lista actual ni asociar acabado exacto al código 3CV.",
+        "validUntil": null,
+        "taxTreatment": "+ IVA"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Maxus",
+      "model": "Maxus T70 4x2 6MT",
+      "homologationDate": "2026-07-09",
+      "homologationCodeSuffix": "0526M01-3",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Maxus T70 GL 4x2 6MT E6",
+        "priceListClp": 19990000,
+        "sourceUrl": "https://maxus.cl/w/t70",
+        "priceKind": "lista",
+        "matchedLevel": "motor-traccion-caja",
+        "notes": "Lista oficial de motorización diésel 2.5 según tracción y transmisión; prefijo T70 MAX no prueba acabado GL. El precio de lista no incluye IVA.",
+        "validUntil": null,
+        "taxTreatment": "+ IVA"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Maxus",
+      "model": "Maxus T70 4x4 6MT",
+      "homologationDate": "2026-07-09",
+      "homologationCodeSuffix": "0526M00-9",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Maxus T70 GL 4x4 6MT E6",
+        "priceListClp": 21490000,
+        "sourceUrl": "https://maxus.cl/w/t70",
+        "priceKind": "lista",
+        "matchedLevel": "motor-traccion-caja",
+        "notes": "Lista oficial de motorización diésel 2.5 según tracción y transmisión; prefijo T70 MAX no prueba acabado GL. El precio de lista no incluye IVA.",
+        "validUntil": null,
+        "taxTreatment": "+ IVA"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Maxus",
+      "model": "Maxus T70 MAX 4x2 8AT",
+      "homologationDate": "2026-07-09",
+      "homologationCodeSuffix": "0526M01-K",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Maxus T70 GL 4x2 8AT E6",
+        "priceListClp": 20990000,
+        "sourceUrl": "https://maxus.cl/w/t70",
+        "priceKind": "lista",
+        "matchedLevel": "motor-traccion-caja",
+        "notes": "Lista oficial de motorización diésel 2.5 según tracción y transmisión; prefijo T70 MAX no prueba acabado GL. El precio de lista no incluye IVA.",
+        "validUntil": null,
+        "taxTreatment": "+ IVA"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Maxus",
+      "model": "Maxus T70 4x4 8AT",
+      "homologationDate": "2026-07-09",
+      "homologationCodeSuffix": "0526M00-5",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Maxus T70 GLX 4x4 8AT E6",
+        "priceListClp": 24990000,
+        "sourceUrl": "https://maxus.cl/w/t70",
+        "priceKind": "lista",
+        "matchedLevel": "motor-traccion-caja",
+        "notes": "Lista oficial de motorización diésel 2.5 según tracción y transmisión; prefijo T70 MAX no prueba acabado GL. El precio de lista no incluye IVA.",
+        "validUntil": null,
+        "taxTreatment": "+ IVA"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Gac",
+      "model": "Gac Aion UT EV AT 2WD (44 Kwh)",
+      "homologationDate": "2026-07-07",
+      "homologationCodeSuffix": "0626S00-7",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "Aion UT Basic 44,12 kWh 2WD",
+        "priceListClp": 20990000,
+        "sourceUrl": "https://www.gacautos.cl/modelos/electricos/gac-aion-ut/",
+        "priceKind": "lista",
+        "matchedLevel": "bateria-traccion-sin-acabado-3cv",
+        "notes": "La marca solo publica Basic 44,12 kWh a $20.990.000 lista; $18.990.000 es promocional con financiamiento. No asignar a la versión 60 kWh. Oferta hasta 31 octubre 2026.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Citroen",
+      "model": "Citroen Aircross 1.3 MT Feel P",
+      "homologationDate": "2026-05-26",
+      "homologationCodeSuffix": "0326S01-5",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "C3 Aircross Feel Pack 5P gasolina 96HP MT",
+        "priceListClp": 16190000,
+        "sourceUrl": "https://www.citroen.cl/modelos/pasajeros/c3-aircross/configura.html",
+        "priceKind": "lista",
+        "matchedLevel": "motor-1.3-manual-carroceria-con-nombre-diferente",
+        "notes": "Fuente comercial identifica motor 1.3 y caja manual, pero la homologación usa Aircross sin prefijo C3 y acabados no idénticos (Feel P vs Feel Pack). Precio de lista no certifica código 3CV; promoción octubre con condiciones.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Citroen",
+      "model": "Citroen Aircross 1.3 MT Shine",
+      "homologationDate": "2026-05-26",
+      "homologationCodeSuffix": "0326S00-0",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "C3 Aircross Shine 5P gasolina 96HP MT",
+        "priceListClp": 16790000,
+        "sourceUrl": "https://gaut.cl/marcas/citroen/c3aircross",
+        "priceKind": "lista",
+        "matchedLevel": "motor-1.3-manual-carroceria-con-nombre-diferente",
+        "notes": "Fuente comercial identifica motor 1.3 y caja manual, pero la homologación usa Aircross sin prefijo C3 y acabados no idénticos (Feel P vs Feel Pack). Precio de lista no certifica código 3CV; promoción octubre con condiciones.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Audi",
+      "model": "Audi New S5 quattro",
+      "homologationDate": "2026-01-29",
+      "homologationCodeSuffix": "1225S00-3",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "New S5 TFSI quattro",
+        "priceListClp": 80400000,
+        "sourceUrl": "https://www.audi.cl/a5/nuevo-s5/Lista-de-precios",
+        "priceKind": "lista-septiembre-vencida",
+        "matchedLevel": "misma-familia-carroceria-revisar",
+        "notes": "El fabricante publicó esta lista y promoción para septiembre 2026, con vigencia terminada 30-09. Se conserva como precio histórico no vigente. No transferir a Avant ni a código 3CV sin equipamiento verificado.",
+        "validUntil": "2026-09-30",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Audi",
+      "model": "Audi New A5",
+      "homologationDate": "2026-01-29",
+      "homologationCodeSuffix": "1225S00-7",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "New A5 TFSI",
+        "priceListClp": 55400000,
+        "sourceUrl": "https://www.audi.cl/asesoramiento-y-compra/bases-promocionales",
+        "priceKind": "lista-septiembre-vencida",
+        "matchedLevel": "misma-familia-paquete-por-verificar",
+        "notes": "El fabricante publicó esta lista y promoción para septiembre 2026, con vigencia terminada 30-09. Se conserva como precio histórico no vigente. No transferir a Avant ni a código 3CV sin equipamiento verificado.",
+        "validUntil": "2026-09-30",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Audi",
+      "model": "Audi New A5 quattro",
+      "homologationDate": "2026-01-28",
+      "homologationCodeSuffix": "1225S00-K",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "New A5 TFSI quattro S line",
+        "priceListClp": 61400000,
+        "sourceUrl": "https://www.audi.cl/asesoramiento-y-compra/bases-promocionales",
+        "priceKind": "lista-septiembre-vencida",
+        "matchedLevel": "misma-familia-paquete-por-verificar",
+        "notes": "El fabricante publicó esta lista y promoción para septiembre 2026, con vigencia terminada 30-09. Se conserva como precio histórico no vigente. No transferir a Avant ni a código 3CV sin equipamiento verificado.",
+        "validUntil": "2026-09-30",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Kyc",
+      "model": "KYC Gran Mamut X5 Plus CS",
+      "homologationDate": "2025-12-02",
+      "homologationCodeSuffix": "0825M00-K",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "KYC X5 Plus 1.8L Cabina Simple",
+        "priceListClp": 14637000,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/segmentos/kyc?o=8019",
+        "priceKind": "listado-portal-sin-vigencia",
+        "matchedLevel": "familia-comercial-carroceria-sin-motor-homologado",
+        "notes": "Autocosmos Chile publica esta carrocería en catálogo de nuevos, sin acreditar la correspondencia de motor ni el año de cada homologación Gran Mamut X5. No es precio de la ficha 3CV; revisar en distribuidor Tattersall.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Kyc",
+      "model": "KYC Gran Mamut X5 Plus DC",
+      "homologationDate": "2025-12-02",
+      "homologationCodeSuffix": "0825M01-4",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "KYC X5 Plus 1.8L Doble Cabina",
+        "priceListClp": 15053100,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/segmentos/kyc?o=8019",
+        "priceKind": "listado-portal-sin-vigencia",
+        "matchedLevel": "familia-comercial-carroceria-sin-motor-homologado",
+        "notes": "Autocosmos Chile publica esta carrocería en catálogo de nuevos, sin acreditar la correspondencia de motor ni el año de cada homologación Gran Mamut X5. No es precio de la ficha 3CV; revisar en distribuidor Tattersall.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Kyc",
+      "model": "KYC Gran Mamut X5 Plus Cargo Box",
+      "homologationDate": "2025-12-02",
+      "homologationCodeSuffix": "0825M02-9",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "KYC X5 Plus 1.8L Cargo Box",
+        "priceListClp": 12673100,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/segmentos/kyc?o=8019",
+        "priceKind": "listado-portal-sin-vigencia",
+        "matchedLevel": "familia-comercial-carroceria-sin-motor-homologado",
+        "notes": "Autocosmos Chile publica esta carrocería en catálogo de nuevos, sin acreditar la correspondencia de motor ni el año de cada homologación Gran Mamut X5. No es precio de la ficha 3CV; revisar en distribuidor Tattersall.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Gac",
+      "model": "Gac GS4 MAX 1.5T AT GL",
+      "homologationDate": "2025-11-25",
+      "homologationCodeSuffix": "0825S00-K",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "GS4 MAX GL 1.5 AT 2WD",
+        "priceListClp": 17990000,
+        "sourceUrl": "https://www.gacautos.cl/terminos-y-condiciones/",
+        "priceKind": "lista",
+        "matchedLevel": "familia-motor-caja-acabado-solo-GL",
+        "notes": "Fabricante publica GL 1.5T 7DCT 2WD, no variante GB. Si la homologación indica GB, este valor solo documenta la familia, no es precio de versión GB. Los $15.490.000 son con financiamiento; $17.990.000 corresponde a lista. Condiciones hasta 31 octubre.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Gac",
+      "model": "Gac GS4 MAX 1.5T AT GB",
+      "homologationDate": "2025-11-25",
+      "homologationCodeSuffix": "0825S01-4",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "GS4 MAX GL 1.5 AT 2WD",
+        "priceListClp": 17990000,
+        "sourceUrl": "https://www.gacautos.cl/terminos-y-condiciones/",
+        "priceKind": "lista",
+        "matchedLevel": "familia-motor-caja-acabado-solo-GL",
+        "notes": "Fabricante publica GL 1.5T 7DCT 2WD, no variante GB. Si la homologación indica GB, este valor solo documenta la familia, no es precio de versión GB. Los $15.490.000 son con financiamiento; $17.990.000 corresponde a lista. Condiciones hasta 31 octubre.",
+        "validUntil": "2026-10-31",
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Kyc",
+      "model": "KYC Gran Mamut X5 CS",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "0825M00-6",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "KYC X5 1.5/1.6L Cabina Simple",
+        "priceListClp": 9865100,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/segmentos/kyc?o=8019",
+        "priceKind": "listado-portal-sin-vigencia",
+        "matchedLevel": "familia-comercial-carroceria-sin-motor-homologado",
+        "notes": "Autocosmos Chile publica esta carrocería en catálogo de nuevos, sin acreditar la correspondencia de motor ni el año de cada homologación Gran Mamut X5. No es precio de la ficha 3CV; revisar en distribuidor Tattersall.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Kyc",
+      "model": "KYC Gran Mamut X5 DC",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "0825M01-0",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "KYC X5 1.5/1.6L Doble Cabina",
+        "priceListClp": 10090000,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/segmentos/kyc?o=8019",
+        "priceKind": "listado-portal-sin-vigencia",
+        "matchedLevel": "familia-comercial-carroceria-sin-motor-homologado",
+        "notes": "Autocosmos Chile publica esta carrocería en catálogo de nuevos, sin acreditar la correspondencia de motor ni el año de cada homologación Gran Mamut X5. No es precio de la ficha 3CV; revisar en distribuidor Tattersall.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    },
+    {
+      "brand": "Kyc",
+      "model": "KYC Gran Mamut X5 Cargo Box",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "0825M02-5",
+      "priorCategory": "unmatched-catalog",
+      "reference": {
+        "commercialVersion": "KYC X5 1.5/1.6L Cargo Box",
+        "priceListClp": 15934100,
+        "sourceUrl": "https://www.autocosmos.cl/catalogo/segmentos/kyc?o=8019",
+        "priceKind": "listado-portal-sin-vigencia",
+        "matchedLevel": "familia-comercial-carroceria-sin-motor-homologado",
+        "notes": "Autocosmos Chile publica esta carrocería en catálogo de nuevos, sin acreditar la correspondencia de motor ni el año de cada homologación Gran Mamut X5. No es precio de la ficha 3CV; revisar en distribuidor Tattersall.",
+        "validUntil": null,
+        "taxTreatment": "IVA incluido"
+      },
+      "classification": "commercial-family-price-reference-only",
+      "priceAssignedTo3CV": false
+    }
+  ]
+}
