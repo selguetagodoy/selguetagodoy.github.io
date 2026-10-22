@@ -46,7 +46,8 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   assert.match(await quote.locator('.quote-version .rinde-photo-attribution').first().textContent(),/CC BY-SA/);
   await quote.fill('#quoteSearch','Porsche 911');
   assert((await quote.locator('.quote-version').count())>0);
-  assert.equal(await quote.locator('.quote-version .rinde-photo-thumb img').count(),0,'No usar foto del Taycan para un Porsche 911');
+  assert((await quote.locator('.quote-version .rinde-photo-thumb img').count())>0,'Debe mostrar foto propia del Porsche 911');
+  assert((await quote.locator('.quote-version .rinde-photo-thumb img').first().getAttribute('src')).includes('new-porsche-911'),'La imagen no debe proceder del Taycan');
   await quote.close();
   const ev=await b.newPage({viewport:{width:1200,height:850}});
   await ev.goto(base+'electromovilidad.html',{waitUntil:'domcontentloaded'});
@@ -59,7 +60,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  await check('Las 32 nuevas fotos locales tienen atribución y bytes íntegros',async()=>{
   const fs=require('node:fs');const path=require('node:path');const hash=require('node:crypto').createHash;
   const dir=path.join(__dirname,'../images/commons');const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
-  assert.equal(m.downloaded,196);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,196);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),224);
+  assert.equal(m.downloaded,196);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,196);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),238);
   for(const entry of m.results){assert(entry.source.startsWith('https://commons.wikimedia.org/'));assert(entry.author);assert(entry.license);
    const bytes=fs.readFileSync(path.join(__dirname,'..',entry.path.slice(2)));
    assert.equal(bytes.length,entry.bytes);assert.equal(hash('sha256').update(bytes).digest('hex'),entry.sha256);}

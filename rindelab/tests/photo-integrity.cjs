@@ -1,0 +1,44 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto'),path=require('node:path'),vm=require('node:vm');
+const root=path.resolve(__dirname,'../..');
+const checkFiles=(records,label)=>{
+ for(const p of records){
+  const src=p.localSrc;if(!src?.startsWith('./images/'))throw Error(label+' missing local image '+p.model);
+  const full=path.join(root,'rindelab',src.slice(2));
+  const b=fs.readFileSync(full);
+  assert.equal(b[0],255);assert.equal(b[1],216);
+  assert.equal(b.length,p.bytes,label+' size '+src);
+  assert.equal(crypto.createHash('sha256').update(b).digest('hex'),p.sha256,label+' checksum '+src);
+  assert.match(p.source,/^https:\/\/commons\.wikimedia\.org\/wiki\/File/);
+  assert.match(p.license,/^CC BY|^CC0/);
+  assert(p.author?.length>2);
+ }
+};
+const premium=require('../images/commons/manifest-premium-20261021.json').records;
+const reviewed=require('../images/commons/manifest-reviewed-20261021.json').records;
+const historical=require('../sii/data/used-historical-photos-20261021.json').records;
+assert.equal(premium.length,8);assert.equal(reviewed.length,6);assert.equal(historical.length,8);
+checkFiles(premium,'premium');checkFiles(reviewed,'reviewed');checkFiles(historical,'historical');
+const window={};vm.runInNewContext(fs.readFileSync(path.join(root,'rindelab/v2-photos.js'),'utf8'),{window,document:{addEventListener(){}}});
+const photos=window.RindelabPhotos;assert.equal(photos.count,238);
+const find=(brand,model,tech='',year=2026)=>photos.find([brand,model,tech,'','','','','',String(year)+'-01-01'],{BRAND:0,MODEL:1,TECH:2,DATE:8});
+assert.match(find('BMW','Serie 3','','2026')?.src||'',/new-bmw-3-series/);
+assert.equal(find('BMW','Serie 3','','2027'),null,'No extrapolar generación G20 a 2027');
+assert.match(find('BMW','M2','','2026')?.src||'',/new-bmw-m2/);
+assert.match(find('Audi','Q6 e-tron','EV',2026)?.src||'',/new-audi-q6-e-tron/);
+assert.match(find('Audi','Q6 Sportback e-tron','EV',2026)?.src||'',/new-audi-q6-e-tron-sportback/);
+assert.match(find('Toyota','Raize','',2026)?.src||'',/new-toyota-raize/);
+assert.match(find('Citroen','Basalt','',2026)?.src||'',/new-citroen-basalt/);
+assert.match(find('Skoda','Elroq','EV',2026)?.src||'',/new-skoda-elroq/);
+assert.match(find('Foton','G7','',2026)?.src||'',/new-foton-tunland-g7/);
+assert.equal(find('Foton','G7','EV',2026),null,'No atribuir foto diésel a G7 EV');
+assert.equal(find('Maxus','T90 EV','EV',2026),null,'No mostrar pickup diésel a modelo EV');
+assert.match(find('Porsche','911','',2027)?.src||'',/new-porsche-911/);
+assert.match(find('Kia','Morning','',2026)?.src||'',/picanto-morning-2024/);
+assert.match(find('Mitsubishi','L200','',2026)?.src||'',/l200-triton-generacion-2024/);
+const cover=require('../data/catalog-coverage-20261021.json');
+assert.equal(cover.summary.photosInLibrary,238);
+assert.equal(cover.summary.activeFamiliesTechnologies,696);
+assert.equal(cover.summary.withoutFamilyPhoto,441);
+assert.equal(cover.allGroups.filter(x=>!!x.photo).length,255);
+console.log('PASS fotos: 22 archivos nuevos licenciados, 238 fotos comerciales, 255 asociaciones, 441 brechas');

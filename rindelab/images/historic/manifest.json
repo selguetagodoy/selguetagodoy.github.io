@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-22T02:32:23.534Z",
+  "records": [
+    {
+      "name": "nissan-march-2016-k13.jpg",
+      "bytes": 205939,
+      "sha256": "07440a2c1c3fe19dac2112971c6c932e543a0ab2e7956a0fee3e6bf2ab8a68fb"
+    },
+    {
+      "name": "toyota-prius-c-2013-nhp10.jpg",
+      "bytes": 174657,
+      "sha256": "8992894e1bd51865ace221861195c3dab67b1b411770869b1347124bd86c9a01"
+    },
+    {
+      "name": "kia-rio-2015-ub-hatchback.jpg",
+      "bytes": 130324,
+      "sha256": "57bef696f8a1980f5830432876d440cb057041309944a3975eb3523ae093495b"
+    },
+    {
+      "name": "mini-clubman-2016-f54.jpg",
+      "bytes": 143877,
+      "sha256": "20284fa0fd0d5946304ca2ec290635330e21aa2d9523f98b4312b7f3f98064c6"
+    },
+    {
+      "name": "mitsubishi-lancer-2014-sedan.jpg",
+      "bytes": 170187,
+      "sha256": "b90402208f67f192ef9c7b2ce66c45662025d04c87e3652ae96bb41416494822"
+    },
+    {
+      "name": "hyundai-veloster-2015-fs.jpg",
+      "bytes": 169417,
+      "sha256": "a65932669dd231139a4786b0bc4c9d5717e56d909c4d4cde0dd4e1c78f7dc83e"
+    },
+    {
+      "name": "ford-focus-2016-mk3-facelift.jpg",
+      "bytes": 146800,
+      "sha256": "478e4e42533f6ca27f83be6436936630d27c6a17817e0d285b8249dfe5e903e8"
+    },
+    {
+      "name": "nissan-tiida-2011-c11-hatchback.jpg",
+      "bytes": 249646,
+      "sha256": "ca693d3b5c34f7c6aaca74a3b856c82e6d144255e82cf0d87054c4673d7f09fd"
+    }
+  ]
+}

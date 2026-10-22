@@ -3214,6 +3214,244 @@ const additionalLicensed20261021B=[
     "bytes": 221550
   }
 ];
+const premiumLicensedOct21=[
+  {
+    "brand": "BMW",
+    "pattern": "\\bSERIE\\s*3\\b",
+    "from": "2020",
+    "to": "2026",
+    "model": "BMW Serie 3 G20 (2024), exterior referencial",
+    "author": "Charles from Port Chester, New York",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "localSrc": "./images/commons/new-bmw-3-series-g20-2026.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_3-Series_(G20)_330i_xDrive_(2024)_(54017667555).jpg",
+    "file": "BMW 3-Series (G20) 330i xDrive (2024) (54017667555).jpg",
+    "sha256": "5e8a8421644b9e84c8930a42d1c0577f526a4d54c1e0c2046ab826ae7c36548f",
+    "bytes": 275883,
+    "qualityStatus": "model-reference"
+  },
+  {
+    "brand": "BMW",
+    "pattern": "\\bM2\\b",
+    "from": "2023",
+    "to": "2027",
+    "model": "BMW M2 G87 (2024)",
+    "author": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-bmw-m2-g87-2026.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3A2024_BMW_M2_G87%2C_front_left%2C_05-31-2024.jpg",
+    "file": "2024 BMW M2 G87, front left, 05-31-2024.jpg",
+    "sha256": "ef16f6659c714abd457116c7ffbc3f654f9d1f37fc09f05ab8b7d7ebf517e23e",
+    "bytes": 171994,
+    "qualityStatus": "model-reference"
+  },
+  {
+    "brand": "BMW",
+    "pattern": "\\bM3\\b",
+    "from": "2021",
+    "to": "2027",
+    "model": "BMW M3 G80 (2022)",
+    "author": "Charles from Port Chester, New York",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "localSrc": "./images/commons/new-bmw-m3-g80-2026.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3ABMW_M3_(G80%2C_2022)_(52227837026).jpg",
+    "file": "BMW M3 (G80, 2022) (52227837026).jpg",
+    "sha256": "ecc9a8a3cae051c9a8f28569e2d7069304b1c467ffdb6601a8e6f2455c7ce16f",
+    "bytes": 243125,
+    "qualityStatus": "model-reference"
+  },
+  {
+    "brand": "BMW",
+    "pattern": "\\bM4\\b",
+    "from": "2021",
+    "to": "2027",
+    "model": "BMW M4 G82 (2024)",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-bmw-m4-g82-2026.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3A2024_BMW_M4_(G82)_Competition_IMG_9367.jpg",
+    "file": "2024 BMW M4 (G82) Competition IMG 9367.jpg",
+    "sha256": "5af12627dc2c63108b8136027e6c12dbf5f39e98b146c784786fe2b5ae811644",
+    "bytes": 160778,
+    "qualityStatus": "model-reference"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bQ6\\s+e[ -]?tron\\b",
+    "from": "2024",
+    "to": "2027",
+    "model": "Audi Q6 e-tron",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-audi-q6-e-tron-2026.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3AAudi_Q6_e-tron_DSC_7792.jpg",
+    "file": "Audi Q6 e-tron DSC 7792.jpg",
+    "sha256": "d2c23b932b0dbaa8c633f6ef326bc6fa9958987c84bf28e8a2adf3f6ce7a1530",
+    "bytes": 228291,
+    "qualityStatus": "model-reference"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bQ6\\s+Sportback\\s+e[ -]?tron\\b",
+    "from": "2025",
+    "to": "2027",
+    "model": "Audi Q6 Sportback e-tron",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-audi-q6-e-tron-sportback.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3AAudi_Q6_e-tron_Sportback_DSC_9276.jpg",
+    "file": "Audi Q6 e-tron Sportback DSC 9276.jpg",
+    "sha256": "ab6a1b9d29974b8c916b53ddd7117ae0ea59bdd9c5bfd667019680b8198bf7d7",
+    "bytes": 199879,
+    "qualityStatus": "model-reference"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bA6\\s+Sportback\\s+e[ -]?tron\\b",
+    "from": "2025",
+    "to": "2027",
+    "model": "Audi A6 Sportback e-tron",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-audi-a6-sportback-e-tron-2026.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3AAudi_A6_Sportback_e-tron_performance_S_Line_GH_Daytona_Gray_Pearl_Effect_(1).jpg",
+    "file": "Audi A6 Sportback e-tron performance S Line GH Daytona Gray Pearl Effect (1).jpg",
+    "sha256": "5d6fd8187a2111fb75a998333888d4c1a1caaeb4a8cbc50ac546b7ef40c728a5",
+    "bytes": 235346,
+    "qualityStatus": "model-reference"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bQ5\\b",
+    "from": "2025",
+    "to": "2027",
+    "model": "Audi Q5 GU (2025)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-audi-q5-2026.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3AAudi_Q5_GU_DSC_8460.jpg",
+    "file": "Audi Q5 GU DSC 8460.jpg",
+    "sha256": "368511242bad2c62199f663af15a65b7bfae252ec21b7331081fef12e8d07923",
+    "bytes": 199888,
+    "qualityStatus": "model-reference"
+  }
+];
+const reviewedModelsOct21=[
+  {
+    "brand": "Toyota",
+    "pattern": "(^|[^A-Za-z0-9])RAIZE($|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Toyota Raize 2024 (foto de familia)",
+    "author": "Captainmorlypogi1959",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-toyota-raize-reviewed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_Raize_1.2_E_2024.jpg",
+    "file": "Toyota Raize 1.2 E 2024.jpg",
+    "bytes": 138206,
+    "sha256": "6c0a51759cbbabb82477c8e58557542ed0cc70361d0ce2bc1dd276ccff757b96",
+    "qualityStatus": "reference-photo-manually-reviewed"
+  },
+  {
+    "brand": "Citroen",
+    "pattern": "(^|[^A-Za-z0-9])BASALT($|[^A-Za-z0-9])",
+    "from": "2024",
+    "to": "2027",
+    "model": "Citroën Basalt Chile 2025",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "localSrc": "./images/commons/new-citroen-basalt-reviewed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Citroen_Basalt_Turbo_200_Shine_2025.jpg",
+    "file": "Citroen Basalt Turbo 200 Shine 2025.jpg",
+    "bytes": 147399,
+    "sha256": "5839494441c1c883c7a21fcf7a1b7f011a3516dfed9394bc31e3b433ff42169e",
+    "qualityStatus": "reference-photo-manually-reviewed"
+  },
+  {
+    "brand": "Skoda",
+    "pattern": "(^|[^A-Za-z0-9])ELROQ($|[^A-Za-z0-9])",
+    "from": "2025",
+    "to": "2027",
+    "model": "Škoda Elroq (2025)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-skoda-elroq-reviewed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Elroq_DSC_9257.jpg",
+    "file": "Škoda Elroq DSC 9257.jpg",
+    "bytes": 207860,
+    "sha256": "ae0367a1073d7696f4bacbe2576c229737262ff3c6c2094b83bed1adc53de509",
+    "qualityStatus": "reference-photo-manually-reviewed"
+  },
+  {
+    "brand": "Foton",
+    "pattern": "(^|[^A-Za-z0-9])G7($|[^A-Za-z0-9])",
+    "from": "2022",
+    "to": "2027",
+    "model": "Foton Tunland G7, camioneta de referencia",
+    "author": "Cannonball walk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-foton-tunland-g7-reviewed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Foton_Tunland_G7_4x4_in_Arequipa%2C_Per%C3%BA_(front_right_quarter).jpg",
+    "file": "Foton Tunland G7 4x4 in Arequipa, Perú (front right quarter).jpg",
+    "bytes": 276567,
+    "sha256": "75dd2aaccca952b2f96b7dc5c454e294372376a796afd0a7dbeb9ea04cbc0f70",
+    "qualityStatus": "reference-photo-manually-reviewed",
+    "excludeTech": [
+      "EV",
+      "REEV",
+      "PHEV"
+    ]
+  },
+  {
+    "brand": "Maxus",
+    "pattern": "(^|[^A-Za-z0-9])T90($|[^A-Za-z0-9])(?!EV)",
+    "from": "2022",
+    "to": "2026",
+    "model": "Maxus T90 pickup; no representa eTerron 9 eléctrica",
+    "author": "JustAnotherCarDesigner",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-maxus-t90-reviewed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Maxus_T90_003.jpg",
+    "file": "Maxus T90 003.jpg",
+    "bytes": 174455,
+    "sha256": "76c6c4c1b5d1b5c7bfea3b8f0f6d6bef5f1e6db70f0af0984b805dfa2c69cdae",
+    "qualityStatus": "reference-photo-manually-reviewed",
+    "excludeTech": [
+      "EV",
+      "REEV",
+      "PHEV"
+    ]
+  },
+  {
+    "brand": "Porsche",
+    "pattern": "(^|[^0-9])911($|[^0-9])",
+    "from": "2024",
+    "to": "2027",
+    "model": "Porsche 911 992.2 Targa; carrocería referencial, no acabado exacto",
+    "author": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localSrc": "./images/commons/new-porsche-911-992-2-reviewed-20261021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Porsche_911_992.2_Targa_4_GTS_Hybrid_Fashion_Grey_01.jpg",
+    "file": "Porsche 911 992.2 Targa 4 GTS Hybrid Fashion Grey 01.jpg",
+    "bytes": 174570,
+    "sha256": "90086ce2819ff496ab17ca1f848c4779e85c9bb3f365e43f8e3c808e2724c554",
+    "qualityStatus": "reference-photo-manually-reviewed"
+  }
+];
 const licenseUrls={
  'CC0 1.0':'https://creativecommons.org/publicdomain/zero/1.0/',
  'CC BY 3.0':'https://creativecommons.org/licenses/by/3.0/',
@@ -3223,12 +3461,25 @@ const licenseUrls={
 };
 const commonsFile=p=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file.replace(/ /g,'_'))+'?width=720';
 const commonsSource=p=>'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(p.file.replace(/ /g,'_'));
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
+// Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
+const neutralFamilyPhotoSources=new Set([
+  "./images/commons/kia-kia-picanto-morning-2024-32.jpg",
+  "./images/commons/suzuki-suzuki-swift-2024-19.jpg",
+  "./images/commons/bmw-bmw-x1-u11-2023-31.png",
+  "./images/commons/ford-ford-ranger-generacion-p703-2023-27.jpg",
+  "./images/commons/kgm-kgm-torres-177.jpg",
+  "./images/commons/mitsubishi-mitsubishi-l200-triton-generacion-2024-30.jpg",
+  "./images/commons/kia-kia-sonet-facelift-qy-2025-23.jpg",
+  "./images/commons/volvo-volvo-xc90-160.jpg",
+  "./images/commons/mazda-mazda-cx-30-2022-10.jpg"
+]);
+const photoBrandKey=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 function find(row,F){
  const brand=String(row[F.BRAND]||''),model=String(row[F.MODEL]||''),tech=String(row[F.TECH]||''),year=String(row[F.DATE]||'').slice(0,4);
  // Ante coincidencias múltiples, priorizar el nombre de familia más específico.
- return entries.filter(p=>p.brand.toLowerCase()===brand.toLowerCase()&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech))&&year>=p.from&&year<=p.to).sort((a,b)=>b.re.source.length-a.re.source.length)[0]||null;
+ return entries.filter(p=>photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&year>=p.from&&year<=p.to).sort((a,b)=>b.re.source.length-a.re.source.length)[0]||null;
 }
 function findCommercial(p){
  if(!p||!p.brand||!p.family)return null;
