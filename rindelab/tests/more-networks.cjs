@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..');
 const portillo=require('../data/dealer-portillo-20261021.json'),gilde=require('../data/dealer-gildemeister-20261021.json'),aliases=require('../data/commercial-family-aliases-20261021.json'),photos=require('../data/photo-batch2-20261021.json');
 assert.equal(portillo.records.length,111);
 assert.equal(gilde.records.length,53);
-assert.equal(aliases.aliases.length,29);
+assert.equal(aliases.aliases.length,28,'Solo 28 alias de familia comercial respaldados; no restaurar el alias eliminado sin evidencia');
 assert.equal(photos.photos.length,19);
 assert(aliases.aliases.every(x=>x.level==='same-commercial-family-only'));
 assert(!aliases.aliases.some(x=>/ALL NEW (?:FORESTER|OUTBACK)/i.test(x.sourceFamily)),'Generación nueva colapsada sin respaldo');
@@ -32,7 +32,7 @@ for(const [name,xs] of [['Portillo',portillo.records],['Gildemeister',gilde.reco
    const page=await b.newPage({viewport:{width,height:850},isMobile:width===390});
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(process.env.RINDELAB_BASE_URL||'http://127.0.0.1:8765/rindelab/',{waitUntil:'domcontentloaded'});
-   await page.waitForFunction(()=>window.RindelabMarket?.records().length>=465&&window.RindelabMarket?.getAliasCount()===29&&window.RindelabPhotos?.count===259&&document.querySelector('#searchButton')&&!document.querySelector('#searchButton').disabled,{timeout:60000});
+   await page.waitForFunction(()=>window.RindelabMarket?.records().length>=465&&window.RindelabMarket?.getAliasCount()===28&&window.RindelabPhotos?.count===259&&document.querySelector('#searchButton')&&!document.querySelector('#searchButton').disabled,{timeout:60000});
    const meta=await page.evaluate(()=>({groups:RindelabMarket.getTotal(),aliases:RindelabMarket.getAliasCount(),records:RindelabMarket.records().length,photos:RindelabPhotos.count}));
    assert(meta.groups>=820,'Faltan grupos comerciales '+JSON.stringify(meta));
    await page.selectOption('#catalogScope','commercial');
