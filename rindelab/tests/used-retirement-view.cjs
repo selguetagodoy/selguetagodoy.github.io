@@ -22,6 +22,8 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    assert.match(await page.locator('.used-retired-card').textContent(),/Sin precio comercial documentado para 2018/);
    await page.locator('.used-retired-card [data-retired-sii]').click();
    assert(await page.locator('#siiCommercialDialog').evaluate(x=>x.open));
+   const bounds=await page.locator('#siiCommercialDialog').evaluate(el=>{const rect=el.getBoundingClientRect();return {left:rect.left,right:rect.right,viewport:document.documentElement.clientWidth};});
+   assert(bounds.left>=0&&bounds.right<=bounds.viewport+1,'Diálogo SII fuera de pantalla '+JSON.stringify(bounds));
    await page.waitForFunction(()=>!!document.querySelector('#siiCommercialDialog #siiBrand option[value="TOYOTA"]'),{timeout:30000});
    assert.equal(await page.locator('#siiCommercialDialog #siiBrand').inputValue(),'TOYOTA');
    assert.equal(await page.locator('#siiCommercialDialog #siiYear').inputValue(),'2018');

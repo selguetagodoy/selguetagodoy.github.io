@@ -5,7 +5,7 @@
 <meta name="description" content="Consulta referencias publicadas de autos usados en Chile por marca, modelo y año y la tasación fiscal SII 2026 sin confundir ambos valores.">
 <link rel="stylesheet" href="./v6.css?v=20261021-etapas234">
 <link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2">
-<link rel="stylesheet" href="./used-market.css?v=20261021-usados1">
+<link rel="stylesheet" href="./used-market.css?v=20261021-mobile-dialog-fix">
 <style>
 .used-page{max-width:1100px;margin:auto;padding:1.5rem 1rem 4rem;color:#16374e;font-family:Inter,system-ui,Arial,sans-serif}
 .used-page h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.14;margin:1.3rem 0 1rem}
@@ -25,7 +25,7 @@
 .used-result h3{margin:0 0 8px;font-size:1.08rem}
 .used-retired-status{margin:6px 0 10px;color:#4f6675;font-size:.75rem}
 .used-retired-status a{color:#4f6675;text-decoration:underline;text-decoration-thickness:1px}
-.used-focusbar{display:flex;gap:.7rem;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid #d3e4ec;font-size:.88rem;color:#1b415b}
+.used-focusbar{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid #d3e4ec;font-size:.88rem;color:#1b415b}
 .used-focusbar label{display:flex;gap:.6rem;align-items:center;cursor:pointer;flex-wrap:wrap}.used-focusbar input{width:18px;height:18px;flex-shrink:0}.used-focusbar select{max-width:100%;min-height:44px;padding:8px;border-radius:7px;border:1px solid #a8bdca;background:#fff;color:#14354c}.used-retired-card{display:flex;flex-direction:column;align-items:flex-start;gap:6px}.used-retired-card .used-result-links{margin-top:auto}.used-retired-card .used-result-main{font-size:1.2rem}.used-no-value{color:#54677a;font-size:.89rem;font-weight:650}.used-retired-context{font-size:.8rem;line-height:1.5;color:#506779}.used-retired-context a{overflow-wrap:anywhere}.used-retired-card .used-source-note{margin:4px 0}
 .used-result h3 small{font-size:.75em;font-weight:normal;color:#587084}
 .used-result-main{font-size:1.4rem;font-weight:850;color:#0d5e80}
@@ -35,7 +35,7 @@
 .used-source-note{font-size:.81rem;color:#587084}
 .used-summary{margin-top:1rem;font-size:.93rem}
 .used-footnotes{margin:1.5rem 0 0;border-top:1px solid #d6e4ea;padding-top:1rem;font-size:.83rem}
-@media(max-width:760px){.used-grid{grid-template-columns:1fr}.used-filters{grid-template-columns:1fr 1fr}.used-filters label:first-child{grid-column:1/-1}}
+@media(max-width:760px){.used-grid{grid-template-columns:1fr}.used-filters{grid-template-columns:1fr 1fr}.used-filters label:first-child{grid-column:1/-1}.used-focusbar{flex-direction:column;align-items:stretch}.used-focusbar>label{width:100%;max-width:100%;box-sizing:border-box;justify-content:flex-start}.used-focusbar>label[for="usedHistoryView"] select{max-width:100%;width:auto}.used-focusbar input[type=checkbox]{position:relative;z-index:1}}
 @media(max-width:390px){.used-filters{grid-template-columns:1fr}.used-filters label:first-child{grid-column:auto}}
 </style>
 <script src="./sii/sii.js?v=20261021-used-market" defer></script>
