@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "summary": {
+    "originalPending": 237,
+    "additionalFamilyReferences": 10,
+    "remainingPending": 227,
+    "totalFamilyReview": 345,
+    "obsoleteOffersNotCurrent": 2
+  },
+  "methodology": "Cuarto cruce de fuentes de marca chilenas. Importes publicados por una versión comercial concreta, sin asignación automática a código 3CV. Las ofertas vencidas no se declaran precios vigentes; IVA y bonos conservan sus condiciones.",
+  "records": [
+    {
+      "model": "Mazda BT50 2.2 4x4 MT",
+      "homologationDate": "2026-06-01",
+      "homologationCodeSuffix": "0326M00-9",
+      "technology": "Diésel",
+      "reference": {
+        "priceListClp": 35790000,
+        "version": "Mazda BT-50 Core 2.2 4x4 6MT",
+        "url": "https://www.mazda.cl/vehiculo/mazda-bt-50/",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "included",
+        "sourceValidUntil": null,
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Lista Mazda de acabado CORE 2.2 4x4; no acredita acabado técnico 3CV exacto."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Geely EX5 eMi",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "1025S00-K",
+      "technology": "PHEV",
+      "reference": {
+        "priceListClp": 23990000,
+        "version": "Geely EX5 EM-i Pro",
+        "url": "https://www.geely.cl/modelos/geely-ex5-em-i/",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "included",
+        "sourceValidUntil": "2026-09-15",
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Precio LISTA comercial publicado en página del fabricante bajo promoción que terminó 15-09-2026. Sin garantía de vigencia actual ni equivalencia del acabado 3CV."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Geely EX5 EM-i 30Kw",
+      "homologationDate": "2026-04-10",
+      "homologationCodeSuffix": "0226S00-9",
+      "technology": "PHEV",
+      "reference": {
+        "priceListClp": 28990000,
+        "version": "Geely EX5 EM-i Max+",
+        "url": "https://www.geely.cl/modelos/geely-ex5-em-i/",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "included",
+        "sourceValidUntil": "2026-09-15",
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Precio LISTA comercial publicado en página del fabricante bajo promoción que terminó 15-09-2026. Sin garantía de vigencia actual ni equivalencia del acabado 3CV."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Mazda BT50 2.2 4x4 AT",
+      "homologationDate": "2026-04-06",
+      "homologationCodeSuffix": "0326M00-3",
+      "technology": "Diésel",
+      "reference": {
+        "priceListClp": 37490000,
+        "version": "Mazda BT-50 Core 2.2 4x4 8AT",
+        "url": "https://www.mazda.cl/vehiculo/mazda-bt-50/",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "included",
+        "sourceValidUntil": null,
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Lista Mazda de acabado CORE 2.2 4x4; no acredita acabado técnico 3CV exacto."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "BYD BYD SEALION 7 GL",
+      "homologationDate": "2026-01-22",
+      "homologationCodeSuffix": "1025M00-K",
+      "technology": "EV",
+      "reference": {
+        "priceListClp": 37990000,
+        "version": "Sealion 7 EV RWD 440 km GL",
+        "url": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "included",
+        "sourceValidUntil": "2026-10-31",
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Precio lista BYD GL publicado en octubre; pendiente cotejar tracción, batería y versión 3CV."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Changan Eado Plus IDD",
+      "homologationDate": "2025-12-10",
+      "homologationCodeSuffix": "0125S00-8",
+      "technology": "PHEV",
+      "reference": {
+        "priceListClp": 22990000,
+        "version": "Eado Plus iDD Luxury",
+        "url": "https://www.changan.cl/catalogo/?category=El%C3%A9ctrico",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "included",
+        "sourceValidUntil": null,
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "El fabricante identifica iDD y cotización por acabado Luxury, versión técnica aún sin conciliar."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Changan New Star Truck Double",
+      "homologationDate": "2025-12-04",
+      "homologationCodeSuffix": "0725S00-K",
+      "technology": "Bencina",
+      "reference": {
+        "priceListClp": 11471600,
+        "version": "Star Truck Pickup Cabina Doble",
+        "url": "https://www.changan.cl/catalogo/?category=Comerciales",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "verify-on-source",
+        "sourceValidUntil": "2026-11-05",
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Lista comercial octubre; distinta de valor con bonos. Carrocería y configuración de ficha 3CV por conciliar."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Changan New Star Truck Single",
+      "homologationDate": "2025-12-04",
+      "homologationCodeSuffix": "0725S01-4",
+      "technology": "Bencina",
+      "reference": {
+        "priceListClp": 10995600,
+        "version": "Star Truck Pickup Cabina Simple",
+        "url": "https://www.changan.cl/catalogo/?category=Comerciales",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "verify-on-source",
+        "sourceValidUntil": "2026-11-05",
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Lista comercial octubre; distinta de valor con bonos. Carrocería y configuración de ficha 3CV por conciliar."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Changan New Star Truck Single Box",
+      "homologationDate": "2025-12-04",
+      "homologationCodeSuffix": "0725S02-9",
+      "technology": "Bencina",
+      "reference": {
+        "priceListClp": 12602100,
+        "version": "Star Truck Cargo Box",
+        "url": "https://www.changan.cl/catalogo/?category=Comerciales",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "verify-on-source",
+        "sourceValidUntil": "2026-11-05",
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Lista comercial octubre; distinta de valor con bonos. Carrocería y configuración de ficha 3CV por conciliar."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    },
+    {
+      "model": "Changan HONOR S",
+      "homologationDate": "2025-11-06",
+      "homologationCodeSuffix": "0725S00-K",
+      "technology": "Bencina",
+      "reference": {
+        "priceListClp": 11174100,
+        "version": "Honor S Furgón 5MT",
+        "url": "https://www.changan.cl/catalogo/?category=Comerciales",
+        "sourceKind": "chilean-brand-official-page",
+        "observedAt": "2026-10-22",
+        "vatTreatment": "verify-on-source",
+        "sourceValidUntil": "2026-11-05",
+        "verifiedTrims": "commercial family reference only; no 3CV version equivalence",
+        "note": "Precio de lista oficial, no promoción desde; falta cotejar el código técnico y acabado 3CV."
+      },
+      "status": "commercial-family-price-for-manual-review"
+    }
+  ]
+}

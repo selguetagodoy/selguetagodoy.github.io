@@ -23,7 +23,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   await page.locator('#query').fill('');
   await page.locator('#searchButton').click();
   const count=parseInt(await page.locator('#resultCount').innerText(),10);
-  assert.equal(count,237,'Tras el tercer cruce quedan 237 fichas pendientes de precio de versión');
+  assert.equal(count,227,'Tras el cuarto cruce quedan 227 fichas pendientes de precio de versión');
   assert(await page.locator('.vehicle-card-recent').count()>0,'Faltan tarjetas de nueva categoria');
   // La única ficha MTT sin rendimiento tiene ahora precio EV documentado en Chile:
   // no corresponde etiquetarla como «sin precio» dentro de esta categoría.

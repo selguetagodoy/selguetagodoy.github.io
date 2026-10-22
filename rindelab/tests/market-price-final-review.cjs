@@ -1,0 +1,36 @@
+'use strict';
+const assert=require('node:assert/strict');
+const C=require('../sii/catalog-identity.js');
+const first=require('../data/price-association-audit-20261022.json');
+const second=require('../data/market-price-followup-20261022.json');
+const third=require('../data/market-price-thirdpass-20261022.json');
+const fourth=require('../data/market-price-final-review-20261022.json');
+assert.equal(first.records.length,572);
+assert.equal(fourth.schemaVersion,1);
+assert.equal(fourth.summary.originalPending,237);
+assert.equal(fourth.summary.additionalFamilyReferences,10);
+assert.equal(fourth.summary.remainingPending,227);
+assert.equal(fourth.summary.totalFamilyReview,345);
+assert.equal(fourth.summary.obsoleteOffersNotCurrent,2);
+assert.equal(fourth.records.length,10);
+const key=x=>C.norm(x.model)+'|'+x.homologationDate+'|'+x.homologationCodeSuffix;
+const index=new Map(first.records.map(x=>[key(x),x])),previous=new Map(second.records.map(x=>[key(x),x])),thirdIds=new Set(third.records.map(key)),seen=new Set();
+for(const x of fourth.records){
+ const k=key(x);assert(!seen.has(k),'duplicate 3CV '+k);seen.add(k);
+ assert(['unmatched-catalog','other-powertrain'].includes(index.get(k)?.category),'Geely EM-i puede resolver discrepancia antigua EV/PHEV');
+ assert(!thirdIds.has(k));
+ const prior=previous.get(k);
+ if(index.get(k)?.category==='unmatched-catalog')assert(!prior?.reference?.samePowertrain&&!prior?.dealers?.some(d=>d.listPriceClp>0));
+ assert.match(x.reference.url,/^https:\/\//);
+ assert(Number.isSafeInteger(x.reference.priceListClp)&&x.reference.priceListClp>0);
+ assert(x.reference.version&&x.reference.note);
+ assert.equal(x.reference.verifiedTrims,'commercial family reference only; no 3CV version equivalence');
+}
+const find=name=>fourth.records.filter(x=>C.norm(x.model)===C.norm(name));
+assert.equal(find('Mazda BT50 2.2 4x4 MT')[0].reference.priceListClp,35790000);
+assert.equal(find('Mazda BT50 2.2 4x4 AT')[0].reference.priceListClp,37490000);
+assert.equal(find('BYD BYD SEALION 7 GL')[0].reference.priceListClp,37990000);
+assert.equal(find('Geely EX5 eMi')[0].reference.sourceValidUntil,'2026-09-15');
+assert.equal(find('Changan New Star Truck Single')[0].reference.priceListClp,10995600);
+assert.equal(find('Changan New Star Truck Double')[0].reference.priceListClp,11471600);
+console.log('PASS cuarto chequeo: 10 listas de versiones comerciales con fuente, 345 familias revisables, 227 pendientes, 2 promociones geely vencidas');

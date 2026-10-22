@@ -44,7 +44,7 @@ assert.equal(find('Changan Hunter REEV 4x4 ECE')[0].reference.referencePriceClp,
 assert.equal(find('Volkswagen Amarok PA2 V6')[0].reference.priceType,'lista+IVA');
 assert.equal(find('BMW M440i xDrive LCI II Gran Coupé')[0].reference.referencePriceClp,86900000);
 assert.equal(find('BMW M440i xDrive LCI II Cabriolet')[0].reference.referencePriceClp,89900000);
-assert.equal(find('Toyota RAV4 2.5 PHEV AWD').length,0,'Do not move HEV price to PHEV');
+assert(find('Toyota RAV4 2.5 PHEV AWD').every(x=>!x.reference||x.reference.samePowertrain===false),'Nunca trasladar precio HEV a la RAV4 PHEV');
 assert.equal(find('Toyota BZ4X AWD BEV')[0].reference.priceType,'lista-vencida');
 assert.equal(find('Audi New A5')[0].reference.priceType,'lista-vencida');
 assert.equal(find('Gac GS4 MAX 1.5T AT GL')[0].reference.priceType,'desde');
