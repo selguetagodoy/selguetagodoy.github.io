@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "basis": "274 fichas 3CV todavía sin referencias comerciales de familia luego del segundo chequeo",
+  "methodology": "Tercera búsqueda de sitios de fabricantes, importadores oficiales y concesionarios. Todos los importes pertenecen a versiones comerciales referenciales y nunca se imputan automáticamente al código 3CV. Las páginas distinguen ofertas históricas, bonos, precio más IVA, carrocerías distintas y modelos anunciados; no se asegura stock ni vigencia de precios de lanzamiento.",
+  "summary": {
+    "baselinePending": 274,
+    "additionalFamilyReference": 37,
+    "stillPending": 237,
+    "priorFamilyReview": 298,
+    "newFamilyReview": 335,
+    "sourceOnlyHistorical": 7
+  },
+  "records": [
+    {
+      "model": "Renault Master Chasis",
+      "homologationDate": "2026-10-07",
+      "homologationCodeSuffix": "1026M07-4",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "Master Cargo Furgón",
+        "url": "https://store.renault.cl/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-otra-carroceria",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "Sólo se encontró precio del Master Furgón; esta ficha es Chasis/Bus. No asignar un precio de otra carrocería."
+      }
+    },
+    {
+      "model": "Renault Master Furgón L2H2",
+      "homologationDate": "2026-10-07",
+      "homologationCodeSuffix": "1026M06-0",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 37473100,
+        "commercialVersion": "Master Cargo Furgón L2",
+        "url": "https://store.renault.cl/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista-de-otra-version",
+        "availability": "published",
+        "matchConfidence": "family-body-length",
+        "note": "Tienda Renault publica lista y precio financiado por separado; no confirma altura H2/acabado 3CV."
+      }
+    },
+    {
+      "model": "Renault Master Furgón L3H2",
+      "homologationDate": "2026-10-07",
+      "homologationCodeSuffix": "1026M05-7",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 39853100,
+        "commercialVersion": "Master Cargo Furgón L3",
+        "url": "https://store.renault.cl/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista-de-otra-version",
+        "availability": "published",
+        "matchConfidence": "family-body-length",
+        "note": "Tienda Renault publica lista y precio financiado por separado; no confirma altura H2/acabado 3CV."
+      }
+    },
+    {
+      "model": "Renault Master L3H2 Bus",
+      "homologationDate": "2026-10-07",
+      "homologationCodeSuffix": "1026M04-3",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "Master Cargo Furgón",
+        "url": "https://store.renault.cl/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-otra-carroceria",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "Sólo se encontró precio del Master Furgón; esta ficha es Chasis/Bus. No asignar un precio de otra carrocería."
+      }
+    },
+    {
+      "model": "Mercedes-Benz CLE 200 4MATIC Cabriolet",
+      "homologationDate": "2026-08-10",
+      "homologationCodeSuffix": "0726S01-1",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "CLE 200 Coupé",
+        "url": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-otra-carroceria",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "Kaufmann publica Coupé, no Cabriolet; no trasladar importes a otra carrocería. CLE53 se presenta en USD, sin conversión artificial."
+      }
+    },
+    {
+      "model": "Mercedes-Benz CLE 200 4MATIC Coupé",
+      "homologationDate": "2026-08-10",
+      "homologationCodeSuffix": "0726S00-7",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 64900000,
+        "commercialVersion": "CLE 200 Coupé",
+        "url": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista-otra-configuracion",
+        "availability": "published",
+        "matchConfidence": "family-engine-body",
+        "note": "Kaufmann publica el precio del Coupé, pero la tracción/acabado del código 3CV no están conciliados."
+      }
+    },
+    {
+      "model": "KYC Mamut T3 Cargo Box",
+      "homologationDate": "2026-06-30",
+      "homologationCodeSuffix": "0625M02-6",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 10990000,
+        "commercialVersion": "Mamut Cargo Box",
+        "url": "https://www.kycmotors.cl/producto/mamut-cargo-box",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "cotizar",
+        "matchConfidence": "family-and-body-only",
+        "note": "La web de Mamut publica carrocería, pero no acredita equivalencia con la denominación técnica T3 ni vigencia de precio de octubre."
+      }
+    },
+    {
+      "model": "KYC Mamut T3 CS",
+      "homologationDate": "2026-06-30",
+      "homologationCodeSuffix": "0625M01-1",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 8990000,
+        "commercialVersion": "Mamut Cabina Simple",
+        "url": "https://www.kycmotors.cl/producto/mamut-cabina-simple",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "cotizar",
+        "matchConfidence": "family-and-body-only",
+        "note": "La web de Mamut publica carrocería, pero no acredita equivalencia con la denominación técnica T3 ni vigencia de precio de octubre."
+      }
+    },
+    {
+      "model": "KYC Mamut T3 DC",
+      "homologationDate": "2026-06-30",
+      "homologationCodeSuffix": "0625M00-7",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 9990000,
+        "commercialVersion": "Mamut Cabina Doble",
+        "url": "https://www.kycmotors.cl/producto/mamut-cabina-doble",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "cotizar",
+        "matchConfidence": "family-and-body-only",
+        "note": "La web de Mamut publica carrocería, pero no acredita equivalencia con la denominación técnica T3 ni vigencia de precio de octubre."
+      }
+    },
+    {
+      "model": "KYC Gran Mamut 2.0 Cargo Box",
+      "homologationDate": "2026-05-13",
+      "homologationCodeSuffix": "0526M05-4",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 13990000,
+        "commercialVersion": "Gran Mamut 2.0 Cargo Box",
+        "url": "https://www.kycmotors.cl/producto/gran-mamut-2-0-cargo-box",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "anunciado-proximamente",
+        "matchConfidence": "matching-motor-and-body",
+        "note": "La web publica «Próximamente», no stock ni precio de venta actual comprobado. El importe es promocional «desde», más IVA."
+      }
+    },
+    {
+      "model": "KYC Gran Mamut 2.0 DC",
+      "homologationDate": "2026-05-13",
+      "homologationCodeSuffix": "0526M04-K",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 11990000,
+        "commercialVersion": "Gran Mamut 2.0 Cabina Doble",
+        "url": "https://www.kycmotors.cl/producto/gran-mamut-2-0-cabina-doble",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "anunciado-proximamente",
+        "matchConfidence": "matching-motor-and-body",
+        "note": "La web publica «Próximamente», no stock ni precio de venta actual comprobado. El importe es promocional «desde», más IVA."
+      }
+    },
+    {
+      "model": "KYC Gran Mamut 2.0 CS",
+      "homologationDate": "2026-05-13",
+      "homologationCodeSuffix": "0526M03-5",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 10990000,
+        "commercialVersion": "Gran Mamut 2.0 Cabina Simple",
+        "url": "https://www.kycmotors.cl/producto/gran-mamut-2-0-cabina-simple",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "anunciado-proximamente",
+        "matchConfidence": "matching-motor-and-body",
+        "note": "La web publica «Próximamente», no stock ni precio de venta actual comprobado. El importe es promocional «desde», más IVA."
+      }
+    },
+    {
+      "model": "KYC Gran Mamut 1.6 Cargo Box",
+      "homologationDate": "2026-05-13",
+      "homologationCodeSuffix": "0526M05-0",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 12990000,
+        "commercialVersion": "Gran Mamut 1.6 Cargo Box",
+        "url": "https://www.kycmotors.cl/producto/gran-mamut-1-6-cargo-box",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "cotizar",
+        "matchConfidence": "matching-motor-and-body",
+        "note": "Precio «desde» con bonos, más IVA. Condiciones legales disponibles de septiembre 2026: vigencia de octubre no acreditada."
+      }
+    },
+    {
+      "model": "KYC Gran Mamut 1.6 DC",
+      "homologationDate": "2026-05-13",
+      "homologationCodeSuffix": "0526M04-6",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 10990000,
+        "commercialVersion": "Gran Mamut 1.6 Cabina Doble",
+        "url": "https://www.kycmotors.cl/producto/gran-mamut-1-6-cabina-doble",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "cotizar",
+        "matchConfidence": "matching-motor-and-body",
+        "note": "Precio «desde» con bonos, más IVA. Condiciones legales disponibles de septiembre 2026: vigencia de octubre no acreditada."
+      }
+    },
+    {
+      "model": "KYC Gran Mamut 1.6 CS",
+      "homologationDate": "2026-05-13",
+      "homologationCodeSuffix": "0526M03-1",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 9990000,
+        "commercialVersion": "Gran Mamut 1.6 Cabina Simple",
+        "url": "https://www.kycmotors.cl/producto/gran-mamut-1-6-cabina-simple",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "desde-con-bonos+IVA",
+        "availability": "cotizar",
+        "matchConfidence": "matching-motor-and-body",
+        "note": "Precio «desde» con bonos, más IVA. Condiciones legales disponibles de septiembre 2026: vigencia de octubre no acreditada."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden 2.0 MT 4WD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M00-9",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "Sinotruk Bolden diésel 2.0",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-sin-precio-version",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "family-only",
+        "note": "El importador publica otros acabados de Bolden. La homologación no declara una versión con importe individual verificado."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Luxury 2.0 MT RWD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M01-3",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 18290000,
+        "commercialVersion": "Bolden Luxury 4x2 MT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Advance 2.0 MT 4WD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M02-8",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 18590000,
+        "commercialVersion": "Bolden Advance 4x4 MT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Advance 2.0 MT RWD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M03-2",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 16990000,
+        "commercialVersion": "Bolden Advance 4x2 MT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Luxury 2.0 MT RWD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M04-7",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 18290000,
+        "commercialVersion": "Bolden Luxury 4x2 MT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Pro 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M00-5",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 26190000,
+        "commercialVersion": "Bolden Pro 4x4 AT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Advance 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M01-K",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 22090000,
+        "commercialVersion": "Bolden Advance 4x4 AT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Luxury 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M02-4",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 23790000,
+        "commercialVersion": "Bolden Luxury 4x4 AT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden Adventure 2.0 AT 4x4",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M03-9",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 30990000,
+        "commercialVersion": "Bolden Adventure 4x4 AT",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-con-bonos+IVA",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "matching-transmission-drivetrain-trim",
+        "note": "Lista de lanzamiento oficial del 17/06/2026, + IVA, con bonos; no acredita precio vigente en octubre."
+      }
+    },
+    {
+      "model": "Sinotruk Bolden 2.0 AT 2WD",
+      "homologationDate": "2026-03-24",
+      "homologationCodeSuffix": "1125M04-3",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "Sinotruk Bolden diésel 2.0",
+        "url": "https://sinotrukindumotora.cl/content/sinotruk/es/home/descubre/noticias/noticia-2026/sinotruk-pick-ups-llega-a-chile-de-la-mano-de-indumotora-con-bol.html",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-sin-precio-version",
+        "availability": "lanzamiento-junio2026",
+        "matchConfidence": "family-only",
+        "note": "El importador publica otros acabados de Bolden. La homologación no declara una versión con importe individual verificado."
+      }
+    },
+    {
+      "model": "Mercedes-Benz CLE 53 4Matic Plus AMG",
+      "homologationDate": "2026-02-09",
+      "homologationCodeSuffix": "0825S00-4",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "CLE 53 4MATIC+ Coupé",
+        "url": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-otra-carroceria",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "Kaufmann publica Coupé, no Cabriolet; no trasladar importes a otra carrocería. CLE53 se presenta en USD, sin conversión artificial."
+      }
+    },
+    {
+      "model": "Mercedes-Benz CLE 53 AMG Cabriolet",
+      "homologationDate": "2026-02-09",
+      "homologationCodeSuffix": "0825S01-9",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "CLE 53 4MATIC+ Coupé",
+        "url": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-otra-carroceria",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "Kaufmann publica Coupé, no Cabriolet; no trasladar importes a otra carrocería. CLE53 se presenta en USD, sin conversión artificial."
+      }
+    },
+    {
+      "model": "Mercedes-Benz CLE 300 4matic Coupé",
+      "homologationDate": "2026-01-30",
+      "homologationCodeSuffix": "1125S00-5",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 72900000,
+        "commercialVersion": "CLE 300 Coupé",
+        "url": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista-otra-configuracion",
+        "availability": "published",
+        "matchConfidence": "family-engine-body",
+        "note": "Kaufmann publica el precio del Coupé, pero la tracción/acabado del código 3CV no están conciliados."
+      }
+    },
+    {
+      "model": "Mercedes-Benz CLE 300 4MATIC Cabriolet",
+      "homologationDate": "2026-01-30",
+      "homologationCodeSuffix": "1125S01-K",
+      "technology": "Bencina",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": null,
+        "commercialVersion": "CLE 300 Coupé",
+        "url": "https://www.kaufmann.cl/automoviles/mercedes-benz/cle-coupe",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "familia-otra-carroceria",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "Kaufmann publica Coupé, no Cabriolet; no trasladar importes a otra carrocería. CLE53 se presenta en USD, sin conversión artificial."
+      }
+    },
+    {
+      "model": "Foton View Grand 12",
+      "homologationDate": "2025-12-01",
+      "homologationCodeSuffix": "1025M00-3",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 23990000,
+        "commercialVersion": "View Grand Pasajeros MT 12",
+        "url": "https://cidef.cl/modelo/view-grand-pasajeros/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-seats-no-gearbox",
+        "note": "El importador publica precio de transmisión manual; la homologación no certifica si su caja coincide. No atribuir importe a automática."
+      }
+    },
+    {
+      "model": "Foton View Grand 9",
+      "homologationDate": "2025-12-01",
+      "homologationCodeSuffix": "1025M01-8",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 22990000,
+        "commercialVersion": "View Grand Pasajeros MT 9",
+        "url": "https://cidef.cl/modelo/view-grand-pasajeros/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-seats-no-gearbox",
+        "note": "El importador publica precio de transmisión manual; la homologación no certifica si su caja coincide. No atribuir importe a automática."
+      }
+    },
+    {
+      "model": "Foton View Grand 3",
+      "homologationDate": "2025-12-01",
+      "homologationCodeSuffix": "1025M02-2",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 19990000,
+        "commercialVersion": "View Grand Cargo 2.0 TD 6MT",
+        "url": "https://cidef.cl/lanzamiento-del-nuevo-foton-view-grand/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "El precio desde de la versión Cargo está publicado; la denominación 3/3LF no acredita techo, caja ni variante exactos."
+      }
+    },
+    {
+      "model": "Foton View Grand 3LF",
+      "homologationDate": "2025-12-01",
+      "homologationCodeSuffix": "1025M03-7",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 19990000,
+        "commercialVersion": "View Grand Cargo 2.0 TD 6MT",
+        "url": "https://cidef.cl/lanzamiento-del-nuevo-foton-view-grand/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "El precio desde de la versión Cargo está publicado; la denominación 3/3LF no acredita techo, caja ni variante exactos."
+      }
+    },
+    {
+      "model": "Foton VIEW GRAND 12",
+      "homologationDate": "2025-10-28",
+      "homologationCodeSuffix": "0925M00-0",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 23990000,
+        "commercialVersion": "View Grand Pasajeros MT 12",
+        "url": "https://cidef.cl/modelo/view-grand-pasajeros/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-seats-no-gearbox",
+        "note": "El importador publica precio de transmisión manual; la homologación no certifica si su caja coincide. No atribuir importe a automática."
+      }
+    },
+    {
+      "model": "Foton VIEW GRAND 9",
+      "homologationDate": "2025-10-28",
+      "homologationCodeSuffix": "0925M01-5",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 22990000,
+        "commercialVersion": "View Grand Pasajeros MT 9",
+        "url": "https://cidef.cl/modelo/view-grand-pasajeros/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-seats-no-gearbox",
+        "note": "El importador publica precio de transmisión manual; la homologación no certifica si su caja coincide. No atribuir importe a automática."
+      }
+    },
+    {
+      "model": "Foton VIEW GRAND 3",
+      "homologationDate": "2025-10-28",
+      "homologationCodeSuffix": "0925M02-K",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 19990000,
+        "commercialVersion": "View Grand Cargo 2.0 TD 6MT",
+        "url": "https://cidef.cl/lanzamiento-del-nuevo-foton-view-grand/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "El precio desde de la versión Cargo está publicado; la denominación 3/3LF no acredita techo, caja ni variante exactos."
+      }
+    },
+    {
+      "model": "Foton VIEW GRAND 3LF",
+      "homologationDate": "2025-10-28",
+      "homologationCodeSuffix": "0925M03-4",
+      "technology": "Diésel",
+      "status": "family-commercial-reference-only",
+      "reference": {
+        "priceClp": 19990000,
+        "commercialVersion": "View Grand Cargo 2.0 TD 6MT",
+        "url": "https://cidef.cl/lanzamiento-del-nuevo-foton-view-grand/",
+        "sourceKind": "manufacturer-or-importer-publication",
+        "priceType": "lanzamiento-lista+IVA",
+        "availability": "published",
+        "matchConfidence": "family-only",
+        "note": "El precio desde de la versión Cargo está publicado; la denominación 3/3LF no acredita techo, caja ni variante exactos."
+      }
+    }
+  ],
+  "historical": [
+    {
+      "model": "DFLM T5 EVO MT",
+      "homologationDate": "2026-02-05",
+      "homologationCodeSuffix": "1224S05-8",
+      "status": "historical-expired-only",
+      "reference": {
+        "url": "https://curifor.cl/modelos/t5-evo",
+        "note": "La promoción publicada venció el 30 de septiembre de 2026; conservar sólo como antecedente, no precio actual."
+      }
+    },
+    {
+      "model": "DFLM T5 EVO Family",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S04-4",
+      "status": "historical-expired-only",
+      "reference": {
+        "url": "https://curifor.cl/modelos/t5-evo",
+        "note": "La promoción publicada venció el 30 de septiembre de 2026; conservar sólo como antecedente, no precio actual."
+      }
+    },
+    {
+      "model": "DFLM T5 EVO Family 6",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S05-8",
+      "status": "historical-expired-only",
+      "reference": {
+        "url": "https://curifor.cl/modelos/t5-evo",
+        "note": "La promoción publicada venció el 30 de septiembre de 2026; conservar sólo como antecedente, no precio actual."
+      }
+    },
+    {
+      "model": "DFLM T5 EVO Family 5",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S06-1",
+      "status": "historical-expired-only",
+      "reference": {
+        "url": "https://curifor.cl/modelos/t5-evo",
+        "note": "La promoción publicada venció el 30 de septiembre de 2026; conservar sólo como antecedente, no precio actual."
+      }
+    },
+    {
+      "model": "DFLM T5 EVO AT",
+      "homologationDate": "2026-02-04",
+      "homologationCodeSuffix": "0226S07-5",
+      "status": "historical-expired-only",
+      "reference": {
+        "url": "https://curifor.cl/modelos/t5-evo",
+        "note": "La promoción publicada venció el 30 de septiembre de 2026; conservar sólo como antecedente, no precio actual."
+      }
+    },
+    {
+      "model": "Toyota BZ4X BEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "0925S00-8",
+      "status": "historical-expired-only",
+      "reference": {
+        "url": "https://toyota.cl/terminos-y-condiciones-comerciales-por-modelo/",
+        "note": "La promoción publicada venció el 30 de septiembre de 2026; conservar sólo como antecedente, no precio actual."
+      }
+    },
+    {
+      "model": "Toyota BZ4X AWD BEV",
+      "homologationDate": "2025-11-03",
+      "homologationCodeSuffix": "0925S00-6",
+      "status": "historical-expired-only",
+      "reference": {
+        "url": "https://toyota.cl/terminos-y-condiciones-comerciales-por-modelo/",
+        "note": "La promoción publicada venció el 30 de septiembre de 2026; conservar sólo como antecedente, no precio actual."
+      }
+    }
+  ]
+}

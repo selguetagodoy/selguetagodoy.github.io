@@ -159,6 +159,7 @@ jobs:
         run: |
           node rindelab/tests/price-association-audit.cjs
           node rindelab/tests/market-price-followup.cjs
+          node rindelab/tests/market-price-thirdpass.cjs
 
       - name: Verify announced launches, local offers and recent homologations
         run: node rindelab/tests/market-status-evidence.cjs

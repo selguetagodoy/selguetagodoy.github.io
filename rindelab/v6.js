@@ -54,6 +54,11 @@ function recentNoPrice(row){
 let marketEvidence=new Map();
 let priceAssociationAudit=new Map();
 let marketPriceFollowup=new Map();
+let marketPriceThirdpass=new Map();
+function thirdPriceFor(row){
+ const k=normalize(row[F.BRAND]+' '+row[F.MODEL])+'|'+row[F.DATE]+'|'+String(row[F.CODE]||'').slice(-9).toUpperCase();
+ return marketPriceThirdpass.get(k)||null;
+}
 function marketFollowupFor(row){
  const k=normalize(row[F.BRAND]+' '+row[F.MODEL])+'|'+row[F.DATE]+'|'+String(row[F.CODE]||'').slice(-9).toUpperCase();
  return marketPriceFollowup.get(k)||null;
@@ -62,7 +67,7 @@ function hasFamilyPriceEvidence(row){
  const a=auditedPriceFor(row),e=marketFollowupFor(row);
  return a?.category==='family-price-undocumented-tech'||
   (a?.category==='unmatched-catalog'&&(e?.reference?.samePowertrain===true||
-    e?.dealers?.some(d=>Number.isInteger(d.listPriceClp)&&d.listPriceClp>0)));
+    e?.dealers?.some(d=>Number.isInteger(d.listPriceClp)&&d.listPriceClp>0)))||Boolean(thirdPriceFor(row));
 }
 function auditedPriceFor(row){
  const key=normalize(row[F.BRAND]+' '+row[F.MODEL])+'|'+row[F.DATE]+'|'+String(row[F.CODE]||'').slice(-9).toUpperCase();
@@ -459,6 +464,7 @@ function render(){
   const evidence=marketEvidenceFor(row);
   const audit=recent?auditedPriceFor(row):null;
   const extra=recent?marketFollowupFor(row):null;
+  const third=recent?thirdPriceFor(row):null;
   const verifiedFamily=recent&&hasFamilyPriceEvidence(row);
   if(recent)article.classList.add('vehicle-card-recent');
   const offer=!status&&!recent?window.RindelabCommercial?.minimum(row,family(row)):null;
@@ -477,17 +483,21 @@ function render(){
   const auditSource=audit?.category==='family-price-undocumented-tech'&&Array.isArray(audit.sources)?audit.sources.find(s=>/^https:\/\//.test(s.url||'')):null;
   const officialReference=extra?.reference;
   const dealerReference=extra?.dealers?.[0];
-  const supplementalHTML=officialReference?
+  const supplementalHTML=third?
+   '<small>'+safe(third.reference.availability==='anunciado-proximamente'?'Anunciado, sin venta acreditada':third.reference.priceType.includes('bonos')?'Precio de otra versión, con condición promocional':'Referencia comercial de otra versión')+(Number.isInteger(third.reference.priceClp)?': <strong>'+safe(money(third.reference.priceClp))+(third.reference.priceType.includes('+IVA')?' + IVA':'')+'</strong>':'')+' · '+safe(third.reference.commercialVersion)+'</small><small>'+safe(third.reference.note)+'</small><a href="'+safe(third.reference.url)+'" target="_blank" rel="noopener noreferrer">Ver fuente del fabricante o importador ↗</a>':
+   officialReference?
    '<small>'+safe(officialReference.priceType==='lista-vencida'?'Referencia comercial caducada':officialReference.priceType==='desde'?'Valor promocional «desde»':officialReference.priceType==='lista+IVA'?'Precio de lista, sin IVA':'Precio de lista de otra versión')+': <strong>'+safe(money(officialReference.referencePriceClp))+(officialReference.priceType==='lista+IVA'?' + IVA':'')+'</strong> · '+safe(officialReference.commercialVersion)+'</small><small>'+safe(officialReference.note)+'</small><a href="'+safe(officialReference.url)+'" target="_blank" rel="noopener noreferrer">Comprobar precio y condiciones comerciales ↗</a>':
-   dealerReference?'<small>'+safe(dealerReference.seller)+(Number.isInteger(dealerReference.listPriceClp)?' publicó una referencia de '+safe(money(dealerReference.listPriceClp))+(dealerReference.taxIncluded===false?' + IVA':'')+' para la familia, sin acabado 3CV homologado.':' publicó la familia, sin precio de versión comprobado.')+'</small><a href="'+safe(dealerReference.url)+'" target="_blank" rel="noopener noreferrer">Ver anuncio de concesionaria ↗</a>':'';
-  const shownTitle=officialReference?.samePowertrain?'Precio comercial de familia · Versión 3CV pendiente':
+   dealerReference?'<small>'+safe(dealerReference.seller)+(Number.isInteger(dealerReference.listPriceClp)&&audit?.category==='unmatched-catalog'?' publicó una referencia de '+safe(money(dealerReference.listPriceClp))+(dealerReference.taxIncluded===false?' + IVA':'')+' para la familia, sin acabado 3CV homologado.':' publicó la familia, sin precio de versión comprobado.')+'</small><a href="'+safe(dealerReference.url)+'" target="_blank" rel="noopener noreferrer">Ver anuncio de concesionaria ↗</a>':'';
+  const shownTitle=third?(third.reference.availability==='anunciado-proximamente'?'Lanzamiento anunciado · Precio referencial':third.reference.matchConfidence==='family-only'?'Precio de familia publicado · Versión sin verificar':'Precio publicado de otra versión · No imputable al 3CV'):
+   officialReference?.samePowertrain?'Precio comercial de familia · Versión 3CV pendiente':
    officialReference?'Referencia de otra versión · Revisar vigencia y motor':
    dealerReference&&audit?.category==='unmatched-catalog'?(Number.isInteger(dealerReference.listPriceClp)?'Precio publicado de familia · Versión por verificar':'Anuncio en concesionaria · Precio por comprobar'):auditedTitle;
-  const shownDescription=officialReference?.samePowertrain?
+  const shownDescription=third?'La fuente documenta una versión comercial de esta familia, no necesariamente esta homologación; no se atribuye automáticamente el precio al código técnico.':
+   officialReference?.samePowertrain?
    'Existe precio publicado de una versión con esta tecnología, pero el acabado no está conciliado con el código 3CV. El importe no se asigna automáticamente.':
    officialReference?'El precio corresponde a una variante comercial de referencia y no debe atribuirse a esta homologación.':
    dealerReference&&audit?.category==='unmatched-catalog'?'El modelo o familia tiene una publicación comercial, pero no la equivalencia exacta de esta homologación.':auditedDescription;
-  const auditNote=recent?'<div class="rinde-commercial rinde-recent rinde-price-audit" data-price-audit="'+safe(audit?.category||'pending')+'" role="note"><strong>'+safe(shownTitle)+'</strong><small>'+safe(shownDescription)+'</small>'+supplementalHTML+'<small>Segundo chequeo 22-10-2026 · Precio de versión distinto de valor homologado · stock no verificado.</small>'+(!supplementalHTML&&auditSource?'<a href="'+safe(auditSource.url)+'" target="_blank" rel="noopener noreferrer">Ver referencia de otra versión de familia ↗</a>':'')+'</div>':'';
+  const auditNote=recent?'<div class="rinde-commercial rinde-recent rinde-price-audit" data-price-audit="'+safe(audit?.category||'pending')+'" role="note"><strong>'+safe(shownTitle)+'</strong><small>'+safe(shownDescription)+'</small>'+supplementalHTML+'<small>Chequeo 22-10-2026 · Precio de versión comercial, no del código 3CV · Stock y vigencia por verificar.</small>'+(!supplementalHTML&&auditSource?'<a href="'+safe(auditSource.url)+'" target="_blank" rel="noopener noreferrer">Ver referencia de otra versión de familia ↗</a>':'')+'</div>':'';
   const offerHTML=evidencedHTML||auditNote||(offer?'<div class="rinde-commercial"><small>'+safe(offerCaption)+'</small> <strong>'+safe(money(offer.priceListClp))+(offer.taxIncluded===false?' + IVA':'')+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'');
   const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
   article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
@@ -956,6 +966,21 @@ async function init(){
    }
    marketPriceFollowup=map;
   }catch(err){marketPriceFollowup=new Map();console.warn('RINDELAB: segundo chequeo pendiente',err.message);}
+  // Tercer cruce comercial. Los importes referenciales nunca son precios asignados al código 3CV.
+  try{
+   const response=await fetch('./data/market-price-thirdpass-20261022.json?v=20261022-thirdpass7');
+   if(!response.ok)throw Error('Tercer cruce no disponible');
+   const dataset=await response.json();
+   if(dataset.schemaVersion!==1||!Array.isArray(dataset.records)||dataset.summary?.baselinePending!==274)throw Error('Esquema incompatible');
+   const next=new Map();
+   for(const item of dataset.records){
+    const key=normalize(item.model)+'|'+item.homologationDate+'|'+item.homologationCodeSuffix.toUpperCase();
+    if(next.has(key)||!priceAssociationAudit.has(key)||!/^https:\/\//.test(item.reference?.url||''))throw Error('Registro de homologación o fuente inválidos');
+    next.set(key,item);
+   }
+   if(next.size!==dataset.summary.additionalFamilyReference)throw Error('Resumen inconsistente');
+   marketPriceThirdpass=next;
+  }catch(error){marketPriceThirdpass=new Map();console.warn('RINDELAB: tercer cruce pendiente',error.message);}
   const availableYears=[...new Set(all.map(r=>String(r[F.DATE]).slice(0,4)).filter(y=>/^20\d\d$/.test(y)))].sort().reverse();
   $('year').replaceChildren(new Option('Todo el historial',''),...availableYears.map(y=>new Option(y,y)));
   $('statsOpen').disabled=false;
