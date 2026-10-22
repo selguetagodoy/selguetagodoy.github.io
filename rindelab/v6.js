@@ -864,7 +864,7 @@ async function init(){
   if(!prices?.length){$('catalogScope').value='all';$('catalogScopeHint').textContent='No se pudo cargar el catálogo comercial; se presenta la base oficial 3CV completa.';}
   // Evidencia comercial externa: en fallos de red conservar la clasificación prudente.
   try{
-   const response=await fetch('./data/market-status-evidence-20261022.json?v=20261022-status1');
+   const response=await fetch('./data/market-status-evidence-20261022.json?v=20261022-priced-cache4');
    if(!response.ok)throw Error('Evidencia comercial no disponible');
    const dataset=await response.json();
    if(dataset.schemaVersion!==1||!Array.isArray(dataset.records))throw Error('Esquema inválido');
