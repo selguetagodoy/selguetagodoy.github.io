@@ -56,7 +56,7 @@ assert(!String(find('Great Wall','Haval Jolion','EV',2026)?.src||'').includes('n
 assert.match(find('Seat','Ibiza','',2026)?.src||'',/new-seat-ibiza/);
 const cover=require('../data/catalog-coverage-20261021.json');
 assert.equal(cover.summary.photosInLibrary,259);
-assert.equal(cover.summary.activeFamiliesTechnologies,696);
-assert.equal(cover.summary.withoutFamilyPhoto,419);
+assert.equal(cover.summary.activeFamiliesTechnologies,700);
+assert.equal(cover.summary.withoutFamilyPhoto,423);
 assert.equal(cover.allGroups.filter(x=>!!x.photo).length,277);
-console.log('PASS fotos: 43 archivos nuevos licenciados, 259 fotos comerciales, 277 asociaciones, 419 brechas');
+console.log('PASS fotos: 43 archivos nuevos licenciados, 259 fotos comerciales, 277 asociaciones, 423 brechas');
