@@ -6,6 +6,7 @@ on:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
       - "scripts/audit-price-sources.cjs"
+      - "scripts/audit-used-lifecycle.cjs"
       - "scripts/rindelab-price-queue.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
@@ -20,6 +21,7 @@ on:
       - "rindelab/**"
       - ".github/workflows/rindelab-ui-e2e.yml"
       - "scripts/audit-price-sources.cjs"
+      - "scripts/audit-used-lifecycle.cjs"
       - "scripts/rindelab-price-queue.cjs"
       - "scripts/audit-commercial-3cv-coverage.cjs"
       - "scripts/audit-commercial-versions.cjs"
@@ -158,6 +160,9 @@ jobs:
       - name: Validate observed used price references without fabricated median or SII mappings
         run: node rindelab/tests/used-market-data.cjs
 
+      - name: Audit discontinued coverage and missing market prices
+        run: node scripts/audit-used-lifecycle.cjs --check
+
       - name: Verify 29 supplemental used market sources and retained anomaly exclusions
         run: node rindelab/tests/used-supplement.cjs
 
@@ -166,6 +171,7 @@ jobs:
           node --check rindelab/used-market.js
           node --check rindelab/usados.js
           node rindelab/tests/used-prices.cjs
+          node rindelab/tests/used-retirement-view.cjs
 
       - name: Verify nationwide commercial catalog and five-model comparison
         run: node rindelab/tests/market-stages.cjs
