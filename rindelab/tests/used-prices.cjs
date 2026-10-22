@@ -9,7 +9,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    const base=(process.env.RINDELAB_BASE_URL||'http://127.0.0.1:8765/rindelab/').replace(/\/$/,'/');
    await page.goto(base+'usados.html',{waitUntil:'domcontentloaded'});
-   await page.waitForFunction(()=>window.RindelabUsed?.count()===267&&document.querySelectorAll('.used-result').length>0,{timeout:30000});
+   await page.waitForFunction(()=>window.RindelabUsed?.count()===296&&document.querySelectorAll('.used-result').length>0,{timeout:30000});
    await page.fill('#usedQuery','Nissan March');
    await page.waitForFunction(()=>Number(document.querySelector('#usedCount').textContent.match(/^\d+/)?.[0])>=5);
    assert(await page.locator('.used-result').count()>=5);

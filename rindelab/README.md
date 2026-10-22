@@ -1,12 +1,12 @@
 # Autos usados: precios documentados y descontinuados · 21/10/2026
 
-La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) reúne **267 referencias habilitadas** sobre **270 registros documentados** por modelo y año, en **27 marcas y 91 familias**. El lote concilia 178 referencias previamente publicadas con 92 registros adicionales no duplicados. Tres referencias están retenidas para revisión (Audi R8 2016, BMW i8 2016 y Suzuki Kizashi 2015) y no aparecen como valores comerciales válidos.
+La sección pública [Autos usados](https://selguetagodoy.github.io/rindelab/usados.html) consolida **296 referencias comerciales habilitadas sobre 299 registros de origen** (293 combinaciones únicas de modelo/año, en **28 marcas y 92 familias**). La actualización conservó los 270 registros previos y añadió 29 fuentes no duplicadas. Los tres casos anómalos (Audi R8 2016, BMW i8 2016 y Suzuki Kizashi 2015) siguen retenidos y no se muestran como valores válidos.
 
-AutoExplora aporta **20 medianas de precios pedidos en avisos**, con bandas p10–p90 y tamaño de muestra verificado; Autofact aporta **250 rangos comerciales aproximados** sin imputar medianas. Cada observación conserva año y URL de fuente. No se inventa depreciación ni se extrapolan montos entre años.
+AutoExplora aporta **20 medianas de precios pedidos en avisos**, con bandas p10–p90 y tamaño de muestra documentado; Autofact aporta **279 rangos mínimo–máximo aproximados**, de los cuales **276 están habilitados**. No se imputa una mediana a Autofact ni se inventan ventas cerradas, kilómetros, depreciación o valores para años sin fuente.
 
-El directorio prioriza familias documentadas como descontinuadas en Chile mediante el filtro inicial «Solo descontinuados», desactivable para ver todas las referencias. Un retiro se clasifica únicamente con alcance de familia completa y antecedente trazable; no se retiran generaciones o motorizaciones por suposición.
+El directorio prioriza familias documentadas como descontinuadas mediante el filtro inicial «Solo descontinuados», desactivable para ver los vehículos vigentes. **53 de 65 familias completamente retiradas** tienen alguna referencia por año, mientras **12** no tienen una coincidencia documental inequívoca. Los 25 casos restantes de retiros de generación o variante no se equiparan automáticamente a toda la familia.
 
-El precio comercial usado sigue separado de la **tasación fiscal SII 2026** (81.697 registros, 264 marcas) y del permiso de circulación. Para una tasación fiscal se selecciona manualmente año, versión tributaria y código. Fuentes por modelo y año: `sii/USADOS-VALOR-COMERCIAL-20261021.md`; QA: `rindelab/tests/used-market-data.cjs` y `rindelab/tests/used-prices.cjs`.
+El precio de mercado usado se mantiene separado de la **tasación fiscal SII 2026** (81.697 registros, 264 marcas) y del permiso de circulación; la selección del año, código y versión tributaria es manual. Informe de cobertura y brechas: `sii/COBERTURA-VALORES-USADOS-20261021.md`; manifiesto de ampliación: `sii/data/used-supplement-29-20261021.json`. Pruebas: `rindelab/tests/used-market-data.cjs`, `rindelab/tests/used-supplement.cjs` y `rindelab/tests/used-prices.cjs`.
 
 ---
 

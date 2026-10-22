@@ -2,7 +2,7 @@
  * Los precios son avisos o rangos de terceros observados en su fecha documental,
  * NO transacciones cerradas ni tasaciones tributarias SII. */
 (()=>{'use strict';
-const DATA='./sii/data/used-market-20261021.json?v=20261021-union270';
+const DATA='./sii/data/used-market-20261021.json?v=20261021-supplement299';
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' y ').replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
 const key=(b,m)=>norm(b)+'|'+norm(m);
 const clp=n=>Number.isFinite(n)?'$'+n.toLocaleString('es-CL'):'N/D';

@@ -158,6 +158,9 @@ jobs:
       - name: Validate observed used price references without fabricated median or SII mappings
         run: node rindelab/tests/used-market-data.cjs
 
+      - name: Verify 29 supplemental used market sources and retained anomaly exclusions
+        run: node rindelab/tests/used-supplement.cjs
+
       - name: Verify prices of used and discontinued cars with SII year
         run: |
           node --check rindelab/used-market.js
