@@ -37,12 +37,18 @@ async function show(row,family){
  const section=document.createElement('section');section.className='sii-section';section.id='siiSection';
  section.innerHTML='<div class="sii-section-head"><div><span class="sii-overline">REFERENCIA TRIBUTARIA · AÑO 2026</span><h3>Tasación, permiso y precio</h3></div><span class="sii-origin">SII 2026</span></div>'+
  '<p class="sii-small">El permiso corresponde al valor publicado por el SII para el año y código seleccionados. La tasación no es el precio comercial de reventa.</p>'+
- '<div id="siiCurrentValue">'+(getStored(row)?reportSelected(getStored(row)):'<p class="sii-pending">Elige el año y la versión del SII para conocer los valores oficiales. No se asignan automáticamente.</p>')+'</div>'+
- '<div class="sii-actions"><button id="siiShowLookup" type="button" class="button primary">Consultar tasación y permiso</button><button id="siiClear" type="button" class="button secondary" '+(getStored(row)?'':'hidden')+'>Quitar selección</button></div>'+
+ '<div id="siiDirectInline"></div>'+
+ '<div id="siiCurrentValue">'+(getStored(row)?reportSelected(getStored(row)):'<p class="sii-pending">No has fijado una versión tributaria para el comparador. Puedes elegirla directamente arriba o usar la consulta manual avanzada.</p>')+'</div>'+
+ '<div class="sii-actions"><button id="siiShowLookup" type="button" class="button primary">Búsqueda avanzada por código SII</button><button id="siiClear" type="button" class="button secondary" '+(getStored(row)?'':'hidden')+'>Quitar selección</button></div>'+
  '<div id="siiLookup" class="sii-lookup" hidden></div>'+
  '<div id="siiCommercial" class="sii-commercial"><small>Precio comercial nuevo</small><p>Buscando precios oficiales documentados…</p></div>'+
  '<div class="sii-links"><a href="'+siiUrl+'" target="_blank" rel="noopener noreferrer">Consulta oficial SII ↗</a><a href="'+siiFile+'" target="_blank" rel="noopener noreferrer">Planilla SII 2026 ↗</a></div>';
  detail.append(section);
+ window.RindelabDirectSII?.mountYearPicker(section.querySelector('#siiDirectInline'),{brand:row[0],model:family,onSelected:entry=>{
+  store(row,entry);
+  const now=section.querySelector('#siiCurrentValue');if(now)now.innerHTML=reportSelected({entry});
+  const clear=section.querySelector('#siiClear');if(clear)clear.hidden=false;
+ }});
  window.RindelabUsed?.mount(section,row[0],family);
  const button=section.querySelector('#siiShowLookup');
  button.addEventListener('click',()=>openLookup(section,row,family));
