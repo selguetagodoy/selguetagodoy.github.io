@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "checkedAt": "2026-10-21",
-  "policy": "Photographs of identifiable historic model/generation only. Never assert exact trim. Remote previews load from Wikimedia Commons and may be temporarily unavailable.",
+  "policy": "Local optimized-by-source thumbnails, attributed photos of models or historical generations; never exact fiscal/commercial trim.",
   "records": [
     {
       "brand": "Nissan",
@@ -12,11 +12,15 @@
       "generation": "K13",
       "file": "Nissan March Sport 1.6 Sense 2016 (34255870171).jpg",
       "caption": "March K13 Sport 2016, referencia de generación",
-      "author": "RL GNZLZ",
+      "author": "RL GNZLZ from Chile",
       "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "allowFamilyUnspecified": true,
-      "source": "https://commons.wikimedia.org/wiki/File:Nissan_March_Sport_1.6_Sense_2016_(34255870171).jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Nissan_March_Sport_1.6_Sense_2016_(34255870171).jpg",
+      "localSrc": "./images/historic/nissan-march-2016-k13.jpg",
+      "bytes": 205939,
+      "sha256": "07440a2c1c3fe19dac2112971c6c932e543a0ab2e7956a0fee3e6bf2ab8a68fb",
+      "imageResolution": "Commons thumbnail, locally hosted"
     },
     {
       "brand": "Toyota",
@@ -29,9 +33,13 @@
       "caption": "Prius C 2013, referencia de generación",
       "author": "Fletcher6",
       "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
       "allowFamilyUnspecified": true,
-      "source": "https://commons.wikimedia.org/wiki/File:Toyota_Prius_C.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Toyota_Prius_C.jpg",
+      "localSrc": "./images/historic/toyota-prius-c-2013-nhp10.jpg",
+      "bytes": 174657,
+      "sha256": "8992894e1bd51865ace221861195c3dab67b1b411770869b1347124bd86c9a01",
+      "imageResolution": "Commons thumbnail, locally hosted"
     },
     {
       "brand": "Kia",
@@ -43,11 +51,15 @@
       "variantMatch": "RIO 5",
       "file": "Kia Rio5 1.4 EX 2015 (17189129947).jpg",
       "caption": "Rio 5 hatchback 2015; no representa al Rio 4 sedán",
-      "author": "order_242",
+      "author": "order_242 from Chile",
       "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "allowFamilyUnspecified": false,
-      "source": "https://commons.wikimedia.org/wiki/File:Kia_Rio5_1.4_EX_2015_(17189129947).jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Kia_Rio5_1.4_EX_2015_(17189129947).jpg",
+      "localSrc": "./images/historic/kia-rio-2015-ub-hatchback.jpg",
+      "bytes": 130324,
+      "sha256": "57bef696f8a1980f5830432876d440cb057041309944a3975eb3523ae093495b",
+      "imageResolution": "Commons thumbnail, locally hosted"
     },
     {
       "brand": "Mini",
@@ -58,11 +70,15 @@
       "generation": "F54",
       "file": "MINI Clubman (MSP16).jpg",
       "caption": "MINI Clubman F54 de 2016; modelo de referencia",
-      "author": "Jakub Maciejewski (Flyz1)",
+      "author": "Jakub \"Flyz1\" Maciejewski",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "allowFamilyUnspecified": true,
-      "source": "https://commons.wikimedia.org/wiki/File:MINI_Clubman_(MSP16).jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:MINI_Clubman_(MSP16).jpg",
+      "localSrc": "./images/historic/mini-clubman-2016-f54.jpg",
+      "bytes": 143877,
+      "sha256": "20284fa0fd0d5946304ca2ec290635330e21aa2d9523f98b4312b7f3f98064c6",
+      "imageResolution": "Commons thumbnail, locally hosted"
     },
     {
       "brand": "Mitsubishi",
@@ -74,10 +90,14 @@
       "file": "2014 Mitsubishi Lancer SE in Mercury Gray Pearl, front left, 07-04-2026.jpg",
       "caption": "Mitsubishi Lancer sedán 2014, no acredita otras generaciones",
       "author": "Cutlass",
-      "license": "CC0 1.0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "allowFamilyUnspecified": true,
-      "source": "https://commons.wikimedia.org/wiki/File:2014_Mitsubishi_Lancer_SE_in_Mercury_Gray_Pearl%2C_front_left%2C_07-04-2026.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:2014_Mitsubishi_Lancer_SE_in_Mercury_Gray_Pearl%2C_front_left%2C_07-04-2026.jpg",
+      "localSrc": "./images/historic/mitsubishi-lancer-2014-sedan.jpg",
+      "bytes": 170187,
+      "sha256": "b90402208f67f192ef9c7b2ce66c45662025d04c87e3652ae96bb41416494822",
+      "imageResolution": "Commons thumbnail, locally hosted"
     },
     {
       "brand": "Hyundai",
@@ -88,26 +108,34 @@
       "generation": "FS",
       "file": "Hyundai Veloster 1.6 GLS 2015 (16920657255).jpg",
       "caption": "Veloster FS 2015; fotografía del modelo",
-      "author": "order_242",
+      "author": "order_242 from Chile",
       "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "allowFamilyUnspecified": true,
-      "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Veloster_1.6_GLS_2015_(16920657255).jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Veloster_1.6_GLS_2015_(16920657255).jpg",
+      "localSrc": "./images/historic/hyundai-veloster-2015-fs.jpg",
+      "bytes": 169417,
+      "sha256": "a65932669dd231139a4786b0bc4c9d5717e56d909c4d4cde0dd4e1c78f7dc83e",
+      "imageResolution": "Commons thumbnail, locally hosted"
     },
     {
       "brand": "Ford",
       "model": "Focus",
-      "from": 2016,
-      "to": 2017,
+      "from": 2015,
+      "to": 2018,
       "referenceYear": 2016,
-      "generation": "Tercera generación",
-      "file": "FordFocus-Tandil-ago2016.jpg",
-      "caption": "Ford Focus fotografiado en 2016; referencia de generación",
-      "author": "Ezarate",
+      "generation": "Mk III facelift hatchback",
+      "file": "2016 Ford Focus SE Hatchback in Tectonic Metallic, front left, 2025-10-13.jpg",
+      "caption": "Ford Focus Mk III facelift hatchback 2016; no representa al sedán ni a generaciones anteriores",
+      "author": "Elise240SX",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "allowFamilyUnspecified": false,
-      "source": "https://commons.wikimedia.org/wiki/File:FordFocus-Tandil-ago2016.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:2016_Ford_Focus_SE_Hatchback_in_Tectonic_Metallic%2C_front_left%2C_2025-10-13.jpg",
+      "localSrc": "./images/historic/ford-focus-2016-mk3-facelift.jpg",
+      "bytes": 146800,
+      "sha256": "478e4e42533f6ca27f83be6436936630d27c6a17817e0d285b8249dfe5e903e8",
+      "imageResolution": "Commons thumbnail, locally hosted"
     },
     {
       "brand": "Nissan",
@@ -118,11 +146,16 @@
       "generation": "C11 hatchback",
       "file": "Nissan Tiida 1.6 Sport 2011 (14845289924).jpg",
       "caption": "Nissan Tiida C11 hatchback 2011; no representa al sedán",
-      "author": "order_242",
+      "author": "order_242 from Chile",
       "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "allowFamilyUnspecified": false,
-      "source": "https://commons.wikimedia.org/wiki/File:Nissan_Tiida_1.6_Sport_2011_(14845289924).jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Nissan_Tiida_1.6_Sport_2011_(14845289924).jpg",
+      "localSrc": "./images/historic/nissan-tiida-2011-c11-hatchback.jpg",
+      "bytes": 249646,
+      "sha256": "ca693d3b5c34f7c6aaca74a3b856c82e6d144255e82cf0d87054c4673d7f09fd",
+      "imageResolution": "Commons thumbnail, locally hosted"
     }
-  ]
+  ],
+  "downloaded": 8
 }

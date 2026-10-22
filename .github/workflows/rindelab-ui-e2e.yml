@@ -76,6 +76,7 @@ jobs:
           node scripts/tests/rindelab-dealer-expansion.test.cjs
           node scripts/report-dealer-expansion.cjs --check
           node --check rindelab/v2-photos.js
+          node rindelab/tests/photo-integrity.cjs
 
       - name: Verificar cola comercial y fotografía del catálogo nacional
         run: |
@@ -174,6 +175,7 @@ jobs:
           node --check rindelab/used-historic-photos.js
           node rindelab/tests/used-prices.cjs
           node rindelab/tests/used-retirement-view.cjs
+          node rindelab/tests/used-photo-preview.cjs
           node rindelab/tests/used-direct-sii-photos.cjs
 
       - name: Verify nationwide commercial catalog and five-model comparison

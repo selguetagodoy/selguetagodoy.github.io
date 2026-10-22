@@ -4,7 +4,7 @@
 (()=>{'use strict';
 const clean=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim();
 let loaded=null;
-const load=()=>loaded??=fetch('./sii/data/used-historical-photos-20261021.json').then(r=>{if(!r.ok)throw Error('Fotos históricas no disponibles');return r.json()}).then(r=>r.records).catch(()=>[]);
+const load=()=>loaded??=fetch('./sii/data/used-historical-photos-20261021.json?v=20261021-local8').then(r=>{if(!r.ok)throw Error('Fotos históricas no disponibles');return r.json()}).then(r=>r.records).catch(()=>[]);
 function modelKey(x){return clean(x).replace(/\s*\(.*\)\s*$/,'').trim()}
 function lookup(data,brand,model,year,variant=''){
  const group=modelKey(model),ver=clean(variant);
@@ -20,7 +20,7 @@ function mount(card,{brand,model,year=null,variant=''}) {
   if(!p)return;
   const fig=document.createElement('figure');fig.className='used-historic-photo';
   const img=document.createElement('img');
-  img.src='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file.replace(/ /g,'_'))+'?width=640';
+  img.src=p.localSrc; // Wikimedia verificada y alojada localmente; créditos en el manifiesto.
   img.alt='Fotografía referencial: '+p.caption;
   img.width=360;img.height=210;img.loading='lazy';img.decoding='async';
   img.addEventListener('error',()=>fig.remove(),{once:true});
