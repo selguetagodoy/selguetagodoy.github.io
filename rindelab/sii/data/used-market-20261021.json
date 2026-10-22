@@ -1265,6 +1265,17 @@
     {
       "source": "Autofact",
       "brandSlug": "hyundai",
+      "modelSlug": "equus",
+      "year": 2013,
+      "lowClp": 20723300,
+      "highClp": 25617000,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/hyundai/equus/2013",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "hyundai",
       "modelSlug": "ioniq",
       "year": 2020,
       "lowClp": 14065950,
@@ -1981,6 +1992,17 @@
       "source": "Autofact",
       "brandSlug": "mitsubishi",
       "modelSlug": "lancer",
+      "year": 2014,
+      "lowClp": 5792538,
+      "highClp": 7989970,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/mitsubishi/lancer/2014",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "mitsubishi",
+      "modelSlug": "lancer",
       "year": 2013,
       "lowClp": 5478721,
       "highClp": 6871117,
@@ -2442,6 +2464,17 @@
       "lowClp": 5422790,
       "highClp": 7818080,
       "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/peugeot/108/2018",
+      "observedAt": "2026-10-21",
+      "scope": "approximate-published-range"
+    },
+    {
+      "source": "Autofact",
+      "brandSlug": "peugeot",
+      "modelSlug": "108",
+      "year": 2017,
+      "lowClp": 5142500,
+      "highClp": 6222500,
+      "sourceUrl": "https://www.autofact.cl/valor-comercial-autos/peugeot/108/2017",
       "observedAt": "2026-10-21",
       "scope": "approximate-published-range"
     },
