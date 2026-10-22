@@ -58,13 +58,27 @@ for(const r of evidence.records){
   assert.match(await page.locator('.vehicle-card').first().innerText(),/50\.990\.000/);
   await page.selectOption('#catalogScope','family-price-review');
   await query('');
-  assert.equal(await count(),272,'Familias con precio pero motorización sin acreditar');
+  assert.equal(await count(),298,'272 fichas previas, 25 fuentes oficiales de misma motorización y una referencia de concesionaria');
   await query('Volvo XC60');
   assert.equal(await count(),4,'Volvo XC60 T8 se revisa sin atribuir precio de otro motor');
-  assert.match(await page.locator('.vehicle-card').first().innerText(),/no acreditan el precio/i);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/no debe atribuirse a esta homologación|no acreditan el precio/i);
+  await query('Changan Hunter REEV');
+  assert.equal(await count(),2);
+  const hunter=await page.locator('.vehicle-card').allInnerTexts();
+  assert(hunter.some(x=>x.includes('32.990.000'))&&hunter.some(x=>x.includes('36.990.000')),'Changan 4x2/4x4 deben mantener precios de referencia distintos');
+  await query('BMW M440i');
+  assert.equal(await count(),3,'M440i Coupé, Gran Coupé y Cabriolet son tres registros');
+  const m440=await page.locator('.vehicle-card').allInnerTexts();
+  assert(['85.900.000','86.900.000','89.900.000'].every(n=>m440.some(x=>x.includes(n))),'M440i por carrocería: precios diferenciados');
+  await query('Peugeot Boxer SC');
+  assert.equal(await count(),1,'Boxer sin motorización acreditada conserva precio de familia');
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/31\.390\.000[\s\S]*\+ IVA/);
+  await query('BMW 330e');
+  assert.equal(await count(),2);
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/65\.900\.000/);
   await page.selectOption('#catalogScope','recent-no-price');
   await query('');
-  assert.equal(await count(),300,'572 - 272 en revisión de precios de familia');
+  assert.equal(await count(),274,'572 - 298 con alguna referencia comercial de familia');
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.match(await page.locator('.vehicle-card').first().innerText(),/Referencias antiguas de la familia · Motor y vigencia por revisar/);
@@ -74,6 +88,6 @@ for(const r of evidence.records){
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.deepEqual(failures,[],'Errores de JavaScript');
-  console.log('PASS mercado Chile: 11 anunciadas, 6 con precios publicados (Mazda, Renault, Toyota, Cupra, BYD), 272 con precio de familia por conciliar y 300 sin precio de versión verificado; 1514 referencias; Mokka protegido');
+  console.log('PASS mercado Chile: 11 anunciadas, 6 con precios publicados (Mazda, Renault, Toyota, Cupra, BYD), 298 con precio de familia por conciliar y 274 sin precio de versión verificado; 1514 referencias; Mokka protegido');
  } finally {await browser.close();}
 })().catch(error=>{console.error(error.stack);process.exit(1)});
