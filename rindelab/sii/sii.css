@@ -100,3 +100,13 @@
 }
 
 .sii-overline{color:#0b5d6c}.sii-small,.sii-kpis small,.sii-selected p,.sii-commercial>small,.sii-commercial>strong span,.sii-price-item span,.sii-price-age{color:#455f73}
+
+/* Vista directa SII por modelo en fichas del buscador principal. */
+#siiDirectInline .used-sii-direct{border:1px solid #d7e5ed;border-radius:9px;margin:12px 0;padding:12px;color:#183d56;background:#f8fbfd}
+#siiDirectInline .used-sii-title{display:block;font-size:15px;color:#153e5d}
+#siiDirectInline .used-sii-select-label{display:grid;gap:5px;margin:9px 0;font-size:13px;font-weight:600}
+#siiDirectInline .used-sii-select{font-size:16px;min-height:44px;padding:8px;width:100%;max-width:100%;border:1px solid #abc0cf;border-radius:7px;background:white;color:#193d52}
+#siiDirectInline .used-sii-values{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:7px;margin-top:8px;font-variant-numeric:tabular-nums}
+#siiDirectInline .used-sii-values>div{border:1px solid #dce8ee;border-radius:7px;padding:8px;background:white;font-weight:700;font-size:14px}
+#siiDirectInline .used-sii-muted,#siiDirectInline .used-sii-caption{font-size:13px;color:#527084;line-height:1.45}
+#siiDirectInline .used-sii-source{display:inline-block;margin-top:8px;font-size:13px;color:#145b80}
