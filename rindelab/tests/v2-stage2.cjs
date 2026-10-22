@@ -60,7 +60,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  await check('Las 32 nuevas fotos locales tienen atribución y bytes íntegros',async()=>{
   const fs=require('node:fs');const path=require('node:path');const hash=require('node:crypto').createHash;
   const dir=path.join(__dirname,'../images/commons');const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
-  assert.equal(m.downloaded,196);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,196);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),238);
+  assert.equal(m.downloaded,196);assert.equal(m.skipped,0);assert.equal(m.results.filter(x=>x.status==='local').length,196);assert.equal(await p.evaluate(()=>window.RindelabPhotos.count),245);
   for(const entry of m.results){assert(entry.source.startsWith('https://commons.wikimedia.org/'));assert(entry.author);assert(entry.license);
    const bytes=fs.readFileSync(path.join(__dirname,'..',entry.path.slice(2)));
    assert.equal(bytes.length,entry.bytes);assert.equal(hash('sha256').update(bytes).digest('hex'),entry.sha256);}
