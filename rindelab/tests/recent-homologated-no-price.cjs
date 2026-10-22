@@ -16,7 +16,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   const mokka=cards.filter({hasText:'Mokka Electric'}).first();
   assert(await mokka.count(),'Mokka Electric no encontrado');
   const text=await mokka.innerText();
-  assert.match(text,/Homologado recientemente.*Sin precio disponible/s);
+  assert.match(text,/Homologación.*Precio por comprobar/s);
   assert.doesNotMatch(text,/22\.890\.000|24\.890\.000/,'Se atribuyo precio de gasolina a Mokka EV');
   assert(await mokka.locator('.rinde-status-recent').count(),'No aparece distintivo');
   assert.equal(await page.locator('#commercialResults').isVisible(),false,'Catalogo comercial no debe mezclarse en el filtro pendiente');
