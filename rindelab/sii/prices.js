@@ -64,7 +64,7 @@ function render(section,row,family){
   dst.append(p);
  }
  if(!available.length){
-  const missing=document.createElement('p');missing.className='sii-pending';missing.textContent='Sin precio publicado en el catálogo para este modelo. Puede estar descontinuado o pendiente de cobertura; no se sustituye por la tasación SII.';
+  const missing=document.createElement('p');missing.className='sii-pending';missing.textContent='Sin precio publicado de esta motorización. La homologación no acredita venta, stock ni lanzamiento; nunca se asignan precios de otra tecnología ni tasaciones SII como precio nuevo.';
   dst.append(missing);return;
  }
  const list=document.createElement('div');list.className='sii-price-list';
@@ -107,7 +107,7 @@ window.RindelabCommercial={
  records:()=>loaded.slice(),
  selected,
  available:(row,family)=>match(row,family),
- hasReference:(row,family)=>C.familyRecords(byFamily,row,family).length>0,
+ hasReference:(row,family)=>Boolean(C.priceReference(byFamily,row,family)),
  minimum:(row,family)=>C.priceReference(byFamily,row,family),
  cleanPrice:record=>record&&C.active(record)&&!C.expired(record)&&record.taxIncluded!==false&&record.priceType!=='oferta'&&record.priceType!=='desde'&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
  clp,

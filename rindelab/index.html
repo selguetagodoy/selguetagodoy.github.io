@@ -23,7 +23,7 @@
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./v6.css?v=20261021-etapas234"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2"><link rel="stylesheet" href="./used-market.css?v=20261021-mobile-dialog-fix">
+<link rel="stylesheet" href="./v6.css?v=20261022-recent-no-price"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2"><link rel="stylesheet" href="./used-market.css?v=20261021-mobile-dialog-fix">
 <link rel="stylesheet" href="./v2-premium.css?v=20261018-rc1">
 <link rel="stylesheet" href="./v2-claridad.css?v=20261018-v1">
 <link rel="stylesheet" href="./v2-polish.css?v=20261018-v1">
@@ -117,7 +117,7 @@
     <button type="button" class="button secondary" id="resetButton">Limpiar</button>
    </div>
   </form>
-  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Modelos con información comercial u homologación</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Incluye modelos publicados por concesionarias aunque no tengan precio de lista o ficha 3CV; los importes no certifican vigencia ni equivalencia exacta de versión.</small></div>
+  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Con precio comercial o homologación reciente sin precio</option><option value="recent-no-price">Homologado recientemente · Sin precio disponible</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Una homologación de los últimos 365 días sin precio compatible se identifica aparte y no entra en rankings comerciales. El precio publicado no prueba existencia de stock ni confirma un lanzamiento futuro.</small></div>
  </section>
  <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor gasto en energía (WLTP)</button><a href="./usados.html">💰 Tasación y precio usado</a><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
@@ -142,7 +142,7 @@
     <p><strong>Gasto anual estimado.</strong> Usa el rendimiento 3CV, kilometraje seleccionado y precios editables de energía, constantes en la simulación. No equivale a un gasto real medido ni incluye depreciación. <a href="./metodologia.html">Metodología completa ↗</a></p>
    </div>
   </details>
-  <p id="mttSearchSection" class="mtt-search-notice" role="note" hidden><strong>Solo homologación, sin rendimiento oficial.</strong> El modelo buscado aparece en una nómina técnica, pero no tiene ficha de consumo comparable. <a id="mttSearchLink" href="./novedades-3cv.html">Ver registro en novedades 3CV ↗</a></p>
+  <p id="mttSearchSection" class="mtt-search-notice" role="note" hidden><strong id="mttNoticeHeading">Solo homologación, sin rendimiento oficial.</strong> <span id="mttNoticeBody">El modelo buscado aparece en una nómina técnica, pero no tiene ficha de consumo comparable.</span> <a id="mttSearchLink" href="./novedades-3cv.html">Ver registro en novedades 3CV ↗</a></p>
   <p id="mttLoadNotice" class="mtt-load-notice" role="status" hidden></p>
   <div id="emptyState" class="empty" hidden></div>
   <div id="suggested" class="suggested" hidden></div>
@@ -323,10 +323,10 @@
 <script src="./sii/direct-sii.js?v=20261021-inline1" defer></script>
 <script src="./sii/sii.js?v=20261021-sii-direct1" defer></script>
 <script src="./used-market.js?v=20261021-supplement299" defer></script>
-<script src="./sii/catalog-identity.js?v=20261021-normalized1" defer></script>
- <script src="./sii/prices.js?v=20261021-normalized1" defer></script>
+<script src="./sii/catalog-identity.js?v=20261022-tech-verified" defer></script>
+ <script src="./sii/prices.js?v=20261022-tech-verified" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261018-official272" defer></script>
-<script src="./v6.js?v=20261021-reconciled-networks" defer></script>
+<script src="./v6.js?v=20261022-recent-no-price" defer></script>
 <link rel="stylesheet" href="./market.css?v=20261021-etapas234">
 <script src="./market-catalog.js?v=20261021-used-values1" defer></script>
 <script>

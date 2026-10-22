@@ -58,7 +58,7 @@ function meets(group,f){
  return true;
 }
 function catalogGroups(criteria,official){
- if(criteria.scope==='all')return [];
+ if(criteria.scope==='all'||criteria.scope==='recent-no-price')return [];
  let pool=groups.filter(x=>meets(x,criteria));
  if(criteria.scope!=='commercial')pool=pool.filter(x=>!compatibleOfficial(x,official));
  const sort=$('commercialSort')?.value||'name';

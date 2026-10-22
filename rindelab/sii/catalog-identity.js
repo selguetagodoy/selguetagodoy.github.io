@@ -30,8 +30,24 @@
  };
  const expired=(p,today=dateOnly())=>Boolean(p?.sourceOfferEnd&&/^\d{4}-\d\d-\d\d$/.test(p.sourceOfferEnd)&&p.sourceOfferEnd<today);
  const active=p=>p?.commercialStatus!=='discontinued-cl';
- const techKnown=p=>String(p?.technology||'').trim();
- const compatible=(row,p)=>!techKnown(p)||techKnown(p)===String(row[2]||'').trim();
+ // Solo coincidencias de tecnologia explicitas permiten asociar un precio a una ficha.
+ const declaredVersionTech=p=>{
+  const name=norm(p?.version||'');
+  if(/\b(?:REEV|EREV|RANGE EXTENDER)\b/.test(name))return 'REEV';
+  if(/\b(?:PHEV|PLUG IN|ENCHUFABLE)\b/.test(name))return 'PHEV';
+  if(/\b(?:MHEV|MILD HYBRID|MICRO HIBRIDO)\b/.test(name))return 'MHEV';
+  if(/\b(?:HEV|FULL HYBRID)\b/.test(name))return 'HEV';
+  if(/\b(?:ELECTRICO|ELECTRIC|BEV|EV)\b/.test(name))return 'EV';
+  if(/\bDIESEL\b/.test(name))return 'Diésel';
+  if(/\b(?:GASOLINA|BENCINA|PETROL)\b/.test(name))return 'Bencina';
+  return '';
+ };
+ const techKnown=p=>String(p?.technology||'').trim()||declaredVersionTech(p);
+ const compatible=(row,p)=>{
+  const tech=techKnown(p),reported=String(row[2]||'').trim(),derived=declaredVersionTech(p);
+  // Una familia sin motorizacion identificada no acredita el precio de la version 3CV.
+  return Boolean(tech&&reported&&tech===reported&&(!p?.technology||!derived||String(p.technology)===derived));
+ };
  const tier=(row,p)=>techKnown(p)?(compatible(row,p)?'same-tech':'other-tech'):'unspecified-tech';
  function index(list){
   const map=new Map();
@@ -54,7 +70,7 @@
   const current=selection.filter(p=>!expired(p,today));
   const pool=current.length?current:selection;
   const entry=pool.reduce((a,b)=>a.priceListClp<=b.priceListClp?a:b);
-  return {...entry,association:same.length?'same-tech':'unverified-tech',campaignExpired:expired(entry,today)};
+  return {...entry,association:'same-tech',campaignExpired:expired(entry,today)};
  }
- return Object.freeze({norm,brand,family,key,valid,expired,active,compatible,tier,index,familyRecords,priceReference,dateOnly});
+ return Object.freeze({norm,brand,family,key,valid,expired,active,compatible,techKnown,tier,index,familyRecords,priceReference,dateOnly});
 });
