@@ -58,7 +58,14 @@ for(const r of evidence.records){
   assert.match(await page.locator('.vehicle-card').first().innerText(),/50\.990\.000/);
   await page.selectOption('#catalogScope','family-price-review');
   await query('');
-  assert.equal(await count(),298,'272 fichas previas, 25 fuentes oficiales de misma motorización y una referencia de concesionaria');
+  assert.equal(await count(),335,'298 previas y 37 nuevas con referencias del fabricante o importador');
+  await query('Sinotruk Bolden');
+  assert.equal(await count(),10,'Sinotruk Bolden: 10 expedientes con referencias de familia');
+  await query('KYC Gran Mamut 2.0');
+  assert.equal(await count(),3,'Gran Mamut 2.0: tres carrocerías anunciadas, no disponibles');
+  assert.match(await page.locator('.vehicle-card').first().innerText(),/sin venta acreditada/i);
+  await query('Foton View Grand');
+  assert.equal(await count(),8,'Foton View Grand: ocho homologaciones con referencias por versión');
   await query('Volvo XC60');
   assert.equal(await count(),4,'Volvo XC60 T8 se revisa sin atribuir precio de otro motor');
   assert.match(await page.locator('.vehicle-card').first().innerText(),/no debe atribuirse a esta homologación|no acreditan el precio/i);
@@ -78,7 +85,7 @@ for(const r of evidence.records){
   assert.match(await page.locator('.vehicle-card').first().innerText(),/65\.900\.000/);
   await page.selectOption('#catalogScope','recent-no-price');
   await query('');
-  assert.equal(await count(),274,'572 - 298 con alguna referencia comercial de familia');
+  assert.equal(await count(),237,'572 - 335 con alguna referencia comercial de familia');
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.match(await page.locator('.vehicle-card').first().innerText(),/Referencias antiguas de la familia · Motor y vigencia por revisar/);
@@ -88,6 +95,6 @@ for(const r of evidence.records){
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.deepEqual(failures,[],'Errores de JavaScript');
-  console.log('PASS mercado Chile: 11 anunciadas, 6 con precios publicados (Mazda, Renault, Toyota, Cupra, BYD), 298 con precio de familia por conciliar y 274 sin precio de versión verificado; 1514 referencias; Mokka protegido');
+  console.log('PASS mercado Chile: 11 anunciadas, 6 con precios publicados (Mazda, Renault, Toyota, Cupra, BYD), 335 con referencia de familia por conciliar y 237 todavía pendientes; 1514 referencias; Mokka protegido');
  } finally {await browser.close();}
 })().catch(error=>{console.error(error.stack);process.exit(1)});
