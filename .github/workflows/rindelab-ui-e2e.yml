@@ -155,8 +155,10 @@ jobs:
       - name: Verify commercial scope and price associations
         run: node rindelab/tests/catalog-ui.cjs
 
-      - name: Validate 572 recent homologations against documented commercial family prices
-        run: node rindelab/tests/price-association-audit.cjs
+      - name: Validate 572 recent homologations and 553 follow-up source checks
+        run: |
+          node rindelab/tests/price-association-audit.cjs
+          node rindelab/tests/market-price-followup.cjs
 
       - name: Verify announced launches, local offers and recent homologations
         run: node rindelab/tests/market-status-evidence.cjs
