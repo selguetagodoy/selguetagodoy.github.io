@@ -2,7 +2,9 @@
 
 Repositorio del sitio público de **Sebastián Elgueta Godoy**, sociólogo y consultor en asuntos públicos, análisis regulatorio e investigación aplicada sobre mercados regulados y políticas públicas en Chile y América Latina. Sectores de análisis: salud, energía, turismo, tecnología e infraestructura.
 
-🌐 **Sitio oficial:** https://selguetagodoy.github.io/\n\n[![Site QA](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml) [![IndexNow](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml)
+🌐 **Sitio oficial:** https://selguetagodoy.github.io/  
+
+[![Site QA](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/site-qa.yml) [![IndexNow](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml/badge.svg)](https://github.com/selguetagodoy/selguetagodoy.github.io/actions/workflows/indexnow.yml)
 
 ## Áreas y páginas temáticas
 
@@ -31,10 +33,13 @@ Versión internacional aceptada: **Sebastian Elgueta Godoy**
 
 ## Repositorios relacionados
 
-- [Latin America Digital Infrastructure](https://github.com/selguetagodoy/latin-america-digital-infrastructure)
-- [Chile Digital Inclusion](https://github.com/selguetagodoy/Chile-Digital-Inclusion)
-- [Atlas de la Desconexión Digital de Chile](https://github.com/selguetagodoy/atlas-desconexion-digital-chile.)
-- [Internet Speeds / Ookla](https://github.com/selguetagodoy/Ookla)
+- [Latin America Digital Infrastructure](https://github.com/selguetagodoy/latin-america-digital-infrastructure) — benchmark regional de infraestructura digital.
+- [Chile Digital Inclusion](https://github.com/selguetagodoy/Chile-Digital-Inclusion) — datos y análisis territorial de inclusión digital.
+- [Atlas de la Desconexión Digital de Chile](https://github.com/selguetagodoy/atlas-desconexion-digital-chile.) — investigación y resultados seleccionados; no incluye la base completa.
+- [Atlas: visualizador público](https://github.com/selguetagodoy/atlas-visualizador-cotel) — código de la aplicación [publicada en Vercel](https://atlas-visualizador-cotel.vercel.app/), separado del repositorio de investigación.
+- [Internet Speeds / Ookla](https://github.com/selguetagodoy/Ookla) — series de velocidades de Internet.
+- [Chile State Institutional Map](https://github.com/selguetagodoy/chile-state-institutional-map-) — directorio institucional estructurado.
+- [Stakeholder Routes Chile](https://github.com/selguetagodoy/stakeholder_routes_Chile) — rutas de decisión y actores regulatorios.
 
 ## Laboratorio y buscador
 
