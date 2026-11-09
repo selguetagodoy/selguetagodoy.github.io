@@ -180,9 +180,13 @@ def check_sitemap_and_robots(failures: list[str], warnings: list[str]) -> tuple[
         failures.append("robots.txt: missing")
     else:
         text = robots.read_text(encoding="utf-8", errors="replace")
-        expected = "Sitemap: https://selguetagodoy.github.io/sitemap.xml"
-        if expected not in text:
-            failures.append("robots.txt: canonical sitemap declaration missing")
+        expected_sitemaps = (
+            "https://selguetagodoy.github.io/sitemap.xml",
+            "https://selguetagodoy.github.io/latin-america-digital-infrastructure/sitemap.xml",
+        )
+        for url in expected_sitemaps:
+            if f"Sitemap: {url}" not in text:
+                failures.append(f"robots.txt: sitemap declaration missing — {url}")
 
     return sitemap_count, duplicate_count
 
@@ -540,6 +544,49 @@ def check_dataset_discovery_links(failures: list[str]) -> int:
     return checked
 
 
+def check_social_post_schema(node: object, page: str, failures: list[str]) -> int:
+    """Detect incomplete social/forum structured data before Search Console flags it."""
+    count = 0
+    if isinstance(node, list):
+        for item in node:
+            count += check_social_post_schema(item, page, failures)
+        return count
+    if not isinstance(node, dict):
+        return 0
+
+    raw_type = node.get("@type", [])
+    if isinstance(raw_type, str):
+        node_types = {raw_type}
+    elif isinstance(raw_type, list):
+        node_types = {value for value in raw_type if isinstance(value, str)}
+    else:
+        node_types = set()
+
+    if node_types & {"SocialMediaPosting", "DiscussionForumPosting"}:
+        count += 1
+        if not node.get("datePublished"):
+            failures.append(f"{page}: social/forum JSON-LD missing datePublished")
+        author = node.get("author")
+        if not author:
+            failures.append(f"{page}: social/forum JSON-LD missing author")
+        elif not isinstance(author, dict):
+            failures.append(f"{page}: social/forum JSON-LD author must be an object")
+        else:
+            author_type = author.get("@type", [])
+            if isinstance(author_type, str):
+                valid = author_type in {"Person", "Organization"}
+            else:
+                valid = isinstance(author_type, list) and bool(
+                    {"Person", "Organization"} & set(author_type)
+                )
+            if not valid:
+                failures.append(f"{page}: social/forum JSON-LD author type invalid")
+
+    for value in node.values():
+        count += check_social_post_schema(value, page, failures)
+    return count
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--external", action="store_true", help="Revisar también URLs http(s)")
@@ -612,7 +659,8 @@ def main() -> int:
         for block in parser.jsonld:
             total_jsonld += 1
             try:
-                json.loads(block)
+                payload = json.loads(block)
+                check_social_post_schema(payload, page.name, failures)
             except json.JSONDecodeError as exc:
                 failures.append(f"{page.name}: JSON-LD inválido — {exc}")
 
