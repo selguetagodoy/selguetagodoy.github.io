@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://selguetagodoy.github.io/sitemap.xml
+Sitemap: https://selguetagodoy.github.io/latin-america-digital-infrastructure/sitemap.xml
