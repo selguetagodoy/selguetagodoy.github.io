@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RINDELAB | Fuentes fotográficas verificables</title>
+<meta name="description" content="Auditoría de fuentes chilenas para identificar vehículos sin fotografía y verificar derechos de imagen.">
+<style>
+:root{font-family:system-ui,Arial,sans-serif;color:#16344a;background:#f4f7fa}*{box-sizing:border-box}body{margin:0}
+header{background:#112c43;color:#fff;padding:26px max(18px,calc((100% - 1120px)/2))}header a{color:#d6ebf9}
+main{max-width:1120px;margin:auto;padding:24px 18px 50px}h1{font-size:clamp(25px,3vw,34px);margin:4px 0 12px}h2{font-size:19px}p{line-height:1.55}
+.info{max-width:900px;color:#456173}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.stat{background:white;border:1px solid #d7e2e9;border-radius:12px;padding:16px}.stat b{display:block;font-size:26px}.stat small{color:#53697a}
+form{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0;padding:15px;background:white;border:1px solid #d7e2e9;border-radius:12px}
+label{display:grid;gap:5px;font-size:13px;font-weight:650;flex:1;min-width:160px}input,select{width:100%;min-height:43px;border:1px solid #a2b8c9;border-radius:7px;padding:8px;font:inherit}
+button{border:0;background:#154f73;color:white;padding:10px 14px;border-radius:8px;cursor:pointer}
+#results{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:12px}
+article{background:white;border:1px solid #d9e5ec;border-radius:12px;padding:15px;min-width:0}
+article h3{margin:2px 0 6px;font-size:17px}.meta{font-size:12px;color:#526a7c;margin:3px 0 13px}
+.status{font-size:12px;color:#865a0a;padding:4px 7px;background:#fff4d9;border-radius:5px;display:inline-block;margin-bottom:8px}
+article a{display:inline-block;margin:6px 8px 4px 0;color:#085c86;font-size:13px;overflow-wrap:anywhere}
+.note{font-size:13px;color:#4e6170}.muted{color:#6b7c86}.brand{font-size:12px;color:#637685;text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:600px){.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:1/-1}}
+</style></head><body>
+<header><a href="./">← Volver a RINDELAB</a><h1>Fuentes fotográficas · Chile</h1><p>Cola de investigación de vehículos sin fotografía asociada. Fuente comercial no equivale a permiso para reproducir imágenes.</p></header>
+<main>
+<section class="stats" aria-label="Cobertura"><div class="stat"><b id="total">—</b><small>Grupos sin fotografía</small></div><div class="stat"><b id="urls">—</b><small>URLs comerciales documentadas</small></div><div class="stat"><b id="shown">—</b><small>Resultados de esta búsqueda</small></div></section>
+<p class="info">Cada vehículo conserva el enlace a la ficha comercial identificada en Chile y una búsqueda independiente de imágenes con licencias abiertas. Las fotografías solo pasan al catálogo cuando se confirman generación, carrocería, tecnología y condiciones de reutilización.</p>
+<form id="filters" role="search"><label>Marca<input id="brand" list="brands" placeholder="Buscar marca o modelo" autocomplete="off"><datalist id="brands"></datalist></label>
+<label>Fuente principal<select id="domain"><option value="">Todas las fuentes</option></select></label>
+<label>Orden<select id="order"><option value="priority">Más versiones sin foto</option><option value="name">Marca y modelo</option></select></label><button type="reset">Limpiar</button></form>
+<p id="message" role="status"></p><section id="results" aria-label="Pendientes fotográficos"></section>
+<p style="margin-top:25px" class="note">Los enlaces a Openverse y a buscadores son rutas de investigación, no fotografías confirmadas. La situación de derechos de autor se indica como «no verificada» hasta su revisión individual.</p>
+</main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+let all=[],shown=0,limit=40;
+const node=(name,text,cls)=>{const e=document.createElement(name);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};
+const link=(label,url)=>{const a=node('a',label);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a};
+function render(){
+const q=$('brand').value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim(),d=$('domain').value;
+const order=$('order').value;
+let subset=all.filter(g=>(!q||(g.brand+' '+g.family).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(q))&&(!d||g.sources.some(s=>s.domain===d)));
+if(order==='name')subset.sort((a,b)=>(a.brand+' '+a.family).localeCompare(b.brand+' '+b.family,'es'));
+$('shown').textContent=subset.length.toLocaleString('es-CL');
+$('message').textContent=subset.length+' vehículos o grupos por investigar · mostrados '+Math.min(subset.length,limit);
+const frag=document.createDocumentFragment();
+for(const item of subset.slice(0,limit)){
+ const el=node('article');
+ el.append(node('span',item.brand,'brand'),node('h3',item.family));
+ el.append(node('p',item.versions+' versiones comerciales · '+(item.technology||'Tecnología no especificada')+' · '+(item.referenceYear||'Año de fabricación no confirmado'),'meta'));
+ el.append(node('span','Fotografía pendiente · Derechos no verificados','status'));
+ if(item.sources[0]){
+   el.append(node('p','Referencia en Chile: '+item.sources[0].domain+' · '+(item.sources[0].specificity==='nombre_en_ruta'?'modelo en dirección':'modelo por confirmar en la página'),'note'));
+   el.append(link('Ver ficha comercial ↗',item.sources[0].url));
+   if(item.sources[1])el.append(link('Segunda fuente ↗',item.sources[1].url));
+ }
+ el.append(link('Buscar foto reutilizable ↗',item.search.openverse));
+ el.append(link('Buscar referencia chilena ↗',item.search.chile));
+ frag.append(el);
+}
+$('results').replaceChildren(frag);
+const more=$('more');if(more)more.remove();
+if(subset.length>limit){const b=node('button','Ver más');b.id='more';b.type='button';b.style.marginTop='18px';b.addEventListener('click',()=>{limit+=40;render()});$('results').after(b)}
+}
+fetch('./data/photo-source-priority-20261022.json').then(r=>{if(!r.ok)throw Error('Fuente no disponible');return r.json()}).then(d=>{
+all=d.groups;$('total').textContent=d.stats.missingGroups;$('urls').textContent=d.stats.uniqueDirectSources;
+const brands=[...new Set(all.map(x=>x.brand))].sort();for(const b of brands){let o=document.createElement('option');o.value=b;$('brands').append(o)}
+const domains=[...new Set(all.flatMap(x=>x.sources.map(y=>y.domain)))].sort();for(const d of domains){let o=document.createElement('option');o.value=d;o.textContent=d;$('domain').append(o)}
+$('filters').addEventListener('input',()=>{limit=40;render()});$('filters').addEventListener('change',()=>{limit=40;render()});$('filters').addEventListener('reset',()=>{setTimeout(()=>{limit=40;render()},0)});
+render();
+}).catch(()=>{$('message').textContent='No se pudo cargar el expediente. Consulte el repositorio.'});
+})();
+</script></body></html>

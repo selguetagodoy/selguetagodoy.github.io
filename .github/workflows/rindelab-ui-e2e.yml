@@ -127,6 +127,11 @@ jobs:
             official-api-october-audit.json
           retention-days: 90
 
+      - name: Validate photo source-first evidence queue
+        run: |
+          node scripts/build-photo-source-queue.cjs
+          node rindelab/tests/photo-source-queue.cjs
+
       - name: Install Playwright and Chromium
         run: |
           npm install --no-save playwright
@@ -151,6 +156,9 @@ jobs:
 
       - name: Verify explicit search, cost sorting, comparison and responsive layout
         run: node rindelab/tests/e2e.cjs
+
+      - name: Verify photographic source-review page on mobile and desktop
+        run: node rindelab/tests/photo-source-ui.cjs
 
       - name: Verify commercial scope and price associations
         run: node rindelab/tests/catalog-ui.cjs
