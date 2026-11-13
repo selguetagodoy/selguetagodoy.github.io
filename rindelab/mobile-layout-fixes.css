@@ -1,0 +1,74 @@
+/* RINDELAB P0 mobile layout fixes.
+ * Keeps original filter semantics, aria-pressed state, ids and JS bindings.
+ * Loaded after market.css so earlier narrow-screen rules cannot clip controls.
+ */
+@media (max-width:680px) {
+  #buscador.search-card { min-width:0; padding:16px 13px 13px; }
+  #vehicleForm .quick-filters {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:6px;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    overflow:visible;
+    padding:0;
+    margin:0 0 11px;
+    border:0;
+    scrollbar-width:auto;
+  }
+  #vehicleForm .quick-filters button {
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    min-height:44px;
+    padding:8px 9px;
+    font-size:12px;
+    font-weight:650;
+    line-height:1.28;
+    white-space:normal;
+    overflow-wrap:normal;
+    text-align:center;
+    flex:none;
+  }
+  #vehicleForm .fields {
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:8px;
+    width:100%;
+    min-width:0;
+  }
+  #vehicleForm .fields > .field,
+  #vehicleForm .fields > .field.wide,
+  #vehicleForm .fields > .field:last-child {
+    grid-column:1 / -1;
+    min-width:0;
+    width:100%;
+  }
+  #vehicleForm .fields > .field input,
+  #vehicleForm .fields > .field select {
+    box-sizing:border-box;
+    display:block;
+    min-width:0;
+    max-width:100%;
+    width:100%;
+    height:48px;
+    font-size:16px; /* Avoid iOS input focus zoom. */
+    text-overflow:ellipsis;
+  }
+  #vehicleForm .fields > .field select:disabled {
+    opacity:1;
+    -webkit-text-fill-color:#64748b;
+  }
+}
+@media (max-width:360px) {
+  #vehicleForm .quick-filters { gap:6px; }
+  #vehicleForm .quick-filters button { padding:8px 6px; font-size:11px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  #vehicleForm .quick-filters button { transition:none; }
+}
