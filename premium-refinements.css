@@ -1,0 +1,128 @@
+/* Premium refinement — public portfolio. Visual-only, non-destructive layer. */
+/* Keeps existing research metadata, semantics, contrast and reduced-motion support. */
+:root {
+  --portfolio-navy:#0b1d2c;
+  --portfolio-champagne:#d7b889;
+  --portfolio-cream:#f7f5ef;
+  --portfolio-border:#d7ddde;
+}
+/* Editorial affordances and consistent cards */
+.seg-feature,
+.seg-lab-item {
+  border:1px solid var(--portfolio-border);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(11,29,44,.045);
+}
+.seg-feature a:focus-visible,
+.seg-lab-item:focus-visible,
+.lab-card a:focus-visible,
+.dataset-actions a:focus-visible {
+  outline:3px solid #9c672a;
+  outline-offset:4px;
+}
+.seg-lab-art {
+  background-size:cover;
+  background-position:center;
+  isolation:isolate;
+  text-shadow:0 2px 15px rgba(0,0,0,.35);
+}
+.seg-lab-rindelab {
+  background-image:linear-gradient(180deg,rgba(8,24,37,.42),rgba(8,24,37,.88)),url("assets/lab-rindelab.jpg");
+}
+.seg-lab-dc {
+  background-image:linear-gradient(180deg,rgba(8,24,37,.44),rgba(8,24,37,.88)),url("assets/lab-datacenters.jpg");
+}
+.seg-lab-atlas {
+  background-image:linear-gradient(180deg,rgba(8,24,37,.46),rgba(8,24,37,.88)),url("assets/lab-atlas.jpg");
+}
+.seg-lab-art > strong {
+  overflow-wrap:anywhere;
+  position:relative;
+  z-index:1;
+}
+.seg-lab-art > small { position:relative;z-index:1; }
+
+/* The dataset card actions are separate, nonbreaking interactive items. */
+.dataset-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  margin-top:18px;
+}
+.dataset-actions > a {
+  display:inline-flex;
+  align-items:center;
+  min-height:40px;
+  max-width:100%;
+  padding:8px 11px;
+  border:1px solid #d9e1df;
+  border-radius:8px;
+  background:#fff;
+  color:#214f70;
+  font-weight:700;
+  font-size:.83rem;
+  line-height:1.35;
+  text-decoration:none;
+  white-space:normal;
+}
+.dataset-actions > a:first-child {
+  background:#0b1d2c;
+  border-color:#0b1d2c;
+  color:#fff;
+}
+.dataset-actions > a:hover {
+  border-color:#b7894a;
+  text-decoration:underline;
+}
+
+/* Better project card composition at intermediary widths. */
+@media (min-width:701px) and (max-width:1120px) {
+  .seg-lab-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .seg-lab-item-atlas { grid-column:span 2; }
+}
+
+/* Compact first-screen composition on 390px mobile and up. */
+@media (max-width:700px) {
+  .seg-hero-grid { min-height:0; }
+  .seg-hero-copy { padding:39px 0 34px; }
+  .seg-hero .seg-eyebrow { margin-bottom:12px; font-size:.64rem;line-height:1.5; }
+  .seg-hero h1 { font-size:clamp(2.65rem,9.4vw,4.3rem); line-height:1.02;margin:0 0 14px; }
+  .seg-hero-statement { font-size:clamp(1.12rem,4.6vw,1.4rem); margin:0 0 10px; }
+  .seg-hero-description { font-size:.93rem; line-height:1.58; }
+  .seg-hero-actions { margin-top:18px; }
+  .seg-hero-visual { min-height:300px; }
+  .seg-hero-visual > img { object-position:center 20%; }
+  .seg-photo-note { max-width:75%; }
+  .seg-section { padding:65px 0; }
+  .seg-section-intro { margin-bottom:27px; }
+  .seg-lab-art { min-height:210px; }
+  .seg-lab-art > strong { font-size:clamp(1.65rem,8vw,2.6rem); }
+  .premium-page-hero .premium-page-hero-grid { gap:20px; }
+  .premium-page-hero .premium-page-hero-copy { padding-top:35px;padding-bottom:22px; }
+  .premium-page-hero h1 { font-size:clamp(2.1rem,8.4vw,3.5rem);line-height:1.05; }
+  .premium-page-hero .lead { line-height:1.55; }
+  .premium-page-hero .premium-graphic-panel { padding-top:19px;padding-bottom:23px; }
+  .hero .wrap { padding-top:35px;padding-bottom:39px; }
+  .hero h1 { font-size:clamp(2.2rem,9vw,3.45rem);line-height:1.05; }
+  .lab-hero { padding:38px 0 32px; }
+  .lab-hero h1 { font-size:clamp(2.7rem,10vw,4.4rem);line-height:1.03; }
+  .dataset-actions { gap:7px; }
+  .dataset-actions > a { min-height:44px; font-size:.82rem; }
+}
+@media (max-width:420px) {
+  .seg-hero-visual { min-height:275px; }
+  .seg-photo-note { display:none; }
+  .seg-lab-art { padding:20px; }
+  .dataset-actions > a { flex:1 1 auto; justify-content:center; }
+}
+@media (prefers-reduced-motion:no-preference) {
+  .seg-feature,
+  .seg-lab-item,
+  .dataset-actions > a { transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease; }
+  .seg-feature:hover,.seg-lab-item:hover {
+    transform:translateY(-3px);
+    box-shadow:0 20px 52px rgba(11,29,44,.12);
+  }
+}
