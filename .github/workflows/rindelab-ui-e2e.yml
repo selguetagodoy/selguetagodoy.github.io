@@ -122,6 +122,9 @@ jobs:
       - name: Validar segundo lote de 14 fotos y cobertura comercial actualizada
         run: node rindelab/tests/photos-november-batch2.cjs
 
+      - name: Verificar importación masiva CarImages Rights, derechos y 43 archivos
+        run: node rindelab/tests/carimages-rights-import.cjs
+
       - name: Auditar cobertura nominal con base completa 3CV 8394 (noviembre)
         run: node rindelab/tests/coverage-november.cjs
 
