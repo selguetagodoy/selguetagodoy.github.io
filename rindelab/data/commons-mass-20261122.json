@@ -294,40 +294,6 @@
       "bytes": 276503
     },
     {
-      "brand": "Chevrolet",
-      "family": "Traverse",
-      "pattern": "\\btraverse\\b",
-      "from": "2026",
-      "to": "2026",
-      "file": "0 Chevrolet Traverse (C1XX) 0.jpg",
-      "model": "Chevrolet Traverse (fotografía referencial de familia)",
-      "author": "Benespit",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:0_Chevrolet_Traverse_(C1XX)_0.jpg",
-      "localSrc": "./images/commons/rindelab-chevrolet-traverse-commonsmass-20261122.jpg",
-      "score": 45,
-      "sha256": "4f0c630fca442b31bb1029070ff78528c8560270b31a307a8c9bae37def8cf23",
-      "bytes": 267538
-    },
-    {
-      "brand": "Chevrolet",
-      "family": "Sail Sedan",
-      "pattern": "\\bsail[\\s-]+sedan\\b",
-      "from": "2026",
-      "to": "2026",
-      "file": "CHEVROLET SAIL SEDAN THIRD GENERATION China.jpg",
-      "model": "Chevrolet Sail Sedan (fotografía referencial de familia)",
-      "author": "Dinkun Chen",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:CHEVROLET_SAIL_SEDAN_THIRD_GENERATION_China.jpg",
-      "localSrc": "./images/commons/rindelab-chevrolet-sail-sedan-commonsmass-20261122.jpg",
-      "score": 51,
-      "sha256": "61adb67a1e2024210f65740b3787eeb84f35859f409cddf48e03aabf55f65af7",
-      "bytes": 149001
-    },
-    {
       "brand": "Cupra",
       "family": "Formentor",
       "pattern": "\\bformentor\\b",
@@ -530,23 +496,6 @@
       "score": 52,
       "sha256": "737b9f9b1a9ae2cf2f8a5af3cd2d8c06f69a84a398699e760587a3b6cb1f1440",
       "bytes": 235474
-    },
-    {
-      "brand": "Ford",
-      "family": "Transit Minibus",
-      "pattern": "\\btransit[\\s-]+minibus\\b",
-      "from": "2026",
-      "to": "2026",
-      "file": "Ford Transit minibus at St. Joseph's Primary School, Wetherby (22nd April 2019).jpg",
-      "model": "Ford Transit Minibus (fotografía referencial de familia)",
-      "author": "Mtaylor848",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Ford_Transit_minibus_at_St._Joseph%27s_Primary_School,_Wetherby_(22nd_April_2019).jpg",
-      "localSrc": "./images/commons/rindelab-ford-transit-minibus-commonsmass-20261122.jpg",
-      "score": 48,
-      "sha256": "92c7e9b18e3a3f298c93006c412d016d73fd817322c95ad67fdcc845a47564ae",
-      "bytes": 182327
     },
     {
       "brand": "Gac",
@@ -1162,40 +1111,6 @@
     },
     {
       "brand": "Renault",
-      "family": "Duster",
-      "pattern": "\\bduster\\b",
-      "from": "2026",
-      "to": "2026",
-      "file": "Renault Duster Tandil.jpg",
-      "model": "Renault Duster (fotografía referencial de familia)",
-      "author": "Ezarate",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Renault_Duster_Tandil.jpg",
-      "localSrc": "./images/commons/rindelab-renault-duster-commonsmass-20261122.jpg",
-      "score": 45,
-      "sha256": "76d518575efc93aff9864e7074b759ab4b188de8c3b2767356c31caf4d5f928e",
-      "bytes": 178820
-    },
-    {
-      "brand": "Renault",
-      "family": "Koleos",
-      "pattern": "\\bkoleos\\b",
-      "from": "2026",
-      "to": "2026",
-      "file": "2019 Renault Koleos GT Line Front.jpg",
-      "model": "Renault Koleos (fotografía referencial de familia)",
-      "author": "Vauxford",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2019_Renault_Koleos_GT_Line_Front.jpg",
-      "localSrc": "./images/commons/rindelab-renault-koleos-commonsmass-20261122.jpg",
-      "score": 49,
-      "sha256": "9993f0944e7485db6aafbe204c39e86c85194297d271047f0f62d057255fc177",
-      "bytes": 169384
-    },
-    {
-      "brand": "Renault",
       "family": "Kwid",
       "pattern": "\\bkwid\\b",
       "from": "2026",
@@ -1263,23 +1178,6 @@
       "bytes": 296461
     },
     {
-      "brand": "Suzuki",
-      "family": "alto",
-      "pattern": "\\balto\\b",
-      "from": "2026",
-      "to": "2026",
-      "file": "SUZUKI ALTO China(1).jpg",
-      "model": "Suzuki alto (fotografía referencial de familia)",
-      "author": "Dinkun Chen",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:SUZUKI_ALTO_China(1).jpg",
-      "localSrc": "./images/commons/rindelab-suzuki-alto-commonsmass-20261122.jpg",
-      "score": 45,
-      "sha256": "956c58acf4cfc753c3011610eba44918ca2a68064ba9c1db97e1c06c6f75a6b1",
-      "bytes": 201439
-    },
-    {
       "brand": "Toyota",
       "family": "Hiace Cargo",
       "pattern": "\\bhiace[\\s-]+cargo\\b",
@@ -1312,23 +1210,6 @@
       "score": 57,
       "sha256": "326af45c3d31743f6deb4665cb3fba40595983dbb242fadb0a05b9ac3fc2cd6e",
       "bytes": 246974
-    },
-    {
-      "brand": "Toyota",
-      "family": "Yaris",
-      "pattern": "\\byaris\\b",
-      "from": "2026",
-      "to": "2026",
-      "file": "2024 Toyota Yaris Hybrid 130 (XP210) IMG 9425.jpg",
-      "model": "Toyota Yaris (fotografía referencial de familia)",
-      "author": "Alexander-93",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_Yaris_Hybrid_130_(XP210)_IMG_9425.jpg",
-      "localSrc": "./images/commons/rindelab-toyota-yaris-commonsmass-20261122.jpg",
-      "score": 51,
-      "sha256": "2d37823c69838452567ddec2af0eee494cf6162e3b0e361e7106eb6cc9db32b3",
-      "bytes": 175409
     },
     {
       "brand": "Volkswagen",
@@ -7275,5 +7156,56 @@
       "candidates": []
     }
   ],
-  "failures": []
+  "failures": [],
+  "editorialExclusions": [
+    {
+      "brand": "Chevrolet",
+      "family": "Traverse",
+      "file": "0 Chevrolet Traverse (C1XX) 0.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:0_Chevrolet_Traverse_(C1XX)_0.jpg",
+      "reason": "Photographed C1XX generation; current Chilean offer may be a newer generation"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Sail Sedan",
+      "file": "CHEVROLET SAIL SEDAN THIRD GENERATION China.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:CHEVROLET_SAIL_SEDAN_THIRD_GENERATION_China.jpg",
+      "reason": "China-market third-generation Sail not independently verified against Chilean version"
+    },
+    {
+      "brand": "Ford",
+      "family": "Transit Minibus",
+      "file": "Ford Transit minibus at St. Joseph's Primary School, Wetherby (22nd April 2019).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ford_Transit_minibus_at_St._Joseph%27s_Primary_School,_Wetherby_(22nd_April_2019).jpg",
+      "reason": "Photographed school minibus has unknown body and model year"
+    },
+    {
+      "brand": "Renault",
+      "family": "Duster",
+      "file": "Renault Duster Tandil.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Renault_Duster_Tandil.jpg",
+      "reason": "Unspecified Duster generation; Chilean 2026 generation is not established"
+    },
+    {
+      "brand": "Renault",
+      "family": "Koleos",
+      "file": "2019 Renault Koleos GT Line Front.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:2019_Renault_Koleos_GT_Line_Front.jpg",
+      "reason": "2019-model image may not correspond to the current commercial family"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "alto",
+      "file": "SUZUKI ALTO China(1).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:SUZUKI_ALTO_China(1).jpg",
+      "reason": "China-market/Japan model not verified as the Chilean Suzuki Alto body"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Yaris",
+      "file": "2024 Toyota Yaris Hybrid 130 (XP210) IMG 9425.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_Yaris_Hybrid_130_(XP210)_IMG_9425.jpg",
+      "reason": "European XP210 hatchback does not establish the Chilean Yaris body"
+    }
+  ]
 }
