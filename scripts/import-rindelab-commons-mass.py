@@ -138,13 +138,16 @@ def family_matches(g,filename,desc):
     aliases=BRAND_ALIASES.get(text(brand),[text(brand)])
     if not any(set(toks(a)).issubset(fset) for a in aliases): return False,-1,'wrong brand'
     mt=toks(name)
-    base=[z for z in mt if z not in DROP and len(z)>1]
+    base=[z for z in mt if z not in DROP and (len(z)>1 or z.isdigit())]
     if not base: return False,-1,'no discriminating model tokens'
-    # no model may match solely from descriptive text: must appear in Commons filename.
+    # No model may match solely from a description: require model/series in the filename.
+    # Support model numbers written as Tiggo7 / Tiggo 7 and RAV4 / RAV 4.
+    merged=''.join(f)
     for m in base:
         if m in ('gran','all'): continue
-        if m not in fset:
+        if m not in fset and not any(m in x and (x.startswith(m) or (m.isdigit() and x.endswith(m))) for x in f):
             return False,-1,'model token missing: '+m
+
     # Specific body styles need a title indication. Avoid cargo being mapped to passenger version.
     qualifiers=[x for x in mt if x in BODY_REQ]
     if 'pick' in mt and 'up' in mt: qualifiers.append('pickup')
