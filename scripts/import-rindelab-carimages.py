@@ -89,7 +89,7 @@ def commons_info(filename):
     if not re.fullmatch(r"CC0|CC BY(?:-SA)? [234]\.0(?: [a-z]{2})?|Public domain", lic, re.I): return None
     if not author or not info.get("thumburl") or not lic_url.startswith("https://creativecommons.org/"): return None
     if not info.get("descriptionurl", "").startswith("https://commons.wikimedia.org/wiki/File:"): return None
-    if not info["thumburl"].startswith("https://upload.wikimedia.org/") and not info["thumburl"].startswith("https://commons.wikimedia.org/"): return None
+    if not info["thumburl"].startswith(("https://upload.wikimedia.org/", "https://thumb.wikimedia.org/", "https://commons.wikimedia.org/")): return None
     return {"author": author, "license": lic, "licenseUrl": lic_url, "source": info["descriptionurl"], "thumburl": info["thumburl"]}
 
 def get_wikidata(target):
