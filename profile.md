@@ -6,6 +6,8 @@ His work connects **public affairs, regulated markets, public policy, institutio
 
 He has more than 13 years of professional experience across the public sector, legislative advisory work, strategic consulting and applied research.
 
+Current position (2026): Consultant, Issue Management Chile, at Prospectiva Public Affairs LATAM. Previously, he was a managing partner for public and legislative affairs at Coordenadas Públicas (2025–2026).
+
 ## Education
 
 - Sociology — Universidad Viña del Mar.
