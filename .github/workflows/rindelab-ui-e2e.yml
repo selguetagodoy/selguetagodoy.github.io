@@ -116,6 +116,9 @@ jobs:
       - name: Validar 69 nuevos códigos 3CV y ciclos WLTP de octubre-noviembre
         run: node rindelab/tests/official-api-november.cjs
 
+      - name: Auditar cobertura nominal con base completa 3CV 8394 (noviembre)
+        run: node rindelab/tests/coverage-november.cjs
+
       - name: Guardar expediente auditable de 28 revisiones
         uses: actions/upload-artifact@v4
         with:

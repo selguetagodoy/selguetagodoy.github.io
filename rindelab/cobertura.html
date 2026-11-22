@@ -26,7 +26,7 @@
  <section class="coverage-intro" aria-labelledby="coverageTitle">
   <p class="eyebrow">AUDITORÍA DE COBERTURA · CHILE</p>
   <h1 id="coverageTitle">Precios comerciales y homologaciones 3CV</h1>
-  <p>Este diagnóstico cruza las familias del catálogo propio de precios de lista con las denominaciones registradas en el 3CV. La coincidencia de nombre <strong>no confirma una versión, generación, motorización ni disponibilidad para venta</strong>.</p>
+  <p>Este diagnóstico cruza las familias del catálogo propio de precios de lista con <strong>8.394 homologaciones históricas 3CV, al 22/11/2026</strong>. La coincidencia de nombre <strong>no confirma una versión, generación, motorización ni disponibilidad para venta</strong>.</p>
  </section>
  <section class="coverage-metrics" aria-label="Resumen de cobertura">
   <div><small>Precios de lista documentados</small><strong id="metricPrices">—</strong></div>
@@ -46,24 +46,27 @@
    <div class="field"><label for="familyFilter">Modelo o familia</label><input type="search" id="familyFilter" placeholder="Ej. Hunter, CX-30, Tera" autocomplete="off"></div>
   </div>
   <p class="coverage-result-count" id="coverageResultCount" aria-live="polite"></p>
+  <p class="coverage-legend">La tabla se muestra de 60 en 60 para facilitar su lectura. El archivo CSV conserva todas las filas que cumplen los filtros. En móvil, desplaza la tabla horizontalmente para consultar más columnas.</p>
   <div class="coverage-table-scroll" role="region" aria-label="Tabla de cobertura 3CV" tabindex="0">
    <table class="coverage-table">
     <thead><tr><th scope="col">Marca y familia</th><th scope="col">Precios de lista</th><th scope="col">Fichas 3CV candidatas</th><th scope="col">Última homologación candidata</th><th scope="col">Estado y fuente</th></tr></thead>
     <tbody id="coverageRows"><tr><td colspan="5">Cargando datos…</td></tr></tbody>
    </table>
   </div>
+  <button type="button" id="coverageMore" class="button secondary" hidden>Mostrar 60 familias más</button>
   <p class="coverage-legend">«Candidatas» significa coincidencia nominal de marca y familia, no equivalencia de versión. El número de fichas 3CV puede incluir diferentes años, configuraciones y tecnologías; no representa unidades a la venta. Ninguna versión comercial se vincula automáticamente a un código 3CV.</p>
  </section>
- <p class="coverage-next"><strong>Segunda etapa:</strong> examina los atributos técnicos declarados, los candidatos individuales y las contradicciones documentales. <a href="./versiones.html">Revisar las 122 versiones comerciales ↗</a></p>
+ <p class="coverage-next"><strong>Segunda etapa:</strong> examina los atributos técnicos declarados, los candidatos individuales y las contradicciones documentales. <a href="./versiones.html">Revisar versiones comerciales y discrepancias ↗</a></p>
  <section class="coverage-method">
   <h2>Cómo interpretar estos datos</h2>
-  <p>El denominador son exclusivamente las <strong>familias presentes en el catálogo de RINDELAB</strong>, no todos los modelos que actualmente se comercializan en Chile. El catálogo tiene precios de lista consultados en fechas específicas y el archivo 3CV comprende homologaciones históricas, con corte al <span id="sourceDate">8 de mayo de 2026</span>.</p>
+  <p>El denominador son exclusivamente las <strong>familias presentes en el catálogo de RINDELAB</strong>, no todos los modelos que actualmente se comercializan en Chile. El catálogo tiene precios de lista consultados en fechas específicas y el archivo 3CV comprende homologaciones históricas, con corte al <span id="sourceDate">22 de noviembre de 2026</span> (base histórica de mayo y ampliaciones oficiales de octubre-noviembre).</p>
   <p>Una familia que aparece en el 3CV requiere todavía cotejar versión, motor, combustible, transmisión, tracción, generación y año, cuando estén disponibles, antes de considerarla equivalente a una oferta comercial. La tasación fiscal y el permiso de circulación son fuentes separadas y no se utilizan en esta medición.</p>
   <p><a href="https://consumovehicular.minenergia.cl/sites/default/files/middleware/RENDIMIENTOOFICIAL08may2026.xlsx" target="_blank" rel="noopener noreferrer">Descargar base original 3CV</a> · <a href="./sii/commercial-2026.json" target="_blank" rel="noopener noreferrer">Catálogo documentado de precios</a> · <a href="./">Ir al buscador de vehículos</a></p>
  </section>
 </main>
 <footer class="footer"><div class="shell"><strong>RINDELAB</strong><span>Creada por Sebastián Elgueta Godoy</span><small>Verifica la información en sitios oficiales.</small></div></footer>
 <script defer src="./sii/coverage-matcher.js?v=20261018-1"></script>
-<script defer src="./coverage.js?v=20261020-1504"></script>
+<script defer src="./sii/official-api-mapper.js?v=20261122-official69"></script>
+<script defer src="./coverage.js?v=20261122-8394-pagination"></script>
 </body>
 </html>

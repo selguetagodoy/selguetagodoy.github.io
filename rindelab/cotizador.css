@@ -125,3 +125,6 @@
 
 /* Precios documentados que ya no pertenecen a oferta oficial de vehículos nuevos. */
 .quote-version.quote-discontinued{border-color:#f1d3ad;background:#fffaf3}.quote-version.quote-discontinued>div small{color:#98410c;font-weight:700}.quote-version.quote-discontinued .quote-version-price span{color:#98410c;font-weight:700}.quote-version.quote-discontinued button:disabled{opacity:1;background:#efe6da;color:#815638;cursor:not-allowed}
+
+.quote-freshness-notice{font-size:13px;line-height:1.5;color:#365269;margin:12px 0 0;padding:9px 12px;border-left:3px solid #8aa4b4;background:#f6f9fb;border-radius:0 8px 8px 0}
+.quote-empty{padding:18px 20px;border:1px solid #d5e2eb;border-radius:12px;background:#f7fafc;line-height:1.55;color:#29485d}.quote-empty p{margin:0 0 8px}.quote-empty-links a{display:inline-block;margin:4px 0;color:#135d85;text-decoration:underline;font-weight:650}

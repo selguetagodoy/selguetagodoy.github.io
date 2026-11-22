@@ -103,7 +103,7 @@ function marketEvidenceFor(row){
 }
 const reviewedEnergyCodes=new Set(['BM9746EL1224S00-3']); // 10,6 km/kWh NEDC: verificación del documento original pendiente.
 let mttRecords=[],mttMatches=[],mttLimit=6,mttLoadError='';
-const officialCodes=new Set();
+const officialCodes=new Set(),novemberCodes=new Set();
 const searchIndex=new WeakMap();
 function cleanRow(row){
  const r=row.slice();
@@ -181,7 +181,7 @@ function matchesScope(row,scope){
  const pending=recentNoPrice(row);
  if(scope==='upcoming')return pending&&marketEvidenceFor(row)?.kind==='upcoming';
  if(scope==='market-priced')return !archivedModel(row)&&marketEvidenceFor(row)?.kind==='market-priced'&&validCurrentPrice(row);
- if(scope==='family-price-review')return pending&&!marketEvidenceFor(row)&&hasFamilyPriceEvidence(row);
+ if(scope==='family-price-review')return !archivedModel(row)&&!marketEvidenceFor(row)&&hasFamilyPriceEvidence(row);
  if(scope==='recent-no-price')return pending&&!marketEvidenceFor(row)&&!hasFamilyPriceEvidence(row);
  return !archivedModel(row)&&(validCurrentPrice(row)||pending);
 }
@@ -482,14 +482,15 @@ function render(){
   const lifecycleHTML=status?'<p class="vehicle-lifecycle">'+(status.status==='previous-generation-cl'?'Generación anterior retirada de la oferta chilena':'Modelo descontinuado en la oferta chilena')+' · <a href="'+safe(status.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Ver antecedente ↗</a></p>':'';
   const recent=recentNoPrice(row);
   const evidence=marketEvidenceFor(row);
-  const audit=recent?auditedPriceFor(row):null;
-  const extra=recent?marketFollowupFor(row):null;
-  const third=recent?thirdPriceFor(row):null;
-  const fourth=recent?finalPriceFor(row):null;
-  const fifth=recent?fifthPriceFor(row):null;
-  const sixth=recent?sixthPriceFor(row):null;
-  const seventh=recent?seventhPriceFor(row):null;
-  const verifiedFamily=recent&&hasFamilyPriceEvidence(row);
+  const familyReview=recent||(!status&&hasFamilyPriceEvidence(row));
+  const audit=familyReview?auditedPriceFor(row):null;
+  const extra=familyReview?marketFollowupFor(row):null;
+  const third=familyReview?thirdPriceFor(row):null;
+  const fourth=familyReview?finalPriceFor(row):null;
+  const fifth=familyReview?fifthPriceFor(row):null;
+  const sixth=familyReview?sixthPriceFor(row):null;
+  const seventh=familyReview?seventhPriceFor(row):null;
+  const verifiedFamily=familyReview&&hasFamilyPriceEvidence(row);
   if(recent)article.classList.add('vehicle-card-recent');
   const offer=!status&&!recent?window.RindelabCommercial?.minimum(row,family(row)):null;
   const offerCaption=offer?(offer.campaignExpired?'Referencia con campaña terminada · ': 'Precio publicado · ')+(offer.association==='same-tech'?'misma tecnología, versión sin verificar':'motorización de fuente no informada'):'';
@@ -537,9 +538,9 @@ function render(){
    'Existe precio publicado de una versión con esta tecnología, pero el acabado no está conciliado con el código 3CV. El importe no se asigna automáticamente.':
    officialReference?'El precio corresponde a una variante comercial de referencia y no debe atribuirse a esta homologación.':
    dealerReference&&audit?.category==='unmatched-catalog'?'El modelo o familia tiene una publicación comercial, pero no la equivalencia exacta de esta homologación.':auditedDescription;
-  const auditNote=recent?'<div class="rinde-commercial rinde-recent rinde-price-audit" data-price-audit="'+safe(audit?.category||'pending')+'" role="note"><strong>'+safe(shownTitle)+'</strong><small>'+safe(shownDescription)+'</small>'+supplementalHTML+'<small>Chequeo 22-10-2026 · Precio de versión comercial, no del código 3CV · Stock y vigencia por verificar.</small>'+(!supplementalHTML&&auditSource?'<a href="'+safe(auditSource.url)+'" target="_blank" rel="noopener noreferrer">Ver referencia de otra versión de familia ↗</a>':'')+'</div>':'';
+  const auditNote=familyReview?'<div class="rinde-commercial rinde-recent rinde-price-audit" data-price-audit="'+safe(audit?.category||'pending')+'" role="note"><strong>'+safe(shownTitle)+'</strong><small>'+safe(shownDescription)+'</small>'+supplementalHTML+'<small>Chequeo 22-10-2026 · Precio de versión comercial, no del código 3CV · Stock y vigencia por verificar.</small>'+(!supplementalHTML&&auditSource?'<a href="'+safe(auditSource.url)+'" target="_blank" rel="noopener noreferrer">Ver referencia de otra versión de familia ↗</a>':'')+'</div>':'';
   const offerHTML=evidencedHTML||auditNote||(offer?'<div class="rinde-commercial"><small>'+safe(offerCaption)+'</small> <strong>'+safe(money(offer.priceListClp))+(offer.taxIncluded===false?' + IVA':'')+'</strong> <a href="./cotizador.html?marca='+encodeURIComponent(offer.brand)+'&modelo='+encodeURIComponent(offer.family)+'">Ver versiones y fuente ↗</a></div>':'');
-  const source=officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
+  const source=novemberCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial noviembre 2026':officialCodes.has(row[F.CODE])?'Consumo Vehicular · API oficial octubre 2026':'3CV oficial · base mayo 2026';
   article.innerHTML='<div class="vehicle-heading"><div class="vehicle-title"><h3>'+safe(row[F.BRAND]+' '+row[F.MODEL])+'</h3>'+
    '<p class="vehicle-meta">Homologado '+safe(displayDate)+' · código …'+safe(suffix)+'</p>'+lifecycleHTML+(evidence?.kind==='market-priced'?'<span class="rinde-status-recent">Oferta chilena · Precio publicado</span>':recent?'<span class="rinde-status-recent">'+safe(evidence?.kind==='upcoming'?'Lanzamiento anunciado en Chile':verifiedFamily?'Precio de familia · Versión sin conciliar':'Homologación · Precio por comprobar')+'</span>':'')+'</div'+'>'+
    '<div class="vehicle-badges"><span class="vehicle-tech" data-tech="'+safe(row[F.TECH])+'" title="Categoría declarada en 3CV: '+safe(row[F.TECH])+'">'+safe(techHuman[row[F.TECH]]||row[F.TECH])+'</span><span class="cycle-badge" data-cycle="'+safe(row[F.CYCLE]||'')+'" title="'+safe(row[F.CYCLE]==='NEDC'?'Ensayo NEDC; no es directamente comparable con WLTP':row[F.CYCLE]==='WLTP'?'Ensayo WLTP; no es directamente comparable con NEDC':'Ciclo no informado')+'">'+safe(row[F.CYCLE]||'Ciclo no informado')+'</span></div></div>'+
@@ -951,12 +952,15 @@ async function init(){
   for(const row of additional)officialCodes.add(row[F.CODE]);
   const deltaResponse=await fetch('./data/oficial-api-20261122.json?v=20261122-official69');
    if(!deltaResponse.ok)throw Error('No disponible el corte oficial de noviembre');
-   const delta=window.RindelabOfficialAPI.loadIncremental(await deltaResponse.json(),legacy,additional);
-   for(const row of delta)officialCodes.add(row[F.CODE]);
+   const deltaSnapshot=await deltaResponse.json();
+   const delta=window.RindelabOfficialAPI.loadIncremental(deltaSnapshot,legacy,additional);
+   for(const row of delta){officialCodes.add(row[F.CODE]);novemberCodes.add(row[F.CODE]);}
    all=legacy.concat(additional,delta).map(cleanRow);
   try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos90');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
+  const snap=$('catalogSnapshot');
+  if(snap)snap.textContent=fmt(all.length)+' fichas oficiales e históricas · corte '+deltaSnapshot.retrieved.split('-').reverse().join('/')+' · no equivale a oferta vigente';
   const prices=await window.RindelabCommercial?.ready?.();
   if(!prices?.length){$('catalogScope').value='all';$('catalogScopeHint').textContent='No se pudo cargar el catálogo comercial; se presenta la base oficial 3CV completa.';}
   // Evidencia comercial externa: en fallos de red conservar la clasificación prudente.
@@ -1085,6 +1089,11 @@ async function init(){
    if(next.size!==dataset.newFamilyReferences)throw Error('Resumen inconsistente');
    marketPriceSeventhpass=next;
   }catch(error){marketPriceSeventhpass=new Map();console.warn('RINDELAB séptimo cruce pendiente',error.message);}
+  if(prices?.length){
+   const refs=all.filter(r=>matchesScope(r,'family-price-review')).length;
+   const pendingCurrent=all.filter(r=>matchesScope(r,'recent-no-price')).length;
+   $('catalogScopeHint').textContent='Referencias comerciales revisadas hasta el 22/10/2026: '+fmt(refs)+' fichas de familia con versión sin conciliar; '+fmt(pendingCurrent)+' homologaciones recientes (últimos 365 días) sin precio acreditado ni referencia de familia. Estos recuentos se calculan sobre la base de 8.394 fichas; no prueban stock, vigencia ni equivalencia comercial.';
+  }
   const availableYears=[...new Set(all.map(r=>String(r[F.DATE]).slice(0,4)).filter(y=>/^20\d\d$/.test(y)))].sort().reverse();
   $('year').replaceChildren(new Option('Todo el historial',''),...availableYears.map(y=>new Option(y,y)));
   $('statsOpen').disabled=false;

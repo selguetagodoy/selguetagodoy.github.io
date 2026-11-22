@@ -53,7 +53,14 @@ function filter(){
 function render(){
  $('catalogCount').textContent=visible.length+' versiones comerciales encontradas de '+catalog.length+' precios documentados';
  const box=$('quoteResults');box.replaceChildren();
- if(!visible.length){const p=document.createElement('p');p.className='quote-empty';p.textContent='No hay versiones con precio de lista documentado para esos filtros. No se inventa una cotización.';box.append(p);}
+ if(!visible.length){
+  const panel=document.createElement('div');panel.className='quote-empty';
+  const p=document.createElement('p');p.textContent='No hay versiones con precio comercial documentado para esta búsqueda. Eso no significa que el vehículo carezca de homologación 3CV o que no exista en Chile.';
+  const links=document.createElement('p');links.className='quote-empty-links';
+  const technical=document.createElement('a');technical.href='./index.html#buscador';technical.textContent='Consultar homologaciones y gasto energético 3CV';
+  const news=document.createElement('a');news.href='./novedades-3cv.html';news.textContent='Revisar novedades y diferencias 3CV';
+  links.append(technical,document.createTextNode(' · '),news);panel.append(p,links);box.append(panel);
+ }
  visible.slice(0,limit).forEach(x=>{
   const card=document.createElement('article');card.className='quote-version';
   const active=chosen&&identity(x)===identity(chosen),retired=x.commercialStatus==='discontinued-cl';
@@ -156,6 +163,10 @@ async function init(){
    /^https:\/\//.test(x.source)&&x.brand&&x.family&&x.version&&/^2026-\d{2}-\d{2}$/.test(x.checkedAt));
   if(!catalog.length)throw Error('Catálogo vacío');
   $('quoteCatalogNumber').textContent=catalog.length+' registros de '+new Set(catalog.map(x=>x.brand)).size+' marcas';
+  const stale=catalog.filter(x=>ageDays(x.checkedAt)>=30).length;
+  const note=$('quoteFreshnessNotice');
+  note.hidden=stale===0;
+  if(stale)note.textContent=stale.toLocaleString('es-CL')+' de '+catalog.length.toLocaleString('es-CL')+' precios fueron consultados hace al menos 30 días. Son referencias históricas, no cotizaciones vigentes verificadas. Confirma importes, versiones e impuestos en la fuente antes de decidir.';
   buildFilters();updateBudget();
  }catch(e){$('catalogCount').textContent='No se pudo abrir la base de precios de lista; vuelve a cargar la página.';$('quoteFeedback').textContent='Las cotizaciones quedan deshabilitadas hasta que el catálogo pueda verificarse.';}
 }

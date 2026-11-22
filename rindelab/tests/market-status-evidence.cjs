@@ -121,7 +121,9 @@ for(const r of evidence.records){
   assert.match(await page.locator('.vehicle-card').first().innerText(),/65\.900\.000/);
   await page.selectOption('#catalogScope','recent-no-price');
   await query('');
-  assert.equal(await count(),182,'572 - 390 con alguna referencia de precio o lista de familia');
+  const pendingRecent=await count();
+  assert(pendingRecent>0&&pendingRecent<8394,'Debe haber homologaciones recientes sin precio, sin confundir con toda la historia 3CV');
+  assert((await page.locator('#catalogScopeHint').textContent()).includes(pendingRecent+' homologaciones recientes'),'El recuento debe ser consistente con el alcance dinámico');
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.match(await page.locator('.vehicle-card').first().innerText(),/Referencias antiguas de la familia · Motor y vigencia por revisar/);

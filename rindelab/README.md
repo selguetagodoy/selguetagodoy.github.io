@@ -1,5 +1,15 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Cierre de transparencia, accesibilidad y fuentes (22/11/2026)
+
+La portada identifica permanentemente el universo histórico **8.394 fichas**, su corte y la diferencia entre homologación y disponibilidad comercial. La cobertura nominal se recalcula sobre el universo completo: **1.514 precios documentados, 720 familias, 488 coincidencias nominales y 232 sin coincidencia**; las 488 coincidencias no prueban equivalencia de versiones. La tabla de Cobertura se presenta en lotes de 60 y Novedades MTT en lotes de 40, con exportación CSV de todos los registros filtrados. El cotizador explica los resultados vacíos y permite abrir el buscador de homologaciones.
+
+**Fuente MTT nueva identificada, aún no integrada:** [nómina oficial de livianos y medianos del 27 de octubre de 2026](https://www.subtrans.gob.cl/wp-content/uploads/2026/10/e1_Nomina-Vehiculos-Livianos-y-Medianos-Homologados_27_oct_2026.xls). La vigilancia automática comprueba en la página institucional si cambió el enlace público y conserva el expediente de publicación; **no importa contenido XLS ni genera códigos, consumos o rectificaciones**. La nómina de septiembre y las doce discrepancias MTT–3CV se mantienen como expediente histórico sujeto a nueva conciliación.
+
+**Revisiones documentales pendientes:** auditoría de antigüedad del 22/11/2026 (1.514 de 1.514 registros con consulta de 30 días o más, sin revalidación de importes; el control de URLs del 16/11 señaló 45 accesos inciertos); cobertura fotográfica y atributos de familia según manifiesto del 21/10/2026 (423 grupos sin fotografía, 486 sin tecnología clasificada, 591 sin año comercial y 79 asociados a campañas terminadas). Son expedientes fechados, no cifras revalidadas hoy. No se inventan fotografías, precios ni equivalencias para cerrar estas brechas.
+
+---
+
 Se incorporaron **69 códigos de homologación adicionales** desde la API oficial Consumo Vehicular, cotejados contra las 8.325 fichas históricas del buscador (8.053 del corte de mayo y 272 incorporados en octubre). Los 69 códigos nuevos cuentan con mediciones **WLTP**: 33 con fecha de homologación en octubre y 36 en noviembre de 2026. El catálogo histórico consultable pasa a **8.394 códigos únicos**. La API oficial en este corte reporta 8.384 entradas; la diferencia se debe a que el buscador preserva fichas históricas que no necesariamente figuran en la consulta actual. Ninguno de estos totales equivale a modelos actualmente disponibles para compra.
 
 Fuente y trazabilidad: `https://api-consumovehicular.minenergia.cl/vehiculos/listar`; snapshot `data/oficial-api-20261122.json`. Las mediciones y ciclos históricos se conservan, no se fusionan tecnologías ni se infieren precios. Control reproducible: `node rindelab/tests/official-api-november.cjs`. No se actualizaron precios de comercializadores, tasaciones SII ni nóminas MTT.

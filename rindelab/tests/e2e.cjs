@@ -64,6 +64,7 @@ await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
  assert.equal(manifest.excluded,3);
  assert.equal(manifest.count-manifest.excluded,8053);
  assert.equal(await page.locator('#recordCount').textContent(),'8.394');
+ assert.match(await page.locator('#catalogSnapshot').textContent(),/8\.394 fichas oficiales e históricas.*22\/11\/2026/);
  const extra=await page.evaluate(async()=>Promise.all([1,2,3,4].map(i=>fetch('./data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json').then(r=>r.json()))).then(a=>a.reduce((n,p)=>n+p.items.length,0)));
  assert.equal(extra,272);
 });
@@ -1430,9 +1431,11 @@ await test('Cobertura 3CV: familias auditadas sin equivalencia automática',asyn
  assert.equal(response.status(),200);
  await p.waitForFunction(expected=>Number((document.querySelector('#metricPrices')?.textContent||'').replace(/\D/g,''))===expected,priceTotal,{timeout:30000});
  assert.equal(Number((await p.locator('#metricFamilies').textContent()).replace(/\D/g,'')),familyTotal);
- assert.equal(await p.locator('#coverageRows tr').count(),familyTotal);
- assert.match(await p.locator('#coverageStatus').textContent(),/8\.053/);
- assert.match(await p.locator('.coverage-legend').textContent(),/no equivalencia de versión/i);
+ assert.equal(await p.locator('#coverageRows tr').count(),Math.min(60,familyTotal));
+ assert.match(await p.locator('#coverageStatus').textContent(),/8\.394/);
+ assert.equal(await p.locator('#coverageMore').isVisible(),familyTotal>60);
+ if(familyTotal>60){await p.locator('#coverageMore').click();assert.equal(await p.locator('#coverageRows tr').count(),Math.min(120,familyTotal));}
+ assert.match(await p.locator('.coverage-legend').last().textContent(),/no equivalencia de versión/i);
  assert.match(await p.locator('main').textContent(),/ninguna versión comercial se vincula automáticamente/i);
  assert.equal(issues.length,0,issues.join(' | '));
  await p.selectOption('#brandFilter','Volkswagen');
@@ -1664,7 +1667,10 @@ await test('Cruce MTT septiembre muestra 229 nuevos, 7491 comunes y 12 discrepan
  assert.equal(await p.locator('#metricCommon').textContent(),'7.491');
  assert.equal(await p.locator('#metricMttOnly').textContent(),'554');
  assert.equal(await p.locator('#metricDiffs').textContent(),'12');
- assert.equal(await p.locator('#deltaRows tr').count(),230);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
+ assert(await p.locator('#deltaMore').isVisible());
+ await p.locator('#deltaMore').click();
+ assert.equal(await p.locator('#deltaRows tr').count(),80);
  assert.equal(await p.locator('#deltaConflicts tr').count(),12);
  assert.match(await p.locator('#deltaStatus').textContent(),/Datos de rendimiento añadidos: ninguno/);
  assert.match(await p.locator('#deltaConflicts').textContent(),/JM10011E60525M00-7/);
@@ -1676,7 +1682,7 @@ await test('Nómina MTT permite filtrar 47 BEV y 32 homologaciones de septiembre
  await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
  await p.selectOption('#deltaTech','BEV');
- assert.equal(await p.locator('#deltaRows tr').count(),47);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
  await p.selectOption('#deltaTech','');
  await p.selectOption('#deltaMonth','2026-09');
  assert.equal(await p.locator('#deltaRows tr').count(),32);
@@ -1721,7 +1727,7 @@ await test('Nómina MTT histórica muestra 324 códigos con fecha y 372 filas ag
  await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
  await p.selectOption('#deltaGroup','historical');
- assert.equal(await p.locator('#deltaRows tr').count(),324);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
  assert.match(await p.locator('#deltaCount').textContent(),/324 códigos con fecha hasta mayo \(372 filas MTT\)/);
  assert(await p.locator('#deltaMonth').isDisabled());
  assert(await p.locator('#deltaPresence').isDisabled());
@@ -1752,7 +1758,7 @@ await test('Exeed sin fecha se mantiene fuera de altas recientes e históricas f
  const dl=p.waitForEvent('download');await p.locator('#deltaDownload').click();
  assert.equal((await dl).suggestedFilename(),'rindelab-codigos-sin-fecha-mtt-20260928.csv');
  await p.selectOption('#deltaGroup','recent');
- assert.equal(await p.locator('#deltaRows tr').count(),230);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
  assert(await p.locator('#deltaMonth').isEnabled());
  assert(await p.locator('#deltaPresence').isEnabled());
  await p.close();
@@ -2014,6 +2020,8 @@ await test('Leyenda distingue fuente histórica mayo y ampliaciones oficiales de
  assert.match(await p.locator('#sourceLegend').textContent(),/272 homologaciones incorporadas en octubre y 69 códigos adicionales verificados en noviembre de 2026/);
  assert.match(await p.locator('.vehicle-card .energy-source-line').first().textContent(),/octubre 2026/);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
+ await p.fill('#query','Kia PV5');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card .energy-source-line').allTextContents()).some(x=>/API oficial noviembre 2026/.test(x)),'Las nuevas fichas 3CV deben identificar el corte de noviembre');
  await p.fill('#query','Dolphin Mini');await p.click('#searchButton');
  assert(await p.locator('.vehicle-card').count()>0);
  assert(await p.locator('.vehicle-card [data-compare]').first().isVisible());
@@ -2277,6 +2285,12 @@ await test('Cotizador separado muestra precios y marcas reales del catálogo',as
  assert.equal(await p.locator('#quoteBrand option').count(),catalogBrandTotal+1);
  assert(await p.locator('#quoteCopy').isDisabled());
  assert.equal(await p.locator('.quote-version').count(),24);
+ const freshness=p.locator('#quoteFreshnessNotice');
+ if(await freshness.isVisible())assert.match(await freshness.textContent(),/precios fueron consultados hace al menos 30 días/);
+ await p.fill('#quoteSearch','Kia PV5');
+ assert.equal(await p.locator('.quote-version').count(),0);
+ assert(await p.locator('.quote-empty a[href="./index.html#buscador"]').isVisible());
+ assert(await p.locator('.quote-empty a[href="./novedades-3cv.html"]').isVisible());
  assert.deepEqual(errors,[]);
  await p.close();
 });
