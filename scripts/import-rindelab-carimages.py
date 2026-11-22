@@ -61,8 +61,8 @@ def choose(target, records):
         if any(x in stem for x in ("interior", "dashboard", "engine", "motor", "steering", "wheel", "rear", "back", "inside", "logo", "badge", "tail", "headlight", "vents", "infotainment", "outlet", "airbag", "passenger", "rally", "rally2", "racing", "race", "vintage", "veteranbiler", "classic", "modified", "bruise", "bruised", "police", "ambulance", "wheels", "hotwheels", "legends", "drift", "technical", "engineering", "render", "illustration", "cabinet", "switch", "touring", "enginebay")): continue
         if re.search(r"\bhot\s+wheels\b|\blegends\s+tour\b", " ".join(stem)): continue
         if "aperta" in stem and "aperta" not in words(family): continue
-        if "electric" in stem and "electric" not in words(family) and not item.get("technology") == "EV": continue
-        if "hybrid" in stem and "hybrid" not in words(family) and not item.get("technology") in ("HEV", "PHEV"): continue
+        if "electric" in stem and "electric" not in words(family) and not target.get("technology") == "EV": continue
+        if "hybrid" in stem and "hybrid" not in words(family) and not target.get("technology") in ("HEV", "PHEV"): continue
         if "hybrid" in words(family) and "hybrid" not in stem: continue
         if any(q not in stem for q in qual): continue
         if ("new" in words(family) or "nuevo" in words(family)) and not re.search(r"\b202[2-6]\b", " ".join(stem)): continue
