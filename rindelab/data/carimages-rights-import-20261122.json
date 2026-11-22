@@ -1,0 +1,2129 @@
+{
+  "provider": "CarImages Rights + CarAPI-style Wikidata/Commons metadata",
+  "dataset": "https://carimages.org/media/data/carimages-rights-latest.csv",
+  "copyright": "images individually licensed, metadata CC0",
+  "status": "verified",
+  "stats": {
+    "datasetRows": 83286,
+    "missingBefore": 407,
+    "selectedFromRights": 0,
+    "selectedFromWikidata": 0,
+    "downloaded": 0
+  },
+  "photos": [],
+  "unmatched": [
+    {
+      "brand": "Dongfeng",
+      "family": "aeolus y3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "new sx6",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "s50 eve",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "t5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "midi cargo box",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "tm cabina doble",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "tm cabina simple",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "tm cargo box",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "tm3 refrigerado",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "tm5 cabina simple",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "tm5 cargo box",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "view grand pasajero",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JMC",
+      "family": "All New Vigus Pro",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JMC",
+      "family": "All New Vigus Work",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JMC",
+      "family": "Touring Cargo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "RAM",
+      "family": "ram2500",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Audi",
+      "family": "A5 Coupe",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Audi",
+      "family": "A5 Sportback",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Audi",
+      "family": "Q4 Sportback e-tron",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Audi",
+      "family": "RS5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "M135i",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "M240i",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 4 Convertible",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 4 Gran Coupé",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 8 Coupe",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "BJ30",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "BJ30",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "BJ60",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "EU5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "U5 Plus",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "X35",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "X55",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Baic",
+      "family": "X7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "Alsvin",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "CS35 Max",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "Cs15",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "Serie M",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "Serie M Cargo BOX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "Serie M Furgon",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "UNI-T",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "star-truck-plus-cargo-box",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "star-truck-plus-pick-up-cabina-doble",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "star-truck-plus-pick-up-cabina-simple",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "uni-k",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "Tiggo 7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "cl-tiggo-2-pro",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "cl-tiggo-3-pro",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "N400 Cargo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Sail Sedan",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Silverado CD",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Traverse",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "sail-hatchback",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Cupra",
+      "family": "Leon",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "DFSK",
+      "family": "Cargo Van EC35",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "DFSK",
+      "family": "E5 Plus",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "DFSK",
+      "family": "SUV600 PHEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "DS",
+      "family": "4",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "DS",
+      "family": "7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "AEOLUS GS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "Huge",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "MAGE",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "T5 L",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Exeed",
+      "family": "LX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Exeed",
+      "family": "RX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Exeed",
+      "family": "TXL",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Exeed",
+      "family": "VX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "F8",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "Roma Spider",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ford",
+      "family": "Explorer 26 MY",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ford",
+      "family": "Transit Chasis",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ford",
+      "family": "Transit Custom Furgon",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ford",
+      "family": "Transit Furgon",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ford",
+      "family": "Transit Minibus",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ford",
+      "family": "transit-custom-minibus",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "FT Crew",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "G9",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "K1 Cargo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "Midi Chasis",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "TM3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "V7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "V9",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "WONDER",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "g7 ev",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Fuso",
+      "family": "Canter 515",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Fuso",
+      "family": "Canter 718",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Fuso",
+      "family": "Canter 918",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Gac",
+      "family": "AION ES",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Gac",
+      "family": "GS4 MAX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Geely",
+      "family": "EX5-EMi",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Geely",
+      "family": "GX3 PRO",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Geely",
+      "family": "OKAVANGO",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Geely",
+      "family": "Starray",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hino",
+      "family": "City 515",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 616",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 617 DC",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 816",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 817",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 917",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Honda",
+      "family": "CR-V",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Honda",
+      "family": "HR-V",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Honda",
+      "family": "ZR-V",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "GRAND I,10 AI3 HB",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "GRAND I-10 AI3 SEDAN",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Grand i10 Hatchback",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Grand i10 Sedan",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "I20 BI3 FL",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "KONA SX2 ICE",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Porter",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "TUCSON NX4 HEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "TUCSON NX4c",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Iveco",
+      "family": "Daily Chasis Cabina",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Iveco",
+      "family": "Daily Furgón",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "JS2",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "JS2 Pro",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "JS8",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "JS8 Pro",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "Refine Cargo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "X200",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JIM",
+      "family": "RE-MAX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JMC",
+      "family": "EV3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JMC",
+      "family": "Touring",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JMC",
+      "family": "Vigus EV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jaecoo",
+      "family": "Jaecoo 7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jaguar",
+      "family": "E-Pace",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jaguar",
+      "family": "F-Type",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jetour",
+      "family": "T1 PHEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jetour",
+      "family": "T2",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jetour",
+      "family": "T2 PHEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jetour",
+      "family": "X50",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jetour",
+      "family": "X70 PLUS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kaiyi",
+      "family": "Kye-5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kaiyi",
+      "family": "Kyx3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kaiyi",
+      "family": "Kyx3 PRO",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Karry",
+      "family": "Q22 Cabina Doble",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Karry",
+      "family": "Q22 Cabina Simple",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Karry",
+      "family": "Q22 Cargo BOX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Karry",
+      "family": "Q51 Cabina Simple",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Karry",
+      "family": "Q52 Cabina Doble",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kia",
+      "family": "Frontier II",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kyc",
+      "family": "T3 Gran Mamut",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kyc",
+      "family": "T3 Gran Mamut Cargo BOX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kyc",
+      "family": "X5 Cargo BOX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kyc",
+      "family": "X5 Pick UP",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Kyc",
+      "family": "X5 Pick UP Doble Cabina",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Land Rover",
+      "family": "Defender 110",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Land Rover",
+      "family": "Defender 90",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Land Rover",
+      "family": "Range Rover",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Landking",
+      "family": "LK 1016",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Landking",
+      "family": "LK 614",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Landking",
+      "family": "LK3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Landking",
+      "family": "LK5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Lexus",
+      "family": "LX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Livan",
+      "family": "X6PRO",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Lynk & Co",
+      "family": "06",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "5 Sedan",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "GT",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "MG3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "Marvel R",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "ONE",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "RX5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "ZX",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "C35",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "D60",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "D90",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "Deliver 9",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "Deliver 9 Cargo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "Edeliver 9",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "G10 Cargo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "T60",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "g90",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mazda",
+      "family": "6 Sedan",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mazda",
+      "family": "BT-50",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mazda",
+      "family": "MX-5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "CLE Coupé",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase A Hatchback",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase A Sedan",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase C",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase E",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase G",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase S",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase V",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "GLS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Sprinter Furgon",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Sprinter Minibus",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Vito Furgon",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Vito Minibus",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mini",
+      "family": "JCW Eléctrico",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Opel",
+      "family": "New Crossland",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Opel",
+      "family": "new crossland",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Peugeot",
+      "family": "Traveller MCA",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "RAM",
+      "family": "1000 Pick UP",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "RAM",
+      "family": "2500 CD",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "RAM",
+      "family": "RAM Dakota",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "RAM",
+      "family": "V1000",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "RAM",
+      "family": "V700 City",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "RAM",
+      "family": "V700 Rapid",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Renault",
+      "family": "Koleos",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Renault",
+      "family": "Oroch",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "SWM",
+      "family": "G05 Pro",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Seat",
+      "family": "Ateca",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Seres",
+      "family": "Seres 3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Shineray",
+      "family": "T32 CD",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Shineray",
+      "family": "T50 CS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Shineray",
+      "family": "T52 CD",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Shineray",
+      "family": "X30 con A/C",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Soueast",
+      "family": "S06",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Soueast",
+      "family": "S06 PHEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Soueast",
+      "family": "S07",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Soueast",
+      "family": "S09",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Subaru",
+      "family": "WRX SW",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "COROLLA SEDAN HV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Hiace Cargo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Hiace Minibus",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "RAV 4 HEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "YARIS SEDAN",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Uaz",
+      "family": "Hunter",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Saveiro CD",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Saveiro CS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volvo",
+      "family": "Xc40",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "ZNA",
+      "family": "DF6",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Zxauto",
+      "family": "Grand Lion",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 1",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 2",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 4",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie M",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "TIGGO 9",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "Tiggo 2 Pro Max",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "Tiggo 8",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "FT",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "MIDI",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Foton",
+      "family": "TM5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Haval H6",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Haval H7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Haval Jolion",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Poer",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Tank 300",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Tank 500",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Wingle 7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "Refine Pasajeros",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mazda",
+      "family": "CX-3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mazda",
+      "family": "CX-30",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mazda",
+      "family": "CX-5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Nissan",
+      "family": "Kait",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Shineray",
+      "family": "T30 CS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Land Cruiser Prado",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "RAV 4",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Audi",
+      "family": "E-TRON GT",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Avatr",
+      "family": "11",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie 7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "i5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "i7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "iX1",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "iX2",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BMW",
+      "family": "iX3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BYD",
+      "family": "Atto 8 DM-i",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BYD",
+      "family": "Atto 8 DM-p",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BYD",
+      "family": "Song Pro",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "BYD",
+      "family": "Yuan Pro DM-i",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "Avatr 07",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Changan",
+      "family": "Lumin",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "Tiggo 9",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Bolt",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Bolt EUV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Captiva EV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Captiva PHEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Equinox EV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "DS",
+      "family": "3 Crossback E-Tense",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "DS",
+      "family": "7 E-Tense",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Deepal",
+      "family": "S05",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Deepal",
+      "family": "S07",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Deepal",
+      "family": "S07",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "E70",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "L7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "Vigo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "296",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "SF90",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Fiat",
+      "family": "600e",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Ford",
+      "family": "E-Transit Chasis",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Gac",
+      "family": "AION UT",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Gac",
+      "family": "Emkoo",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Geely",
+      "family": "EX2",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Geely",
+      "family": "EX5 EM-i",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "Ignite30X",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JAC",
+      "family": "Refine Cargo EV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "JMC",
+      "family": "EV3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Jaecoo",
+      "family": "7 SHS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Landking",
+      "family": "LK8 EV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Leapmotor",
+      "family": "B10",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Lexus",
+      "family": "IS",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Lynk & Co",
+      "family": "01",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Lynk & Co",
+      "family": "08",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Lynk & Co",
+      "family": "09",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "MG",
+      "family": "MG3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "EQS 450+",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Nammi",
+      "family": "Nammi 001",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Omoda",
+      "family": "C5 SHS-H",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Omoda",
+      "family": "E5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Renault",
+      "family": "Kwid E -Tech",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Riddara",
+      "family": "RD6",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Smart",
+      "family": "#1",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Smart",
+      "family": "#3",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Soueast",
+      "family": "S08 PHEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "Across Hybrid",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Yaris Cross",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volvo",
+      "family": "XC40 Pure Electric",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volvo",
+      "family": "XC60 Plug-In Hybrid",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volvo",
+      "family": "xc60-mild-hybrid",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Chery",
+      "family": "TIGGO 9 HÍBRIDO",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Dongfeng",
+      "family": "MAGE EV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Haval H6",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Haval H6",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Haval H7",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Haval H7 Max",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "ORA 5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Great Wall",
+      "family": "Poer P500",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Maxus",
+      "family": "T90 EV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mazda",
+      "family": "All New CX-5",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Mini",
+      "family": "Aceman",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Renault",
+      "family": "Boreal",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "All New Rav4 Híbrido",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Corolla Cross",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Corolla Cross Híbrido",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Corolla Sedan Híbrido",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Corolla Sedán",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Hilux BEV",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Yaris Cross Híbrido",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volvo",
+      "family": "EC40",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Volvo",
+      "family": "EX40",
+      "reason": "no high-confidence dataset match"
+    },
+    {
+      "brand": "Peugeot",
+      "family": "new 3008 hybrid",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Peugeot",
+      "family": "nuevo 3008",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Audi",
+      "family": "A6",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Audi",
+      "family": "Q8",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "BMW",
+      "family": "X4",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "BMW",
+      "family": "Z4",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Colorado",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Suburban",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Chevrolet",
+      "family": "Tahoe",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Citroen",
+      "family": "C3",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Citroen",
+      "family": "Jumper",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Citroen",
+      "family": "Spacetourer",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Cupra",
+      "family": "Ateca",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Cupra",
+      "family": "Formentor",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Cupra",
+      "family": "Terramar",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "812",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "Portofino",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "Roma",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Fiat",
+      "family": "Ducato",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Ford",
+      "family": "Escape",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Ford",
+      "family": "Expedition",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Honda",
+      "family": "Civic",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Kona",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Tucson",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "i20",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Kia",
+      "family": "Carens",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Land Rover",
+      "family": "Discovery",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Maserati",
+      "family": "MC20",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Opel",
+      "family": "Combo",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Opel",
+      "family": "Movano",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Opel",
+      "family": "New Grandland",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Opel",
+      "family": "Vivaro",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Peugeot",
+      "family": "Traveller",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "RAM",
+      "family": "rampage",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Renault",
+      "family": "Duster",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Renault",
+      "family": "Kwid",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Enyaq",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Fabia",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Kamiq",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Karoq",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Kodiaq",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Octavia",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Scala",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Subaru",
+      "family": "All New Forester",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Subaru",
+      "family": "Evoltis",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Subaru",
+      "family": "WRX",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "alto",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "xl7-hybrid",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Atlas",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Jetta",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Nivus",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Tiguan",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volkswagen",
+      "family": "Virtus",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volvo",
+      "family": "XC60",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Honda",
+      "family": "Pilot",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Mini",
+      "family": "COOPER",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Porsche",
+      "family": "Cayenne",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Porsche",
+      "family": "Macan",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Porsche",
+      "family": "Panamera",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Toyota",
+      "family": "4Runner",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Toyota",
+      "family": "All New Rav4",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Toyota",
+      "family": "Yaris",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "BMW",
+      "family": "M5",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "BMW",
+      "family": "XM",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "BMW",
+      "family": "iX",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Cupra",
+      "family": "Tavascan",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Hyundai",
+      "family": "Tucson",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Lexus",
+      "family": "ES",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Lexus",
+      "family": "ES",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Lexus",
+      "family": "UX",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Maserati",
+      "family": "Ghibli",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Subaru",
+      "family": "All New Forester",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Porsche",
+      "family": "Cayenne",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Porsche",
+      "family": "Cayenne",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Porsche",
+      "family": "Panamera",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Porsche",
+      "family": "Taycan",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volvo",
+      "family": "XC60",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    },
+    {
+      "brand": "Volvo",
+      "family": "XC90",
+      "reason": "image verification failed",
+      "detail": "Commons attribution/license not verified"
+    }
+  ]
+}
