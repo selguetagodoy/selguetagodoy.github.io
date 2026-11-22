@@ -4433,20 +4433,6 @@ const licensedCarImagesRights20261122=[
   },
   {
     "brand": "Citroen",
-    "pattern": "\\bc3\\b",
-    "family": "C3",
-    "from": "2026",
-    "to": "2026",
-    "file": "2021 Citroen C3 Live BlueHDi.jpg",
-    "model": "Citroen C3 (fotografía referencial de familia; verificar versión)",
-    "author": "RL GNZLZ",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2021_Citroen_C3_Live_BlueHDi.jpg",
-    "localSrc": "./images/commons/rindelab-citroen-c3-carimages-20261122.jpg"
-  },
-  {
-    "brand": "Citroen",
     "pattern": "\\bjumper\\b",
     "family": "Jumper",
     "from": "2026",
@@ -4489,20 +4475,6 @@ const licensedCarImagesRights20261122=[
   },
   {
     "brand": "Ferrari",
-    "pattern": "\\b812\\b",
-    "family": "812",
-    "from": "2026",
-    "to": "2026",
-    "file": "2023 Ferrari 812 GTS.jpg",
-    "model": "Ferrari 812 (fotografía referencial de familia; verificar versión)",
-    "author": "Calreyn88",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2023_Ferrari_812_GTS.jpg",
-    "localSrc": "./images/commons/rindelab-ferrari-812-carimages-20261122.jpg"
-  },
-  {
-    "brand": "Ferrari",
     "pattern": "\\bportofino\\b",
     "family": "Portofino",
     "from": "2026",
@@ -4542,20 +4514,6 @@ const licensedCarImagesRights20261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:2020_Ford_Escape_SE,_Front_Left,_09-06-2020.jpg",
     "localSrc": "./images/commons/rindelab-ford-escape-carimages-20261122.jpg"
-  },
-  {
-    "brand": "Ford",
-    "pattern": "\\bexpedition\\b",
-    "family": "Expedition",
-    "from": "2026",
-    "to": "2026",
-    "file": "2019 Ford Expedition XLT, front 1.21.20.jpg",
-    "model": "Ford Expedition (fotografía referencial de familia; verificar versión)",
-    "author": "Kevauto",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2019_Ford_Expedition_XLT,_front_1.21.20.jpg",
-    "localSrc": "./images/commons/rindelab-ford-expedition-carimages-20261122.jpg"
   },
   {
     "brand": "Hyundai",
@@ -4642,20 +4600,6 @@ const licensedCarImagesRights20261122=[
     "localSrc": "./images/commons/rindelab-opel-movano-carimages-20261122.jpg"
   },
   {
-    "brand": "Peugeot",
-    "pattern": "\\btraveller\\b",
-    "family": "Traveller",
-    "from": "2026",
-    "to": "2026",
-    "file": "2019 Peugeot Traveller Business BlueHDi 2.0 AC Vent.jpg",
-    "model": "Peugeot Traveller (fotografía referencial de familia; verificar versión)",
-    "author": "Vauxford",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2019_Peugeot_Traveller_Business_BlueHDi_2.0_AC_Vent.jpg",
-    "localSrc": "./images/commons/rindelab-peugeot-traveller-carimages-20261122.jpg"
-  },
-  {
     "brand": "Skoda",
     "pattern": "\\benyaq\\b",
     "family": "Enyaq",
@@ -4668,20 +4612,6 @@ const licensedCarImagesRights20261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:2025_Skoda_Enyaq_sportline_(facelift)_-_front.jpg",
     "localSrc": "./images/commons/rindelab-skoda-enyaq-carimages-20261122.jpg"
-  },
-  {
-    "brand": "Skoda",
-    "pattern": "\\bfabia\\b",
-    "family": "Fabia",
-    "from": "2026",
-    "to": "2026",
-    "file": "2019 Skoda Fabia S 1.0 Front.jpg",
-    "model": "Skoda Fabia (fotografía referencial de familia; verificar versión)",
-    "author": "Vauxford",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2019_Skoda_Fabia_S_1.0_Front.jpg",
-    "localSrc": "./images/commons/rindelab-skoda-fabia-carimages-20261122.jpg"
   },
   {
     "brand": "Skoda",
@@ -4780,20 +4710,6 @@ const licensedCarImagesRights20261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:2022_Subaru_WRX,_front_right,_06-19-2023.jpg",
     "localSrc": "./images/commons/rindelab-subaru-wrx-carimages-20261122.jpg"
-  },
-  {
-    "brand": "Suzuki",
-    "pattern": "\\balto\\b",
-    "family": "alto",
-    "from": "2026",
-    "to": "2026",
-    "file": "2021-2025 Suzuki Alto L.jpg",
-    "model": "Suzuki alto (fotografía referencial de familia; verificar versión)",
-    "author": "TTTNIS",
-    "license": "CC0",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:2021-2025_Suzuki_Alto_L.jpg",
-    "localSrc": "./images/commons/rindelab-suzuki-alto-carimages-20261122.jpg"
   },
   {
     "brand": "Volkswagen",
@@ -4908,20 +4824,6 @@ const licensedCarImagesRights20261122=[
     "localSrc": "./images/commons/rindelab-toyota-4runner-carimages-20261122.jpg"
   },
   {
-    "brand": "Toyota",
-    "pattern": "\\ball[\\s-]+new[\\s-]+rav4\\b",
-    "family": "All New Rav4",
-    "from": "2026",
-    "to": "2026",
-    "file": "2020 Toyota RAV4 2.5 LTD in Urban Khaki, front right, 06-20-2024.jpg",
-    "model": "Toyota All New Rav4 (fotografía referencial de familia; verificar versión)",
-    "author": "Ethan Llamas",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2020_Toyota_RAV4_2.5_LTD_in_Urban_Khaki,_front_right,_06-20-2024.jpg",
-    "localSrc": "./images/commons/rindelab-toyota-all-new-rav4-carimages-20261122.jpg"
-  },
-  {
     "brand": "BMW",
     "pattern": "\\bm5\\b",
     "family": "M5",
@@ -5020,20 +4922,6 @@ const licensedCarImagesRights20261122=[
     "localSrc": "./images/commons/rindelab-porsche-taycan-carimages-20261122.jpg"
   },
   {
-    "brand": "Audi",
-    "pattern": "\\brs5\\b",
-    "family": "RS5",
-    "from": "2026",
-    "to": "2026",
-    "file": "Audi RS5 Coupe IMG 0912.jpg",
-    "model": "Audi RS5 (Wikidata P18, fotografía referencial)",
-    "author": "Alexander Migl",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Audi_RS5_Coupe_IMG_0912.jpg",
-    "localSrc": "./images/commons/rindelab-audi-rs5-wikidata-20261122.jpg"
-  },
-  {
     "brand": "BMW",
     "pattern": "\\bx4\\b",
     "family": "X4",
@@ -5059,24 +4947,19 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-chevrolet-colorado-carimages-20261122.jpg",
   "./images/commons/rindelab-chevrolet-suburban-carimages-20261122.jpg",
   "./images/commons/rindelab-chevrolet-tahoe-carimages-20261122.jpg",
-  "./images/commons/rindelab-citroen-c3-carimages-20261122.jpg",
   "./images/commons/rindelab-citroen-jumper-carimages-20261122.jpg",
   "./images/commons/rindelab-citroen-spacetourer-carimages-20261122.jpg",
   "./images/commons/rindelab-cupra-ateca-carimages-20261122.jpg",
-  "./images/commons/rindelab-ferrari-812-carimages-20261122.jpg",
   "./images/commons/rindelab-ferrari-portofino-carimages-20261122.jpg",
   "./images/commons/rindelab-ferrari-roma-carimages-20261122.jpg",
   "./images/commons/rindelab-ford-escape-carimages-20261122.jpg",
-  "./images/commons/rindelab-ford-expedition-carimages-20261122.jpg",
   "./images/commons/rindelab-hyundai-kona-carimages-20261122.jpg",
   "./images/commons/rindelab-hyundai-i20-carimages-20261122.jpg",
   "./images/commons/rindelab-kia-carens-carimages-20261122.jpg",
   "./images/commons/rindelab-land-rover-discovery-carimages-20261122.jpg",
   "./images/commons/rindelab-maserati-mc20-carimages-20261122.jpg",
   "./images/commons/rindelab-opel-movano-carimages-20261122.jpg",
-  "./images/commons/rindelab-peugeot-traveller-carimages-20261122.jpg",
   "./images/commons/rindelab-skoda-enyaq-carimages-20261122.jpg",
-  "./images/commons/rindelab-skoda-fabia-carimages-20261122.jpg",
   "./images/commons/rindelab-skoda-kamiq-carimages-20261122.jpg",
   "./images/commons/rindelab-skoda-karoq-carimages-20261122.jpg",
   "./images/commons/rindelab-skoda-kodiaq-carimages-20261122.jpg",
@@ -5084,7 +4967,6 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-skoda-scala-carimages-20261122.jpg",
   "./images/commons/rindelab-subaru-all-new-forester-carimages-20261122.jpg",
   "./images/commons/rindelab-subaru-wrx-carimages-20261122.jpg",
-  "./images/commons/rindelab-suzuki-alto-carimages-20261122.jpg",
   "./images/commons/rindelab-volkswagen-atlas-carimages-20261122.jpg",
   "./images/commons/rindelab-volkswagen-jetta-carimages-20261122.jpg",
   "./images/commons/rindelab-volkswagen-virtus-carimages-20261122.jpg",
@@ -5093,7 +4975,6 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-mini-cooper-carimages-20261122.jpg",
   "./images/commons/rindelab-porsche-cayenne-carimages-20261122.jpg",
   "./images/commons/rindelab-toyota-4runner-carimages-20261122.jpg",
-  "./images/commons/rindelab-toyota-all-new-rav4-carimages-20261122.jpg",
   "./images/commons/rindelab-bmw-m5-carimages-20261122.jpg",
   "./images/commons/rindelab-bmw-xm-carimages-20261122.jpg",
   "./images/commons/rindelab-bmw-ix-carimages-20261122.jpg",
@@ -5101,7 +4982,6 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-lexus-es-carimages-20261122.jpg",
   "./images/commons/rindelab-lexus-ux-carimages-20261122.jpg",
   "./images/commons/rindelab-porsche-taycan-carimages-20261122.jpg",
-  "./images/commons/rindelab-audi-rs5-wikidata-20261122.jpg",
   "./images/commons/rindelab-bmw-x4-wikidata-20261122.jpg",
 
   "./images/commons/rindelab-citroen-jumpy-licensed-20261122.jpg",

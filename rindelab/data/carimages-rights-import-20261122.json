@@ -6,9 +6,9 @@
   "stats": {
     "datasetRows": 83286,
     "missingBefore": 407,
-    "selectedFromRights": 49,
-    "selectedFromWikidata": 2,
-    "downloaded": 51
+    "selectedFromRights": 42,
+    "selectedFromWikidata": 1,
+    "downloaded": 43
   },
   "photos": [
     {
@@ -139,24 +139,6 @@
     },
     {
       "brand": "Citroen",
-      "pattern": "\\bc3\\b",
-      "family": "C3",
-      "from": "2026",
-      "to": "2026",
-      "file": "2021 Citroen C3 Live BlueHDi.jpg",
-      "model": "Citroen C3 (fotografía referencial de familia; verificar versión)",
-      "author": "RL GNZLZ",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2021_Citroen_C3_Live_BlueHDi.jpg",
-      "localSrc": "./images/commons/rindelab-citroen-c3-carimages-20261122.jpg",
-      "origin": "carimages-rights",
-      "sha256": "ff88da394c66202f9b628aa91a5b0038e936b63d5f0a1f2a42936a3c3153f918",
-      "bytes": 141689,
-      "carimagesPage": "https://carimages.org/cars/citroen/c3/3rd/#p-c1xbyp5"
-    },
-    {
-      "brand": "Citroen",
       "pattern": "\\bjumper\\b",
       "family": "Jumper",
       "from": "2026",
@@ -211,24 +193,6 @@
     },
     {
       "brand": "Ferrari",
-      "pattern": "\\b812\\b",
-      "family": "812",
-      "from": "2026",
-      "to": "2026",
-      "file": "2023 Ferrari 812 GTS.jpg",
-      "model": "Ferrari 812 (fotografía referencial de familia; verificar versión)",
-      "author": "Calreyn88",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2023_Ferrari_812_GTS.jpg",
-      "localSrc": "./images/commons/rindelab-ferrari-812-carimages-20261122.jpg",
-      "origin": "carimages-rights",
-      "sha256": "42ef5947f6cf4d30681e0e6f9ceed632ed126b0215da785c86c21226a29f8901",
-      "bytes": 180869,
-      "carimagesPage": "https://carimages.org/cars/ferrari/812/"
-    },
-    {
-      "brand": "Ferrari",
       "pattern": "\\bportofino\\b",
       "family": "Portofino",
       "from": "2026",
@@ -280,24 +244,6 @@
       "sha256": "5b6c44db36dc12c3584a7815aa9a1e70fc8f5fd0d91865c124e61b451a632798",
       "bytes": 158254,
       "carimagesPage": "https://carimages.org/cars/ford/escape/fourth/#p-c1jxabg"
-    },
-    {
-      "brand": "Ford",
-      "pattern": "\\bexpedition\\b",
-      "family": "Expedition",
-      "from": "2026",
-      "to": "2026",
-      "file": "2019 Ford Expedition XLT, front 1.21.20.jpg",
-      "model": "Ford Expedition (fotografía referencial de familia; verificar versión)",
-      "author": "Kevauto",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2019_Ford_Expedition_XLT,_front_1.21.20.jpg",
-      "localSrc": "./images/commons/rindelab-ford-expedition-carimages-20261122.jpg",
-      "origin": "carimages-rights",
-      "sha256": "9127a4511877b39bcd0398a7cd3fa17e221657950b5bcfe9419c427db343f7f4",
-      "bytes": 134458,
-      "carimagesPage": "https://carimages.org/cars/ford/expedition/fourth/#p-c1hz18o"
     },
     {
       "brand": "Hyundai",
@@ -408,24 +354,6 @@
       "carimagesPage": "https://carimages.org/cars/opel/movano/c/#p-c2rtxg3"
     },
     {
-      "brand": "Peugeot",
-      "pattern": "\\btraveller\\b",
-      "family": "Traveller",
-      "from": "2026",
-      "to": "2026",
-      "file": "2019 Peugeot Traveller Business BlueHDi 2.0 AC Vent.jpg",
-      "model": "Peugeot Traveller (fotografía referencial de familia; verificar versión)",
-      "author": "Vauxford",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2019_Peugeot_Traveller_Business_BlueHDi_2.0_AC_Vent.jpg",
-      "localSrc": "./images/commons/rindelab-peugeot-traveller-carimages-20261122.jpg",
-      "origin": "carimages-rights",
-      "sha256": "5f64f37780f1af723e1f2f6f4f2c2359e04e157ca66325a5a6e2a8eee9621feb",
-      "bytes": 303498,
-      "carimagesPage": "https://carimages.org/cars/peugeot/traveller/"
-    },
-    {
       "brand": "Skoda",
       "pattern": "\\benyaq\\b",
       "family": "Enyaq",
@@ -442,24 +370,6 @@
       "sha256": "fb892523865b7f4cee8d7d459874e460d3de4bc148ca8fa71672372406af6c1e",
       "bytes": 187668,
       "carimagesPage": "https://carimages.org/cars/skoda/enyaq/"
-    },
-    {
-      "brand": "Skoda",
-      "pattern": "\\bfabia\\b",
-      "family": "Fabia",
-      "from": "2026",
-      "to": "2026",
-      "file": "2019 Skoda Fabia S 1.0 Front.jpg",
-      "model": "Skoda Fabia (fotografía referencial de familia; verificar versión)",
-      "author": "Vauxford",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2019_Skoda_Fabia_S_1.0_Front.jpg",
-      "localSrc": "./images/commons/rindelab-skoda-fabia-carimages-20261122.jpg",
-      "origin": "carimages-rights",
-      "sha256": "3ceb0bd39153485b693735c1aa6394be84edad49e9748049840926b1b01ca233",
-      "bytes": 128017,
-      "carimagesPage": "https://carimages.org/cars/skoda/fabia/iii/#p-c1auohf"
     },
     {
       "brand": "Skoda",
@@ -586,24 +496,6 @@
       "sha256": "e8d4b12a5f18924b3a92881344abc7ee238fa293a98d3c91fcbd4f34a220a391",
       "bytes": 163170,
       "carimagesPage": "https://carimages.org/cars/subaru/wrx/vb/#p-c27fcgs"
-    },
-    {
-      "brand": "Suzuki",
-      "pattern": "\\balto\\b",
-      "family": "alto",
-      "from": "2026",
-      "to": "2026",
-      "file": "2021-2025 Suzuki Alto L.jpg",
-      "model": "Suzuki alto (fotografía referencial de familia; verificar versión)",
-      "author": "TTTNIS",
-      "license": "CC0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "source": "https://commons.wikimedia.org/wiki/File:2021-2025_Suzuki_Alto_L.jpg",
-      "localSrc": "./images/commons/rindelab-suzuki-alto-carimages-20261122.jpg",
-      "origin": "carimages-rights",
-      "sha256": "602eadf9bd63a57c367a6f1f531b7b91d45d97c63126dab19cb1c036afc45186",
-      "bytes": 164000,
-      "carimagesPage": "https://carimages.org/cars/suzuki/alto/9th/#p-c2shy9v"
     },
     {
       "brand": "Volkswagen",
@@ -750,24 +642,6 @@
       "carimagesPage": "https://carimages.org/cars/toyota/4runner/n500/#p-c2qmjjw"
     },
     {
-      "brand": "Toyota",
-      "pattern": "\\ball[\\s-]+new[\\s-]+rav4\\b",
-      "family": "All New Rav4",
-      "from": "2026",
-      "to": "2026",
-      "file": "2020 Toyota RAV4 2.5 LTD in Urban Khaki, front right, 06-20-2024.jpg",
-      "model": "Toyota All New Rav4 (fotografía referencial de familia; verificar versión)",
-      "author": "Ethan Llamas",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2020_Toyota_RAV4_2.5_LTD_in_Urban_Khaki,_front_right,_06-20-2024.jpg",
-      "localSrc": "./images/commons/rindelab-toyota-all-new-rav4-carimages-20261122.jpg",
-      "origin": "carimages-rights",
-      "sha256": "467f0c67308206bfe0d4c1131954686210d81d0f0a108b5bf7c066587871bd5f",
-      "bytes": 258644,
-      "carimagesPage": "https://carimages.org/cars/toyota/rav4/xa50/#p-c2h1w2e"
-    },
-    {
       "brand": "BMW",
       "pattern": "\\bm5\\b",
       "family": "M5",
@@ -892,24 +766,6 @@
       "sha256": "6da0878769dc2185894770dc8be53f9fcdeeb2d6c8d6ef858b2b47ce5aa3053f",
       "bytes": 145981,
       "carimagesPage": "https://carimages.org/cars/porsche/taycan/"
-    },
-    {
-      "brand": "Audi",
-      "pattern": "\\brs5\\b",
-      "family": "RS5",
-      "from": "2026",
-      "to": "2026",
-      "file": "Audi RS5 Coupe IMG 0912.jpg",
-      "model": "Audi RS5 (Wikidata P18, fotografía referencial)",
-      "author": "Alexander Migl",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Audi_RS5_Coupe_IMG_0912.jpg",
-      "localSrc": "./images/commons/rindelab-audi-rs5-wikidata-20261122.jpg",
-      "origin": "wikidata-p18",
-      "qid": "Q758777",
-      "sha256": "c8294fdc8fdeec55812951f732e94e1d0afdc4bbedcc103c17e9ee95376336f0",
-      "bytes": 180282
     },
     {
       "brand": "BMW",
@@ -2699,6 +2555,56 @@
       "family": "Nivus",
       "reason": "image verification failed",
       "detail": "not valid compact JPEG"
+    }
+  ],
+  "editorialExclusions": [
+    {
+      "brand": "Citroen",
+      "family": "C3",
+      "file": "2021 Citroen C3 Live BlueHDi.jpg",
+      "reason": "2021 generation not the new Chile CC21 body"
+    },
+    {
+      "brand": "Ferrari",
+      "family": "812",
+      "file": "2023 Ferrari 812 GTS.jpg",
+      "reason": "812 GTS open-top, not generic 812 coupe"
+    },
+    {
+      "brand": "Ford",
+      "family": "Expedition",
+      "file": "2019 Ford Expedition XLT, front 1.21.20.jpg",
+      "reason": "2019 generation, outdated for current 2026 family"
+    },
+    {
+      "brand": "Peugeot",
+      "family": "Traveller",
+      "file": "2019 Peugeot Traveller Business BlueHDi 2.0 AC Vent.jpg",
+      "reason": "AC ventilation interior, not an exterior vehicle photo"
+    },
+    {
+      "brand": "Skoda",
+      "family": "Fabia",
+      "file": "2019 Skoda Fabia S 1.0 Front.jpg",
+      "reason": "2019 previous generation, not current Fabia IV"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "alto",
+      "file": "2021-2025 Suzuki Alto L.jpg",
+      "reason": "Japan-market Alto L, not verified Chilean Alto body"
+    },
+    {
+      "brand": "Toyota",
+      "family": "All New Rav4",
+      "file": "2020 Toyota RAV4 2.5 LTD in Urban Khaki, front right, 06-20-2024.jpg",
+      "reason": "2020 RAV4 is previous generation, despite 2024 photo date"
+    },
+    {
+      "brand": "Audi",
+      "family": "RS5",
+      "file": "Audi RS5 Coupe IMG 0912.jpg",
+      "reason": "coupe body not verified against current RS5 commercial family"
     }
   ]
 }
