@@ -1,0 +1,60 @@
+name: RINDELAB · búsqueda masiva de fotos Commons
+
+on:
+  push:
+    branches:
+      - feat/rindelab-commons-mass-20261122
+    paths:
+      - scripts/import-rindelab-commons-mass.py
+      - .github/workflows/rindelab-commons-mass.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  images:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 32
+    steps:
+      - name: Obtener rama
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compilar importador de Commons
+        run: python -m py_compile scripts/import-rindelab-commons-mass.py
+      - name: Buscar marcas y modelos faltantes en Wikimedia Commons
+        env:
+          MAX_COMMONS_SEARCH: '195'
+          MAX_COMMONS_IMPORT: '95'
+        run: python -u scripts/import-rindelab-commons-mass.py
+      - name: Recalcular cobertura comercial
+        run: node scripts/rindelab-market-queue.cjs --write
+      - name: Validar imágenes, fuentes, licencias y no regresiones
+        run: |
+          node --check rindelab/v2-photos.js
+          node rindelab/tests/commons-mass.cjs
+          node rindelab/tests/carimages-rights-import.cjs
+          node rindelab/tests/photos-november.cjs
+          node rindelab/tests/photos-november-batch2.cjs
+          node rindelab/tests/photo-integrity.cjs
+          node scripts/rindelab-market-queue.cjs --check
+      - name: Guardar fotos y auditoría en GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rindelab/v2-photos.js rindelab/images/commons/ rindelab/data/commons-mass-20261122.json rindelab/data/catalog-coverage-20261122.json rindelab/sii/LOTE-PENDIENTES-100-20261122.md rindelab/index.html rindelab/cotizador.html rindelab/electromovilidad.html
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m "feat(rindelab): incorporar lote de imágenes Commons con licencias verificadas"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi
