@@ -28,6 +28,7 @@ EXCLUDE={
  ('Dongfeng','t5'):'T5 Evo is a different Forthing variant from T5 commercial family',
  ('Gac','Emkoo'):'Gasoline version is not validated as hybrid HEV record',
  ('Opel','new crossland'):'Photographed Crossland trim not verified as advertised EV model',
+ ('Porsche','Macan'):'2022 combustion Porsche Macan must not replace the separate verified 2026 Macan EV photograph',
  ('Ferrari','812'):'Variant or adapted 812 media not enough to verify same 2026 Chile variant',
 }
 old=manifest.get('photos',[])
