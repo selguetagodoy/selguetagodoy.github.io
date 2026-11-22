@@ -18,6 +18,8 @@ for(let i=1;i<=4;i++){
  const data=require('../rindelab/data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json');
  for(const row of data.items||[]){const code=codeFrom(row);if(code)known.add(code);}
 }
+const november=require('../rindelab/data/oficial-api-20261122.json');
+for(const row of november.items){const code=codeFrom(row);if(code)known.add(code);}
 const allowedDomain=host=>host==='api-consumovehicular.minenergia.cl'||host==='consumovehicular.minenergia.cl'||host==='mtt.gob.cl'||host.endsWith('.mtt.gob.cl');
 async function getJson(uri){
  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),22000);

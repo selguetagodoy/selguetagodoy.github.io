@@ -9,7 +9,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   const failures=[];page.on('pageerror',e=>failures.push(e.message));
   const resp=await page.goto(base,{waitUntil:'domcontentloaded',timeout:30000});
   assert.equal(resp.status(),200);
-  await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325'&&document.querySelector('#searchButton')?.disabled===false,{timeout:30000});
+  await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394'&&document.querySelector('#searchButton')?.disabled===false,{timeout:30000});
   assert.equal(await page.locator('#supuestos').evaluate(el=>el.open),false,'Scenario initially expanded');
   assert.equal(await page.locator('#scenarioAdvanced').evaluate(el=>el.open),true,'Principal controls should be ready when drawer opens');
   assert.equal(await page.locator('#annualKm').isVisible(),false,'Controls clutter the initial page');

@@ -113,6 +113,9 @@ jobs:
       - name: Validar integración exhaustiva API oficial octubre, ciclos y 228 MTT reconciliados
         run: node scripts/audit-official-api-october-2026.cjs --json=official-api-october-audit.json
 
+      - name: Validar 69 nuevos códigos 3CV y ciclos WLTP de octubre-noviembre
+        run: node rindelab/tests/official-api-november.cjs
+
       - name: Guardar expediente auditable de 28 revisiones
         uses: actions/upload-artifact@v4
         with:

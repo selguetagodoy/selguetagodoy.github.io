@@ -9,7 +9,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   const errors=[];p.on('pageerror',e=>errors.push(e.message));
   const r=await p.goto(base,{waitUntil:'domcontentloaded'});
   assert.equal(r.status(),200);
-  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:25000});
+  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:25000});
   assert.equal(await p.locator('.source-teaser').count(),0,'Source teaser still visible');
   assert.equal(await p.locator('.hero-support').count(),0,'Redundant hero description');
   assert.equal(await p.locator('.search-card-heading p').count(),0,'Redundant search explanation');
