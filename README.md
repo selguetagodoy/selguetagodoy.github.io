@@ -1,6 +1,6 @@
 # Sebastián Elgueta Godoy — sitio oficial
 
-Repositorio del sitio público de **Sebastián Elgueta Godoy**, sociólogo y consultor en asuntos públicos, análisis regulatorio e investigación aplicada sobre mercados regulados y políticas públicas en Chile y América Latina. Sectores de análisis: salud, energía, turismo, tecnología e infraestructura.
+Repositorio del sitio público de **Sebastián Elgueta Godoy**, sociólogo y consultor en asuntos públicos, análisis regulatorio e investigación aplicada sobre mercados regulados y políticas públicas en Chile y América Latina. Sectores de análisis: salud, energía, turismo, tecnología e infraestructura. Actualmente es consultor de Issue Management Chile en Prospectiva Public Affairs LATAM; anteriormente participó en Coordenadas Públicas.
 
 🌐 **Sitio oficial:** https://selguetagodoy.github.io/  
 
