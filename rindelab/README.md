@@ -1,5 +1,17 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Búsqueda masiva complementaria Commons · 22/11/2026
+
+Se consultaron **195 familias comerciales** entre los 359 grupos pendientes contra el buscador de fotografías de **Wikimedia Commons**, cruzando marca, modelo, carrocería y metadatos de autor/licencia de cada archivo. De 95 candidatas descargadas se descartaron 7 por generación/carrocería no acreditada y se conservaron **88 JPEG** de modelos identificados, con créditos y SHA-256 documentados en `data/commons-mass-20261122.json`. La nueva fuente complementa a CarImages Rights; no reemplaza ni altera los datos de precios, ciclos 3CV o homologaciones.
+
+**Resultado tras la curaduría:** biblioteca de **423 fotografías** (335 antes de este lote); **254 de 700 grupos familia/tecnología aún sin fotografía** (359 antes): se cubren **105 grupos comerciales adicionales**. Las fotos muestran familias/generaciones referenciales y no acreditan versión exacta, equipamiento, motorización ni disponibilidad chilena. Los siete casos excluidos (Chevrolet Traverse/Sail, Ford Transit Minibus, Renault Duster/Koleos, Suzuki Alto y Toyota Yaris) tienen sus motivos trazables en el manifiesto.
+
+**Controles:** `node rindelab/tests/commons-mass.cjs`, `node rindelab/tests/carimages-rights-import.cjs` y `node scripts/rindelab-market-queue.cjs --check`. El importador de origen `scripts/import-rindelab-commons-mass.py` está diseñado para ejecutarse una sola vez sobre una rama sin ese lote. Se conserva `scripts/curate-rindelab-commons-mass.py` como prueba reproducible de exclusiones editoriales.
+
+---
+
+
+
 ## Importación masiva CarImages Rights · 22/11/2026
 
 Se procesaron **83.286 registros de fotos de CarImages Rights** (catálogo de metadatos y URL de Wikimedia Commons) contra los **407 grupos comerciales que no tenían imagen**. Tras contrastar modelo y carrocería, verificar autor y licencia actual en Wikimedia y auditar visualmente las asociaciones por título/generación, se incorporaron **43 fotografías JPEG** reutilizables, cada una con metadatos de origen y SHA-256 comprobados. **42 provienen del cruce CarImages Rights y una de Wikidata P18, siguiendo la lógica de CarAPI**. Se descartaron expresamente 8 fotografías inicialmente encontradas que resultaban antiguas, interiores o de una variante de carrocería no correspondiente. La trazabilidad, archivos y motivos de exclusión quedan documentados en `data/carimages-rights-import-20261122.json`.
