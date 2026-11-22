@@ -137,6 +137,8 @@ def exact_exclusion(g,filename):
     """Known model-family confusions rejected after inspecting filename evidence."""
     k=(text(g['brand']),text(g['family']))
     name=text(filename)
+    if k in {('bmw','serie m'),('bmw','serie 2'),('foton','ft')}:
+        return True
     BAD={
        ('baic','eu5'):['eu5 plus'],
        ('chevrolet','sail sedan'):['sail ii','second generation'],
@@ -162,7 +164,30 @@ def exact_exclusion(g,filename):
        ('bmw','i5'):['nostokana'],
        ('bmw','i7'):['protection'],
        ('baic','u5 plus'):['taxi'],
-       ('exeed','vx'):['taxi']
+       ('exeed','vx'):['taxi'],
+       ('chevrolet','sail sedan'):['sail ii','second generation','third generation'],
+       ('ford','transit minibus'):['transit minibus uk','psta','primary school','wetherby'],
+       ('ford','expedition'):['bureau of land management','government'],
+       ('renault','duster'):['techroad','tandil'],
+       ('renault','koleos'):['2019','gt line'],
+       ('suzuki','alto'):['van vp','ha36v','alto vii','alto china'],
+       ('toyota','yaris'):['carabinieri','xp210','yaris hybrid'],
+       ('toyota','yaris sedan'):['2019','2018','2017','old generation'],
+       ('toyota','corolla sedan'):['e180'],
+       ('bmw','serie 4'):['serie 6','e24','e36','e46'],
+       ('bmw','serie 5'):['f10','f11','g30','2011','2012'],
+       ('bmw','serie 7'):['e38','e32','e65','f01','g11','g12','phase 1'],
+       ('foton','ft'):['tricycle','wuxing'],
+       ('honda','pilot'):['second generation','2008','2011','2013'],
+       ('mini','cooper'):['j01'],
+       ('maserati','ghibli'):['bergrennen','2017'],
+       ('nammi','nammi 001'):['nammi 06','nammi 06 001'],
+       ('great wall','ora 5'):['funky cat','ora 03'],
+       ('renault','boreal'):['clio','gris boreal'],
+       ('fiat','ducato'):['esercito','esercito italiano','army','military'],
+       ('hyundai','porter'):['cherrypicker','cherry picker'],
+       ('iveco','daily furgon'):['all blacks'],
+       ('mercedes-benz','vito minibus'):['polizei','police','military']
     }
     return any(v in name for v in BAD.get(k,[]))
 
@@ -294,7 +319,7 @@ def main():
     source=source.replace(anchor,'const '+TAG+'='+json.dumps([{k:v for k,v in p.items() if k not in ('score','bytes','sha256')} for p in downloaded],ensure_ascii=False,indent=2)+';\n'+anchor)
     before='licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122).map('
     assert before in source, 'Other photo batches changed'
-    source=source.replace(before,'licensedNovember2026B,licensedCarImagesRights20261122,'+TAG+').map(')
+    source=source.replace(before,'licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,'+TAG+').map(')
     neutral='const neutralFamilyPhotoSources=new Set(['
     assert neutral in source
     source=source.replace(neutral,neutral+'\n'+''.join('  '+json.dumps(p['localSrc'])+',\n' for p in downloaded))
