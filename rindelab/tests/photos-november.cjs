@@ -4,6 +4,11 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),cryp
 const root=path.resolve(__dirname,'../..'),rd=p=>require(path.join(root,p));
 const data=rd('rindelab/data/licensed-photos-november-2026.json');
 assert.equal(data.images.length,19);
+const commercialCover=rd('rindelab/data/catalog-coverage-20261122.json');
+assert.equal(commercialCover.summary.photosInLibrary,278);
+assert.equal(commercialCover.summary.activeFamiliesTechnologies,700);
+assert.equal(commercialCover.summary.withoutFamilyPhoto,422);
+assert.equal(commercialCover.summary.generatedDate,'2026-11-22');
 const seen=new Set();
 for(const pic of data.images){
  assert(/^CC0$|^CC BY(?:-SA)? [234]\.0$/.test(pic.license),pic.license);
