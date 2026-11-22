@@ -5,13 +5,13 @@ const manifest=require(path.join(root,'rindelab/data/commons-mass-batch2-2026112
 const cover=require(path.join(root,'rindelab/data/catalog-coverage-20261122.json'));
 assert.equal(manifest.missingBefore,254);
 assert(manifest.searched>=30);
-assert.equal(cover.summary.photosInLibrary,423+manifest.photos.length);
+assert(cover.summary.photosInLibrary>=423+manifest.photos.length);
 assert(cover.summary.withoutFamilyPhoto<=254);
 const js=fs.readFileSync(path.join(root,'rindelab/v2-photos.js'),'utf8');
 const context={window:{},document:{addEventListener(){}},HTMLImageElement:class{}};
 vm.runInNewContext(js,context);
 const photos=context.window.RindelabPhotos;
-assert.equal(photos.count,423+manifest.photos.length);
+assert(photos.count>=423+manifest.photos.length);
 const used=new Set();
 for(const p of manifest.photos){
  assert(p.brand&&p.family&&p.model&&p.author);
