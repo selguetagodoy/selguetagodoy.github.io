@@ -1,0 +1,51 @@
+name: RINDELAB · curaduría final segundo barrido Commons
+
+on:
+  push:
+    branches:
+      - feat/rindelab-commons-mass-batch2-20261122
+    paths:
+      - .github/workflows/rindelab-commons-curate-batch2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # Revalidación: excluir Macan combustión y proteger fotografías híbridas Haval.
+      - name: Retirar fotografías equivocadas antes de publicar
+        run: python -u scripts/curate-rindelab-commons-mass-batch2.py
+      - name: Regenerar inventario y cobertura comercial
+        run: node scripts/rindelab-market-queue.cjs --write
+      - name: Verificar fotografías/licencias/familias de todos los lotes
+        run: |
+          node --check rindelab/v2-photos.js
+          node rindelab/tests/commons-mass-batch2.cjs
+          node rindelab/tests/commons-mass.cjs
+          node rindelab/tests/carimages-rights-import.cjs
+          node rindelab/tests/photos-november.cjs
+          node rindelab/tests/photos-november-batch2.cjs
+          node rindelab/tests/photo-integrity.cjs
+          node scripts/rindelab-market-queue.cjs --check
+      - name: Guardar lote corregido
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A rindelab/v2-photos.js rindelab/images/commons/ rindelab/data/commons-mass-batch2-20261122.json rindelab/data/catalog-coverage-20261122.json rindelab/sii/LOTE-PENDIENTES-100-20261122.md
+          git diff --cached --check
+          git commit -m "fix(rindelab): segundo lote Commons depurado y métricas actualizadas"
+          git push origin "HEAD:$GITHUB_REF_NAME"

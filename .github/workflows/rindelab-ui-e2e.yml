@@ -128,6 +128,9 @@ jobs:
       - name: Verificar 88 fotografías Commons, atribución y SHA-256
         run: node rindelab/tests/commons-mass.cjs
 
+      - name: Verificar segundo barrido Commons de 76 fotografías con derechos y comprobación de carrocería
+        run: node rindelab/tests/commons-mass-batch2.cjs
+
       - name: Auditar cobertura nominal con base completa 3CV 8394 (noviembre)
         run: node rindelab/tests/coverage-november.cjs
 

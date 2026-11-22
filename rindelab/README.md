@@ -1,5 +1,15 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Segunda búsqueda masiva Commons · 22/11/2026
+
+Se revisaron **227 grupos comerciales sin fotografía** mediante búsquedas de marca y modelo en Wikimedia Commons. Se recuperaron 95 candidatas con metadatos de autor, licencia y huella SHA-256; la curaduría descartó **19 imágenes erróneas o ambiguas**, incluyendo generaciones antiguas, carrocerías distintas, fotografías intervenidas y una imagen de un BMW Serie 3 propuesta para Serie 7. El lote definitivo contiene **76 fotografías JPEG** de referencia de familia/generación, con trazabilidad y razones de exclusión en `data/commons-mass-batch2-20261122.json`.
+
+**Resultado comercial tras este lote:** biblioteca de **499 fotografías** (antes 423) y **185 de 700 grupos sin fotografía** (antes 254): 69 grupos comerciales adicionales cubiertos. Se respetan fotos específicas de versiones electrificadas: Porsche Macan EV y Haval Jolion HEV conservan prioridad sobre imágenes genéricas. No se modificaron precios, homologaciones ni atributos técnicos. Para verificar: `node rindelab/tests/commons-mass-batch2.cjs`, `node rindelab/tests/photo-integrity.cjs` y `node scripts/rindelab-market-queue.cjs --check`.
+
+---
+
+
+
 ## Búsqueda masiva complementaria Commons · 22/11/2026
 
 Se consultaron **195 familias comerciales** entre los 359 grupos pendientes contra el buscador de fotografías de **Wikimedia Commons**, cruzando marca, modelo, carrocería y metadatos de autor/licencia de cada archivo. De 95 candidatas descargadas se descartaron 7 por generación/carrocería no acreditada y se conservaron **88 JPEG** de modelos identificados, con créditos y SHA-256 documentados en `data/commons-mass-20261122.json`. La nueva fuente complementa a CarImages Rights; no reemplaza ni altera los datos de precios, ciclos 3CV o homologaciones.
