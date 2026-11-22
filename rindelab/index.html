@@ -63,6 +63,7 @@
    <div class="hero-copy">
     <h1 id="title">¿Cuánto te costará usar tu próximo auto?</h1>
     <p>Compara vehículos eléctricos, híbridos y a combustión según su rendimiento y cuánto gastarías en energía.</p>
+    <div class="catalog-snapshot" id="catalogSnapshot" role="status" aria-live="polite">8.394 fichas oficiales e históricas · corte 22/11/2026</div>
     <button class="statistics-entry" id="statsOpen" type="button" aria-haspopup="dialog" aria-controls="statsDialog">
      <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V12M10 20V6M16 20v-9M22 20V3" stroke-linecap="round"/></svg>
      Ver rankings y estadísticas <span aria-hidden="true">↗</span>
@@ -77,6 +78,7 @@
   <div class="search-card-heading"><h2>Busca un auto</h2></div>
   <form id="vehicleForm" role="search">
    <div class="quick-filters" role="group" aria-label="Filtrar por motorización"><button type="button" data-quick-tech="" aria-pressed="true">Todos</button><button type="button" data-quick-tech="EV" aria-pressed="false">Eléctricos</button><button type="button" data-quick-tech="HEV" aria-pressed="false">Híbridos</button><button type="button" data-quick-tech="PHEV" aria-pressed="false">Híbridos enchufables</button><button type="button" data-quick-tech="Bencina" aria-pressed="false">Bencina</button><button type="button" data-quick-tech="Diésel" aria-pressed="false">Diésel</button></div>
+   <p class="quick-filters-hint">Desliza para ver todos los tipos de motor →</p>
    <div class="fields">
     <div class="field wide">
      <label for="query">Marca o modelo</label>
@@ -117,7 +119,7 @@
     <button type="button" class="button secondary" id="resetButton">Limpiar</button>
    </div>
   </form>
-  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Con precio comercial o ficha reciente pendiente de conciliar</option><option value="upcoming">Próximamente en Chile · Lanzamiento anunciado</option><option value="market-priced">Oferta comercial en Chile · Precio publicado</option><option value="family-price-review">Precio o referencia de familia · Versión por verificar</option><option value="recent-no-price">Homologado recientemente · Precio por comprobar</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Chequeo comercial 22-10-2026: 390 fichas 3CV tienen alguna referencia comercial de familia y 182 siguen pendientes. La séptima revisión sumó 11 listas del importador CIDEF para Dongfeng T5 EVO, T5L, SX6 y Aeolus, sin atribuir a una versión 3CV el precio de otro acabado. Se separan las listas con vigencia actual, campañas vencidas y conflictos técnicos de carrocería, motor o tracción. No se imputan importes de otras versiones a una homologación.</small></div>
+  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Con precio comercial o ficha reciente pendiente de conciliar</option><option value="upcoming">Próximamente en Chile · Lanzamiento anunciado</option><option value="market-priced">Oferta comercial en Chile · Precio publicado</option><option value="family-price-review">Precio o referencia de familia · Versión por verificar</option><option value="recent-no-price">Homologado recientemente · Precio por comprobar</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Auditoría comercial del 22/10/2026: se distinguen precios publicados, referencias de familia no asociadas y homologaciones recientes sin precio acreditado. Los recuentos visibles se recalculan sobre el catálogo actual; una homologación no acredita disponibilidad comercial.</small></div>
  </section>
  <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor gasto en energía (WLTP)</button><a href="./usados.html">💰 Tasación y precio usado</a><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>

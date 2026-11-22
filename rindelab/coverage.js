@@ -2,7 +2,7 @@
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
 const formatter=new Intl.NumberFormat('es-CL');
-let report=null;
+let report=null,visibleLimit=60;
 const fmt=n=>formatter.format(n);
 const norm=s=>window.RindelabCoverage.normalized(s);
 const cell=(row,text)=>{
@@ -16,8 +16,9 @@ function visibleRows(){
 function render(){
  if(!report)return;
  const items=visibleRows(),out=$('coverageRows');out.replaceChildren();
- $('coverageResultCount').textContent=fmt(items.length)+' de '+fmt(report.commercialFamilies)+' familias comerciales';
- for(const x of items){
+ $('coverageResultCount').textContent=fmt(items.length)+' de '+fmt(report.commercialFamilies)+' familias comerciales · mostrando '+fmt(Math.min(visibleLimit,items.length));
+ $('coverageMore').hidden=visibleLimit>=items.length;
+ for(const x of items.slice(0,visibleLimit)){
   const tr=document.createElement('tr');
   const family=cell(tr,x.brand+' · '+x.family);
   family.className='coverage-family';
@@ -55,12 +56,21 @@ async function load(){
   const files=await Promise.all(manifest.files.map(name=>fetch('../vehiculos/'+name).then(r=>{
    if(!r.ok)throw Error('No se pudo cargar '+name);return r.json();
   })));
-  report=window.RindelabCoverage.analyze(prices,files.flat(),manifest.published);
+  const legacy=files.flat().filter(r=>r&&r[0]&&r[1]&&r[8]&&r[8]<=manifest.published);
+  if(!window.RindelabOfficialAPI)throw Error('Módulo oficial 3CV no disponible');
+  const parts=await Promise.all([1,2,3,4].map(i=>fetch('./data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json').then(r=>{if(!r.ok)throw Error('Faltan ampliaciones 3CV de octubre');return r.json();})));
+  const previous=window.RindelabOfficialAPI.load(parts,legacy);
+  const deltaResponse=await fetch('./data/oficial-api-20261122.json');
+  if(!deltaResponse.ok)throw Error('Falta ampliación 3CV de noviembre');
+  const deltaDoc=await deltaResponse.json();
+  const latest=window.RindelabOfficialAPI.loadIncremental(deltaDoc,legacy,previous);
+  report=window.RindelabCoverage.analyze(prices,legacy.concat(previous,latest),deltaDoc.retrieved);
+  if(report.threeCvRecords!==8394)throw Error('Recuento 3CV incompatible');
   $('metricPrices').textContent=fmt(report.commercialPrices);
   $('metricFamilies').textContent=fmt(report.commercialFamilies);
   $('metricMatched').textContent=fmt(report.matchedFamilies);
   $('metricUnmatched').textContent=fmt(report.unmatchedFamilies);
-  const date=new Date(manifest.published+'T12:00:00Z');
+  const date=new Date(report.published+'T12:00:00Z');
   $('sourceDate').textContent=date.toLocaleDateString('es-CL',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
   $('coverageStatus').textContent='Corte 3CV: '+report.published+' · '+fmt(report.threeCvRecords)+' homologaciones históricas al corte. Coincidencia de familia, no identificación de versión.';
   const brands=[...new Set(report.rows.map(x=>x.brand))].sort((a,b)=>a.localeCompare(b,'es'));
@@ -72,7 +82,8 @@ async function load(){
   const tr=document.createElement('tr');cell(tr,'Auditoría no disponible; no se mostrarán porcentajes incompletos.').colSpan=5;$('coverageRows').append(tr);
  }
 }
-for(const id of ['brandFilter','statusFilter','familyFilter'])$(id).addEventListener(id==='familyFilter'?'input':'change',render);
+for(const id of ['brandFilter','statusFilter','familyFilter'])$(id).addEventListener(id==='familyFilter'?'input':'change',()=>{visibleLimit=60;render();});
+$('coverageMore').addEventListener('click',()=>{visibleLimit+=60;render();});
 $('downloadCoverage').addEventListener('click',downloadCsv);
 load();
 })();

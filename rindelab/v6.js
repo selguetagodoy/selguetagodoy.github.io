@@ -181,7 +181,7 @@ function matchesScope(row,scope){
  const pending=recentNoPrice(row);
  if(scope==='upcoming')return pending&&marketEvidenceFor(row)?.kind==='upcoming';
  if(scope==='market-priced')return !archivedModel(row)&&marketEvidenceFor(row)?.kind==='market-priced'&&validCurrentPrice(row);
- if(scope==='family-price-review')return pending&&!marketEvidenceFor(row)&&hasFamilyPriceEvidence(row);
+ if(scope==='family-price-review')return !archivedModel(row)&&!marketEvidenceFor(row)&&hasFamilyPriceEvidence(row);
  if(scope==='recent-no-price')return pending&&!marketEvidenceFor(row)&&!hasFamilyPriceEvidence(row);
  return !archivedModel(row)&&(validCurrentPrice(row)||pending);
 }
@@ -951,12 +951,15 @@ async function init(){
   for(const row of additional)officialCodes.add(row[F.CODE]);
   const deltaResponse=await fetch('./data/oficial-api-20261122.json?v=20261122-official69');
    if(!deltaResponse.ok)throw Error('No disponible el corte oficial de noviembre');
-   const delta=window.RindelabOfficialAPI.loadIncremental(await deltaResponse.json(),legacy,additional);
+   const deltaSnapshot=await deltaResponse.json();
+   const delta=window.RindelabOfficialAPI.loadIncremental(deltaSnapshot,legacy,additional);
    for(const row of delta)officialCodes.add(row[F.CODE]);
    all=legacy.concat(additional,delta).map(cleanRow);
   try{const r=await fetch('./sii/model-lifecycle-2026.json?v=20261021-modelos90');if(r.ok){const d=await r.json();if(d.schemaVersion===1&&Array.isArray(d.models))discontinuedModels=d.models;}}catch{/* El estado comercial no impide consultar las homologaciones oficiales. */}
   all.sort((a,b)=>b[F.DATE].localeCompare(a[F.DATE]));
   $('recordCount').textContent=fmt(all.length);
+  const snap=$('catalogSnapshot');
+  if(snap)snap.textContent=fmt(all.length)+' fichas oficiales e históricas · corte '+deltaSnapshot.retrieved.split('-').reverse().join('/')+' · no equivale a oferta vigente';
   const prices=await window.RindelabCommercial?.ready?.();
   if(!prices?.length){$('catalogScope').value='all';$('catalogScopeHint').textContent='No se pudo cargar el catálogo comercial; se presenta la base oficial 3CV completa.';}
   // Evidencia comercial externa: en fallos de red conservar la clasificación prudente.
@@ -1085,6 +1088,11 @@ async function init(){
    if(next.size!==dataset.newFamilyReferences)throw Error('Resumen inconsistente');
    marketPriceSeventhpass=next;
   }catch(error){marketPriceSeventhpass=new Map();console.warn('RINDELAB séptimo cruce pendiente',error.message);}
+  if(prices?.length){
+   const refs=all.filter(r=>matchesScope(r,'family-price-review')).length;
+   const pendingCurrent=all.filter(r=>matchesScope(r,'recent-no-price')).length;
+   $('catalogScopeHint').textContent='Referencias comerciales revisadas hasta el 22/10/2026: '+fmt(refs)+' fichas de familia con versión sin conciliar; '+fmt(pendingCurrent)+' homologaciones recientes (últimos 365 días) sin precio acreditado ni referencia de familia. Estos recuentos se calculan sobre la base de 8.394 fichas; no prueban stock, vigencia ni equivalencia comercial.';
+  }
   const availableYears=[...new Set(all.map(r=>String(r[F.DATE]).slice(0,4)).filter(y=>/^20\d\d$/.test(y)))].sort().reverse();
   $('year').replaceChildren(new Option('Todo el historial',''),...availableYears.map(y=>new Option(y,y)));
   $('statsOpen').disabled=false;

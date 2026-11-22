@@ -64,6 +64,7 @@ await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
  assert.equal(manifest.excluded,3);
  assert.equal(manifest.count-manifest.excluded,8053);
  assert.equal(await page.locator('#recordCount').textContent(),'8.394');
+ assert.match(await page.locator('#catalogSnapshot').textContent(),/8\.394 fichas oficiales e históricas.*22\/11\/2026/);
  const extra=await page.evaluate(async()=>Promise.all([1,2,3,4].map(i=>fetch('./data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json').then(r=>r.json()))).then(a=>a.reduce((n,p)=>n+p.items.length,0)));
  assert.equal(extra,272);
 });
@@ -1430,8 +1431,10 @@ await test('Cobertura 3CV: familias auditadas sin equivalencia automática',asyn
  assert.equal(response.status(),200);
  await p.waitForFunction(expected=>Number((document.querySelector('#metricPrices')?.textContent||'').replace(/\D/g,''))===expected,priceTotal,{timeout:30000});
  assert.equal(Number((await p.locator('#metricFamilies').textContent()).replace(/\D/g,'')),familyTotal);
- assert.equal(await p.locator('#coverageRows tr').count(),familyTotal);
- assert.match(await p.locator('#coverageStatus').textContent(),/8\.053/);
+ assert.equal(await p.locator('#coverageRows tr').count(),Math.min(60,familyTotal));
+ assert.match(await p.locator('#coverageStatus').textContent(),/8\.394/);
+ assert.equal(await p.locator('#coverageMore').isVisible(),familyTotal>60);
+ if(familyTotal>60){await p.locator('#coverageMore').click();assert.equal(await p.locator('#coverageRows tr').count(),Math.min(120,familyTotal));}
  assert.match(await p.locator('.coverage-legend').textContent(),/no equivalencia de versión/i);
  assert.match(await p.locator('main').textContent(),/ninguna versión comercial se vincula automáticamente/i);
  assert.equal(issues.length,0,issues.join(' | '));
