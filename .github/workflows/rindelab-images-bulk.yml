@@ -1,0 +1,63 @@
+name: RINDELAB · importación masiva de fotografías con licencia
+
+on:
+  push:
+    branches:
+      - feat/rindelab-carimages-import-20261122
+    paths:
+      - scripts/import-rindelab-carimages.py
+      - rindelab/tests/carimages-rights-import.cjs
+      - .github/workflows/rindelab-images-bulk.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Descargar la rama de trabajo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compilar el importador
+        run: python -m py_compile scripts/import-rindelab-carimages.py
+      - name: Cruzar grupos comerciales con CarImages Rights y Wikidata/Commons
+        env:
+          RINDELAB_PHOTO_BATCH: '75'
+          RINDELAB_WIKIDATA_LIMIT: '35'
+        run: python -u scripts/import-rindelab-carimages.py
+      - name: Actualizar cobertura y pendientes comerciales
+        run: node scripts/rindelab-market-queue.cjs --write
+      - name: Auditar derechos de autor, fotos y grupos comerciales
+        run: |
+          node --check rindelab/v2-photos.js
+          node rindelab/tests/carimages-rights-import.cjs
+          node rindelab/tests/photos-november.cjs
+          node rindelab/tests/photos-november-batch2.cjs
+          node rindelab/tests/photo-integrity.cjs
+          node scripts/rindelab-market-queue.cjs --check
+      - name: Guardar únicamente fotos verificadas y manifiesto reproducible
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rindelab/v2-photos.js rindelab/images/commons/ rindelab/data/carimages-rights-import-20261122.json rindelab/data/catalog-coverage-20261122.json rindelab/sii/LOTE-PENDIENTES-100-20261122.md rindelab/index.html rindelab/cotizador.html rindelab/electromovilidad.html
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "Sin archivos nuevos."
+          else
+            git commit -m "feat(rindelab): incorporar fotografías cruzadas con CarImages Rights y Wikidata"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi

@@ -1,5 +1,17 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Importación masiva CarImages Rights · 22/11/2026
+
+Se procesaron **83.286 registros de fotos de CarImages Rights** (catálogo de metadatos y URL de Wikimedia Commons) contra los **407 grupos comerciales que no tenían imagen**. Tras contrastar modelo y carrocería, verificar autor y licencia actual en Wikimedia y auditar visualmente las asociaciones por título/generación, se incorporaron **43 fotografías JPEG** reutilizables, cada una con metadatos de origen y SHA-256 comprobados. **42 provienen del cruce CarImages Rights y una de Wikidata P18, siguiendo la lógica de CarAPI**. Se descartaron expresamente 8 fotografías inicialmente encontradas que resultaban antiguas, interiores o de una variante de carrocería no correspondiente. La trazabilidad, archivos y motivos de exclusión quedan documentados en `data/carimages-rights-import-20261122.json`.
+
+**Resultado comercial:** biblioteca visual **335 fotografías** (antes: 292); brecha de fotos en catálogo **359 de 700 grupos** (antes: 407), equivalente a **48 grupos adicionales cubiertos** con 43 imágenes, sin inventar motorización ni fechas de comercialización. De los 407 grupos pendientes de entrada, 359 siguen sin foto después de esta pasada, prioritariamente modelos de fabricación/venta chilena con cobertura limitada en repositorios globales. Los datos de precios, tecnología, 3CV y homologaciones no fueron alterados.
+
+Controles: `python scripts/import-rindelab-carimages.py` (importación inicial auditable sobre una rama sin lote), `python scripts/curate-rindelab-carimages.py` (exclusiones editoriales ya aplicadas) y `node rindelab/tests/carimages-rights-import.cjs`; cobertura recalculada con `node scripts/rindelab-market-queue.cjs --check`. No ejecutar el importador inicial dos veces sobre la misma rama.
+
+---
+
+
+
 ## Segunda ampliación de fotografías · 22 de noviembre de 2026
 
 Se incorporaron **14 fotografías nuevas y verificadas en Wikimedia Commons** (autor, licencia, fuente y SHA-256) en `data/licensed-photos-november-2026-batch2.json`. El nuevo lote incluye Geely Cityray, Jetour X70 y X90 Plus, Peugeot Landtrek fotografiado en Chile, Alfa Romeo Tonale, Aston Martin DB11/DBS/DBX, Audi A1/A4/A5 Cabriolet/Q2, Ram 700 y JMC Vigus Plus. Son referencias de **familia/generación**, nunca prueba de una versión técnica, precio ni disponibilidad comercial específica.

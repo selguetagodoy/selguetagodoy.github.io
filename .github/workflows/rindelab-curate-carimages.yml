@@ -1,0 +1,45 @@
+name: RINDELAB · control editorial de fotos importadas
+
+on:
+  push:
+    branches:
+      - feat/rindelab-carimages-import-20261122
+    paths:
+      - .github/workflows/rindelab-curate-carimages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Eliminar asociaciones de generación y carrocería no válidas
+        run: python -u scripts/curate-rindelab-carimages.py
+      - name: Regenerar expediente de cobertura y cola de 100 modelos
+        run: node scripts/rindelab-market-queue.cjs --write
+      - name: Validar integridad de fotografías originales y del nuevo lote
+        run: |
+          node --check rindelab/v2-photos.js
+          node rindelab/tests/photos-november.cjs
+          node rindelab/tests/photos-november-batch2.cjs
+          node rindelab/tests/photo-integrity.cjs
+          node rindelab/tests/carimages-rights-import.cjs
+          node scripts/rindelab-market-queue.cjs --check
+      - name: Registrar exclusiones documentadas en la rama
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A rindelab/v2-photos.js rindelab/images/commons rindelab/data/carimages-rights-import-20261122.json rindelab/data/catalog-coverage-20261122.json rindelab/sii/LOTE-PENDIENTES-100-20261122.md
+          git diff --cached --check
+          git commit -m "fix(rindelab): retirar fotografías de generaciones o carrocerías inadecuadas"
+          git push origin "HEAD:$GITHUB_REF_NAME"
