@@ -7257,7 +7257,313 @@ const licensedCommonsMassBatch220261122=[
     "localSrc": "./images/commons/rindelab-volvo-xc90-commonsmass-batch2-20261122.jpg"
   }
 ];
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const licensedCommonsGap320261122=[
+  {
+    "brand": "BMW",
+    "family": "M135i",
+    "pattern": "\\bm135i\\b",
+    "from": "2024",
+    "to": "2027",
+    "file": "BMW M135i xDrive, Auto 2025, Zurich (20251029-P1074535).jpg",
+    "model": "BMW M135i (foto referencial de generación)",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_M135i_xDrive,_Auto_2025,_Zurich_(20251029-P1074535).jpg",
+    "localSrc": "./images/commons/rindelab-bmw-m135i-commons-gap3-20261122.jpg",
+    "sha256": "efcf41699d96de80346cad887dcda03013114af83982f7000b15dd5e9b5765b6",
+    "bytes": 182465
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 4 Convertible",
+    "pattern": "\\bserie[\\s-]*4[\\s-]+convertible\\b",
+    "from": "2021",
+    "to": "2027",
+    "file": "2022 BMW 4-Series 430i Convertible M Sport.jpg",
+    "model": "BMW Serie 4 Convertible (foto referencial de generación)",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_BMW_4-Series_430i_Convertible_M_Sport.jpg",
+    "localSrc": "./images/commons/rindelab-bmw-serie-4-convertible-commons-gap3-20261122.jpg",
+    "sha256": "872096702e9158de3b4835e01d47d84d06c29fac8fb4077b64a0aff82df39fa9",
+    "bytes": 103920
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 4 Gran Coupé",
+    "pattern": "\\bserie[\\s-]*4[\\s-]+gran[\\s-]+coup[eé](?=$|[^A-Za-z0-9])",
+    "from": "2022",
+    "to": "2027",
+    "file": "2024 BMW 4 Series Gran Coupé (G26) IMG 2400.jpg",
+    "model": "BMW Serie 4 Gran Coupé (foto referencial de generación)",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_BMW_4_Series_Gran_Coupé_(G26)_IMG_2400.jpg",
+    "localSrc": "./images/commons/rindelab-bmw-serie-4-gran-coupe-commons-gap3-20261122.jpg",
+    "sha256": "94894132c3b104c839db83692bf0d0e528d66c2de09382ba1cb1159a0776ef8a",
+    "bytes": 154285
+  },
+  {
+    "brand": "BMW",
+    "family": "Serie 5",
+    "pattern": "\\bserie[\\s-]*5\\b",
+    "from": "2024",
+    "to": "2027",
+    "file": "BMW G60 520i 1X7A2443.jpg",
+    "model": "BMW Serie 5 (foto referencial de generación)",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_G60_520i_1X7A2443.jpg",
+    "localSrc": "./images/commons/rindelab-bmw-serie-5-commons-gap3-20261122.jpg",
+    "sha256": "4368ce657113755616ef36eca8739972451ccb58c253f2bdd05565f53b56ddac",
+    "bytes": 123187
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "Clase A Sedan",
+    "pattern": "\\bclase[\\s-]+a[\\s-]+sedan\\b",
+    "from": "2023",
+    "to": "2027",
+    "file": "Mercedes-Benz A 200 Limousine Progressive (V 177, Facelift) – f 10032024.jpg",
+    "model": "Mercedes-Benz Clase A Sedan (foto referencial de generación)",
+    "author": "© M 93",
+    "license": "CC BY-SA 3.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_A_200_Limousine_Progressive_(V_177,_Facelift)_–_f_10032024.jpg",
+    "localSrc": "./images/commons/rindelab-mercedes-benz-clase-a-sedan-commons-gap3-20261122.jpg",
+    "sha256": "8f02df0ca677b8f378a51ecad4d2154136891e6817a687a7784822e68e75195a",
+    "bytes": 140793
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "Clase C",
+    "pattern": "\\bclase[\\s-]+c(?=$|[^A-Za-z0-9])",
+    "from": "2022",
+    "to": "2027",
+    "file": "Mercedes-Benz C-Class Brunei.jpg",
+    "model": "Mercedes-Benz Clase C (foto referencial de generación)",
+    "author": "Pangalau",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_C-Class_Brunei.jpg",
+    "localSrc": "./images/commons/rindelab-mercedes-benz-clase-c-commons-gap3-20261122.jpg",
+    "sha256": "694805c4c6a23b2967c4eba879c1fe99fd6160913920dee9f86e7f2cca709651",
+    "bytes": 136793
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "Clase E",
+    "pattern": "\\bclase[\\s-]+e(?=$|[^A-Za-z0-9])",
+    "from": "2024",
+    "to": "2027",
+    "file": "Mercedes-Benz W214 E 300 4MATIC EXCLUSIVE Obsidian Black (10).jpg",
+    "model": "Mercedes-Benz Clase E (foto referencial de generación)",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_W214_E_300_4MATIC_EXCLUSIVE_Obsidian_Black_(10).jpg",
+    "localSrc": "./images/commons/rindelab-mercedes-benz-clase-e-commons-gap3-20261122.jpg",
+    "sha256": "af6aa89fa78c3026742293554ca4e78d6a757a0dab2d76d55dc00c3e5b8fc8f9",
+    "bytes": 162750
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "Clase S",
+    "pattern": "\\bclase[\\s-]+s(?=$|[^A-Za-z0-9])",
+    "from": "2021",
+    "to": "2027",
+    "file": "MERCEDES-BENZ S-CLASS (W223) China (24).jpg",
+    "model": "Mercedes-Benz Clase S (foto referencial de generación)",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:MERCEDES-BENZ_S-CLASS_(W223)_China_(24).jpg",
+    "localSrc": "./images/commons/rindelab-mercedes-benz-clase-s-commons-gap3-20261122.jpg",
+    "sha256": "df13479acf01ebd0e4eacbb5ff328f23653f1ec68e163ed6fe93ed4f4da4d23d",
+    "bytes": 118927
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "family": "Clase V",
+    "pattern": "\\bclase[\\s-]+v(?=$|[^A-Za-z0-9])",
+    "from": "2021",
+    "to": "2027",
+    "file": "2023 Mercedes-Benz V-Class 300d (W447) IMG 9812.jpg",
+    "model": "Mercedes-Benz Clase V (foto referencial de generación)",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Mercedes-Benz_V-Class_300d_(W447)_IMG_9812.jpg",
+    "localSrc": "./images/commons/rindelab-mercedes-benz-clase-v-commons-gap3-20261122.jpg",
+    "sha256": "2718501b7991f3fed5a4988e164d2bc66817dc1a9ab936a1c263b1309eb314f9",
+    "bytes": 165627
+  },
+  {
+    "brand": "Chevrolet",
+    "family": "Traverse",
+    "pattern": "\\btraverse\\b",
+    "from": "2024",
+    "to": "2027",
+    "file": "2025 Chevrolet Traverse Z71, front left, 09-06-2025.jpg",
+    "model": "Chevrolet Traverse (foto referencial de generación)",
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg",
+    "localSrc": "./images/commons/rindelab-chevrolet-traverse-commons-gap3-20261122.jpg",
+    "sha256": "b4fcc472ee34b81aa74e8a4132c54a23b4e6cfe59673eac7cd7bcb3a774feafd",
+    "bytes": 207828
+  },
+  {
+    "brand": "Ford",
+    "family": "Expedition",
+    "pattern": "\\bexpedition\\b",
+    "from": "2025",
+    "to": "2027",
+    "file": "2025 Ford Expedition Platinum MAX, front NYIAS 2025.jpg",
+    "model": "Ford Expedition (foto referencial de generación)",
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Ford_Expedition_Platinum_MAX,_front_NYIAS_2025.jpg",
+    "localSrc": "./images/commons/rindelab-ford-expedition-commons-gap3-20261122.jpg",
+    "sha256": "a0470ffe027b233ec641b4548df19909dff67da7f5c42f05d229dd5d372c61d7",
+    "bytes": 135430
+  },
+  {
+    "brand": "Ford",
+    "family": "Transit Minibus",
+    "pattern": "\\btransit[\\s-]+minibus\\b",
+    "from": "2023",
+    "to": "2027",
+    "file": "2023 Ford Transit T-350HD XL high roof extended length passenger van, front left, 09-28-2024.jpg",
+    "model": "Ford Transit Minibus (foto referencial de generación)",
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Ford_Transit_T-350HD_XL_high_roof_extended_length_passenger_van,_front_left,_09-28-2024.jpg",
+    "localSrc": "./images/commons/rindelab-ford-transit-minibus-commons-gap3-20261122.jpg",
+    "sha256": "1ebf4eaac99e91180f1c06dc95bf2ed30f31051614d12b3ce88a3a6c23ea2f52",
+    "bytes": 192777
+  },
+  {
+    "brand": "Fiat",
+    "family": "Ducato",
+    "pattern": "\\bducato\\b",
+    "from": "2023",
+    "to": "2027",
+    "file": "2024 Fiat Ducato DSC 7199.jpg",
+    "model": "Fiat Ducato (foto referencial de generación)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Fiat_Ducato_DSC_7199.jpg",
+    "localSrc": "./images/commons/rindelab-fiat-ducato-commons-gap3-20261122.jpg",
+    "sha256": "61c0ce7b263aeec7bcbbcb40464cd4977a9a6f360ab4d404b2dfc7db79b8b3a7",
+    "bytes": 179970
+  },
+  {
+    "brand": "Lexus",
+    "family": "LX",
+    "pattern": "\\blx(?=$|[^A-Za-z0-9])",
+    "from": "2022",
+    "to": "2027",
+    "file": "2023 Lexus LX 600, front 6.13.24.jpg",
+    "model": "Lexus LX (foto referencial de generación)",
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Lexus_LX_600,_front_6.13.24.jpg",
+    "localSrc": "./images/commons/rindelab-lexus-lx-commons-gap3-20261122.jpg",
+    "sha256": "3a12ec961c2e3962027f4c46d1b344e14a8cc47046f5c54c298c42a7e85c6516",
+    "bytes": 149848
+  },
+  {
+    "brand": "Toyota",
+    "family": "Corolla Sedán",
+    "pattern": "\\bcorolla[\\s-]+sed[aá]n\\b",
+    "from": "2020",
+    "to": "2026",
+    "file": "2024 Toyota Corolla Altis HEV Premium.jpg",
+    "model": "Toyota Corolla Sedán (foto referencial de generación)",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_Corolla_Altis_HEV_Premium.jpg",
+    "localSrc": "./images/commons/rindelab-toyota-corolla-sedan-commons-gap3-20261122.jpg",
+    "sha256": "8a43c71922fea79ee1b48d6fb3b92a5a347b1554ec2bd91f9a29c51aae053145",
+    "bytes": 99069
+  },
+  {
+    "brand": "Seat",
+    "family": "Ateca",
+    "pattern": "\\bateca\\b",
+    "from": "2020",
+    "to": "2027",
+    "file": "Seat Ateca (2023) (53954901529).jpg",
+    "model": "Seat Ateca (foto referencial de generación)",
+    "author": "Charles from Port Chester, New York",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seat_Ateca_(2023)_(53954901529).jpg",
+    "localSrc": "./images/commons/rindelab-seat-ateca-commons-gap3-20261122.jpg",
+    "sha256": "037ee24bad4dfadb6502b383140d95b44ea2317d5710dbe2d770c1065c55f03a",
+    "bytes": 155201
+  },
+  {
+    "brand": "MG",
+    "family": "RX5",
+    "pattern": "\\brx5\\b",
+    "from": "2023",
+    "to": "2027",
+    "file": "MG RX5 1.5T Comfort 2024 (53521497261).jpg",
+    "model": "MG RX5 (foto referencial de generación)",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:MG_RX5_1.5T_Comfort_2024_(53521497261).jpg",
+    "localSrc": "./images/commons/rindelab-mg-rx5-commons-gap3-20261122.jpg",
+    "sha256": "fdda146afad73aabbaca3f3dc0c4363a0f6d19a6b21cf699f58c3b86c5e7e2bd",
+    "bytes": 119070
+  },
+  {
+    "brand": "Chevrolet",
+    "family": "Sail Sedan",
+    "pattern": "\\bsail[\\s-]+sedan\\b",
+    "from": "2022",
+    "to": "2027",
+    "file": "Chevrolet Sail LTZ 2024.jpg",
+    "model": "Chevrolet Sail Sedan (foto referencial de generación)",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chevrolet_Sail_LTZ_2024.jpg",
+    "localSrc": "./images/commons/rindelab-chevrolet-sail-sedan-commons-gap3-20261122.jpg",
+    "sha256": "e40549080b4b44c4741c8dc36553a50a7c9ca9b8ad8ecf76c9d8213d50e4c73d",
+    "bytes": 104891
+  },
+  {
+    "brand": "Volkswagen",
+    "family": "Saveiro CS",
+    "pattern": "\\bsaveiro[\\s-]+cs\\b",
+    "from": "2023",
+    "to": "2027",
+    "file": "2024 Volkswagen Saveiro 1.6 MSi Trendline (front).jpg",
+    "model": "Volkswagen Saveiro CS (foto referencial de generación)",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Volkswagen_Saveiro_1.6_MSi_Trendline_(front).jpg",
+    "localSrc": "./images/commons/rindelab-volkswagen-saveiro-cs-commons-gap3-20261122.jpg",
+    "sha256": "8375e8e20b1faf728355023a8d1a4a34b589e6bd74c0135c4edcb50ada591e45",
+    "bytes": 157132
+  }
+];
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
@@ -7485,10 +7791,26 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/mazda-mazda-cx-30-2022-10.jpg"
 ]);
 const photoBrandKey=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+// Fichas comerciales modelo 2027: permitir fotografía referencial 2026 únicamente
+// en familias de generación continuista curadas; prohibido extrapolar a carrocerías nuevas.
+const family2027CarryForward=new Set([
+ 'great wall|haval h6','great wall|haval h7','great wall|haval h7 max',
+ 'great wall|haval jolion','great wall|tank 300','great wall|tank 500',
+ 'great wall|wingle 7','great wall|ora 5','honda|pilot',
+ 'mazda|cx-3','mazda|cx-30','mini|cooper','mini|aceman',
+ 'porsche|cayenne','porsche|panamera','porsche|taycan'
+]);
+function allowReferenceFor2027(brand,model,tech,photo,year){
+ if(year!=='2027'||photo.to!=='2026')return false;
+ if(!family2027CarryForward.has(photoBrandKey(brand)+'|'+photoBrandKey(model)))return false;
+ // El Cayenne eléctrico y otros nuevos modelos no comparten carrocería con las fotos térmicas.
+ if(photoBrandKey(brand)==='porsche'&&photoBrandKey(model)==='cayenne'&&tech==='EV')return false;
+ return true;
+}
 function find(row,F){
  const brand=String(row[F.BRAND]||''),model=String(row[F.MODEL]||''),tech=String(row[F.TECH]||''),year=String(row[F.DATE]||'').slice(0,4);
  // Ante coincidencias múltiples, priorizar el nombre de familia más específico.
- return entries.filter(p=>photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&year>=p.from&&year<=p.to).sort((a,b)=>b.re.source.length-a.re.source.length)[0]||null;
+ return entries.filter(p=>photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year))).sort((a,b)=>b.re.source.length-a.re.source.length)[0]||null;
 }
 function findCommercial(p){
  if(!p||!p.brand||!p.family)return null;

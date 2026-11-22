@@ -1,5 +1,15 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Tercer lote Commons y recuperación de asociaciones 2027 · 22/11/2026
+
+Se incorporaron **19 fotografías nuevas** de vehículos de Wikimedia Commons, con revisión visual de modelo y carrocería, archivo JPEG local, crédito de autor, licencia de reutilización, URL de origen y huella SHA-256. Se corrigió además la asociación de imágenes existentes con fichas comerciales de año-modelo 2027 **solo para familias de generación continuista incluidas en una lista de compatibilidad explícita**. Quedan excluidas asociaciones incorrectas como Porsche Cayenne EV con fotografía térmica, Great Wall Poer P500 con Poer Plus, y Mazda *All New* CX-5 con la generación anterior.
+
+**Resultado después de esta tanda:** **518 fotografías** en la biblioteca (499 antes); **143 grupos comerciales sin imagen entre 700** (185 antes), una reducción verificada de **42 grupos**. Las nuevas fotos son referenciales de familia/generación, no de una motorización, versión ni equipamiento comercial preciso. No se alteraron precios, atributos técnicos ni homologaciones.
+
+**Trazabilidad:** `data/commons-gap3-20261122.json`; importación reproducible: `scripts/import-commons-gap3-20261122.py`; pruebas: `node rindelab/tests/commons-gap3.cjs`, `node rindelab/tests/photo-integrity.cjs`, `node scripts/rindelab-market-queue.cjs --check`.
+
+---
+
 ## Segunda búsqueda masiva Commons · 22/11/2026
 
 Se revisaron **227 grupos comerciales sin fotografía** mediante búsquedas de marca y modelo en Wikimedia Commons. Se recuperaron 95 candidatas con metadatos de autor, licencia y huella SHA-256; la curaduría descartó **19 imágenes erróneas o ambiguas**, incluyendo generaciones antiguas, carrocerías distintas, fotografías intervenidas y una imagen de un BMW Serie 3 propuesta para Serie 7. El lote definitivo contiene **76 fotografías JPEG** de referencia de familia/generación, con trazabilidad y razones de exclusión en `data/commons-mass-batch2-20261122.json`.
