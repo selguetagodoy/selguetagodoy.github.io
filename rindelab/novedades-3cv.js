@@ -3,6 +3,7 @@
 const $=id=>document.getElementById(id);
 const countFmt=new Intl.NumberFormat('es-CL');
 let report=null;
+let visibleLimit=40;
 let review=null;
 let historicGroups=[];
 let undatedGroups=[];
@@ -60,6 +61,7 @@ function updateBrandChoices(){
  if([...brand.options].some(x=>x.value===previous))brand.value=previous;
 }
 function switchGroup(){
+ visibleLimit=40;
  const kind=$('deltaGroup').value,nonRecent=kind!=='recent';
  $('deltaMonth').value='';
  $('deltaPresence').value='';
@@ -88,13 +90,14 @@ function visible(){
 function render(){
  if(!report)return;
  const list=visible();const tbody=$('deltaRows');tbody.replaceChildren();
+ $('deltaMore').hidden=visibleLimit>=list.length;
  const kind=$('deltaGroup').value,nonRecent=kind!=='recent';
  $('deltaCount').textContent=kind==='historical'?
   countFmt.format(list.length)+' de 324 códigos con fecha hasta mayo (372 filas MTT)':
   kind==='undated'?
   countFmt.format(list.length)+' de 1 código sin fecha declarada en la nómina MTT':
   countFmt.format(list.length)+' de '+countFmt.format(report.counts.afterMayRows)+' homologaciones posteriores a mayo';
- for(const x of list){
+ for(const x of list.slice(0,visibleLimit)){
   const tr=document.createElement('tr');
   const model=td(tr,x.model,'delta-model');const small=document.createElement('small');small.textContent=x.brand;model.prepend(small);
   if(nonRecent&&x.models.length>1){
@@ -231,8 +234,9 @@ $('deltaGroup').addEventListener('change',switchGroup);
 $('deltaReviewGroup').addEventListener('change',renderDifferences);
 $('deltaReviewDownload').addEventListener('click',downloadReview);
 for(const id of ['deltaBrand','deltaTech','deltaMonth','deltaSearch','deltaPresence']){
- $(id).addEventListener(id==='deltaSearch'?'input':'change',render);
+ $(id).addEventListener(id==='deltaSearch'?'input':'change',()=>{visibleLimit=40;render();});
 }
 $('deltaDownload').addEventListener('click',download);
+$('deltaMore').addEventListener('click',()=>{visibleLimit+=40;render();});
 load();
 })();

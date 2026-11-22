@@ -1435,7 +1435,7 @@ await test('Cobertura 3CV: familias auditadas sin equivalencia automática',asyn
  assert.match(await p.locator('#coverageStatus').textContent(),/8\.394/);
  assert.equal(await p.locator('#coverageMore').isVisible(),familyTotal>60);
  if(familyTotal>60){await p.locator('#coverageMore').click();assert.equal(await p.locator('#coverageRows tr').count(),Math.min(120,familyTotal));}
- assert.match(await p.locator('.coverage-legend').textContent(),/no equivalencia de versión/i);
+ assert.match(await p.locator('.coverage-legend').last().textContent(),/no equivalencia de versión/i);
  assert.match(await p.locator('main').textContent(),/ninguna versión comercial se vincula automáticamente/i);
  assert.equal(issues.length,0,issues.join(' | '));
  await p.selectOption('#brandFilter','Volkswagen');
@@ -1667,7 +1667,10 @@ await test('Cruce MTT septiembre muestra 229 nuevos, 7491 comunes y 12 discrepan
  assert.equal(await p.locator('#metricCommon').textContent(),'7.491');
  assert.equal(await p.locator('#metricMttOnly').textContent(),'554');
  assert.equal(await p.locator('#metricDiffs').textContent(),'12');
- assert.equal(await p.locator('#deltaRows tr').count(),230);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
+ assert(await p.locator('#deltaMore').isVisible());
+ await p.locator('#deltaMore').click();
+ assert.equal(await p.locator('#deltaRows tr').count(),80);
  assert.equal(await p.locator('#deltaConflicts tr').count(),12);
  assert.match(await p.locator('#deltaStatus').textContent(),/Datos de rendimiento añadidos: ninguno/);
  assert.match(await p.locator('#deltaConflicts').textContent(),/JM10011E60525M00-7/);
@@ -1679,7 +1682,7 @@ await test('Nómina MTT permite filtrar 47 BEV y 32 homologaciones de septiembre
  await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
  await p.selectOption('#deltaTech','BEV');
- assert.equal(await p.locator('#deltaRows tr').count(),47);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
  await p.selectOption('#deltaTech','');
  await p.selectOption('#deltaMonth','2026-09');
  assert.equal(await p.locator('#deltaRows tr').count(),32);
@@ -1724,7 +1727,7 @@ await test('Nómina MTT histórica muestra 324 códigos con fecha y 372 filas ag
  await p.goto(base+'novedades-3cv.html',{waitUntil:'networkidle'});
  await p.waitForFunction(()=>document.querySelector('#metricRecentNew')?.textContent==='229',{timeout:30000});
  await p.selectOption('#deltaGroup','historical');
- assert.equal(await p.locator('#deltaRows tr').count(),324);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
  assert.match(await p.locator('#deltaCount').textContent(),/324 códigos con fecha hasta mayo \(372 filas MTT\)/);
  assert(await p.locator('#deltaMonth').isDisabled());
  assert(await p.locator('#deltaPresence').isDisabled());
@@ -1755,7 +1758,7 @@ await test('Exeed sin fecha se mantiene fuera de altas recientes e históricas f
  const dl=p.waitForEvent('download');await p.locator('#deltaDownload').click();
  assert.equal((await dl).suggestedFilename(),'rindelab-codigos-sin-fecha-mtt-20260928.csv');
  await p.selectOption('#deltaGroup','recent');
- assert.equal(await p.locator('#deltaRows tr').count(),230);
+ assert.equal(await p.locator('#deltaRows tr').count(),40);
  assert(await p.locator('#deltaMonth').isEnabled());
  assert(await p.locator('#deltaPresence').isEnabled());
  await p.close();

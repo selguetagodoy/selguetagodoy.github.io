@@ -26,6 +26,9 @@ jobs:
           node rindelab/tests/catalog-identity.cjs
       - name: Revisar feeds oficiales configurados sin alterar la base
         run: node scripts/rindelab-incremental-watch.cjs
+      - name: Rastrear publicación MTT de homologaciones (XLS sin importar)
+        if: always()
+        run: node scripts/rindelab-mtt-publication-watch.cjs
       - name: Publicar expediente de diferencias
         if: always()
         uses: actions/upload-artifact@v4
@@ -34,6 +37,8 @@ jobs:
           path: |
             rindelab-incremental-audit.json
             rindelab-incremental-audit.md
+            rindelab-mtt-publication-audit.json
+            rindelab-mtt-publication-audit.md
             rindelab/data/catalog-coverage-20261021.json
             rindelab/sii/LOTE-PENDIENTES-100-20261021.md
           retention-days: 90
@@ -45,6 +50,8 @@ jobs:
             const fs=require('fs');
             if(!fs.existsSync('rindelab-incremental-audit.json'))return;
             const report=JSON.parse(fs.readFileSync('rindelab-incremental-audit.json','utf8'));
+            const mttFile='rindelab-mtt-publication-audit.json';
+            const mtt=fs.existsSync(mttFile)?JSON.parse(fs.readFileSync(mttFile,'utf8')):null;
             const missing=report.checks.filter(x=>x.status==='NOT_CONFIGURED');
             const newCount=report.pending.length;
             if(!missing.length&&!newCount)return;
@@ -60,7 +67,7 @@ jobs:
               '',
               'El análisis produce candidatos para revisión, **no incorpora automáticamente datos externos al registro oficial**.',
               '',
-              'La API 3CV del Ministerio de Energía ya se consulta por defecto con paginación oficial. Para añadir la nómina MTT, verificar primero su URL JSON oficial y configurar la variable RINDELAB_MTT_FEED_URL. La consulta del 3CV puede sobreescribirse mediante RINDELAB_3CV_FEED_URL solo con una URL oficial comprobada.',
+              'La API 3CV del Ministerio de Energía se consulta de forma paginada. La fuente oficial de publicación MTT (archivo XLS) se monitorea por separado: '+(mtt?.documentUrl||'no recuperada')+'. El XLS publicado NO está importado ni es compatible con el feed JSON RINDELAB_MTT_FEED_URL: se requiere extracción y cotejo por código antes de incorporarlo. La consulta 3CV puede sobreescribirse mediante RINDELAB_3CV_FEED_URL solo con una URL oficial comprobada.',
               '',
               '[Expediente de la ejecución]('+link+')'
             ].join('\n');
