@@ -6,7 +6,7 @@ La portada identifica permanentemente el universo histórico **8.394 fichas**, s
 
 **Fuente MTT nueva identificada, aún no integrada:** [nómina oficial de livianos y medianos del 27 de octubre de 2026](https://www.subtrans.gob.cl/wp-content/uploads/2026/10/e1_Nomina-Vehiculos-Livianos-y-Medianos-Homologados_27_oct_2026.xls). La vigilancia automática comprueba en la página institucional si cambió el enlace público y conserva el expediente de publicación; **no importa contenido XLS ni genera códigos, consumos o rectificaciones**. La nómina de septiembre y las doce discrepancias MTT–3CV se mantienen como expediente histórico sujeto a nueva conciliación.
 
-**Revisiones documentales pendientes:** última auditoría de precios del 16/11/2026 (122 referencias sin revisión humana en 30 días y 45 enlaces inciertos); cobertura fotográfica y atributos de familia según manifiesto del 21/10/2026 (423 grupos sin fotografía, 486 sin tecnología clasificada, 591 sin año comercial y 79 asociados a campañas terminadas). Son expedientes fechados, no cifras revalidadas hoy. No se inventan fotografías, precios ni equivalencias para cerrar estas brechas.
+**Revisiones documentales pendientes:** auditoría de antigüedad del 22/11/2026 (1.514 de 1.514 registros con consulta de 30 días o más, sin revalidación de importes; el control de URLs del 16/11 señaló 45 accesos inciertos); cobertura fotográfica y atributos de familia según manifiesto del 21/10/2026 (423 grupos sin fotografía, 486 sin tecnología clasificada, 591 sin año comercial y 79 asociados a campañas terminadas). Son expedientes fechados, no cifras revalidadas hoy. No se inventan fotografías, precios ni equivalencias para cerrar estas brechas.
 
 ---
 

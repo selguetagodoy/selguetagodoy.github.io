@@ -2283,6 +2283,12 @@ await test('Cotizador separado muestra precios y marcas reales del catálogo',as
  assert.equal(await p.locator('#quoteBrand option').count(),catalogBrandTotal+1);
  assert(await p.locator('#quoteCopy').isDisabled());
  assert.equal(await p.locator('.quote-version').count(),24);
+ const freshness=p.locator('#quoteFreshnessNotice');
+ if(await freshness.isVisible())assert.match(await freshness.textContent(),/precios fueron consultados hace al menos 30 días/);
+ await p.fill('#quoteSearch','Kia PV5');
+ assert.equal(await p.locator('.quote-version').count(),0);
+ assert(await p.locator('.quote-empty a[href="./index.html#buscador"]').isVisible());
+ assert(await p.locator('.quote-empty a[href="./novedades-3cv.html"]').isVisible());
  assert.deepEqual(errors,[]);
  await p.close();
 });

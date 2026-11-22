@@ -163,6 +163,10 @@ async function init(){
    /^https:\/\//.test(x.source)&&x.brand&&x.family&&x.version&&/^2026-\d{2}-\d{2}$/.test(x.checkedAt));
   if(!catalog.length)throw Error('Catálogo vacío');
   $('quoteCatalogNumber').textContent=catalog.length+' registros de '+new Set(catalog.map(x=>x.brand)).size+' marcas';
+  const stale=catalog.filter(x=>ageDays(x.checkedAt)>=30).length;
+  const note=$('quoteFreshnessNotice');
+  note.hidden=stale===0;
+  if(stale)note.textContent=stale.toLocaleString('es-CL')+' de '+catalog.length.toLocaleString('es-CL')+' precios fueron consultados hace al menos 30 días. Son referencias históricas, no cotizaciones vigentes verificadas. Confirma importes, versiones e impuestos en la fuente antes de decidir.';
   buildFilters();updateBudget();
  }catch(e){$('catalogCount').textContent='No se pudo abrir la base de precios de lista; vuelve a cargar la página.';$('quoteFeedback').textContent='Las cotizaciones quedan deshabilitadas hasta que el catálogo pueda verificarse.';}
 }
