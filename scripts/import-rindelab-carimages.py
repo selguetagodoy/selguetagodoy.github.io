@@ -82,6 +82,10 @@ def commons_info(filename):
     lic = plain(md.get("LicenseShortName", {}).get("value", ""))
     author = plain(md.get("Artist", {}).get("value", ""))
     lic_url = md.get("LicenseUrl", {}).get("value", "").replace("http://", "https://")
+    if not hasattr(commons_info, "_debug"): commons_info._debug = 0
+    if commons_info._debug < 3:
+        print("COMMONS DEBUG", filename, json.dumps({"keys": list(info), "lic": lic, "author": author[:90], "licenseUrl": lic_url, "descriptionUrl": info.get("descriptionurl"), "thumburl": info.get("thumburl"), "metadata": list(md)}, ensure_ascii=False), flush=True)
+        commons_info._debug += 1
     if not re.fullmatch(r"CC0|CC BY(?:-SA)? [234]\.0(?: [a-z]{2})?|Public domain", lic, re.I): return None
     if not author or not info.get("thumburl") or not lic_url.startswith("https://creativecommons.org/"): return None
     if not info.get("descriptionurl", "").startswith("https://commons.wikimedia.org/wiki/File:"): return None
