@@ -15,7 +15,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'rindelab/v2-photos.js'),'utf8
 const photos=context.window.RindelabPhotos;
 assert.equal(photos.count,292+manifest.photos.length);
 for(const p of manifest.photos){
- assert(p.author&&p.model&&p.brand&&p.pattern);
+ assert(p.author&&p.model&&p.brand&&p.family&&p.pattern);
  assert(p.origin==='carimages-rights'||p.origin==='wikidata-p18');
  assert(p.source.startsWith('https://commons.wikimedia.org/wiki/File:'));
  assert(p.licenseUrl.startsWith('https://creativecommons.org/'));
@@ -27,7 +27,7 @@ for(const p of manifest.photos){
  assert.equal(b[0],255);assert.equal(b[1],216);
  assert.equal(b.at(-2),255);assert.equal(b.at(-1),217);
  assert.equal(crypto.createHash('sha256').update(b).digest('hex'),p.sha256);
- const found=photos.findCommercial({brand:p.brand,family:p.model.slice(p.brand.length+1).replace(/ \(.+$/,''),checkedAt:'2026-11-22'});
+ const found=photos.findCommercial({brand:p.brand,family:p.family,checkedAt:'2026-11-22'});
  assert(found,'Photo association failed: '+p.brand+' '+p.model);
 }
 console.log('PASS CarImages Rights importer:',manifest.photos.length,'licenced JPEG photos; total',photos.count,'remaining commercial',coverage.summary.withoutFamilyPhoto);
