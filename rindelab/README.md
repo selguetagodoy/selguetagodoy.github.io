@@ -1,5 +1,13 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Fotografías verificadas del lote 3CV de noviembre
+
+Se incorporaron **19 fotografías de familias de modelos desde Wikimedia Commons**, almacenadas localmente con autor, licencia, fuente, URL de licencia y checksum SHA-256 en `data/licensed-photos-november-2026.json`. En las 69 homologaciones nuevas, la cobertura visual auditada aumenta de **21 a 50 fichas**; **19 siguen sin fotografía verificada**. La fotografía de Kia PV5 Cargo se aplica solo a sus 7 homologaciones de furgón, no a `Cargo Pick-Up`. Ninguna imagen acredita versión comercial exacta, motorización ni disponibilidad en Chile.
+
+No se asignaron imágenes potencialmente incorrectas de Nissan Arizon/NX8 o Maxus Deliver 7/eDeliver 7. Control reproducible: `node rindelab/tests/photos-november.cjs`. Las imágenes locales mantienen atribución y licencias de Commons visibles en la interfaz.
+
+---
+
 ## Cierre de transparencia, accesibilidad y fuentes (22/11/2026)
 
 La portada identifica permanentemente el universo histórico **8.394 fichas**, su corte y la diferencia entre homologación y disponibilidad comercial. La cobertura nominal se recalcula sobre el universo completo: **1.514 precios documentados, 720 familias, 488 coincidencias nominales y 232 sin coincidencia**; las 488 coincidencias no prueban equivalencia de versiones. La tabla de Cobertura se presenta en lotes de 60 y Novedades MTT en lotes de 40, con exportación CSV de todos los registros filtrados. El cotizador explica los resultados vacíos y permite abrir el buscador de homologaciones.
