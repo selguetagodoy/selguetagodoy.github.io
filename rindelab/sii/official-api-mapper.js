@@ -69,5 +69,23 @@
   if(rows.length!==272||seen.size!==272||wl!==254)throw Error('Totales API oficial inconsistentes');
   return rows;
  }
- return {convert,load,tech,num};
+ function loadIncremental(batch,legacy,previous){
+  if(!batch||batch.schemaVersion!==1||batch.source!=='https://api-consumovehicular.minenergia.cl/vehiculos/listar'||
+    batch.retrieved!=='2026-11-22'||batch.sourceTotalCount!==8384||batch.knownPriorCodes!==8325||
+    batch.newCodes!==69||!Array.isArray(batch.items)||batch.items.length!==69||
+    !Array.isArray(legacy)||!Array.isArray(previous))throw Error('Snapshot 3CV incremental inválido');
+  const codes=new Set([...legacy,...previous].map(r=>r[9]));
+  if(codes.size!==8325)throw Error('Base 3CV previa inconsistente');
+  const output=[];
+  for(const raw of batch.items){
+    const row=convert(raw),code=row[9];
+    if(codes.has(code)||row[8]>batch.retrieved||row[8]<'2026-10-01'||
+      raw.sourceCycle!=='WLTP'||(row[2]==='EV'&&!Number.isFinite(row[13]))||
+      (row[2]!=='EV'&&!Number.isFinite(row[12])))throw Error('Registro 3CV inválido: '+code);
+    codes.add(code);output.push(row);
+  }
+  if(codes.size!==8394||output.length!==69)throw Error('Totales incrementales inconsistentes');
+  return output;
+ }
+ return {convert,load,loadIncremental,tech,num};
 });

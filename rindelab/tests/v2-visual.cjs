@@ -10,7 +10,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   const r=await page.goto(base,{waitUntil:'domcontentloaded',timeout:30000});
   assert.equal(r.status(),200);
-  await page.waitForFunction(()=>document.getElementById('recordCount')?.textContent==='8.325',{timeout:30000});
+  await page.waitForFunction(()=>document.getElementById('recordCount')?.textContent==='8.394',{timeout:30000});
   await page.locator('.hero-image img').evaluate(el=>el.decode());
   const layout=await page.evaluate(()=>{
    const box=s=>document.querySelector(s).getBoundingClientRect();
@@ -33,7 +33,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  }
  const page=await browser.newPage({viewport:{width:1440,height:900}});
  await page.goto(base,{waitUntil:'domcontentloaded'});
- await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await page.locator('[data-quick-tech="EV"]').click();
  assert.equal(await page.locator('[data-quick-tech="EV"]').getAttribute('aria-pressed'),'true');
  assert(await page.locator('.vehicle-card').count()>0);

@@ -8,7 +8,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  const p=await b.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'domcontentloaded'});
- await p.waitForFunction(()=>document.getElementById('recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.getElementById('recordCount')?.textContent==='8.394',{timeout:30000});
  await check('La búsqueda encuentra Corolla Cross y asocia fotos verificadas',async()=>{
   await p.fill('#query','Corolla Cross');await p.click('#searchButton');
   assert((await p.locator('.vehicle-card').count())>0);

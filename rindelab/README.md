@@ -1,3 +1,11 @@
+# RINDELAB — actualización 3CV (22/11/2026)
+
+Se incorporaron **69 códigos de homologación adicionales** desde la API oficial Consumo Vehicular, cotejados contra las 8.325 fichas históricas del buscador (8.053 del corte de mayo y 272 incorporados en octubre). Los 69 códigos nuevos cuentan con mediciones **WLTP**: 33 con fecha de homologación en octubre y 36 en noviembre de 2026. El catálogo histórico consultable pasa a **8.394 códigos únicos**. La API oficial en este corte reporta 8.384 entradas; la diferencia se debe a que el buscador preserva fichas históricas que no necesariamente figuran en la consulta actual. Ninguno de estos totales equivale a modelos actualmente disponibles para compra.
+
+Fuente y trazabilidad: `https://api-consumovehicular.minenergia.cl/vehiculos/listar`; snapshot `data/oficial-api-20261122.json`. Las mediciones y ciclos históricos se conservan, no se fusionan tecnologías ni se infieren precios. Control reproducible: `node rindelab/tests/official-api-november.cjs`. No se actualizaron precios de comercializadores, tasaciones SII ni nóminas MTT.
+
+---
+
 # RINDELAB — Retiros y valor comercial de usados (21/10/2026)
 
 La consulta independiente de autos usados (usados.html) conserva los **299 registros documentados** de la base actual: 296 habilitados y tres apartados por anomalías de calidad. Permite alternar entre referencias con precio, **los 90 casos de modelos/generaciones retirados** y los retirados sin valor verificable. La falta de precio no oculta el modelo ni se interpreta como precio cero. Se mantienen separados los 65 retiros de familia completa de los 25 retiros limitados a generaciones, carrocerías o variantes. Solo los primeros son candidatos a mostrar precios por familia y año; los segundos exigen evidencia específica.

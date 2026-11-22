@@ -29,7 +29,7 @@ async function open(width,height){
  await page.emulateMedia({reducedMotion:'reduce'});
  const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));page.on('console',m=>{if(m.type()==='error')errors.push('Console: '+m.text())});
  const r=await page.goto(base,{waitUntil:'networkidle',timeout:30000});assert.equal(r.status(),200);
- await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325' && document.querySelector('#searchButton')?.disabled===false,{timeout:25000});
+ await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394' && document.querySelector('#searchButton')?.disabled===false,{timeout:25000});
  await page.locator('.hero-image img').evaluate(el=>el.decode());
  // La regresión histórica comprueba todo el universo 3CV. El filtro comercial tiene pruebas propias.
  await page.selectOption('#catalogScope','all');
@@ -63,7 +63,7 @@ await test('Metadatos 3CV coinciden con registros visibles al corte',async()=>{
  assert.equal(manifest.count,8056);
  assert.equal(manifest.excluded,3);
  assert.equal(manifest.count-manifest.excluded,8053);
- assert.equal(await page.locator('#recordCount').textContent(),'8.325');
+ assert.equal(await page.locator('#recordCount').textContent(),'8.394');
  const extra=await page.evaluate(async()=>Promise.all([1,2,3,4].map(i=>fetch('./data/oficial-api-20261018-'+String(i).padStart(2,'0')+'.json').then(r=>r.json()))).then(a=>a.reduce((n,p)=>n+p.items.length,0)));
  assert.equal(extra,272);
 });
@@ -305,7 +305,7 @@ await test('El filtro opcional permite WLTP o NEDC sin separar el ranking conjun
  assert((await page.locator('.rank-number').allTextContents()).every(x=>x==='—'));
  await page.locator('#statsClose').click();
 });
-await test('PHEV muestra 264 fichas y rendimiento eléctrico y ponderado sin costo inventado',async()=>{
+await test('PHEV muestra 277 fichas y rendimiento eléctrico y ponderado sin costo inventado',async()=>{
  await page.locator('#statsOpen').click();
  await page.selectOption('#statsMetric','performance');
  assert.equal(await page.locator('.rank-item').count(),0);
@@ -314,7 +314,7 @@ await test('PHEV muestra 264 fichas y rendimiento eléctrico y ponderado sin cos
  assert.equal(await page.inputValue('#statsMetric'),'electric');
  assert(await page.locator('#statsMetric option[value="cost"]').isDisabled());
  assert.equal(await page.locator('.rank-item').count(),10);
- assert.match(await page.locator('#statsResultCount').textContent(),/^264 fichas/);
+ assert.match(await page.locator('#statsResultCount').textContent(),/^277 fichas/);
  assert((await page.locator('.rank-value').allTextContents()).every(x=>x.includes('km/kWh')));
  assert.match(await page.locator('#statsMetricHint').textContent(),/No se calcula un costo energético combinado/);
  await page.selectOption('#statsMetric','weighted');
@@ -323,13 +323,13 @@ await test('PHEV muestra 264 fichas y rendimiento eléctrico y ponderado sin cos
  assert.match(await page.locator('#statsNotice').textContent(),/no equivale al rendimiento con batería descargada/);
  await page.locator('#statsClose').click();
 });
-await test('REEV muestra sus 16 registros y ambas métricas con orden dinámico',async()=>{
+await test('REEV muestra sus 18 registros y ambas métricas con orden dinámico',async()=>{
  await page.locator('#statsOpen').click();
  await page.selectOption('#statsTech','REEV');
  await page.selectOption('#statsMetric','electric');
  await page.selectOption('#statsOrder','asc');
  assert.equal(await page.inputValue('#statsMetric'),'electric');
- assert.match(await page.locator('#statsResultCount').textContent(),/^16 fichas/);
+ assert.match(await page.locator('#statsResultCount').textContent(),/^18 fichas/);
  assert.match(await page.locator('#statsSummaryTitle').textContent(),/sin ranking/i);
  await page.selectOption('#statsCycle','NEDC');
  const nedcCount=Number((await page.locator('#statsResultCount').textContent()).match(/\d+/)[0]);
@@ -503,7 +503,7 @@ await test('Ventana de cinco columnas permite scroll, quitar uno y agregar otro'
  await page.click('#compareOpen');
  assert(await page.locator('#compareDialog').evaluate(e=>e.open));
  assert.equal(await page.locator('.comparison-table thead th').count(),6);
- assert.equal(await page.locator('.comparison-table tbody tr').count(),15);
+ assert.equal(await page.locator('.comparison-table tbody tr').count(),17);
  assert.equal(await page.locator('.compare-model-cell').count(),5);
  const horizontal=await page.locator('.compare-scroller').evaluate(e=>({width:e.scrollWidth,visible:e.clientWidth,start:e.scrollLeft}));
  if(horizontal.width>horizontal.visible+2){
@@ -1776,7 +1776,7 @@ await test('Deepal S05 REEV tiene ahora ficha energética 3CV oficial de octubre
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','CN10637E60826S00-7');await p.click('#searchButton');
  assert.equal(await p.locator('.mtt-result-card').count(),0);
  assert.equal(await p.locator('.vehicle-card').count(),1);
@@ -1796,7 +1796,7 @@ await test('Filtros oficiales de octubre incluyen JIM Re-Max y Kia Sportage HEV'
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  const brands=await p.locator('#brand option').allTextContents();
  assert(brands.includes('JIM'));
  await p.selectOption('#brand','JIM');
@@ -1842,7 +1842,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','Suzuki Baleno');await p.click('#searchButton');
  assert((await p.locator('.vehicle-lifecycle').count())>=1);
  assert.match(await p.locator('.vehicle-lifecycle').first().textContent(),/descontinuado/i);
@@ -1858,7 +1858,7 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  for(const q of ['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze']){
   await p.fill('#query',q);
   await p.click('#searchButton');
@@ -1897,7 +1897,7 @@ await test('Séptima revisión 3CV: 90 casos sin falsos positivos en variantes v
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  for(const name of ['Nissan March','Kia Soul','Ford Focus','Hyundai Veloster','Peugeot 508','Changan CX70','Mercedes-Benz X 350d']){
   await p.fill('#query',name);await p.click('#searchButton');
   assert((await p.locator('.vehicle-lifecycle').count())>0,name+' debe exhibir condición histórica');
@@ -1970,7 +1970,7 @@ await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Ca
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.click('#searchButton');
  assert(await p.locator('#mttSearchSection').isHidden(),'La portada no muestra ficha MTT aislada al listar todos los vehículos');
  assert.equal(await p.locator('.mtt-result-card').count(),0);
@@ -1991,7 +1991,7 @@ await test('Leapmotor B03X muestra rendimiento eléctrico oficial en móvil 320p
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','Leapmotor B03X');await p.click('#searchButton');
  assert((await p.locator('.vehicle-card').count())>=1);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
@@ -2001,17 +2001,17 @@ await test('Leapmotor B03X muestra rendimiento eléctrico oficial en móvil 320p
  assert.deepEqual(errors,[]);
  await p.close();
 });
-await test('Leyenda distingue fuente histórica mayo de API oficial octubre',async()=>{
+await test('Leyenda distingue fuente histórica mayo y ampliaciones oficiales de octubre-noviembre',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
  await p.selectOption('#catalogScope','all');
- await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.325',{timeout:30000});
+ await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
  assert(await p.locator('#sourceLegend').isVisible());
  assert(await p.locator('#energyResultsHeading').isVisible());
  assert.match(await p.locator('#sourceLegend').textContent(),/Base histórica 3CV de mayo/);
- assert.match(await p.locator('#sourceLegend').textContent(),/API oficial de octubre de 2026/);
+ assert.match(await p.locator('#sourceLegend').textContent(),/272 homologaciones incorporadas en octubre y 69 códigos adicionales verificados en noviembre de 2026/);
  assert.match(await p.locator('.vehicle-card .energy-source-line').first().textContent(),/octubre 2026/);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
  await p.fill('#query','Dolphin Mini');await p.click('#searchButton');

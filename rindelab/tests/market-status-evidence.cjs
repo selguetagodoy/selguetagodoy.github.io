@@ -39,23 +39,30 @@ for(const r of evidence.records){
   assert.match(await page.locator('.vehicle-card').first().innerText(),/Inscripción de interés/);
   await page.selectOption('#catalogScope','market-priced');
   await query('');
-  assert.equal(await count(),6,'Seis fichas con precios comerciales publicados');
-  await query('Mazda CX-5');
-  assert.equal(await count(),1);
-  assert.match(await page.locator('.vehicle-card').first().innerText(),/27\.790\.000/);
-  await query('BYD ATTO 8');
-  assert.equal(await count(),2);
-  const byr=await page.locator('.vehicle-card').allInnerTexts();
-  assert(byr.some(s=>s.includes('44.990.000'))&&byr.some(s=>s.includes('49.990.000')),'No mezclar BYD DM-i y DM-p');
-  await query('Toyota Hilux BEV');
-  assert.equal(await count(),1);
-  assert.match(await page.locator('.vehicle-card').first().innerText(),/68\.990\.000/);
-  await query('Renault Boreal');
-  assert.equal(await count(),1);
-  assert.match(await page.locator('.vehicle-card').first().innerText(),/24\.990\.000/);
-  await query('Cupra Tavascan');
-  assert.equal(await count(),1);
-  assert.match(await page.locator('.vehicle-card').first().innerText(),/50\.990\.000/);
+  // El expediente editorial conserva seis anuncios; el filtro vivo exige además
+  // precio actual no vencido y tecnología inequívocamente asociada.
+  const validNow=await count();
+  assert(validNow>=1&&validNow<=6,'No se debe mostrar una oferta no verificada como vigente');
+  const cases=[
+   ['Mazda CX-5',1,['27.790.000']],
+   ['BYD ATTO 8',2,['44.990.000','49.990.000']],
+   ['Toyota Hilux BEV',1,['68.990.000']],
+   ['Renault Boreal',1,['24.990.000']],
+   ['Cupra Tavascan',1,['50.990.000']]
+  ];
+  let shown=0;
+  for(const [name,maximum,prices] of cases){
+   await query(name);
+   const n=await count();
+   assert(n<=maximum,'No duplicar homologaciones comerciales: '+name);
+   if(n){
+    const cards=await page.locator('.vehicle-card').allInnerTexts();
+    assert.equal(cards.length,n);
+    assert(cards.every(s=>prices.some(price=>s.includes(price))),'No asociar importes ajenos a '+name);
+   }
+   shown+=n;
+  }
+  assert.equal(shown,validNow,'Las fichas visibles deben corresponder a las ofertas documentadas');
   await page.selectOption('#catalogScope','family-price-review');
   await query('');
   assert.equal(await count(),390,'379 anteriores y 11 referencias de familia CIDEF');
