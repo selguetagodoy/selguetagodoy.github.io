@@ -292,6 +292,8 @@ def main():
                     if (IMG/dest).exists():continue
                     (IMG/dest).write_bytes(blob)
                     pattern=r'\b'+r'[\s-]+'.join(re.escape(z) for z in toks(g['family']))+r'\b'
+                    # Chile catalog can retain Spanish accents in family names.
+                    pattern=pattern.replace('sedan','sed[aá]n').replace('furgon','furg[oó]n').replace('coupe','coup[eé]').replace('hibrido','h[ií]brido')
                     # Model aliases for automotive families with structural variants are not inferred.
                     entry={'brand':g['brand'],'family':g['family'],'pattern':pattern,'from':'2026','to':'2026',
                            'file':c['file'],'model':g['brand']+' '+g['family']+' (fotografía referencial de familia)',
