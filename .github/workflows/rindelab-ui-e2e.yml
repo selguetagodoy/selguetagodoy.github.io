@@ -125,6 +125,9 @@ jobs:
       - name: Verificar importación masiva CarImages Rights, derechos y 43 archivos
         run: node rindelab/tests/carimages-rights-import.cjs
 
+      - name: Verificar 88 fotografías Commons, atribución y SHA-256
+        run: node rindelab/tests/commons-mass.cjs
+
       - name: Auditar cobertura nominal con base completa 3CV 8394 (noviembre)
         run: node rindelab/tests/coverage-november.cjs
 
