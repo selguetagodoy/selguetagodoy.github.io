@@ -21,7 +21,7 @@ DRY='--dry-run' in os.sys.argv
 def text(v):
     return unicodedata.normalize('NFKD',str(v or '')).encode('ascii','ignore').decode().lower()
 def toks(v):
-    return re.findall(r'[a-z]+[0-9]*|[0-9]+[a-z]*',text(v))
+    return re.findall(r'[a-z]+[0-9]*[a-z]*|[0-9]+[a-z]*',text(v))
 def slug(v):
     return re.sub(r'[^a-z0-9]+','-',text(v)).strip('-')
 def fetch(url,cap=2_000_000):
@@ -117,7 +117,8 @@ BLOCK={'interior','dashboard','cockpit','engine','motor','steering','wheel','whe
        'tail','headlight','seat','seats','door','doors','detail','rim','rims','bumper','headlamp','mirror',
        'rally','rally2','race','racing','gt3','gt4','formula','render','illustration','concept','prototype','police','ambulance',
        'garage','collection','modelcar','toy','diecast','hotwheels','wallpaper','drawing','sketch','camouflage','mule','wheelchair',
-       'caravan','conversion','artwork','racecar','simulator','cabinet','sticker','keychain','oldtimer'}
+       'caravan','conversion','artwork','racecar','simulator','cabinet','sticker','keychain','oldtimer',
+       'timeline','taxi','carabinieri','semar','protection','nostokana','bra','modelcar','conceptcar'}
 # Strictly disallow mismatched configurations if the commercial model calls out a distinct body style.
 BODY_REQ={
  'sportback':{'sportback'},'coupe':{'coupe','coup'},'cabrio':{'cabriolet','cabrio','convertible'},
@@ -132,6 +133,36 @@ def search_query(g):
     if brand=='Gac' and fam.upper().startswith('AION'): b='Aion'
     if fam.startswith('cl-tiggo'): fam=fam[3:]
     return b+' '+fam.replace('_',' ').replace('-',' ')
+def exact_exclusion(g,filename):
+    """Known model-family confusions rejected after inspecting filename evidence."""
+    k=(text(g['brand']),text(g['family']))
+    name=text(filename)
+    BAD={
+       ('baic','eu5'):['eu5 plus'],
+       ('chevrolet','sail sedan'):['sail ii'],
+       ('ford','transit minibus'):['transit minibus uk'],
+       ('hyundai','tucson'):['chinese facelift'],
+       ('jac','js8'):['js8 pro'],
+       ('jaguar','e-pace'):['2018'],
+       ('jaguar','f-type'):['convertible'],
+       ('kia','frontier ii'):['2015'],
+       ('land rover','range rover'):['velar','evoque','range rover sport'],
+       ('lexus','lx'):['lx 570'],
+       ('mazda','6 sedan'):['mazda 323'],
+       ('mazda','bt-50'):['2008'],
+       ('mazda','mx-5'):['bra'],
+       ('mercedes-benz','clase c'):['coupe'],
+       ('mercedes-benz','clase g'):['semar'],
+       ('mercedes-benz','gls'):['timeline'],
+       ('suzuki','alto'):['van vp','ha36v'],
+       ('toyota','yaris'):['carabinieri'],
+       ('bmw','i5'):['nostokana'],
+       ('bmw','i7'):['protection'],
+       ('baic','u5 plus'):['taxi'],
+       ('exeed','vx'):['taxi']
+    }
+    return any(v in name for v in BAD.get(k,[]))
+
 def family_matches(g,filename,desc):
     brand=g['brand']; name=g['family']; f=toks(filename); t=toks(filename+' '+desc)
     fset=set(f); tset=set(t)
@@ -154,12 +185,13 @@ def family_matches(g,filename,desc):
     for q in qualifiers:
         if not (BODY_REQ[q] & fset): return False,-1,'required body missing: '+q
     if any(b in fset for b in BLOCK): return False,-1,'interior/race/other blacklist'
-    if any(b in tset for b in ('scale','diecast','modelcar','racing','interior')): return False,-1,'image description excluded'
+    if any(b in tset for b in ('scale','diecast','modelcar','racing','interior','toy','taxi','police')): return False,-1,'image description excluded'
+    if exact_exclusion(g,filename): return False,-1,'incorrect generation/body/trim'
     if (g['technology'] in ('HEV','PHEV','MHEV','REEV')) and 'hybrid' in fset and g['technology']=='PHEV' and 'phev' not in fset and 'plugin' not in fset:
         return False,-1,'unverified plug-in body'
     # Year in filename: must be modern; publication date is insufficient. Exclude known 1990/2000.
     years=[int(y) for y in re.findall(r'\b(19[0-9]{2}|20[0-2][0-9])\b',filename)]
-    if any(y<2018 for y in years): return False,-1,'pre-2018 generation'
+    if any(y<=2018 for y in years): return False,-1,'pre-2019 generation'
     if re.search(r'\b(?:all new|nuevo|new)\b',text(name)) and years and max(years)<2023: return False,-1,'older generation of new model'
     # Title must carry model, photo source and permissible rights - metadata verified separately.
     score=40+min(15,2*len(base))+min(8,max(years or [2022])-2019)
