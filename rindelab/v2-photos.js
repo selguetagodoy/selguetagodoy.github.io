@@ -4146,10 +4146,199 @@ const licensedNovember2026=[
 ];
 // Referencias de familia verificadas en Wikimedia Commons el 22/11/2026.
 // Una foto no certifica acabados, carrocería específica, motor ni disponibilidad en Chile.
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const licensedNovember2026B=[
+  {
+    "brand": "Geely",
+    "pattern": "\\bCityray\\b",
+    "tech": "Bencina",
+    "from": "2025",
+    "to": "2026",
+    "file": "Moscow - June 2026 - Blue Geely Cityray SUV.jpg",
+    "model": "Geely Cityray SUV (2026)",
+    "author": "Юрий Д.К.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Moscow_-_June_2026_-_Blue_Geely_Cityray_SUV.jpg",
+    "localSrc": "./images/commons/rindelab-geely-cityray-2026-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Jetour",
+    "pattern": "\\bX70\\b(?!\\s*Plus)",
+    "from": "2022",
+    "to": "2026",
+    "file": "Jetour X70 240T GLS 2022 (54094034679).jpg",
+    "model": "Jetour X70 (2022)",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jetour_X70_240T_GLS_2022_(54094034679).jpg",
+    "localSrc": "./images/commons/rindelab-jetour-x70-2022-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Jetour",
+    "pattern": "\\bX90\\s*Plus\\b",
+    "from": "2022",
+    "to": "2026",
+    "file": "Jetour X90 Plus 001.jpg",
+    "model": "Jetour X90 Plus (fotografía de familia)",
+    "author": "JustAnotherCarDesigner",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jetour_X90_Plus_001.jpg",
+    "localSrc": "./images/commons/rindelab-jetour-x90-plus-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Peugeot",
+    "pattern": "\\bLandtrek\\b",
+    "from": "2021",
+    "to": "2026",
+    "file": "2022 Peugeot Landtrek 1.9 HDi Active (Chile) front view.jpg",
+    "model": "Peugeot Landtrek HDi fotografiado en Chile (2022)",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Peugeot_Landtrek_1.9_HDi_Active_(Chile)_front_view.jpg",
+    "localSrc": "./images/commons/rindelab-peugeot-landtrek-chile-2022-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Alfa Romeo",
+    "pattern": "\\bTonale\\b",
+    "from": "2022",
+    "to": "2026",
+    "file": "Alfa Romeo Tonale 1X7A0314.jpg",
+    "model": "Alfa Romeo Tonale (fotografía de familia)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Tonale_1X7A0314.jpg",
+    "localSrc": "./images/commons/rindelab-alfa-romeo-tonale-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Aston Martin",
+    "pattern": "\\bDBX\\b",
+    "from": "2021",
+    "to": "2026",
+    "file": "Aston Martin DBX Auto Zuerich 2021 IMG 0427.jpg",
+    "model": "Aston Martin DBX (2021)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aston_Martin_DBX_Auto_Zuerich_2021_IMG_0427.jpg",
+    "localSrc": "./images/commons/rindelab-aston-martin-dbx-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Aston Martin",
+    "pattern": "\\bDB11\\b",
+    "from": "2017",
+    "to": "2026",
+    "file": "2017 Aston Martin DB11 V12.jpg",
+    "model": "Aston Martin DB11 (2017; foto referencial de generación)",
+    "author": "Evolutionarist",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Aston_Martin_DB11_V12.jpg",
+    "localSrc": "./images/commons/rindelab-aston-martin-db11-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Aston Martin",
+    "pattern": "\\bDBS\\b",
+    "from": "2019",
+    "to": "2026",
+    "file": "Aston Martin DBS Superleggera Filderstadt 1Y7A4897.jpg",
+    "model": "Aston Martin DBS Superleggera (fotografía referencial)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aston_Martin_DBS_Superleggera_Filderstadt_1Y7A4897.jpg",
+    "localSrc": "./images/commons/rindelab-aston-martin-dbs-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bQ2\\b",
+    "from": "2020",
+    "to": "2026",
+    "file": "Audi Q2 FL 1X7A0303.jpg",
+    "model": "Audi Q2 restyling (fotografía de familia)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_Q2_FL_1X7A0303.jpg",
+    "localSrc": "./images/commons/rindelab-audi-q2-fl-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bA1\\b",
+    "from": "2018",
+    "to": "2026",
+    "file": "Audi A1 (2018) IMG 2441.jpg",
+    "model": "Audi A1 segunda generación (2018)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_A1_(2018)_IMG_2441.jpg",
+    "localSrc": "./images/commons/rindelab-audi-a1-2018-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bA4\\b",
+    "from": "2020",
+    "to": "2026",
+    "file": "2020 Audi A4 (Michigan Manufacturer plate), front 9.3.19.jpg",
+    "model": "Audi A4 B9 restyling (2020)",
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2020_Audi_A4_(Michigan_Manufacturer_plate),_front_9.3.19.jpg",
+    "localSrc": "./images/commons/rindelab-audi-a4-2020-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "\\bA5\\s*Cabrio(?:let)?\\b",
+    "from": "2018",
+    "to": "2026",
+    "file": "Audi A5 Cabriolet Facelift F5 IMG 5023.jpg",
+    "model": "Audi A5 Cabriolet F5 restyling (fotografía referencial)",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_A5_Cabriolet_Facelift_F5_IMG_5023.jpg",
+    "localSrc": "./images/commons/rindelab-audi-a5-cabriolet-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "RAM",
+    "pattern": "\\b(?:RAM\\s*)?700\\b",
+    "from": "2021",
+    "to": "2026",
+    "file": "Ram 700 Laramie 1.3 CD 2022.jpg",
+    "model": "Ram 700 Laramie 2022 (fotografía de familia)",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ram_700_Laramie_1.3_CD_2022.jpg",
+    "localSrc": "./images/commons/rindelab-ram-700-2022-licensed-20261122b.jpg"
+  },
+  {
+    "brand": "JMC",
+    "pattern": "\\b(?:All\\s+New\\s+)?Vigus\\s+Plus\\b",
+    "from": "2022",
+    "to": "2026",
+    "file": "2022 JMC Vigus Plus TDCi.jpg",
+    "model": "JMC Vigus Plus 2022",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_JMC_Vigus_Plus_TDCi.jpg",
+    "localSrc": "./images/commons/rindelab-jmc-vigus-plus-2022-licensed-20261122b.jpg"
+  }
+];
+// Lote de fotos identificadas documentalmente; imagen solo referencial de familia/generación.
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
+  "./images/commons/rindelab-citroen-jumpy-licensed-20261122.jpg",
+  "./images/commons/rindelab-geely-cityray-2026-licensed-20261122b.jpg",
+  "./images/commons/rindelab-kia-stonic-2025-licensed-20261122.jpg",
   "./images/commons/kia-kia-picanto-morning-2024-32.jpg",
   "./images/commons/suzuki-suzuki-swift-2024-19.jpg",
   "./images/commons/bmw-bmw-x1-u11-2023-31.png",

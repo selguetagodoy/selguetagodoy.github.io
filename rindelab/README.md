@@ -1,5 +1,15 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Segunda ampliación de fotografías · 22 de noviembre de 2026
+
+Se incorporaron **14 fotografías nuevas y verificadas en Wikimedia Commons** (autor, licencia, fuente y SHA-256) en `data/licensed-photos-november-2026-batch2.json`. El nuevo lote incluye Geely Cityray, Jetour X70 y X90 Plus, Peugeot Landtrek fotografiado en Chile, Alfa Romeo Tonale, Aston Martin DB11/DBS/DBX, Audi A1/A4/A5 Cabriolet/Q2, Ram 700 y JMC Vigus Plus. Son referencias de **familia/generación**, nunca prueba de una versión técnica, precio ni disponibilidad comercial específica.
+
+**Situación tras ambos lotes:** 292 fotografías en biblioteca (259 del inventario previo más 33 añadidas); **51 de 69** homologaciones recientes con foto identificada y **18 sin foto fiable**; **407 de 700** grupos familia/tecnología comerciales sin fotografía (frente a 423 al corte de octubre). El nuevo diagnóstico se encuentra en `data/catalog-coverage-20261122.json` y la cola de 100 grupos en `sii/LOTE-PENDIENTES-100-20261122.md`. Se conserva la evidencia de octubre por separado. No asignar la foto de PV5 Cargo a PV5 Pick-Up, Nissan NX8 a Arizon, ni Maxus eDeliver 7 a Deliver 7 diésel sin identificación fiable.
+
+Controles: `node rindelab/tests/photos-november-batch2.cjs`, `node rindelab/tests/photos-november.cjs`, `node scripts/rindelab-market-queue.cjs --check` y suite E2E de GitHub Actions.
+
+---
+
 ## Fotografías verificadas del lote 3CV de noviembre
 
 Se incorporaron **19 fotografías de familias de modelos desde Wikimedia Commons**, almacenadas localmente con autor, licencia, fuente, URL de licencia y checksum SHA-256 en `data/licensed-photos-november-2026.json`. En las 69 homologaciones nuevas, la cobertura visual auditada aumenta de **21 a 50 fichas**; **19 siguen sin fotografía verificada**. La fotografía de Kia PV5 Cargo se aplica solo a sus 7 homologaciones de furgón, no a `Cargo Pick-Up`. Ninguna imagen acredita versión comercial exacta, motorización ni disponibilidad en Chile.
