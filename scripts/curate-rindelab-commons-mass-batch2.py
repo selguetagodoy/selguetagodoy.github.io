@@ -44,6 +44,15 @@ entries=json.loads(s[a+len(tag):b])
 assert len(entries)==len(old),(len(entries),len(old))
 new=[p for p in entries if (p['brand'],p['family']) not in EXCLUDE]
 assert len(new)==len(remaining)
+# Don't let an unverified drivetrain-neutral family photo outrank an existing
+# model photo positively verified for a hybrid/electric variant.
+TECH_GUARDRAILS={('Great Wall','Haval Jolion'),('Great Wall','Haval H6'),('Great Wall','Haval H7')}
+for item in new:
+    if (item['brand'],item['family']) in TECH_GUARDRAILS:
+        item['excludeTech']=['EV','HEV','PHEV','MHEV','REEV']
+for item in remaining:
+    if (item['brand'],item['family']) in TECH_GUARDRAILS:
+        item['excludeTech']=['EV','HEV','PHEV','MHEV','REEV']
 s=s[:a]+tag+json.dumps(new,ensure_ascii=False,indent=2)+s[b:]
 for p in excluded:
     line='  '+json.dumps(p['localSrc'],ensure_ascii=False)+',\n'
