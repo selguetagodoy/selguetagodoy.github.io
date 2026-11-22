@@ -291,7 +291,7 @@ def main():
                     dest='rindelab-'+slug(g['brand']+' '+g['family'])[:74]+'-commonsmass-batch2-20261122.jpg'
                     if (IMG/dest).exists():continue
                     (IMG/dest).write_bytes(blob)
-                    pattern=r'\b'+r'[\s-]+'.join(re.escape(z) for z in toks(g['family']))+r'\b'
+                    pattern=r'\b'+r'[\s-]+'.join(re.escape(z) for z in toks(g['family']))+r'(?=$|[^A-Za-z0-9])'
                     # Chile catalog can retain Spanish accents in family names.
                     pattern=pattern.replace('sedan','sed[aá]n').replace('furgon','furg[oó]n').replace('coupe','coup[eé]').replace('hibrido','h[ií]brido')
                     # Model aliases for automotive families with structural variants are not inferred.
