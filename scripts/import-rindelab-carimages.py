@@ -58,13 +58,25 @@ def choose(target, records):
         filename = row.get("source_filename", "")
         stem = words(filename.replace("_", " "))
         if core not in stem: continue
-        if any(x in stem for x in ("interior", "dashboard", "engine", "motor", "steering", "wheel", "rear", "back", "inside", "logo", "badge", "tail", "headlight")): continue
+        if any(x in stem for x in ("interior", "dashboard", "engine", "motor", "steering", "wheel", "rear", "back", "inside", "logo", "badge", "tail", "headlight", "vents", "infotainment", "outlet", "airbag", "passenger", "rally", "rally2", "racing", "race", "vintage", "veteranbiler", "classic", "modified", "bruise", "bruised", "police", "ambulance", "wheels", "hotwheels", "legends", "drift", "technical", "engineering", "render", "illustration", "cabinet", "switch", "touring", "enginebay")): continue
+        if re.search(r"\bhot\s+wheels\b|\blegends\s+tour\b", " ".join(stem)): continue
+        if "aperta" in stem and "aperta" not in words(family): continue
+        if "electric" in stem and "electric" not in words(family) and not item.get("technology") == "EV": continue
+        if "hybrid" in stem and "hybrid" not in words(family) and not item.get("technology") in ("HEV", "PHEV"): continue
+        if "hybrid" in words(family) and "hybrid" not in stem: continue
         if any(q not in stem for q in qual): continue
         if ("new" in words(family) or "nuevo" in words(family)) and not re.search(r"\b202[2-6]\b", " ".join(stem)): continue
         years = [int(y) for y in re.findall(r"\b20(?:1[6-9]|2[0-6])\b", " ".join(stem))]
         if not years: continue
         year = max(years)
         if year < 2019: continue
+        # File date is not a model year: reject vintage cars photographed in 2026.
+        match_old = re.match(r"^(?:19\d\d|200\d|201[0-8])\b", " ".join(stem))
+        if match_old: continue
+        leading_model_year = re.match(r"^20(?:19|2[0-6])\b", " ".join(stem))
+        explicit_generation = bool(re.search(r"\b(?:facelift|second|third|2nd|3rd|gen|c9|bc3)\b", " ".join(stem)))
+        if not leading_model_year and not explicit_generation: continue
+        if any(x in words(family) for x in ("new", "nuevo", "nueva")) and year < 2024: continue
         if row.get("license_code", "").lower() not in ("cc0", "pd", "cc-by-2.0", "cc-by-3.0", "cc-by-4.0", "cc-by-sa-2.0", "cc-by-sa-3.0", "cc-by-sa-4.0"): continue
         if not row.get("creator_name") or not row.get("source_page_url", "").startswith("https://commons.wikimedia.org/wiki/File:"): continue
         score = 30 + (year - 2019) + (3 if "front" in stem else 0) + (2 if "chile" in stem else 0)
@@ -150,7 +162,7 @@ def main():
             dest = "rindelab-" + stem[:72] + "-carimages-20261122.jpg"
             local = "./images/commons/" + dest
             if (IMGS / dest).exists(): raise ValueError("duplicate local filename")
-            entry = {"brand": item["brand"], "pattern": r"\b" + r"\s+".join(re.escape(w) for w in words(item["family"])) + r"\b",
+            entry = {"brand": item["brand"], "pattern": r"\b" + r"[\s-]+".join(re.escape(w) for w in words(item["family"])) + r"\b", "family": item["family"],
                      "from": "2026", "to": "2026", "file": filename,
                      "model": item["brand"] + " " + item["family"] + " (fotografía referencial de familia; verificar versión)",
                      "author": info["author"], "license": info["license"], "licenseUrl": info["licenseUrl"],
@@ -178,7 +190,7 @@ def main():
                 if len(data) < 12_000 or len(data) > 1_000_000 or not data.startswith(b"\xff\xd8") or not data.endswith(b"\xff\xd9"): continue
                 dest = "rindelab-" + re.sub(r"[^a-z0-9]+", "-", norm(item["brand"] + " " + item["family"]))[:72].strip("-") + "-wikidata-20261122.jpg"
                 if (IMGS / dest).exists(): continue
-                entry = {"brand": item["brand"], "pattern": r"\b" + r"\s+".join(re.escape(w) for w in words(item["family"])) + r"\b",
+                entry = {"brand": item["brand"], "pattern": r"\b" + r"[\s-]+".join(re.escape(w) for w in words(item["family"])) + r"\b", "family": item["family"],
                          "from": "2026", "to": "2026", "file": fallback["source_filename"],
                          "model": item["brand"] + " " + item["family"] + " (Wikidata P18, fotografía referencial)",
                          "author": info["author"], "license": info["license"], "licenseUrl": info["licenseUrl"], "source": info["source"],
