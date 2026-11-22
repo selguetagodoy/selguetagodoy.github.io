@@ -301,7 +301,7 @@ def main():
     JS.write_text(source,encoding='utf8')
     for p in ('index.html','cotizador.html','electromovilidad.html'):
         fn=ROOT/'rindelab'/p
-        old='v2-photos.js?v=20261122-carimages'
+        old='v2-photos.js?v=20261122-commonsmass'
         data=fn.read_text(encoding='utf8')
         assert old in data
         fn.write_text(data.replace(old,'v2-photos.js?v=20261122-commonsmass2'),encoding='utf8')
