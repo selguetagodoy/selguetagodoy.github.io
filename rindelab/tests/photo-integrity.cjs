@@ -36,7 +36,7 @@ assert.match(find('Citroen','Basalt','',2026)?.src||'',/new-citroen-basalt/);
 assert.match(find('Skoda','Elroq','EV',2026)?.src||'',/new-skoda-elroq/);
 assert.match(find('Foton','G7','',2026)?.src||'',/new-foton-tunland-g7/);
 assert.equal(find('Foton','G7','EV',2026),null,'No atribuir foto diésel a G7 EV');
-assert.equal(find('Maxus','T90 EV','EV',2026),null,'No mostrar pickup diésel a modelo EV');
+assert.match(find('Maxus','T90 EV','EV',2026)?.src||'',/rindelab-maxus-t90-ev-commonsmass-batch2-20261122/,'Solo fotografía verificada del Maxus T90 EV; nunca usar la T90 diésel');
 assert.match(find('Porsche','911','',2027)?.src||'',/new-porsche-911/);
 assert.match(find('Kia','Morning','',2026)?.src||'',/picanto-morning-2024/);
 assert.match(find('Mitsubishi','L200','',2026)?.src||'',/l200-triton-generacion-2024/);
