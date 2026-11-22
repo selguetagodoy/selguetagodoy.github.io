@@ -25,6 +25,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      # Revalidación conservadora: excluir también un Macan de combustión del contexto EV.
       - name: Retirar fotografías equivocadas antes de publicar
         run: python -u scripts/curate-rindelab-commons-mass-batch2.py
       - name: Regenerar inventario y cobertura comercial
