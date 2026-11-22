@@ -2020,6 +2020,8 @@ await test('Leyenda distingue fuente histórica mayo y ampliaciones oficiales de
  assert.match(await p.locator('#sourceLegend').textContent(),/272 homologaciones incorporadas en octubre y 69 códigos adicionales verificados en noviembre de 2026/);
  assert.match(await p.locator('.vehicle-card .energy-source-line').first().textContent(),/octubre 2026/);
  assert.equal(await p.locator('.mtt-result-card').count(),0);
+ await p.fill('#query','Kia PV5');await p.click('#searchButton');
+ assert((await p.locator('.vehicle-card .energy-source-line').allTextContents()).some(x=>/API oficial noviembre 2026/.test(x)),'Las nuevas fichas 3CV deben identificar el corte de noviembre');
  await p.fill('#query','Dolphin Mini');await p.click('#searchButton');
  assert(await p.locator('.vehicle-card').count()>0);
  assert(await p.locator('.vehicle-card [data-compare]').first().isVisible());
