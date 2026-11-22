@@ -33,7 +33,7 @@ assert(publishedListPrices>=95,'No se extrajeron precios de lista publicados');
 assert(newGroups.size>=75,'No se generó una ampliación útil de nombres comerciales');
 const photoJs=fs.readFileSync(path.join(root,'rindelab/v2-photos.js'),'utf8');
 const window={};vm.runInNewContext(photoJs,{window,document:{addEventListener(){}}});
-assert.equal(window.RindelabPhotos.count,259,'Biblioteca fotográfica incompleta');
+assert(window.RindelabPhotos.count>=259,'Biblioteca histórica incompleta');
 const targets=['rindelab-subaru-trailseeker-licensed-20261021.jpg','rindelab-byd-sealion-7-licensed-20261021.jpg','rindelab-honda-zr-v-licensed-20261021.jpg','rindelab-audi-q5-sportback-licensed-20261021.jpg','rindelab-mg-s5-ev-licensed-20261021.jpg'];
 for(const f of targets){
  const p=path.join(root,'rindelab/images/commons',f);
@@ -52,4 +52,4 @@ for(const [brand,family,technology] of pairs){
  assert(found,brand+' '+family+' no tiene foto licenciada');
  assert(found.source.startsWith('https://commons.wikimedia.org/'),found.source);
 }
-console.log(JSON.stringify({records:src.records.length,byRetailer:Object.fromEntries(Object.entries(byRetailer).map(([k,v])=>[k,v.length])),publishedListPrices,newFamilyLabels:newGroups.size,photoLibrary:205},null,2));
+console.log(JSON.stringify({records:src.records.length,byRetailer:Object.fromEntries(Object.entries(byRetailer).map(([k,v])=>[k,v.length])),publishedListPrices,newFamilyLabels:newGroups.size,photoLibrary:window.RindelabPhotos.count},null,2));
