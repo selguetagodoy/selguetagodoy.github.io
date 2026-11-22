@@ -1,0 +1,36 @@
+'use strict';
+const fs=require('node:fs'),crypto=require('node:crypto'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../..');
+const manifest=require(path.join(root,'rindelab/data/commons-mass-batch2-20261122.json'));
+const cover=require(path.join(root,'rindelab/data/catalog-coverage-20261122.json'));
+assert.equal(manifest.missingBefore,254);
+assert(manifest.searched>=30);
+assert.equal(cover.summary.photosInLibrary,423+manifest.photos.length);
+assert(cover.summary.withoutFamilyPhoto<=254);
+const js=fs.readFileSync(path.join(root,'rindelab/v2-photos.js'),'utf8');
+const context={window:{},document:{addEventListener(){}},HTMLImageElement:class{}};
+vm.runInNewContext(js,context);
+const photos=context.window.RindelabPhotos;
+assert.equal(photos.count,423+manifest.photos.length);
+const used=new Set();
+for(const p of manifest.photos){
+ assert(p.brand&&p.family&&p.model&&p.author);
+ assert(p.source.startsWith('https://commons.wikimedia.org/wiki/File:'));
+ assert(/^CC0|^CC BY(?:-SA)? [234]\.0(?: [a-z]{2})?$/i.test(p.license));
+ assert(p.licenseUrl.startsWith('https://creativecommons.org/'));
+ assert(!used.has(p.localSrc),'Duplicate photo source');used.add(p.localSrc);
+ const buffer=fs.readFileSync(path.join(root,'rindelab',p.localSrc));
+ assert(buffer.length>=12000&&buffer.length<=1200000);
+ assert.equal(buffer[0],255);assert.equal(buffer[1],216);
+ assert.equal(buffer.at(-2),255);assert.equal(buffer.at(-1),217);
+ assert.equal(buffer.length,p.bytes);
+ assert.equal(crypto.createHash('sha256').update(buffer).digest('hex'),p.sha256);
+ const photo=photos.findCommercial({brand:p.brand,family:p.family,checkedAt:'2026-11-22',technology:null});
+ assert(photo,'Photo association failed for '+p.brand+' '+p.family);
+ assert(photo.source.startsWith('https://commons.wikimedia.org/wiki/File:'),'Selected photo without Commons attribution');
+ // Prior verified photos can take priority for the same family; both sources remain auditable.
+}
+for(const page of ['index.html','cotizador.html','electromovilidad.html']){
+ assert(fs.readFileSync(path.join(root,'rindelab',page),'utf8').includes('v2-photos.js?v=20261122-commonsmass2'));
+}
+console.log('PASS Commons mass second import',manifest.photos.length,'photos; groups without images',cover.summary.withoutFamilyPhoto);
