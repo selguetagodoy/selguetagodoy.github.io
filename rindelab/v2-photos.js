@@ -6172,62 +6172,6 @@ const licensedCommonsMass20261122=[
 ];
 const licensedCommonsMassBatch220261122=[
   {
-    "brand": "Chevrolet",
-    "family": "Traverse",
-    "pattern": "\\btraverse(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "0 Chevrolet Traverse (C1XX) 0.jpg",
-    "model": "Chevrolet Traverse (fotografía referencial de familia)",
-    "author": "Benespit",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:0_Chevrolet_Traverse_(C1XX)_0.jpg",
-    "localSrc": "./images/commons/rindelab-chevrolet-traverse-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Renault",
-    "family": "Koleos",
-    "pattern": "\\bkoleos(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (3).jpg",
-    "model": "Renault Koleos (fotografía referencial de familia)",
-    "author": "Dinkun Chen",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:RENAULT_KOLEOS,RENAULT_SAMSUNG_QM5_(HY)_China_(3).jpg",
-    "localSrc": "./images/commons/rindelab-renault-koleos-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Suzuki",
-    "family": "alto",
-    "pattern": "\\balto(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Maruti-suzuki-alto-lx.jpg",
-    "model": "Suzuki alto (fotografía referencial de familia)",
-    "author": "Microrao",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Maruti-suzuki-alto-lx.jpg",
-    "localSrc": "./images/commons/rindelab-suzuki-alto-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Toyota",
-    "family": "Yaris",
-    "pattern": "\\byaris(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Toyota GR Yaris, EMS 2024, Essen (P1031929).jpg",
-    "model": "Toyota Yaris (fotografía referencial de familia)",
-    "author": "Matti Blume",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Toyota_GR_Yaris,_EMS_2024,_Essen_(P1031929).jpg",
-    "localSrc": "./images/commons/rindelab-toyota-yaris-commonsmass-batch2-20261122.jpg"
-  },
-  {
     "brand": "DS",
     "family": "3 Crossback E-Tense",
     "pattern": "\\b3[\\s-]+crossback[\\s-]+e[\\s-]+tense(?=$|[^A-Za-z0-9])",
@@ -6254,20 +6198,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:2025_Ferrari_296_GTB.jpg",
     "localSrc": "./images/commons/rindelab-ferrari-296-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Ferrari",
-    "family": "SF90",
-    "pattern": "\\bsf90(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Ferrari SF90 Spider, EMS 2024, Essen (P1032226).jpg",
-    "model": "Ferrari SF90 (fotografía referencial de familia)",
-    "author": "Matti Blume",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Ferrari_SF90_Spider,_EMS_2024,_Essen_(P1032226).jpg",
-    "localSrc": "./images/commons/rindelab-ferrari-sf90-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Gac",
@@ -6449,7 +6379,14 @@ const licensedCommonsMassBatch220261122=[
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Haval_H6_III_001.jpg",
-    "localSrc": "./images/commons/rindelab-great-wall-haval-h6-commonsmass-batch2-20261122.jpg"
+    "localSrc": "./images/commons/rindelab-great-wall-haval-h6-commonsmass-batch2-20261122.jpg",
+    "excludeTech": [
+      "EV",
+      "HEV",
+      "PHEV",
+      "MHEV",
+      "REEV"
+    ]
   },
   {
     "brand": "Great Wall",
@@ -6463,7 +6400,14 @@ const licensedCommonsMassBatch220261122=[
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Moscow,_Haval_H7_grey_Jul_2026_02.jpg",
-    "localSrc": "./images/commons/rindelab-great-wall-haval-h7-commonsmass-batch2-20261122.jpg"
+    "localSrc": "./images/commons/rindelab-great-wall-haval-h7-commonsmass-batch2-20261122.jpg",
+    "excludeTech": [
+      "EV",
+      "HEV",
+      "PHEV",
+      "MHEV",
+      "REEV"
+    ]
   },
   {
     "brand": "Great Wall",
@@ -6477,7 +6421,14 @@ const licensedCommonsMassBatch220261122=[
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:2025_Haval_Jolion_white_front.jpg",
-    "localSrc": "./images/commons/rindelab-great-wall-haval-jolion-commonsmass-batch2-20261122.jpg"
+    "localSrc": "./images/commons/rindelab-great-wall-haval-jolion-commonsmass-batch2-20261122.jpg",
+    "excludeTech": [
+      "EV",
+      "HEV",
+      "PHEV",
+      "MHEV",
+      "REEV"
+    ]
   },
   {
     "brand": "Great Wall",
@@ -6565,20 +6516,6 @@ const licensedCommonsMassBatch220261122=[
   },
   {
     "brand": "Porsche",
-    "family": "Macan",
-    "pattern": "\\bmacan(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "2022 Porsche Macan 1X7A6048.jpg",
-    "model": "Porsche Macan (fotografía referencial de familia)",
-    "author": "Alexander Migl",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2022_Porsche_Macan_1X7A6048.jpg",
-    "localSrc": "./images/commons/rindelab-porsche-macan-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Porsche",
     "family": "Panamera",
     "pattern": "\\bpanamera(?=$|[^A-Za-z0-9])",
     "from": "2026",
@@ -6618,20 +6555,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Dongfeng_Fengxing_SX6.jpg",
     "localSrc": "./images/commons/rindelab-dongfeng-new-sx6-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Dongfeng",
-    "family": "t5",
-    "pattern": "\\bt5(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Dongfeng Forthing T5 Evo 1.5T Luxury 2024 (53569439947).jpg",
-    "model": "Dongfeng t5 (fotografía referencial de familia)",
-    "author": "RL GNZLZ from Chile",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Dongfeng_Forthing_T5_Evo_1.5T_Luxury_2024_(53569439947).jpg",
-    "localSrc": "./images/commons/rindelab-dongfeng-t5-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Peugeot",
@@ -6688,48 +6611,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Dongfeng_Aeolus_GS_Cross_2025.jpg",
     "localSrc": "./images/commons/rindelab-dongfeng-aeolus-gs-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Ferrari",
-    "family": "812",
-    "pattern": "\\b812(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Ferrari 812 Superfast at the 2026 Adelaide Motorsport Festival (DSCF2566).jpg",
-    "model": "Ferrari 812 (fotografía referencial de familia)",
-    "author": "Yu Chu Chin",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Ferrari_812_Superfast_at_the_2026_Adelaide_Motorsport_Festival_(DSCF2566).jpg",
-    "localSrc": "./images/commons/rindelab-ferrari-812-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Fiat",
-    "family": "Ducato",
-    "pattern": "\\bducato(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "DSC01145 Fiat Ducato Personnel Carrier, Polizia Penitenziaria, Front Right.jpg",
-    "model": "Fiat Ducato (fotografía referencial de familia)",
-    "author": "Aciarium",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:DSC01145_Fiat_Ducato_Personnel_Carrier,_Polizia_Penitenziaria,_Front_Right.jpg",
-    "localSrc": "./images/commons/rindelab-fiat-ducato-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Ford",
-    "family": "Expedition",
-    "pattern": "\\bexpedition(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Ford Expedition Funeral Hearse 1.jpg",
-    "model": "Ford Expedition (fotografía referencial de familia)",
-    "author": "Captainmorlypogi1959",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Ford_Expedition_Funeral_Hearse_1.jpg",
-    "localSrc": "./images/commons/rindelab-ford-expedition-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Foton",
@@ -6800,20 +6681,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_GAC_Aion_ES_showcar_@_The_Car_Expo_2024-04-14.jpg",
     "localSrc": "./images/commons/rindelab-gac-aion-es-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Hyundai",
-    "family": "Grand i10 Hatchback",
-    "pattern": "\\bgrand[\\s-]+i10[\\s-]+hatchback(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Newone - red VinFast VF 5 and Hyundai Grand i10 hatchback 03.jpg",
-    "model": "Hyundai Grand i10 Hatchback (fotografía referencial de familia)",
-    "author": "Newone",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Newone_-_red_VinFast_VF_5_and_Hyundai_Grand_i10_hatchback_03.jpg",
-    "localSrc": "./images/commons/rindelab-hyundai-grand-i10-hatchback-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Hyundai",
@@ -6956,20 +6823,6 @@ const licensedCommonsMassBatch220261122=[
     "localSrc": "./images/commons/rindelab-mercedes-benz-sprinter-minibus-commonsmass-batch2-20261122.jpg"
   },
   {
-    "brand": "Mercedes-Benz",
-    "family": "Vito Minibus",
-    "pattern": "\\bvito[\\s-]+minibus(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "S130 Mercedes Vito minibus - Netherlands Politie (2462888118).jpg",
-    "model": "Mercedes-Benz Vito Minibus (fotografía referencial de familia)",
-    "author": "Dave Conner from Inverness, Scotland",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:S130_Mercedes_Vito_minibus_-_Netherlands_Politie_(2462888118).jpg",
-    "localSrc": "./images/commons/rindelab-mercedes-benz-vito-minibus-commonsmass-batch2-20261122.jpg"
-  },
-  {
     "brand": "MG",
     "family": "Marvel R",
     "pattern": "\\bmarvel[\\s-]+r(?=$|[^A-Za-z0-9])",
@@ -6982,20 +6835,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:MG_Marvel_R_1X7A0397.jpg",
     "localSrc": "./images/commons/rindelab-mg-marvel-r-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Opel",
-    "family": "new crossland",
-    "pattern": "\\bnew[\\s-]+crossland(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Opel Crossland (2024) (53985942876).jpg",
-    "model": "Opel new crossland (fotografía referencial de familia)",
-    "author": "Charles from Port Chester, New York",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Opel_Crossland_(2024)_(53985942876).jpg",
-    "localSrc": "./images/commons/rindelab-opel-new-crossland-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Opel",
@@ -7138,20 +6977,6 @@ const licensedCommonsMassBatch220261122=[
     "localSrc": "./images/commons/rindelab-bmw-serie-1-commonsmass-batch2-20261122.jpg"
   },
   {
-    "brand": "BMW",
-    "family": "Serie 5",
-    "pattern": "\\bserie[\\s-]+5(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "BMW 5 Series GT 2.jpg",
-    "model": "BMW Serie 5 (fotografía referencial de familia)",
-    "author": "skwi69",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:BMW_5_Series_GT_2.jpg",
-    "localSrc": "./images/commons/rindelab-bmw-serie-5-commonsmass-batch2-20261122.jpg"
-  },
-  {
     "brand": "Foton",
     "family": "MIDI",
     "pattern": "\\bmidi(?=$|[^A-Za-z0-9])",
@@ -7166,20 +6991,6 @@ const licensedCommonsMassBatch220261122=[
     "localSrc": "./images/commons/rindelab-foton-midi-commonsmass-batch2-20261122.jpg"
   },
   {
-    "brand": "Honda",
-    "family": "Pilot",
-    "pattern": "\\bpilot(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Honda Pilot (third generation) DSC 6080.jpg",
-    "model": "Honda Pilot (fotografía referencial de familia)",
-    "author": "Alexander-93",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Honda_Pilot_(third_generation)_DSC_6080.jpg",
-    "localSrc": "./images/commons/rindelab-honda-pilot-commonsmass-batch2-20261122.jpg"
-  },
-  {
     "brand": "Mazda",
     "family": "CX-30",
     "pattern": "\\bcx[\\s-]+30(?=$|[^A-Za-z0-9])",
@@ -7192,20 +7003,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-30_IMG_3760.jpg",
     "localSrc": "./images/commons/rindelab-mazda-cx-30-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Mini",
-    "family": "COOPER",
-    "pattern": "\\bcooper(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Mini Cooper (1. Generation).JPG",
-    "model": "Mini COOPER (fotografía referencial de familia)",
-    "author": "Lothar Spurzem",
-    "license": "CC BY-SA 2.0 de",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Mini_Cooper_(1._Generation).JPG",
-    "localSrc": "./images/commons/rindelab-mini-cooper-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Nissan",
@@ -7234,20 +7031,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Toyota_RAV4_LE_Hybrid_AWD_(2026)_(55213728556).jpg",
     "localSrc": "./images/commons/rindelab-toyota-all-new-rav4-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "BMW",
-    "family": "Serie 7",
-    "pattern": "\\bserie[\\s-]+7(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "BMW 3-Serie Cabriolet (48447567377).jpg",
-    "model": "BMW Serie 7 (fotografía referencial de familia)",
-    "author": "crash71100",
-    "license": "CC0",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:BMW_3-Serie_Cabriolet_(48447567377).jpg",
-    "localSrc": "./images/commons/rindelab-bmw-serie-7-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Chevrolet",
@@ -7304,20 +7087,6 @@ const licensedCommonsMassBatch220261122=[
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Showcar_Dongfeng_Vigo_No-plate_2026-01-09.jpg",
     "localSrc": "./images/commons/rindelab-dongfeng-vigo-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Gac",
-    "family": "Emkoo",
-    "pattern": "\\bemkoo(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "GAC Trumpchi Emkoo 02 China 2023-04-18.jpg",
-    "model": "Gac Emkoo (fotografía referencial de familia)",
-    "author": "Navigator84",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:GAC_Trumpchi_Emkoo_02_China_2023-04-18.jpg",
-    "localSrc": "./images/commons/rindelab-gac-emkoo-commonsmass-batch2-20261122.jpg"
   },
   {
     "brand": "Geely",
@@ -7461,20 +7230,6 @@ const licensedCommonsMassBatch220261122=[
   },
   {
     "brand": "Toyota",
-    "family": "Corolla Sedán",
-    "pattern": "\\bcorolla[\\s-]+sed[aá]n(?=$|[^A-Za-z0-9])",
-    "from": "2026",
-    "to": "2026",
-    "file": "Toyota Corolla Sedán (detrás).jpg",
-    "model": "Toyota Corolla Sedán (fotografía referencial de familia)",
-    "author": "Luigi Fan 2006",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Toyota_Corolla_Sed%C3%A1n_(detr%C3%A1s).jpg",
-    "localSrc": "./images/commons/rindelab-toyota-corolla-sedan-commonsmass-batch2-20261122.jpg"
-  },
-  {
-    "brand": "Toyota",
     "family": "Hilux BEV",
     "pattern": "\\bhilux[\\s-]+bev(?=$|[^A-Za-z0-9])",
     "from": "2026",
@@ -7506,13 +7261,8 @@ const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,add
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
-  "./images/commons/rindelab-chevrolet-traverse-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-renault-koleos-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-suzuki-alto-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-toyota-yaris-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-ds-3-crossback-e-tense-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-ferrari-296-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-ferrari-sf90-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-gac-aion-ut-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-geely-ex2-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-jaecoo-7-shs-commonsmass-batch2-20261122.jpg",
@@ -7534,24 +7284,18 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-mazda-cx-3-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-mazda-cx-5-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-porsche-cayenne-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-porsche-macan-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-porsche-panamera-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-porsche-taycan-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-dongfeng-new-sx6-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-dongfeng-t5-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-peugeot-new-3008-hybrid-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-changan-cs15-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-citroen-c3-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-dongfeng-aeolus-gs-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-ferrari-812-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-fiat-ducato-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-ford-expedition-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-foton-g7-ev-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-foton-g9-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-foton-v7-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-foton-v9-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-gac-aion-es-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-hyundai-grand-i10-hatchback-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-hyundai-grand-i10-sedan-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-hyundai-porter-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-jetour-x50-commonsmass-batch2-20261122.jpg",
@@ -7562,9 +7306,7 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-mercedes-benz-cle-coupe-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-mercedes-benz-sprinter-furgon-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-mercedes-benz-sprinter-minibus-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-mercedes-benz-vito-minibus-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-mg-marvel-r-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-opel-new-crossland-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-opel-new-grandland-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-ram-ram-dakota-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-ram-v700-rapid-commonsmass-batch2-20261122.jpg",
@@ -7575,19 +7317,14 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-toyota-yaris-sedan-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-uaz-hunter-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-bmw-serie-1-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-bmw-serie-5-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-foton-midi-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-honda-pilot-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-mazda-cx-30-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-mini-cooper-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-nissan-kait-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-toyota-all-new-rav4-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-bmw-serie-7-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-chevrolet-captiva-ev-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-chevrolet-captiva-phev-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-dongfeng-e70-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-dongfeng-vigo-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-gac-emkoo-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-geely-ex5-em-i-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-leapmotor-b10-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-lynk-co-09-commonsmass-batch2-20261122.jpg",
@@ -7598,7 +7335,6 @@ const neutralFamilyPhotoSources=new Set([
   "./images/commons/rindelab-maxus-t90-ev-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-mini-aceman-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-toyota-corolla-cross-commonsmass-batch2-20261122.jpg",
-  "./images/commons/rindelab-toyota-corolla-sedan-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-toyota-hilux-bev-commonsmass-batch2-20261122.jpg",
   "./images/commons/rindelab-volvo-xc90-commonsmass-batch2-20261122.jpg",
 
