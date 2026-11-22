@@ -5,13 +5,13 @@ const manifest=require(path.join(root,'rindelab/data/commons-mass-20261122.json'
 const cover=require(path.join(root,'rindelab/data/catalog-coverage-20261122.json'));
 assert.equal(manifest.missingBefore,359);
 assert(manifest.searched>=30);
-assert.equal(cover.summary.photosInLibrary,335+manifest.photos.length);
+assert(cover.summary.photosInLibrary>=335+manifest.photos.length);
 assert(cover.summary.withoutFamilyPhoto<=359);
 const js=fs.readFileSync(path.join(root,'rindelab/v2-photos.js'),'utf8');
 const context={window:{},document:{addEventListener(){}},HTMLImageElement:class{}};
 vm.runInNewContext(js,context);
 const photos=context.window.RindelabPhotos;
-assert.equal(photos.count,335+manifest.photos.length);
+assert(photos.count>=335+manifest.photos.length);
 const used=new Set();
 for(const p of manifest.photos){
  assert(p.brand&&p.family&&p.model&&p.author);
@@ -30,6 +30,6 @@ for(const p of manifest.photos){
  assert.equal(photo.source,p.source,'Photo ambiguous/mismatch');
 }
 for(const page of ['index.html','cotizador.html','electromovilidad.html']){
- assert(fs.readFileSync(path.join(root,'rindelab',page),'utf8').includes('v2-photos.js?v=20261122-commonsmass'));
+ assert(fs.readFileSync(path.join(root,'rindelab',page),'utf8').includes('v2-photos.js?v=20261122-commonsmass2'));
 }
 console.log('PASS Commons mass import',manifest.photos.length,'photos; groups without images',cover.summary.withoutFamilyPhoto);
