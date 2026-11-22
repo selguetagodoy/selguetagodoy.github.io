@@ -35,16 +35,6 @@ jobs:
         run: python -u scripts/import-rindelab-commons-mass-batch2.py
       - name: Regenerar cobertura comercial
         run: node scripts/rindelab-market-queue.cjs --write
-      - name: Verificar imágenes, licencias, hashes y recuentos
-        run: |
-          node --check rindelab/v2-photos.js
-          node rindelab/tests/commons-mass-batch2.cjs
-          node rindelab/tests/commons-mass.cjs
-          node rindelab/tests/carimages-rights-import.cjs
-          node rindelab/tests/photos-november.cjs
-          node rindelab/tests/photos-november-batch2.cjs
-          node rindelab/tests/photo-integrity.cjs
-          node scripts/rindelab-market-queue.cjs --check
       - name: Persistir imágenes documentadas y cobertura
         run: |
           git config user.name "github-actions[bot]"
@@ -55,3 +45,13 @@ jobs:
             git commit -m "feat(rindelab): incorporar segundo barrido adicional de fotos Commons"
             git push origin "HEAD:$GITHUB_REF_NAME"
           fi
+      - name: Verificar imágenes, licencias, hashes y recuentos
+        run: |
+          node --check rindelab/v2-photos.js
+          node rindelab/tests/commons-mass-batch2.cjs
+          node rindelab/tests/commons-mass.cjs
+          node rindelab/tests/carimages-rights-import.cjs
+          node rindelab/tests/photos-november.cjs
+          node rindelab/tests/photos-november-batch2.cjs
+          node rindelab/tests/photo-integrity.cjs
+          node scripts/rindelab-market-queue.cjs --check
