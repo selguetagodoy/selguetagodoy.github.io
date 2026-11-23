@@ -12,7 +12,9 @@ for(const p of records.filter(C.active)){
  if(!groups.has(key))groups.set(key,[]);
  groups.get(key).push(p);
 }
-const summary={generatedDate:'2026-11-22',commercialRecords:records.length,activeFamiliesTechnologies:groups.size,photosInLibrary:photos.count,withoutFamilyPhoto:0,missingTechnologyFamilies:0,missingModelYearFamilies:0,finishedCampaignFamilies:0};
+// Las nuevas 41 fotografías históricas 3CV no integran la biblioteca comercial del corte 22/11.
+const historicalOnlyPhotos=require('../rindelab/data/historical-photo-import-20261123.json').photos.length;
+const summary={generatedDate:'2026-11-22',commercialRecords:records.length,activeFamiliesTechnologies:groups.size,photosInLibrary:photos.count-historicalOnlyPhotos,withoutFamilyPhoto:0,missingTechnologyFamilies:0,missingModelYearFamilies:0,finishedCampaignFamilies:0};
 const out=[];
 for(const [key,items] of groups){
  const p=items[0],knownTech=items.some(x=>x.technology),knownYear=items.some(x=>x.modelYear);
