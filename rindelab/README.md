@@ -1,5 +1,15 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Reducción de brecha fotográfica histórica por generación (23/11/2026)
+
+La base 3CV contiene **8.394 fichas**. Tras una auditoría conservadora de modelos, generaciones, tecnologías y años, se recuperaron **299 fichas históricas** sin incorporar archivos gráficos nuevos: todas reutilizan fotografías previamente documentadas, con su atribución y licencia verificadas. La cobertura pasó de **2.126/8.394 (25,3 %)** a **2.425/8.394 (28,9 %)**; las faltantes disminuyeron de **6.268 a 5.969**.
+
+Las 38 ventanas controladas están documentadas en `data/curated-generation-photo-reuse-20261123.json` e incluyen límites de año y patrón más estricto que la coincidencia comercial genérica. Ejemplos: Land Rover Range Rover L460 se limita a la generación 2022–2025, excluyendo Sport, Evoque y Velar; Hyundai Creta evita confundir Creta Grand; Maxus T60 se distingue de T60 MAX; y Riddara RD6 solo reutiliza una imagen de la versión eléctrica para EV. Estas fotografías **no acreditan el acabado ni la variante técnica exacta**.
+
+La evidencia reproducible queda en `data/real-3cv-photo-coverage-20261123.json` y `tests/curated-generation-photo-reuse-20261123.cjs`. Las 700 familias comerciales ya estaban cubiertas por separado y **no deben confundirse con la cobertura de 8.394 fichas**. Quedan 5.969 fichas históricas sin foto, incluidas familias que requieren una fuente nueva y comprobación visual.
+
+---
+
 ## Auditoría real del buscador 3CV y corrección BAIC (23/11/2026)
 
 **Corrección de alcance:** la cobertura 700/700 declarada en el informe anterior se refiere **únicamente al inventario de 700 grupos comerciales** y NO a las 8.394 homologaciones oficiales e históricas buscables. El buscador 3CV completo tiene **2.126 fichas con fotografía asociada / 8.394 (25,3 %)** y **6.268 sin fotografía** al 23/11/2026. Este resultado se calculó usando los mismos aliases de marca que la interfaz y el mismo emparejador de fotografías del sitio; una asociación no garantiza disponibilidad futura del servidor externo. Evidencia auditable: `data/real-3cv-photo-coverage-20261123.json`, generado con `tests/_real3cv-photo-inventory-20261123.cjs`.
