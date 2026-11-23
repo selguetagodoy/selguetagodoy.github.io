@@ -1,0 +1,53 @@
+name: RINDELAB - Exploracion masiva de fotos libres
+on:
+  workflow_dispatch:
+    inputs:
+      clusters:
+        description: Numero de grupos prioritarios por revisar (0=todos)
+        required: true
+        default: '100'
+      workers:
+        description: Consultas concurrentes (1-6)
+        required: true
+        default: '4'
+jobs:
+  discovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/rindelab-open-photos-requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r scripts/rindelab-open-photos-requirements.txt
+      - name: Test clustering and attribution protections
+        run: |
+          python scripts/tests/test_rindelab_open_photos.py -v
+          python scripts/tests/test_rindelab_fast_photos.py -v
+      - name: Build prioritized discovery queue
+        run: python scripts/rindelab-photo-fast-queue.py --input rindelab/data/3cv-fichas-sin-foto-20261123.csv --output-dir rindelab/data/fotos-rapidas
+      - name: Concurrent Commons and Openverse discovery
+        run: |
+          python scripts/rindelab-photo-fast-fetch.py \
+            --queue rindelab/data/fotos-rapidas/cola_fotografica_priorizada.csv \
+            --output-dir rindelab/data/fotos-rapidas/ejecucion \
+            --limit "${{ inputs.clusters }}" \
+            --workers "${{ inputs.workers }}" \
+            --sleep 0.9 --timeout 15 --checkpoint-every 10 --verbose
+      - name: Upload review-only manifest and audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rindelab-fotos-candidatas-${{ github.run_number }}
+          path: |
+            rindelab/data/fotos-rapidas/cola_fotografica_priorizada.csv
+            rindelab/data/fotos-rapidas/resumen_cola.json
+            rindelab/data/fotos-rapidas/ejecucion/candidatos_masivos.json
+            rindelab/data/fotos-rapidas/ejecucion/auditoria_masiva.csv
+          if-no-files-found: warn
+          retention-days: 30
