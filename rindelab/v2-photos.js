@@ -10885,7 +10885,217 @@ const historicalLicensed20261123=[
     "localSrc": "./images/commons/rindelab-historical-opel-grandland-x-20261123.jpg"
   }
 ];
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122,officialManufacturerBatch920261122,officialManufacturerBatch1020261122,officialManufacturerBatch1120261122,officialManufacturerBatch1220261122,baicHistorical20261123,historicalLicensed20261123).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const historicalLicensedBatch220261123=[
+  {
+    "brand": "Land Rover",
+    "pattern": "^Range\\s+Rover\\s+Evoque\\b",
+    "from": "2023",
+    "to": "2026",
+    "model": "L551, SUV; same generation 2023-2026",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Range_Rover_Evoque_(L551)_1X7A1765.jpg",
+    "file": "Range Rover Evoque (L551) 1X7A1765.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-landrover-evoque-l551-2024.jpg"
+  },
+  {
+    "brand": "Jaguar",
+    "pattern": "^F[ -]?Pace\\b",
+    "from": "2021",
+    "to": "2025",
+    "model": "X761 facelift SUV",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jaguar_F-Pace_SE_X761_FL_Carpathian_Grey_(1).jpg",
+    "file": "Jaguar F-Pace SE X761 FL Carpathian Grey (1).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-jaguar-fpace-x761-fl-2023.jpg"
+  },
+  {
+    "brand": "Ford",
+    "pattern": "^Ranger\\s+Raptor\\b",
+    "from": "2019",
+    "to": "2022",
+    "model": "2019-2022 Ranger T6 Raptor not standard Ranger",
+    "author": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2020_Ford_Ranger_Raptor_Front.jpg",
+    "file": "2020 Ford Ranger Raptor Front.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-ford-ranger-raptor-2020.jpg"
+  },
+  {
+    "brand": "Ford",
+    "pattern": "^Explorer\\b",
+    "from": "2020",
+    "to": "2024",
+    "model": "6th-gen Explorer, SUV body",
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Ford_Explorer_ST,_rear_6.8.22.jpg",
+    "file": "2022 Ford Explorer ST, rear 6.8.22.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-ford-explorer-st-2023.jpg"
+  },
+  {
+    "brand": "Ford",
+    "pattern": "^Focus\\b(?=.*(?:Hatchback|Hatch\\b|5P\\.))(?!.*(?:Sed[aá]n|4P\\.|\\bRS\\b))",
+    "from": "2015",
+    "to": "2018",
+    "model": "Mk3 hatchback only",
+    "author": "Navigator84",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ford_Focus_III_hatch_China_2016-04-08.jpg",
+    "file": "Ford Focus III hatch China 2016-04-08.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-ford-focus-mk3-hatch-2016.jpg"
+  },
+  {
+    "brand": "Ford",
+    "pattern": "^Focus\\b(?=.*(?:Sed[aá]n|Sedan|4P\\.))(?!.*(?:Hatchback|5P\\.))",
+    "from": "2015",
+    "to": "2018",
+    "model": "Mk3 sedan only",
+    "author": "Navigator84",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ford_Focus_III_sedan_facelift_01_China_2016-04-12.jpg",
+    "file": "Ford Focus III sedan facelift 01 China 2016-04-12.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-ford-focus-mk3-sedan-2016.jpg"
+  },
+  {
+    "brand": "Ford",
+    "pattern": "^Escape\\b",
+    "from": "2012",
+    "to": "2016",
+    "model": "third-generation Escape SUV",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ford_Escape_S_2.5_2014_(15139317920).jpg",
+    "file": "Ford Escape S 2.5 2014 (15139317920).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-ford-escape-2014.jpg"
+  },
+  {
+    "brand": "Citroen",
+    "pattern": "^Jumpy\\b(?!.*(?:Escolar|Bus|21\\s*Asientos))",
+    "from": "2016",
+    "to": "2020",
+    "model": "panel van non-passenger bus",
+    "author": "Spielvogel For a gallery of some more of my uploaded pictures see: here .",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Citroen_Jumpy_2018_left.jpg",
+    "file": "Citroen Jumpy 2018 left.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-citroen-jumpy-2018.jpg"
+  },
+  {
+    "brand": "Jeep",
+    "pattern": "^Grand\\s+Cherokee\\s+L\\b",
+    "from": "2021",
+    "to": "2024",
+    "model": "3-row Grand Cherokee L, not 2-row",
+    "author": "Whydoesitfeelsogood",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Jeep_Grand_Cherokee_L_Limited_Canada.jpg",
+    "file": "2022 Jeep Grand Cherokee L Limited Canada.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-jeep-grand-cherokee-l-2022.jpg"
+  },
+  {
+    "brand": "Fiat",
+    "pattern": "^Cronos\\b",
+    "from": "2019",
+    "to": "2022",
+    "model": "Cronos sedan 2019-22",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Fiat_Cronos_1.3_Drive_GSE_(front_view).jpg",
+    "file": "2022 Fiat Cronos 1.3 Drive GSE (front view).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-fiat-cronos-2022.jpg"
+  },
+  {
+    "brand": "Audi",
+    "pattern": "^A5\\b(?=.*(?:Hatchback\\s*5P|Sportback))(?!.*(?:Coup[eé]|Convertible|Cab(?:rio|io)|Roadster))",
+    "from": "2012",
+    "to": "2016",
+    "model": "8T B8 Sportback 5door",
+    "author": "Tokumeigakarinoaoshima",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_A5_Sportback_2.0TFSI_(DBA-8TCDNL).JPG",
+    "file": "Audi A5 Sportback 2.0TFSI (DBA-8TCDNL).JPG",
+    "localSrc": "./images/commons/rindelab-historical-batch2-audi-a5-sportback-b8.jpg"
+  },
+  {
+    "brand": "Chevrolet",
+    "pattern": "^Suburban\\b",
+    "from": "2021",
+    "to": "2025",
+    "model": "GMT1YC 2021+",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chevrolet_Suburban_High_Country_GMT1YC_black_(1).jpg",
+    "file": "Chevrolet Suburban High Country GMT1YC black (1).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-chevrolet-suburban-2022.jpg"
+  },
+  {
+    "brand": "Hyundai",
+    "pattern": "^Grand[ -]?i10\\b(?=.*(?:SDN|Sed[aá]n|Sedan))",
+    "from": "2023",
+    "to": "2026",
+    "model": "third generation AI3 sedan",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Grand_i10_Sedan_2022_(53703857804).jpg",
+    "file": "Hyundai Grand i10 Sedan 2022 (53703857804).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-hyundai-grand-i10-sedan-2022.jpg"
+  },
+  {
+    "brand": "Kia",
+    "pattern": "^Cerato\\b(?!\\s*5\\b|.*Hatchback)",
+    "from": "2021",
+    "to": "2023",
+    "model": "Cerato BD sedan only",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Kia_Cerato_1.6_EX.jpg",
+    "file": "2022 Kia Cerato 1.6 EX.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-kia-cerato-bd-sedan-2022.jpg"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^Sprinter\\b(?!.*(?:Chasis|Chassis|Escolar|Bus|Minib[uú]s|21\\s*Asientos))",
+    "from": "2019",
+    "to": "2024",
+    "model": "VS30 cargo/passenger van only excluding chassis cab",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Sprinter_VS30_black_(1).jpg",
+    "file": "Mercedes-Benz Sprinter VS30 black (1).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-mercedes-sprinter-vs30-2021.jpg"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^GLC\\b(?=.*Coup[eé])",
+    "from": "2019",
+    "to": "2021",
+    "model": "GLC C253 coupe crossover body",
+    "author": "Tokumeigakarinoaoshima",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLC_220d_4MATIC_Coupe_(C253)_front.jpg",
+    "file": "Mercedes-Benz GLC 220d 4MATIC Coupe (C253) front.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch2-mercedes-glc-coupe-c253-2020.jpg"
+  }
+];
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122,officialManufacturerBatch920261122,officialManufacturerBatch1020261122,officialManufacturerBatch1120261122,officialManufacturerBatch1220261122,baicHistorical20261123,historicalLicensed20261123,historicalLicensedBatch220261123).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
@@ -11369,12 +11579,12 @@ function allowCuratedHistoricalImage20261123(photo,model,tech,year){
  const rule=curatedHistoricImageBySrc20261123.get(photo.src);
  return Boolean(rule&&year>=rule.from&&year<=rule.to&&rule.re.test(model)&&(!rule.onlyTech||rule.onlyTech===tech));
 }
-function find(row,F){
+function find(row,F,skipHistoricalBatch2=false){
  const brand=String(row[F.BRAND]||''),model=String(row[F.MODEL]||''),tech=String(row[F.TECH]||''),year=String(row[F.DATE]||'').slice(0,4);
  const macanThermal=(p)=>photoBrandKey(brand)==='porsche'&&photoBrandKey(model)==='macan'&&tech==='Bencina'&&year==='2026'&&p.src==='./images/commons/porsche-porsche-macan-de-combustion-2022-28.jpg';
  // Fotos específicas de tecnología primero; luego la asociación más precisa de carrocería.
  const techRank=p=>tech?(p.tech?3:1):(p.tech?0:2);
- return entries.filter(p=>photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&((year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p)))||allowCuratedHistoricalImage20261123(p,model,tech,year))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
+ return entries.filter(p=>(!skipHistoricalBatch2||!p.src.includes('rindelab-historical-batch2-'))&&photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&((year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p)))||allowCuratedHistoricalImage20261123(p,model,tech,year))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
 }
 function findCommercial(p){
  if(!p||!p.brand||!p.family)return null;
@@ -11384,7 +11594,7 @@ function findCommercial(p){
  const model=isYarisSedan?'Yaris Sedan':p.family;
  const technology=p.technology||(isMacanCombustion?'Bencina':'');
  const row=[p.brand,model,technology,null,null,null,null,null,y+'-01-01'];
- return find(row,{BRAND:0,MODEL:1,TECH:2,DATE:8});
+ return find(row,{BRAND:0,MODEL:1,TECH:2,DATE:8},true);
 }
 function commercialNode(p){
  const photo=findCommercial(p);if(!photo)return null;

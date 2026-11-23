@@ -57,10 +57,14 @@ Pruebas locales sin llamadas a APIs:
 
 ## Datos reales incluidos en el repositorio
 
-La instantánea rindelab/data/3cv-fichas-sin-foto-20261123.csv contiene 5705 versiones históricas 3CV que estaban sin imagen al corte de 23 de noviembre de 2026. No contiene identificadores 3CV que no estuvieran disponibles en el inventario original.
+La instantánea rindelab/data/3cv-fichas-sin-foto-20261123.csv contiene 5529 versiones históricas 3CV que estaban sin imagen tras el segundo lote de fotografías del 23 de noviembre de 2026. No contiene identificadores 3CV que no estuvieran disponibles en el inventario original.
 
 Ejecución sobre las primeras 20 versiones de esa instantánea:
 
     py scripts/rindelab-open-photos.py --input rindelab/data/3cv-fichas-sin-foto-20261123.csv --limit 20 --wikidata --output-dir rindelab/data/fotos-piloto
 
 El directorio scripts/examples/fotos-piloto-20261123 contiene un piloto distinto, seleccionado de 20 fichas reales de varias marcas, con su manifiesto y auditoría; no implica fotografías publicadas automáticamente.
+
+## Segundo lote histórico 23/11/2026
+
+La biblioteca incorpora 16 nuevos archivos de Wikimedia Commons (CC BY, CC BY-SA o CC0); sus reglas conservadoras cubren 176 fichas históricas adicionales. Total actualizado: 2.865 fichas con foto de 8.394 y 5.529 pendientes. Cada archivo conserva autor, página original y licencia en el manifiesto rindelab/data/historical-photo-import-batch2-20261123.json. Las coincidencias de carrocería y generación se verifican en pruebas automatizadas.

@@ -30,6 +30,6 @@ for(const p of manifest.photos){
  assert.equal(photo.source,p.source,'Photo ambiguous/mismatch');
 }
 for(const page of ['index.html','cotizador.html','electromovilidad.html']){
- assert(fs.readFileSync(path.join(root,'rindelab',page),'utf8').match(/v2-photos\.js\?v=(?:20261122-photo700-r1|20261123-(?:baic-audit1|generation-reuse1|historical-commons1))/));
+ assert(fs.readFileSync(path.join(root,'rindelab',page),'utf8').match(/v2-photos\.js\?v=(?:20261122-photo700-r1|20261123-(?:baic-audit1|generation-reuse1|historical-commons1|historical-commons2))/));
 }
 console.log('PASS Commons mass import',manifest.photos.length,'photos; groups without images',cover.summary.withoutFamilyPhoto);
