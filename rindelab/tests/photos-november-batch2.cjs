@@ -45,6 +45,6 @@ for(const [brand,family] of commercial){
  assert(p.source.startsWith('https://commons.wikimedia.org/'));
 }
 for(const name of ['index','cotizador','electromovilidad']){
- assert(fs.readFileSync(path.join(root,'rindelab',name+'.html'),'utf8') .match(/v2-photos\.js\?v=(?:20261122-(?:licensed33|carimages|commonsmass|commonsmass2|photo700-r1)|20261123-(?:baic-audit1|generation-reuse1|historical-commons1|historical-commons2|historical-commons3))/));
+ assert(fs.readFileSync(path.join(root,'rindelab',name+'.html'),'utf8') .match(/v2-photos\.js\?v=(?:20261122-(?:licensed33|carimages|commonsmass|commonsmass2|photo700-r1)|20261123-(?:baic-audit1|generation-reuse1|historical-commons1|historical-commons2|historical-commons3|historical-commons4))/));
 }
 console.log('PASS: 14 licensed second-batch images with sources, author and SHA256; photo library 292; commercial missing 407; 51/69 new homologations with verified photo.');
