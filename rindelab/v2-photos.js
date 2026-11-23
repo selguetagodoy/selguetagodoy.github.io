@@ -11773,7 +11773,243 @@ const historicalLicensedBatch320261123=[
     "localSrc": "./images/commons/rindelab-historical-batch3-porsche-911-gt3-2017.jpg"
   }
 ];
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122,officialManufacturerBatch920261122,officialManufacturerBatch1020261122,officialManufacturerBatch1120261122,officialManufacturerBatch1220261122,baicHistorical20261123,historicalLicensed20261123,historicalLicensedBatch220261123,historicalLicensedBatch320261123).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const historicalLicensedBatch420261123=[
+  {
+    "brand": "Subaru",
+    "pattern": "^Forester\\b(?!.*\\b(?:XT|STI)\\b)",
+    "from": "2013",
+    "to": "2015",
+    "model": "Subaru Forester SJ pre-facelift (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Subaru_Forester_SJ_China_2015-04-13.jpg",
+    "file": "Subaru Forester SJ China 2015-04-13.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-subaru-forester-sj.jpg"
+  },
+  {
+    "brand": "RAM",
+    "pattern": "^(?:RAM\\s+)?1500\\b(?=.*(?:Crew Cab|Doble Cabina))(?!.*(?:Quad Cab|Cabina Simple|Rebel))",
+    "from": "2013",
+    "to": "2013",
+    "model": "RAM 1500 DS Crew Cab (fotografía referencial de generación)",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Ram_1500_Laramie_2013_(10093421586).jpg",
+    "file": "Ram 1500 Laramie 2013 (10093421586).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-ram-1500-ds-2013.jpg"
+  },
+  {
+    "brand": "Suzuki",
+    "pattern": "^Swift\\b(?=.*Hatchback\\s*5P)(?!.*(?:Sport|DIT))",
+    "from": "2014",
+    "to": "2016",
+    "model": "Suzuki Swift FZ five-door (fotografía referencial de generación)",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Suzuki_Swift_1.2_GL_2015_(17127332202).jpg",
+    "file": "Suzuki Swift 1.2 GL 2015 (17127332202).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-suzuki-swift-fz.jpg"
+  },
+  {
+    "brand": "BMW",
+    "pattern": "^(?:114|116|118|120|125)[di]?\\b(?=.*Hatchback\\s*5P)(?!.*3P)",
+    "from": "2016",
+    "to": "2017",
+    "model": "BMW F20 LCI five-door (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_1-Series_F20_facelift_2_China_2016-04-04.jpg",
+    "file": "BMW 1-Series F20 facelift 2 China 2016-04-04.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-bmw-f20-lci.jpg"
+  },
+  {
+    "brand": "Honda",
+    "pattern": "^WR[- ]?V\\b",
+    "from": "2017",
+    "to": "2017",
+    "model": "Honda WR-V first generation (fotografía referencial de generación)",
+    "author": "Jengtingchen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Honda_WR-V_front.jpg",
+    "file": "2017 Honda WR-V front.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-honda-wrv-2017.jpg"
+  },
+  {
+    "brand": "Volkswagen",
+    "pattern": "^Saveiro\\b(?=.*(?:\\bCD\\b|Doble Cabina))(?!.*\\bCS\\b)",
+    "from": "2022",
+    "to": "2023",
+    "model": "Volkswagen Saveiro double cab (fotografía referencial de generación)",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Volkswagen_Saveiro_1.6_Comfortline_double_cab.jpg",
+    "file": "2023 Volkswagen Saveiro 1.6 Comfortline double cab.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-vw-saveiro-double.jpg"
+  },
+  {
+    "brand": "Jaguar",
+    "pattern": "^XF\\b(?!.*Sportbrake)",
+    "from": "2023",
+    "to": "2023",
+    "model": "2023 Jaguar XF X260 facelift sedan (fotografía referencial de generación)",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Jaguar_XF_SE_X260_FL_Fuji_White_(1).jpg",
+    "file": "Jaguar XF SE X260 FL Fuji White (1).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-jaguar-xf-x260-fl.jpg"
+  },
+  {
+    "brand": "KGM",
+    "pattern": "^(?:New\\s+)?Rexton\\b",
+    "from": "2016",
+    "to": "2016",
+    "model": "2016 SsangYong Rexton W SUV (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:SsangYong_Rexton_W_China_2016-04-07.jpg",
+    "file": "SsangYong Rexton W China 2016-04-07.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-kgm-rexton-y200.jpg"
+  },
+  {
+    "brand": "KGM",
+    "pattern": "^(?:New\\s+)?Korando\\b",
+    "from": "2020",
+    "to": "2021",
+    "model": "2020 SsangYong Korando C300 SUV (fotografía referencial de generación)",
+    "author": "SmartTalk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_SsangYong_Korando_(C300)_Front.jpg",
+    "file": "2021 SsangYong Korando (C300) Front.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-kgm-korando-c300.jpg"
+  },
+  {
+    "brand": "KGM",
+    "pattern": "^Tivoli\\b(?!.*XLV)",
+    "from": "2015",
+    "to": "2016",
+    "model": "2016 SsangYong Tivoli SUV (fotografía referencial de generación)",
+    "author": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2016_SsangYong_Tivoli_ELX_TD_4x4_Automatic_1.6.jpg",
+    "file": "2016 SsangYong Tivoli ELX TD 4x4 Automatic 1.6.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-kgm-tivoli.jpg"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^Vito\\b(?=.*(?:Tourer|Minib[uú]s))(?!.*Furg[oó]n)",
+    "from": "2015",
+    "to": "2017",
+    "model": "2016 Mercedes-Benz Vito W447 Tourer (fotografía referencial de generación)",
+    "author": "Basotxerri",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Vito_Tourer_W447_Vorderansicht.jpg",
+    "file": "Mercedes-Benz Vito Tourer W447 Vorderansicht.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-mb-vito-tourer.jpg"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^C\\s*(?:180|200|220|250|300|43|63)\\b(?=.*Coup[eé])(?!.*Cabrio)",
+    "from": "2016",
+    "to": "2017",
+    "model": "2017 Mercedes-Benz C-Class C205 coupe (fotografía referencial de generación)",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2016_Mercedes-Benz_C-Class_Coupe_C250_AMG_Dynamic.jpg",
+    "file": "2016 Mercedes-Benz C-Class Coupe C250 AMG Dynamic.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-mb-c-coupe-c205.jpg"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^E\\s*(?:200|220|300|350|400|450|53)\\b(?=.*Cabrio)",
+    "from": "2018",
+    "to": "2020",
+    "model": "2019 Mercedes-Benz E-Class A238 Cabriolet (fotografía referencial de generación)",
+    "author": "Bindydad123",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2019_Mercedes-Benz_E-Class_E_300_Cabriolet_(1).jpg",
+    "file": "2019 Mercedes-Benz E-Class E 300 Cabriolet (1).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-mb-e-cabrio-a238.jpg"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^E\\s*(?:200|220|300|350|400|450|53)\\b(?=.*Coup[eé])(?!.*Cabrio)",
+    "from": "2018",
+    "to": "2020",
+    "model": "2019 Mercedes-Benz E-Class C238 coupe (fotografía referencial de generación)",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_Mercedes-Benz_E-Class_Coupe_E200_AMG_Dynamic.jpg",
+    "file": "2018 Mercedes-Benz E-Class Coupe E200 AMG Dynamic.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-mb-e-coupe-c238.jpg"
+  },
+  {
+    "brand": "Jeep",
+    "pattern": "^(?:Jeep\\s+)?Renegade\\b",
+    "from": "2015",
+    "to": "2017",
+    "model": "2016 Jeep Renegade BU SUV (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeep_Renegade_--_Auto_China_--_2014-04-23.jpg",
+    "file": "Jeep Renegade -- Auto China -- 2014-04-23.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-jeep-renegade-2016.jpg"
+  },
+  {
+    "brand": "Volvo",
+    "pattern": "^V40\\b(?!.*(?:\\bCC\\b|Cross Country))",
+    "from": "2012",
+    "to": "2013",
+    "model": "2013 Volvo V40 hatchback (fotografía referencial de generación)",
+    "author": "Tokumeigakarinoaoshima",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2nd_generation_Volvo_V40_T4_front.jpg",
+    "file": "2nd generation Volvo V40 T4 front.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-volvo-v40-2013.jpg"
+  },
+  {
+    "brand": "Chery",
+    "pattern": "^Tiggo\\s*2\\s+Pro\\b",
+    "from": "2020",
+    "to": "2021",
+    "model": "2021 Chery Tiggo 2 Pro (fotografía referencial de generación)",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo2_Pro_1.5_GLS_2021_(52506870974).jpg",
+    "file": "Chery Tiggo2 Pro 1.5 GLS 2021 (52506870974).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch4-chery-tiggo2-pro.jpg"
+  },
+  {
+    "brand": "Kia",
+    "pattern": "^Sportage\\s+QL\\b",
+    "from": "2015",
+    "to": "2015",
+    "model": "2016 Kia Sportage QL SUV (fotografía referencial de generación)",
+    "author": "Areaseven",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2016_Kia_Sportage_-_Front_1.JPG",
+    "file": "2016 Kia Sportage - Front 1.JPG",
+    "localSrc": "./images/commons/rindelab-historical-batch4-kia-sportage-ql.jpg"
+  }
+];
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122,officialManufacturerBatch920261122,officialManufacturerBatch1020261122,officialManufacturerBatch1120261122,officialManufacturerBatch1220261122,baicHistorical20261123,historicalLicensed20261123,historicalLicensedBatch220261123,historicalLicensedBatch320261123,historicalLicensedBatch420261123).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
@@ -12262,7 +12498,7 @@ function find(row,F,skipHistoricalNewBatches=false){
  const macanThermal=(p)=>photoBrandKey(brand)==='porsche'&&photoBrandKey(model)==='macan'&&tech==='Bencina'&&year==='2026'&&p.src==='./images/commons/porsche-porsche-macan-de-combustion-2022-28.jpg';
  // Fotos específicas de tecnología primero; luego la asociación más precisa de carrocería.
  const techRank=p=>tech?(p.tech?3:1):(p.tech?0:2);
- return entries.filter(p=>(!skipHistoricalNewBatches||!/rindelab-historical-batch[23]-/.test(p.src))&&photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&((year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p)))||allowCuratedHistoricalImage20261123(p,model,tech,year))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
+ return entries.filter(p=>(!skipHistoricalNewBatches||!/rindelab-historical-batch[234]-/.test(p.src))&&photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&((year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p)))||allowCuratedHistoricalImage20261123(p,model,tech,year))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
 }
 function findCommercial(p){
  if(!p||!p.brand||!p.family)return null;

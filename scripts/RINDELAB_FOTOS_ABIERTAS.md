@@ -72,3 +72,7 @@ La biblioteca incorpora 16 nuevos archivos de Wikimedia Commons (CC BY, CC BY-SA
 ## Tercer lote Commons — 23/11/2026
 
 Se verificaron licencias y atribuciones de 53 fuentes; 52 imágenes exteriores superaron revisión visual y una fue descartada. Las 52 fotos permiten asociar 337 fichas adicionales mediante reglas estrictas por generación y carrocería, manteniendo la biblioteca comercial y el histórico 3CV separados. Archivo: rindelab/data/historical-photo-import-batch3-20261123.json.
+
+## Cuarto lote Commons — 23/11/2026
+
+18 nuevas fotos con licencia y control visual, 146 fichas adicionales: 3.348 con foto, 5.046 pendientes. Ver rindelab/data/historical-photo-import-batch4-20261123.json.
