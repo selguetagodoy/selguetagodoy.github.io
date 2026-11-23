@@ -1,5 +1,16 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Auditoría real del buscador 3CV y corrección BAIC (23/11/2026)
+
+**Corrección de alcance:** la cobertura 700/700 declarada en el informe anterior se refiere **únicamente al inventario de 700 grupos comerciales** y NO a las 8.394 homologaciones oficiales e históricas buscables. El buscador 3CV completo tiene **2.126 fichas con fotografía asociada / 8.394 (25,3 %)** y **6.268 sin fotografía** al 23/11/2026. Este resultado se calculó usando los mismos aliases de marca que la interfaz y el mismo emparejador de fotografías del sitio; una asociación no garantiza disponibilidad futura del servidor externo. Evidencia auditable: `data/real-3cv-photo-coverage-20261123.json`, generado con `tests/_real3cv-photo-inventory-20261123.cjs`.
+
+En BAIC, **39 fichas históricas** pasaron de **2/39 a 38/39 con foto** después de incorporar **15 fotografías Commons con licencia documentada**, reutilizar fotografías existentes con generaciones y períodos correctos y enlazar una fotografía específica de Grand Plus en el sitio titular. La **única restante BAIC Advance 1,5 sedán 2015** conserva el marcador: la identidad comercial exacta de una fotografía no está acreditada; no se sustituye por un D50 o D60 sin evidencia. Fuentes: `data/baic-photo-sources-20261123.json`, `data/baic-historical-mappings-20261123.json`, `data/baic-photo-audit-20261123.json`. La biblioteca ahora tiene **668 referencias** sin quitar las anteriores.
+
+**Experiencia:** búsqueda principal incluye por defecto todos los vehículos, incluidos históricos; el filtro especializado de categorías queda en un bloque plegable, y tras buscar aparecen dos opciones sencillas: «Todos los vehículos» / «Con información de compra». Hay una explicación de la cobertura fotográfica histórica en los resultados. No se alteró la base oficial de rendimientos ni los precios comerciales.
+
+---
+
+
 ## Cierre del inventario fotográfico: 700/700 grupos (22/11/2026)
 
 Se cerraron los **27 últimos grupos sin imagen** mediante una ronda de búsqueda multimodal y verificación visual, priorizando fotografías de vehículos reales en fabricantes, importadores chilenos, Auto.cl, Autocosmos, concesionarios y medios. Cada imagen se verificó con **HTTP 200**, dimensiones suficientes y asociación de marca, familia, carrocería y tecnología, y se registró su fuente.

@@ -569,6 +569,12 @@ function render(){
   if(!results.length)$('resultsTitle').textContent='Resultados del catálogo comercial';
  }
 }
+function updateScopeQuickButtons(){
+ const scope=$('catalogScope').value;
+ document.querySelectorAll('[data-scope-quick]').forEach(button=>{
+  button.setAttribute('aria-pressed',String(button.dataset.scopeQuick===scope));
+ });
+}
 function performSearch({scroll=true}={}){
  const criteria=inputCriteria();
  results=all.filter(r=>matchesScope(r,criteria.scope)&&matchesText(r,criteria.q)&&matchesFilters(r,criteria));
@@ -586,7 +592,7 @@ function performSearch({scroll=true}={}){
  ensureCostSortCycle();
  $('results').hidden=false;
  $('filterHint').textContent='';
- render();textSuggestions(criteria);
+ updateScopeQuickButtons();render();textSuggestions(criteria);
  if(scroll)$('results').scrollIntoView({block:'start',behavior:'instant'});
 }
 function co2Annual(row){
@@ -1209,9 +1215,9 @@ $('vehicleForm').addEventListener('submit',event=>{
 });
 $('resetButton').addEventListener('click',()=>{
  for(const id of ['query','brand','model','tech','bodytype','cycle','year'])$(id).value='';
- $('catalogScope').value='priced';
+ $('catalogScope').value='all';
  choices();$('sort').value='recent';costSortCycleNotice='';submitted=false;results=[];mttMatches=[];mttLimit=6;compareUpdate();
- $('results').hidden=true;$('mttSearchSection').hidden=true;$('sourceLegend').hidden=true;$('energyResultsHeading').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';
+ $('results').hidden=true;$('mttSearchSection').hidden=true;$('sourceLegend').hidden=true;$('energyResultsHeading').hidden=true;$('suggestions').replaceChildren();$('filterHint').textContent='';updateScopeQuickButtons();
 });
 for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListener('change',()=>{
  if(id==='brand')$('model').value='';
@@ -1220,7 +1226,15 @@ for(const id of ['brand','tech','bodytype','cycle','year'])$(id).addEventListene
  $('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';
 });
 $('model').addEventListener('change',()=>{$('filterHint').textContent='Pulsa «Buscar vehículos» para ver los resultados de esta selección.';});
-$('catalogScope').addEventListener('change',()=>{choices();if(submitted)performSearch({scroll:false});});
+$('catalogScope').addEventListener('change',()=>{choices();if(submitted)performSearch({scroll:false});updateScopeQuickButtons();});
+document.querySelectorAll('[data-scope-quick]').forEach(button=>button.addEventListener('click',()=>{
+ const next=button.dataset.scopeQuick;
+ if($('catalogScope').value===next)return;
+ $('catalogScope').value=next;
+ choices();
+ if(all.length)performSearch({scroll:false});
+ updateScopeQuickButtons();
+}));
 $('query').addEventListener('input',()=>{updateSuggestions();$('filterHint').textContent=$('query').value?'Pulsa «Buscar vehículos» para ver las coincidencias.':'';});
 $('sort').addEventListener('change',()=>{ensureCostSortCycle();render();});
 

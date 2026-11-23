@@ -1,0 +1,808 @@
+{
+  "time": "2026-11-23",
+  "legacy": 8053,
+  "october": 272,
+  "november": 69,
+  "total": 8394,
+  "withPhoto": 2126,
+  "withoutPhoto": 6268,
+  "byBrand": {
+    "Kia": {
+      "total": 304,
+      "withPhoto": 96,
+      "missing": 208
+    },
+    "Citroen": {
+      "total": 184,
+      "withPhoto": 43,
+      "missing": 141
+    },
+    "Changan": {
+      "total": 109,
+      "withPhoto": 33,
+      "missing": 76
+    },
+    "DFSK": {
+      "total": 67,
+      "withPhoto": 1,
+      "missing": 66
+    },
+    "Porsche": {
+      "total": 311,
+      "withPhoto": 197,
+      "missing": 114
+    },
+    "KGM": {
+      "total": 164,
+      "withPhoto": 79,
+      "missing": 85
+    },
+    "Peugeot": {
+      "total": 249,
+      "withPhoto": 64,
+      "missing": 185
+    },
+    "Honda": {
+      "total": 120,
+      "withPhoto": 9,
+      "missing": 111
+    },
+    "Smart": {
+      "total": 11,
+      "withPhoto": 0,
+      "missing": 11
+    },
+    "Isuzu": {
+      "total": 4,
+      "withPhoto": 0,
+      "missing": 4
+    },
+    "Eveasy": {
+      "total": 3,
+      "withPhoto": 0,
+      "missing": 3
+    },
+    "Jeep": {
+      "total": 146,
+      "withPhoto": 64,
+      "missing": 82
+    },
+    "DFLM": {
+      "total": 29,
+      "withPhoto": 0,
+      "missing": 29
+    },
+    "Geely": {
+      "total": 45,
+      "withPhoto": 13,
+      "missing": 32
+    },
+    "Toyota": {
+      "total": 186,
+      "withPhoto": 57,
+      "missing": 129
+    },
+    "Fiat": {
+      "total": 127,
+      "withPhoto": 28,
+      "missing": 99
+    },
+    "Hyundai": {
+      "total": 306,
+      "withPhoto": 71,
+      "missing": 235
+    },
+    "Tesla": {
+      "total": 21,
+      "withPhoto": 21,
+      "missing": 0
+    },
+    "Chery": {
+      "total": 125,
+      "withPhoto": 46,
+      "missing": 79
+    },
+    "Mazda": {
+      "total": 140,
+      "withPhoto": 57,
+      "missing": 83
+    },
+    "Omoda": {
+      "total": 13,
+      "withPhoto": 0,
+      "missing": 13
+    },
+    "Renault": {
+      "total": 98,
+      "withPhoto": 9,
+      "missing": 89
+    },
+    "Sinotruk": {
+      "total": 10,
+      "withPhoto": 0,
+      "missing": 10
+    },
+    "Volvo": {
+      "total": 176,
+      "withPhoto": 43,
+      "missing": 133
+    },
+    "Mercedes-Benz": {
+      "total": 575,
+      "withPhoto": 56,
+      "missing": 519
+    },
+    "Land Rover": {
+      "total": 533,
+      "withPhoto": 322,
+      "missing": 211
+    },
+    "RAM": {
+      "total": 118,
+      "withPhoto": 26,
+      "missing": 92
+    },
+    "Lexus": {
+      "total": 72,
+      "withPhoto": 4,
+      "missing": 68
+    },
+    "Soueast": {
+      "total": 8,
+      "withPhoto": 5,
+      "missing": 3
+    },
+    "BMW": {
+      "total": 464,
+      "withPhoto": 83,
+      "missing": 381
+    },
+    "Nissan": {
+      "total": 169,
+      "withPhoto": 39,
+      "missing": 130
+    },
+    "Suzuki": {
+      "total": 163,
+      "withPhoto": 30,
+      "missing": 133
+    },
+    "Jac": {
+      "total": 123,
+      "withPhoto": 38,
+      "missing": 85
+    },
+    "Audi": {
+      "total": 288,
+      "withPhoto": 36,
+      "missing": 252
+    },
+    "BYD": {
+      "total": 45,
+      "withPhoto": 20,
+      "missing": 25
+    },
+    "Exeed": {
+      "total": 21,
+      "withPhoto": 1,
+      "missing": 20
+    },
+    "Mitsubishi": {
+      "total": 110,
+      "withPhoto": 40,
+      "missing": 70
+    },
+    "Baic": {
+      "total": 39,
+      "withPhoto": 38,
+      "missing": 1
+    },
+    "Ferrari": {
+      "total": 38,
+      "withPhoto": 8,
+      "missing": 30
+    },
+    "INEOS": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "MG": {
+      "total": 99,
+      "withPhoto": 26,
+      "missing": 73
+    },
+    "Ford": {
+      "total": 251,
+      "withPhoto": 64,
+      "missing": 187
+    },
+    "Great Wall": {
+      "total": 131,
+      "withPhoto": 77,
+      "missing": 54
+    },
+    "Dongfeng": {
+      "total": 78,
+      "withPhoto": 17,
+      "missing": 61
+    },
+    "Mini": {
+      "total": 148,
+      "withPhoto": 30,
+      "missing": 118
+    },
+    "Jaecoo": {
+      "total": 13,
+      "withPhoto": 0,
+      "missing": 13
+    },
+    "Jetour": {
+      "total": 33,
+      "withPhoto": 13,
+      "missing": 20
+    },
+    "Foton": {
+      "total": 151,
+      "withPhoto": 42,
+      "missing": 109
+    },
+    "Opel": {
+      "total": 125,
+      "withPhoto": 5,
+      "missing": 120
+    },
+    "Volkswagen": {
+      "total": 165,
+      "withPhoto": 20,
+      "missing": 145
+    },
+    "Bentley": {
+      "total": 19,
+      "withPhoto": 0,
+      "missing": 19
+    },
+    "Chevrolet": {
+      "total": 219,
+      "withPhoto": 21,
+      "missing": 198
+    },
+    "Riddara": {
+      "total": 6,
+      "withPhoto": 0,
+      "missing": 6
+    },
+    "Leapmotor": {
+      "total": 12,
+      "withPhoto": 6,
+      "missing": 6
+    },
+    "KYC": {
+      "total": 47,
+      "withPhoto": 3,
+      "missing": 44
+    },
+    "Gac": {
+      "total": 70,
+      "withPhoto": 38,
+      "missing": 32
+    },
+    "JMC": {
+      "total": 44,
+      "withPhoto": 17,
+      "missing": 27
+    },
+    "Shineray": {
+      "total": 15,
+      "withPhoto": 0,
+      "missing": 15
+    },
+    "Lynk & Co": {
+      "total": 7,
+      "withPhoto": 1,
+      "missing": 6
+    },
+    "Maxus": {
+      "total": 119,
+      "withPhoto": 7,
+      "missing": 112
+    },
+    "SWM": {
+      "total": 9,
+      "withPhoto": 0,
+      "missing": 9
+    },
+    "Subaru": {
+      "total": 111,
+      "withPhoto": 15,
+      "missing": 96
+    },
+    "DS": {
+      "total": 29,
+      "withPhoto": 0,
+      "missing": 29
+    },
+    "Seat": {
+      "total": 24,
+      "withPhoto": 1,
+      "missing": 23
+    },
+    "Zxauto": {
+      "total": 19,
+      "withPhoto": 0,
+      "missing": 19
+    },
+    "Skoda": {
+      "total": 110,
+      "withPhoto": 5,
+      "missing": 105
+    },
+    "MAN": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Cupra": {
+      "total": 22,
+      "withPhoto": 4,
+      "missing": 18
+    },
+    "Livan": {
+      "total": 7,
+      "withPhoto": 0,
+      "missing": 7
+    },
+    "Farizon": {
+      "total": 15,
+      "withPhoto": 0,
+      "missing": 15
+    },
+    "Alfa Romeo": {
+      "total": 21,
+      "withPhoto": 3,
+      "missing": 18
+    },
+    "Mahindra": {
+      "total": 34,
+      "withPhoto": 0,
+      "missing": 34
+    },
+    "Maserati": {
+      "total": 32,
+      "withPhoto": 2,
+      "missing": 30
+    },
+    "Neta": {
+      "total": 4,
+      "withPhoto": 0,
+      "missing": 4
+    },
+    "FAW": {
+      "total": 19,
+      "withPhoto": 0,
+      "missing": 19
+    },
+    "ZNA": {
+      "total": 10,
+      "withPhoto": 0,
+      "missing": 10
+    },
+    "Landking": {
+      "total": 13,
+      "withPhoto": 9,
+      "missing": 4
+    },
+    "JIM": {
+      "total": 8,
+      "withPhoto": 8,
+      "missing": 0
+    },
+    "Karry": {
+      "total": 23,
+      "withPhoto": 2,
+      "missing": 21
+    },
+    "Nammi": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Weltmeister": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Kaiyi": {
+      "total": 15,
+      "withPhoto": 7,
+      "missing": 8
+    },
+    "Gecko": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Aston Martin": {
+      "total": 24,
+      "withPhoto": 4,
+      "missing": 20
+    },
+    "Seres": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "DFLZ": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Lotus": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Jaguar": {
+      "total": 128,
+      "withPhoto": 0,
+      "missing": 128
+    },
+    "Skywell": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Iveco": {
+      "total": 8,
+      "withPhoto": 0,
+      "missing": 8
+    },
+    "Fest": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "McLaren": {
+      "total": 16,
+      "withPhoto": 0,
+      "missing": 16
+    },
+    "Hino": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Maple": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Brilliance": {
+      "total": 27,
+      "withPhoto": 0,
+      "missing": 27
+    },
+    "Fuso": {
+      "total": 3,
+      "withPhoto": 0,
+      "missing": 3
+    },
+    "Uaz": {
+      "total": 14,
+      "withPhoto": 0,
+      "missing": 14
+    },
+    "ZNA Dongfeng": {
+      "total": 21,
+      "withPhoto": 0,
+      "missing": 21
+    },
+    "Rolls-Royce": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Infiniti": {
+      "total": 36,
+      "withPhoto": 0,
+      "missing": 36
+    },
+    "Piaggio": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Dodge": {
+      "total": 22,
+      "withPhoto": 0,
+      "missing": 22
+    },
+    "Lifan": {
+      "total": 16,
+      "withPhoto": 0,
+      "missing": 16
+    },
+    "Genesis": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Borgward": {
+      "total": 6,
+      "withPhoto": 0,
+      "missing": 6
+    },
+    "Lamborghini": {
+      "total": 9,
+      "withPhoto": 1,
+      "missing": 8
+    },
+    "Lada": {
+      "total": 6,
+      "withPhoto": 0,
+      "missing": 6
+    },
+    "Kenbo": {
+      "total": 8,
+      "withPhoto": 0,
+      "missing": 8
+    },
+    "Proton": {
+      "total": 4,
+      "withPhoto": 0,
+      "missing": 4
+    },
+    "Gac Gonow": {
+      "total": 8,
+      "withPhoto": 0,
+      "missing": 8
+    },
+    "Zotye": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Landwind": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Daihatsu": {
+      "total": 4,
+      "withPhoto": 0,
+      "missing": 4
+    },
+    "Chrysler": {
+      "total": 5,
+      "withPhoto": 0,
+      "missing": 5
+    },
+    "Forthing": {
+      "total": 6,
+      "withPhoto": 0,
+      "missing": 6
+    },
+    "BAW": {
+      "total": 1,
+      "withPhoto": 0,
+      "missing": 1
+    },
+    "Lepas": {
+      "total": 3,
+      "withPhoto": 0,
+      "missing": 3
+    },
+    "Rely": {
+      "total": 2,
+      "withPhoto": 0,
+      "missing": 2
+    },
+    "Arcfox": {
+      "total": 1,
+      "withPhoto": 1,
+      "missing": 0
+    }
+  },
+  "topMissingBrands": [
+    [
+      "Mercedes-Benz",
+      {
+        "total": 575,
+        "withPhoto": 56,
+        "missing": 519
+      }
+    ],
+    [
+      "BMW",
+      {
+        "total": 464,
+        "withPhoto": 83,
+        "missing": 381
+      }
+    ],
+    [
+      "Audi",
+      {
+        "total": 288,
+        "withPhoto": 36,
+        "missing": 252
+      }
+    ],
+    [
+      "Hyundai",
+      {
+        "total": 306,
+        "withPhoto": 71,
+        "missing": 235
+      }
+    ],
+    [
+      "Land Rover",
+      {
+        "total": 533,
+        "withPhoto": 322,
+        "missing": 211
+      }
+    ],
+    [
+      "Kia",
+      {
+        "total": 304,
+        "withPhoto": 96,
+        "missing": 208
+      }
+    ],
+    [
+      "Chevrolet",
+      {
+        "total": 219,
+        "withPhoto": 21,
+        "missing": 198
+      }
+    ],
+    [
+      "Ford",
+      {
+        "total": 251,
+        "withPhoto": 64,
+        "missing": 187
+      }
+    ],
+    [
+      "Peugeot",
+      {
+        "total": 249,
+        "withPhoto": 64,
+        "missing": 185
+      }
+    ],
+    [
+      "Volkswagen",
+      {
+        "total": 165,
+        "withPhoto": 20,
+        "missing": 145
+      }
+    ],
+    [
+      "Citroen",
+      {
+        "total": 184,
+        "withPhoto": 43,
+        "missing": 141
+      }
+    ],
+    [
+      "Volvo",
+      {
+        "total": 176,
+        "withPhoto": 43,
+        "missing": 133
+      }
+    ],
+    [
+      "Suzuki",
+      {
+        "total": 163,
+        "withPhoto": 30,
+        "missing": 133
+      }
+    ],
+    [
+      "Nissan",
+      {
+        "total": 169,
+        "withPhoto": 39,
+        "missing": 130
+      }
+    ],
+    [
+      "Toyota",
+      {
+        "total": 186,
+        "withPhoto": 57,
+        "missing": 129
+      }
+    ],
+    [
+      "Jaguar",
+      {
+        "total": 128,
+        "withPhoto": 0,
+        "missing": 128
+      }
+    ],
+    [
+      "Opel",
+      {
+        "total": 125,
+        "withPhoto": 5,
+        "missing": 120
+      }
+    ],
+    [
+      "Mini",
+      {
+        "total": 148,
+        "withPhoto": 30,
+        "missing": 118
+      }
+    ],
+    [
+      "Porsche",
+      {
+        "total": 311,
+        "withPhoto": 197,
+        "missing": 114
+      }
+    ],
+    [
+      "Maxus",
+      {
+        "total": 119,
+        "withPhoto": 7,
+        "missing": 112
+      }
+    ],
+    [
+      "Honda",
+      {
+        "total": 120,
+        "withPhoto": 9,
+        "missing": 111
+      }
+    ],
+    [
+      "Foton",
+      {
+        "total": 151,
+        "withPhoto": 42,
+        "missing": 109
+      }
+    ],
+    [
+      "Skoda",
+      {
+        "total": 110,
+        "withPhoto": 5,
+        "missing": 105
+      }
+    ],
+    [
+      "Fiat",
+      {
+        "total": 127,
+        "withPhoto": 28,
+        "missing": 99
+      }
+    ],
+    [
+      "Subaru",
+      {
+        "total": 111,
+        "withPhoto": 15,
+        "missing": 96
+      }
+    ]
+  ]
+}

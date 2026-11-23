@@ -1,0 +1,29 @@
+'use strict';
+const fs=require('fs'),path=require('path'),vm=require('vm');
+const root=path.resolve(__dirname,'..'),vroot=path.resolve(root,'../vehiculos');
+const manifest=require(path.join(vroot,'data/manifest.json'));
+const legacy=manifest.files.flatMap(f=>require(path.join(vroot,f))).filter(r=>r&&r[0]&&r[1]&&r[8]&&r[8]<=manifest.published);
+const api=require('../sii/official-api-mapper.js');
+const batch=[1,2,3,4].map(i=>require(path.join(root,'data','oficial-api-20261018-'+String(i).padStart(2,'0')+'.json')));
+const previous=api.load(batch,legacy);
+const delta=api.loadIncremental(require('../data/oficial-api-20261122.json'),legacy,previous);
+const rows=legacy.concat(previous,delta);
+const context={window:{},document:{addEventListener(){}},HTMLImageElement:class{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'v2-photos.js'),'utf8'),context);
+const photos=context.window.RindelabPhotos;
+const F={BRAND:0,MODEL:1,TECH:2,DATE:8};
+let ok=0;const perBrand={};
+const aliases={'M. Benz':'Mercedes-Benz','Ram':'RAM','LEAPMOTOR':'Leapmotor','Faw':'FAW','Lynk Co':'Lynk & Co','ZX Auto':'Zxauto','Ssangyong':'KGM','Haval':'Great Wall','DFM':'Dongfeng','Mitsubishi Fuso':'Fuso','Exeed Born For More':'Exeed'};
+for(const original of rows){
+ const row=original.slice();row[0]=aliases[row[0]]||row[0];
+ const brand=row[0],present=!!photos.find(row,F);
+ if(present)ok++;
+ perBrand[brand]??={total:0,withPhoto:0,missing:0};
+ perBrand[brand].total++;if(present)perBrand[brand].withPhoto++;else perBrand[brand].missing++;
+}
+const ranked=Object.entries(perBrand).filter(([name,g])=>g.total>=15).sort((a,b)=>b[1].missing-a[1].missing).slice(0,25);
+const result={time:'2026-11-23',legacy:legacy.length,october:previous.length,november:delta.length,total:rows.length,withPhoto:ok,withoutPhoto:rows.length-ok,byBrand:perBrand,topMissingBrands:ranked};
+fs.writeFileSync(path.join(root,'data/real-3cv-photo-coverage-20261123.json'),JSON.stringify(result,null,2)+'\n');
+console.log('ACTUAL_3CV',rows.length,'WITH_PHOTO',ok,'WITHOUT_PHOTO',rows.length-ok,'RATE',(100*ok/rows.length).toFixed(1)+'%');
+console.log('BAIC',Object.entries(perBrand).filter(([b])=>/^baic$|^beijing$/i.test(b)));
+console.log('TOP MISSING BRANDS',ranked.slice(0,15));

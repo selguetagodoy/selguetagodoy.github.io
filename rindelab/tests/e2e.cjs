@@ -32,7 +32,7 @@ async function open(width,height){
  await page.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394' && document.querySelector('#searchButton')?.disabled===false,{timeout:25000});
  await page.locator('.hero-image img').evaluate(el=>el.decode());
  // La regresión histórica comprueba todo el universo 3CV. El filtro comercial tiene pruebas propias.
- await page.selectOption('#catalogScope','all');
+ await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','all');
  // Los tests del motor abren explícitamente los ajustes; la interfaz real comienza plegada.
  await page.locator('#supuestos').evaluate(el=>el.open=true);
  await page.locator('#scenarioAdvanced').evaluate(el=>el.open=true);
@@ -1781,7 +1781,7 @@ await test('Deepal S05 REEV tiene ahora ficha energética 3CV oficial de octubre
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','CN10637E60826S00-7');await p.click('#searchButton');
  assert.equal(await p.locator('.mtt-result-card').count(),0);
@@ -1801,7 +1801,7 @@ await test('Deepal S05 REEV tiene ahora ficha energética 3CV oficial de octubre
 await test('Filtros oficiales de octubre incluyen JIM Re-Max y Kia Sportage HEV',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  const brands=await p.locator('#brand option').allTextContents();
  assert(brands.includes('JIM'));
@@ -1847,7 +1847,7 @@ await test('Modelos Suzuki descontinuados: precios archivados y Jimny 3 puertas 
  await quote.close();
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','Suzuki Baleno');await p.click('#searchButton');
  assert((await p.locator('.vehicle-lifecycle').count())>=1);
@@ -1863,7 +1863,7 @@ await test('Ford Fiesta EcoSport y Chevrolet Camaro Cruze: retirada real por mod
  assert(!lifecycle.models.some(x=>x.brand==='Volkswagen'&&x.model==='Golf'));
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  for(const q of ['Ford Fiesta','Ford EcoSport','Chevrolet Camaro','Chevrolet Cruze']){
   await p.fill('#query',q);
@@ -1902,7 +1902,7 @@ await test('Séptima revisión 3CV: 90 casos sin falsos positivos en variantes v
  assert(!data.models.some(x=>x.brand==='Nissan'&&x.model==='GT-R'),'GT-R no pertenece al registro de modelos antes comercializados oficialmente en Chile');
  const p=await browser.newPage();
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  for(const name of ['Nissan March','Kia Soul','Ford Focus','Hyundai Veloster','Peugeot 508','Changan CX70','Mercedes-Benz X 350d']){
   await p.fill('#query',name);await p.click('#searchButton');
@@ -1975,7 +1975,7 @@ await test('Directorio de modelos descontinuados: 90 casos, filtros y ancho móv
 await test('De septiembre queda una sola homologación MTT sin ficha: Porsche Cayenne',async()=>{
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.click('#searchButton');
  assert(await p.locator('#mttSearchSection').isHidden(),'La portada no muestra ficha MTT aislada al listar todos los vehículos');
@@ -1996,7 +1996,7 @@ await test('Leapmotor B03X muestra rendimiento eléctrico oficial en móvil 320p
  const p=await browser.newPage({viewport:{width:320,height:720},isMobile:true,hasTouch:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','Leapmotor B03X');await p.click('#searchButton');
  assert((await p.locator('.vehicle-card').count())>=1);
@@ -2011,7 +2011,7 @@ await test('Leyenda distingue fuente histórica mayo y ampliaciones oficiales de
  const p=await browser.newPage({viewport:{width:1440,height:900}});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>document.querySelector('#recordCount')?.textContent==='8.394',{timeout:30000});
  await p.fill('#query','Deepal S05 REEV');await p.click('#searchButton');
  assert(await p.locator('#sourceLegend').isVisible());
@@ -2060,7 +2060,7 @@ await test('Estados y expediente en móvil de 320 píxeles no desbordan',async()
  const p=await browser.newPage({viewport:{width:320,height:700},isMobile:true,hasTouch:true});
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  await p.waitForFunction(()=>!document.querySelector('#searchButton')?.disabled,{timeout:30000});
  await p.fill('#query','Leapmotor B03X');await p.click('#searchButton');
  assert(await p.locator('#sourceLegend').isVisible());
@@ -2524,7 +2524,7 @@ await test('Inter autoalojada: WOFF2 real disponible, sin solicitudes a Google F
  p.on('request',r=>{if(/fonts\\.(?:googleapis|gstatic)\\.com/.test(r.url()))external.push(r.url())});
  p.on('pageerror',e=>errors.push(e.message));
  const response=await p.goto(base,{waitUntil:'networkidle'});
- await p.selectOption('#catalogScope','all');
+ await p.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await p.selectOption('#catalogScope','all');
  assert.equal(response.status(),200);
  const result=await p.evaluate(async()=>{
   await document.fonts.ready;

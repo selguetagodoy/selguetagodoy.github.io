@@ -753,3 +753,21 @@ input,select,textarea{font-size:16px}
 .rinde-plug-in-profile input[type="range"]{width:100%;min-height:44px;accent-color:#116781}
 .rinde-plug-in-profile input[type="number"]{width:100%;min-height:44px;padding:9px 11px;border:1px solid #9bafbd;border-radius:8px}
 .rinde-plug-in-profile [role="status"]{padding:11px 13px;background:#eef7f8;border-radius:8px;color:#16445a;line-height:1.55;font-size:13px}
+
+
+/* 23/11 · Buscador normal: la segmentación avanzada se oculta hasta solicitarla. */
+.rinde-catalog-scope-details{margin:14px 0 6px;border:1px solid #d7e3eb;border-radius:11px;background:#f9fcfe;padding:0 14px}
+.rinde-catalog-scope-details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:13px;font-weight:680;color:#24556c}
+.rinde-catalog-scope-controls{padding:7px 0 14px;display:grid;gap:7px}
+.rinde-catalog-scope-controls label{font-size:13px;font-weight:750}
+.rinde-catalog-scope-controls select{display:block;width:100%;max-width:560px;min-height:44px;padding:8px 12px;font-size:14px;text-overflow:ellipsis}
+.rinde-catalog-scope-controls small{line-height:1.55;color:#536d7b}
+.rinde-results-scope{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border:1px solid #d9e6ec;border-radius:12px;background:#f7fafc;padding:12px;margin-bottom:14px}
+.rinde-results-scope>strong{font-size:13px;color:#224b61;margin-right:4px}
+.scope-quick-button{border:1px solid #b9ccd7;border-radius:999px;background:white;color:#1a465c;min-height:44px;padding:9px 13px;font-size:13px;font-weight:700;cursor:pointer}
+.scope-quick-button[aria-pressed="true"]{color:#fff;background:#195870;border-color:#195870}
+.rinde-results-scope>small{flex-basis:100%;font-size:11px;color:#63798a;line-height:1.55}
+.rinde-photo-coverage-info{font-size:12px;color:#506b7d;margin:7px 0 18px}
+.rinde-photo-coverage-info summary{cursor:pointer;min-height:38px;display:flex;align-items:center;font-weight:650}
+.rinde-photo-coverage-info p{line-height:1.65}
+@media(max-width:600px){.rinde-results-scope{gap:7px;padding:10px}.scope-quick-button{flex:1 1 130px}.rinde-catalog-scope-controls select{max-width:100%}}

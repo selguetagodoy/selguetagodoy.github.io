@@ -30,7 +30,7 @@ vm.runInNewContext(read('sii/prices.js'),ctx,{filename:'sii/prices.js'});
  }
  const unknown=win.RindelabCommercial.minimum(['BYD','Yuan Pro DM-i','PHEV'],'Yuan Pro DM-i');
  assert.equal(unknown,null,'A generic 3CV family must not be assigned GL as a version price');
- assert(read('v6.js').includes("$('catalogScope').value='priced';"),'Reset must restore catalog scope');
+ assert(read('v6.js').includes("$('catalogScope').value='all';"),'Reset must return to the whole 3CV catalog');
  assert(read('v6.js').includes('const modelName=normalize(row[F.MODEL])'),'Repeated BYD brand removed from titles');
  assert(read('v6.js').includes('No encontramos esta búsqueda en el subconjunto comercial'),'Free search must offer historical matches');
  assert(read('market-catalog.js').includes('market-compare-mobile'),'Commercial compare must render mobile cards');

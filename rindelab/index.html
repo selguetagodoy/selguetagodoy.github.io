@@ -23,14 +23,14 @@
 <link rel="canonical" href="https://selguetagodoy.github.io/rindelab/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preload" href="./fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./v6.css?v=20261123-phev-scenario"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2"><link rel="stylesheet" href="./used-market.css?v=20261021-mobile-dialog-fix">
+<link rel="stylesheet" href="./v6.css?v=20261123-baic-audit1"><link rel="stylesheet" href="./sii/sii.css?v=20261018-sii-lectura2"><link rel="stylesheet" href="./used-market.css?v=20261021-mobile-dialog-fix">
 <link rel="stylesheet" href="./v2-premium.css?v=20261018-rc1">
 <link rel="stylesheet" href="./v2-claridad.css?v=20261018-v1">
 <link rel="stylesheet" href="./v2-polish.css?v=20261018-v1">
 <script src="./v2-premium.js?v=20261018-rc1" defer></script>
 <script src="./v2-claridad.js?v=20261018-v1" defer></script>
 <script src="./v2-polish.js?v=20261018-v1" defer></script>
-<script src="./v2-photos.js?v=20261122-photo700-r1" defer></script>
+<script src="./v2-photos.js?v=20261123-baic-audit1" defer></script>
 <title>RINDELAB | Con las alzas, cada peso cuenta</title>
 <style>
 .rinde-explore{margin:1.1rem 0;padding:1rem 1.25rem;border:1px solid #d5dde7;border-radius:12px;background:#f6f9fc;color:#162d4b}
@@ -119,13 +119,43 @@
     <button type="button" class="button secondary" id="resetButton">Limpiar</button>
    </div>
   </form>
-  <div class="rinde-catalog-scope"><label for="catalogScope">Qué vehículos mostrar</label><select id="catalogScope" aria-describedby="catalogScopeHint"><option value="priced">Con precio comercial o ficha reciente pendiente de conciliar</option><option value="upcoming">Próximamente en Chile · Lanzamiento anunciado</option><option value="market-priced">Oferta comercial en Chile · Precio publicado</option><option value="family-price-review">Precio o referencia de familia · Versión por verificar</option><option value="recent-no-price">Homologado recientemente · Precio por comprobar</option><option value="commercial">Catálogo comercial ampliado · con y sin precio</option><option value="all">Todas las homologaciones 3CV (historial)</option></select><small id="catalogScopeHint">Auditoría comercial del 22/10/2026: se distinguen precios publicados, referencias de familia no asociadas y homologaciones recientes sin precio acreditado. Los recuentos visibles se recalculan sobre el catálogo actual; una homologación no acredita disponibilidad comercial.</small></div>
+  <details class="rinde-catalog-scope rinde-catalog-scope-details" id="catalogScopeDetails">
+ <summary>Más opciones de búsqueda (para explorar el catálogo)</summary>
+ <div class="rinde-catalog-scope-controls">
+  <label for="catalogScope">Tipo de resultados</label>
+  <select id="catalogScope" aria-describedby="catalogScopeHint">
+   <optgroup label="Búsqueda habitual">
+    <option value="all" selected>Todos los vehículos (incluye modelos antiguos)</option>
+    <option value="priced">Con información de compra o novedades recientes</option>
+    <option value="commercial">Catálogo comercial de modelos nuevos</option>
+   </optgroup>
+   <optgroup label="Investigación avanzada">
+    <option value="upcoming">Modelos anunciados que aún no se venden</option>
+    <option value="market-priced">Ofertas comerciales con precio publicado</option>
+    <option value="family-price-review">Precio de la familia; falta confirmar la versión</option>
+    <option value="recent-no-price">Homologaciones recientes sin precio comprobado</option>
+   </optgroup>
+  </select>
+  <small id="catalogScopeHint">Las fichas 3CV incluyen vehículos antiguos. Tener una ficha no significa que el vehículo esté a la venta ni que el precio corresponda a esa versión.</small>
+ </div>
+</details>
  </section>
  <div class="rinde-explore" aria-label="Exploración rápida"><strong>Explora sin conocer un modelo</strong><div class="rinde-explore-actions"><button type="button" data-rinde-explore="EV">⚡ Eléctricos</button><button type="button" data-rinde-explore="HEV">🔋 Híbridos HEV</button><button type="button" data-rinde-explore="lowest">💰 Menor gasto en energía (WLTP)</button><a href="./usados.html">💰 Tasación y precio usado</a><a href="./novedades-3cv.html">🆕 Novedades 3CV</a><a href="./versiones.html">Versiones homologadas</a></div></div><div id="scenarioSummary" class="scenario-strip" aria-label="Tus supuestos de gasto">
    <p id="scenarioSummaryText">Calculado para 15.000 km al año · bencina $1.535/L · carga pública $340/kWh</p>
    <a href="#supuestos" id="scenarioAdjust" class="button secondary">Ajustar costos →</a>
   </div>
  <section id="results" class="results" aria-labelledby="resultsTitle" hidden>
+  <div class="rinde-results-scope" role="group" aria-label="Mostrar resultados de búsqueda">
+   <strong>Ver resultados</strong>
+   <button type="button" class="scope-quick-button" data-scope-quick="all" aria-pressed="true">Todos los vehículos</button>
+   <button type="button" class="scope-quick-button" data-scope-quick="priced" aria-pressed="false">Con información de compra</button>
+   <small>Incluye fichas antiguas; un vehículo homologado no necesariamente está a la venta.</small>
+  </div>
+  <details class="rinde-photo-coverage-info">
+   <summary>¿Por qué faltan algunas fotos?</summary>
+   <p>La biblioteca comercial de fotografías no cubre todo el historial 3CV. Al 23/11/2026, había foto referencial asociada a <strong>2.126 de 8.394 fichas</strong> (25,3 %). Las fotos no certifican versión exacta. <a href="./data/real-3cv-photo-coverage-20261123.json" target="_blank" rel="noopener">Consultar auditoría de cobertura por marca</a>.</p>
+  </details>
+
   <div class="results-head">
    <div><h2 id="resultsTitle">Resultados de búsqueda</h2><p id="resultCount" role="status" aria-live="polite"></p></div>
    <div class="field sort-field"><label for="sort">Ordenar por</label><select id="sort">
@@ -328,7 +358,7 @@
 <script src="./sii/catalog-identity.js?v=20261022-tech-verified" defer></script>
  <script src="./sii/prices.js?v=20261123-byd-variants" defer></script>
 <script src="./sii/official-api-mapper.js?v=20261122-official69" defer></script>
-<script src="./v6.js?v=20261123-phev-scenario" defer></script>
+<script src="./v6.js?v=20261123-baic-audit1" defer></script>
 <link rel="stylesheet" href="./market.css?v=20261123-mobile-compare">
 <script src="./market-catalog.js?v=20261123-mobile-compare" defer></script>
 <script>
