@@ -8946,7 +8946,334 @@ const officialManufacturerBatch620261122=[
     ]
   }
 ];
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const officialManufacturerBatch720261122=[
+  {
+    "brand": "Foton",
+    "family": "tm cabina simple",
+    "pattern": "\\btm[\\s,_-]+cabina[\\s,_-]+simple(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton tm cabina simple (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm3-1-6-cabina-simple/",
+    "source": "https://cidef.cl/modelo/tm3-1-6-cabina-simple/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2023/03/tm3-principal-cabsimple-1.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "tm cabina doble",
+    "pattern": "\\btm[\\s,_-]+cabina[\\s,_-]+doble(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton tm cabina doble (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm3-1-6-doble-cabina/",
+    "source": "https://cidef.cl/modelo/tm3-1-6-doble-cabina/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2021/01/tm3-principal-CabDoble-1.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "tm cargo box",
+    "pattern": "\\btm[\\s,_-]+cargo[\\s,_-]+box(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton tm cargo box (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm3-mas-cargo-box/",
+    "source": "https://cidef.cl/modelo/tm3-mas-cargo-box/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2021/04/tm3-principal-CargoBox-1.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "tm3 refrigerado",
+    "pattern": "\\btm3[\\s,_-]+refrigerado(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton tm3 refrigerado (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm3-refrigerado/",
+    "source": "https://cidef.cl/modelo/tm3-refrigerado/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2024/02/tm3-principal-CargoboxRefrigerado-2.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "TM3",
+    "pattern": "\\bTM3(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton TM3 (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm3-1-6-cabina-simple/",
+    "source": "https://cidef.cl/modelo/tm3-1-6-cabina-simple/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2023/03/tm3-principal-cabsimple-1.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "tm5 cabina simple",
+    "pattern": "\\btm5[\\s,_-]+cabina[\\s,_-]+simple(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton tm5 cabina simple (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm5-mas-cabinasimple/",
+    "source": "https://cidef.cl/modelo/tm5-mas-cabinasimple/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2021/01/Principal-tm5-cabsimple.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "tm5 cargo box",
+    "pattern": "\\btm5[\\s,_-]+cargo[\\s,_-]+box(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton tm5 cargo box (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm5-cargo-box/",
+    "source": "https://cidef.cl/modelo/tm5-cargo-box/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2023/12/Principal-tm5-cargobox.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "TM5",
+    "pattern": "\\bTM5(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton TM5 (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/tm5-mas-cabinasimple/",
+    "source": "https://cidef.cl/modelo/tm5-mas-cabinasimple/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2021/01/Principal-tm5-cabsimple.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "WONDER",
+    "pattern": "\\bWONDER(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton WONDER (fotografía referencial del modelo)",
+    "author": "CIDEF · Foton Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/wonder-camion-mini-truck/",
+    "source": "https://cidef.cl/modelo/wonder-camion-mini-truck/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2025/01/PrincipalFoton-Wonder-1.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "DFSK",
+    "family": "E5 Plus",
+    "pattern": "\\bE5[\\s,_-]+Plus(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "DFSK E5 Plus (fotografía referencial del modelo)",
+    "author": "DFSK Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.dfsk.cl/vehiculos/dfsk/e5-plus/",
+    "source": "https://www.dfsk.cl/vehiculos/dfsk/e5-plus/",
+    "localSrc": "https://www.dfsk.cl/media/iirp0luw/dfsk-e5-plus-en-la-ciudad.png",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      1930,
+      815
+    ]
+  },
+  {
+    "brand": "DFSK",
+    "family": "SUV600 PHEV",
+    "pattern": "\\bSUV600[\\s,_-]+PHEV(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "DFSK SUV600 PHEV (fotografía referencial del modelo)",
+    "author": "DFSK Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.dfsk.cl/pasajeros/vehiculo/600-phev/",
+    "source": "https://www.dfsk.cl/pasajeros/vehiculo/600-phev/",
+    "localSrc": "https://inchcapelatam.sirv.com/DFSK/Modelos/600%20PHEV/Elite/DFSK-600-PHEV-negro-front.png?w=720",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      720,
+      354
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "family": "N400 Cargo",
+    "pattern": "\\bN400[\\s,_-]+Cargo(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Chevrolet N400 Cargo (fotografía referencial del modelo)",
+    "author": "Chevrolet Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.chevrolet.cl/vans/n400-van",
+    "source": "https://www.chevrolet.cl/vans/n400-van",
+    "localSrc": "https://www.chevrolet.cl/content/dam/chevrolet/south-america/chile/espanol/index/visid/vans/n400/imagenes-nuevas/galeria/01-n400-max-ext-1500x1000.jpg?imwidth=1200",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      1268,
+      845
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "family": "sail-hatchback",
+    "pattern": "\\bsail[\\s,_-]+hatchback(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Chevrolet sail-hatchback (fotografía referencial del modelo)",
+    "author": "Chevrolet Chile",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.chevrolet.cl/",
+    "source": "https://www.chevrolet.cl/",
+    "localSrc": "https://www.chevrolet.cl/content/dam/chevrolet/south-america/chile/espanol/vdc-collections/2026/cars/sail-hb/sail-hb-jelly.jpg?imwidth=1200",
+    "imageSource": "distribuidor / fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada: imagen enlazada desde servidor original",
+    "size": [
+      1268,
+      634
+    ]
+  }
+];
+const officialManufacturerBatch820261122=[
+  {
+    "brand": "RAM",
+    "family": "ram2500",
+    "pattern": "\\bram2500(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "RAM ram2500 (referencial de vehículo oficial)",
+    "author": "RAM Chile · fabricante",
+    "source": "https://www.ram.com/cl/ram-2500.html",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.ram.com/cl/ram-2500.html",
+    "localSrc": "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/header/2500.png",
+    "imageSource": "fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+    "size": [
+      300,
+      150
+    ]
+  },
+  {
+    "brand": "RAM",
+    "family": "2500 CD",
+    "pattern": "\\b2500[\\s,_-]+CD(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "RAM 2500 CD (referencial de vehículo oficial)",
+    "author": "RAM Chile · fabricante",
+    "source": "https://www.ram.com/cl/ram-2500.html",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.ram.com/cl/ram-2500.html",
+    "localSrc": "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/header/2500.png",
+    "imageSource": "fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+    "size": [
+      300,
+      150
+    ]
+  },
+  {
+    "brand": "Landking",
+    "family": "LK8 EV",
+    "pattern": "\\bLK8[\\s,_-]+EV(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Landking LK8 EV (referencial de vehículo oficial)",
+    "author": "Landking Chile · fabricante",
+    "source": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk8-ev.html",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk8-ev.html",
+    "localSrc": "https://www.landking.cl/content/dam/landking/vehiculos/camiones-eléctricos/lk8-ev-cargo-box/equipamiento-diseño-exterior/LK8_DIAGONAL1_1280x508.jpg",
+    "imageSource": "fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+    "size": [
+      1280,
+      508
+    ]
+  },
+  {
+    "brand": "Mini",
+    "family": "JCW Eléctrico",
+    "pattern": "\\bJCW[\\s,_-]+Eléctrico(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Mini JCW Eléctrico (referencial de vehículo oficial)",
+    "author": "Mini Chile · fabricante",
+    "source": "https://www.mini.cl/electric/descubre-los-modelos",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.mini.cl/electric/descubre-los-modelos",
+    "localSrc": "https://www.mini.cl/mini/site/artic/20250515/imag/foto_0000000420250515150002/mini-JCW-teaser-electric.webp",
+    "imageSource": "fabricante oficial",
+    "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+    "size": [
+      3072,
+      1728
+    ]
+  }
+];
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
