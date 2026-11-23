@@ -1,0 +1,406 @@
+{
+  "date": "2026-11-22",
+  "method": "Enlaces directos a imágenes oficiales, sin copiar ni alojar archivos de terceros",
+  "rights": "Derechos reservados por sus titulares. Enlaces externos: revisar condiciones de uso antes de redistribuir o descargar",
+  "images": [
+    {
+      "brand": "Hino",
+      "family": "City 515",
+      "pattern": "\\bCity[\\s,_-]+515(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Hino City 515 (fotografía oficial referencial)",
+      "author": "Hino Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.hino.cl/vehiculo/xzu-616",
+      "source": "https://www.hino.cl/vehiculo/xzu-616",
+      "localSrc": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010420221115153533/city515.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        220,
+        110
+      ]
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 616",
+      "pattern": "\\bXZU[\\s,_-]+616(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Hino XZU 616 (fotografía oficial referencial)",
+      "author": "Hino Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.hino.cl/vehiculo/xzu-616",
+      "source": "https://www.hino.cl/vehiculo/xzu-616",
+      "localSrc": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010220221115153619/xzu616.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        220,
+        110
+      ]
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 617 DC",
+      "pattern": "\\bXZU[\\s,_-]+617[\\s,_-]+DC(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Hino XZU 617 DC (fotografía oficial referencial)",
+      "author": "Hino Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.hino.cl/vehiculo/xzu-616",
+      "source": "https://www.hino.cl/vehiculo/xzu-616",
+      "localSrc": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008820221115153656/xzu617dc.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        220,
+        110
+      ]
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 816",
+      "pattern": "\\bXZU[\\s,_-]+816(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Hino XZU 816 (fotografía oficial referencial)",
+      "author": "Hino Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.hino.cl/vehiculo/xzu-616",
+      "source": "https://www.hino.cl/vehiculo/xzu-616",
+      "localSrc": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000009220221115153836/xzu816.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        220,
+        110
+      ]
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 817",
+      "pattern": "\\bXZU[\\s,_-]+817(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Hino XZU 817 (fotografía oficial referencial)",
+      "author": "Hino Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.hino.cl/vehiculo/xzu-616",
+      "source": "https://www.hino.cl/vehiculo/xzu-616",
+      "localSrc": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010020221115153800/xzu817.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        220,
+        110
+      ]
+    },
+    {
+      "brand": "Hino",
+      "family": "XZU 917",
+      "pattern": "\\bXZU[\\s,_-]+917(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Hino XZU 917 (fotografía oficial referencial)",
+      "author": "Hino Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.hino.cl/vehiculo/xzu-616",
+      "source": "https://www.hino.cl/vehiculo/xzu-616",
+      "localSrc": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010120221115153904/xzu917.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        220,
+        110
+      ]
+    },
+    {
+      "brand": "Changan",
+      "family": "star-truck-plus-pick-up-cabina-simple",
+      "pattern": "\\bstar[\\s,_-]+truck[\\s,_-]+plus[\\s,_-]+pick[\\s,_-]+up[\\s,_-]+cabina[\\s,_-]+simple(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Changan star-truck-plus-pick-up-cabina-simple (fotografía oficial referencial)",
+      "author": "Changan Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+      "source": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+      "localSrc": "https://www.changan.cl/media/i54pz1la/blanco.webp?format=webp&quality=82&v=1dd317ee9d67810",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        1000,
+        493
+      ]
+    },
+    {
+      "brand": "Changan",
+      "family": "star-truck-plus-pick-up-cabina-doble",
+      "pattern": "\\bstar[\\s,_-]+truck[\\s,_-]+plus[\\s,_-]+pick[\\s,_-]+up[\\s,_-]+cabina[\\s,_-]+doble(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Changan star-truck-plus-pick-up-cabina-doble (fotografía oficial referencial)",
+      "author": "Changan Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+      "source": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+      "localSrc": "https://www.changan.cl/media/zewgyqbl/blanco.webp?format=webp&quality=82&v=1dd317ee87365a0",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        1000,
+        493
+      ]
+    },
+    {
+      "brand": "Changan",
+      "family": "star-truck-plus-cargo-box",
+      "pattern": "\\bstar[\\s,_-]+truck[\\s,_-]+plus[\\s,_-]+cargo[\\s,_-]+box(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Changan star-truck-plus-cargo-box (fotografía oficial referencial)",
+      "author": "Changan Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+      "source": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+      "localSrc": "https://www.changan.cl/media/r3odurtc/blanco.webp?format=webp&quality=82&v=1dd317eea6f83c0",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        720,
+        414
+      ]
+    },
+    {
+      "brand": "Landking",
+      "family": "LK3",
+      "pattern": "\\bLK3(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Landking LK3 (fotografía oficial referencial)",
+      "author": "Landking Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk3.html",
+      "source": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk3.html",
+      "localSrc": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_648914320_/lk_carousel_copy/item_1736965047483_c/image.coreimg.jpeg/1744143455257/lk3-pu-blanco-1200x1200.jpeg",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        1200,
+        1200
+      ]
+    },
+    {
+      "brand": "Landking",
+      "family": "LK5",
+      "pattern": "\\bLK5(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Landking LK5 (fotografía oficial referencial)",
+      "author": "Landking Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk5.html",
+      "source": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk5.html",
+      "localSrc": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_648914320__873940372/lk_carousel_copy/item_1736965047483_c/image.coreimg.jpeg/1744144063229/lk5-pu-blanco-1200x1200.jpeg",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        1200,
+        1200
+      ]
+    },
+    {
+      "brand": "Landking",
+      "family": "LK 1016",
+      "pattern": "\\bLK[\\s,_-]+1016(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Landking LK 1016 (fotografía oficial referencial)",
+      "author": "Landking Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.landking.cl/content/landking/es/home/modelos/camiones/lk-1016.html",
+      "source": "https://www.landking.cl/content/landking/es/home/modelos/camiones/lk-1016.html",
+      "localSrc": "https://www.landking.cl/content/dam/landking/vehiculos/camiones/lk-1016/equipamiento/exterior/LK1016_PICKUP_1280x508%20ok.jpg",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        1900,
+        500
+      ]
+    },
+    {
+      "brand": "Landking",
+      "family": "LK 614",
+      "pattern": "\\bLK[\\s,_-]+614(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Landking LK 614 (fotografía oficial referencial)",
+      "author": "Landking Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.landking.cl/content/landking/es/home/modelos/camiones/lk-614.html",
+      "source": "https://www.landking.cl/content/landking/es/home/modelos/camiones/lk-614.html",
+      "localSrc": "https://www.landking.cl/content/dam/landking/vehiculos/camiones/lk-614/equipamiento/exterior/LK614_PICKUP_1280x508.jpg",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        1900,
+        500
+      ]
+    },
+    {
+      "brand": "JMC",
+      "family": "All New Vigus Pro",
+      "pattern": "\\bAll[\\s,_-]+New[\\s,_-]+Vigus[\\s,_-]+Pro(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "JMC All New Vigus Pro (fotografía oficial referencial)",
+      "author": "JMC Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.jmcchile.cl/modelos/all-new-vigus-pro/",
+      "source": "https://www.jmcchile.cl/modelos/all-new-vigus-pro/",
+      "localSrc": "https://jmcchile.cl/wp-content/uploads/2026/02/VigusPro-SF2.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        800,
+        515
+      ]
+    },
+    {
+      "brand": "JMC",
+      "family": "Vigus EV",
+      "pattern": "\\bVigus[\\s,_-]+EV(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "JMC Vigus EV (fotografía oficial referencial)",
+      "author": "JMC Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.jmcchile.cl/modelos/vigus-ev/",
+      "source": "https://www.jmcchile.cl/modelos/vigus-ev/",
+      "localSrc": "https://jmcchile.cl/wp-content/uploads/2025/10/Vigus-EV-SF.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        800,
+        386
+      ]
+    },
+    {
+      "brand": "JMC",
+      "family": "EV3",
+      "pattern": "\\bEV3(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "JMC EV3 (fotografía oficial referencial)",
+      "author": "JMC Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.jmcchile.cl/modelos/ev3/",
+      "source": "https://www.jmcchile.cl/modelos/ev3/",
+      "localSrc": "https://jmcchile.cl/wp-content/uploads/2026/09/Hero-Carrusel-EV3.webp",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        800,
+        500
+      ]
+    },
+    {
+      "brand": "Shineray",
+      "family": "T32 CD",
+      "pattern": "\\bT32[\\s,_-]+CD(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Shineray T32 CD (fotografía oficial referencial)",
+      "author": "Shineray Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t32-con-a-c/general/",
+      "source": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t32-con-a-c/general/",
+      "localSrc": "https://www.shineraychile.cl/content/uploads/2021/07/T32_blanco.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        710,
+        310
+      ]
+    },
+    {
+      "brand": "Shineray",
+      "family": "T50 CS",
+      "pattern": "\\bT50[\\s,_-]+CS(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Shineray T50 CS (fotografía oficial referencial)",
+      "author": "Shineray Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t50-con-a-c/general/",
+      "source": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t50-con-a-c/general/",
+      "localSrc": "https://www.shineraychile.cl/content/uploads/2021/07/T50_blanco.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        710,
+        310
+      ]
+    },
+    {
+      "brand": "Shineray",
+      "family": "T52 CD",
+      "pattern": "\\bT52[\\s,_-]+CD(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Shineray T52 CD (fotografía oficial referencial)",
+      "author": "Shineray Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t52-con-a-c/general/",
+      "source": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t52-con-a-c/general/",
+      "localSrc": "https://www.shineraychile.cl/content/uploads/2021/07/T52_blanco.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        710,
+        310
+      ]
+    },
+    {
+      "brand": "Shineray",
+      "family": "X30 con A/C",
+      "pattern": "\\bX30[\\s,_-]+con[\\s,_-]+A/C(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Shineray X30 con A/C (fotografía oficial referencial)",
+      "author": "Shineray Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-x30-con-a-c/general/",
+      "source": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-x30-con-a-c/general/",
+      "localSrc": "https://www.shineraychile.cl/content/uploads/2021/07/X30_blanco.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        710,
+        310
+      ]
+    },
+    {
+      "brand": "Shineray",
+      "family": "T30 CS",
+      "pattern": "\\bT30[\\s,_-]+CS(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Shineray T30 CS (fotografía oficial referencial)",
+      "author": "Shineray Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t30-con-a-c/general/",
+      "source": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/shineray-t30-con-a-c/general/",
+      "localSrc": "https://www.shineraychile.cl/content/uploads/2021/07/T30_blanco.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "No se verificó una licencia abierta; la imagen se enlaza desde el sitio de origen",
+      "size": [
+        710,
+        310
+      ]
+    }
+  ]
+}
