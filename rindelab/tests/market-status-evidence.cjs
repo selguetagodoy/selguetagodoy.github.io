@@ -23,7 +23,7 @@ for(const r of evidence.records){
   await page.waitForFunction(()=>document.querySelector('#searchButton')?.disabled===false,{timeout:45000});
   const count=async()=>Number((await page.locator('#resultCount').innerText()).match(/^[\d.]+/)[0].replace(/\./g,''));
   const query=async(q)=>{await page.locator('#query').fill(q);await page.locator('#searchButton').click();};
-  await page.selectOption('#catalogScope','upcoming');
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','upcoming');
   await query('');
   assert.equal(await count(),11,'Lanzamientos anunciados: total incorrecto');
   await query('Peugeot 3008');
@@ -37,7 +37,7 @@ for(const r of evidence.records){
   await query('Volvo EX60');
   assert.equal(await count(),3);
   assert.match(await page.locator('.vehicle-card').first().innerText(),/Inscripción de interés/);
-  await page.selectOption('#catalogScope','market-priced');
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','market-priced');
   await query('');
   // El expediente editorial conserva seis anuncios; el filtro vivo exige además
   // precio actual no vencido y tecnología inequívocamente asociada.
@@ -63,7 +63,7 @@ for(const r of evidence.records){
    shown+=n;
   }
   assert.equal(shown,validNow,'Las fichas visibles deben corresponder a las ofertas documentadas');
-  await page.selectOption('#catalogScope','family-price-review');
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','family-price-review');
   await query('');
   assert.equal(await count(),390,'379 anteriores y 11 referencias de familia CIDEF');
   await query('Sinotruk Bolden');
@@ -119,7 +119,7 @@ for(const r of evidence.records){
   await query('BMW 330e');
   assert.equal(await count(),2);
   assert.match(await page.locator('.vehicle-card').first().innerText(),/65\.900\.000/);
-  await page.selectOption('#catalogScope','recent-no-price');
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','recent-no-price');
   await query('');
   const pendingRecent=await count();
   assert(pendingRecent>0&&pendingRecent<8394,'Debe haber homologaciones recientes sin precio, sin confundir con toda la historia 3CV');
@@ -129,7 +129,7 @@ for(const r of evidence.records){
   assert.match(await page.locator('.vehicle-card').first().innerText(),/Referencias antiguas de la familia · Motor y vigencia por revisar/);
   await query('Peugeot 3008 Allure 180HP');
   assert.equal(await count(),0,'No duplicar la variante anunciada en categoria sin anuncio');
-  await page.selectOption('#catalogScope','all');
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','all');
   await query('Mokka Electric');
   assert.equal(await count(),1);
   assert.deepEqual(failures,[],'Errores de JavaScript');

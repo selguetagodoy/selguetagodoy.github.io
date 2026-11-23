@@ -8,16 +8,19 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  try{
   await page.goto(base,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>!document.querySelector('#searchButton').disabled,{timeout:30000});
-  assert.equal(await page.locator('#catalogScope').inputValue(),'priced');
+  assert.equal(await page.locator('#catalogScope').inputValue(),'all');
   assert(await page.locator('#year option[value="2023"]').count(),'Falta un año intermedio');
   assert(await page.locator('#year option[value="2026"]').count(),'Falta el año de homologación actual');
   await page.locator('#query').fill('Corolla Cross');
   await page.locator('#searchButton').click();
+  const allAtFirst=parseInt(await page.locator('#resultCount').innerText(),10);
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','priced');
   const priced=parseInt(await page.locator('#resultCount').innerText(),10);
   assert(priced>0,'El catálogo comercial no devuelve Corolla Cross');
-  await page.selectOption('#catalogScope','all');
+  await page.locator('#catalogScopeDetails').evaluate(el=>el.open=true);await page.selectOption('#catalogScope','all');
   const archival=parseInt(await page.locator('#resultCount').innerText(),10);
-  assert(archival>=priced,'Cambiar al historial completo oculta resultados');
+  assert(archival>=priced&&archival===allAtFirst,'Cambiar al historial completo oculta resultados');
   // Independiente de los filtros, ninguna referencia HEV puede quedar asignada a Kona EV.
   const identities=await page.evaluate(()=>({
    ev:window.RindelabCommercial.minimum(['Hyundai','Kona','EV'],'Kona'),

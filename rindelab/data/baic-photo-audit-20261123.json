@@ -1,0 +1,719 @@
+{
+  "groupCount": 39,
+  "legacyCount": 39,
+  "legacyPhotoRows": 38,
+  "modernCount": 1,
+  "modern": [
+    [
+      "BAW",
+      "212 Pick Up",
+      "Combustión",
+      "2026-09-15",
+      "BW10626E60826M00-4"
+    ]
+  ],
+  "groups": [
+    {
+      "brand": "Baic",
+      "model": "Advance 1,5 Lts. Sedán 4P. T/M Otto",
+      "total": 1,
+      "withPhoto": 0,
+      "earliest": "2015-05-06",
+      "latest": "2015-05-06",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2015-05-06",
+          "code": "BC6147E50315S00-4",
+          "picture": null
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BAIC BJ30",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-11-07",
+      "latest": "2025-11-07",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2025-11-07",
+          "code": "BC10298E60925S00-4",
+          "picture": "./images/commons/rindelab-baic-bj30-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BAIC BJ40 Pro",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-12-04",
+      "latest": "2025-12-04",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2025-12-04",
+          "code": "BC10314E61025S00-9",
+          "picture": "./images/commons/rindelab-baic-historical-bj40pro-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "Baic BJ60",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-12-16",
+      "latest": "2025-12-16",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2025-12-16",
+          "code": "BC10327E61025M00-0",
+          "picture": "./images/commons/rindelab-baic-bj60-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "Baic EU5",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-12-26",
+      "latest": "2025-12-26",
+      "tech": [
+        "EV"
+      ],
+      "examples": [
+        {
+          "date": "2025-12-26",
+          "code": "BC10340EL1025S00-8",
+          "picture": "./images/commons/rindelab-baic-eu5-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "Beijing EU5 BS",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2026-02-05",
+      "latest": "2026-02-05",
+      "tech": [
+        "EV"
+      ],
+      "examples": [
+        {
+          "date": "2026-02-05",
+          "code": "BC10240EL0825S00-4",
+          "picture": "./images/commons/rindelab-baic-eu5-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BJ30 HEV",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-12-30",
+      "latest": "2025-12-30",
+      "tech": [
+        "HEV"
+      ],
+      "examples": [
+        {
+          "date": "2025-12-30",
+          "code": "BC10325E61025S00-0",
+          "picture": "./images/commons/rindelab-baic-historical-bj30hev-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BJ40 Pro Diesel",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-12-12",
+      "latest": "2025-12-12",
+      "tech": [
+        "Diésel"
+      ],
+      "examples": [
+        {
+          "date": "2025-12-12",
+          "code": "BC10326E61025M00-4",
+          "picture": "./images/commons/rindelab-baic-historical-bj40pro-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BJ40P 2.0 TDI 8AT 2WD E6",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2022-04-12",
+      "latest": "2022-04-12",
+      "tech": [
+        "Diésel"
+      ],
+      "examples": [
+        {
+          "date": "2022-04-12",
+          "code": "BC8575E60322S01-5",
+          "picture": "./images/commons/rindelab-baic-historical-bj40plus-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BJ40P 2.0 TDI 8AT 4WD E6",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2022-04-12",
+      "latest": "2022-04-12",
+      "tech": [
+        "Diésel"
+      ],
+      "examples": [
+        {
+          "date": "2022-04-12",
+          "code": "BC8575E60322S00-1",
+          "picture": "./images/commons/rindelab-baic-historical-bj40plus-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BJ40P 2.0T-GDI 8AT 4WD E6",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2023-01-05",
+      "latest": "2023-01-05",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2023-01-05",
+          "code": "BC8574E60123S01-2",
+          "picture": "./images/commons/rindelab-baic-historical-bj40plus-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "BJ40P 2.0T-GDI 8AT E6",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2022-04-01",
+      "latest": "2022-04-01",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2022-04-01",
+          "code": "BC8574E60322S00-6",
+          "picture": "./images/commons/rindelab-baic-historical-bj40plus-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "EU5 EV SDN AT",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2023-02-16",
+      "latest": "2023-02-16",
+      "tech": [
+        "EV"
+      ],
+      "examples": [
+        {
+          "date": "2023-02-16",
+          "code": "BC8655EL0622S00-0",
+          "picture": "./images/commons/rindelab-baic-eu5-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "Grand Plus 1,2 Lts. Furgón 5P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2017-10-13",
+      "latest": "2017-10-13",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2017-10-13",
+          "code": "BC5822E51017S01-7",
+          "picture": "https://res.cloudinary.com/safelemon/image/upload/w_1440/blog/r2ajcezxk3kmzv5rbsnz"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "U5 Plus CVT",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-11-24",
+      "latest": "2025-11-24",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2025-11-24",
+          "code": "BC10299E60925S00-0",
+          "picture": "./images/commons/rindelab-baic-u5-plus-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "U5 Plus MT",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2025-12-26",
+      "latest": "2025-12-26",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2025-12-26",
+          "code": "BC10307E60925S00-3",
+          "picture": "./images/commons/rindelab-baic-u5-plus-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "UP (D20) 1,3 Lts. Hatchback 5P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2015-11-30",
+      "latest": "2015-11-30",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2015-11-30",
+          "code": "BC6433E51115S01-2",
+          "picture": "./images/commons/rindelab-baic-historical-uphatch-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "UP (D20) 1,3 Lts. Sedán 4P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2015-11-30",
+      "latest": "2015-11-30",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2015-11-30",
+          "code": "BC6433E51115S00-9",
+          "picture": "./images/commons/rindelab-baic-historical-upsedan-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "UP 1,3 Lts. DOHC Hatchback 5P. T/M Motor Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2014-08-18",
+      "latest": "2014-08-18",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2014-08-18",
+          "code": "BC5824E50714S01-0",
+          "picture": "./images/commons/rindelab-baic-historical-uphatch-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "UP 1,3 Lts. DOHC Sedán 4P. T/M Motor Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2014-08-18",
+      "latest": "2014-08-18",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2014-08-18",
+          "code": "BC5824E50714S00-7",
+          "picture": "./images/commons/rindelab-baic-historical-upsedan-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "UP 1,5 Lts. DOHC Hatchback 5P. T/M Motor Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2014-08-22",
+      "latest": "2014-08-22",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2014-08-22",
+          "code": "BC5823E50714S00-1",
+          "picture": "./images/commons/rindelab-baic-historical-uphatch-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "UP 1,5 Lts. DOHC Sedán 4P. T/M Motor Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2014-08-22",
+      "latest": "2014-08-22",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2014-08-22",
+          "code": "BC5823E50714S01-5",
+          "picture": "./images/commons/rindelab-baic-historical-upsedan-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X25 1,5 Lts. Station Wagon 5P. T/A Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2017-02-03",
+      "latest": "2017-02-03",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2017-02-03",
+          "code": "BC6835E51216S00-4",
+          "picture": "./images/commons/rindelab-baic-historical-x25-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X25 1,5 Lts. Station Wagon 5P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2016-01-26",
+      "latest": "2016-01-26",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2016-01-26",
+          "code": "BC6499E50116S00-1",
+          "picture": "./images/commons/rindelab-baic-historical-x25-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X35 (BJ7150U3BAB) 1,5 Lts. Station Wagon 5P. T/A Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2017-05-03",
+      "latest": "2017-05-03",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2017-05-03",
+          "code": "BC6929E50417S00-6",
+          "picture": "./images/commons/rindelab-baic-historical-x35old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X35 1,5 Lts. Station Wagon 5P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2017-02-23",
+      "latest": "2017-02-23",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2017-02-23",
+          "code": "BC6853E50117S00-6",
+          "picture": "./images/commons/rindelab-baic-historical-x35old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X35 1.5 MPI AT",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2021-09-02",
+      "latest": "2021-09-02",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2021-09-02",
+          "code": "BC8395E50821S00-0",
+          "picture": "./images/commons/rindelab-baic-historical-x35old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X35 1.5 MPI MT",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2020-10-08",
+      "latest": "2020-10-08",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2020-10-08",
+          "code": "BC8120E50920S00-2",
+          "picture": "./images/commons/rindelab-baic-historical-x35old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X35 1.5T MPI 6MT E6c",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2023-01-30",
+      "latest": "2023-01-30",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2023-01-30",
+          "code": "BC8879E61222S00-3",
+          "picture": "./images/commons/rindelab-baic-x35-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X35 1.5T MPI CVT E6c",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2023-01-30",
+      "latest": "2023-01-30",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2023-01-30",
+          "code": "BC8878E61222S00-8",
+          "picture": "./images/commons/rindelab-baic-x35-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X55 1,5 Lts. Station Wagon 5P. T/A Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2017-02-09",
+      "latest": "2017-02-09",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2017-02-09",
+          "code": "BC6855E50117S00-7",
+          "picture": "./images/commons/rindelab-baic-historical-x55old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X55 1.5T AT",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2019-12-11",
+      "latest": "2019-12-11",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2019-12-11",
+          "code": "BC7869E51019S00-7",
+          "picture": "./images/commons/rindelab-baic-historical-x55old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X55 1.5T MPI 6MT E6c",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2023-02-28",
+      "latest": "2023-02-28",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2023-02-28",
+          "code": "BC8877E61222S00-2",
+          "picture": "./images/commons/rindelab-baic-x55-commonsmass-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X55 1.5T MT",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2019-11-18",
+      "latest": "2019-11-18",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2019-11-18",
+          "code": "BC7868E51019S00-1",
+          "picture": "./images/commons/rindelab-baic-historical-x55old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X55 Plus 1.5T-GDI 7DCT E6c",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2023-01-19",
+      "latest": "2023-01-19",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2023-01-19",
+          "code": "BC8868E61222S00-3",
+          "picture": "./images/commons/rindelab-baic-historical-x55plus-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X55 T 1,5 Lts. Station Wagon 5P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2017-02-10",
+      "latest": "2017-02-10",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2017-02-10",
+          "code": "BC6704E50816S00-8",
+          "picture": "./images/commons/rindelab-baic-historical-x55old-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X65 2,0 Lts. Station Wagon 5P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2015-12-15",
+      "latest": "2015-12-15",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2015-12-15",
+          "code": "BC6457E51215S00-9",
+          "picture": "./images/commons/rindelab-baic-historical-x65-20261123.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "X7 1.5T-GDI 7DCT E6c",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2023-12-19",
+      "latest": "2023-12-19",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2023-12-19",
+          "code": "BC9342E61123S00-8",
+          "picture": "./images/commons/rindelab-baic-x7-commons-gap5-20261122.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Baic",
+      "model": "Zoom 2,4 Lts. Tipo Jeep 3P. T/M Otto",
+      "total": 1,
+      "withPhoto": 1,
+      "earliest": "2015-07-15",
+      "latest": "2015-07-15",
+      "tech": [
+        "Bencina"
+      ],
+      "examples": [
+        {
+          "date": "2015-07-15",
+          "code": "BC6148E50315S00-K",
+          "picture": "./images/commons/rindelab-baic-historical-zoom-20261123.jpg"
+        }
+      ]
+    }
+  ]
+}
