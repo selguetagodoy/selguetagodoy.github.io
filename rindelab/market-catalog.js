@@ -141,7 +141,13 @@ function comparison(){
  let table='<table class="market-compare-table"><thead><tr><th>Indicador</th>'+xs.map(x=>'<th>'+safe(x.brand+' '+x.family)+'<br>'+safe(labelTech(x.tech))+'</th>').join('')+'</tr></thead><tbody>';
  table+=rows.map(([label,get])=>'<tr><th>'+safe(label)+'</th>'+xs.map(x=>'<td>'+safe(get(x))+'</td>').join('')+'</tr>').join('');
  table+='<tr><th>Fuente de referencia</th>'+xs.map(x=>'<td><a href="'+safe(x.ref.source)+'" target="_blank" rel="noopener noreferrer">Consultar fuente ↗</a></td>').join('')+'</tr></tbody></table>';
- compareBody.innerHTML='<p class="market-comparison-warning">Comparación comercial de familias, no de versiones homologadas. La tasación y el permiso solo aparecen después de elegir manualmente un año, versión y código SII desde cada tarjeta. Esa elección tampoco certifica equivalencia con el código 3CV. Precios comerciales sujetos a vigencia, IVA y condiciones.</p><div class="market-table-scroll" role="region" tabindex="0" aria-label="Tabla comercial desplazable">'+table+'</div>';
+ const mobileCards='<div class="market-compare-mobile" aria-label="Comparación de vehículos en tarjetas">'+xs.map(x=>
+  '<article class="market-compare-mobile-card"><h3>'+safe(x.brand+' '+x.family)+'</h3><small>'+safe(labelTech(x.tech))+'</small><dl>'+
+  rows.map(([label,get])=>'<div><dt>'+safe(label)+'</dt><dd>'+safe(get(x))+'</dd></div>').join('')+
+  '</dl><a href="'+safe(x.ref.source)+'" target="_blank" rel="noopener noreferrer">Ver fuente comercial de '+safe(x.brand+' '+x.family)+' ↗</a></article>').join('')+'</div>';
+ compareBody.innerHTML='<p class="market-comparison-warning">Comparación comercial de familias, no de versiones homologadas. La tasación y el permiso solo aparecen después de elegir manualmente un año, versión y código SII desde cada tarjeta. Esa elección tampoco certifica equivalencia con el código 3CV. Precios comerciales sujetos a vigencia, IVA y condiciones.</p>'+
+ '<p class="market-mobile-hint">En teléfono, compara cada modelo en una tarjeta con sus indicadores y precios identificados.</p>'+mobileCards+
+ '<div class="market-table-scroll" role="region" tabindex="0" aria-label="Tabla comercial desplazable">'+table+'</div>';
  compareDialog.showModal();
 }
 $('commercialResultList').addEventListener('click',event=>{const sii=event.target.closest('[data-market-sii]');

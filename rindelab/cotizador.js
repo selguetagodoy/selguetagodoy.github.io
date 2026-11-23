@@ -72,7 +72,7 @@ function render(){
   const actions=document.createElement('div');actions.className='quote-version-actions';
   const btn=document.createElement('button');btn.type='button';btn.className='button '+(active?'primary':'secondary');btn.textContent=retired?'Modelo descontinuado':active?'Versión seleccionada':'Cotizar esta versión';
   btn.disabled=retired||!!active;btn.addEventListener('click',()=>{if(!retired)select(x);});
-  const a=document.createElement('a');a.href=x.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ver fuente ↗';
+  const a=document.createElement('a');a.href=x.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ver precio de esta versión en fuente ↗';
   actions.append(btn,a);if(retired&&/^https:\/\//.test(x.statusSource||'')){const source=document.createElement('a');source.href=x.statusSource;source.target='_blank';source.rel='noopener noreferrer';source.textContent='Ver retiro del catálogo ↗';actions.append(source);}card.append(actions);box.append(card);
  });
  $('quoteMore').hidden=limit>=visible.length;
@@ -156,7 +156,7 @@ $('quotePrint').addEventListener('click',()=>{if(amount()!==null)window.print();
 async function init(){
  for(const id of ['quoteCopy','quotePrint'])$(id).disabled=true;
  try{
-  const resp=await fetch('./sii/commercial-2026.json?v=20261020-list1504');
+  const resp=await fetch('./sii/commercial-2026.json?v=20261123-byd-variants');
   if(!resp.ok)throw Error('No disponible');
   const data=await resp.json();if(!Array.isArray(data))throw Error('Formato incorrecto');
   catalog=data.filter(x=>x&&x.currency==='CLP'&&Number.isInteger(x.priceListClp)&&x.priceListClp>0&&

@@ -8,3 +8,10 @@
 #electroRows .rinde-photo-unavailable{font-size:10px;color:#6b7280}
 #electroRows td:first-child{min-width:185px}
 @media(max-width:620px){#electroRows td:first-child .rinde-photo-thumb{width:64px;margin-right:8px}#electroRows .rinde-photo-thumb img{width:64px;height:44px}#electroRows .rinde-photo-attribution{font-size:8px}}
+
+
+/* QA móvil 390px: navegación de electromovilidad operable con el dedo. */
+@media(max-width:760px){
+ .top .nav nav a{display:inline-flex;align-items:center;min-height:44px;
+  padding:10px 9px;line-height:1.3}
+}

@@ -1463,24 +1463,28 @@
     "family": "Yuan Pro DM-i",
     "version": "Yuan Pro DM-i GL",
     "priceListClp": 19990000,
-    "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
-    "priceBasis": "Precio de lista oficial de BYD para Yuan Pro DM-i GL consignado en condiciones vigentes hasta el 31 de octubre de 2026, separado del financiamiento. No confundir con Yuan Pro eléctrico.",
+    "source": "https://astararetail.cl/byd-yuan-pro/",
+    "priceBasis": "Lista por versión Yuan Pro DM-i GL publicada por Astara Retail, vigencia declarada hasta el 30-11-2026. No incluye descuentos de financiamiento ni prueba equivalencia con un código 3CV.",
     "modelYear": null,
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-11-22",
     "currency": "CLP",
-    "technology": "PHEV"
+    "technology": "PHEV",
+    "sourceOfferEnd": "2026-11-30",
+    "priceType": "lista"
   },
   {
     "brand": "BYD",
     "family": "Yuan Pro DM-i",
     "version": "Yuan Pro DM-i GS",
     "priceListClp": 22990000,
-    "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
-    "priceBasis": "Precio de lista oficial de BYD para Yuan Pro DM-i GS consignado en condiciones vigentes hasta el 31 de octubre de 2026. No confundir con Yuan Pro eléctrico.",
+    "source": "https://astararetail.cl/byd-yuan-pro/",
+    "priceBasis": "Lista por versión Yuan Pro DM-i GS publicada por Astara Retail, vigencia declarada hasta el 30-11-2026. No incluye descuentos de financiamiento ni prueba equivalencia con un código 3CV.",
     "modelYear": null,
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-11-22",
     "currency": "CLP",
-    "technology": "PHEV"
+    "technology": "PHEV",
+    "sourceOfferEnd": "2026-11-30",
+    "priceType": "lista"
   },
   {
     "brand": "BYD",

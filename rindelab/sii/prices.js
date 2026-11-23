@@ -20,7 +20,7 @@ function ageWarning(record){
 const storageKey=row=>'rindelab:priceList2026:'+String(row[9]||'')+'|'+norm(row[0]+' '+row[1]);
 let promise=null,loaded=[],byFamily=new Map();
 function catalog(){
- return promise??=(fetch('./sii/commercial-2026.json?v=20261022-list1514').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
+ return promise??=(fetch('./sii/commercial-2026.json?v=20261123-byd-variants').then(r=>{if(!r.ok)throw Error('catálogo no disponible');return r.json();}).then(list=>{
   if(!Array.isArray(list))throw Error('formato de precios inválido');
   loaded=list.filter(C.valid);byFamily=C.index(loaded);
   window.dispatchEvent(new Event("rindelab:prices-ready"));
@@ -29,6 +29,18 @@ function catalog(){
 }
 function match(row,family){
  return C.familyRecords(byFamily,row,family);
+}
+function priceForHomologation(row,family){
+ const ref=C.priceReference(byFamily,row,family);
+ if(!ref)return null;
+ if(C.brand(row[0])!=='BYD'||C.family(family,row[0])!=='YUAN PRO DM I')return ref;
+ const model=C.norm(row[1]||''),variant=model.match(/\b(GL|GS)$/);
+ if(!variant)return null;
+ const matching=match(row,family).find(p=>
+  C.norm(p.version||'').endsWith(' '+variant[1])&&
+  C.compatible(row,p)&&!C.expired(p));
+ // Solo es una referencia comercial homónima, no equivalencia de código 3CV.
+ return matching?{...matching,association:'same-tech',campaignExpired:false,referenceOnly:true}:null;
 }
 function selected(row){
  try{const key=localStorage.getItem(storageKey(row));return loaded.find(x=>C.active(x)&&C.compatible(row,x)&&makeIdentity(x)===key)||null;}catch{return null;}
@@ -108,7 +120,7 @@ window.RindelabCommercial={
  selected,
  available:(row,family)=>match(row,family),
  hasReference:(row,family)=>Boolean(C.priceReference(byFamily,row,family)),
- minimum:(row,family)=>C.priceReference(byFamily,row,family),
+ minimum:priceForHomologation,
  cleanPrice:record=>record&&C.active(record)&&!C.expired(record)&&record.taxIncluded!==false&&record.priceType!=='oferta'&&record.priceType!=='desde'&&!/^Precio desde/i.test(record.version)&&record.priceListClp>0,
  clp,
  ageWarning

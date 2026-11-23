@@ -111,3 +111,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
  .quote-version-price strong{font-size:15px}
  .rindelab-brand-directory main>p:not(.muted){font-size:14px;line-height:1.58}
 }
+
+
+/* QA móvil: botones de navegación secundarios con área táctil >=44 px. */
+@media(max-width:760px){
+ .site-header .coverage-nav a,.site-header .header-links a,
+ .rindelab-brand-directory header nav a:not(.logo){
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:9px 10px;line-height:1.3;
+ }
+ .rindelab-brand-directory header nav{gap:5px;flex-wrap:wrap}
+}
