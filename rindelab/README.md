@@ -1,5 +1,20 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Lotes 9, 10 y 11 · 14 referencias adicionales (22/11/2026)
+
+Se añadieron **14 referencias de imágenes externas** obtenidas de fuentes comerciales concretas y revisadas visualmente: Foton View Grand Pasajeros; JAC Refine Cargo e Ignite30X; Kaiyi Kye-5, Kyx3 y Kyx3 Pro; KYC Gran Mamut (chasis y cargo box); Foton FT/FT Crew; Chery Tiggo 2 Pro Max; y Changan Serie M (gama, cargo box y furgón). Las imágenes permanecen en los servidores de origen y cada asociación registra URL de imagen, página de procedencia y derechos reservados. Se buscaron también referencias en Google Imágenes y portales nacionales; no se infiere licencia abierta por la mera presencia en una búsqueda.
+
+La cobertura asciende a **673 de 700 grupos (96,1 %)**, con **623 referencias de imagen** en biblioteca y **27 grupos todavía pendientes**. Al inicio de estos tres lotes había 42 sin imagen. Se mantienen intactos los precios y homologaciones.
+
+**Fuentes verificadas:** sitios oficiales de JAC Chile, CIDEF/Foton, Chery Chile, Kaiyi Chile, KYC Motors; portales Auto.cl y Autocosmos Chile (fotografías Changan Serie M). Manifiestos: `data/manufacturer-photo-batch9-20261122.json`, `data/manufacturer-photo-batch10-20261122.json`, `data/manufacturer-photo-batch11-20261122.json`.
+
+**Karry pendiente:** un navegador público recuperó tres páginas y URL fotográficas oficiales para Q22 Cabina Simple, Q51 Cabina Simple y Q52 Cabina Doble. Los servidores rechazaron las peticiones directas desde el equipo con HTTP 403, por lo que **no se sumaron a la cobertura ni se publicaron enlaces potencialmente rotos**. Q22 Cargo BOX redirige a un login. Trazabilidad: `data/karry-official-leads-20261122.json`.
+
+**Controles:** `node rindelab/tests/manufacturer-official-batch9-10.cjs`, `node rindelab/tests/manufacturer-official-batch11.cjs`, pruebas de lotes anteriores y `node scripts/rindelab-market-queue.cjs --check`.
+
+---
+
+
 ## Lotes 7 y 8 · búsqueda en fabricantes/importadores (22/11/2026)
 
 Se añadieron **17 referencias externas oficiales** a fotografías de modelos comerciales de CIDEF/Foton Chile, DFSK Chile, Chevrolet Chile, RAM Chile, Landking Chile y MINI Chile. Las imágenes se encontraron en las páginas oficiales del vehículo y fueron **revisadas visualmente** para descartar marcas, carrocerías o motorizaciones diferentes y materiales promocionales con precios.
