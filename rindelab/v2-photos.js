@@ -10594,12 +10594,252 @@ function allowReferenceFor2027(brand,model,tech,photo,year){
  if(photoBrandKey(brand)==='porsche'&&photoBrandKey(model)==='cayenne'&&tech==='EV')return false;
  return true;
 }
+// Auditoría histórica 3CV: reutilización por generación verificada, NO por simple coincidencia de nombre.
+// Los archivos, atribuciones y licencias provienen de la biblioteca existente.
+const curatedHistoricImageWindows20261123=[
+  {
+    "src": "./images/commons/rindelab-land-rover-range-rover-commonsmass-20261122.jpg",
+    "from": "2022",
+    "to": "2025",
+    "pattern": "^Range Rover\\s+(?!Sport\\b|Velar\\b|Evoque\\b)"
+  },
+  {
+    "src": "./images/commons/rindelab-land-rover-discovery-carimages-20261122.jpg",
+    "from": "2021",
+    "to": "2025",
+    "pattern": "^Discovery\\s+(?!Sport\\b)"
+  },
+  {
+    "src": "./images/commons/rindelab-volvo-xc60-carimages-20261122.jpg",
+    "from": "2018",
+    "to": "2025",
+    "pattern": "^XC60\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-kia-carens-carimages-20261122.jpg",
+    "from": "2022",
+    "to": "2025",
+    "pattern": "^(?:New\\s+)?Carens\\s+"
+  },
+  {
+    "src": "./images/commons/kia-kia-sorento-068.jpg",
+    "from": "2020",
+    "to": "2020",
+    "pattern": "^Sorento\\s+(?!.*\\bUM\\b)"
+  },
+  {
+    "src": "./images/commons/rindelab-jaguar-f-type-commonsmass-20261122.jpg",
+    "from": "2021",
+    "to": "2024",
+    "pattern": "^F[\\s-]?Type\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-riddara-rd6-commonsmass-batch2-20261122.jpg",
+    "from": "2024",
+    "to": "2025",
+    "pattern": "^RD6\\b",
+    "onlyTech": "EV"
+  },
+  {
+    "src": "./images/commons/jeep-jeep-wrangler-157.jpg",
+    "from": "2018",
+    "to": "2020",
+    "pattern": "^Wrangler\\s+"
+  },
+  {
+    "src": "./images/commons/toyota-toyota-hilux-2022-16.jpg",
+    "from": "2015",
+    "to": "2017",
+    "pattern": "^Hilux\\s+"
+  },
+  {
+    "src": "./images/commons/mazda-mazda-mazda3-184.jpg",
+    "from": "2019",
+    "to": "2019",
+    "pattern": "^Mazda\\s*3\\b"
+  },
+  {
+    "src": "./images/commons/nissan-nissan-navara-189.jpg",
+    "from": "2019",
+    "to": "2020",
+    "pattern": "^Navara\\s+"
+  },
+  {
+    "src": "./images/commons/ram-ram-1500-193.jpg",
+    "from": "2019",
+    "to": "2020",
+    "pattern": "^(?:RAM\\s+)?1500\\s+"
+  },
+  {
+    "src": "./images/commons/bmw-bmw-x5-040.jpg",
+    "from": "2019",
+    "to": "2021",
+    "pattern": "^X5\\b"
+  },
+  {
+    "src": "./images/commons/bmw-bmw-x7-042.jpg",
+    "from": "2019",
+    "to": "2021",
+    "pattern": "^X7\\b"
+  },
+  {
+    "src": "./images/commons/mercedes-benz-mercedes-benz-gle-045.jpg",
+    "from": "2019",
+    "to": "2019",
+    "pattern": "^GLE\\b"
+  },
+  {
+    "src": "./images/commons/kia-kia-sportage-067.jpg",
+    "from": "2021",
+    "to": "2021",
+    "pattern": "^Sportage\\b"
+  },
+  {
+    "src": "./images/commons/hyundai-hyundai-creta-072.jpg",
+    "from": "2020",
+    "to": "2021",
+    "pattern": "^Creta\\s+(?!Grand\\b)"
+  },
+  {
+    "src": "./images/commons/volvo-volvo-xc90-160.jpg",
+    "from": "2015",
+    "to": "2020",
+    "pattern": "^XC90\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-foton-g9-commonsmass-batch2-20261122.jpg",
+    "from": "2024",
+    "to": "2025",
+    "pattern": "^G9\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-foton-v7-commonsmass-batch2-20261122.jpg",
+    "from": "2024",
+    "to": "2025",
+    "pattern": "^V7\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-foton-v9-commonsmass-batch2-20261122.jpg",
+    "from": "2024",
+    "to": "2025",
+    "pattern": "^V9\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-foton-midi-commonsmass-batch2-20261122.jpg",
+    "from": "2025",
+    "to": "2025",
+    "pattern": "^MIDI\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-jetour-x50-commonsmass-batch2-20261122.jpg",
+    "from": "2024",
+    "to": "2025",
+    "pattern": "^X50\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-chery-tiggo-9-commonsmass-20261122.jpg",
+    "from": "2025",
+    "to": "2025",
+    "pattern": "^Tiggo\\s*9\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-volkswagen-tiguan-commonsmass-20261122.jpg",
+    "from": "2025",
+    "to": "2025",
+    "pattern": "^Tiguan\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-citroen-jumper-carimages-20261122.jpg",
+    "from": "2025",
+    "to": "2025",
+    "pattern": "^Jumper\\b"
+  },
+  {
+    "src": "./images/commons/new-peugeot-boxer-reviewed-20261022.jpg",
+    "from": "2023",
+    "to": "2023",
+    "pattern": "^Boxer\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-opel-mokka-commons-20261021.jpg",
+    "from": "2023",
+    "to": "2024",
+    "pattern": "^Mokka\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-maxus-t60-commonsmass-20261122.jpg",
+    "from": "2018",
+    "to": "2025",
+    "pattern": "^T60\\s+(?!MAX\\b)"
+  },
+  {
+    "src": "./images/commons/land-rover-land-rover-range-rover-sport-162.jpg",
+    "from": "2022",
+    "to": "2022",
+    "pattern": "^Range Rover Sport\\b"
+  },
+  {
+    "src": "./images/commons/land-rover-land-rover-discovery-sport-163.jpg",
+    "from": "2019",
+    "to": "2020",
+    "pattern": "^Discovery Sport\\b"
+  },
+  {
+    "src": "./images/commons/land-rover-land-rover-range-rover-velar-164.jpg",
+    "from": "2018",
+    "to": "2020",
+    "pattern": "^(?:Range Rover\\s+)?Velar\\b"
+  },
+  {
+    "src": "./images/commons/rindelab-citro-n-berlingo-commons-20261021.jpg",
+    "from": "2019",
+    "to": "2019",
+    "pattern": "^Berlingo\\b"
+  },
+  {
+    "src": "./images/commons/jeep-jeep-compass-156.jpg",
+    "from": "2018",
+    "to": "2021",
+    "pattern": "^Compass\\b"
+  },
+  {
+    "src": "./images/commons/chevrolet-chevrolet-tracker-053.jpg",
+    "from": "2020",
+    "to": "2020",
+    "pattern": "^Tracker\\b"
+  },
+  {
+    "src": "./images/commons/citroen-citroen-c3-095.jpg",
+    "from": "2021",
+    "to": "2021",
+    "pattern": "^C3\\b(?!.*(?:AIRCROSS|Picasso))"
+  },
+  {
+    "src": "./images/commons/chery-chery-tiggo-7-pro-056.jpg",
+    "from": "2021",
+    "to": "2021",
+    "pattern": "^Tiggo\\s*7\\s*Pro\\b"
+  },
+  {
+    "src": "./images/commons/porsche-porsche-macan-de-combustion-2022-28.jpg",
+    "from": "2025",
+    "to": "2025",
+    "pattern": "^Macan\\s+(?!EV\\b)",
+    "onlyTech": "Bencina"
+  }
+];
+const curatedHistoricImageBySrc20261123=new Map(curatedHistoricImageWindows20261123.map(r=>
+ [r.src,{...r,re:new RegExp(r.pattern,'i')}]));
+function allowCuratedHistoricalImage20261123(photo,model,tech,year){
+ const rule=curatedHistoricImageBySrc20261123.get(photo.src);
+ return Boolean(rule&&year>=rule.from&&year<=rule.to&&rule.re.test(model)&&(!rule.onlyTech||rule.onlyTech===tech));
+}
 function find(row,F){
  const brand=String(row[F.BRAND]||''),model=String(row[F.MODEL]||''),tech=String(row[F.TECH]||''),year=String(row[F.DATE]||'').slice(0,4);
  const macanThermal=(p)=>photoBrandKey(brand)==='porsche'&&photoBrandKey(model)==='macan'&&tech==='Bencina'&&year==='2026'&&p.src==='./images/commons/porsche-porsche-macan-de-combustion-2022-28.jpg';
  // Fotos específicas de tecnología primero; luego la asociación más precisa de carrocería.
  const techRank=p=>tech?(p.tech?3:1):(p.tech?0:2);
- return entries.filter(p=>photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
+ return entries.filter(p=>photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&((year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p)))||allowCuratedHistoricalImage20261123(p,model,tech,year))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
 }
 function findCommercial(p){
  if(!p||!p.brand||!p.family)return null;

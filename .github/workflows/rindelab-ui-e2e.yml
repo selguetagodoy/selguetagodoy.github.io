@@ -134,6 +134,9 @@ jobs:
       - name: Auditar cobertura nominal con base completa 3CV 8394 (noviembre)
         run: node rindelab/tests/coverage-november.cjs
 
+      - name: Verificar 8.394 fichas 3CV y reducción a 5.969 sin imagen
+        run: node rindelab/tests/curated-generation-photo-reuse-20261123.cjs
+
       - name: Guardar expediente auditable de 28 revisiones
         uses: actions/upload-artifact@v4
         with:

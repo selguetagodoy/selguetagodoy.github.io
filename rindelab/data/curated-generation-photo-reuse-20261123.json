@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-23",
+  "scope": "Sólo reutilización referencial de fotos preexistentes por generación; no valida acabados ni versiones",
+  "rules": [
+    {
+      "filename": "rindelab-land-rover-range-rover-commonsmass-20261122.jpg",
+      "from": "2022",
+      "to": "2025",
+      "pattern": "^Range Rover\\s+(?!Sport\\b|Velar\\b|Evoque\\b)",
+      "generation": "Range Rover L460 (quinta generación)"
+    },
+    {
+      "filename": "rindelab-land-rover-discovery-carimages-20261122.jpg",
+      "from": "2021",
+      "to": "2025",
+      "pattern": "^Discovery\\s+(?!Sport\\b)",
+      "generation": "Discovery L462 post-restyling"
+    },
+    {
+      "filename": "rindelab-volvo-xc60-carimages-20261122.jpg",
+      "from": "2018",
+      "to": "2025",
+      "pattern": "^XC60\\b",
+      "generation": "Volvo XC60 segunda generación"
+    },
+    {
+      "filename": "rindelab-kia-carens-carimages-20261122.jpg",
+      "from": "2022",
+      "to": "2025",
+      "pattern": "^(?:New\\s+)?Carens\\s+",
+      "generation": "Kia Carens KY"
+    },
+    {
+      "filename": "kia-kia-sorento-068.jpg",
+      "from": "2020",
+      "to": "2020",
+      "pattern": "^Sorento\\s+(?!.*\\bUM\\b)",
+      "generation": "Sorento MQ4"
+    },
+    {
+      "filename": "rindelab-jaguar-f-type-commonsmass-20261122.jpg",
+      "from": "2021",
+      "to": "2024",
+      "pattern": "^F[\\s-]?Type\\b",
+      "generation": "Jaguar F-Type final facelift"
+    },
+    {
+      "filename": "rindelab-riddara-rd6-commonsmass-batch2-20261122.jpg",
+      "from": "2024",
+      "to": "2025",
+      "pattern": "^RD6\\b",
+      "generation": "Riddara RD6 eléctrica",
+      "onlyTech": "EV"
+    },
+    {
+      "filename": "jeep-jeep-wrangler-157.jpg",
+      "from": "2018",
+      "to": "2020",
+      "pattern": "^Wrangler\\s+",
+      "generation": "Jeep Wrangler JL"
+    },
+    {
+      "filename": "toyota-toyota-hilux-2022-16.jpg",
+      "from": "2015",
+      "to": "2017",
+      "pattern": "^Hilux\\s+",
+      "generation": "Hilux octava generación"
+    },
+    {
+      "filename": "mazda-mazda-mazda3-184.jpg",
+      "from": "2019",
+      "to": "2019",
+      "pattern": "^Mazda\\s*3\\b",
+      "generation": "Mazda3 BP"
+    },
+    {
+      "filename": "nissan-nissan-navara-189.jpg",
+      "from": "2019",
+      "to": "2020",
+      "pattern": "^Navara\\s+",
+      "generation": "Navara D23"
+    },
+    {
+      "filename": "ram-ram-1500-193.jpg",
+      "from": "2019",
+      "to": "2020",
+      "pattern": "^(?:RAM\\s+)?1500\\s+",
+      "generation": "RAM 1500 DT"
+    },
+    {
+      "filename": "bmw-bmw-x5-040.jpg",
+      "from": "2019",
+      "to": "2021",
+      "pattern": "^X5\\b",
+      "generation": "BMW X5 G05"
+    },
+    {
+      "filename": "bmw-bmw-x7-042.jpg",
+      "from": "2019",
+      "to": "2021",
+      "pattern": "^X7\\b",
+      "generation": "BMW X7 G07"
+    },
+    {
+      "filename": "mercedes-benz-mercedes-benz-gle-045.jpg",
+      "from": "2019",
+      "to": "2019",
+      "pattern": "^GLE\\b",
+      "generation": "GLE W167"
+    },
+    {
+      "filename": "kia-kia-sportage-067.jpg",
+      "from": "2021",
+      "to": "2021",
+      "pattern": "^Sportage\\b",
+      "generation": "Sportage NQ5"
+    },
+    {
+      "filename": "hyundai-hyundai-creta-072.jpg",
+      "from": "2020",
+      "to": "2021",
+      "pattern": "^Creta\\s+(?!Grand\\b)",
+      "generation": "Creta SU2"
+    },
+    {
+      "filename": "volvo-volvo-xc90-160.jpg",
+      "from": "2015",
+      "to": "2020",
+      "pattern": "^XC90\\b",
+      "generation": "Volvo XC90 plataforma SPA"
+    },
+    {
+      "filename": "rindelab-foton-g9-commonsmass-batch2-20261122.jpg",
+      "from": "2024",
+      "to": "2025",
+      "pattern": "^G9\\b",
+      "generation": "Foton View G9"
+    },
+    {
+      "filename": "rindelab-foton-v7-commonsmass-batch2-20261122.jpg",
+      "from": "2024",
+      "to": "2025",
+      "pattern": "^V7\\b",
+      "generation": "Foton Tunland V7"
+    },
+    {
+      "filename": "rindelab-foton-v9-commonsmass-batch2-20261122.jpg",
+      "from": "2024",
+      "to": "2025",
+      "pattern": "^V9\\b",
+      "generation": "Foton Tunland V9"
+    },
+    {
+      "filename": "rindelab-foton-midi-commonsmass-batch2-20261122.jpg",
+      "from": "2025",
+      "to": "2025",
+      "pattern": "^MIDI\\b",
+      "generation": "Foton MIDI"
+    },
+    {
+      "filename": "rindelab-jetour-x50-commonsmass-batch2-20261122.jpg",
+      "from": "2024",
+      "to": "2025",
+      "pattern": "^X50\\b",
+      "generation": "Jetour X50"
+    },
+    {
+      "filename": "rindelab-chery-tiggo-9-commonsmass-20261122.jpg",
+      "from": "2025",
+      "to": "2025",
+      "pattern": "^Tiggo\\s*9\\b",
+      "generation": "Chery Tiggo 9"
+    },
+    {
+      "filename": "rindelab-volkswagen-tiguan-commonsmass-20261122.jpg",
+      "from": "2025",
+      "to": "2025",
+      "pattern": "^Tiguan\\b",
+      "generation": "Volkswagen Tiguan III"
+    },
+    {
+      "filename": "rindelab-citroen-jumper-carimages-20261122.jpg",
+      "from": "2025",
+      "to": "2025",
+      "pattern": "^Jumper\\b",
+      "generation": "Citroën Jumper"
+    },
+    {
+      "filename": "new-peugeot-boxer-reviewed-20261022.jpg",
+      "from": "2023",
+      "to": "2023",
+      "pattern": "^Boxer\\b",
+      "generation": "Peugeot Boxer"
+    },
+    {
+      "filename": "rindelab-opel-mokka-commons-20261021.jpg",
+      "from": "2023",
+      "to": "2024",
+      "pattern": "^Mokka\\b",
+      "generation": "Opel Mokka B"
+    },
+    {
+      "filename": "rindelab-maxus-t60-commonsmass-20261122.jpg",
+      "from": "2018",
+      "to": "2025",
+      "pattern": "^T60\\s+(?!MAX\\b)",
+      "generation": "Maxus T60 original"
+    },
+    {
+      "filename": "land-rover-land-rover-range-rover-sport-162.jpg",
+      "from": "2022",
+      "to": "2022",
+      "pattern": "^Range Rover Sport\\b",
+      "generation": "Range Rover Sport L461"
+    },
+    {
+      "filename": "land-rover-land-rover-discovery-sport-163.jpg",
+      "from": "2019",
+      "to": "2020",
+      "pattern": "^Discovery Sport\\b",
+      "generation": "Discovery Sport L550 restyling"
+    },
+    {
+      "filename": "land-rover-land-rover-range-rover-velar-164.jpg",
+      "from": "2018",
+      "to": "2020",
+      "pattern": "^(?:Range Rover\\s+)?Velar\\b",
+      "generation": "Range Rover Velar L560"
+    },
+    {
+      "filename": "rindelab-citro-n-berlingo-commons-20261021.jpg",
+      "from": "2019",
+      "to": "2019",
+      "pattern": "^Berlingo\\b",
+      "generation": "Citroën Berlingo K9"
+    },
+    {
+      "filename": "jeep-jeep-compass-156.jpg",
+      "from": "2018",
+      "to": "2021",
+      "pattern": "^Compass\\b",
+      "generation": "Jeep Compass MP"
+    },
+    {
+      "filename": "chevrolet-chevrolet-tracker-053.jpg",
+      "from": "2020",
+      "to": "2020",
+      "pattern": "^Tracker\\b",
+      "generation": "Chevrolet Tracker GEM"
+    },
+    {
+      "filename": "citroen-citroen-c3-095.jpg",
+      "from": "2021",
+      "to": "2021",
+      "pattern": "^C3\\b(?!.*(?:AIRCROSS|Picasso))",
+      "generation": "Citroën C3 III"
+    },
+    {
+      "filename": "chery-chery-tiggo-7-pro-056.jpg",
+      "from": "2021",
+      "to": "2021",
+      "pattern": "^Tiggo\\s*7\\s*Pro\\b",
+      "generation": "Chery Tiggo 7 Pro"
+    },
+    {
+      "filename": "porsche-porsche-macan-de-combustion-2022-28.jpg",
+      "from": "2025",
+      "to": "2025",
+      "pattern": "^Macan\\s+(?!EV\\b)",
+      "generation": "Porsche Macan térmico",
+      "onlyTech": "Bencina"
+    }
+  ]
+}
