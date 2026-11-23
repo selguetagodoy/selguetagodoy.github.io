@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-22",
+  "method": "Fotos externas revisadas visualmente y enlazadas, no alojadas en GitHub",
+  "images": [
+    {
+      "brand": "JAC",
+      "family": "Ignite30X",
+      "pattern": "\\bIgnite30X(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "JAC Ignite30X (fotografía oficial referencial)",
+      "author": "JAC Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/",
+      "source": "https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/",
+      "localSrc": "https://www.jacautoschile.cl/content/uploads/2025/03/MODELOS-VERSIONES-1.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+      "size": [
+        300,
+        200
+      ],
+      "tech": "EV"
+    },
+    {
+      "brand": "Chery",
+      "family": "Tiggo 2 Pro Max",
+      "pattern": "\\bTiggo[\\s,_-]+2[\\s,_-]+Pro[\\s,_-]+Max(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Chery Tiggo 2 Pro Max (fotografía oficial referencial)",
+      "author": "Chery Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://chery.cl/tiggo-2-pro-max/",
+      "source": "https://chery.cl/tiggo-2-pro-max/",
+      "localSrc": "https://chery.cl/wp-content/uploads/2025/12/EXT1-2.webp",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+      "size": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "brand": "Foton",
+      "family": "FT Crew",
+      "pattern": "\\bFT[\\s,_-]+Crew(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Foton FT Crew (fotografía oficial referencial)",
+      "author": "Foton Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://cidef.cl/marca/foton/",
+      "source": "https://cidef.cl/marca/foton/",
+      "localSrc": "https://cidef.cl/wp-content/uploads/2021/05/MiniaturaFoton-FT-crew-600x450-1.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+      "size": [
+        600,
+        450
+      ]
+    },
+    {
+      "brand": "Foton",
+      "family": "FT",
+      "pattern": "\\bFT(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Foton FT (fotografía oficial referencial)",
+      "author": "Foton Chile · sitio oficial",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://cidef.cl/marca/foton/",
+      "source": "https://cidef.cl/marca/foton/",
+      "localSrc": "https://cidef.cl/wp-content/uploads/2021/05/MiniaturaFoton-FT-crew-600x450-1.png",
+      "imageSource": "fabricante/importador oficial",
+      "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+      "size": [
+        600,
+        450
+      ]
+    }
+  ]
+}

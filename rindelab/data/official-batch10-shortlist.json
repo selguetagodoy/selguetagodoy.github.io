@@ -1,0 +1,56 @@
+[
+  {
+    "key": "JAC|Ignite30X",
+    "idx": 16,
+    "image": "https://www.jacautoschile.cl/content/uploads/2024/11/2.png",
+    "page": "https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/",
+    "alt": "JAC IGNITE30X",
+    "width": 420,
+    "height": 450
+  },
+  {
+    "key": "JAC|Ignite30X",
+    "idx": 23,
+    "image": "https://www.jacautoschile.cl/content/uploads/2025/03/MODELOS-VERSIONES-1.png",
+    "page": "https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/",
+    "alt": "IGNITE30X CCS2 LUXURY",
+    "width": 300,
+    "height": 200
+  },
+  {
+    "key": "Foton|FT Crew",
+    "idx": 28,
+    "image": "https://cidef.cl/wp-content/uploads/2021/05/MiniaturaFoton-FT-crew-600x450-1.png",
+    "page": "https://cidef.cl/marca/foton/",
+    "alt": "",
+    "width": 600,
+    "height": 450
+  },
+  {
+    "key": "Chery|Tiggo 2 Pro Max",
+    "idx": 37,
+    "image": "https://chery.cl/wp-content/uploads/2025/12/TARJETA-1.webp",
+    "page": "https://chery.cl/tiggo-2-pro-max/",
+    "alt": "inline-url",
+    "width": 800,
+    "height": 320
+  },
+  {
+    "key": "Chery|Tiggo 2 Pro Max",
+    "idx": 38,
+    "image": "https://chery.cl/wp-content/uploads/2025/12/EXT1-2.webp",
+    "page": "https://chery.cl/tiggo-2-pro-max/",
+    "alt": "inline-url",
+    "width": 2048,
+    "height": 1024
+  },
+  {
+    "key": "Chery|Tiggo 2 Pro Max",
+    "idx": 50,
+    "image": "https://chery.cl/wp-content/uploads/2025/12/DISENO-2.webp",
+    "page": "https://chery.cl/tiggo-2-pro-max/",
+    "alt": "inline-url",
+    "width": 2048,
+    "height": 897
+  }
+]

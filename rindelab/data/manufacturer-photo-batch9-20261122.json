@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-22",
+  "method": "Enlaces externos a fotos oficiales del modelo con revisión visual y sin rehosting",
+  "rights": "Derechos reservados; uso conforme a condiciones del fabricante/importador",
+  "images": [
+    {
+      "brand": "Foton",
+      "family": "view grand pasajero",
+      "pattern": "\\bview[\\s,_-]+grand[\\s,_-]+pasajero(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Foton view grand pasajero (foto referencial oficial)",
+      "author": "Foton · fabricante/concesionario oficial",
+      "source": "https://cidef.cl/modelo/view-grand-pasajeros/",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://cidef.cl/modelo/view-grand-pasajeros/",
+      "localSrc": "https://cidef.cl/wp-content/uploads/2026/06/PrincipalFoton-ViewGrand.png",
+      "imageSource": "sitio oficial de marca o distribuidor",
+      "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+      "size": [
+        850,
+        450
+      ]
+    },
+    {
+      "brand": "JAC",
+      "family": "Refine Cargo",
+      "pattern": "\\bRefine[\\s,_-]+Cargo(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "JAC Refine Cargo (foto referencial oficial)",
+      "author": "JAC · fabricante/concesionario oficial",
+      "source": "https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/",
+      "localSrc": "https://www.jacautoschile.cl/content/uploads/2024/11/JAC-Refine-Cargo_420x450.jpg",
+      "imageSource": "sitio oficial de marca o distribuidor",
+      "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+      "size": [
+        420,
+        450
+      ]
+    },
+    {
+      "brand": "Kaiyi",
+      "family": "Kye-5",
+      "pattern": "\\bKye[\\s,_-]+5(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Kaiyi Kye-5 (foto referencial oficial)",
+      "author": "Kaiyi · fabricante/concesionario oficial",
+      "source": "https://kaiyi.danielachondo.cl/",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://kaiyi.danielachondo.cl/",
+      "localSrc": "https://kaiyi.danielachondo.cl/wp-content/uploads/2024/03/SEDAN-MINIATURA.jpg",
+      "imageSource": "sitio oficial de marca o distribuidor",
+      "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+      "size": [
+        346,
+        140
+      ]
+    },
+    {
+      "brand": "Kaiyi",
+      "family": "Kyx3",
+      "pattern": "\\bKyx3(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Kaiyi Kyx3 (foto referencial oficial)",
+      "author": "Kaiyi · fabricante/concesionario oficial",
+      "source": "https://kaiyi.danielachondo.cl/",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://kaiyi.danielachondo.cl/",
+      "localSrc": "https://kaiyi.danielachondo.cl/wp-content/uploads/2023/07/MODELO-KYX3.png",
+      "imageSource": "sitio oficial de marca o distribuidor",
+      "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+      "size": [
+        346,
+        140
+      ]
+    },
+    {
+      "brand": "Kaiyi",
+      "family": "Kyx3 PRO",
+      "pattern": "\\bKyx3[\\s,_-]+PRO(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Kaiyi Kyx3 PRO (foto referencial oficial)",
+      "author": "Kaiyi · fabricante/concesionario oficial",
+      "source": "https://kaiyi.danielachondo.cl/",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://kaiyi.danielachondo.cl/",
+      "localSrc": "https://kaiyi.danielachondo.cl/wp-content/uploads/2023/07/MODELO-KYX3-PRO.png",
+      "imageSource": "sitio oficial de marca o distribuidor",
+      "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+      "size": [
+        346,
+        140
+      ]
+    },
+    {
+      "brand": "Kyc",
+      "family": "T3 Gran Mamut",
+      "pattern": "\\bT3[\\s,_-]+Gran[\\s,_-]+Mamut(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Kyc T3 Gran Mamut (foto referencial oficial)",
+      "author": "Kyc · fabricante/concesionario oficial",
+      "source": "https://kycmotors.cl/",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://kycmotors.cl/",
+      "localSrc": "https://kycmotors.cl/images/productos/gran-mamut/pickup/2026/Gran-Mamut-1.6.png#joomlaImage://local-images/productos/gran-mamut/pickup/2026/Gran-Mamut-1.6.png?width=1000&height=667",
+      "imageSource": "sitio oficial de marca o distribuidor",
+      "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+      "size": [
+        1000,
+        667
+      ]
+    },
+    {
+      "brand": "Kyc",
+      "family": "T3 Gran Mamut Cargo BOX",
+      "pattern": "\\bT3[\\s,_-]+Gran[\\s,_-]+Mamut[\\s,_-]+Cargo[\\s,_-]+BOX(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Kyc T3 Gran Mamut Cargo BOX (foto referencial oficial)",
+      "author": "Kyc · fabricante/concesionario oficial",
+      "source": "https://kycmotors.cl/",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://kycmotors.cl/",
+      "localSrc": "https://kycmotors.cl/images/productos/gran-mamut/cargo_box/2026/Gran-%20Mamut-cARGO-BOX_2.png#joomlaImage://local-images/productos/gran-mamut/cargo_box/2026/Gran-%20Mamut-cARGO-BOX_2.png?width=1714&height=1185",
+      "imageSource": "sitio oficial de marca o distribuidor",
+      "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+      "size": [
+        1714,
+        1185
+      ]
+    }
+  ]
+}

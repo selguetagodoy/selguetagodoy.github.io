@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-22",
+  "source": "Browser Use public pages of Karry Chile",
+  "status": "found-not-integrated",
+  "reason": "Direct remote image requests from connected workstation return HTTP 403; publishing these links as thumbnails without cross-domain validation risks broken catalog images.",
+  "models": [
+    {
+      "family": "Q22 Cabina Simple",
+      "page": "https://karrychile.cl/w/q22-cabina-simple",
+      "image": "https://karrychile.cl/documents/7434381/9907456/Cabina+simple+F45.png/c4e70a5d-636a-220a-1bc3-5c20c8987411?t=1731423841220",
+      "type": "exterior photo",
+      "verifiedInBrowser": true
+    },
+    {
+      "family": "Q51 Cabina Simple",
+      "page": "https://karrychile.cl/w/q51-cabina-simple",
+      "image": "https://karrychile.cl/documents/7434381/8811579/mini-karry-q51-cabina-simple.webp/fd204d44-617e-197a-9324-fe9db766b05c?t=1716912517938",
+      "type": "exterior photo",
+      "verifiedInBrowser": true
+    },
+    {
+      "family": "Q52 Cabina Doble",
+      "page": "https://karrychile.cl/w/q52-cabina-doble",
+      "image": "https://karrychile.cl/documents/7434381/13443430/Q52+DobleRodado-Exterior.webp/b88ad10a-aec9-3093-5e82-040981a646d0?t=1774536664515",
+      "type": "exterior photo",
+      "verifiedInBrowser": true
+    },
+    {
+      "family": "Q22 Cargo BOX",
+      "page": "https://karrychile.cl/w/q22-cargo-box",
+      "image": null,
+      "type": "redirect to login, no public photo",
+      "verifiedInBrowser": false
+    }
+  ]
+}

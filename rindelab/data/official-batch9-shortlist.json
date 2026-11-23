@@ -1,0 +1,58 @@
+[
+  {
+    "key": "Foton|view grand pasajero",
+    "page": "https://cidef.cl/modelo/view-grand-pasajeros/",
+    "image": "https://cidef.cl/wp-content/uploads/2026/06/PrincipalFoton-ViewGrand.png",
+    "alt": "",
+    "width": 850,
+    "height": 450
+  },
+  {
+    "key": "JAC|Refine Cargo",
+    "page": "https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/",
+    "image": "https://www.jacautoschile.cl/content/uploads/2024/11/JAC-Refine-Cargo_420x450.jpg",
+    "alt": "JAC Refine Cargo",
+    "width": 420,
+    "height": 450
+  },
+  {
+    "key": "Kaiyi|Kye-5",
+    "page": "https://kaiyi.danielachondo.cl/",
+    "image": "https://kaiyi.danielachondo.cl/wp-content/uploads/2024/03/SEDAN-MINIATURA.jpg",
+    "alt": "",
+    "width": 346,
+    "height": 140
+  },
+  {
+    "key": "Kaiyi|Kyx3",
+    "page": "https://kaiyi.danielachondo.cl/",
+    "image": "https://kaiyi.danielachondo.cl/wp-content/uploads/2023/07/MODELO-KYX3.png",
+    "alt": "kaiyi chile",
+    "width": 346,
+    "height": 140
+  },
+  {
+    "key": "Kaiyi|Kyx3 PRO",
+    "page": "https://kaiyi.danielachondo.cl/",
+    "image": "https://kaiyi.danielachondo.cl/wp-content/uploads/2023/07/MODELO-KYX3-PRO.png",
+    "alt": "kaiyi chile",
+    "width": 346,
+    "height": 140
+  },
+  {
+    "key": "Kyc|T3 Gran Mamut",
+    "page": "https://kycmotors.cl/",
+    "image": "https://kycmotors.cl/images/productos/gran-mamut/pickup/2026/Gran-Mamut-1.6.png#joomlaImage://local-images/productos/gran-mamut/pickup/2026/Gran-Mamut-1.6.png?width=1000&height=667",
+    "alt": "GRAN MAMUT 1.6 Cabina Simple",
+    "width": 1000,
+    "height": 667
+  },
+  {
+    "key": "Kyc|T3 Gran Mamut Cargo BOX",
+    "page": "https://kycmotors.cl/",
+    "image": "https://kycmotors.cl/images/productos/gran-mamut/cargo_box/2026/Gran-%20Mamut-cARGO-BOX_2.png#joomlaImage://local-images/productos/gran-mamut/cargo_box/2026/Gran-%20Mamut-cARGO-BOX_2.png?width=1714&height=1185",
+    "alt": "GRAN MAMUT 1.6 Cargo Box",
+    "width": 1714,
+    "height": 1185
+  }
+]

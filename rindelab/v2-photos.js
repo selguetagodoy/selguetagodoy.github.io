@@ -9273,7 +9273,280 @@ const officialManufacturerBatch820261122=[
     ]
   }
 ];
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const officialManufacturerBatch920261122=[
+  {
+    "brand": "Foton",
+    "family": "view grand pasajero",
+    "pattern": "\\bview[\\s,_-]+grand[\\s,_-]+pasajero(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton view grand pasajero (foto referencial oficial)",
+    "author": "Foton · fabricante/concesionario oficial",
+    "source": "https://cidef.cl/modelo/view-grand-pasajeros/",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/modelo/view-grand-pasajeros/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2026/06/PrincipalFoton-ViewGrand.png",
+    "imageSource": "sitio oficial de marca o distribuidor",
+    "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+    "size": [
+      850,
+      450
+    ]
+  },
+  {
+    "brand": "JAC",
+    "family": "Refine Cargo",
+    "pattern": "\\bRefine[\\s,_-]+Cargo(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "JAC Refine Cargo (foto referencial oficial)",
+    "author": "JAC · fabricante/concesionario oficial",
+    "source": "https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/",
+    "localSrc": "https://www.jacautoschile.cl/content/uploads/2024/11/JAC-Refine-Cargo_420x450.jpg",
+    "imageSource": "sitio oficial de marca o distribuidor",
+    "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+    "size": [
+      420,
+      450
+    ]
+  },
+  {
+    "brand": "Kaiyi",
+    "family": "Kye-5",
+    "pattern": "\\bKye[\\s,_-]+5(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Kaiyi Kye-5 (foto referencial oficial)",
+    "author": "Kaiyi · fabricante/concesionario oficial",
+    "source": "https://kaiyi.danielachondo.cl/",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://kaiyi.danielachondo.cl/",
+    "localSrc": "https://kaiyi.danielachondo.cl/wp-content/uploads/2024/03/SEDAN-MINIATURA.jpg",
+    "imageSource": "sitio oficial de marca o distribuidor",
+    "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+    "size": [
+      346,
+      140
+    ]
+  },
+  {
+    "brand": "Kaiyi",
+    "family": "Kyx3",
+    "pattern": "\\bKyx3(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Kaiyi Kyx3 (foto referencial oficial)",
+    "author": "Kaiyi · fabricante/concesionario oficial",
+    "source": "https://kaiyi.danielachondo.cl/",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://kaiyi.danielachondo.cl/",
+    "localSrc": "https://kaiyi.danielachondo.cl/wp-content/uploads/2023/07/MODELO-KYX3.png",
+    "imageSource": "sitio oficial de marca o distribuidor",
+    "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+    "size": [
+      346,
+      140
+    ]
+  },
+  {
+    "brand": "Kaiyi",
+    "family": "Kyx3 PRO",
+    "pattern": "\\bKyx3[\\s,_-]+PRO(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Kaiyi Kyx3 PRO (foto referencial oficial)",
+    "author": "Kaiyi · fabricante/concesionario oficial",
+    "source": "https://kaiyi.danielachondo.cl/",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://kaiyi.danielachondo.cl/",
+    "localSrc": "https://kaiyi.danielachondo.cl/wp-content/uploads/2023/07/MODELO-KYX3-PRO.png",
+    "imageSource": "sitio oficial de marca o distribuidor",
+    "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+    "size": [
+      346,
+      140
+    ]
+  },
+  {
+    "brand": "Kyc",
+    "family": "T3 Gran Mamut",
+    "pattern": "\\bT3[\\s,_-]+Gran[\\s,_-]+Mamut(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Kyc T3 Gran Mamut (foto referencial oficial)",
+    "author": "Kyc · fabricante/concesionario oficial",
+    "source": "https://kycmotors.cl/",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://kycmotors.cl/",
+    "localSrc": "https://kycmotors.cl/images/productos/gran-mamut/pickup/2026/Gran-Mamut-1.6.png#joomlaImage://local-images/productos/gran-mamut/pickup/2026/Gran-Mamut-1.6.png?width=1000&height=667",
+    "imageSource": "sitio oficial de marca o distribuidor",
+    "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+    "size": [
+      1000,
+      667
+    ]
+  },
+  {
+    "brand": "Kyc",
+    "family": "T3 Gran Mamut Cargo BOX",
+    "pattern": "\\bT3[\\s,_-]+Gran[\\s,_-]+Mamut[\\s,_-]+Cargo[\\s,_-]+BOX(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Kyc T3 Gran Mamut Cargo BOX (foto referencial oficial)",
+    "author": "Kyc · fabricante/concesionario oficial",
+    "source": "https://kycmotors.cl/",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://kycmotors.cl/",
+    "localSrc": "https://kycmotors.cl/images/productos/gran-mamut/cargo_box/2026/Gran-%20Mamut-cARGO-BOX_2.png#joomlaImage://local-images/productos/gran-mamut/cargo_box/2026/Gran-%20Mamut-cARGO-BOX_2.png?width=1714&height=1185",
+    "imageSource": "sitio oficial de marca o distribuidor",
+    "rightsStatus": "Sin licencia abierta; foto enlazada al servidor oficial",
+    "size": [
+      1714,
+      1185
+    ]
+  }
+];
+const officialManufacturerBatch1020261122=[
+  {
+    "brand": "JAC",
+    "family": "Ignite30X",
+    "pattern": "\\bIgnite30X(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "JAC Ignite30X (fotografía oficial referencial)",
+    "author": "JAC Chile · sitio oficial",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/",
+    "source": "https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/",
+    "localSrc": "https://www.jacautoschile.cl/content/uploads/2025/03/MODELOS-VERSIONES-1.png",
+    "imageSource": "fabricante/importador oficial",
+    "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+    "size": [
+      300,
+      200
+    ],
+    "tech": "EV"
+  },
+  {
+    "brand": "Chery",
+    "family": "Tiggo 2 Pro Max",
+    "pattern": "\\bTiggo[\\s,_-]+2[\\s,_-]+Pro[\\s,_-]+Max(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Chery Tiggo 2 Pro Max (fotografía oficial referencial)",
+    "author": "Chery Chile · sitio oficial",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://chery.cl/tiggo-2-pro-max/",
+    "source": "https://chery.cl/tiggo-2-pro-max/",
+    "localSrc": "https://chery.cl/wp-content/uploads/2025/12/EXT1-2.webp",
+    "imageSource": "fabricante/importador oficial",
+    "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+    "size": [
+      2048,
+      1024
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "FT Crew",
+    "pattern": "\\bFT[\\s,_-]+Crew(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton FT Crew (fotografía oficial referencial)",
+    "author": "Foton Chile · sitio oficial",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/marca/foton/",
+    "source": "https://cidef.cl/marca/foton/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2021/05/MiniaturaFoton-FT-crew-600x450-1.png",
+    "imageSource": "fabricante/importador oficial",
+    "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+    "size": [
+      600,
+      450
+    ]
+  },
+  {
+    "brand": "Foton",
+    "family": "FT",
+    "pattern": "\\bFT(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Foton FT (fotografía oficial referencial)",
+    "author": "Foton Chile · sitio oficial",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://cidef.cl/marca/foton/",
+    "source": "https://cidef.cl/marca/foton/",
+    "localSrc": "https://cidef.cl/wp-content/uploads/2021/05/MiniaturaFoton-FT-crew-600x450-1.png",
+    "imageSource": "fabricante/importador oficial",
+    "rightsStatus": "Sin licencia abierta; se enlaza la imagen desde el sitio original",
+    "size": [
+      600,
+      450
+    ]
+  }
+];
+const officialManufacturerBatch1120261122=[
+  {
+    "brand": "Changan",
+    "family": "Serie M",
+    "pattern": "\\bSerie[\\s,_-]+M(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Changan Serie M M201 (imagen referencial de gama)",
+    "author": "Autocosmos Chile / Changan M201",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.autocosmos.cl/catalogo/2025/changan/m201-furgon/12l-ac/178846",
+    "source": "https://www.autocosmos.cl/catalogo/2025/changan/m201-furgon/12l-ac/178846",
+    "localSrc": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/l/RT_V_e0e82d1b11974c2283b1a4e5c573d5cd.webp",
+    "imageSource": "Concesionario / portal automotor Chile (encontrado en buscador de imágenes)",
+    "rightsStatus": "Sin licencia abierta; archivo enlazado a servidor original, sin rehosting",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "brand": "Changan",
+    "family": "Serie M Cargo BOX",
+    "pattern": "\\bSerie[\\s,_-]+M[\\s,_-]+Cargo[\\s,_-]+BOX(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Changan Serie M MD201 Cargo Box",
+    "author": "Auto.cl / Changan",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.auto.cl/nuevos/marcas/changan/serie-m-cargo-box/12-g-mt-2p-ch-cs-md201-cargo-box-da-1pl",
+    "source": "https://www.auto.cl/nuevos/marcas/changan/serie-m-cargo-box/12-g-mt-2p-ch-cs-md201-cargo-box-da-1pl",
+    "localSrc": "https://assets.auto.cl/nvi/changan-serie-m-cargo-box-12-g-mt-2p-ch-cs-md201-cargo-box-da-1pl-rHyNQeRJibf52SKc3C35UA.jpeg",
+    "imageSource": "Concesionario / portal automotor Chile (encontrado en buscador de imágenes)",
+    "rightsStatus": "Sin licencia abierta; archivo enlazado a servidor original, sin rehosting",
+    "size": [
+      1070,
+      680
+    ]
+  },
+  {
+    "brand": "Changan",
+    "family": "Serie M Furgon",
+    "pattern": "\\bSerie[\\s,_-]+M[\\s,_-]+Furgon(?=$|[^A-Za-z0-9])",
+    "from": "2020",
+    "to": "2027",
+    "model": "Changan Serie M M201 Furgón",
+    "author": "Auto.cl / Changan",
+    "license": "Derechos reservados",
+    "licenseUrl": "https://www.auto.cl/nuevos/marcas/changan/serie-m-furgon/12-g-mt-5p-m201-cargo-da-aa",
+    "source": "https://www.auto.cl/nuevos/marcas/changan/serie-m-furgon/12-g-mt-5p-m201-cargo-da-aa",
+    "localSrc": "https://assets.auto.cl/nvi/changan-serie-m-furgon-12-g-mt-5p-m201-cargo-da-aa-ahnVHiEn3qC3LHU6Jq6rXS.jpeg",
+    "imageSource": "Concesionario / portal automotor Chile (encontrado en buscador de imágenes)",
+    "rightsStatus": "Sin licencia abierta; archivo enlazado a servidor original, sin rehosting",
+    "size": [
+      1070,
+      680
+    ]
+  }
+];
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122,officialManufacturerBatch920261122,officialManufacturerBatch1020261122,officialManufacturerBatch1120261122).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([

@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-22",
+  "photos": [
+    {
+      "brand": "Changan",
+      "family": "Serie M",
+      "pattern": "\\bSerie[\\s,_-]+M(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Changan Serie M M201 (imagen referencial de gama)",
+      "author": "Autocosmos Chile / Changan M201",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.autocosmos.cl/catalogo/2025/changan/m201-furgon/12l-ac/178846",
+      "source": "https://www.autocosmos.cl/catalogo/2025/changan/m201-furgon/12l-ac/178846",
+      "localSrc": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/l/RT_V_e0e82d1b11974c2283b1a4e5c573d5cd.webp",
+      "imageSource": "Concesionario / portal automotor Chile (encontrado en buscador de imágenes)",
+      "rightsStatus": "Sin licencia abierta; archivo enlazado a servidor original, sin rehosting",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "brand": "Changan",
+      "family": "Serie M Cargo BOX",
+      "pattern": "\\bSerie[\\s,_-]+M[\\s,_-]+Cargo[\\s,_-]+BOX(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Changan Serie M MD201 Cargo Box",
+      "author": "Auto.cl / Changan",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.auto.cl/nuevos/marcas/changan/serie-m-cargo-box/12-g-mt-2p-ch-cs-md201-cargo-box-da-1pl",
+      "source": "https://www.auto.cl/nuevos/marcas/changan/serie-m-cargo-box/12-g-mt-2p-ch-cs-md201-cargo-box-da-1pl",
+      "localSrc": "https://assets.auto.cl/nvi/changan-serie-m-cargo-box-12-g-mt-2p-ch-cs-md201-cargo-box-da-1pl-rHyNQeRJibf52SKc3C35UA.jpeg",
+      "imageSource": "Concesionario / portal automotor Chile (encontrado en buscador de imágenes)",
+      "rightsStatus": "Sin licencia abierta; archivo enlazado a servidor original, sin rehosting",
+      "size": [
+        1070,
+        680
+      ]
+    },
+    {
+      "brand": "Changan",
+      "family": "Serie M Furgon",
+      "pattern": "\\bSerie[\\s,_-]+M[\\s,_-]+Furgon(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Changan Serie M M201 Furgón",
+      "author": "Auto.cl / Changan",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.auto.cl/nuevos/marcas/changan/serie-m-furgon/12-g-mt-5p-m201-cargo-da-aa",
+      "source": "https://www.auto.cl/nuevos/marcas/changan/serie-m-furgon/12-g-mt-5p-m201-cargo-da-aa",
+      "localSrc": "https://assets.auto.cl/nvi/changan-serie-m-furgon-12-g-mt-5p-m201-cargo-da-aa-ahnVHiEn3qC3LHU6Jq6rXS.jpeg",
+      "imageSource": "Concesionario / portal automotor Chile (encontrado en buscador de imágenes)",
+      "rightsStatus": "Sin licencia abierta; archivo enlazado a servidor original, sin rehosting",
+      "size": [
+        1070,
+        680
+      ]
+    }
+  ],
+  "note": "3 enlaces externos de modelo preciso Changan Serie M, no alojados en GitHub"
+}

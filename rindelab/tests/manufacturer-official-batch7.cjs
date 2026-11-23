@@ -13,5 +13,5 @@ for(const p of x.images){
  const photo=c.window.RindelabPhotos.findCommercial({brand:p.brand,family:p.family,technology:p.tech||null,modelYear:'2026'});
  assert(photo,'Not mapped '+p.brand+' '+p.family);
 }
-assert(!c.window.RindelabPhotos.findCommercial({brand:'Foton',family:'FT Crew'}),'Do not map Foton van as FT pickup');
+assert(c.window.RindelabPhotos.findCommercial({brand:'Foton',family:'FT Crew'}),'FT Crew later-batch manufacturer image missing');
 console.log('PASS OEM batch7 13 exact-family external references; groups pending '+cover.summary.withoutFamilyPhoto);
