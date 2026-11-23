@@ -31,6 +31,6 @@ for(const p of manifest.photos){
  // Prior verified photos can take priority for the same family; both sources remain auditable.
 }
 for(const page of ['index.html','cotizador.html','electromovilidad.html']){
- assert(fs.readFileSync(path.join(root,'rindelab',page),'utf8').match(/v2-photos\.js\?v=(?:20261122-photo700-r1|20261123-(?:baic-audit1|generation-reuse1))/));
+ assert(fs.readFileSync(path.join(root,'rindelab',page),'utf8').match(/v2-photos\.js\?v=(?:20261122-photo700-r1|20261123-(?:baic-audit1|generation-reuse1|historical-commons1))/));
 }
 console.log('PASS Commons mass second import',manifest.photos.length,'photos; groups without images',cover.summary.withoutFamilyPhoto);

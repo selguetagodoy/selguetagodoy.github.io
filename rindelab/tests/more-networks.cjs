@@ -35,6 +35,7 @@ for(const [name,xs] of [['Portillo',portillo.records],['Gildemeister',gilde.reco
    await page.waitForFunction(()=>window.RindelabMarket?.records().length>=465&&window.RindelabMarket?.getAliasCount()===28&&window.RindelabPhotos?.count>=259&&document.querySelector('#searchButton')&&!document.querySelector('#searchButton').disabled,{timeout:60000});
    const meta=await page.evaluate(()=>({groups:RindelabMarket.getTotal(),aliases:RindelabMarket.getAliasCount(),records:RindelabMarket.records().length,photos:RindelabPhotos.count}));
    assert(meta.groups>=820,'Faltan grupos comerciales '+JSON.stringify(meta));
+   await page.locator('#catalogScopeDetails > summary').click();
    await page.selectOption('#catalogScope','commercial');
    await page.fill('#query','AION UT');await page.click('#searchButton');
    assert(await page.locator('.market-card').count()>0,'Gildemeister AION UT no se muestra');

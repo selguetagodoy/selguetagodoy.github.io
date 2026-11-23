@@ -22,7 +22,12 @@ for(const original of rows){
  perBrand[brand].total++;if(present)perBrand[brand].withPhoto++;else perBrand[brand].missing++;
 }
 const ranked=Object.entries(perBrand).filter(([name,g])=>g.total>=15).sort((a,b)=>b[1].missing-a[1].missing).slice(0,25);
-const result={time:'2026-11-23',legacy:legacy.length,october:previous.length,november:delta.length,total:rows.length,withPhoto:ok,withoutPhoto:rows.length-ok,byBrand:perBrand,topMissingBrands:ranked};
+const previousAudit=require('../data/real-3cv-photo-coverage-20261123.json');
+const sourceAudit=require('../data/historical-photo-import-20261123.json');
+const result={time:'2026-11-23',legacy:legacy.length,october:previous.length,november:delta.length,total:rows.length,withPhoto:ok,withoutPhoto:rows.length-ok,byBrand:perBrand,topMissingBrands:ranked,
+ beforeGenerationReuse:previousAudit.beforeGenerationReuse,generationReuse20261123:previousAudit.generationReuse20261123,
+ historicalCommons20261123:{withPhotoBefore:2425,withoutPhotoBefore:5969,newlyCovered:ok-2425,photoAssetsAdded:sourceAudit.photos.length,
+ source:'data/historical-photo-import-20261123.json',method:'Fotografías Commons verificadas y asociadas por marca, patrón estricto, carrocería y generación; imagen referencial, no la versión exacta homologada'}};
 fs.writeFileSync(path.join(root,'data/real-3cv-photo-coverage-20261123.json'),JSON.stringify(result,null,2)+'\n');
 console.log('ACTUAL_3CV',rows.length,'WITH_PHOTO',ok,'WITHOUT_PHOTO',rows.length-ok,'RATE',(100*ok/rows.length).toFixed(1)+'%');
 console.log('BAIC',Object.entries(perBrand).filter(([b])=>/^baic$|^beijing$/i.test(b)));

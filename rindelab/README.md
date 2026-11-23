@@ -552,3 +552,8 @@ La [matriz de electromovilidad](./pendientes-electromovilidad.html) permite inve
 El [resumen por marca](./sii/avance-marcas-electromovilidad.csv) muestra, por separado, el volumen de fichas de homologación y el número de precios electrificados documentados en el catálogo. Una coincidencia por marca no equivale a correspondencia entre versiones.
 
 **Flujo:** 1) examinar tabla; 2) buscar una versión en fuente oficial y registrar fecha/evidencia; 3) marcar solo las fichas completas como `listo_para_importar`; 4) ejecutar `node scripts/rindelab-price-queue.cjs --check` y `--dry-run`; 5) importar un lote con `--apply` y validar una sola vez por PR con QA completa. [Procedimiento detallado](./sii/GUIA-BANDEJA-PRECIOS.md). El importador nunca copia un precio a una ficha 3CV por simple parecido de nombre y bloquea sobreescrituras discrepantes.
+
+
+### Actualización fotográfica histórica 3CV · 23/11/2026 (lote Commons)
+
+Se incorporaron **41 fotografías referenciales** de familias/generaciones históricas desde Wikimedia Commons, con fuente, autor y licencia trazables; 264 fichas adicionales recuperan fotografía tras controles de carrocería (sedán/Coupé, 3P/5P, Raptor, Cabriolet) y generación. La cobertura real de 3CV pasa de **2.425/8.394 (28,9 %)** a **2.689/8.394 (32,0 %)**; aún **5.705 fichas** carecen de foto. La biblioteca pasa de 668 a 709 archivos/referencias. No se modificaron registros de homologación, rendimientos ni precios. Auditoría: `data/historical-photo-import-20261123.json`, `data/real-3cv-photo-coverage-20261123.json`; regresión `tests/historical-commons-20261123.cjs`. Las fotografías no certifican la versión exacta homologada.
