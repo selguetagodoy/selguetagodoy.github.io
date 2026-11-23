@@ -1,0 +1,2379 @@
+{
+  "pages": {
+    "https://www.hino.cl/vehiculo/xzu-616": {
+      "status": 200,
+      "title": "HINO XZU 616 - Camión carga liviano para negocios - Hino Chile",
+      "images": [
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010420221115153619/foto_0000009220221115153619_XZU616.png",
+          "alt": "og:image"
+        },
+        {
+          "url": "https://www.facebook.com/tr?id=5974408726015146&ev=PageView&noscript=1",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20190425/imag/foto_0000001520190425171138/Group_3391.png",
+          "alt": "logo",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010120221115153904/xzu917.png",
+          "alt": "XZU 917 MT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000009220221115153836/xzu816.png",
+          "alt": "XZU 816 AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010220221115153619/xzu616.png",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010420221115153533/city515.png",
+          "alt": "CITY 515 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008820221115153656/xzu617dc.png",
+          "alt": "XZU 617 DC MT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010020221115153800/xzu817.png",
+          "alt": "XZU 817 MT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006520221115154131/gh1826.png",
+          "alt": "GH 1826 MT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006820221115154051/fg1726.png",
+          "alt": "FG 1728 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000011720221115154010/fd1121.png",
+          "alt": "FD 1121 MT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010620221115153941/fc1118.png",
+          "alt": "FC 1118 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/imag/v1/icon/ic_close_mod.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/imag/v1/icon/check_confirm.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000002820221115153619/img_cl_bannerhino_modelo_terreno_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000009020221115153619/img_CL_BANNER-hino_modelo_terreno_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000011020221115153619/IMAGEN-REFERENCIAL-HINO6-24px.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000000420221115155556/Foto_caracteristica.jpg",
+          "alt": "Image-accordion",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010720221115153619/foto_panel.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010520221115153619/foto_mobile_panel.jpg",
+          "alt": "Equipamiento Full",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000009420221115153619/img_CL_TECNOLOGIAS-nombre_2_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000005720221115153619/img_cl_tecnologiasnombre_2_mobile.jpg",
+          "alt": "Neblineros",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006820221115153619/img_cl_tecnologiasnombre_3_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000005920221115153619/img_cl_tecnologiasnombre_3_mobile.jpg",
+          "alt": "Inmovilizador",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006720221115153619/img_cl_tecnologiasnombre_4_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006120221115153619/img_cl_tecnologiasnombre_4_mobile.jpg",
+          "alt": "Versión AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010820221115153619/fotoradio_d.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000010620221115153619/foto_radio_mobile.jpg",
+          "alt": "Nueva Rario Touch",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007020221115153619/img_cl_seguridadnombre_1_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008220221115153619/img_cl_seguridadnombre_1_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007620221115153619/img_cl_seguridadnombre_2_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007720221115153619/img_cl_seguridadnombre_2_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008120221115153619/img_cl_seguridadnombre_3_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006320221115153619/img_cl_seguridadnombre_3_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000009620221115153619/img_CL_GALERIA-nombre_contexto_E1_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007920221115153619/img_cl_galerianombre_contexto_e1_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008520221115153619/img_cl_galerianombre_contexto_e2_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008020221115153619/img_cl_galerianombre_contexto_e2_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007420221115153619/img_cl_galerianombre_contexto_e3_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008620221115153619/img_cl_galerianombre_contexto_e3_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006620221115153619/img_cl_galerianombre_contexto_i1_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006920221115153619/img_cl_galerianombre_contexto_i1_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008720221115153619/img_cl_galerianombre_contexto_i2_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006520221115153619/img_cl_galerianombre_contexto_i2_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007220221115153619/img_cl_galerianombre_contexto_i3_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007320221115153619/img_cl_galerianombre_contexto_i3_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000007120221115153619/img_cl_galerianombre_contexto_i4_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000006420221115153619/img_cl_galerianombre_contexto_i4_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008320221115153619/img_cl_galerianombre_contexto_i5_desktop.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20221115/imag/foto_0000008420221115153619/img_cl_galerianombre_contexto_i5_mobile.jpg",
+          "alt": "XZU 616 MT/AT",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/imag/v1/icon/question_circle.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/imag/v1/icon/check_circle.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20190425/imag/foto_0000000720190425172521/concesionarios_01.png",
+          "alt": "<p>Concesionarios</p>",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20190425/imag/foto_0000000720190425172621/total_support_01.png",
+          "alt": "<p>Hino Total Support</p>",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20190425/imag/foto_0000000420190425172703/hino_store_02.png",
+          "alt": "<p>Hino Store </p>",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20190425/imag/foto_0000000220190425180103/facebook_f.png",
+          "alt": "<p>Facebook de Hino Chile</p>",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20190425/imag/foto_0000000320190425180144/linkedin.png",
+          "alt": "<p>LinkedIn de Hino Chile</p>",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.hino.cl/hino/site/artic/20190425/imag/foto_0000000220190425180211/instagram_f.png",
+          "alt": "<p>Instagram de Hino Chile</p>",
+          "attribute": "src"
+        }
+      ],
+      "links": []
+    },
+    "https://www.changan.cl/vehiculo/vehiculos-comerciales/": {
+      "status": 200,
+      "title": "Vehículos Comerciales para tu Negocio en Changan Chile",
+      "images": [
+        {
+          "url": "https://www.changan.cl/media/b5apnerk/logo-changan-group.png?format=webp&v=1dd3bf5d733b7a0",
+          "alt": "Inchcape Digital logo",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/qpqekkkf/header-cs75-plus.webp?width=260&format=webp&v=1dd34019054c870",
+          "alt": "CS75 Plus",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/nqninmqx/header-alsvin-plus.webp?width=260&format=webp&v=1dd340187a593d0",
+          "alt": "Alsvin Plus",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/ujwawnqb/header-cs35-max.webp?width=260&format=webp&v=1dd34017ec2f320",
+          "alt": "CS35 Max",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/apdl0k1a/header-new-cs55-plus.webp?width=260&format=webp&v=1dd3401732ca420",
+          "alt": "New CS55 Plus",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/iszbisgs/header-vehiculos-comerciales.webp?width=260&format=webp&v=1dd34016b542070",
+          "alt": "Vehículos Comerciales",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/uxxdbnrp/header-lumin.webp?width=260&format=webp&v=1dd340163ecfc30",
+          "alt": "Lumin",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/14npnrbg/header-eado-plus-idd.webp?width=260&format=webp&v=1dd34015d9461c0",
+          "alt": "Eado Plus iDD",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/545evxdi/header-uni-k.webp?width=260&format=webp&v=1dd3401dbef07f0",
+          "alt": "UNI-K",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/xepp3chw/header-uni-t.webp?width=260&format=webp&v=1dd3401e3ab02f0",
+          "alt": "UNI-T",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/3apb3rxq/header-x7-plus.webp?width=260&format=webp&v=1dd3401423ba640",
+          "alt": "X7 Plus",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/qxvaflop/header-cs55-plus-idd.webp?width=260&format=webp&v=1dd33e8dd3b6770",
+          "alt": "CS55 Plus iDD",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/yjvanjgm/header-hunter.webp?width=260&format=webp&v=1dd33e871f62950",
+          "alt": "Hunter",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/sxpkhar5/header-hunter-reev.webp?width=260&format=webp&v=1dd33e86a3d89b0",
+          "alt": "Hunter REEV",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/ouvn3euc/header-cs15-plus.webp?width=260&format=webp&v=1dd33e85608cef0",
+          "alt": "CS15 Plus",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/okgadxxl/header-alsvin.webp?width=260&format=webp&v=1dd33e83d91af90",
+          "alt": "Alsvin",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/xntcmeap/header-s05.webp?width=260&format=webp&v=1dd3ba4b266a690",
+          "alt": "S05",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/n2mhxkm0/header-s07.png?width=260&format=webp&v=1dd3ba3c54822d0",
+          "alt": "S07",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/34yp0ti2/header-g318.webp?width=260&format=webp&v=1dd3ba54e5fd990",
+          "alt": "G318",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/djwhzwmf/header-avatr-07.png?width=260&format=webp&v=1dd3ba1b2c15110",
+          "alt": "AVATR 07",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/dlljaso3/header-avatr-11.webp?width=260&format=webp&v=1dd3ba2b4f85fe0",
+          "alt": "AVATR 11",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/3jllrr0i/comerciales-1.png?format=webp&quality=82&v=1dd5810a85b7530",
+          "alt": "Línea Comerciales",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/i54pz1la/blanco.webp?format=webp&quality=82&v=1dd317ee9d67810",
+          "alt": "Star Truck Pickup Cabina Simple - Blanco Exterior",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/zewgyqbl/blanco.webp?format=webp&quality=82&v=1dd317ee87365a0",
+          "alt": "Star Truck Pickup Cabina Doble - Blanco Exterior",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/gdgf23ig/blanco.webp?format=webp&quality=82&v=1dd317ee931ac90",
+          "alt": "Honor S - Blanco Exterior",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/r3odurtc/blanco.webp?format=webp&quality=82&v=1dd317eea6f83c0",
+          "alt": "Cargo Box - Blanco Exterior",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/t4khqhcc/carga.webp?format=webp&quality=82&v=1dd3a12ec19f790",
+          "alt": "1.000 kg de carga útil",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/viono5j2/puertas.webp?format=webp&quality=82&v=1dd3a12ec7e37a0",
+          "alt": "3 puertas abatibles de carga",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/bvrgjrxq/radio.webp?format=webp&quality=82&v=1dd3a12e8995c50",
+          "alt": "Radio AM/FM integrada con Bluetooth",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/g3hdiiua/neblineros.webp?format=webp&quality=82&v=1dd3a12eaa4bcb0",
+          "alt": "Neblineros delanteros y traseros",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/vvhpfai4/carga.webp?format=webp&quality=82&v=1dd3a12ea7e9710",
+          "alt": "995 kg de carga útil",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/flomjh10/sensores.webp?format=webp&quality=82&v=1dd3a12e912d210",
+          "alt": "Sensores de retroceso",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/u2wb42u5/comodidad.webp?format=webp&quality=82&v=1dd3a12e9fa4be0",
+          "alt": "Comodidad interior",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/wm2ebl5b/controles.webp?format=webp&quality=82&v=1dd3a12eb74b6e0",
+          "alt": "Controles de seguridad",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/fhbdbwer/panel.webp?format=webp&quality=82&v=1dd3a12e986c990",
+          "alt": "Panel Central Funcional",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/anfbg3y4/motor.webp?format=webp&quality=82&v=1dd3a12f65e9940",
+          "alt": "Motor 1.5L / 95 HP",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/wtgpnm3d/camara.webp?format=webp&quality=82&v=1dd3a12f7dd9820",
+          "alt": "Cámara y sensores de retroceso",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/i4ppqgwd/capacidad.webp?format=webp&quality=82&v=1dd3a12f7775c40",
+          "alt": "Capacidad de carga de hasta 590kg",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/s2odb2pj/bluetooth.webp?format=webp&quality=82&v=1dd3a12f71936b0",
+          "alt": "Bluetooth y conectividad smartphone",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/0cjdct4t/espacios.webp?format=webp&quality=82&v=1dd3a12f6884150",
+          "alt": "Espacios interiores con posavasos",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/ybqdye4k/capacidad.webp?format=webp&quality=82&v=1dd3a12f5c98530",
+          "alt": "Capacidad de carga de 6,6m³",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/vhqlkikb/puerta.webp?format=webp&quality=82&v=1dd3a12ee183890",
+          "alt": "Puerta lateral con acceso optimizado",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/us4lwjs2/conectividad.webp?format=webp&quality=82&v=1dd3a12f493c450",
+          "alt": "Conectividad en el trabajo diario",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/difhzynx/tecnologia.webp?format=webp&quality=82&v=1dd3a12edeb5c30",
+          "alt": "Tecnología y seguridad inteligente",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/0krbrne4/01.webp?format=webp&quality=82&v=1dd3a12fa3ff220",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/h2sdltxi/02.webp?format=webp&quality=82&v=1dd3a12f9048bf0",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/bi0hyans/03.webp?format=webp&quality=82&v=1dd3a12f88a04c0",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/mitdulbx/04.webp?format=webp&quality=82&v=1dd3a12fa0d2250",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/h2jdv0z0/05.webp?format=webp&quality=82&v=1dd3a12f98331d0",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.changan.cl/media/hulihgbh/logofooterderco.png",
+          "alt": "Footer Logo",
+          "attribute": "src"
+        }
+      ],
+      "links": [
+        {
+          "text": "MODELOS",
+          "href": "https://www.changan.cl/vehiculo/vehiculos-comerciales/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/cs75-plus/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/alsvin-plus/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/cs35-max/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/cs55-plus/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/vehiculos-comerciales/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/lumin/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/eado-plus-idd/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/uni-k/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/uni-t/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/x7-plus/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/cs55-plus-idd/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/new-hunter/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/new-hunter-reev/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/new-cs15-plus/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/alsvin/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/deepal/s05/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/deepal/s07/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/deepal/g318/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/avatr/avatr-07/"
+        },
+        {
+          "text": "Ver Modelo",
+          "href": "https://www.changan.cl/vehiculo/avatr/avatr-11/"
+        }
+      ]
+    },
+    "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk3.html": {
+      "status": 200,
+      "title": "LK3",
+      "images": [
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/logo_landking_all_blue_v2.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-121.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-151.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-161.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-171.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/Iconos-Quienes-somos.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/Iconos-noticias.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-141.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/bars-header.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/logo_landking_all_white_v2.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/mobile/vitrinas-modelos/lk3/vitrinas_minitrucks_LK3PU_MOB.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/mobile/vitrinas-modelos/lk3/vitrinas_minitrucks_LK3DC_MOB.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/mobile/vitrinas-modelos/lk3/vitrinas_minitrucks_LK3CB_MOB.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/carousel-left.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/carousel-right.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/desk/vitrinas-modelas/lk3/vitrinas_minitrucks_LK3PU_DSK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/desk/vitrinas-modelas/lk3/vitrinas_minitrucks_LK3DC_DSK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/desk/vitrinas-modelas/lk3/vitrinas_minitrucks_LK3CB_DSK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_744283798_/container_copy_61668/image.coreimg.png/1790629335562/specs-princ-lk3-mesa-de-trabajo-1-copia-28.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_744283798_/container_copy_61668/image_copy.coreimg.png/1790629309072/specs-nuevos-600x200-lk3-mesa-de-trabajo-1-copia-69.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_744283798_/container_copy_61668/image_copy_194148158.coreimg.png/1731522535904/specs-nuevos-600x200-lk3-mesa-de-trabajo-1-copia-70.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_744283798_/container_copy_61668/image_copy_130978577.coreimg.png/1731522555324/specs-nuevos-600x200-lk3-mesa-de-trabajo-1-copia-71.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3_Equipamiento_1280x508.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3_Equipamiento_1280x508_Diagona_CB_OK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3_DC_PICK_equip_1280x508.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3_DC_Equipamiento_1280x508_Diagona_CB_OK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/arrow-left.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/arrow-right.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_DIAGONAL1_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_COSTADO1_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_1280x508_ATRAS_CB.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_COSTADO2_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_DIAGONAL2_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_FRENTE_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/right-arrow.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_PANEL_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_VOLANTE_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_K9C3089_1280x508.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3DC_ASIENTOS_DELANTEROS_1280x508.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_AC_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_PANEL_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_VOLANTE_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_K9C3089_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3DC_ASIENTOS_DELANTEROS_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/interior/LK3_AC_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_648914320/lk_carousel_copy/item_1736965047483_c/image.coreimg.jpeg/1744143343696/lk3-pu-blanco-1280x508.jpeg",
+          "alt": "Blanco LK3",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_648914320/lk_carousel_copy/item_1736965047483_c_372407583/image.coreimg.jpeg/1743451568704/lk3-equipamiento-plateado-1280x508.jpeg",
+          "alt": "Plateado LK3",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_648914320/lk_carousel_copy/item_1736965047483/image.coreimg.png/1743449660217/lk3-equipamiento-azul-1280x508.png",
+          "alt": "Azul  LK3",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_648914320_/lk_carousel_copy/item_1736965047483/image.coreimg.jpeg/1744143424102/lk3-pu-azul-1200x1200.jpeg",
+          "alt": "Azul  LK3",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_648914320_/lk_carousel_copy/item_1736965047483_c_372407583/image.coreimg.jpeg/1744143442029/lk3-pu-plateado-1200x1200.jpeg",
+          "alt": "Plateado LK3",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/master/_jcr_content/root/container_648914320_/lk_carousel_copy/item_1736965047483_c/image.coreimg.jpeg/1744143455257/lk3-pu-blanco-1200x1200.jpeg",
+          "alt": "Blanco LK3",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/lk3-dc-exterior/_K9C3744.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/galeria/galeria_K9C3118_1080x1920.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/dimensiones/_LK3_pickup_dsk.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/dimensiones/_LK3_cargobox_dsk.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/dimensiones/_LK3_CD_pickup_dsk.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/dimensiones/_LK3_CD_cargobox_dsk.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/miniaturas---cotizador/lk3/LK3_PICKUP.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/aplicaciones/miniaturas-aplicaciones/LAND1003.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/aplicaciones/miniaturas-aplicaciones/LAND1004.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/aplicaciones/miniaturas-aplicaciones/LAND1005.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/aplicaciones/miniaturas-aplicaciones/LAND1000.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/miniaturas---cotizador/lk3/LK3DC_PICKUP.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/miniaturas---cotizador/lk3/LK3DC_CB.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/aplicaciones/precios-promociones/arrow.png",
+          "alt": "Toggle menu",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/menu-flotante/medidas%20de%20werb-18--18.png",
+          "alt": "icono",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/menu-flotante/medidas%20de%20werb-18--19.png",
+          "alt": "icono",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/menu-flotante/medidas%20de%20werb-18--20.png",
+          "alt": "icono",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/Recurso-250.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/Logo_Landking_Footer-21.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-35.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-37.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-36.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-38.png",
+          "alt": "",
+          "attribute": "src"
+        }
+      ],
+      "links": [
+        {
+          "text": "Modelos",
+          "href": "https://www.landking.cl/modelos.html"
+        },
+        {
+          "text": "Modelos",
+          "href": "https://www.landking.cl/modelos.html"
+        },
+        {
+          "text": "Ficha Técnica LK3",
+          "href": "https://www.landking.cl/content/dam/landking/fichas-técnicas/LK3_Ficha_2024_%20(4).pdf"
+        },
+        {
+          "text": "Ficha Técnica LK3 2AB",
+          "href": "https://www.landking.cl/content/dam/landking/fichas-técnicas/LK3_Ficha_2026.pdf"
+        },
+        {
+          "text": "LK3",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk3.html"
+        },
+        {
+          "text": "LK5",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk5.html"
+        },
+        {
+          "text": "LK5 EV",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk5-ev.html"
+        }
+      ]
+    },
+    "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk5.html": {
+      "status": 200,
+      "title": "LK5",
+      "images": [
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/logo_landking_all_blue_v2.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-121.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-151.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-161.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-171.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/Iconos-Quienes-somos.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/Iconos-noticias.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-141.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/bars-header.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/logo_landking_all_white_v2.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/mobile/lk5/vitrinas_leads_LK5PU_MOB%20(2).jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/mobile/lk5/vitrinas_leads_LK5DC_MOB.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/mobile/lk5/vitrinas_leads_LK5CB_MOB.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/carousel-left.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/carousel-right.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/desk/lk5/vitrinas_leads_LK5PU_DSK%20(1).jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/desk/lk5/vitrinas_leads_LK5DC_DSK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/nuevas-vitrinas-/vitrinas-2026/desk/lk5/vitrinas_leads_LK5CB_DSK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_744283798_/container_copy_61668_1641712004/image.coreimg.png/1731101751256/specs-princ-lk5-mesa-de-trabajo-1-copia-32.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_744283798_/container_copy_61668_1641712004/image_copy.coreimg.png/1731522441730/specs-nuevos-600x200-lk5-mesa-de-trabajo-1-copia-72.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_744283798_/container_copy_61668_1641712004/image_copy_194148158.coreimg.png/1731522535904/specs-nuevos-600x200-lk3-mesa-de-trabajo-1-copia-70.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_744283798_/container_copy_61668_1641712004/image_copy_130978577.coreimg.png/1731522555324/specs-nuevos-600x200-lk3-mesa-de-trabajo-1-copia-71.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/equipamiento/exterior/LK5_FRENTE_1280x508.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/equipamiento/exterior/equip_lk5PICKUP_1280x508.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/equipamiento/exterior/LK5_Equipamiento_1280x508_Diagona_CB_OK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/galeria-esquinas/899X539_LK5DC_PICK.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/equipamiento/exterior/LK5_DC_Equipamiento_1280x508_Diagona_CB_OK.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/arrow-left.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/arrow-right.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/equipamiento/exterior/LK5DC_LATERAL2_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_COSTADO1_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/equipamiento/exterior/LK5_ATRAS_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk3/equipamiento-/exterior/LK3DC_Equipamiento_COSTADO2_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/equipamiento/exterior/equip_lk5_DCPICKUP_1280x508.jpg",
+          "alt": "Miniatura",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/right-arrow.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3798_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3953_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3089_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3775_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3097_1280x580.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3798_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3953_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3089_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3775_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-interior/specs_lk5_K9C3097_288x288.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_648914320_/lk_carousel_copy/item_1736965047483_c/image.coreimg.jpeg/1744144086864/lk5-pu-blanco-1280x508.jpeg",
+          "alt": "Blanco LK5",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_648914320_/lk_carousel_copy/item_1736965047483_c_372407583/image.coreimg.jpeg/1743451553370/lk5-equipamiento-plateado-1280x508.jpeg",
+          "alt": "Plateado LK5",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_648914320_/lk_carousel_copy/item_1736965047483/image.coreimg.jpeg/1743451533092/lk5-equipamiento-azul-1280x508.jpeg",
+          "alt": "Azul  LK5",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_648914320__873940372/lk_carousel_copy/item_1736965047483/image.coreimg.jpeg/1744144023871/lk5-pu-azul-1200x1200.jpeg",
+          "alt": "Azul  LK5",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_648914320__873940372/lk_carousel_copy/item_1736965047483_c_372407583/image.coreimg.jpeg/1744144048149/lk5-pu-plateado-1200x1200.jpeg",
+          "alt": "Plateado LK5",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/experience-fragments/landking/en/site/Modelos/lk5/_jcr_content/root/container_648914320__873940372/lk_carousel_copy/item_1736965047483_c/image.coreimg.jpeg/1744144063229/lk5-pu-blanco-1200x1200.jpeg",
+          "alt": "Blanco LK5",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/lk5-dc-exterior/_K9C3528.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/galeria/galeria_K9C3118_1080x1920.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/dimensiones/_LK5_pickup_dsk.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/dimensiones/_LK5_cargobox_dsk.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/dimensiones/_LK5_DC_pickup_dsk.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/dimensiones/_LK5_DC_cargobox_dsk%20con%20deflector.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/miniaturas-cotizador/LK5_PICKUP.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/miniaturas---cotizador/lk5/LK5_CB.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/miniaturas-cotizador/LK5DC_PICKUP.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/miniaturas---cotizador/lk5/LK5DC_CB.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/miniaturas-cotizador/LK5_CB.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/vehiculos/minitrucks/lk5/miniaturas-cotizador/LK5DC_CB.png",
+          "alt": "Versión",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/aplicaciones/precios-promociones/arrow.png",
+          "alt": "Toggle menu",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/menu-flotante/medidas%20de%20werb-18--18.png",
+          "alt": "icono",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/menu-flotante/medidas%20de%20werb-18--19.png",
+          "alt": "icono",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/menu-flotante/medidas%20de%20werb-18--20.png",
+          "alt": "icono",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/Recurso-250.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/Logo_Landking_Footer-21.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-35.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-37.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-36.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-38.png",
+          "alt": "",
+          "attribute": "src"
+        }
+      ],
+      "links": [
+        {
+          "text": "Modelos",
+          "href": "https://www.landking.cl/modelos.html"
+        },
+        {
+          "text": "Modelos",
+          "href": "https://www.landking.cl/modelos.html"
+        },
+        {
+          "text": "Ficha Técnica LK5",
+          "href": "https://www.landking.cl/content/dam/landking/fichas-técnicas/LK5_Ficha_2024.pdf"
+        },
+        {
+          "text": "Ficha Técnica LK5 2AB",
+          "href": "https://www.landking.cl/content/dam/landking/fichas-técnicas/LK5_Ficha_2026%20(2).pdf"
+        },
+        {
+          "text": "LK3",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk3.html"
+        },
+        {
+          "text": "LK5",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk5.html"
+        },
+        {
+          "text": "LK5 EV",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk5-ev.html"
+        }
+      ]
+    },
+    "https://www.landking.cl/content/landking/es/home/modelos.html": {
+      "status": 200,
+      "title": "Modelos Landking",
+      "images": [
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/logo_landking_all_blue_v2.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-121.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-151.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-161.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-171.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/Iconos-Quienes-somos.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/Iconos-noticias.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/header/medidas%20de%20werb-141.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/bars-header.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/logo_landking_all_white_v2.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/Recurso-250.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/logos/Logo_Landking_Footer-21.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-35.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-37.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-36.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.landking.cl/content/dam/landking/general/iconos/home/footer/medidas%20de%20werb-38-38.png",
+          "alt": "",
+          "attribute": "src"
+        }
+      ],
+      "links": [
+        {
+          "text": "Modelos",
+          "href": "https://www.landking.cl/modelos.html"
+        },
+        {
+          "text": "Modelos",
+          "href": "https://www.landking.cl/modelos.html"
+        },
+        {
+          "text": "LK3",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk3.html"
+        },
+        {
+          "text": "LK5",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk5.html"
+        },
+        {
+          "text": "LK5 EV",
+          "href": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk5-ev.html"
+        }
+      ]
+    },
+    "https://www.shineraychile.cl/modelos/vehiculos-comerciales/": {
+      "status": 200,
+      "title": "Vehiculos comerciales: SUVs, Furgones y camionetas | Shineray",
+      "images": [
+        {
+          "url": "https://www.shineraychile.cl/content/uploads/2023/09/logo-shineray-2.png",
+          "alt": "Modelos – SUVs, Furgones de Carga, Camionetas | Brilliance",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.shineraychile.cl/content/uploads/2023/09/logo-shineray-negro.png",
+          "alt": "Modelos – SUVs, Furgones de Carga, Camionetas | Brilliance",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.shineraychile.cl/content/uploads/2023/02/LOGO-GILDEMEISTER1.png",
+          "alt": "Modelos – SUVs, Furgones de Carga, Camionetas | Brilliance",
+          "attribute": "src"
+        }
+      ],
+      "links": [
+        {
+          "text": "Modelos",
+          "href": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/"
+        },
+        {
+          "text": "Modelos",
+          "href": "https://www.shineraychile.cl/modelos"
+        },
+        {
+          "text": "Modelos",
+          "href": "https://www.shineraychile.cl/modelos/"
+        }
+      ]
+    },
+    "https://jmcchile.cl/": {
+      "error": "HTTPSConnectionPool(host='jmcchile.cl', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+    },
+    "https://jmcchile.cl/modelos/vigus-ev/": {
+      "error": "HTTPSConnectionPool(host='jmcchile.cl', port=443): Max retries exceeded with url: /modelos/vigus-ev/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+    },
+    "https://www.fuso.cl/camiones-canter-718": {
+      "status": 403,
+      "title": "Access Denied",
+      "images": [],
+      "links": []
+    },
+    "https://www.fuso.cl/camiones-canter-918": {
+      "status": 403,
+      "title": "Access Denied",
+      "images": [],
+      "links": []
+    },
+    "https://www.anac.cl/autos-kyc/": {
+      "status": 200,
+      "title": "Autos KYC – Anac",
+      "images": [
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/logo.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/linkedin-logo.png",
+          "alt": "linkedin",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/m_autos_1920x159.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_autos.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_autos_gris.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_camiones.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_camiones_gris.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_buses.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_buses_gris.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_maquinarias.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/icono_grande_maquinarias_gris.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/Bot_Pr_Carga_f.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/Bot_Pr_Carga_ff.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/flecha_izquierda.png",
+          "alt": "<",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/flecha_derecha.png",
+          "alt": ">",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/01/LOG_KYC.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/10/01-1.jpg",
+          "alt": "",
+          "attribute": "data-src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/10/2-1.jpg",
+          "alt": "",
+          "attribute": "data-src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/10/3-1.jpg",
+          "alt": "",
+          "attribute": "data-src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/10/4-1.jpg",
+          "alt": "",
+          "attribute": "data-src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/10/5-1.jpg",
+          "alt": "",
+          "attribute": "data-src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/10/6-1.jpg",
+          "alt": "",
+          "attribute": "data-src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/logo_footer.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/Sello-agente-footer.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/Bot_icarcheck.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/alfa-logo.fw_-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/AUDI-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/logo-baic-220x221-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2019/07/Logo-Bentley-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LOG-BMW-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/logo-BYD-220x221-1-120x120.jpg",
+          "alt": "logo-BYD-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LogoChangan1.fw_-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/log-chery-220x2211-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/Chevrolet-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/log-chrysler-220x221-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/citroen-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2022/05/Logo-CUPRA-120x120.png",
+          "alt": "Logo-CUPRA",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/log-dfsk-1-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/log-dodge-220x221-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/DONGFENG-CIDEF-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2024/12/Dongfeng-Indumotora-1-120x120.png",
+          "alt": "Dongfeng-Indumotora",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/DS-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2026/02/EXEED-Log-web-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logoferrari-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/FIAT-LOG-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logoford-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LogFoton220x221-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/GacGonow-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LOG-GEELY-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2024/04/LOG-GWM-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logohonda-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/HYUNDAI1-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/log_Hyundai_VC-120x120.jpg",
+          "alt": "log_Hyundai_VC",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LogoIvecoNegro-120x120.png",
+          "alt": "LogoIvecoNegro",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2026/02/JAC-2026-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LOG-JAGUAR-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/JEEP-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2023/10/Logo-Jetour-120x120.png",
+          "alt": "Logo-Jetour",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2024/08/LOGO-JIM-120x120.png",
+          "alt": "LOGO JIM",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2023/01/Kaiyi_220x221_-120x120.png",
+          "alt": "Kaiyi_220x221_",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2021/11/Karrylogo-120x120.jpg",
+          "alt": "Karry(logo)",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/Kia_Logo_B_V2-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/01/LOG_KYC-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logolandrover-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2024/12/Landking-web-120x120.png",
+          "alt": "Landking-web",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2026/09/LEAPMOTOR-220x221-1-120x120.jpg",
+          "alt": "LEAPMOTOR-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/log-lexus-220x221-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/08/Lynkco-120x120.jpg",
+          "alt": "Lynk&co",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/mahindra-220-221-1-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/maxus-220x221-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LogMazda3-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/MERCEDES-BENZ-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/logo-MG-220X221-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/mini_new_logo-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2024/12/NAMMI-web-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/mmcc-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2024/11/Logo-NETA-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LOGO-NISSAN-1-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/03/OmodaJaecoo-120x120.png",
+          "alt": "OmodaJaecoo",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/Log-Opel-220x221-2.fw_-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/log-peugeot-220x221-1-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LOG-PORSCHE-120x120.png",
+          "alt": "LOG-PORSCHE",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/log-ram-220x2211-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/RENAULT-220X221-2021-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/10/RIDDARA-Web-120x120.jpg",
+          "alt": "RIDDARA-Web",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2021/05/Logo-RR.fw_-1-120x120.png",
+          "alt": "Logo-RR.fw",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/SEAT1-120x120.png",
+          "alt": "SEAT1",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2026/02/Shineray-220-221-120x120.png",
+          "alt": "Shineray-220-221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/SKODA-LOG-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2026/02/SOUEAST-ORANGE-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logossangyong-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logosubaru-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logosuzuki-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/05/Tesla-220X221-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logo-toyota-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/logo_VW_F-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logo-volvo1-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/log-Dongfeng-By-ZNA-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/logzxauto-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2025/08/BYD-CAM-Log220x221-120x120.png",
+          "alt": "BYD-CAM-Log220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logodaf-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LogoDongfeng-1-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LogoFaw-1-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2019/01/Foton-WEB-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/Freightliner-logo-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/12/log_fuso-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/HINO-Web-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LogoInternational-1-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/JAC-MOTORS-WEB-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/12/JMC-220x221-1-120x120.jpg",
+          "alt": "JMC-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/Kenworth-Web-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/Mack-F-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/logo-man1-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/RENAULT-TRUCKS-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/Scania-Web-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/VW-Camiones-Buses-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/Volvo-Log-2022-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/AGRALE1-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/08/DAEWOO-BUS1.fw_-120x120.png",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/Golden-Dragon-2022-120x120.png",
+          "alt": "Golden Dragon 2022",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/KINGLONG-220X221-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/MERCEDES-BENZ-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/VOLVO-CAMIONES1-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2017/09/LOG-YUTONG-120x120.jpg",
+          "alt": "",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Ausa-220x221-2-120x120.jpg",
+          "alt": "Ausa-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2024/02/log-develon-220x221-1-120x120.png",
+          "alt": "log-develon-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2023/10/LOGO-Facma-120x120.jpg",
+          "alt": "LOGO-Facma",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/FINNING-220X221-120x120.jpg",
+          "alt": "FINNING-220X221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/HAMM-220x221-1-120x120.jpg",
+          "alt": "HAMM-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Hangcha-220X221-120x120.jpg",
+          "alt": "Hangcha-220X221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/JCB-220X221-120x120.jpg",
+          "alt": "JCB-220X221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/06/JohnDeere-120x120.jpg",
+          "alt": "JohnDeere",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/06/LogoKomatsu-120x120.jpg",
+          "alt": "LogoKomatsu",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Komatsu-Forklift-220x221-1-120x120.jpg",
+          "alt": "Komatsu-Forklift-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Landini-220X221-120x120.jpg",
+          "alt": "Landini-220X221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/SKC-Manitou-220x221-1-120x120.jpg",
+          "alt": "SKC-Manitou-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Massey-220x221-1-120x120.jpg",
+          "alt": "Massey-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/New-Holland-2024-120x120.jpg",
+          "alt": "New-Holland-2024",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/NewHollandConstruction-220x221-1-120x120.jpg",
+          "alt": "NewHollandConstruction-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Sandvik-220X221-120x120.jpg",
+          "alt": "Sandvik-220X221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/10/logo-sany-220x221-1-120x120.jpg",
+          "alt": "SANY MAQUINARIA",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/SDLG-710x430-1-120x120.jpg",
+          "alt": "SDLG-710x430",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Still-220X221-120x120.jpg",
+          "alt": "Still-220X221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/Maq-Toyota-220x221-1-120x120.jpg",
+          "alt": "Maq-Toyota-220x221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/uploads/2020/09/XCMG-220X221-120x120.png",
+          "alt": "XCMG-220X221",
+          "attribute": "src"
+        },
+        {
+          "url": "https://www.anac.cl/wp-content/themes/anac/img/logo_nuevaidea_gris.png",
+          "alt": "Nueva Idea",
+          "attribute": "src"
+        }
+      ],
+      "links": []
+    }
+  },
+  "targets": {
+    "Hino|City 515": "https://www.hino.cl/vehiculo/xzu-616",
+    "Hino|XZU 616": "https://www.hino.cl/vehiculo/xzu-616",
+    "Hino|XZU 617 DC": "https://www.hino.cl/vehiculo/xzu-616",
+    "Hino|XZU 816": "https://www.hino.cl/vehiculo/xzu-616",
+    "Hino|XZU 817": "https://www.hino.cl/vehiculo/xzu-616",
+    "Hino|XZU 917": "https://www.hino.cl/vehiculo/xzu-616",
+    "Changan|star-truck-plus-pick-up-cabina-simple": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+    "Changan|star-truck-plus-pick-up-cabina-doble": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+    "Changan|star-truck-plus-cargo-box": "https://www.changan.cl/vehiculo/vehiculos-comerciales/",
+    "Landking|LK3": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk3.html",
+    "Landking|LK5": "https://www.landking.cl/content/landking/es/home/modelos/minitrucks-clase-b/lk5.html",
+    "Landking|LK 614": "https://www.landking.cl/content/landking/es/home/modelos.html",
+    "Landking|LK 1016": "https://www.landking.cl/content/landking/es/home/modelos.html",
+    "Shineray|T32 CD": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/",
+    "Shineray|T50 CS": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/",
+    "Shineray|T52 CD": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/",
+    "Shineray|X30 con A/C": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/",
+    "Shineray|T30 CS": "https://www.shineraychile.cl/modelos/vehiculos-comerciales/",
+    "JMC|All New Vigus Pro": "https://jmcchile.cl/",
+    "JMC|Vigus EV": "https://jmcchile.cl/modelos/vigus-ev/",
+    "JMC|EV3": "https://jmcchile.cl/",
+    "Fuso|Canter 718": "https://www.fuso.cl/camiones-canter-718",
+    "Fuso|Canter 918": "https://www.fuso.cl/camiones-canter-918",
+    "Kyc|T3 Gran Mamut": "https://www.anac.cl/autos-kyc/",
+    "Kyc|X5 Cargo BOX": "https://www.anac.cl/autos-kyc/"
+  }
+}

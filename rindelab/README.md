@@ -1,5 +1,16 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Lote 6 · Fotografías desde sitios oficiales (22/11/2026)
+
+Se incorporaron **21 referencias externas a imágenes de fabricantes e importadores chilenos**, obtenidas directamente de páginas de Hino, Changan, Landking, JMC y Shineray. A diferencia de los lotes Commons, **no se descargaron ni republicaron sus fotografías en el repositorio**: se utilizan URL de origen, autor corporativo y página oficial, indicando «Derechos reservados» sin atribuirles falsamente una licencia abierta. Su disponibilidad futura depende de los servidores de los titulares y su reutilización está sujeta a sus condiciones.
+
+**Cobertura:** 592 referencias en biblioteca; **59 grupos sin imagen entre 700** (81 anteriormente), equivalentes a 641 grupos con fotografía (91,6%). Se validaron visualmente modelo/carrocería y respuesta HTTP de cada imagen. Se excluyeron banners promocionales Landking con precios; se seleccionaron fotos limpias de los modelos. La información de precios y homologaciones no se modificó.
+
+**Auditoría:** `data/manufacturer-photo-batch6-20261122.json`, `data/official-photo-shortlist-20261122.json`, `tests/manufacturer-official-batch6.cjs`. Originales Commons conservados intactos.
+
+---
+
+
 ## Cuarto y quinto lotes Commons · 22/11/2026
 
 Se completaron **dos rondas adicionales de investigación y curaduría** para las familias comerciales sin fotografías. Se revisaron 143 grupos en búsqueda masiva, con una segunda ronda de denominaciones alternativas internacionales. Se incorporaron **53 JPEG nuevos** (39 del cuarto lote y 14 del quinto), tras revisar visualmente el vehículo y corroborar derechos en Wikimedia Commons, autor, licencia, URL y SHA-256. La biblioteca pasó de 518 a **571 fotografías**.
