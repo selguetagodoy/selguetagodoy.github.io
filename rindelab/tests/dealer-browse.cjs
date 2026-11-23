@@ -8,6 +8,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(process.env.RINDELAB_BASE_URL||'http://127.0.0.1:8765/rindelab/',{waitUntil:'domcontentloaded'});
    await page.waitForFunction(()=>window.RindelabMarket?.getTotal()>700&&document.querySelector('#searchButton')&&!document.querySelector('#searchButton').disabled,{timeout:90000});
+   await page.locator('#catalogScopeDetails > summary').click();
    await page.selectOption('#catalogScope','commercial');
    await page.fill('#query','Trailseeker');await page.click('#searchButton');
    assert((await page.locator('.market-card').count())>=1,'No se muestra Subaru Trailseeker sin ficha 3CV');

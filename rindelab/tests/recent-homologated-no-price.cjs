@@ -8,6 +8,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  try{
   await page.goto(base,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>!document.querySelector('#searchButton').disabled,{timeout:30000});
+  await page.locator('#catalogScopeDetails > summary').click();
   await page.selectOption('#catalogScope','recent-no-price');
   await page.locator('#query').fill('Mokka');
   await page.locator('#searchButton').click();
