@@ -1,5 +1,18 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Cuarto y quinto lotes Commons · 22/11/2026
+
+Se completaron **dos rondas adicionales de investigación y curaduría** para las familias comerciales sin fotografías. Se revisaron 143 grupos en búsqueda masiva, con una segunda ronda de denominaciones alternativas internacionales. Se incorporaron **53 JPEG nuevos** (39 del cuarto lote y 14 del quinto), tras revisar visualmente el vehículo y corroborar derechos en Wikimedia Commons, autor, licencia, URL y SHA-256. La biblioteca pasó de 518 a **571 fotografías**.
+
+La cobertura comercial pasó de **143 a 81 grupos sin imagen de un total de 700**. Se recuperaron **62 grupos**, gracias a fotografías nuevas y correcciones de asociaciones generacionales y tecnológicas verificadas. La cobertura es **619/700 (88,4 %)**. Se mantuvo la distinción entre vehículo comercial y foto referencial de familia: las imágenes no acreditan versión, motor, equipamiento, disponibilidad ni precio exactos. No se modificaron homologaciones, precios ni datos técnicos.
+
+**No se reutilizan fotografías de familias erróneas:** Mini JCW Trim no se presenta como JCW eléctrico; un Tiggo 7 no se asigna a Tiggo 2/3; una Transit Custom no sustituye a Transit de gran tamaño; ni una Fiat Fiorino se asigna a RAM V1000 sin verificación. Fotografías eléctricas de Porsche Cayenne y enchufables de Great Wall Poer P500 se identifican específicamente.
+
+**Trazabilidad:** `data/commons-gap4-20261122.json`, `data/commons-gap5-20261122.json`; investigaciones `data/commons-gap4-discovery-20261122.json`, `data/commons-gap5-discovery-20261122.json`; importadores `scripts/import-commons-gap4-20261122.py`, `scripts/import-commons-gap5-20261122.py`; pruebas `node rindelab/tests/commons-gap4.cjs`, `node rindelab/tests/commons-gap5.cjs`, `node rindelab/tests/photo-integrity.cjs`, `node scripts/rindelab-market-queue.cjs --check`.
+
+---
+
+
 ## Tercer lote Commons y recuperación de asociaciones 2027 · 22/11/2026
 
 Se incorporaron **19 fotografías nuevas** de vehículos de Wikimedia Commons, con revisión visual de modelo y carrocería, archivo JPEG local, crédito de autor, licencia de reutilización, URL de origen y huella SHA-256. Se corrigió además la asociación de imágenes existentes con fichas comerciales de año-modelo 2027 **solo para familias de generación continuista incluidas en una lista de compatibilidad explícita**. Quedan excluidas asociaciones incorrectas como Porsche Cayenne EV con fotografía térmica, Great Wall Poer P500 con Poer Plus, y Mazda *All New* CX-5 con la generación anterior.

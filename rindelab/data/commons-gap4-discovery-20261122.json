@@ -1,0 +1,5052 @@
+{
+  "source": "Wikimedia Commons API namespace 6 search",
+  "searched": 143,
+  "groups": [
+    {
+      "key": "DONGFENG|AEOLUS Y3|?",
+      "brand": "Dongfeng",
+      "family": "aeolus y3",
+      "technology": null,
+      "versions": 3,
+      "referencePriceClp": 11490000,
+      "source": "https://www.rosselot.cl/public/nuevos/dongfeng/aeolus-y3",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Dongfeng aeolus y3",
+          "n": 0
+        },
+        {
+          "q": "Dongfeng Aeolus Y3 car",
+          "n": 0
+        },
+        {
+          "q": "Dongfeng Fengshen Y3",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "DONGFENG|S50 EVE|?",
+      "brand": "Dongfeng",
+      "family": "s50 eve",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 26990000,
+      "source": "https://www.rosselot.cl/public/nuevos/dongfeng/s50-eve",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Dongfeng s50 eve",
+          "n": 0
+        },
+        {
+          "q": "Dongfeng S50 EV",
+          "n": 13
+        },
+        {
+          "q": "Dongfeng Fengxing S50 EV",
+          "n": 10
+        }
+      ],
+      "candidateTitles": [
+        "File:Dongfeng S50 EV in Kyiv L.Riker 1.jpg",
+        "File:Dongfeng Fengxing Jingyi S50 EV 02 China 2019-03-21.jpg",
+        "File:Dongfeng Fengxing Jingyi S50 EV 01 China 2019-03-21.jpg",
+        "File:Dongfeng S50 EV in Kyiv L.Riker.jpg",
+        "File:Forthing Jingyi S50 EV 001.jpg",
+        "File:Forthing Jingyi S50 EV 003.jpg",
+        "File:Forthing Jingyi S50 EV 002.jpg",
+        "File:2016 Dongfeng Forthing S50 EV (rear).jpg",
+        "File:Forthing S50 EV IMG01.jpg",
+        "File:2016 Dongfeng Forthing S50 EV (front).jpg",
+        "File:Forthing Jingyi S50 EV 01.jpg",
+        "File:2018 Dongfeng-Fengxing Jingyi S50 EV, front 8.3.18.jpg",
+        "File:2018 Dongfeng-Fengxing Jingyi S50 EV, rear 8.3.18.jpg"
+      ]
+    },
+    {
+      "key": "DONGFENG|T5|?",
+      "brand": "Dongfeng",
+      "family": "t5",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 13290000,
+      "source": "https://www.rosselot.cl/public/nuevos/dongfeng/t5",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Dongfeng t5",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Forthing T5 001.jpg",
+        "File:Forthing T5 004.jpg",
+        "File:Forthing T5 005.jpg",
+        "File:Dongfeng Fengxing T5 01.jpg",
+        "File:Forthing T5 facelift 002.jpg",
+        "File:Forthing T5 facelift 001.jpg",
+        "File:Fengxing T5 001.jpg",
+        "File:Dongfeng Forthing T5 01 China 2019-03-14.jpg",
+        "File:Dongfeng Forthing T5 02 China 2019-03-14.jpg",
+        "File:Dongfeng Fengxing T5 02.jpg",
+        "File:Forthing T5 002.jpg",
+        "File:Dongfeng Forthing T5 Evo 1.5T Luxury 2024 (53569439947).jpg",
+        "File:Forthing T5 IMG001.jpg",
+        "File:Forthing T5 003.jpg",
+        "File:Dongfeng Forthing 5 1X7A7308.jpg",
+        "File:Forthing T5 EVO 005.jpg",
+        "File:Dongfeng Forthing 5 1X7A7316.jpg",
+        "File:Forthing T5 EVO 009.jpg"
+      ]
+    },
+    {
+      "key": "FOTON|TM CABINA DOBLE|?",
+      "brand": "Foton",
+      "family": "tm cabina doble",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 13078100,
+      "source": "https://www.rosselot.cl/public/nuevos/foton/tm-cabina-doble",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Foton tm cabina doble",
+          "n": 0
+        },
+        {
+          "q": "Foton TM3",
+          "n": 0
+        },
+        {
+          "q": "Foton Truck Mate double cab",
+          "n": 1
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FOTON|TM CABINA SIMPLE|?",
+      "brand": "Foton",
+      "family": "tm cabina simple",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 11888100,
+      "source": "https://www.rosselot.cl/public/nuevos/foton/tm-cabina-simple",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Foton tm cabina simple",
+          "n": 0
+        },
+        {
+          "q": "Foton Truck Mate",
+          "n": 4
+        },
+        {
+          "q": "Foton TM3 truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:Foton eTruckMate (GIICOMVEC 2026).jpg",
+        "File:2026 Foton e-TruckMate.jpg",
+        "File:Double Coin Tire on Foton Aumark.jpg"
+      ]
+    },
+    {
+      "key": "FOTON|TM CARGO BOX|?",
+      "brand": "Foton",
+      "family": "tm cargo box",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 13066200,
+      "source": "https://www.rosselot.cl/public/nuevos/foton/tm-cargo-box",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Foton tm cargo box",
+          "n": 0
+        },
+        {
+          "q": "Foton TM3 box truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FOTON|TM3 REFRIGERADO|?",
+      "brand": "Foton",
+      "family": "tm3 refrigerado",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 16648100,
+      "source": "https://www.rosselot.cl/public/nuevos/foton/tm3-refrigerado",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Foton tm3 refrigerado",
+          "n": 0
+        },
+        {
+          "q": "Foton TM3 refrigerator",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FOTON|TM5 CABINA SIMPLE|?",
+      "brand": "Foton",
+      "family": "tm5 cabina simple",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12840100,
+      "source": "https://www.rosselot.cl/public/nuevos/foton/tm5-cabina-simple",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Foton tm5 cabina simple",
+          "n": 0
+        },
+        {
+          "q": "Foton TM5",
+          "n": 1
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FOTON|TM5 CARGO BOX|?",
+      "brand": "Foton",
+      "family": "tm5 cargo box",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 14625100,
+      "source": "https://www.rosselot.cl/public/nuevos/foton/tm5-cargo-box",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Foton tm5 cargo box",
+          "n": 0
+        },
+        {
+          "q": "Foton TM5 truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FOTON|VIEW GRAND PASAJERO|?",
+      "brand": "Foton",
+      "family": "view grand pasajero",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 28548100,
+      "source": "https://www.rosselot.cl/public/nuevos/foton/view-grand-pasajero",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "Foton view grand pasajero",
+          "n": 1
+        },
+        {
+          "q": "Foton View Grand",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Foton Grand General 002.jpg",
+        "File:Foton Grand General 001.jpg",
+        "File:Foton Grand General 003.jpg",
+        "File:Moscow, Foton View Grand van, June 2026 01.jpg",
+        "File:1629030 (on Route 302) near Daoxiangyuan Bridge 20241214160712.jpg"
+      ]
+    },
+    {
+      "key": "JMC|ALL NEW VIGUS PRO|?",
+      "brand": "JMC",
+      "family": "All New Vigus Pro",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 26168100,
+      "source": "https://jmcchile.cl/legales/santander-consumer/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "JMC All New Vigus Pro",
+          "n": 1
+        },
+        {
+          "q": "JMC Vigus Pro pickup",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "JMC|ALL NEW VIGUS WORK|?",
+      "brand": "JMC",
+      "family": "All New Vigus Work",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 20218100,
+      "source": "https://jmcchile.cl/legales/santander-consumer/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "JMC All New Vigus Work",
+          "n": 1
+        },
+        {
+          "q": "JMC Vigus Work pickup",
+          "n": 3
+        }
+      ],
+      "candidateTitles": [
+        "File:JMC Vigus (Yuhu 5).jpg",
+        "File:JMC Vigus TDCi Work 2025.jpg",
+        "File:2022 JMC Vigus Plus TDCi.jpg"
+      ]
+    },
+    {
+      "key": "RAM|RAM2500|?",
+      "brand": "RAM",
+      "family": "ram2500",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 85668100,
+      "source": "https://www.rosselot.cl/public/nuevos/ram/ram2500",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 8,
+      "queries": [
+        {
+          "q": "RAM ram2500",
+          "n": 0
+        },
+        {
+          "q": "2024 RAM 2500 crew cab",
+          "n": 4
+        }
+      ],
+      "candidateTitles": [
+        "File:Dodge Ram 2500 Crew Cab 154351.jpg",
+        "File:Dodge Ram 2500 Crew Cab 165359.jpg",
+        "File:Ram 2500 HD (DS) Tradesman Crew Cab 6ft Bed in Maldonado.jpg"
+      ]
+    },
+    {
+      "key": "BAIC|X7|?",
+      "brand": "Baic",
+      "family": "X7",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 24990000,
+      "source": "https://www.baic.cl/legales-modelos/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Baic X7",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:View of the bay of Naples, by Pieter Bruegel (I).jpg",
+        "File:Pieter Bruegel the Elder - Naval Battle in the Gulf of Naples - WGA03522.jpg",
+        "File:Pieter Bruegel the Elder - Naval Battle in the Gulf of Naples (detail) - WGA03523.jpg",
+        "File:View of the bay of Naples, c. 1563.jpg",
+        "File:View of the bay of Naples, c. 1563 - detail.jpg",
+        "File:Bruegel — Naval Battle in the Gulf of Naples.jpg",
+        "File:Pieter Bruegel d. Ä. 031.jpg",
+        "File:The harbor of Naples and Vesuvius at dawn. Italy.jpg",
+        "File:Stamp of Rwanda - 1970 - Colnect 989267 - Fleet in Bay of Naples by Peter Brueghel the Elder.jpeg",
+        "File:BMW 3AA-32EM44 X7 M60i xDrive (22121615315).jpg",
+        "File:BMW 3AA-32EM44 X7 M60i xDrive (22121615321).jpg",
+        "File:BMW 3AA-32EM44 X7 M60i xDrive (22121615322).jpg",
+        "File:BMW G07 LCI X7 M60i xDrive M Marina Bay Blue Metallic.jpg",
+        "File:Stamp of Ajman - 1972 - Colnect 769552 - Naval battle of the Gulf of Naples by Pieter Brueghel.jpeg",
+        "File:Stamp of Ajman - 1972 - Colnect 769551 - Naval battle of the Gulf of Naples by Pieter Brueghel.jpeg",
+        "File:Stamp of Ajman - 1972 - Colnect 854268 - Naval battle of the Gulf of Naples by Pieter Brueghel.jpeg",
+        "File:Friedrich Thøming - View of the Bay of Naples (1842).jpg",
+        "File:View across the bay of Naples at night.jpg",
+        "File:Lifan Maiwei X7.jpg"
+      ]
+    },
+    {
+      "key": "BMW|SERIE 8 COUPE|?",
+      "brand": "BMW",
+      "family": "Serie 8 Coupe",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 144000000,
+      "source": "https://www.auto.cl/nuevos/bmw",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "BMW Serie 8 Coupe",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:BMW G16 at IAA 2019 IMG 0624.jpg",
+        "File:BMW 8er Concept IMG 0884.jpg",
+        "File:E36 328i (klein).jpg",
+        "File:BMW 850 CSi 1993 at Legendy 2019 in Prague.jpg",
+        "File:BMW 850CSi.jpg",
+        "File:BMW 850i (6942626859).jpg",
+        "File:BMW 850CSi (3).jpg",
+        "File:Schabak Modell BMW 850i 1-24.jpg",
+        "File:BMW 850i (5698073683).jpg",
+        "File:1991 BMW 850i (9309766694).jpg",
+        "File:BMW 850i (4961295080).jpg",
+        "File:BMW 850i 1991 (15598895220).jpg",
+        "File:BMW 850i (5714379866).jpg",
+        "File:BMW 840d, IFA 2018, Berlin (P1070297).jpg",
+        "File:850i cabrio 8 2015 BME Museum.jpg",
+        "File:BMW 850i (7706926380).jpg",
+        "File:BMW 850i Bochnia 2.JPG",
+        "File:BMW 850 CSI - Flickr - Joost J. Bakker IJmuiden (1).jpg",
+        "File:BMW 840i Coupé (G15, 2019) (52164060376).jpg",
+        "File:BMW 840i Coupé (G15, 2022) (54526656884).jpg",
+        "File:BMW 840i Coupé (G15, 2022) (54526711083).jpg",
+        "File:BMW 840i xDrive Coupé (G15, 2022) (52957607634).jpg",
+        "File:2020 BMW 840i xDrive in Alpinweiss, rear left.jpg",
+        "File:2020 BMW 840i xDrive in Alpinweiss, front left.jpg",
+        "File:BMW 8 SERIES COUPE (G15) China.jpg",
+        "File:BMW 8 SERIES COUPE (G15) China (2).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (8).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (4).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (3).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (5).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (7).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (6).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (9).jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China.jpg",
+        "File:BMW 8 SERIES GRAN COUPE (G15) China (2).jpg",
+        "File:2019 BMW 8-Series M850i xDrive Coupé.jpg"
+      ]
+    },
+    {
+      "key": "CHANGAN|CS35 MAX|?",
+      "brand": "Changan",
+      "family": "CS35 Max",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 14490000,
+      "source": "https://www.changan.cl/vehiculo/cs35-max/",
+      "checkedAt": "2026-10-17",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Changan CS35 Max",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Oshan X5 IMG003.jpg",
+        "File:Moscow, Oshan (Changan) X5 Sport SUV, Nov 2025 02.jpg",
+        "File:Moscow, Oshan (Changan) X5 Sport SUV, Nov 2025 01.jpg",
+        "File:Moscow, Oshan (Changan) X5 Sport SUV, Nov 2025 03.jpg",
+        "File:2021 Chang'an Oshan X5 (front).jpg",
+        "File:Oshan X5 IMG004.jpg",
+        "File:Oushan X5 006.jpg",
+        "File:Oshan X5 Plus 012.jpg",
+        "File:Oshan X5 Plus 011.jpg",
+        "File:Oshan X5 Plus 013.jpg",
+        "File:2021 Chang'an Oshan X5 (rear).jpg",
+        "File:Kaicene F30 (Changan Shenqi F30).jpg",
+        "File:Oushan X5 008.jpg",
+        "File:Oushan X5 005.jpg",
+        "File:Oshan X5 Plus 007.jpg",
+        "File:Oshan X5 Plus 003.jpg",
+        "File:Oushan X5 012.jpg",
+        "File:Oshan X5 Plus 006.jpg",
+        "File:Moscow, Changan CS35 plus, June 2025 02.jpg",
+        "File:Moscow, Changan CS35 plus, June 2025 01.jpg",
+        "File:Moscow, Changan CS35 plus Delimobil, Aug 2025 01.jpg",
+        "File:Moscow, Changan CS35plus, Aug 2025 03.jpg",
+        "File:Moscow, Changan CS35plus, Aug 2025 05.jpg",
+        "File:Moscow, Changan CS35plus, Aug 2025 04.jpg",
+        "File:Moscow, Changan CS35plus, Aug 2025 02.jpg"
+      ]
+    },
+    {
+      "key": "CHANGAN|SERIE M|?",
+      "brand": "Changan",
+      "family": "Serie M",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 8080100,
+      "source": "https://www.auto.cl/nuevos/changan",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Changan Serie M",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:2018 Suzuki Swift SZ5 Boosterjet SHVS 1.0 Front.jpg",
+        "File:Асвестохори, Suzuki Swift на 25 Марта-Македономахоне.jpg",
+        "File:Suzuki Swift (2024) hybrid DSC 7922.jpg",
+        "File:Suzuki Swift (2024) hybrid DSC 7924.jpg",
+        "File:Suzuki Swift '24 (1).jpg",
+        "File:Suzuki Swift CN facelift Shishi 01 2022-08-28.jpg",
+        "File:Suzuki Swift 2018.jpg",
+        "File:2003 Suzuki Swift sedan silver front.jpg",
+        "File:2003-2005 Suzuki Swift HT 2.png",
+        "File:Suzuki Swift rear-1.jpg",
+        "File:2012 Suzuki Swift Sport (98801).jpg",
+        "File:2012 Suzuki Swift Sport (65742).jpg",
+        "File:2015 Suzuki swift Sport.jpg",
+        "File:Suzuki Swift front-1.jpg",
+        "File:2001 Suzuki Swift GLS 1.jpg",
+        "File:Suzuki Swift Sport 2.jpg",
+        "File:2003-2005 Suzuki Swift HT Sport 2.png",
+        "File:2003-2005 Suzuki Swift HT 1.png"
+      ]
+    },
+    {
+      "key": "CHANGAN|SERIE M CARGO BOX|?",
+      "brand": "Changan",
+      "family": "Serie M Cargo BOX",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 9329600,
+      "source": "https://www.auto.cl/nuevos/changan",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Changan Serie M Cargo BOX",
+          "n": 0
+        },
+        {
+          "q": "Changan M201 box truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "CHANGAN|SERIE M FURGON|?",
+      "brand": "Changan",
+      "family": "Serie M Furgon",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 8496600,
+      "source": "https://www.auto.cl/nuevos/changan",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Changan Serie M Furgon",
+          "n": 0
+        },
+        {
+          "q": "Changan M201 van",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "CHANGAN|STAR TRUCK PLUS CARGO BOX|?",
+      "brand": "Changan",
+      "family": "star-truck-plus-cargo-box",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12316500,
+      "source": "https://www.auto.cl/nuevos/changan",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Changan star truck plus cargo box",
+          "n": 0
+        },
+        {
+          "q": "Changan Star Truck Plus cargo box",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "CHANGAN|STAR TRUCK PLUS PICK UP CABINA DOBLE|?",
+      "brand": "Changan",
+      "family": "star-truck-plus-pick-up-cabina-doble",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 11714360,
+      "source": "https://www.auto.cl/nuevos/changan",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Changan star truck plus pick up cabina doble",
+          "n": 0
+        },
+        {
+          "q": "Changan Star Truck Plus pickup double cab",
+          "n": 0
+        },
+        {
+          "q": "Changan MD301 Plus",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "CHANGAN|STAR TRUCK PLUS PICK UP CABINA SIMPLE|?",
+      "brand": "Changan",
+      "family": "star-truck-plus-pick-up-cabina-simple",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 11055100,
+      "source": "https://www.auto.cl/nuevos/changan",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Changan star truck plus pick up cabina simple",
+          "n": 0
+        },
+        {
+          "q": "Changan MD301 single cab",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "CHERY|TIGGO 2 PRO|?",
+      "brand": "Chery",
+      "family": "cl-tiggo-2-pro",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 10990000,
+      "source": "https://www.auto.cl/nuevos/chery",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Chery Tiggo 2 pro",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Chery Tiggo 8 Pro on display.jpg",
+        "File:Chery Tiggo 8 Pro, interior 20221028.jpg",
+        "File:Chery Tiggo 8 Pro, rear 20221028.jpg",
+        "File:Chery Tiggo 8 Pro, front 20221028.jpg",
+        "File:Chery Tiggo 8 Pro, driver seat 20221028.jpg",
+        "File:Chery Tiggo 8 Pro, front right 20221028.jpg",
+        "File:2024 Chery Tiggo 7 Pro 1.5 Premium in Ruby Red.jpg",
+        "File:Chery Tiggo 5x Pro Hybrid 2024 (2).jpg",
+        "File:2023 Chery Tiggo7 Pro Max grey rear.jpg",
+        "File:2023 Chery Tiggo7 Pro Max grey front.jpg",
+        "File:2023 Chery Tiggo8 Pro Max (LVТ) silver front.jpg",
+        "File:2024 Chery Tiggo7 Pro Max light blue rear.jpg",
+        "File:Chery Tiggo7 Pro 2023 (53631773981).jpg",
+        "File:Chery Tiggo7 Pro 1.5T GLX 2024 (54149643181).jpg",
+        "File:Chery Tiggo2 Pro Max 2025.jpg",
+        "File:Chery Tiggo7 Pro 2023 (54186225344).jpg",
+        "File:Chery Tiggo7 Pro GLS 2024.jpg"
+      ]
+    },
+    {
+      "key": "CHERY|TIGGO 3 PRO|?",
+      "brand": "Chery",
+      "family": "cl-tiggo-3-pro",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 13990000,
+      "source": "https://www.auto.cl/nuevos/chery",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Chery Tiggo 3 pro",
+          "n": 7
+        }
+      ],
+      "candidateTitles": [
+        "File:Chery Tiggo 8 Pro 002.jpg",
+        "File:Chery Tiggo 8 Pro 001.jpg",
+        "File:Chery Tiggo 8 Pro IMG001.jpg",
+        "File:2024 Chirey Tiggo 7 Pro e+ front view.png",
+        "File:Chery Tiggo2 Pro Max 2025.jpg",
+        "File:Expo Auto Chino 2026. Chery - (3).jpg"
+      ]
+    },
+    {
+      "key": "CHEVROLET|N400 CARGO|?",
+      "brand": "Chevrolet",
+      "family": "N400 Cargo",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12302100,
+      "source": "https://www.auto.cl/nuevos/chevrolet",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Chevrolet N400 Cargo",
+          "n": 0
+        },
+        {
+          "q": "Chevrolet N400 cargo van",
+          "n": 0
+        },
+        {
+          "q": "Wuling Hongguang V",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Wuling Hongguang V II 005.jpg",
+        "File:Wuling Hongguang V II 003.jpg",
+        "File:Wuling Hongguang V II 004.jpg",
+        "File:Wuling Hongguang V II 002.jpg",
+        "File:Wuling Hongguang V II 001.jpg",
+        "File:Wuling Hongguang V II panal van 001.jpg",
+        "File:Wuling Hongguang V Sanming 01 2022-07-01.jpg",
+        "File:Wuling Hongguang V II Shishi 02 2022-04-23.jpg",
+        "File:Wuling Hongguang V II Shishi 01 2022-04-23.jpg",
+        "File:Wuling Hongguang V.jpg",
+        "File:2019 SAIC-GM-Wuling Honggang V (rear).jpg",
+        "File:2019 SAIC-GM-Wuling Honggang V (front).jpg",
+        "File:Wuling Hongguang V China 2015-04-06.jpg",
+        "File:Wuling Hongguang V China 2015-04-21.jpg",
+        "File:Wuling Hongguang V China 2015-04-08.jpg",
+        "File:Wuling Hongguang V China 2015-04-15.jpg",
+        "File:Wuling Hongguang V 01 China 2016-04-01.jpg",
+        "File:Wuling Hongguang V China 2016-04-01.jpg"
+      ]
+    },
+    {
+      "key": "CHEVROLET|SAIL HATCHBACK|?",
+      "brand": "Chevrolet",
+      "family": "sail-hatchback",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12890000,
+      "source": "https://www.auto.cl/nuevos/chevrolet",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Chevrolet sail hatchback",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:2011 Chevrolet Sail hatchback 8.3.18.jpg",
+        "File:2011 Chevrolet Sail hatchback, rear 8.3.18.jpg",
+        "File:Chevrolet Sail II hatch 02 China 2019-03-17.jpg",
+        "File:Chevrolet Sail II hatch 01 China 2019-03-17.jpg",
+        "File:Chevrolet Sail II hatch Sanming 02 2022-07-01.jpg",
+        "File:Chevrolet Sail II hatch Sanming 01 2022-07-01.jpg",
+        "File:Chevrolet Sail (China).jpg",
+        "File:Chevrolet Sail II hatch Sanming 02 2022-11-15.jpg",
+        "File:Chevrolet Sail II hatch Sanming 01 2022-11-15.jpg",
+        "File:Chevrolet Sail & Buick Sail.jpg",
+        "File:Chevrolet Sail II hatch China 2012-06-02.JPG",
+        "File:Chevrolet Sail II hatch China 2016-04-08.jpg",
+        "File:Chevrolet Sail II hatch China 2012-07-15.JPG",
+        "File:Chevrolet Sail II hatch China 2012-06-10.JPG",
+        "File:Chevrolet Sail II hatch rear China 2012-04-28.JPG",
+        "File:Chevrolet Sail in China.jpg",
+        "File:Fiat Palio in China.jpg",
+        "File:Fiat Palio Weekend HLX Speedgear front.jpg"
+      ]
+    },
+    {
+      "key": "CHEVROLET|SILVERADO CD|?",
+      "brand": "Chevrolet",
+      "family": "Silverado CD",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 60298100,
+      "source": "https://www.auto.cl/nuevos/chevrolet",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Chevrolet Silverado CD",
+          "n": 1
+        },
+        {
+          "q": "2024 Chevrolet Silverado 1500 crew cab",
+          "n": 0
+        },
+        {
+          "q": "Chevrolet Silverado 2024",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:2024 Chevrolet Silverado EV RST.jpg",
+        "File:Chevrolet Silverado Las Vegas Fall 2024.jpg",
+        "File:Kroger Health Chevrolet Silverado Las Vegas Fall 2024.jpg",
+        "File:1995 Chevrolet K1500 Silverado extended cab 6.5' Fleetside, rear right, 06-07-2024.jpg",
+        "File:2024 Chevrolet Silverado EV RST, NYIAS 2022.jpg",
+        "File:U.S. Navy Chevrolet Silverado Chassis Cab Las Vegas Fall 2024.jpg",
+        "File:12 Chevrolet Silverado 1500 LT.jpg",
+        "File:Chevrolet Silverado, BAS 24, Brussels (P1170376-RR).jpg",
+        "File:2024 Chevrolet Silverado Z71 au SIAM de 2024.jpg",
+        "File:2021 Chevrolet Silverado 5500 HD 4x4 regular cab, front left, 09-28-2024.jpg",
+        "File:Chevrolet Silverado ZR2 2024.jpg",
+        "File:2024 Chevrolet Silverado 2500HD au SIAM 2023.JPG",
+        "File:2024 Chevrolet Silverado 2500HD rear view.jpg",
+        "File:2024 Chevrolet Z71 Silverado au SIAM de 2024.jpg",
+        "File:15 Chevrolet Silverado 1500 High Country.jpg",
+        "File:2024 Chevrolet Silverado 2500HD front view.jpg",
+        "File:Chevrolet Silverado ZR2 2024 (54835957237).jpg",
+        "File:2024 Chevrolet Silverado 2500HD interior.jpg",
+        "File:Chevrolet Silverado LT V8 Trail Boss Z71 2024 (54074785461).jpg",
+        "File:2014-2015 Chevrolet Silverado Double Cab Z71.jpeg",
+        "File:Chevrolet Silverado LT Trail Boss Z71 2019 (54284074238).jpg",
+        "File:Zastava 2024 - Chevrolet Silverado 2500 HD lanser dronova SM-1 - 01.jpg",
+        "File:19 Chevrolet Silverado 2500HD LTZ.jpg",
+        "File:2011 Chevrolet Silverado 1500 LT Extended Cab Standard Box 4x4 in Victory Red, front left, 2024-06-17.jpg",
+        "File:18 Chevrolet Silverado 1500 LT.jpg",
+        "File:Chevrolet 2024 Silverado 1500 LT with 3.0L Duramax.jpg",
+        "File:Chevrolet Silverado 1500 LT Trail Boss (2024) (53648906649).jpg",
+        "File:Chevrolet Silverado 3500 HD Crew Cab LTZ 4WD (IV, Facelift) – h 02112024.jpg",
+        "File:Chevrolet Silverado 3500 HD Crew Cab LTZ 4WD (IV, Facelift) – f 02112024.jpg"
+      ]
+    },
+    {
+      "key": "DFSK|CARGO VAN EC35|EV",
+      "brand": "DFSK",
+      "family": "Cargo Van EC35",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 29738100,
+      "source": "https://www.dfsk.cl/precios-y-especificaciones-por-modelo/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "DFSK Cargo Van EC35",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "DFSK|E5 PLUS|PHEV",
+      "brand": "DFSK",
+      "family": "E5 Plus",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 29990000,
+      "source": "https://www.dfsk.cl/vehiculos/dfsk/e5-plus/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "DFSK E5 Plus",
+          "n": 4
+        }
+      ],
+      "candidateTitles": [
+        "File:Expo Auto Chino 2026. DFSK - (3).jpg",
+        "File:Expo Auto Chino 2026. DFSK - (2).jpg"
+      ]
+    },
+    {
+      "key": "DFSK|SUV600 PHEV|PHEV",
+      "brand": "DFSK",
+      "family": "SUV600 PHEV",
+      "technology": "PHEV",
+      "versions": 2,
+      "referencePriceClp": 24990000,
+      "source": "https://www.pdn.dfsk.cl/pasajeros/vehiculo/600-phev/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "DFSK SUV600 PHEV",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "DONGFENG|HUGE|?",
+      "brand": "Dongfeng",
+      "family": "Huge",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 19990000,
+      "source": "https://www.rosselot.cl/nuevos/dongfeng/huge",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Dongfeng Huge",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Aeolus Haoji 001.jpg",
+        "File:Aeolus Haoji IMG003.jpg",
+        "File:Aeolus Haoji 009.jpg",
+        "File:Aeolus Haoji 008.jpg",
+        "File:Aeolus Haoji IMG005.jpg",
+        "File:Aeolus Haoji 007.jpg",
+        "File:Aeolus Haoji IMG001.jpg",
+        "File:Aeolus Haoji IMG004.jpg",
+        "File:Aeolus Haoji IMG002.jpg",
+        "File:2024 Dongfeng Aeolus Haoji PHEV.jpg",
+        "File:AEOLUS-HAOJI.jpg",
+        "File:AEOLUS-HAOJI.R.jpg",
+        "File:Aeolus Haoji 012.jpg",
+        "File:Aeolus Haoji 011.jpg",
+        "File:Aeolus Haoji MY2022 IMG01.jpg",
+        "File:Aeolus Haoji 006.jpg",
+        "File:Aeolus Haoji 004.jpg",
+        "File:Aeolus Haoji 005.jpg"
+      ]
+    },
+    {
+      "key": "DONGFENG|T5 L|?",
+      "brand": "Dongfeng",
+      "family": "T5 L",
+      "technology": null,
+      "versions": 3,
+      "referencePriceClp": 14990000,
+      "source": "https://www.rosselot.cl/nuevos/dongfeng/t5-l",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Dongfeng T5 L",
+          "n": 1
+        },
+        {
+          "q": "Dongfeng Fengxing T5L",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Forthing T5 001.jpg",
+        "File:Forthing T5L rear.jpg",
+        "File:Forthing T5 facelift 002.jpg",
+        "File:Forthing T5 facelift 001.jpg",
+        "File:Forthing T5 004.jpg",
+        "File:Forthing T5 005.jpg",
+        "File:Forthing T5L 001.jpg",
+        "File:Forthing T5L 002.jpg",
+        "File:Forthing T5 006.jpg",
+        "File:Dongfeng Forthing 5 1X7A7308.jpg",
+        "File:Forthing T5 2023 facelift 004.jpg",
+        "File:Forthing T5 2023 facelift 002.jpg",
+        "File:Forthing T5 2023 facelift 001.jpg",
+        "File:Forthing T5 2023 facelift 003.jpg",
+        "File:Fengxing T5 001.jpg",
+        "File:Dongfeng Forthing 5 1X7A7316.jpg",
+        "File:Dongfeng Fengxing T5 01.jpg",
+        "File:Dongfeng Forthing T5 02 China 2019-03-14.jpg"
+      ]
+    },
+    {
+      "key": "FERRARI|812|?",
+      "brand": "Ferrari",
+      "family": "812",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 395419400,
+      "source": "https://www.auto.cl/nuevos/ferrari/812",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Ferrari 812",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Ferrari 812 Superfast IMG 8829.jpg",
+        "File:Ferrari 812 Superfast, GIMS 2019, Le Grand-Saconnex (GIMS1324).jpg",
+        "File:Ferrari 812 Superfast, GIMS 2019, Le Grand-Saconnex (GIMS1323).jpg",
+        "File:Ferrari 812 Superfast at the 2026 Adelaide Motorsport Festival (DSCF2566).jpg",
+        "File:Ferrari 812 GTS 9.jpg",
+        "File:Ferrari 812 GTS 8.jpg",
+        "File:Ferrari 812.jpg",
+        "File:2021 Ferrari 812 GTS 2.jpg",
+        "File:FERRARI 812 China.jpg",
+        "File:Ferrari 812 Competizione Aperta 2.jpg",
+        "File:Ferrari 812 3.jpg",
+        "File:Ferrari 812 Competizione Aperta.jpg",
+        "File:2020 Ferrari 812 GTS.jpg",
+        "File:2019 Ferrari 812 Superfast 8.jpg",
+        "File:2023 Ferrari 812 GTS 2.jpg",
+        "File:Ferrari 812 2.jpg",
+        "File:2019 Ferrari 812.jpg",
+        "File:2018 Ferrari 812.jpg"
+      ]
+    },
+    {
+      "key": "FORD|EXPLORER 26 MY|?",
+      "brand": "Ford",
+      "family": "Explorer 26 MY",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 39490000,
+      "source": "https://callegari.cl/nuevos/explorer-26-my/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Ford Explorer 26 MY",
+          "n": 18
+        },
+        {
+          "q": "2025 Ford Explorer SUV U625",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Brimfield Police Ford Explorer 13 (15299736912).jpg",
+        "File:Brimfield Police Ford Explorer -8 (15113376670).jpg",
+        "File:Brimfield Police Ford Explorer 13 (15299736032).jpg",
+        "File:Brimfield Police Ford Explorer -8 (15299712532).jpg",
+        "File:Exit Explorer (6209522673).jpg",
+        "File:Streetsboro Police Ford Explorer K-9 -15 (15113533397).jpg",
+        "File:1997 Ford Ka2 1.3i - Flickr - kieranwhite599.jpg",
+        "File:Explorer.jpg",
+        "File:1973-75 Ford Taunus XL (15644144462).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (5).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (4).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (10).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (3).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (7).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (1).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (11).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (9).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (12).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (6).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (8).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (2).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (13).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD Platinum U625 FL Agate Black Metallic (14).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (2).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (11).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (8).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (12).jpg",
+        "File:FORD EXPLORER (U625) China (19).jpg",
+        "File:FORD EXPLORER (U625) China (23).jpg",
+        "File:FORD EXPLORER (U625) China (20).jpg",
+        "File:FORD EXPLORER (U625) China (21).jpg",
+        "File:FORD EXPLORER (U625) China (24).jpg",
+        "File:FORD EXPLORER (U625) China (27).jpg",
+        "File:FORD EXPLORER (U625) China (26).jpg",
+        "File:FORD EXPLORER (U625) China (22).jpg",
+        "File:FORD EXPLORER (U625) China (25).jpg",
+        "File:FORD EXPLORER (U625) China (31).jpg",
+        "File:FORD EXPLORER (U625) China (29).jpg",
+        "File:FORD EXPLORER (U625) China (28).jpg",
+        "File:FORD EXPLORER (U625) China (30).jpg",
+        "File:Ford Explorer (U625) Washington DC Metro Area, USA (3).jpg",
+        "File:Ford Explorer (U625) Washington DC Metro Area, USA (6).jpg",
+        "File:Ford Explorer ST (U625) Washington DC Metro Area, USA.jpg",
+        "File:Ford Explorer ST (U625) Washington DC Metro Area, USA (3).jpg",
+        "File:Ford Explorer ST (U625) Washington DC Metro Area, USA (2).jpg",
+        "File:Ford Explorer ST (U625) Washington DC Metro Area, USA (1).jpg",
+        "File:FORD EXPLORER ST-LINE (U625) China (4).jpg",
+        "File:FORD EXPLORER ST-LINE (U625) China (3).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (10).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (1).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (3).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (5).jpg",
+        "File:Ford Explorer 2.3L EcoBoost 4WD ST-Line U625 FL Star White Metallic Tri-Coat (6).jpg"
+      ]
+    },
+    {
+      "key": "FORD|TRANSIT CHASIS|?",
+      "brand": "Ford",
+      "family": "Transit Chasis",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 35093100,
+      "source": "https://www.auto.cl/nuevos/ford",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Ford Transit Chasis",
+          "n": 5
+        },
+        {
+          "q": "Ford Transit cab chassis",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:FordTransit08022014.jpg",
+        "File:FTransit14032014.JPG",
+        "File:Ford Transit Mk8 Chassis Cab on Shevchenka St, 2020.02.26.jpg",
+        "File:1977 Ford Transit Chassis Cab (31059764323).jpg",
+        "File:1998 Ford Transit (VG) 2-door cab chassis (24016506826).jpg",
+        "File:1998 Ford Transit (VG) 2-door cab chassis (23415851633).jpg",
+        "File:1971 Ford Transit Mk I Van (26470165531).jpg",
+        "File:16-365 Ford Transit Custom.jpg",
+        "File:1971 Ford Transit Mk II Van (12285227456).jpg",
+        "File:1967 Ford Transit Mk I Truck (12285121174).jpg",
+        "File:1978 Ford Transit Mk I Camper Van (22601593972).jpg",
+        "File:Brooke Street and Lyons Lane viewed from Standish Street. 1985 and 2019.jpg"
+      ]
+    },
+    {
+      "key": "FORD|TRANSIT CUSTOM FURGON|?",
+      "brand": "Ford",
+      "family": "Transit Custom Furgon",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 34855100,
+      "source": "https://www.auto.cl/nuevos/ford",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Ford Transit Custom Furgon",
+          "n": 0
+        },
+        {
+          "q": "Ford Transit Custom 2024 van",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Ford Pro, IAA 2024, Hanover (P1200083).jpg",
+        "File:Ford Transit Custom Wisby Simsällskap.jpg",
+        "File:Ford Transit Custom RF-SISU Gotland.jpg",
+        "File:Ford Transit Custom, Nationaler Rat für Kriminalprävention, Tag der Polizei, 2024 Stadtwäldchen.jpg",
+        "File:Ford Transit Custom RFA-5902 left side at Xinyi Road side, TWTC Exhibition Hall 20240728.jpg",
+        "File:Feuerwehr Ford Transit, Nyárstrasse 2, 2024 Kisújszállás.jpg",
+        "File:Ford van on Long Meadow, Bedgrove - geograph.org.uk - 7692179.jpg",
+        "File:Metropolitan Police Parliamentary and Diplomatic Protection Ford Transit No. 68.jpg",
+        "File:Eastbourne 999 weekend 2024 10.jpg",
+        "File:Metropolitan Police Service Parliamentary and Diplomatic Protection Ford van.jpg",
+        "File:AA van, Malpas, Newport - geograph.org.uk - 7946356.jpg",
+        "File:Nyárstrasse 2, 2024 Kisújszállás.jpg",
+        "File:Florianstatue, Nyárstrasse, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, NO, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, SW, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, NW, 2024 Kisújszállás.jpg",
+        "File:Florianstatue, Nyárstrasse 2, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, Namenszeichen, 2024 Kisújszállás.jpg"
+      ]
+    },
+    {
+      "key": "FORD|TRANSIT FURGON|?",
+      "brand": "Ford",
+      "family": "Transit Furgon",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 36247400,
+      "source": "https://www.auto.cl/nuevos/ford",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Ford Transit Furgon",
+          "n": 7
+        },
+        {
+          "q": "Ford Transit panel van 2024",
+          "n": 2
+        }
+      ],
+      "candidateTitles": [
+        "File:Ford Transit (7710929286).jpg",
+        "File:Ford Transit (7710931166).jpg",
+        "File:Ford Transit 100T300 Pocztex.jpg",
+        "File:Bp13 Ford Transit, Pozsonyi Piknik, 2026 Újlipótváros.jpg",
+        "File:Ford Transit Connect (OPVE), Tag der Feuerwehr, 2024 Stadtwäldchen.jpg",
+        "File:Furgón (6771590807).jpg",
+        "File:Furgón (6812735931).jpg"
+      ]
+    },
+    {
+      "key": "FORD|TRANSIT CUSTOM MINIBUS|?",
+      "brand": "Ford",
+      "family": "transit-custom-minibus",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 40924100,
+      "source": "https://www.auto.cl/nuevos/ford",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Ford transit custom minibus",
+          "n": 4
+        },
+        {
+          "q": "Ford Tourneo Custom 2024",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:16-365 Ford Transit Custom.jpg",
+        "File:'Stiftung Gemeinsam-für-Kinder-mit-Krebs' Ford Krankentransport-Kleintransporter, Angyalstrasse, 2026 Ferencváros.jpg",
+        "File:Bajcsy-Zsilinszky Straße 4, Ford SMAFC 1860, 2025 Sopron.jpg",
+        "File:Ford Tourneo Custom (2023) Autofrühling Ulm IMG 9354.jpg",
+        "File:Ford Tourneo Custom (2023) Autofrühling Ulm IMG 9360.jpg",
+        "File:1. Mai, Euromed Ford Tourneo Custom, 2024 Stadtwäldchen.jpg",
+        "File:Ford Tourneo Custom 340 Titanium (2024) (54539839745).jpg",
+        "File:Ford Tourneo Custom 320 Titanium EcoBlue (2024) (54811411412).jpg",
+        "File:Ford Tourneo Custom (2024) (53990911425).jpg",
+        "File:Ford Tourneo Custom (2023) IMG 9658.jpg",
+        "File:Ford Tourneo Custom (2023) IMG 9655.jpg",
+        "File:Gabányi Sportstätte, MAFC Ford Tourneo, 2024 Kelenföld.jpg",
+        "File:Feuerwehr Ford Transit, Nyárstrasse 2, 2024 Kisújszállás.jpg",
+        "File:Mollie King's Pedal Power Carr Lane Escort Approach.jpg",
+        "File:Nyárstrasse 2, 2024 Kisújszállás.jpg",
+        "File:Florianstatue, Nyárstrasse, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, NO, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, SW, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, NW, 2024 Kisújszállás.jpg",
+        "File:Florianstatue, Nyárstrasse 2, 2024 Kisújszállás.jpg",
+        "File:Nyárstrasse 2, Namenszeichen, 2024 Kisújszállás.jpg"
+      ]
+    },
+    {
+      "key": "FOTON|FT CREW|?",
+      "brand": "Foton",
+      "family": "FT Crew",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 30618100,
+      "source": "https://www.auto.cl/nuevos/foton",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Foton FT Crew",
+          "n": 1
+        },
+        {
+          "q": "Foton Tunland FT",
+          "n": 1
+        }
+      ],
+      "candidateTitles": [
+        "File:Foton FT-500 2.8 TD 2017 (35883432574).jpg"
+      ]
+    },
+    {
+      "key": "FOTON|K1 CARGO|?",
+      "brand": "Foton",
+      "family": "K1 Cargo",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 16490000,
+      "source": "https://www.auto.cl/nuevos/foton",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Foton K1 Cargo",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FOTON|TM3|?",
+      "brand": "Foton",
+      "family": "TM3",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 13066200,
+      "source": "https://www.portillosur.cl/foton/tm3",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Foton TM3",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FOTON|WONDER|?",
+      "brand": "Foton",
+      "family": "WONDER",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 12483100,
+      "source": "https://www.rosselot.cl/nuevos/foton/wonder",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Foton WONDER",
+          "n": 18
+        },
+        {
+          "q": "Foton Wonder pickup",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:2842801 at Haijingluo Cunweihui (20250408145830).jpg",
+        "File:2842801 at Haijingluo Cunweihui (20250408145835).jpg",
+        "File:7839710 at Bifu Hwy, Litian Rd (20200922124151).jpg",
+        "File:7839704 at Bifu Hwy, Litian Rd (20200922132453).jpg",
+        "File:7839712 at Bifu Hwy, Litian Rd (20200922140018).jpg",
+        "File:7839707 at Bifu Hwy, Litian Rd (20200922131302).jpg",
+        "File:7839706 at Bifu Hwy, Litian Rd (20200922134757).jpg",
+        "File:5841366 at Henghuilu (20241026110823).jpg",
+        "File:40222167 at Tiananmen West (20171029173857).jpg"
+      ]
+    },
+    {
+      "key": "FUSO|CANTER 515|?",
+      "brand": "Fuso",
+      "family": "Canter 515",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 25490000,
+      "source": "https://www.fuso.cl/camiones-canter-515",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Fuso Canter 515",
+          "n": 0
+        },
+        {
+          "q": "Mitsubishi Fuso Canter 515",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FUSO|CANTER 718|?",
+      "brand": "Fuso",
+      "family": "Canter 718",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 30990000,
+      "source": "https://www.fuso.cl/camiones-canter-718",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Fuso Canter 718",
+          "n": 0
+        },
+        {
+          "q": "Mitsubishi Fuso Canter 718",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FUSO|CANTER 918|?",
+      "brand": "Fuso",
+      "family": "Canter 918",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 34490000,
+      "source": "https://www.fuso.cl/camiones-canter-918",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Fuso Canter 918",
+          "n": 0
+        },
+        {
+          "q": "Mitsubishi Fuso Canter 918",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "GEELY|EX5 EMI|?",
+      "brand": "Geely",
+      "family": "EX5-EMi",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 28990000,
+      "source": "https://www.portillosur.cl/geely/ex5emi",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Geely EX5 EMi",
+          "n": 6
+        },
+        {
+          "q": "Geely Starray EM-i PHEV",
+          "n": 0
+        },
+        {
+          "q": "Geely Galaxy Starship 7",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Geely Galaxy Starship 7 001.jpg",
+        "File:Geely Galaxy Starship 7 IMG001.jpg",
+        "File:Geely Galaxy Starship 7 IMG002.jpg",
+        "File:Geely Galaxy Starship 7 IMG003.jpg",
+        "File:Geely Galaxy Starship 7 004.jpg",
+        "File:Geely Galaxy Starship 7 007.jpg",
+        "File:Geely Galaxy Starship 7 008.jpg",
+        "File:Geely Galaxy Starship 7 005.jpg",
+        "File:Geely Galaxy Starship 7 003.jpg",
+        "File:Geely Galaxy Starship 7 009.jpg",
+        "File:Geely Galaxy Starship 7 006.jpg",
+        "File:Geely Galaxy Starship 7 002.jpg",
+        "File:Geely Galaxy Xingjian 7 (星舰7 - Starship 7) 02 China 2025-03-31.jpg",
+        "File:Geely Galaxy Xingjian 7 (星舰7 - Starship 7) 01 China 2025-03-31.jpg",
+        "File:Geely EX5 EM-i Max interior.jpg",
+        "File:Geely EX5 EM-i Max Cloudveil Silver 01.jpg",
+        "File:Geely EX5 EM-i Max Cloudveil Silver 02.jpg"
+      ]
+    },
+    {
+      "key": "HINO|CITY 515|?",
+      "brand": "Hino",
+      "family": "City 515",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 27290000,
+      "source": "https://www.hino.cl/300",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hino City 515",
+          "n": 18
+        },
+        {
+          "q": "Hino 300 Series 515",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Tatsuno city comm bus 2.jpg",
+        "File:Hsinchu Bus 57 2019-12-20.jpg"
+      ]
+    },
+    {
+      "key": "HINO|XZU 616|?",
+      "brand": "Hino",
+      "family": "XZU 616",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 28690000,
+      "source": "https://www.hino.cl/300",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hino XZU 616",
+          "n": 0
+        },
+        {
+          "q": "Hino XZU616 300 series",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "HINO|XZU 617 DC|?",
+      "brand": "Hino",
+      "family": "XZU 617 DC",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 34490000,
+      "source": "https://www.hino.cl/300",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hino XZU 617 DC",
+          "n": 0
+        },
+        {
+          "q": "Hino XZU617 double cab",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "HINO|XZU 816|?",
+      "brand": "Hino",
+      "family": "XZU 816",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 40990000,
+      "source": "https://www.hino.cl/300",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hino XZU 816",
+          "n": 0
+        },
+        {
+          "q": "Hino 300 XZU816",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "HINO|XZU 817|?",
+      "brand": "Hino",
+      "family": "XZU 817",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 34290000,
+      "source": "https://www.hino.cl/300",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hino XZU 817",
+          "n": 0
+        },
+        {
+          "q": "Hino 300 XZU817",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "HINO|XZU 917|?",
+      "brand": "Hino",
+      "family": "XZU 917",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 36390000,
+      "source": "https://www.hino.cl/300",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hino XZU 917",
+          "n": 0
+        },
+        {
+          "q": "Hino 300 XZU917",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "HYUNDAI|GRAND I 10 AI3 SEDAN|?",
+      "brand": "Hyundai",
+      "family": "GRAND I-10 AI3 SEDAN",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 14190000,
+      "source": "https://www.portillosur.cl/hyundai/grandi10ai3sedan",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hyundai GRAND I 10 AI3 SEDAN",
+          "n": 0
+        },
+        {
+          "q": "Hyundai Grand i10 Sedan AI3",
+          "n": 17
+        }
+      ],
+      "candidateTitles": [
+        "File:Hyundai Grand I10 Sedan.jpg",
+        "File:Hyundai Grand i10 Sedan 2022 (54232399920).jpg",
+        "File:Hyundai Grand i10 Sedan 2022 (53703857804) (cropped).jpg",
+        "File:Hyundai Grand i10 Sedan Taxi.jpg",
+        "File:Hyundai Grand i10 Sedan 2022 (53703857804).jpg",
+        "File:Hyundai Grand i10 Sedan 1.2 Value 2022 (53298952604) (cropped).jpg",
+        "File:Hyundai Grand i10 Sedan 1.2 Plus 2022 (52077411112).jpg",
+        "File:2022 Hyundai Grand i10 1.2 Value Sedan (cropped).jpg",
+        "File:Hyundai Grand i10 Sedan 1.2 Value 2022 (53298952604).jpg",
+        "File:2021 Hyundai Grand i10 sedan 1.2AT Base blue interior view in Brunei.jpg",
+        "File:2021 Hyundai Grand i10 sedan 1.2AT Base blue front view in Brunei.jpg",
+        "File:2021 Hyundai Grand i10 sedan 1.2AT Base blue engine view in Brunei.jpg",
+        "File:2022 Hyundai Grand i10 1.2 Value Sedan.jpg",
+        "File:2021 Hyundai Grand i10 sedan 1.2AT Base blue rear view in Brunei.jpg",
+        "File:Hyundai Grand i10 rear.jpg",
+        "File:2021 Hyundai Grand i10 Nios 1.0AT Standard red front view in Brunei.jpg",
+        "File:Hyundai Grand Metro Taxi (53376885498).jpg"
+      ]
+    },
+    {
+      "key": "HYUNDAI|GRAND I 10 AI3 HB|?",
+      "brand": "Hyundai",
+      "family": "GRAND I,10 AI3 HB",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 12990000,
+      "source": "https://www.portillosur.cl/hyundai/grandi10ai3hb",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hyundai GRAND I,10 AI3 HB",
+          "n": 0
+        },
+        {
+          "q": "Hyundai Grand i10 AI3 hatchback",
+          "n": 6
+        }
+      ],
+      "candidateTitles": [
+        "File:Hyundai AI3 Grand i10.jpg",
+        "File:Hyundai Grand i10 1.2 Design 2026.jpg",
+        "File:Hyundai Grand i10 1.2 Design 2026 (cropped).jpg",
+        "File:Hyundai Grand i10 1.2 Plus 2022.jpg",
+        "File:Hyundai Grand i10 1.2 Value 2022.jpg",
+        "File:2021 Hyundai Grand i10 Nios 1.0AT Standard red rear view in Brunei.jpg",
+        "File:Hyundai Grand I10 Sedan.jpg",
+        "File:Hyundai Grand i10 rear.jpg",
+        "File:Hyundai Grand i10 Sedan 2022 (54232399920).jpg",
+        "File:Hyundai Grand i10 Sedan 2022 (53703857804) (cropped).jpg",
+        "File:Hyundai Grand i10 Sedan Taxi.jpg",
+        "File:2022 Hyundai Grand i10 1.2 Value Sedan (cropped).jpg",
+        "File:Hyundai Grand i10 Sedan 2022 (53703857804).jpg",
+        "File:Hyundai Grand i10 Sedan 1.2 Value 2022 (53298952604) (cropped).jpg",
+        "File:2021 Hyundai Grand i10 1.0 Alpha Blue interior view in Brunei.jpg",
+        "File:2022 Hyundai Grand i10 1.2 Value Sedan.jpg"
+      ]
+    },
+    {
+      "key": "HYUNDAI|GRAND I10 HATCHBACK|?",
+      "brand": "Hyundai",
+      "family": "Grand i10 Hatchback",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 10690000,
+      "source": "https://www.gildemeisterretail.cl/marcas/hyundai/new-grand-i10-hatchback/",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Hyundai Grand i10 Hatchback",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Newone - red VinFast VF 5 and Hyundai Grand i10 hatchback 02.jpg",
+        "File:Newone - red VinFast VF 5 and Hyundai Grand i10 hatchback 01.jpg",
+        "File:Newone - red VinFast VF 5 and Hyundai Grand i10 hatchback 03.jpg",
+        "File:Hyundai Grand i10 Hatchback -- Rear.jpg",
+        "File:Hyundai Grand i10 1.2 Design 2026.jpg",
+        "File:Hyundai Grand i10 Hatchback -- Front.jpg",
+        "File:Hyundai Grand i10 Hooters Hatchback.png",
+        "File:2018 Hyundai Grand i10 Asta 1.2 (BA; Facelift) Rear View.jpg",
+        "File:20141018 Hyundai Grand i10 02.jpg",
+        "File:Hyundai Grand i10 Taxi.png",
+        "File:Hyundai Grand i10 Hatch.jpg",
+        "File:20141018 Hyundai Grand i10 01.jpg",
+        "File:2018 Hyundai Grand i10 Asta 1.2 Facelift Rear View (Cropped).jpg",
+        "File:Hyundai Grand i10 front view.jpg",
+        "File:Silver Hyundai Grand i10, rear view.jpg",
+        "File:Hyundai AI3 Grand i10.jpg",
+        "File:Silver Hyundai Grand i10, front view.jpg",
+        "File:Hyundai Grand i10 rear view.jpg"
+      ]
+    },
+    {
+      "key": "IVECO|DAILY CHASIS CABINA|?",
+      "brand": "Iveco",
+      "family": "Daily Chasis Cabina",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 29143100,
+      "source": "https://www.autocosmos.cl/catalogo/vigente/iveco/daily-chasis-cabina",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Iveco Daily Chasis Cabina",
+          "n": 2
+        }
+      ],
+      "candidateTitles": [
+        "File:Iveco Daily chasis.jpg",
+        "File:Iveco Daily 72-180.jpg"
+      ]
+    },
+    {
+      "key": "IVECO|DAILY FURGON|?",
+      "brand": "Iveco",
+      "family": "Daily Furgón",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 30928100,
+      "source": "https://www.autocosmos.cl/catalogo/vigente/iveco/daily-furgon",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Iveco Daily Furgón",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Iveco Daily 35C15 All Blacks furgon.jpg",
+        "File:Iveco Daily 35C15 All Blacks furgon end.jpg",
+        "File:Iveco Daily (7515594896).jpg",
+        "File:Iveco Daily (7121341251).jpg",
+        "File:Iveco Daily rear (6774161784).jpg",
+        "File:Iveco Daily (6743134941).jpg",
+        "File:Iveco Daily (6282844383).jpg",
+        "File:2022 Iveco Daily 3.0 55-170 (Brazil).jpg",
+        "File:Furgón (6859513946).jpg",
+        "File:Furgón (6725325001).jpg",
+        "File:Furgón (6944006782).jpg",
+        "File:Furgón (6791568598).jpg",
+        "File:Furgón (6973290571).jpg",
+        "File:Iveco Daily 35S13 Service.jpg",
+        "File:Iveco Daily 35S11.jpg",
+        "File:Iveco Daily 35S11 - rear.jpg",
+        "File:Iveco Daily 35S11 in Kraków.jpg",
+        "File:Iveco Daily 35S11 z boku.jpg"
+      ]
+    },
+    {
+      "key": "JAC|REFINE CARGO|?",
+      "brand": "JAC",
+      "family": "Refine Cargo",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 26168100,
+      "source": "https://www.jacautoschile.cl/modelos/comerciales/refine-cargo/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "JAC Refine Cargo",
+          "n": 18
+        },
+        {
+          "q": "JAC Refine van",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:JAC A0 2010 (1).jpg",
+        "File:JAC Yueyue China 2014-04-24.jpg",
+        "File:JAC J2 001.jpg",
+        "File:2013 JAC Yueyue, front 8.8.18.jpg",
+        "File:JAC J2 003.jpg",
+        "File:2015 JAC Refine M3.jpg",
+        "File:JAC J2 002.jpg",
+        "File:JAC Yueyue rear China 2015-04-21.jpg",
+        "File:JAC Refine S2.jpg",
+        "File:JAC Refine M3.jpg",
+        "File:JAC Refine M5.jpg",
+        "File:JAC Refine A60.jpg",
+        "File:JAC Refine S3.jpg",
+        "File:JAC Refine S5 front.jpg",
+        "File:JAC Refine S3 in China.jpg",
+        "File:JAC Refine S5 rear.jpg",
+        "File:JAC Refine M3 (China).jpg",
+        "File:JAC Yueyue.jpg"
+      ]
+    },
+    {
+      "key": "JAC|X200|?",
+      "brand": "JAC",
+      "family": "X200",
+      "technology": null,
+      "versions": 10,
+      "referencePriceClp": 21051100,
+      "source": "https://callegari.cl/nuevos/x200/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "JAC X200",
+          "n": 5
+        },
+        {
+          "q": "JAC X200 truck",
+          "n": 2
+        }
+      ],
+      "candidateTitles": [
+        "File:2018 JAC X200.jpg",
+        "File:2017 JAC X200 CRDi.jpg"
+      ]
+    },
+    {
+      "key": "JETOUR|T1 PHEV|PHEV",
+      "brand": "Jetour",
+      "family": "T1 PHEV",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 29990000,
+      "source": "https://www.rosselot.cl/nuevos/jetour/t1-phev",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Jetour T1 PHEV",
+          "n": 2
+        }
+      ],
+      "candidateTitles": [
+        "File:Jetour T1 Lightning i-DM Sand Gold 02.jpg",
+        "File:Jetour T1 Lightning i-DM Sand Gold 01.jpg",
+        "File:Jetour T1 Lightning i-DM interior.jpg"
+      ]
+    },
+    {
+      "key": "JIM|RE MAX|?",
+      "brand": "JIM",
+      "family": "RE-MAX",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 20694100,
+      "source": "https://www.portillosur.cl/jim/remax",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "JIM RE MAX",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Black hole - Messier 87 crop max res.jpg",
+        "File:Black hole - Messier 87 crop max res.png"
+      ]
+    },
+    {
+      "key": "JMC|EV3|?",
+      "brand": "JMC",
+      "family": "EV3",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 14990000,
+      "source": "https://www.rosselot.cl/nuevos/jmc/ev3",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "JMC EV3",
+          "n": 0
+        },
+        {
+          "q": "JMC EV3 car",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "JMC|VIGUS EV|EV",
+      "brand": "JMC",
+      "family": "Vigus EV",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 30928100,
+      "source": "https://jmcchile.cl/legales/santander-consumer/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "JMC Vigus EV",
+          "n": 0
+        },
+        {
+          "q": "JMC Vigus electric pickup",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KAIYI|KYE 5|?",
+      "brand": "Kaiyi",
+      "family": "Kye-5",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 13490000,
+      "source": "https://www.auto.cl/nuevos/kaiyi/kye-5",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kaiyi Kye 5",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KAIYI|KYX3|?",
+      "brand": "Kaiyi",
+      "family": "Kyx3",
+      "technology": null,
+      "versions": 3,
+      "referencePriceClp": 11490000,
+      "source": "https://www.auto.cl/nuevos/kaiyi/kyx3",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kaiyi Kyx3",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KAIYI|KYX3 PRO|?",
+      "brand": "Kaiyi",
+      "family": "Kyx3 PRO",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12990000,
+      "source": "https://www.auto.cl/nuevos/kaiyi/kyx3-pro",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kaiyi Kyx3 PRO",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KARRY|Q22 CABINA DOBLE|?",
+      "brand": "Karry",
+      "family": "Q22 Cabina Doble",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 7790000,
+      "source": "https://www.auto.cl/nuevos/karry/q22-cabina-doble",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Karry Q22 Cabina Doble",
+          "n": 0
+        },
+        {
+          "q": "Karry Q22 double cab",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KARRY|Q22 CABINA SIMPLE|?",
+      "brand": "Karry",
+      "family": "Q22 Cabina Simple",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 6890000,
+      "source": "https://www.auto.cl/nuevos/karry/q22-cabina-simple",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Karry Q22 Cabina Simple",
+          "n": 0
+        },
+        {
+          "q": "Karry Q22 pickup",
+          "n": 1
+        }
+      ],
+      "candidateTitles": [
+        "File:Karry Q22 2023 (52518435852).jpg"
+      ]
+    },
+    {
+      "key": "KARRY|Q22 CARGO BOX|?",
+      "brand": "Karry",
+      "family": "Q22 Cargo BOX",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 8318100,
+      "source": "https://www.auto.cl/nuevos/karry/q22-cargo-box",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Karry Q22 Cargo BOX",
+          "n": 0
+        },
+        {
+          "q": "Karry Q22 box truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KARRY|Q51 CABINA SIMPLE|?",
+      "brand": "Karry",
+      "family": "Q51 Cabina Simple",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12364100,
+      "source": "https://www.auto.cl/nuevos/karry/q51-cabina-simple",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Karry Q51 Cabina Simple",
+          "n": 0
+        },
+        {
+          "q": "Karry Q51 truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KARRY|Q52 CABINA DOBLE|?",
+      "brand": "Karry",
+      "family": "Q52 Cabina Doble",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 13554100,
+      "source": "https://www.auto.cl/nuevos/karry/q52-cabina-doble",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Karry Q52 Cabina Doble",
+          "n": 0
+        },
+        {
+          "q": "Karry Q52 truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KIA|FRONTIER II|?",
+      "brand": "Kia",
+      "family": "Frontier II",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 22521008,
+      "source": "https://www.auto.cl/nuevos/kia",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kia Frontier II",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Kia Frontier II 2.5 Crew Cab 2006.jpg",
+        "File:Kia Frontier II 2.5d 2007 (28059749147).jpg",
+        "File:Kia Frontier II 3.0d 2011 (9205325322).jpg",
+        "File:Kia Frontier II 2.5 2007 (11181524443).jpg",
+        "File:Kia Frontier II 2.5 Crew Cab 2006 (15701947757).jpg",
+        "File:00 kia bongo frontier 1.jpg",
+        "File:NTFD Kia Frontier II Parked at Nanhu Riverside Park North 20150204.jpg",
+        "File:Kia Frontier Bongo 2.7 año 2000.jpg",
+        "File:Kia Bongo Frontier ambulance of Filinvest City Emergency Response Group, 06-22-2024.jpg",
+        "File:Kia Frontier 2.7d Plus Crew Cab 2003 (16415762573).jpg",
+        "File:2013080208 Kia Bongo.png"
+      ]
+    },
+    {
+      "key": "KYC|T3 GRAN MAMUT|?",
+      "brand": "Kyc",
+      "family": "T3 Gran Mamut",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 10341100,
+      "source": "https://www.auto.cl/nuevos/kyc/t3-gran-mamut",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kyc T3 Gran Mamut",
+          "n": 0
+        },
+        {
+          "q": "KYC T3 truck",
+          "n": 1
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KYC|T3 GRAN MAMUT CARGO BOX|?",
+      "brand": "Kyc",
+      "family": "T3 Gran Mamut Cargo BOX",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12126100,
+      "source": "https://www.auto.cl/nuevos/kyc/t3-gran-mamut-cargo-box",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kyc T3 Gran Mamut Cargo BOX",
+          "n": 0
+        },
+        {
+          "q": "KYC T3 box truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "KYC|X5 CARGO BOX|?",
+      "brand": "Kyc",
+      "family": "X5 Cargo BOX",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 14863100,
+      "source": "https://www.auto.cl/nuevos/kyc/x5-cargo-box",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kyc X5 Cargo BOX",
+          "n": 0
+        },
+        {
+          "q": "KYC X5 truck",
+          "n": 1
+        }
+      ],
+      "candidateTitles": [
+        "File:KYC X5 1.5 2022 (53493544712).jpg"
+      ]
+    },
+    {
+      "key": "KYC|X5 PICK UP|?",
+      "brand": "Kyc",
+      "family": "X5 Pick UP",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 12959100,
+      "source": "https://www.auto.cl/nuevos/kyc/x5-pick-up",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kyc X5 Pick UP",
+          "n": 1
+        },
+        {
+          "q": "KYC X5 pickup",
+          "n": 1
+        }
+      ],
+      "candidateTitles": [
+        "File:KYC X5 1.5 2022 (53493544712).jpg"
+      ]
+    },
+    {
+      "key": "KYC|X5 PICK UP DOBLE CABINA|?",
+      "brand": "Kyc",
+      "family": "X5 Pick UP Doble Cabina",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 13078100,
+      "source": "https://www.auto.cl/nuevos/kyc/x5-pick-up-doble-cabina",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Kyc X5 Pick UP Doble Cabina",
+          "n": 0
+        },
+        {
+          "q": "KYC X5 double cab",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "LANDKING|LK 1016|?",
+      "brand": "Landking",
+      "family": "LK 1016",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 34498100,
+      "source": "https://www.rosselot.cl/nuevos/landking/lk-1016",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Landking LK 1016",
+          "n": 0
+        },
+        {
+          "q": "Landking LK1016 truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "LANDKING|LK 614|?",
+      "brand": "Landking",
+      "family": "LK 614",
+      "technology": null,
+      "versions": 3,
+      "referencePriceClp": 23788100,
+      "source": "https://www.rosselot.cl/nuevos/landking/lk-614",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Landking LK 614",
+          "n": 2
+        },
+        {
+          "q": "Landking LK614 truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "LANDKING|LK3|?",
+      "brand": "Landking",
+      "family": "LK3",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 13911100,
+      "source": "https://www.rosselot.cl/nuevos/landking/lk3",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Landking LK3",
+          "n": 0
+        },
+        {
+          "q": "Landking LK3 pickup",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "LANDKING|LK5|?",
+      "brand": "Landking",
+      "family": "LK5",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 16172100,
+      "source": "https://www.rosselot.cl/nuevos/landking/lk5",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Landking LK5",
+          "n": 0
+        },
+        {
+          "q": "Landking LK5 truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "MAXUS|C35|?",
+      "brand": "Maxus",
+      "family": "C35",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 26891739,
+      "source": "https://www.auto.cl/nuevos/maxus",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Maxus C35",
+          "n": 1
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "MAZDA|6 SEDAN|?",
+      "brand": "Mazda",
+      "family": "6 Sedan",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 21401900,
+      "source": "https://www.auto.cl/nuevos/mazda",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Mazda 6 Sedan",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Mazda Familia 4-door Sedan GT Tactics Version (BF) (front three-quarter view) at Mazda Museum.jpg",
+        "File:1991 Mazda 323 (BG) 1.6 sedan (2008-10-22).jpg",
+        "File:MAZDA 323 SEDAN (BJ) China (6).jpg",
+        "File:Mazda 6 Sedan 2013 (8808378889).jpg",
+        "File:Mazda 6 2.0 Sedan 2003 (cropped).jpg",
+        "File:Mazda 6 2.0 Sedan 2003.jpg",
+        "File:'03-'05 Mazda 6 Sedan.JPG",
+        "File:Mazda 6 Atenza facelift China 2019-03-14.jpg",
+        "File:Mazda 6 Atenza facelift 2 China 2019-03-14.jpg",
+        "File:18 Mazda 6 Signature.jpg",
+        "File:1998 Mazda 323 (BA Series 3) Protegé 1.6 sedan (2009-09-25).jpg",
+        "File:2009-2010 Mazda 6 (GH) Limited sedan (2016-05-21).jpg",
+        "File:Moscow, Mazda EZ-6 (Changan), Aug 2026 01.jpg",
+        "File:2014 Mazda 6 (GJ) Sports sedan (2015-11-07) 01.jpg",
+        "File:2014 Mazda 6 (GJ) Sports sedan (2015-11-07) 02.jpg",
+        "File:2018 Mazda 6 sedan rear 4.2.18.jpg",
+        "File:1994 Mazda 121 (DB Series 2) 1.3 sedan (2009-06-06).jpg",
+        "File:2010 Mazda6 (GH Series 2 MY10) Classic sedan (2010-04-13).jpg"
+      ]
+    },
+    {
+      "key": "MERCEDES BENZ|CLASE A HATCHBACK|?",
+      "brand": "Mercedes-Benz",
+      "family": "Clase A Hatchback",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 38591000,
+      "source": "https://www.auto.cl/nuevos/mercedes-benz",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Mercedes-Benz Clase A Hatchback",
+          "n": 0
+        },
+        {
+          "q": "Mercedes A200 W177 hatchback",
+          "n": 0
+        },
+        {
+          "q": "Mercedes Clase A Hatchback",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "MERCEDES BENZ|CLASE G|?",
+      "brand": "Mercedes-Benz",
+      "family": "Clase G",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 185237000,
+      "source": "https://www.auto.cl/nuevos/mercedes-benz",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Mercedes-Benz Clase G",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Münster, Beresa, Mercedes-Benz C-Klasse Cabrio -- 2018 -- 1757.jpg",
+        "File:Mercedes benz clase G semar.jpg",
+        "File:Mercedes-Benz Clase G en Flores, Ciudad de Buenos Aires.jpg",
+        "File:Mercedes-Benz W463 G 350 BlueTEC 01.jpg",
+        "File:Techno-Classica 2018, Essen (IMG 9841).jpg",
+        "File:Steyr Daimler Puch 290GD.jpg",
+        "File:Mercedes X 350 d, GIMS 2019, Le Grand-Saconnex (GIMS0920).jpg",
+        "File:Mercedes-AMG G63 (W463) Washington DC Metro Area, USA (3).jpg",
+        "File:Mercedes-Benz G.jpg",
+        "File:Mercedes-AMG G63 (W463.2) Washington DC Metro Area, USA (3).jpg",
+        "File:Mercedes-AMG W463 G 63 AMG V8 Bi-Turbo Polar White 02.jpg",
+        "File:Moscow tram 2589 2004-10 1098026857 Krasnokazarmennaya Street Tatra T3.jpg",
+        "File:Mercedes-AMG G63 (W463) Washington DC Metro Area, USA.jpg",
+        "File:Osaka Auto Messe 2019 (115) - lb★nation Mercedes-Benz G 63 AMG.jpg",
+        "File:Mercedes-AMG G55 (W463.1) Washington DC Metro Area, USA (1).jpg",
+        "File:Mercedes-AMG G63 (W463) Washington DC Metro Area, USA (9).jpg",
+        "File:Mercedes G BGS @ Point Alpha 2.jpg",
+        "File:Puch G (1990-2001).jpg",
+        "File:MERCEDES-AMG G63 (W463) China.jpg",
+        "File:MERCEDES-AMG G63 (W463) China (4).jpg",
+        "File:MERCEDES-AMG G63 (W463) China (3).jpg",
+        "File:MERCEDES-AMG G63 (W463) China (6).jpg",
+        "File:MERCEDES-AMG G63 (W463) HONG KONG.jpg",
+        "File:MERCEDES-AMG G63 (W463) China (2).jpg",
+        "File:MERCEDES-AMG G63 (W463) China (5).jpg",
+        "File:Mercedes-AMG G63 (W463) Miami Metro Area, USA.jpg",
+        "File:MERCEDES-AMG G63 (W463) China (7).jpg",
+        "File:Mercedes-AMG G63 (W463) Washington DC Metro Area, USA (4).jpg",
+        "File:Mercedes-AMG G63 (W463) Washington DC Metro Area, USA (5).jpg",
+        "File:Mercedes-AMG G63 (W463) Washington DC Metro Area, USA (7).jpg",
+        "File:MERCEDES-AMG G63 (W463) HONG KONG (2).jpg",
+        "File:Mercedes-AMG G63 (W463) Washington DC Metro Area, USA (6).jpg"
+      ]
+    },
+    {
+      "key": "MERCEDES BENZ|VITO FURGON|?",
+      "brand": "Mercedes-Benz",
+      "family": "Vito Furgon",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 30629371,
+      "source": "https://www.auto.cl/nuevos/mercedes-benz",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Mercedes-Benz Vito Furgon",
+          "n": 6
+        },
+        {
+          "q": "Mercedes Vito W447 van",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Mercedes Benz Vito (7189208034).jpg",
+        "File:Mercedes Benz Vito (7189208014).jpg",
+        "File:Mercedes-Benz Vito (8196426315).jpg",
+        "File:Mercedes Benz (7467176120).jpg",
+        "File:Furgón (6795497296).jpg",
+        "File:Furgón (7169670796).jpg",
+        "File:Mercedes-Benz Vito Tourer 4x4 ambulance, IAA 2026, Hanover (20260914-P1086799).jpg",
+        "File:Mercedes-Benz Vito (W447) en Valencia.jpg",
+        "File:Mercedes-Benz Vito 114 CDI (W447) en Valencia 02.jpg",
+        "File:Mercedes-Benz Vito 114 CDI (W447) en Valencia 01.jpg",
+        "File:2025 Mercedes-Benz Vito 114 CDI rear.jpg",
+        "File:2025 Mercedes-Benz Vito 114 CDI front.jpg",
+        "File:BTP Mercedes Vito Edgware Road.jpg",
+        "File:Sinsheim - Polizei - Mercedes-Benz Vito (W447) - BWL-4 1394 - 2018-07-29 14-55-15.jpg",
+        "File:Mercedes Vito Zoll (28368041758).jpg",
+        "File:Mercedes eVito hotel vans.jpg",
+        "File:Mercedes Vito Estonian police with ambulance.png",
+        "File:Mercedes Vito Police Switzerland (49839096587).jpg",
+        "File:Mercedes Vito Police Switzerland (49839096572).jpg",
+        "File:Mercedes-Benz Vito Bonde.jpg",
+        "File:MÁV-HÉV Mercedes-Benz Vito, 2020 Mogyoród.jpg",
+        "File:Mercedes-Benz Vito 114 CDI Ejército español.jpg",
+        "File:Mercedes-Benz Vito Almedalen 2024.jpg",
+        "File:Mercedes-Benz Vito en Visby.jpg"
+      ]
+    },
+    {
+      "key": "MERCEDES BENZ|VITO MINIBUS|?",
+      "brand": "Mercedes-Benz",
+      "family": "Vito Minibus",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 45949573,
+      "source": "https://www.auto.cl/nuevos/mercedes-benz",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Mercedes-Benz Vito Minibus",
+          "n": 16
+        }
+      ],
+      "candidateTitles": [
+        "File:S130 Mercedes Vito minibus - Netherlands Politie (2462888118).jpg",
+        "File:L030 Mercedes Vito minibus - Netherlands Police Politie (2145225880).jpg",
+        "File:S128 Mercedes Vito minibus - Germany Polizei silver (2462887922).jpg",
+        "File:S131 Mercedes Vito minibus - Sweden Polis Police (2462887628).jpg",
+        "File:S129 Mercedes Vito minibus - Germany Polizei white (2462053677).jpg",
+        "File:S126 Mercedes Vito minibus - Belgium Police Politie (2462887060).jpg",
+        "File:S127 Mercedes Vito minibus - France National Police (2462887532).jpg",
+        "File:S132 Mercedes Vito minibus - UK Metropolitan Police (2462054943).jpg",
+        "File:L029 Mercedes Vito minibus - Germany silver Police Polizei (2144431173).jpg",
+        "File:De Lijn Flexbus Mercedes Vito.jpg",
+        "File:Danish military police Mercedes.JPG",
+        "File:London Dial a Ride 3.jpg",
+        "File:London Dial a Ride 4.jpg",
+        "File:London Dial a Ride 5.jpg",
+        "File:Kharkov DTP 2.JPG",
+        "File:Kharkov DTP 1.JPG",
+        "File:Mercedes-Benz Vito Tourer 4x4 ambulance, IAA 2026, Hanover (20260914-P1086799).jpg",
+        "File:Mercedes-Benz Vito Tourer W447 Vorderansicht.jpg",
+        "File:Mercedes-Benz Vito Tourer W447 Rückansicht.jpg",
+        "File:Mercedes Vito Jumbo Visma Tour de France.jpg",
+        "File:臺南市政府消防局救護車(新化91 BUW-2539).jpg",
+        "File:2022-07-08 - TDF - Belonchamp - 501.jpg",
+        "File:2022-07-08 - TDF - Belonchamp - 502.jpg",
+        "File:FW Bütschwil-Ganterschwil PIF.jpg",
+        "File:2019-07-10 15-58-52 tdf-Husseren-les-Chateaux.jpg",
+        "File:HK bus 115 tour view 香港過海底隧道 Hong Kong Cross Harbour Tunnel 康莊道 Hong Chong Road 去九龍城區 June 2020 SS2 02.jpg",
+        "File:2024 Mercedes-Benz Vito 119 CDI Tourer Pro.jpg",
+        "File:Mercedes Benz Vito Tourer 2017 (54460388598).jpg",
+        "File:Rotterdam - 3072 - 2024.01.07 - SS Rotterdam - Mercedes-Benz eVito Tourer (vue arrière) © Anthony Levrot.jpg",
+        "File:Rotterdam - 3072 - 2024.01.07 - SS Rotterdam - Mercedes-Benz eVito Tourer (vue avant) © Anthony Levrot.jpg",
+        "File:Rotterdam - 3072 - 2024.01.07 - SS Rotterdam - Mercedes-Benz eVito Tourer (vue latérale) © Anthony Levrot.jpg"
+      ]
+    },
+    {
+      "key": "MG|5 SEDAN|?",
+      "brand": "MG",
+      "family": "5 Sedan",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12990000,
+      "source": "https://www.auto.cl/nuevos/mg",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "MG 5 Sedan",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:MG 5 II IMG006.jpg",
+        "File:MG 5 II IMG005.jpg",
+        "File:MG 5 II IMG003.jpg",
+        "File:MG 5 II IMG004.jpg",
+        "File:MG 5 II IMG007.jpg",
+        "File:MG 5 II Shishi 01 2022-05-23.jpg",
+        "File:MG 5 II Shishi 02 2022-05-23.jpg",
+        "File:MG 5 II 004.jpg",
+        "File:MG 5 Scorpio 001.jpg",
+        "File:Second generation MG 5 and MG Linghang.jpg",
+        "File:MG 5 II 003.jpg",
+        "File:MG 5 II 001.jpg",
+        "File:MG 5 II 002.jpg",
+        "File:MG 5 Scorpio 002.jpg",
+        "File:MG 5 II 012.jpg",
+        "File:MG 5 II facelift 004.jpg",
+        "File:MG 5 II facelift 005.jpg",
+        "File:MG 5 II Scorpio 002.jpg"
+      ]
+    },
+    {
+      "key": "MG|ZX|?",
+      "brand": "MG",
+      "family": "ZX",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12190000,
+      "source": "https://www.auto.cl/nuevos/mg",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "MG ZX",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:MG ZS Facelift 1X7A6412.jpg",
+        "File:MG ZS (crossover, second generation) DSC 7873.jpg",
+        "File:MG ZS (crossover, second generation) Automesse Ludwigsburg 2025 DSC 2617.jpg",
+        "File:MG ZS (crossover, second generation) Automesse Ludwigsburg 2025 DSC 2618.jpg",
+        "File:MG ZS (crossover, second generation) DSC 8542.jpg",
+        "File:MG ZS Facelift 1X7A6415.jpg",
+        "File:MG ZS facelift 001.jpg",
+        "File:MG ZS facelift rear 001.jpg",
+        "File:MG ZS facelift 002.jpg",
+        "File:2024 MG ZS 1.5 COM in Moon White, 06-22-2024.jpg",
+        "File:MG ZS 1.5 Hybrid+ Black.jpg",
+        "File:MG ZS 1.5 Alpha 2024 (1).jpg",
+        "File:MG ZS 1.5 Alpha 2024 (2).jpg",
+        "File:2024 MG ZS Hybrid+ (France) front view.png",
+        "File:2024 MG ZS Hybrid+ (France) rear view.jpg",
+        "File:MG ZS Thailand.jpg",
+        "File:MG ZS 1.5 Hybrid+ Sloan Silver Metallic 01.jpg",
+        "File:2025 MG ZS Essence - RegionVisitor90 - 5 October 2026.jpg",
+        "File:2021 MG ZX 1.5.jpg",
+        "File:MG ZX 1.5 Comfort 2023 (53529386831).jpg",
+        "File:MG ZX 1.5 Deluxe 2022 (52836248600).jpg"
+      ]
+    },
+    {
+      "key": "MINI|JCW ELECTRICO|EV",
+      "brand": "Mini",
+      "family": "JCW Eléctrico",
+      "technology": "EV",
+      "versions": 2,
+      "referencePriceClp": 46990000,
+      "source": "https://www.mini.cl/mini-jcw-electrico",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Mini JCW Eléctrico",
+          "n": 0
+        },
+        {
+          "q": "Mini John Cooper Works Electric 2025",
+          "n": 3
+        }
+      ],
+      "candidateTitles": [
+        "File:Mini Hatch (J01) JCW Trim IMG 1163.jpg"
+      ]
+    },
+    {
+      "key": "OPEL|CROSSLAND|EV",
+      "brand": "Opel",
+      "family": "new crossland",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 27090000,
+      "source": "https://www.rosselot.cl/public/nuevos/opel/new-crossland",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Opel new crossland",
+          "n": 8
+        },
+        {
+          "q": "2025 Opel Crossland EV",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:Opel Crossland (2024) (53985942876).jpg",
+        "File:Opel Crossland 1.2T Edition (2022) (52721952161).jpg",
+        "File:Opel Crossland 1.2T Edition (2022) (52722362360).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2023) (53473925610).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2022) (53509626344).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2019) (53548084761).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2023) (53547208522).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2021) (53509305691).jpg"
+      ]
+    },
+    {
+      "key": "OPEL|CROSSLAND|?",
+      "brand": "Opel",
+      "family": "New Crossland",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 22090000,
+      "source": "https://www.rosselot.cl/public/nuevos/opel/new-crossland",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Opel New Crossland",
+          "n": 8
+        },
+        {
+          "q": "2025 Opel Frontera SUV",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Opel Crossland (2024) (53985942876).jpg",
+        "File:Opel Crossland 1.2T Edition (2022) (52721952161).jpg",
+        "File:Opel Crossland 1.2T Edition (2022) (52722362360).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2023) (53473925610).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2022) (53509626344).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2019) (53548084761).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2023) (53547208522).jpg",
+        "File:Opel Crossland X 1.2 Turbo (2021) (53509305691).jpg",
+        "File:Opel Frontera C Hybrid Rutesheimer Autoschau 2025 DSC 9207.jpg",
+        "File:Opel Frontera C Electric Rutesheimer Autoschau 2025 DSC 9238.jpg",
+        "File:Opel Frontera C Electric DSC 9332.jpg",
+        "File:Opel Frontera C Electric DSC 9335.jpg",
+        "File:Opel Frontera C Electric DSC 9335 (2).jpg",
+        "File:Opel Frontera C Electric DSC 0595.jpg",
+        "File:Opel Frontera C Electric DSC 0603.jpg",
+        "File:Citroën C3 Aircross Opel Frontera DSC 0599.jpg",
+        "File:Opel Frontera C Electric DSC 9331.jpg",
+        "File:Opel Frontera C DSC 2696.jpg",
+        "File:Opel Frontera C Hybrid Sindelfingen 2025 DSC 9102.jpg",
+        "File:Opel Frontera C Electric Sindelfingen 2025 DSC 9109.jpg",
+        "File:Opel Frontera C Electric Sindelfingen 2025 DSC 9105.jpg",
+        "File:Opel Frontera C Hybrid Sindelfingen 2025 DSC 9124.jpg",
+        "File:Opel Frontera C Electric Rutesheimer Autoschau 2025 DSC 9211.jpg",
+        "File:Opel Frontera C Hybrid Rutesheimer Autoschau 2025 DSC 9213.jpg",
+        "File:Opel Frontera C DSC 8834.jpg",
+        "File:Opel Frontera C DSC 8831.jpg"
+      ]
+    },
+    {
+      "key": "RAM|1000 PICK UP|?",
+      "brand": "RAM",
+      "family": "1000 Pick UP",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 26168100,
+      "source": "https://www.auto.cl/nuevos/ram",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "RAM 1000 Pick UP",
+          "n": 18
+        },
+        {
+          "q": "Ram 1000 pickup Fiat Toro",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "RAM|2500 CD|?",
+      "brand": "RAM",
+      "family": "2500 CD",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 78528100,
+      "source": "https://www.auto.cl/nuevos/ram",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "RAM 2500 CD",
+          "n": 18
+        },
+        {
+          "q": "2024 RAM 2500 heavy duty",
+          "n": 4
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "RAM|V1000|?",
+      "brand": "RAM",
+      "family": "V1000",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 18433100,
+      "source": "https://www.auto.cl/nuevos/ram",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "RAM V1000",
+          "n": 1
+        },
+        {
+          "q": "Ram ProMaster Rapid",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Fiat Fiorino D.jpg",
+        "File:Fiat Fiorino 1st gen facelift.jpg",
+        "File:1997 Fiat Fiorino 1.7D.jpg",
+        "File:Ram ProMaster Rapid!.jpg",
+        "File:Ram ProMaster Rapid Banana Bay.JPG",
+        "File:Ram ProMaster Rapid.jpg",
+        "File:Fiat Fiorino 001.jpg",
+        "File:Fiat Fiorino pickup (15474982199).jpg",
+        "File:1983 Fiat Fiorino Furgão.jpg",
+        "File:Fiat Fiorino furgone.jpg",
+        "File:Fiat Fiorino 1.4 Fire Flex.jpg",
+        "File:Fiat Fiorino Camper.jpg",
+        "File:Fiat Fiorino rear.JPG",
+        "File:MHV Fiat Fiorino 01.jpg",
+        "File:Fiat Fiorino II pick-up.jpg",
+        "File:Fiat Fiorino III 20090808 front.JPG",
+        "File:Fiat Fiorino (50201025627).jpg",
+        "File:Fiat Fiorino 2008 front.jpg",
+        "File:RAM V700 Rapid 1.4.jpg"
+      ]
+    },
+    {
+      "key": "RAM|V700 CITY|?",
+      "brand": "RAM",
+      "family": "V700 City",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 17243100,
+      "source": "https://www.auto.cl/nuevos/ram",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "RAM V700 City",
+          "n": 1
+        },
+        {
+          "q": "RAM V700 City van",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "RENAULT|DUSTER|?",
+      "brand": "Renault",
+      "family": "Duster",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 15690000,
+      "source": "https://www.auto.cl/nuevos/renault",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Renault Duster",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Dacia Duster III IMG 8970.jpg",
+        "File:Dacia Duster III IMG 8961.jpg",
+        "File:Dacia Duster III IMG 8973.jpg",
+        "File:Renault Duster Techroad, Natal (DSC05979).jpg",
+        "File:Dacia Duster III GIMS 2024 1X7A2358.jpg",
+        "File:2023 Dacia Duster 1X7A6452.jpg",
+        "File:Dacia Duster, GIMS 2024, Le Grand-Saconnex (GIMS0126).jpg",
+        "File:Renault Duster Tandil.jpg",
+        "File:2023 Dacia Duster 1X7A6302.jpg",
+        "File:2023 Dacia Duster 1X7A6974.jpg",
+        "File:Dacia Duster III DSC 2969.jpg",
+        "File:Dacia Duster III GIMS 2024 1X7A2016.jpg",
+        "File:Dacia Duster Feuerwehr IAA 2011.JPG",
+        "File:Dacia Duster III DSC 2968.jpg",
+        "File:Dacia Duster III GIMS 2024 1X7A2248.jpg",
+        "File:Dacia Duster III GIMS 2024 1X7A2328.jpg",
+        "File:Dacia Duster III Hybrid Automesse Ludwigsburg 2024 IMG 1510.jpg",
+        "File:Dacia Duster III Hybrid Automesse Ludwigsburg 2024 IMG 1491.jpg",
+        "File:Candumy rest area sign.jpg",
+        "File:Renault Duster II base in Montevideo.jpg",
+        "File:2024 Renault Duster 1.3 TCe Turbo Iconic.jpg",
+        "File:Moscow, Renault Duster Aug 2025 01.jpg",
+        "File:Renault Duster 1.6 Zen 2022 (53699304515).jpg",
+        "File:Renault Duster 2.0 Dynamique 4WD 2015 (54168805756).jpg",
+        "File:2022 Renault Duster Intens 4x2 1.3 Turbo (Colombia) front view.png",
+        "File:2022 Renault Duster Intens 4x4 1.3 Turbo (Colombia) rear view.png",
+        "File:2022 Renault Duster Intens 4x4 1.3 Turbo (Colombia) front view 01.png",
+        "File:2022 Renault Duster Intens 4x4 1.3 Turbo (Colombia) front view 02.png",
+        "File:2020 Renault Duster RXZ 1.3 Turbo CVT (India) front view.png",
+        "File:2020 Renault Duster RXZ 1.3 Turbo CVT (India) rear view.png",
+        "File:20251125 Automobile near Zelenopark (83877).jpg"
+      ]
+    },
+    {
+      "key": "RENAULT|KOLEOS|?",
+      "brand": "Renault",
+      "family": "Koleos",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 21890000,
+      "source": "https://www.auto.cl/nuevos/renault",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Renault Koleos",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Renault Koleos II Facelift 1X7A1659.jpg",
+        "File:Renault Koleos Initiale Paris, IAA 2017, Frankfurt (1Y7A3353).jpg",
+        "File:2019 Renault Koleos GT Line Front.jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM6 (HC) China.jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (2).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (7).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (4).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (9).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (3).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (8).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (5).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (6).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (1).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (15).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (14).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM6 (HC) China (2).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM6 (HC) China (3).jpg",
+        "File:RENAULT KOLEOS,RENAULT SAMSUNG QM5 (HY) China (11).jpg"
+      ]
+    },
+    {
+      "key": "SHINERAY|T32 CD|?",
+      "brand": "Shineray",
+      "family": "T32 CD",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12245100,
+      "source": "https://www.portillosur.cl/shineray/t32cd",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Shineray T32 CD",
+          "n": 0
+        },
+        {
+          "q": "Shineray T32 pickup",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "SHINERAY|T50 CS|?",
+      "brand": "Shineray",
+      "family": "T50 CS",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 12007100,
+      "source": "https://www.gildemeisterretail.cl/marcas/shineray/shineray-t50-con-a-c/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Shineray T50 CS",
+          "n": 0
+        },
+        {
+          "q": "Shineray T50",
+          "n": 1
+        }
+      ],
+      "candidateTitles": [
+        "File:BRILLIANCE JIN BEI T50.jpg"
+      ]
+    },
+    {
+      "key": "SHINERAY|T52 CD|?",
+      "brand": "Shineray",
+      "family": "T52 CD",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 14030100,
+      "source": "https://www.portillosur.cl/shineray/t52cd",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Shineray T52 CD",
+          "n": 0
+        },
+        {
+          "q": "Shineray T52 pickup",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "SHINERAY|X30 CON A C|?",
+      "brand": "Shineray",
+      "family": "X30 con A/C",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 10936100,
+      "source": "https://www.gildemeisterretail.cl/marcas/shineray/shineray-x30-con-a-c/x30-1-5-5mt-elt/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Shineray X30 con A/C",
+          "n": 0
+        },
+        {
+          "q": "Shineray X30 van",
+          "n": 1
+        }
+      ],
+      "candidateTitles": [
+        "File:2014 Brilliance Jinbei Haixing X30.jpg"
+      ]
+    },
+    {
+      "key": "SOUEAST|S06|?",
+      "brand": "Soueast",
+      "family": "S06",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 17990000,
+      "source": "https://www.rosselot.cl/nuevos/soueast/s06",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Soueast S06",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Алматы, Jetour Dashing на Толе би-Брусиловского.jpg",
+        "File:Jetour Dasheng, Astana (P1190725).jpg",
+        "File:Jetour Dashing photo1.jpg",
+        "File:Jetour Dashing 006.jpg",
+        "File:Jetour Dasheng 003.jpg",
+        "File:Jetour Dashing facelift 001.jpg",
+        "File:Jetour Dashing facelift 002.jpg",
+        "File:Jetour Dashing 005.jpg",
+        "File:Jetour Dashing 008.jpg",
+        "File:Jetour Dashing 007.jpg",
+        "File:Jetour Dashing i-DM 001.jpg",
+        "File:Jetour Dashing 009.jpg",
+        "File:Jetour Dashing i-DM 002.jpg",
+        "File:Jetour Dashing 1.5 Symphony 2024 (2).jpg",
+        "File:Jetour Dashing 1.5 Symphony 2024 (1).jpg",
+        "File:Jetour Dashing 010.jpg",
+        "File:Jetour Dashing facelift 003.jpg",
+        "File:Jetour Dashing 011.jpg"
+      ]
+    },
+    {
+      "key": "SOUEAST|S06 PHEV|PHEV",
+      "brand": "Soueast",
+      "family": "S06 PHEV",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 26990000,
+      "source": "https://www.rosselot.cl/nuevos/soueast/s06-phev",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": true,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Soueast S06 PHEV",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "SOUEAST|S09|?",
+      "brand": "Soueast",
+      "family": "S09",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 25990000,
+      "source": "https://www.rosselot.cl/nuevos/soueast/s09",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Soueast S09",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Jetour X90 002.jpg",
+        "File:Jetour X90 01 China 2019-04-02.jpg",
+        "File:Jetour Shanhai L9 004.jpg",
+        "File:Jetour Shanhai L9 005.jpg",
+        "File:Jetour Shanhai L9 C-DM 002.jpg",
+        "File:Jetour Shanhai L9 C-DM 001.jpg",
+        "File:Jetour X90 003.jpg",
+        "File:Jetour X90 China 2019-03-14.jpg",
+        "File:Jetour X90 01 China 2019-03-14.jpg",
+        "File:Jetour X90 02 China 2019-04-02.jpg",
+        "File:Jetour X90 001.jpg",
+        "File:Jetour X90 03 China 2019-03-14.jpg",
+        "File:Jetour X90 rear China 2019-03-14.jpg",
+        "File:Jetour X90 02 China 2019-03-14.jpg",
+        "File:Jetour Shanhai L9 002.jpg",
+        "File:Jetour Shanhai L9 001.jpg",
+        "File:Jetour Shanhai L9 003.jpg",
+        "File:Jetour X90 MY2020 IMG01.jpg"
+      ]
+    },
+    {
+      "key": "SUZUKI|ALTO|?",
+      "brand": "Suzuki",
+      "family": "alto",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 8290000,
+      "source": "https://www.auto.cl/nuevos/suzuki",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Suzuki alto",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Renault Twingo E-Tech IMG 6605.jpg",
+        "File:TC 24, Essen (TCE42679).jpg",
+        "File:Renault Twingo E-Tech IMG 6592.jpg",
+        "File:Suzuki Alto Van VP (HA36V) front.jpg",
+        "File:SUZUKI ALTO China(1).jpg",
+        "File:Maruti-suzuki-alto-lx.jpg",
+        "File:SUZUKI ALTO China(2).jpg",
+        "File:Suzuki Alto VII 002.jpg",
+        "File:SUZUKI ALTO China(7).jpg",
+        "File:Suzuki Alto VII 001.jpg",
+        "File:2000 Suzuki Alto GL Auto.jpg",
+        "File:SUZUKI ALTO China(10).jpg",
+        "File:SUZUKI ALTO China(11).jpg",
+        "File:SUZUKI ALTO China(9).jpg",
+        "File:SUZUKI ALTO China(8).jpg",
+        "File:SUZUKI ALTO China(5).jpg",
+        "File:SUZUKI ALTO China(4).jpg",
+        "File:SUZUKI ALTO China(3).jpg"
+      ]
+    },
+    {
+      "key": "TOYOTA|HIACE MINIBUS|?",
+      "brand": "Toyota",
+      "family": "Hiace Minibus",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 40390000,
+      "source": "https://www.auto.cl/nuevos/toyota",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Toyota Hiace Minibus",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:L069 Toyota Hiace minibus - Hong Kong Police (2609242466).jpg",
+        "File:Toyota Hiace in Bangkok.JPG",
+        "File:Tunas Rent Toyota HiAce Commuter (H200) minibus 20210117.jpg",
+        "File:Toyota Hiace in Thailand.jpg",
+        "File:Toyota Hiace in Pattaya.jpg",
+        "File:Toyota Hiace (5888728970).jpg",
+        "File:Toyota Hiace in Pattaya (cropped).jpg",
+        "File:Toyota Hiace in Ayutthaya.jpg",
+        "File:Jamaica - Toyota Hiace minibus.jpg",
+        "File:TOYOTA HIACE IN PAKKLONGTALAD 1.JPG",
+        "File:Toyota HiAce Premio in Melasti Beach, Bali (25-03-2026).jpg",
+        "File:Toyota minibus in Bangkok 06.JPG",
+        "File:Toyota minibus in Ubon Ratchathani.JPG",
+        "File:1989 Toyota HiAce 9-seater minibus (LH51), front right.jpg",
+        "File:Minibus Taxi in Durban (Hiace).jpg",
+        "File:1989 Toyota HiAce 9-seater minibus (LH51), rear right.jpg",
+        "File:Jamaica-Toyota Hiace (6373832047).jpg",
+        "File:Bush taxi minibus type.jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (5).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (7).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (4).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (9).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (2).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (8).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (1).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (6).jpg",
+        "File:Toyota Hiace Commuter Deluxe 2024 (3).jpg",
+        "File:Toyota Hiace Commuter Deluxe Ambulance 2019.jpg",
+        "File:Toyota Hiace Commuter Deluxe Ambulance 2022.jpg",
+        "File:2021 Toyota Hiace 2.8 Commuter Deluxe dashboard, 08-11-2024.jpg",
+        "File:Toyota Hiace Commuter Deluxe Ambulance 2019 (1).jpg",
+        "File:2021 Toyota Hiace 2.8 Commuter Deluxe, 08-11-2024.jpg",
+        "File:Toyota Hiace Commuter Deluxe 2019 and Nissan Urvan Shuttle 15 2023.jpg",
+        "File:Bejeu Shuttle Toyota HiAce.jpg",
+        "File:Bhisa Travel Jogja.jpg",
+        "File:HK bus 115 tour view 香港過海底隧道 Hong Kong Cross Harbour Tunnel 康莊道 Hong Chong Road 去九龍城區 June 2020 SS2 06.jpg",
+        "File:YC2758(KMB Patrol Car) 04-10-2022 (cropped).jpg",
+        "File:YC2758(KMB Patrol Car) 04-10-2022.jpg"
+      ]
+    },
+    {
+      "key": "VOLKSWAGEN|SAVEIRO CD|?",
+      "brand": "Volkswagen",
+      "family": "Saveiro CD",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 15160600,
+      "source": "https://www.auto.cl/nuevos/volkswagen",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Volkswagen Saveiro CD",
+          "n": 0
+        },
+        {
+          "q": "Volkswagen Saveiro Double cab 2024",
+          "n": 2
+        },
+        {
+          "q": "2024 Volkswagen Saveiro pickup",
+          "n": 7
+        }
+      ],
+      "candidateTitles": [
+        "File:Volkswagen Saveiro Mk8 Double Cab base black in Maldonado - front.jpg",
+        "File:Volkswagen Saveiro Mk8 Double Cab base black in Maldonado - back.jpg",
+        "File:2024 Volkswagen Saveiro 1.6 MSi Trendline (rear).jpg",
+        "File:2024 Volkswagen Saveiro 1.6 MSi Trendline (front).jpg",
+        "File:Volkswagen Saveiro 1.6 Power 2013.jpg",
+        "File:Volkswagen Saveiro 1.6 Comfort 2016.jpg",
+        "File:Volkswagen Saveiro 1.6 Power 2013 (54196212709).jpg"
+      ]
+    },
+    {
+      "key": "ZNA|DF6|?",
+      "brand": "ZNA",
+      "family": "DF6",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 17838100,
+      "source": "https://www.autocosmos.cl/catalogo/segmentos/zna",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "ZNA DF6",
+          "n": 3
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "ZXAUTO|GRAND LION|?",
+      "brand": "Zxauto",
+      "family": "Grand Lion",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 29213100,
+      "source": "https://www.auto.cl/nuevos/zxauto/grand-lion",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 6,
+      "queries": [
+        {
+          "q": "Zxauto Grand Lion",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "BMW|SERIE 2|?",
+      "brand": "BMW",
+      "family": "Serie 2",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 69900000,
+      "source": "https://www.portillosur.cl/bmw/serie2",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "BMW Serie 2",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:BMW Serie 2 France Diplomatic plate (44480694840).jpg",
+        "File:2020 BMW 4.jpg",
+        "File:BMW série 2.jpg",
+        "File:Bmw Serie 2 F45 Active Tourer (26568968952).jpg",
+        "File:BMW 2-Series F22 Avignon Motor Festival 2014-03-23.jpg",
+        "File:BMW 488 NLS 2. 2024.jpg",
+        "File:BMW 506 NLS 2. 2024 2.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 006.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 003.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 009.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 001.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 004.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 002.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 005.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 017.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 015.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 007.jpg",
+        "File:BMW Serie 2 Cabriolet - Mondial de l'Automobile de Paris 2014 - 010.jpg"
+      ]
+    },
+    {
+      "key": "BMW|SERIE 4|?",
+      "brand": "BMW",
+      "family": "Serie 4",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 52900000,
+      "source": "https://www.portillosur.cl/bmw/serie4",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "BMW Serie 4",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:2020 BMW 4.jpg",
+        "File:BMW E3 vor Facelift 6290726.jpg",
+        "File:BMW 5-Serie (55618475265).jpg",
+        "File:BMW 5-Serie (55618202888).jpg",
+        "File:BMW serie 6 E24 by-dpc.jpg",
+        "File:Bmw Serie 2 F45 Active Tourer (26568968952).jpg",
+        "File:BMW 503 Serie II Coupé (1958) (52857976682).jpg",
+        "File:BMW 503 Serie II Cabriolet (1958) (52857976697).jpg",
+        "File:BMW 507 Serie I Roadster (1957) (52857976667).jpg",
+        "File:BMW 507 Serie II Roadster (1959) (52858553236).jpg",
+        "File:BMW 3-Series E30 03 China 2016-04-14.jpg",
+        "File:BMW 507 Serie II Roadster (1959) (52858728339).jpg",
+        "File:BMW 507 Serie II Roadster (1959) (52858995073).jpg",
+        "File:BMW 503 Serie I Coupé (1956) (52858553286).jpg",
+        "File:BMW 507 Serie I Roadster (1957) (52858944490).jpg",
+        "File:BMW 507 Serie II Roadster (1959) (52858728359).jpg",
+        "File:BMW 507 Serie II Roadster (1959) (52857976627).jpg",
+        "File:BMW 3-Series E30 02 China 2016-04-14.jpg"
+      ]
+    },
+    {
+      "key": "BMW|SERIE M|?",
+      "brand": "BMW",
+      "family": "Serie M",
+      "technology": null,
+      "versions": 9,
+      "referencePriceClp": 65900000,
+      "source": "https://www.portillosur.cl/bmw/seriem",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "BMW Serie M",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:2020 BMW 4.jpg",
+        "File:2024-06 BMW M Motorrad S1000RR Handlebar.jpg",
+        "File:BMW M 50 years logo black-car 2023-02-04.jpg",
+        "File:BMW M1 Procar of BMW Motorsport (BMW M-color) Classic-Gala 2022 1X7A0148.jpg",
+        "File:BMW M1 Procar of BMW Motorsport (BMW M-color) Classic-Gala 2022 1X7A0149.jpg",
+        "File:BMW M 1000R rear 2023-04.jpg",
+        "File:2024-06 BMW M Motorrad S1000RR-rear.jpg",
+        "File:2024-06 BMW M Motorrad S1000RR.jpg",
+        "File:BMW M Cernobbio 2022-05.jpg",
+        "File:BMW M 50 years logo white-car 2023-02-04.jpg",
+        "File:3X-M 2023-04-08.jpg",
+        "File:BMW 1 Serie M Coupé (6535079553).jpg",
+        "File:BMW 1 Serie M Coupé (6535079565).jpg",
+        "File:(BMW motorsport).jpg",
+        "File:BMW ---M Family (14622168226).jpg",
+        "File:1 BMW Motorsport mechanic.jpg",
+        "File:1 BMW Motorsport Gear Shift dag.jpg",
+        "File:BMW E82 Série 1 M, Toulouse 2015.jpg"
+      ]
+    },
+    {
+      "key": "CHERY|TIGGO 2 PRO MAX|?",
+      "brand": "Chery",
+      "family": "Tiggo 2 Pro Max",
+      "technology": null,
+      "versions": 9,
+      "referencePriceClp": 11990000,
+      "source": "https://www.rosselot.cl/public/nuevos/chery/tiggo-2-pro-max",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Chery Tiggo 2 Pro Max",
+          "n": 6
+        }
+      ],
+      "candidateTitles": [
+        "File:2023 Chery Tiggo7 Pro Max grey rear.jpg",
+        "File:2023 Chery Tiggo7 Pro Max grey front.jpg",
+        "File:2023 Chery Tiggo8 Pro Max (LVТ) silver front.jpg",
+        "File:2024 Chery Tiggo7 Pro Max light blue rear.jpg",
+        "File:Chery Tiggo2 Pro Max 2025.jpg"
+      ]
+    },
+    {
+      "key": "FOTON|FT|?",
+      "brand": "Foton",
+      "family": "FT",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 32118100,
+      "source": "https://www.portillosur.cl/foton/ft",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Foton FT",
+          "n": 18
+        },
+        {
+          "q": "Foton Tunland",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:Foton FT-500 2.8 TD 2017 (35883432574).jpg",
+        "File:Foton-Wuxing FT-Series (FT200ZH) motorized tricycle in Luoyang.jpg",
+        "File:Foton-Wuxing FT-Series (FT250ZH-2E) motorized tricycle in Luoyang.jpg",
+        "File:Innoprom 2012 441.jpg",
+        "File:Tb Boldogságos Szűz 2012.JPG",
+        "File:Foton Tunland 001.jpg",
+        "File:Foton Tunland Yutu 8 002.jpg",
+        "File:Foton Tunland Yutu 8 004.jpg",
+        "File:Foton Tunland Yutu 8 001.jpg",
+        "File:Foton Tunland Yutu 8 003.jpg",
+        "File:2014 Foton Tunland (P201) 4x4 4-door utility (20179925270).jpg",
+        "File:Foton Tunland G7 4x4 in Arequipa, Perú (front right quarter).jpg",
+        "File:MIAS 2024 - 2024 Foton Tunland V7 4x4.jpg",
+        "File:Foton Tunland Yutu 9 front.jpg",
+        "File:Foton Tunland Yutu 9 test drive.jpg",
+        "File:Foton Tunland EV 001.jpg",
+        "File:Foton Tunland Yutu 9 on display.jpg",
+        "File:Foton Tunland EV 002.jpg",
+        "File:Foton Tunland Yutu 9 rear quarter.jpg",
+        "File:Foton Tunland V9 PHEV IAA Transportation 2026 (DSC9140).jpg",
+        "File:Foton Tunland Yutu 9 test drive cars.jpg",
+        "File:Foton Tunland Yutu 9 test drive car parked by the curb.jpg",
+        "File:Foton Tunland V9 PHEV IAA Transportation 2026 (DSC9128).jpg"
+      ]
+    },
+    {
+      "key": "FOTON|TM5|?",
+      "brand": "Foton",
+      "family": "TM5",
+      "technology": null,
+      "versions": 2,
+      "referencePriceClp": 13078100,
+      "source": "https://www.portillosur.cl/foton/tm5",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Foton TM5",
+          "n": 1
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "GREAT WALL|POER|?",
+      "brand": "Great Wall",
+      "family": "Poer",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 24264100,
+      "source": "https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Poer",
+          "n": 18
+        }
+      ],
+      "candidateTitles": [
+        "File:2024 Great Wall Poer Kingkong white front.jpg",
+        "File:2024 Great Wall Poer Kingkong white rear.jpg",
+        "File:2024 GWM Poer Sahar 3.0TT front view.png",
+        "File:2024 Great Wall Poer Kingkong white front side.jpg",
+        "File:2024 GWM Poer Sahar PHEV front view.png",
+        "File:2023 Great Wall Kingkong Poer rear right.jpg",
+        "File:POER RUMAN Reveal.png",
+        "File:2023 Great Wall Kingkong Poer rear right left.jpg",
+        "File:Former site of St Peter-le-Poer - geograph.org.uk - 891526.jpg",
+        "File:Church of St. Peter-le-Poer - geograph.org.uk - 5290671.jpg",
+        "File:2021 Poer EV.jpg",
+        "File:POER RUMAN ORE (Front).jpg",
+        "File:Great Wall Poer Plus Deluxe 2023.jpg",
+        "File:POER RUMAN ORE (Rear).jpg",
+        "File:Great Wall Poer Plus Deluxe 2022.jpg",
+        "File:Great Wall Poer Deluxe 2023.jpg",
+        "File:St Peter le Poer, Colney Hatch Lane, London N10 - geograph.org.uk - 1684522.jpg",
+        "File:Great Wall Poer Plus Elite 2024.jpg"
+      ]
+    },
+    {
+      "key": "JAC|REFINE PASAJEROS|?",
+      "brand": "JAC",
+      "family": "Refine Pasajeros",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 28786100,
+      "source": "https://www.portillosur.cl/jac/refinepasajeros",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "JAC Refine Pasajeros",
+          "n": 2
+        },
+        {
+          "q": "JAC Refine passenger",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "MAZDA|CX 5|?",
+      "brand": "Mazda",
+      "family": "CX-5",
+      "technology": null,
+      "versions": 5,
+      "referencePriceClp": 24990000,
+      "source": "https://www.mazda.cl/vehiculo/mazda-cx-5",
+      "checkedAt": "2026-10-17",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Mazda CX 5",
+          "n": 0
+        },
+        {
+          "q": "Mazda CX-5 2024",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "PORSCHE|MACAN|?",
+      "brand": "Porsche",
+      "family": "Macan",
+      "technology": null,
+      "versions": 4,
+      "referencePriceClp": 69900000,
+      "source": "https://compare.porsche.com/es-CL?model-series=macan",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Porsche Macan",
+          "n": 0
+        },
+        {
+          "q": "2025 Porsche Macan Electric",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "SHINERAY|T30 CS|?",
+      "brand": "Shineray",
+      "family": "T30 CS",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 11055100,
+      "source": "https://www.portillosur.cl/shineray/t30cs",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Shineray T30 CS",
+          "n": 0
+        },
+        {
+          "q": "Shineray T30 mini truck",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "TOYOTA|YARIS|?",
+      "brand": "Toyota",
+      "family": "Yaris",
+      "technology": null,
+      "versions": 1,
+      "referencePriceClp": 14690000,
+      "source": "https://tienda.toyota.cl/index.php?controller=category&id_category=2&page=3",
+      "checkedAt": "2026-10-17",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": true,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 5,
+      "queries": [
+        {
+          "q": "Toyota Yaris",
+          "n": 0
+        },
+        {
+          "q": "Toyota Yaris 2024 hatchback",
+          "n": 0
+        },
+        {
+          "q": "Toyota Yaris sedan 2024",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "BMW|SERIE 7|PHEV",
+      "brand": "BMW",
+      "family": "Serie 7",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 175900000,
+      "source": "https://www.bmw.cl/modelos/7",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "BMW Serie 7",
+          "n": 0
+        },
+        {
+          "q": "BMW 750e G70",
+          "n": 0
+        },
+        {
+          "q": "BMW G70 7 Series PHEV",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:BMW 7-Series (G70) 750e 1X7A1899.jpg",
+        "File:BMW 7-Series (G70) 750e IMG 9358.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A1895.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A1897.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A2461.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A1900.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A1893.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A2460.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A1901.jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A1895 (Hintergrund retuschiert).jpg",
+        "File:BMW 7-Series (G70) 750e 1X7A1895 a.jpg",
+        "File:2023 BMW 7-Series 750e xDrive M Sport.jpg",
+        "File:BMW G70 750e xDrive M Sport Mineral White Metallic (2).jpg",
+        "File:BMW G70 750e xDrive M Sport Black Sapphire Metallic (3).jpg",
+        "File:BMW G70 750e xDrive M Sport Mineral White Metallic (8).jpg",
+        "File:BMW G70 750e xDrive M Sport Mineral White Metallic (22).jpg",
+        "File:BMW G70 750e xDrive M Sport Black Sapphire Metallic (7).jpg"
+      ]
+    },
+    {
+      "key": "BYD|ATTO 8 DM I|PHEV",
+      "brand": "BYD",
+      "family": "Atto 8 DM-i",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 44990000,
+      "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+      "checkedAt": "2026-10-22",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "BYD Atto 8 DM i",
+          "n": 0
+        },
+        {
+          "q": "BYD Tang L DM-i",
+          "n": 0
+        },
+        {
+          "q": "BYD Atto 8",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:BYD Tang L 003.jpg",
+        "File:BYD Tang L 001.jpg",
+        "File:BYD Tang L 002.jpg",
+        "File:BYD Tang L 002a.jpg",
+        "File:BYD Tang.jpg"
+      ]
+    },
+    {
+      "key": "BYD|ATTO 8 DM P|PHEV",
+      "brand": "BYD",
+      "family": "Atto 8 DM-p",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 49990000,
+      "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+      "checkedAt": "2026-10-22",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "BYD Atto 8 DM p",
+          "n": 0
+        },
+        {
+          "q": "BYD Tang L DM-p",
+          "n": 0
+        },
+        {
+          "q": "BYD Atto 8",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:BYD Tang.jpg"
+      ]
+    },
+    {
+      "key": "BYD|YUAN PRO DM I|PHEV",
+      "brand": "BYD",
+      "family": "Yuan Pro DM-i",
+      "technology": "PHEV",
+      "versions": 2,
+      "referencePriceClp": 19990000,
+      "source": "https://www.byd.com/cl/legal/terminos-condiciones-promocion",
+      "checkedAt": "2026-10-18",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "BYD Yuan Pro DM i",
+          "n": 0
+        },
+        {
+          "q": "BYD Yuan Pro DM-i",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:BYD Auto vehicles showcased at BYD HQ, Shenzhen, China 03.png"
+      ]
+    },
+    {
+      "key": "CHANGAN|AVATR 07|REEV",
+      "brand": "Changan",
+      "family": "Avatr 07",
+      "technology": "REEV",
+      "versions": 2,
+      "referencePriceClp": 55990000,
+      "source": "https://www.changan.cl/vehiculo/avatr/avatr-07/",
+      "checkedAt": "2026-10-17",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Changan Avatr 07",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:Avatr 07 007.jpg",
+        "File:Avatr 07 006.jpg",
+        "File:2025 Avatr 07 green front.jpg",
+        "File:Avatr 07 (20250526 204059).jpg",
+        "File:2024 Avatr 07 purple front.jpg",
+        "File:Moscow, Avatr 07, Aug 2025 01.jpg",
+        "File:Avatr 07, Koenigsplatz, IAA 2025, Munich (20250909-P1050659).jpg",
+        "File:2025 Avatr 07 Ultra AWD.png",
+        "File:Avatr 012, Koenigsplatz, IAA 2025, Munich (20250909-P1050652).jpg",
+        "File:(CHN-Shanghai) Showcar Avatr 07 No-plate 2025-12-21.jpg",
+        "File:Avatr 11 Royal Edition, Koenigsplatz, IAA 2025, Munich (20250909-P1050660).jpg",
+        "File:Avatr cars (20250526 204033).jpg",
+        "File:Moscow, Avatr 11, Aug 2025 07.jpg",
+        "File:Avatr, Koenigsplatz, IAA 2025, Munich (20250909-P1050651).jpg",
+        "File:Avatr 06 003.jpg"
+      ]
+    },
+    {
+      "key": "DONGFENG|L7|PHEV",
+      "brand": "Dongfeng",
+      "family": "L7",
+      "technology": "PHEV",
+      "versions": 2,
+      "referencePriceClp": 26490000,
+      "source": "https://dongfengindumotora.cl/terminos-y-condiciones.html",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Dongfeng L7",
+          "n": 0
+        },
+        {
+          "q": "Dongfeng Aeolus L7",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "FERRARI|SF90|PHEV",
+      "brand": "Ferrari",
+      "family": "SF90",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 551748000,
+      "source": "https://www.auto.cl/nuevos/ferrari/sf90",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Ferrari SF90",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:Ferrari SF90, BAS 24, Brussels (P1170486-RR).jpg",
+        "File:Ferrari SF90, BAS 24, Brussels (P1170502-RR).jpg",
+        "File:2024 Ferrari SF90 XX Spider 2.jpg",
+        "File:Ferrari SF90 Stradale Mayfair.jpg",
+        "File:2021 Ferrari SF90 Stradale 3.jpg",
+        "File:Ferrari SF90 Stradale Monaco.jpg",
+        "File:Ferrari SF90 XX Stradale 2.jpg",
+        "File:Ferrari SF90 Stradale Mayfair 1.jpg",
+        "File:2021 Ferrari SF90 Stradale sf25.jpg",
+        "File:Ferrari SF90 Stradale Washington DC Metro Area, USA (2.1).jpg",
+        "File:Ferrari SF90 Stradale Washington DC Metro Area, USA (2.6).jpg",
+        "File:Ferrari SF90 Stradale Washington DC Metro Area, USA (2.4).jpg",
+        "File:Ferrari SF90 Stradale Washington DC Metro Area, USA (2.3).jpg",
+        "File:Ferrari SF90 Stradale Washington DC Metro Area, USA (2.2).jpg",
+        "File:Beelitz-Heilstätten 20261018 Ferrari SF90 Stradale 05.jpg",
+        "File:Ferrari SF90 Spider IMG 9568.jpg",
+        "File:Ferrari SF90 Spider IMG 8856.jpg",
+        "File:Ferrari SF90 Spider IMG 8852.jpg",
+        "File:Ferrari SF90 Spider DSC 6998.jpg",
+        "File:Ferrari SF90 Spider, EMS 2024, Essen (P1032226).jpg",
+        "File:Ferrari SF90 Spider DSC 6993.jpg",
+        "File:Ferrari SF90 Spider IMG 9559.jpg",
+        "File:Ferrari SF90 Spider IMG 9574.jpg",
+        "File:Ferrari SF90 Spider IMG 9547.jpg",
+        "File:Ferrari SF90 Spider IMG 9250.jpg",
+        "File:2023 Ferrari SF90 Spider 4.jpg",
+        "File:2022 Ferrari SF90 Spider.jpg",
+        "File:2023 Ferrari SF90 Spider.jpg"
+      ]
+    },
+    {
+      "key": "FORD|E TRANSIT CHASIS|EV",
+      "brand": "Ford",
+      "family": "E-Transit Chasis",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 65900000,
+      "source": "https://www.auto.cl/nuevos/ford",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Ford E Transit Chasis",
+          "n": 0
+        },
+        {
+          "q": "Ford E-Transit chassis electric",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "GAC|EMKOO|HEV",
+      "brand": "Gac",
+      "family": "Emkoo",
+      "technology": "HEV",
+      "versions": 1,
+      "referencePriceClp": 22990000,
+      "source": "https://gacmotor.cl/modelos/emkoo-hibrido/",
+      "checkedAt": "2026-10-18",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Gac Emkoo",
+          "n": 0
+        },
+        {
+          "q": "GAC Emkoo hybrid 2024",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "JAC|IGNITE30X|EV",
+      "brand": "JAC",
+      "family": "Ignite30X",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 19490000,
+      "source": "https://www.jacautoschile.cl/modelos/electricos/jac-ignite-30x/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "JAC Ignite30X",
+          "n": 0
+        },
+        {
+          "q": "JAC Ignite30X electric",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "JAC|REFINE CARGO EV|EV",
+      "brand": "JAC",
+      "family": "Refine Cargo EV",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 26168100,
+      "source": "https://www.jacautoschile.cl/modelos/comerciales/refine-cargo-ev/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "JAC Refine Cargo EV",
+          "n": 0
+        },
+        {
+          "q": "JAC Refine M4 electric van",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "JMC|EV3|EV",
+      "brand": "JMC",
+      "family": "EV3",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 14990000,
+      "source": "https://jmcchile.cl/modelos/ev3/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "JMC EV3",
+          "n": 0
+        },
+        {
+          "q": "JMC EV3 car",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "LANDKING|LK8 EV|EV",
+      "brand": "Landking",
+      "family": "LK8 EV",
+      "technology": "EV",
+      "versions": 1,
+      "referencePriceClp": 62463100,
+      "source": "https://www.rosselot.cl/nuevos/landking/lk8-ev",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Landking LK8 EV",
+          "n": 0
+        },
+        {
+          "q": "Landking LK8 electric",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "OMODA|C5 SHS H|HEV",
+      "brand": "Omoda",
+      "family": "C5 SHS-H",
+      "technology": "HEV",
+      "versions": 2,
+      "referencePriceClp": 19490000,
+      "source": "https://www.omodajaecoo.cl/modelos/omoda-c5-shs/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Omoda C5 SHS H",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "SOUEAST|S08 PHEV|PHEV",
+      "brand": "Soueast",
+      "family": "S08 PHEV",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 29990000,
+      "source": "https://www.rosselot.cl/nuevos/soueast/s08-phev",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Soueast S08 PHEV",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "SUZUKI|ACROSS HYBRID|MHEV",
+      "brand": "Suzuki",
+      "family": "Across Hybrid",
+      "technology": "MHEV",
+      "versions": 4,
+      "referencePriceClp": 19890000,
+      "source": "https://www.suzuki.cl/vehiculo/across-hybrid/",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": true,
+      "campaignExpired": false,
+      "priority": 4,
+      "queries": [
+        {
+          "q": "Suzuki Across Hybrid",
+          "n": 0
+        },
+        {
+          "q": "Suzuki Across SUV plug in hybrid",
+          "n": 0
+        }
+      ],
+      "candidateTitles": []
+    },
+    {
+      "key": "GREAT WALL|POER P500|PHEV",
+      "brand": "Great Wall",
+      "family": "Poer P500",
+      "technology": "PHEV",
+      "versions": 1,
+      "referencePriceClp": 57108100,
+      "source": "https://www.gwm.cl/media/k2fm0ppq/bases-legales-gwm-days.pdf",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 3,
+      "queries": [
+        {
+          "q": "Poer P500",
+          "n": 0
+        },
+        {
+          "q": "GWM Poer P500",
+          "n": 0
+        },
+        {
+          "q": "Great Wall Poer P500",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:2024 GWM Poer Sahar PHEV front view.png"
+      ]
+    },
+    {
+      "key": "MAZDA|ALL NEW CX 5|Bencina",
+      "brand": "Mazda",
+      "family": "All New CX-5",
+      "technology": "Bencina",
+      "versions": 6,
+      "referencePriceClp": 27790000,
+      "source": "https://www.mazda.cl/vehiculo/all-new-mazda-cx-5/",
+      "checkedAt": "2026-10-22",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 3,
+      "queries": [
+        {
+          "q": "Mazda All New CX 5",
+          "n": 0
+        },
+        {
+          "q": "Mazda CX-5 2026 new generation",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:2026 Mazda CX-5 e-SKYACTIV G 2.5 L.jpg",
+        "File:Mazda CX-5 (KI) IMG 6237.jpg",
+        "File:Mazda CX-5 (KI) IMG 6257.jpg",
+        "File:Mazda CX-5 (KI) IMG 5272.jpg",
+        "File:Mazda CX-5 (KI) IMG 5264.jpg",
+        "File:Mazda CX-5 (KI) IMG 5836.jpg",
+        "File:2026 Mazda CX-5 in Jet Black Mica-7-12-2026.jpg",
+        "File:Mazda CX-5 (KI) Auto Zuerich 2025 DSC 3472.jpg",
+        "File:Mazda CX-5 (KI) Auto Zuerich 2025 DSC 3150.jpg",
+        "File:Mazda CX-5 (KI) Auto Zuerich 2025 DSC 3145.jpg",
+        "File:Mazda CX-5 L AWD '26 (3).jpg",
+        "File:Mazda CX-5 (KI) Auto Zuerich 2025 DSC 3165.jpg",
+        "File:Mazda CX-5 (KI) Auto Zuerich 2025 DSC 3167.jpg",
+        "File:Mazda CX-5 (KI) Auto Zuerich 2025 DSC 3503.jpg",
+        "File:Mazda CX-5 L AWD '26 (2).jpg"
+      ]
+    },
+    {
+      "key": "PORSCHE|CAYENNE|EV",
+      "brand": "Porsche",
+      "family": "Cayenne",
+      "technology": "EV",
+      "versions": 6,
+      "referencePriceClp": 121900000,
+      "source": "https://compare.porsche.com/es-CL?model-series=cayenne",
+      "checkedAt": "2026-10-20",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 3,
+      "queries": [
+        {
+          "q": "Porsche Cayenne",
+          "n": 0
+        },
+        {
+          "q": "2026 Porsche Cayenne Electric",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:Porsche Cayenne Electric Turbo IMG 8936.jpg",
+        "File:Porsche Cayenne Electric Turbo IMG 8941.jpg",
+        "File:Porsche Cayenne Electric IMG 8088.jpg",
+        "File:Porsche Cayenne Electric Turbo 1000053461.jpg",
+        "File:Porsche Cayenne Electric Turbo 1000053460.jpg",
+        "File:Porsche Cayenne Electric IMG 6129.jpg",
+        "File:Porsche Cayenne Electric IMG 8081.jpg",
+        "File:Porsche Cayenne Electric Turbo 1000053457.jpg",
+        "File:Porsche Cayenne Electric IMG 6136.jpg",
+        "File:Porsche Cayenne Electric IMG 8081 (cropped).jpg",
+        "File:Porsche Cayenne Electric Turbo 1000053458.jpg",
+        "File:Porsche Cayenne Electric IMG 8088 (cropped).jpg",
+        "File:Porsche Cayenne Electric IMG 8181.jpg",
+        "File:Porsche Cayenne Electric Turbo IMG 8061.jpg",
+        "File:Porsche Cayenne Coupé Electric Auto Zuerich 2026 IMG 8979.jpg"
+      ]
+    },
+    {
+      "key": "RENAULT|BOREAL|Bencina",
+      "brand": "Renault",
+      "family": "Boreal",
+      "technology": "Bencina",
+      "versions": 3,
+      "referencePriceClp": 24990000,
+      "source": "https://www.rutamotor.com/noticias/el-renault-boreal-arranca-su-aventura-en-chile-con-una-especial-preventa/",
+      "checkedAt": "2026-10-21",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 3,
+      "queries": [
+        {
+          "q": "Renault Boreal",
+          "n": 0
+        },
+        {
+          "q": "2026 Renault Boreal",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:2026 Renault Boreal rear view.png",
+        "File:2026 Renault Boreal front view 01.png",
+        "File:2026 Renault Boreal front view 02.png",
+        "File:2026 Renault Boreal interior.png"
+      ]
+    },
+    {
+      "key": "VOLVO|EX40|EV",
+      "brand": "Volvo",
+      "family": "EX40",
+      "technology": "EV",
+      "versions": 2,
+      "referencePriceClp": 51900000,
+      "source": "https://www.portillosur.cl/volvo/ex40",
+      "checkedAt": "2026-10-19",
+      "photo": null,
+      "photoSource": null,
+      "photoLicense": null,
+      "technologyMissing": false,
+      "modelYearMissing": false,
+      "campaignExpired": false,
+      "priority": 3,
+      "queries": [
+        {
+          "q": "Volvo EX40",
+          "n": 0
+        },
+        {
+          "q": "Volvo EX40 2025 electric SUV",
+          "n": 0
+        }
+      ],
+      "candidateTitles": [
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (6).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (11).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (2).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (8).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (12).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (4).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (9).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (3).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (14).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (7).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (13).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (1).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (5).jpg",
+        "File:Volvo XC40 Recharge Twin Ultra CMA FL Onyx Black (10).jpg"
+      ]
+    }
+  ]
+}
