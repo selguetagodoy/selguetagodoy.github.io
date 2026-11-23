@@ -26,15 +26,15 @@ for(const source of rows){
  const v=counts.get(key)||{total:0,withPhoto:0,missing:0};
  v.total++;if(photo)v.withPhoto++;else v.missing++;
  counts.set(key,v);
- if(row[0]==='Land Rover'&&/^Range Rover Sport\\b/i.test(row[1])){
+ if(row[0]==='Land Rover'&&/^Range Rover Sport\b/i.test(row[1])){
   assert(!String(photo?.src||'').includes('rindelab-land-rover-range-rover-commonsmass-20261122.jpg'),
    'Un Range Rover Sport no puede mostrar la fotografía L460 del Range Rover normal');
  }
- if(row[0]==='Hyundai'&&/^Creta Grand\\b/i.test(row[1])){
+ if(row[0]==='Hyundai'&&/^Creta Grand\b/i.test(row[1])){
   assert(!String(photo?.src||'').includes('hyundai-hyundai-creta-072.jpg'),
    'Creta Grand no puede heredar fotografía de Creta 5 asientos');
  }
- if(row[0]==='Maxus'&&/^T60 MAX\\b/i.test(row[1])&&row[8].startsWith('2025')){
+ if(row[0]==='Maxus'&&/^T60 MAX\b/i.test(row[1])&&row[8].startsWith('2025')){
   assert(!String(photo?.src||'').includes('rindelab-maxus-t60-commonsmass-20261122.jpg'),
    'T60 MAX no puede heredar foto de T60 antigua');
  }
@@ -63,7 +63,7 @@ assert(html.includes('5.969 fichas sin foto'));
 assert(html.includes('v2-photos.js?v=20261123-generation-reuse1'));
 const photosSource=fs.readFileSync(path.join(R,'v2-photos.js'),'utf8');
 for(const rule of curated.rules){
- assert(/^\\d{4}$/.test(rule.from)&&/^\\d{4}$/.test(rule.to)&&rule.from<=rule.to);
+ assert(/^\d{4}$/.test(rule.from)&&/^\d{4}$/.test(rule.to)&&rule.from<=rule.to);
  new RegExp(rule.pattern,'i');
  assert(photosSource.includes(rule.filename),'Falta el archivo/familia: '+rule.filename);
  assert(!/motorway|generic stock/i.test(rule.generation),'Imprecisión: '+rule.generation);
