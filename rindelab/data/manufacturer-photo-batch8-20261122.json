@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-22",
+  "method": "Fotografías desde sitios de marcas oficiales, enlazadas sin rehosting",
+  "rights": "Derechos reservados; enlace externo no constituye licencia abierta",
+  "images": [
+    {
+      "brand": "RAM",
+      "family": "ram2500",
+      "pattern": "\\bram2500(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "RAM ram2500 (referencial de vehículo oficial)",
+      "author": "RAM Chile · fabricante",
+      "source": "https://www.ram.com/cl/ram-2500.html",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.ram.com/cl/ram-2500.html",
+      "localSrc": "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/header/2500.png",
+      "imageSource": "fabricante oficial",
+      "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+      "size": [
+        300,
+        150
+      ]
+    },
+    {
+      "brand": "RAM",
+      "family": "2500 CD",
+      "pattern": "\\b2500[\\s,_-]+CD(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "RAM 2500 CD (referencial de vehículo oficial)",
+      "author": "RAM Chile · fabricante",
+      "source": "https://www.ram.com/cl/ram-2500.html",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.ram.com/cl/ram-2500.html",
+      "localSrc": "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/header/2500.png",
+      "imageSource": "fabricante oficial",
+      "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+      "size": [
+        300,
+        150
+      ]
+    },
+    {
+      "brand": "Landking",
+      "family": "LK8 EV",
+      "pattern": "\\bLK8[\\s,_-]+EV(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Landking LK8 EV (referencial de vehículo oficial)",
+      "author": "Landking Chile · fabricante",
+      "source": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk8-ev.html",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk8-ev.html",
+      "localSrc": "https://www.landking.cl/content/dam/landking/vehiculos/camiones-eléctricos/lk8-ev-cargo-box/equipamiento-diseño-exterior/LK8_DIAGONAL1_1280x508.jpg",
+      "imageSource": "fabricante oficial",
+      "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+      "size": [
+        1280,
+        508
+      ]
+    },
+    {
+      "brand": "Mini",
+      "family": "JCW Eléctrico",
+      "pattern": "\\bJCW[\\s,_-]+Eléctrico(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Mini JCW Eléctrico (referencial de vehículo oficial)",
+      "author": "Mini Chile · fabricante",
+      "source": "https://www.mini.cl/electric/descubre-los-modelos",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.mini.cl/electric/descubre-los-modelos",
+      "localSrc": "https://www.mini.cl/mini/site/artic/20250515/imag/foto_0000000420250515150002/mini-JCW-teaser-electric.webp",
+      "imageSource": "fabricante oficial",
+      "rightsStatus": "Sin licencia abierta verificada; imagen enlazada al servidor original",
+      "size": [
+        3072,
+        1728
+      ]
+    }
+  ]
+}

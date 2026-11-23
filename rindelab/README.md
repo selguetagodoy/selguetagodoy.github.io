@@ -1,5 +1,20 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Lotes 7 y 8 · búsqueda en fabricantes/importadores (22/11/2026)
+
+Se añadieron **17 referencias externas oficiales** a fotografías de modelos comerciales de CIDEF/Foton Chile, DFSK Chile, Chevrolet Chile, RAM Chile, Landking Chile y MINI Chile. Las imágenes se encontraron en las páginas oficiales del vehículo y fueron **revisadas visualmente** para descartar marcas, carrocerías o motorizaciones diferentes y materiales promocionales con precios.
+
+- Lote 7: **13 imágenes** para TM3 y TM5 con sus distintas carrocerías, Foton Wonder, DFSK E5 Plus y SUV600 PHEV, Chevrolet N400 Cargo y Sail Hatchback.
+- Lote 8: **4 referencias** de RAM 2500, RAM 2500 cabina doble, Landking LK8 eléctrico y MINI JCW eléctrico.
+- **Cobertura global: 658 de 700 grupos con imagen (94,0 %)**; biblioteca de **609 referencias**; **42 grupos pendientes**. El punto de partida de estos dos lotes era 641/700, 592 imágenes y 59 pendientes.
+
+A diferencia de los recursos Creative Commons, las fotografías de fabricantes se enlazan desde sus servidores: **no se copian ni redistribuyen los archivos en GitHub**. Se indica «Derechos reservados», URL y crédito original. Los enlaces externos dependen de la disponibilidad del proveedor; la fotografía es referencial y no acredita equipamiento ni precio. Las fichas de precios y homologación permanecen intactas.
+
+**Documentación y auditoría:** `data/manufacturer-photo-batch7-20261122.json`, `data/manufacturer-photo-batch8-20261122.json`, `data/official-category-batch7-discovery.json`, `data/official-batch8-discovery.json`, pruebas `tests/manufacturer-official-batch7.cjs` y `tests/manufacturer-official-batch8.cjs`.
+
+---
+
+
 ## Lote 6 · Fotografías desde sitios oficiales (22/11/2026)
 
 Se incorporaron **21 referencias externas a imágenes de fabricantes e importadores chilenos**, obtenidas directamente de páginas de Hino, Changan, Landking, JMC y Shineray. A diferencia de los lotes Commons, **no se descargaron ni republicaron sus fotografías en el repositorio**: se utilizan URL de origen, autor corporativo y página oficial, indicando «Derechos reservados» sin atribuirles falsamente una licencia abierta. Su disponibilidad futura depende de los servidores de los titulares y su reutilización está sujeta a sus condiciones.

@@ -1,0 +1,34 @@
+[
+  {
+    "key": "RAM|ram2500",
+    "image": "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/header/2500.png",
+    "page": "https://www.ram.com/cl/ram-2500.html",
+    "width": 300,
+    "height": 150,
+    "status": 200
+  },
+  {
+    "key": "RAM|2500 CD",
+    "image": "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/header/2500.png",
+    "page": "https://www.ram.com/cl/ram-2500.html",
+    "width": 300,
+    "height": 150,
+    "status": 200
+  },
+  {
+    "key": "Landking|LK8 EV",
+    "image": "https://www.landking.cl/content/dam/landking/vehiculos/camiones-eléctricos/lk8-ev-cargo-box/equipamiento-diseño-exterior/LK8_DIAGONAL1_1280x508.jpg",
+    "page": "https://www.landking.cl/content/landking/es/home/modelos/camiones-electricos/lk8-ev.html",
+    "width": 1280,
+    "height": 508,
+    "status": 200
+  },
+  {
+    "key": "Mini|JCW Eléctrico",
+    "image": "https://www.mini.cl/mini/site/artic/20250515/imag/foto_0000000420250515150002/mini-JCW-teaser-electric.webp",
+    "page": "https://www.mini.cl/electric/descubre-los-modelos",
+    "width": 3072,
+    "height": 1728,
+    "status": 200
+  }
+]
