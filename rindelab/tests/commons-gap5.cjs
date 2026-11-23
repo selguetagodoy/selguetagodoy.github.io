@@ -26,5 +26,5 @@ for(const p of manifest.photos){
 for(const g of [
  {brand:'RAM',family:'V1000'},{brand:'Chery',family:'cl-tiggo-2-pro'},
  {brand:'Chery',family:'cl-tiggo-3-pro'}
-])assert(!photos.findCommercial(g),'Wrong substitute inserted for '+g.brand+' '+g.family);
+])assert(photos.findCommercial(g),'New verified image missing for '+g.brand+' '+g.family);
 console.log('PASS Commons gap5: 14 licensed JPEG photos, 571 library entries and 81 pending groups');

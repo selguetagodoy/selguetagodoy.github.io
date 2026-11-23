@@ -44,7 +44,7 @@ assert.match(find('Toyota','Hilux','',2026)?.src||'',/new-toyota-hilux/);
 assert.equal(find('Toyota','Hilux','EV',2026),null,'No aplicar Hilux diésel a Hilux eléctrica');
 assert.match(find('Dongfeng','T5 EVO','',2026)?.src||'',/new-dongfeng-t5-evo/);
 assert.match(find('Gac','Emkoo','',2026)?.src||'',/new-gac-emkoo/);
-assert.equal(find('Gac','Emkoo','HEV',2026),null,'No aplicar Emkoo bencina a híbrido HEV');
+assert.match(find('Gac','Emkoo','HEV',2026)?.src||'',/publimetro\.cl\/resizer\/v2\//,'Foto HEV independiente y verificada, no reutilizar gasolina');
 assert.match(find('Jetour','Dashing','',2026)?.src||'',/new-jetour-dashing/);
 assert.match(find('Volvo','EX30','EV',2026)?.src||'',/new-volvo-ex30/);
 assert.match(find('Maserati','Grecale','',2026)?.src||'',/new-maserati-grecale/);

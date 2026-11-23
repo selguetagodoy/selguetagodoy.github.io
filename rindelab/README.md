@@ -1,5 +1,19 @@
 # RINDELAB — actualización 3CV (22/11/2026)
 
+## Cierre del inventario fotográfico: 700/700 grupos (22/11/2026)
+
+Se cerraron los **27 últimos grupos sin imagen** mediante una ronda de búsqueda multimodal y verificación visual, priorizando fotografías de vehículos reales en fabricantes, importadores chilenos, Auto.cl, Autocosmos, concesionarios y medios. Cada imagen se verificó con **HTTP 200**, dimensiones suficientes y asociación de marca, familia, carrocería y tecnología, y se registró su fuente.
+
+- **Resultado:** 700/700 grupos activos con fotografía asociada (**100 % de cobertura de grupos**); **650 referencias fotográficas** en biblioteca, que pueden representar más de un grupo; **0 sin imagen**. Corte previo: 673/700; aumento neto: 27 grupos y 27 referencias nuevas.
+- **Imágenes específicas:** Dongfeng Aeolus Y3; Chery Tiggo 2 Pro/3 Pro; DFSK EC35 eléctrico; Ford Transit Furgón; Foton K1 Cargo; Fuso Canter 918; JIM RE-MAX; Karry Q22 cabina simple/cargo box, Q51 simple y Q52 doble; KYC X5 Cargo Box; Maxus C35; Mercedes Clase A Hatchback; RAM V1000/V700 City; Renault Duster; Toyota Hiace Minibus; ZNA DF6; ZX Auto Grand Lion; BYD Yuan Pro DM-i PHEV; GAC Emkoo HEV; Soueast S08 PHEV; Suzuki Across Hybrid MHEV.
+- **Fotografías referenciales de familia (no versión exacta):** Fuso Canter 718 usa imagen de la plataforma Canter **7C18 Euro VI** en su lugar; BMW «Serie M» usa un **BMW M3 Competition**, no toda la línea M. El manifiesto identifica ambos casos para evitar afirmaciones erróneas.
+- **Derechos y durabilidad:** las imágenes provenientes de titulares comerciales se **enlazan** a sus servidores; no se descargaron para redistribuirse como assets de GitHub ni se les atribuyó una licencia Creative Commons. La cobertura refleja la **asociación en el catálogo**, no constituye permiso de reutilización ni garantía de que el enlace externo jamás cambie o bloquee hotlinking.
+- **Validación:** `data/manufacturer-photo-batch12-final27-20261122.json` registra cada familia, URL de imagen, página fuente, tecnología, autor/dominio y restricciones; `tests/manufacturer-official-final27.cjs` exige 27 asociaciones exactas, 700 grupos cubiertos, 0 faltantes y orden correcto de tecnologías; `node scripts/rindelab-market-queue.cjs --check` verifica el inventario regenerado.
+- **Importante:** no se han alterado precios, homologaciones, rendimientos, ni datos técnicos del catálogo. La cobertura de imágenes no implica que estén completas todas las metadatos por tecnología/modelo-año, que son contadores distintos.
+
+---
+
+
 ## Lotes 9, 10 y 11 · 14 referencias adicionales (22/11/2026)
 
 Se añadieron **14 referencias de imágenes externas** obtenidas de fuentes comerciales concretas y revisadas visualmente: Foton View Grand Pasajeros; JAC Refine Cargo e Ignite30X; Kaiyi Kye-5, Kyx3 y Kyx3 Pro; KYC Gran Mamut (chasis y cargo box); Foton FT/FT Crew; Chery Tiggo 2 Pro Max; y Changan Serie M (gama, cargo box y furgón). Las imágenes permanecen en los servidores de origen y cada asociación registra URL de imagen, página de procedencia y derechos reservados. Se buscaron también referencias en Google Imágenes y portales nacionales; no se infiere licencia abierta por la mera presencia en una búsqueda.
