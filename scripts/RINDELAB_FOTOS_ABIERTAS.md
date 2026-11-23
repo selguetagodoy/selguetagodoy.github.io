@@ -57,7 +57,7 @@ Pruebas locales sin llamadas a APIs:
 
 ## Datos reales incluidos en el repositorio
 
-La instantánea rindelab/data/3cv-fichas-sin-foto-20261123.csv contiene 5529 versiones históricas 3CV que estaban sin imagen tras el segundo lote de fotografías del 23 de noviembre de 2026. No contiene identificadores 3CV que no estuvieran disponibles en el inventario original.
+La instantánea rindelab/data/3cv-fichas-sin-foto-20261123.csv contiene 5192 versiones históricas 3CV que estaban sin imagen tras el segundo lote de fotografías del 23 de noviembre de 2026. No contiene identificadores 3CV que no estuvieran disponibles en el inventario original.
 
 Ejecución sobre las primeras 20 versiones de esa instantánea:
 
@@ -67,4 +67,8 @@ El directorio scripts/examples/fotos-piloto-20261123 contiene un piloto distinto
 
 ## Segundo lote histórico 23/11/2026
 
-La biblioteca incorpora 16 nuevos archivos de Wikimedia Commons (CC BY, CC BY-SA o CC0); sus reglas conservadoras cubren 176 fichas históricas adicionales. Total actualizado: 2.865 fichas con foto de 8.394 y 5.529 pendientes. Cada archivo conserva autor, página original y licencia en el manifiesto rindelab/data/historical-photo-import-batch2-20261123.json. Las coincidencias de carrocería y generación se verifican en pruebas automatizadas.
+La biblioteca incorpora 16 nuevos archivos de Wikimedia Commons (CC BY, CC BY-SA o CC0); sus reglas conservadoras cubren 176 fichas históricas adicionales. Total actualizado: 3.202 fichas con foto de 8.394 y 5.192 pendientes. Cada archivo conserva autor, página original y licencia en el manifiesto rindelab/data/historical-photo-import-batch2-20261123.json. Las coincidencias de carrocería y generación se verifican en pruebas automatizadas.
+
+## Tercer lote Commons — 23/11/2026
+
+Se verificaron licencias y atribuciones de 53 fuentes; 52 imágenes exteriores superaron revisión visual y una fue descartada. Las 52 fotos permiten asociar 337 fichas adicionales mediante reglas estrictas por generación y carrocería, manteniendo la biblioteca comercial y el histórico 3CV separados. Archivo: rindelab/data/historical-photo-import-batch3-20261123.json.

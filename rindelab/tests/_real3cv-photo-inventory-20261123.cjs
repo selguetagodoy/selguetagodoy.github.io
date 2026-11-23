@@ -25,17 +25,24 @@ const ranked=Object.entries(perBrand).filter(([name,g])=>g.total>=15).sort((a,b)
 const previousAudit=require('../data/real-3cv-photo-coverage-20261123.json');
 const sourceAudit=require('../data/historical-photo-import-20261123.json');
 const sourceBatch2=require('../data/historical-photo-import-batch2-20261123.json');
+const sourceBatch3=require('../data/historical-photo-import-batch3-20261123.json');
 const result={time:'2026-11-23',legacy:legacy.length,october:previous.length,november:delta.length,total:rows.length,withPhoto:ok,withoutPhoto:rows.length-ok,byBrand:perBrand,topMissingBrands:ranked,
  beforeGenerationReuse:previousAudit.beforeGenerationReuse,generationReuse20261123:previousAudit.generationReuse20261123,
  historicalCommons20261123:{withPhotoBefore:2425,withoutPhotoBefore:5969,newlyCovered:264,photoAssetsAdded:sourceAudit.photos.length,
  source:'data/historical-photo-import-20261123.json',method:'Fotografías Commons verificadas y asociadas por marca, patrón estricto, carrocería y generación; imagen referencial, no la versión exacta homologada'}};
 result.historicalCommonsBatch220261123={
- withPhotoBefore:2689,withoutPhotoBefore:5705,newlyCovered:ok-2689,
+ withPhotoBefore:2689,withoutPhotoBefore:5705,newlyCovered:176,
  photoAssetsAdded:sourceBatch2.photos.length,
  source:'data/historical-photo-import-batch2-20261123.json',
  method:'Fotografías CC verificadas en Commons con 16 reglas por familia y carrocería; exclusiones explícitas de Cabrio y RS; asociación referencial 3CV'
 };
 
+result.historicalCommonsBatch320261123={
+ withPhotoBefore:2865,withoutPhotoBefore:5529,newlyCovered:ok-2865,
+ photoAssetsAdded:sourceBatch3.photos.length,
+ source:'data/historical-photo-import-batch3-20261123.json',
+ method:'52 imágenes Wikimedia Commons CC con revisión visual manual y filtros de generación/carrocería; imágenes referenciales, no versiones exactas.'
+};
 fs.writeFileSync(path.join(root,'data/real-3cv-photo-coverage-20261123.json'),JSON.stringify(result,null,2)+'\n');
 console.log('ACTUAL_3CV',rows.length,'WITH_PHOTO',ok,'WITHOUT_PHOTO',rows.length-ok,'RATE',(100*ok/rows.length).toFixed(1)+'%');
 console.log('BAIC',Object.entries(perBrand).filter(([b])=>/^baic$|^beijing$/i.test(b)));

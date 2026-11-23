@@ -561,3 +561,7 @@ Se incorporaron **41 fotografías referenciales** de familias/generaciones hist�
 ### Segunda ampliación histórica de imágenes (23/11/2026)
 
 Se incorporan **16 imágenes adicionales de Wikimedia Commons**, verificadas por fuente, autor, licencia y tamaño, con reglas por generación y carrocería que permiten cubrir **176 fichas adicionales** del historial 3CV. La cobertura auditada pasa de 2.689/8.394 a **2.865/8.394 (34,1 %)**; quedan **5.529 fichas pendientes**. Las fotos son referenciales de modelo/generación y conservan atribución visible. La biblioteca comercial de 668 fotos se contabiliza por separado. Archivo de procedencia: data/historical-photo-import-batch2-20261123.json.
+
+### Tercer lote de imágenes del historial 3CV (23/11/2026)
+
+Tras un barrido de 74 familias/generaciones, se validaron 53 fuentes de Wikimedia Commons; 52 imágenes exteriores pasaron la revisión visual final y una foto especial de un Camaro fue descartada. Las 52 imágenes conservan autor, licencia CC y checksum SHA-256. Las reglas por generación y carrocería permiten cubrir **337 fichas históricas adicionales**, llevando la cobertura a **3.202/8.394 (38,1 %)**. Quedan **5.192 fichas sin fotografía**. La biblioteca comercial de 668 archivos se contabiliza por separado. Ver data/historical-photo-import-batch3-20261123.json.
