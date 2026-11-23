@@ -4,18 +4,18 @@
   "october": 272,
   "november": 69,
   "total": 8394,
-  "withPhoto": 2126,
-  "withoutPhoto": 6268,
+  "withPhoto": 2425,
+  "withoutPhoto": 5969,
   "byBrand": {
     "Kia": {
       "total": 304,
-      "withPhoto": 96,
-      "missing": 208
+      "withPhoto": 114,
+      "missing": 190
     },
     "Citroen": {
       "total": 184,
-      "withPhoto": 43,
-      "missing": 141
+      "withPhoto": 57,
+      "missing": 127
     },
     "Changan": {
       "total": 109,
@@ -29,8 +29,8 @@
     },
     "Porsche": {
       "total": 311,
-      "withPhoto": 197,
-      "missing": 114
+      "withPhoto": 201,
+      "missing": 110
     },
     "KGM": {
       "total": 164,
@@ -39,8 +39,8 @@
     },
     "Peugeot": {
       "total": 249,
-      "withPhoto": 64,
-      "missing": 185
+      "withPhoto": 71,
+      "missing": 178
     },
     "Honda": {
       "total": 120,
@@ -64,8 +64,8 @@
     },
     "Jeep": {
       "total": 146,
-      "withPhoto": 64,
-      "missing": 82
+      "withPhoto": 79,
+      "missing": 67
     },
     "DFLM": {
       "total": 29,
@@ -79,8 +79,8 @@
     },
     "Toyota": {
       "total": 186,
-      "withPhoto": 57,
-      "missing": 129
+      "withPhoto": 69,
+      "missing": 117
     },
     "Fiat": {
       "total": 127,
@@ -89,8 +89,8 @@
     },
     "Hyundai": {
       "total": 306,
-      "withPhoto": 71,
-      "missing": 235
+      "withPhoto": 74,
+      "missing": 232
     },
     "Tesla": {
       "total": 21,
@@ -99,13 +99,13 @@
     },
     "Chery": {
       "total": 125,
-      "withPhoto": 46,
-      "missing": 79
+      "withPhoto": 50,
+      "missing": 75
     },
     "Mazda": {
       "total": 140,
-      "withPhoto": 57,
-      "missing": 83
+      "withPhoto": 64,
+      "missing": 76
     },
     "Omoda": {
       "total": 13,
@@ -124,23 +124,23 @@
     },
     "Volvo": {
       "total": 176,
-      "withPhoto": 43,
-      "missing": 133
+      "withPhoto": 56,
+      "missing": 120
     },
     "Mercedes-Benz": {
       "total": 575,
-      "withPhoto": 56,
-      "missing": 519
+      "withPhoto": 62,
+      "missing": 513
     },
     "Land Rover": {
       "total": 533,
-      "withPhoto": 322,
-      "missing": 211
+      "withPhoto": 415,
+      "missing": 118
     },
     "RAM": {
       "total": 118,
-      "withPhoto": 26,
-      "missing": 92
+      "withPhoto": 34,
+      "missing": 84
     },
     "Lexus": {
       "total": 72,
@@ -154,13 +154,13 @@
     },
     "BMW": {
       "total": 464,
-      "withPhoto": 83,
-      "missing": 381
+      "withPhoto": 107,
+      "missing": 357
     },
     "Nissan": {
       "total": 169,
-      "withPhoto": 39,
-      "missing": 130
+      "withPhoto": 47,
+      "missing": 122
     },
     "Suzuki": {
       "total": 163,
@@ -239,23 +239,23 @@
     },
     "Jetour": {
       "total": 33,
-      "withPhoto": 13,
-      "missing": 20
+      "withPhoto": 17,
+      "missing": 16
     },
     "Foton": {
       "total": 151,
-      "withPhoto": 42,
-      "missing": 109
+      "withPhoto": 59,
+      "missing": 92
     },
     "Opel": {
       "total": 125,
-      "withPhoto": 5,
-      "missing": 120
+      "withPhoto": 10,
+      "missing": 115
     },
     "Volkswagen": {
       "total": 165,
-      "withPhoto": 20,
-      "missing": 145
+      "withPhoto": 21,
+      "missing": 144
     },
     "Bentley": {
       "total": 19,
@@ -264,13 +264,13 @@
     },
     "Chevrolet": {
       "total": 219,
-      "withPhoto": 21,
-      "missing": 198
+      "withPhoto": 23,
+      "missing": 196
     },
     "Riddara": {
       "total": 6,
-      "withPhoto": 0,
-      "missing": 6
+      "withPhoto": 5,
+      "missing": 1
     },
     "Leapmotor": {
       "total": 12,
@@ -304,8 +304,8 @@
     },
     "Maxus": {
       "total": 119,
-      "withPhoto": 7,
-      "missing": 112
+      "withPhoto": 25,
+      "missing": 94
     },
     "SWM": {
       "total": 9,
@@ -444,8 +444,8 @@
     },
     "Jaguar": {
       "total": 128,
-      "withPhoto": 0,
-      "missing": 128
+      "withPhoto": 11,
+      "missing": 117
     },
     "Skywell": {
       "total": 1,
@@ -608,16 +608,16 @@
       "Mercedes-Benz",
       {
         "total": 575,
-        "withPhoto": 56,
-        "missing": 519
+        "withPhoto": 62,
+        "missing": 513
       }
     ],
     [
       "BMW",
       {
         "total": 464,
-        "withPhoto": 83,
-        "missing": 381
+        "withPhoto": 107,
+        "missing": 357
       }
     ],
     [
@@ -632,32 +632,24 @@
       "Hyundai",
       {
         "total": 306,
-        "withPhoto": 71,
-        "missing": 235
-      }
-    ],
-    [
-      "Land Rover",
-      {
-        "total": 533,
-        "withPhoto": 322,
-        "missing": 211
-      }
-    ],
-    [
-      "Kia",
-      {
-        "total": 304,
-        "withPhoto": 96,
-        "missing": 208
+        "withPhoto": 74,
+        "missing": 232
       }
     ],
     [
       "Chevrolet",
       {
         "total": 219,
-        "withPhoto": 21,
-        "missing": 198
+        "withPhoto": 23,
+        "missing": 196
+      }
+    ],
+    [
+      "Kia",
+      {
+        "total": 304,
+        "withPhoto": 114,
+        "missing": 190
       }
     ],
     [
@@ -672,32 +664,16 @@
       "Peugeot",
       {
         "total": 249,
-        "withPhoto": 64,
-        "missing": 185
+        "withPhoto": 71,
+        "missing": 178
       }
     ],
     [
       "Volkswagen",
       {
         "total": 165,
-        "withPhoto": 20,
-        "missing": 145
-      }
-    ],
-    [
-      "Citroen",
-      {
-        "total": 184,
-        "withPhoto": 43,
-        "missing": 141
-      }
-    ],
-    [
-      "Volvo",
-      {
-        "total": 176,
-        "withPhoto": 43,
-        "missing": 133
+        "withPhoto": 21,
+        "missing": 144
       }
     ],
     [
@@ -709,35 +685,35 @@
       }
     ],
     [
+      "Citroen",
+      {
+        "total": 184,
+        "withPhoto": 57,
+        "missing": 127
+      }
+    ],
+    [
       "Nissan",
       {
         "total": 169,
-        "withPhoto": 39,
-        "missing": 130
+        "withPhoto": 47,
+        "missing": 122
       }
     ],
     [
-      "Toyota",
+      "Volvo",
       {
-        "total": 186,
-        "withPhoto": 57,
-        "missing": 129
-      }
-    ],
-    [
-      "Jaguar",
-      {
-        "total": 128,
-        "withPhoto": 0,
-        "missing": 128
-      }
-    ],
-    [
-      "Opel",
-      {
-        "total": 125,
-        "withPhoto": 5,
+        "total": 176,
+        "withPhoto": 56,
         "missing": 120
+      }
+    ],
+    [
+      "Land Rover",
+      {
+        "total": 533,
+        "withPhoto": 415,
+        "missing": 118
       }
     ],
     [
@@ -749,19 +725,27 @@
       }
     ],
     [
-      "Porsche",
+      "Toyota",
       {
-        "total": 311,
-        "withPhoto": 197,
-        "missing": 114
+        "total": 186,
+        "withPhoto": 69,
+        "missing": 117
       }
     ],
     [
-      "Maxus",
+      "Jaguar",
       {
-        "total": 119,
-        "withPhoto": 7,
-        "missing": 112
+        "total": 128,
+        "withPhoto": 11,
+        "missing": 117
+      }
+    ],
+    [
+      "Opel",
+      {
+        "total": 125,
+        "withPhoto": 10,
+        "missing": 115
       }
     ],
     [
@@ -773,11 +757,11 @@
       }
     ],
     [
-      "Foton",
+      "Porsche",
       {
-        "total": 151,
-        "withPhoto": 42,
-        "missing": 109
+        "total": 311,
+        "withPhoto": 201,
+        "missing": 110
       }
     ],
     [
@@ -803,6 +787,32 @@
         "withPhoto": 15,
         "missing": 96
       }
+    ],
+    [
+      "Maxus",
+      {
+        "total": 119,
+        "withPhoto": 25,
+        "missing": 94
+      }
+    ],
+    [
+      "Foton",
+      {
+        "total": 151,
+        "withPhoto": 59,
+        "missing": 92
+      }
     ]
-  ]
+  ],
+  "beforeGenerationReuse": {
+    "withPhoto": 2126,
+    "withoutPhoto": 6268
+  },
+  "generationReuse20261123": {
+    "newlyCovered": 299,
+    "source": "data/curated-generation-photo-reuse-20261123.json",
+    "photoAssetsAdded": 0,
+    "method": "Reutilización conservadora de imágenes existentes, con reglas explícitas de generación, modelo, motorización y año"
+  }
 }
