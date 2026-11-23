@@ -28,7 +28,7 @@ for(const p of manifest.photos){
  assert(pic,'Photo not associated: '+p.brand+' '+p.family);
  families++;
 }
-assert(!photos.findCommercial({brand:'RAM',family:'V1000'}),'Wrong RAM V1000 substitute');
+assert(photos.findCommercial({brand:'RAM',family:'V1000'}),'Validated RAM V1000 photo from final batch missing');
 for(const p of [{brand:'Chevrolet',family:'N400 Cargo'}, {brand:'Foton',family:'TM3'},{brand:'Mini',family:'JCW Eléctrico',technology:'EV'}])
  assert(photos.findCommercial(p),'Verified later-batch OEM image absent for '+p.brand+' '+p.family);
 console.log('PASS photo batch 4: '+manifest.photos.length+' photos; '+families+' linked, 557 library, 96 groups missing.');

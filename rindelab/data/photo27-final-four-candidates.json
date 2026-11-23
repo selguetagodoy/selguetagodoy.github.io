@@ -1,0 +1,62 @@
+[
+  {
+    "brand": "Karry",
+    "family": "Q22 Cabina Simple",
+    "url": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_9fffe25f246f466386b49436156cb2f5.jpg",
+    "source": "https://www.autocosmos.cl/catalogo/2025/karry/q22/13l/179319",
+    "http": 200,
+    "w": 1280,
+    "h": 960,
+    "bytes": 78330
+  },
+  {
+    "brand": "Karry",
+    "family": "Q51 Cabina Simple",
+    "url": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_de0622d86f6e468592ddc53df4ee7c11.webp",
+    "source": "https://www.autocosmos.cl/catalogo/2025/karry/q51/16l/179325",
+    "http": 200,
+    "w": 1600,
+    "h": 1172,
+    "bytes": 35380
+  },
+  {
+    "brand": "BYD",
+    "family": "Yuan Pro DM-i",
+    "url": "https://www.byd.com/material/byd-site/cl/yuan-pro-dmi/productdetal/banner1-pc.jpg",
+    "source": "https://www.byd.com/cl/yuan-pro-dmi",
+    "http": 200,
+    "w": 2880,
+    "h": 1620,
+    "bytes": 484280
+  },
+  {
+    "brand": "BYD",
+    "family": "Yuan Pro DM-i",
+    "url": "https://cualautocompro.cl/_astro/byd-yuan-pro-dmi.CDi38F4c_1NmQND.jpg",
+    "source": "https://cualautocompro.cl/byd/yuan-pro-dmi/",
+    "http": 200,
+    "w": 1600,
+    "h": 900,
+    "bytes": 115767
+  },
+  {
+    "brand": "Fuso",
+    "family": "Canter 718",
+    "url": "https://images.squarespace-cdn.com/content/v1/5f886b8b92e5ff15710df969/c0b90059-9200-493d-b2ae-967da8936c5c/fuso-canter-7c18.jpg",
+    "source": "https://www.garcarek.pl/fuso",
+    "http": 200,
+    "w": 2048,
+    "h": 1365,
+    "bytes": 420004
+  },
+  {
+    "brand": "Fuso",
+    "family": "Canter 718",
+    "url": "https://8f89f94eb0.clvaw-cdnwnd.com/703575c894aa945adb0dd75111ade891/200000786-b0179b017b/Fuso-Canter_2022-6.jpg?ph=8f89f94eb0",
+    "source": "https://www.rolcar.pt/canter-7500-kgs/",
+    "http": 200,
+    "w": 1920,
+    "h": 847,
+    "bytes": 274502
+  }
+]

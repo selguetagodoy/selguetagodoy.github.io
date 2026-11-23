@@ -1,0 +1,563 @@
+{
+  "date": "2026-11-22",
+  "baselineMissing": 27,
+  "afterMissingExpected": 0,
+  "photoCount": 27,
+  "notes": "No es una transferencia de licencias. Los enlaces externos son susceptibles a cambios, bloqueos/hotlink y condiciones de cada titular. La cobertura significa fotografía referencial por familia/tecnología, no versión ni equipamiento.",
+  "photos": [
+    {
+      "brand": "Dongfeng",
+      "family": "aeolus y3",
+      "pattern": "\\baeolus[\\s,_-]+y3(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Dongfeng aeolus y3 (imagen referencial auditada)",
+      "author": "noticias.autocosmos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://noticias.autocosmos.cl/2023/09/11/dongfeng-estrena-silenciosamente-al-nuevo-aeolus-y3-en-chile",
+      "source": "https://noticias.autocosmos.cl/2023/09/11/dongfeng-estrena-silenciosamente-al-nuevo-aeolus-y3-en-chile",
+      "localSrc": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_ea0c2d8a2eaa4aa6acc36a224b848f0a.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1024,
+        577
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Chery",
+      "family": "cl-tiggo-2-pro",
+      "pattern": "\\bcl[\\s,_-]+tiggo[\\s,_-]+2[\\s,_-]+pro(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Chery cl-tiggo-2-pro (imagen referencial auditada)",
+      "author": "www.rosselotusados.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.rosselotusados.cl/web/vehiculos/view?id=448373",
+      "source": "https://www.rosselotusados.cl/web/vehiculos/view?id=448373",
+      "localSrc": "https://d21su7g2oc495k.cloudfront.net/images/vehiculos_sinmarca/z7hHPyAszAt16-DIlPqmneXJoFKj3q_foto_.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        760,
+        570
+      ],
+      "verifiedHttpStatus": 200,
+      "scopeNote": "Foto de Chery Tiggo 2 Pro en anuncio de usado 2024, modelo/generación verificados visualmente"
+    },
+    {
+      "brand": "Chery",
+      "family": "cl-tiggo-3-pro",
+      "pattern": "\\bcl[\\s,_-]+tiggo[\\s,_-]+3[\\s,_-]+pro(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Chery cl-tiggo-3-pro (imagen referencial auditada)",
+      "author": "www.kavak.com",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.kavak.com/cl/venta/chery-tiggo_3_pro-15t_glx_cvt-suv-2024",
+      "source": "https://www.kavak.com/cl/venta/chery-tiggo_3_pro-15t_glx_cvt-suv-2024",
+      "localSrc": "https://images.prd.kavak.io/images/378842/EXTERIOR-frontSidePilotDistance-1738262203398.jpeg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1920,
+        1080
+      ],
+      "verifiedHttpStatus": 200,
+      "scopeNote": "Foto de Chery Tiggo 3 Pro en anuncio de usado 2024, modelo/generación verificados visualmente"
+    },
+    {
+      "brand": "DFSK",
+      "family": "Cargo Van EC35",
+      "pattern": "\\bCargo[\\s,_-]+Van[\\s,_-]+EC35(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "DFSK Cargo Van EC35 (imagen referencial auditada)",
+      "author": "www.chileautos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.chileautos.cl/noticias/detalle/dfsk-ec35-un-experto-en-carga-que-se-recarga--29325/",
+      "source": "https://www.chileautos.cl/noticias/detalle/dfsk-ec35-un-experto-en-carga-que-se-recarga--29325/",
+      "localSrc": "https://latam-editorial.pxcrush.net/chileautos/general/editorial/ec35-4.jpeg?height=682&width=1024",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1023,
+        682
+      ],
+      "verifiedHttpStatus": 200,
+      "tech": "EV"
+    },
+    {
+      "brand": "Ford",
+      "family": "Transit Furgon",
+      "pattern": "\\bTransit[\\s,_-]+Furgon(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Ford Transit Furgon (imagen referencial auditada)",
+      "author": "noticias.autocosmos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://noticias.autocosmos.cl/2024/10/03/ford-actualiza-su-linea-de-furgones-transit-en-chile-para-2025",
+      "source": "https://noticias.autocosmos.cl/2024/10/03/ford-actualiza-su-linea-de-furgones-transit-en-chile-para-2025",
+      "localSrc": "https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_1b9f6f3a7f0841ac80d539b280f4b774.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        912,
+        513
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Foton",
+      "family": "K1 Cargo",
+      "pattern": "\\bK1[\\s,_-]+Cargo(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Foton K1 Cargo (imagen referencial auditada)",
+      "author": "www.autocosmos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.autocosmos.cl/auto/nuevo/foton/k1/28l-cargo-diesel/fcc948c425804c1e9ad90e1f5262e6d8",
+      "source": "https://www.autocosmos.cl/auto/nuevo/foton/k1/28l-cargo-diesel/fcc948c425804c1e9ad90e1f5262e6d8",
+      "localSrc": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/l/RT_V_90e3378344c741cdaf20196de0b237d4.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1024,
+        768
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Fuso",
+      "family": "Canter 718",
+      "pattern": "\\bCanter[\\s,_-]+718(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Fuso Canter 718 (imagen referencial auditada)",
+      "author": "www.garcarek.pl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.garcarek.pl/fuso",
+      "source": "https://www.garcarek.pl/fuso",
+      "localSrc": "https://images.squarespace-cdn.com/content/v1/5f886b8b92e5ff15710df969/c0b90059-9200-493d-b2ae-967da8936c5c/fuso-canter-7c18.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        2048,
+        1365
+      ],
+      "verifiedHttpStatus": 200,
+      "scopeNote": "Imagen referencial de Fuso Canter 7C18 Euro VI, plataforma equivalente; NO es fotografía certificada de la versión 718 chilena"
+    },
+    {
+      "brand": "Fuso",
+      "family": "Canter 918",
+      "pattern": "\\bCanter[\\s,_-]+918(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Fuso Canter 918 (imagen referencial auditada)",
+      "author": "www.fuso.com.au",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.fuso.com.au/range/canter/918/wide-cab/",
+      "source": "https://www.fuso.com.au/range/canter/918/wide-cab/",
+      "localSrc": "https://www.fuso.com.au/contentassets/4fe8b4ccb6ce40e78dc287df5ff1bc38/356631a1-euro-6-canter-918-wide-cab-front34lhs-rgb-fa-1.png?compand=true&rsampler=bicubic&width=2000",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        2000,
+        1443
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "JIM",
+      "family": "RE-MAX",
+      "pattern": "\\bRE[\\s,_-]+MAX(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "JIM RE-MAX (imagen referencial auditada)",
+      "author": "www.auto.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.auto.cl/nuevos/marcas/jim",
+      "source": "https://www.auto.cl/nuevos/marcas/jim",
+      "localSrc": "https://assets.auto.cl/nvi/jim-re-max-25t-d-mt-4x2-cd-dlx-diesel-manual-4x2-pick-up-cZHrmwzffA8wfDdRqrEe7j.png",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        577,
+        433
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Karry",
+      "family": "Q22 Cabina Simple",
+      "pattern": "\\bQ22[\\s,_-]+Cabina[\\s,_-]+Simple(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Karry Q22 Cabina Simple (imagen referencial auditada)",
+      "author": "www.autocosmos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.autocosmos.cl/catalogo/2025/karry/q22/13l/179319",
+      "source": "https://www.autocosmos.cl/catalogo/2025/karry/q22/13l/179319",
+      "localSrc": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_9fffe25f246f466386b49436156cb2f5.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1280,
+        960
+      ],
+      "verifiedHttpStatus": 200,
+      "scopeNote": "Alternativa Autocosmos verificable; imagen directa oficial Karry Chile rechazó acceso HTTP 403"
+    },
+    {
+      "brand": "Karry",
+      "family": "Q22 Cargo BOX",
+      "pattern": "\\bQ22[\\s,_-]+Cargo[\\s,_-]+BOX(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Karry Q22 Cargo BOX (imagen referencial auditada)",
+      "author": "www.autocosmos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.autocosmos.cl/catalogo/vigente/karry/q22-cargo-box",
+      "source": "https://www.autocosmos.cl/catalogo/vigente/karry/q22-cargo-box",
+      "localSrc": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_3762fc19005a4d66af3d1e2d46acd64a.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1600,
+        1067
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Karry",
+      "family": "Q51 Cabina Simple",
+      "pattern": "\\bQ51[\\s,_-]+Cabina[\\s,_-]+Simple(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Karry Q51 Cabina Simple (imagen referencial auditada)",
+      "author": "www.autocosmos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.autocosmos.cl/catalogo/2025/karry/q51/16l/179325",
+      "source": "https://www.autocosmos.cl/catalogo/2025/karry/q51/16l/179325",
+      "localSrc": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_de0622d86f6e468592ddc53df4ee7c11.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1600,
+        1172
+      ],
+      "verifiedHttpStatus": 200,
+      "scopeNote": "Alternativa Autocosmos verificable; imagen directa oficial Karry Chile rechazó acceso HTTP 403"
+    },
+    {
+      "brand": "Karry",
+      "family": "Q52 Cabina Doble",
+      "pattern": "\\bQ52[\\s,_-]+Cabina[\\s,_-]+Doble(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Karry Q52 Cabina Doble (imagen referencial auditada)",
+      "author": "autosummit.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://autosummit.cl/karry",
+      "source": "https://autosummit.cl/karry",
+      "localSrc": "https://autosummit.cl/storage/cardealer/img/models/366/Q52%20cabina%20doble.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        2000,
+        1125
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Kyc",
+      "family": "X5 Cargo BOX",
+      "pattern": "\\bX5[\\s,_-]+Cargo[\\s,_-]+BOX(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Kyc X5 Cargo BOX (imagen referencial auditada)",
+      "author": "www.auto.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.auto.cl/nuevos/marcas/kyc/x5-cargo-box/15-g-mt-2p-ch-cs-cargo-box-aa",
+      "source": "https://www.auto.cl/nuevos/marcas/kyc/x5-cargo-box/15-g-mt-2p-ch-cs-cargo-box-aa",
+      "localSrc": "https://assets.auto.cl/legacy/img/picture_cars/86526-KYC_X5_CARGO_BOX_1.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1024,
+        768
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Maxus",
+      "family": "C35",
+      "pattern": "\\bC35(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Maxus C35 (imagen referencial auditada)",
+      "author": "www.rosselotusados.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.rosselotusados.cl/web/vehiculos/view?id=4632707",
+      "source": "https://www.rosselotusados.cl/web/vehiculos/view?id=4632707",
+      "localSrc": "https://d21su7g2oc495k.cloudfront.net/images/vehiculos_sinmarca/ZSqZsSJQCLWkltYWg44If9zldTIsVP_foto_.jpeg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        760,
+        570
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "family": "Clase A Hatchback",
+      "pattern": "\\bClase[\\s,_-]+A[\\s,_-]+Hatchback(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Mercedes-Benz Clase A Hatchback (imagen referencial auditada)",
+      "author": "www.auto.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.auto.cl/nuevos/marcas/mercedes-benz/clase-a-hatchback/a200-amg-bencina-automatico-4x2-hatchback",
+      "source": "https://www.auto.cl/nuevos/marcas/mercedes-benz/clase-a-hatchback/a200-amg-bencina-automatico-4x2-hatchback",
+      "localSrc": "https://assets.auto.cl/nvi/mercedes-benz-clase-a-hatchback-a200-amg-bencina-automatico-4x2-hatchback-3z5ckhD63H4f42aoWB4TZL.png",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        500,
+        500
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "RAM",
+      "family": "V1000",
+      "pattern": "\\bV1000(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "RAM V1000 (imagen referencial auditada)",
+      "author": "autosusados.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://autosusados.cl/furgones/ram/v1000/1/1227603",
+      "source": "https://autosusados.cl/furgones/ram/v1000/1/1227603",
+      "localSrc": "https://storage.googleapis.com/fotosautos/automotora/Salfa/1237/1227603/RAM-V1000-lsecpv.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1024,
+        768
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "RAM",
+      "family": "V700 City",
+      "pattern": "\\bV700[\\s,_-]+City(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "RAM V700 City (imagen referencial auditada)",
+      "author": "www.auto.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.auto.cl/nuevos/marcas/ram/v700-city/13-d-mt-5p-city-1pl",
+      "source": "https://www.auto.cl/nuevos/marcas/ram/v700-city/13-d-mt-5p-city-1pl",
+      "localSrc": "https://assets.auto.cl/nvi/ram-v700-city-13-d-mt-5p-city-1pl-bgLwXKBbCub48W7t3fnRmp.png",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1132,
+        1280
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Renault",
+      "family": "Duster",
+      "pattern": "\\bDuster(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Renault Duster (imagen referencial auditada)",
+      "author": "autosusados.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://autosusados.cl/vehiculos/renault/duster/1/1235529",
+      "source": "https://autosusados.cl/vehiculos/renault/duster/1/1235529",
+      "localSrc": "https://storage.googleapis.com/fotosautos/automotora/Automotora/172/1235529/RENAULT-DUSTER-azonhb.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1024,
+        768
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Toyota",
+      "family": "Hiace Minibus",
+      "pattern": "\\bHiace[\\s,_-]+Minibus(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Toyota Hiace Minibus (imagen referencial auditada)",
+      "author": "kovacstoyota.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://kovacstoyota.cl/campana/cotizador/",
+      "source": "https://kovacstoyota.cl/campana/cotizador/",
+      "localSrc": "https://res.cloudinary.com/wpchile/image/upload/w_auto%2Cf_auto%2Cq_auto%3Agood/kovacsecrm/cms_contenido/337/TOYOTA_HIACE-TURISMO.png",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1000,
+        550
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "ZNA",
+      "family": "DF6",
+      "pattern": "\\bDF6(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "ZNA DF6 (imagen referencial auditada)",
+      "author": "www.autocosmos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.autocosmos.cl/catalogo/segmentos/zna",
+      "source": "https://www.autocosmos.cl/catalogo/segmentos/zna",
+      "localSrc": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_e8c8dd3dad7041e2b7854e0ee29e035e.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        800,
+        600
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "Zxauto",
+      "family": "Grand Lion",
+      "pattern": "\\bGrand[\\s,_-]+Lion(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Zxauto Grand Lion (imagen referencial auditada)",
+      "author": "autosusados.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://autosusados.cl/camionetas/ZX%20AUTO/GRAND%20LION/1/1248050",
+      "source": "https://autosusados.cl/camionetas/ZX%20AUTO/GRAND%20LION/1/1248050",
+      "localSrc": "https://storage.googleapis.com/fotosautos/automotora/Autotattersall/567/1248050/ZXAUTO-GRANDLION-pnfnol.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1024,
+        768
+      ],
+      "verifiedHttpStatus": 200
+    },
+    {
+      "brand": "BMW",
+      "family": "Serie M",
+      "pattern": "\\bSerie[\\s,_-]+M(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "BMW Serie M (imagen referencial auditada)",
+      "author": "www.jmdautos.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.jmdautos.cl/ficha/246370/bmw-m3-2025",
+      "source": "https://www.jmdautos.cl/ficha/246370/bmw-m3-2025",
+      "localSrc": "https://www.rtautomotriz.com/images/JMDAUTOS/Ext246370-1.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1600,
+        1200
+      ],
+      "verifiedHttpStatus": 200,
+      "scopeNote": "Fotografía referencial de BMW M3 Competition dentro de la familia Serie M, NO representa todas las versiones M"
+    },
+    {
+      "brand": "BYD",
+      "family": "Yuan Pro DM-i",
+      "pattern": "\\bYuan[\\s,_-]+Pro[\\s,_-]+DM[\\s,_-]+i(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "BYD Yuan Pro DM-i (imagen referencial auditada)",
+      "author": "www.byd.com",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.byd.com/cl/yuan-pro-dmi",
+      "source": "https://www.byd.com/cl/yuan-pro-dmi",
+      "localSrc": "https://www.byd.com/material/byd-site/cl/yuan-pro-dmi/productdetal/banner1-pc.jpg",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        2880,
+        1620
+      ],
+      "verifiedHttpStatus": 200,
+      "tech": "PHEV",
+      "scopeNote": "Foto específica oficial de Yuan Pro DM-i híbrido enchufable (NO EV)"
+    },
+    {
+      "brand": "Gac",
+      "family": "Emkoo",
+      "pattern": "\\bEmkoo(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Gac Emkoo (imagen referencial auditada)",
+      "author": "www.publimetro.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://www.publimetro.cl/tacometro/2025/02/26/gac-emkoo-hev-nuevo-suv-hibrido-con-autonomia-de-hasta-385-kml/",
+      "source": "https://www.publimetro.cl/tacometro/2025/02/26/gac-emkoo-hev-nuevo-suv-hibrido-con-autonomia-de-hasta-385-kml/",
+      "localSrc": "https://www.publimetro.cl/resizer/v2/NJRI75QE4ZA33NQUJSJYKIUFVA.jpeg?auth=2437b5138dbe91247b63da4f334be8f3ffe457a33e5045919f0a5db1e46a41aa&height=630&smart=true&width=1200",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1200,
+        630
+      ],
+      "verifiedHttpStatus": 200,
+      "tech": "HEV",
+      "scopeNote": "Foto de lanzamiento del GAC Emkoo HEV en Chile, no Emkoo gasolina"
+    },
+    {
+      "brand": "Soueast",
+      "family": "S08 PHEV",
+      "pattern": "\\bS08[\\s,_-]+PHEV(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Soueast S08 PHEV (imagen referencial auditada)",
+      "author": "soueastchile.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://soueastchile.cl/w/noticia-lanzamiento-s08-phev",
+      "source": "https://soueastchile.cl/w/noticia-lanzamiento-s08-phev",
+      "localSrc": "https://soueastchile.cl/documents/d/soueast/s08phev-blancobruma-externo-lateral-1",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1530,
+        1200
+      ],
+      "verifiedHttpStatus": 200,
+      "tech": "PHEV"
+    },
+    {
+      "brand": "Suzuki",
+      "family": "Across Hybrid",
+      "pattern": "\\bAcross[\\s,_-]+Hybrid(?=$|[^A-Za-z0-9])",
+      "from": "2020",
+      "to": "2027",
+      "model": "Suzuki Across Hybrid (imagen referencial auditada)",
+      "author": "suzuki.cl",
+      "license": "Derechos reservados",
+      "licenseUrl": "https://suzuki.cl/blog/nuevo-suv-suzuki/",
+      "source": "https://suzuki.cl/blog/nuevo-suv-suzuki/",
+      "localSrc": "https://www.suzuki.cl/media/zzkdey2h/generic_suzuki_suzuki-across-hybrid-2026.webp",
+      "imageSource": "fabricante / catálogo comercial / fotografía de concesionario",
+      "rightsStatus": "Enlace directo al titular. Sin licencia abierta; no se aloja ni redistribuye esta imagen en GitHub.",
+      "size": [
+        1200,
+        630
+      ],
+      "verifiedHttpStatus": 200,
+      "tech": "MHEV",
+      "scopeNote": "Foto de Suzuki Across Hybrid 2026 MHEV chileno, no Suzuki Across PHEV europeo"
+    }
+  ]
+}

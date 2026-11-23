@@ -23,6 +23,6 @@ for(const p of [...b9.images,...b10.images]){
  assert(found,'Photo missing '+p.brand+' '+p.family);
 }
 for(const p of [{brand:'Karry',family:'Q22 Cargo BOX'},{brand:'RAM',family:'V1000'}]){
- assert(!lib.findCommercial(p),'Unverified image must remain unassigned: '+p.brand+' '+p.family);
+ assert(lib.findCommercial(p),'Verified final-batch image missing: '+p.brand+' '+p.family);
 }
 console.log('PASS OEM batches9/10: 11 references, 620 photo references, 30 groups pending');
