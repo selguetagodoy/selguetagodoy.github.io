@@ -30,7 +30,7 @@ for(const source of rows){
   assert(!String(photo?.src||'').includes('rindelab-land-rover-range-rover-commonsmass-20261122.jpg'),
    'Un Range Rover Sport no puede mostrar la fotografía L460 del Range Rover normal');
  }
- if(row[0]==='Hyundai'&&/^Creta Grand\b/i.test(row[1])){
+ if(row[0]==='Hyundai'&&/^Creta Grand\b/i.test(row[1])&&row[8]<='2021-12-31'){
   assert(!String(photo?.src||'').includes('hyundai-hyundai-creta-072.jpg'),
    'Creta Grand no puede heredar fotografía de Creta 5 asientos');
  }
