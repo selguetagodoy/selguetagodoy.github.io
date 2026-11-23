@@ -76,3 +76,7 @@ Se verificaron licencias y atribuciones de 53 fuentes; 52 imágenes exteriores s
 ## Cuarto lote Commons — 23/11/2026
 
 18 nuevas fotos con licencia y control visual, 146 fichas adicionales: 3.348 con foto, 5.046 pendientes. Ver rindelab/data/historical-photo-import-batch4-20261123.json.
+
+## Quinto lote Commons — 23/11/2026
+
+38 fotos con licencia y revisión visual, 159 asociaciones adicionales; 3.507 con foto, 4.887 pendientes. Ver rindelab/data/historical-photo-import-batch5-20261123.json.
