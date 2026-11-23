@@ -57,10 +57,10 @@ Pruebas locales sin llamadas a APIs:
 
 ## Datos reales incluidos en el repositorio
 
-La instantánea rindelab/data/3cv-fichas-sin-foto-20261123.csv contiene 5705 versiones históricas 3CV que estaban sin imagen al corte de 23 de noviembre de 2026. No contiene identificadores 3CV que no estuvieran disponibles en el inventario original.
+La instantÃ¡nea rindelab/data/3cv-fichas-sin-foto-20261123.csv contiene 5705 versiones histÃ³ricas 3CV que estaban sin imagen al corte de 23 de noviembre de 2026. No contiene identificadores 3CV que no estuvieran disponibles en el inventario original.
 
-Ejecución sobre las primeras 20 versiones de esa instantánea:
+EjecuciÃ³n sobre las primeras 20 versiones de esa instantÃ¡nea:
 
     py scripts/rindelab-open-photos.py --input rindelab/data/3cv-fichas-sin-foto-20261123.csv --limit 20 --wikidata --output-dir rindelab/data/fotos-piloto
 
-El directorio scripts/examples/fotos-piloto-20261123 contiene un piloto distinto, seleccionado de 20 fichas reales de varias marcas, con su manifiesto y auditoría; no implica fotografías publicadas automáticamente.
+El directorio scripts/examples/fotos-piloto-20261123 contiene un piloto distinto, seleccionado de 20 fichas reales de varias marcas, con su manifiesto y auditorÃ­a; no implica fotografÃ­as publicadas automÃ¡ticamente.
