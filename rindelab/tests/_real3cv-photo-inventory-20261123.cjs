@@ -27,6 +27,7 @@ const sourceAudit=require('../data/historical-photo-import-20261123.json');
 const sourceBatch2=require('../data/historical-photo-import-batch2-20261123.json');
 const sourceBatch3=require('../data/historical-photo-import-batch3-20261123.json');
 const sourceBatch4=require('../data/historical-photo-import-batch4-20261123.json');
+const sourceBatch5=require('../data/historical-photo-import-batch5-20261123.json');
 const result={time:'2026-11-23',legacy:legacy.length,october:previous.length,november:delta.length,total:rows.length,withPhoto:ok,withoutPhoto:rows.length-ok,byBrand:perBrand,topMissingBrands:ranked,
  beforeGenerationReuse:previousAudit.beforeGenerationReuse,generationReuse20261123:previousAudit.generationReuse20261123,
  historicalCommons20261123:{withPhotoBefore:2425,withoutPhotoBefore:5969,newlyCovered:264,photoAssetsAdded:sourceAudit.photos.length,
@@ -44,7 +45,8 @@ result.historicalCommonsBatch320261123={
  source:'data/historical-photo-import-batch3-20261123.json',
  method:'52 imágenes Wikimedia Commons CC con revisión visual manual y filtros de generación/carrocería; imágenes referenciales, no versiones exactas.'
 };
-result.historicalCommonsBatch420261123={withPhotoBefore:3202,withoutPhotoBefore:5192,newlyCovered:ok-3202,photoAssetsAdded:sourceBatch4.photos.length,source:'data/historical-photo-import-batch4-20261123.json',method:'Commons: licencias verificadas y revisión visual de carrocería y generación'};
+result.historicalCommonsBatch420261123={withPhotoBefore:3202,withoutPhotoBefore:5192,newlyCovered:146,photoAssetsAdded:sourceBatch4.photos.length,source:'data/historical-photo-import-batch4-20261123.json',method:'Commons: licencias verificadas y revisión visual de carrocería y generación'};
+result.historicalCommonsBatch520261123={withPhotoBefore:3348,withoutPhotoBefore:5046,newlyCovered:ok-3348,photoAssetsAdded:sourceBatch5.photos.length,source:'data/historical-photo-import-batch5-20261123.json',method:'Commons: licencia y revision visual de generacion y carroceria'};
 fs.writeFileSync(path.join(root,'data/real-3cv-photo-coverage-20261123.json'),JSON.stringify(result,null,2)+'\n');
 console.log('ACTUAL_3CV',rows.length,'WITH_PHOTO',ok,'WITHOUT_PHOTO',rows.length-ok,'RATE',(100*ok/rows.length).toFixed(1)+'%');
 console.log('BAIC',Object.entries(perBrand).filter(([b])=>/^baic$|^beijing$/i.test(b)));

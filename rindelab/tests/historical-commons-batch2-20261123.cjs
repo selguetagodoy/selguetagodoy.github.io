@@ -9,8 +9,8 @@ assert.equal(source.photos.length,16);
 assert.equal(source.errors.length,0);
 assert.equal(source.imported,16);
 assert.equal(coverage.total,8394);
-assert.equal(coverage.withPhoto,3348);
-assert.equal(coverage.withoutPhoto,5046);
+assert.equal(coverage.withPhoto,3507);
+assert.equal(coverage.withoutPhoto,4887);
 assert.equal(coverage.withPhoto+coverage.withoutPhoto,coverage.total);
 assert.equal(coverage.historicalCommonsBatch220261123.newlyCovered,176);
 assert.equal(coverage.historicalCommonsBatch220261123.photoAssetsAdded,16);
@@ -32,7 +32,7 @@ for(const p of source.photos){
 const ctx={window:{},document:{addEventListener(){}},HTMLImageElement:class{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'v2-photos.js'),'utf8'),ctx);
 const photos=ctx.window.RindelabPhotos;
-assert.equal(photos.count,795,'Historical additions do not change the 668-file commercial library');
+assert.equal(photos.count,833,'Historical additions do not change the 668-file commercial library');
 const F={BRAND:0,MODEL:1,TECH:2,DATE:8};
 function find(brand,model,year){
  return photos.find([brand,model,'Bencina',null,null,null,null,null,year+'-05-01'],F);
@@ -65,7 +65,7 @@ for(const [b,m,y,needle] of forbidden){
  assert(!photo?.src.includes('rindelab-historical-batch2-'+needle),'Wrong body '+b+' '+m);
 }
 const page=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(page.includes('3.348 de 8.394 fichas'));
-assert(page.includes('5.046 fichas sin foto'));
-assert(page.includes('20261123-historical-commons4'));
-console.log('PASS 16 licensed Commons photos, +176 genuine 3CV associations (3.348/8.394), 5.046 pending, correct bodies, checksums');
+assert(page.includes('3.507 de 8.394 fichas'));
+assert(page.includes('4.887 fichas sin foto'));
+assert(page.includes('20261123-historical-commons5'));
+console.log('PASS 16 licensed Commons photos, +176 genuine 3CV associations (3.507/8.394), 4.887 pending, correct bodies, checksums');

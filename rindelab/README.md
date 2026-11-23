@@ -569,3 +569,7 @@ Tras un barrido de 74 familias/generaciones, se validaron 53 fuentes de Wikimedi
 ### Cuarto lote histórico (23/11/2026)
 
 18 imágenes de Wikimedia Commons, verificadas por licencia y revisadas visualmente; 146 nuevas fichas 3CV con foto referencial. Cobertura: **3.348/8.394 (39,9 %)**; pendientes: **5.046**. Manifiesto: data/historical-photo-import-batch4-20261123.json. Se descartaron 3 candidatos durante la verificación de fuente y 4 en revisión visual.
+
+### Quinto lote histórico (23/11/2026)
+
+38 fotos Commons con licencia comprobada y revisión visual; 159 nuevas fichas 3CV con imagen. Cobertura: **3.507/8.394 (41,8 %)**; pendientes: **4.887**. Se excluyeron seis candidatos en la revisión visual. Manifiesto: data/historical-photo-import-batch5-20261123.json.

@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const versionByPage={'index.html':'20261123-historical-commons4','cotizador.html':'20261122-photo700-r1','electromovilidad.html':'20261122-photo700-r1'};
+const versionByPage={'index.html':'20261123-historical-commons5','cotizador.html':'20261122-photo700-r1','electromovilidad.html':'20261122-photo700-r1'};
 for(const page of ['index.html','cotizador.html','electromovilidad.html']){
  const html=fs.readFileSync(path.join(root,page),'utf8');
  const matches=[...html.matchAll(/<script\b[^>]+src=["']([^"']*v2-photos\.js[^"']*)["'][^>]*>/g)];
