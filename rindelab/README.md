@@ -557,3 +557,7 @@ El [resumen por marca](./sii/avance-marcas-electromovilidad.csv) muestra, por se
 ### Actualización fotográfica histórica 3CV · 23/11/2026 (lote Commons)
 
 Se incorporaron **41 fotografías referenciales** de familias/generaciones históricas desde Wikimedia Commons, con fuente, autor y licencia trazables; 264 fichas adicionales recuperan fotografía tras controles de carrocería (sedán/Coupé, 3P/5P, Raptor, Cabriolet) y generación. La cobertura real de 3CV pasa de **2.425/8.394 (28,9 %)** a **2.689/8.394 (32,0 %)**; aún **5.705 fichas** carecen de foto. La biblioteca pasa de 668 a 709 archivos/referencias. No se modificaron registros de homologación, rendimientos ni precios. Auditoría: `data/historical-photo-import-20261123.json`, `data/real-3cv-photo-coverage-20261123.json`; regresión `tests/historical-commons-20261123.cjs`. Las fotografías no certifican la versión exacta homologada.
+
+### Segunda ampliación histórica de imágenes (23/11/2026)
+
+Se incorporan **16 imágenes adicionales de Wikimedia Commons**, verificadas por fuente, autor, licencia y tamaño, con reglas por generación y carrocería que permiten cubrir **176 fichas adicionales** del historial 3CV. La cobertura auditada pasa de 2.689/8.394 a **2.865/8.394 (34,1 %)**; quedan **5.529 fichas pendientes**. Las fotos son referenciales de modelo/generación y conservan atribución visible. La biblioteca comercial de 668 fotos se contabiliza por separado. Archivo de procedencia: data/historical-photo-import-batch2-20261123.json.

@@ -9,7 +9,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'v2-photos.js'),'utf8'),ctx);
 const photos=ctx.window.RindelabPhotos;
 assert.equal(audit.photos.length,41);
 assert.equal(audit.failures.length,0);
-assert.equal(photos.count,709);
+assert.equal(photos.count,725);
 for(const p of audit.photos){
  assert(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(p.source),'Source must be Commons: '+p.model);
  assert(/^(?:CC BY(?:-SA)?(?:\s|$)|CC0|Public domain)/.test(p.license),'Unlicensed photo: '+p.model);
@@ -38,7 +38,8 @@ const mustNotUseNew=[
 ];
 for(const [brand,model,year] of mustNotUseNew){
  const p=get(brand,model,year);
- assert(!p?.src.includes('rindelab-historical-'),'Wrong body attributed to '+brand+' '+model);
+ assert(!p?.src.includes('rindelab-historical-')||p.src.includes('rindelab-historical-batch2-'),
+   'Wrong body attributed to first historical batch '+brand+' '+model);
 }
 const positive=[
  ['Jaguar','XE 2.0i R-Dynamic SE','2023'],
@@ -54,14 +55,14 @@ for(const [brand,model,year,tech] of positive){
  assert(p?.src.includes('rindelab-historical-'),'Expected new licensed image: '+brand+' '+model);
 }
 assert.equal(coverage.total,8394);
-assert.equal(coverage.withPhoto,2689);
-assert.equal(coverage.withoutPhoto,5705);
+assert.equal(coverage.withPhoto,2865);
+assert.equal(coverage.withoutPhoto,5529);
 assert.equal(coverage.historicalCommons20261123.newlyCovered,264);
 assert.equal(coverage.historicalCommons20261123.photoAssetsAdded,41);
 assert.equal(coverage.generationReuse20261123.newlyCovered,299);
 assert.equal(coverage.byBrand.Baic.withPhoto,38);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(html.includes('2.689 de 8.394 fichas'));
-assert(html.includes('5.705 fichas sin foto'));
-assert(html.includes('20261123-historical-commons1'));
-console.log('PASS: 41 imágenes Commons descargadas y atribuidas, 264 fichas 3CV adicionales, 8 exclusiones de carrocería, BAIC 38/39 conservado; 2.689/8.394 con foto');
+assert(html.includes('2.865 de 8.394 fichas'));
+assert(html.includes('5.529 fichas sin foto'));
+assert(html.includes('20261123-historical-commons2'));
+console.log('PASS: 41 imágenes Commons descargadas y atribuidas, 264 fichas 3CV adicionales, 8 exclusiones de carrocería, BAIC 38/39 conservado; 2.865/8.394 con foto');
