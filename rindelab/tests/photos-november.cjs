@@ -44,6 +44,6 @@ const arizon=matches.filter(x=>x.row[0]==='Nissan'&&x.row[1].includes('Arizon'))
 assert(arizon.every(x=>!x.photo),'No sustituir Nissan Arizon por NX8');
 for(const name of ['index','cotizador','electromovilidad']){
  const html=fs.readFileSync(path.join(root,'rindelab',name+'.html'),'utf8');
- assert(/v2-photos\.js\?v=20261122-(?:licensed33|carimages|commonsmass|commonsmass2|photo700-r1)/.test(html));
+ assert(/v2-photos\.js\?v=(?:20261122-(?:licensed33|carimages|commonsmass|commonsmass2|photo700-r1)|20261123-baic-audit1)/.test(html));
 }
 console.log('PASS: 19 fotografías Wikimedia Commons con autor/licencia/hash. 51/69 fichas nuevas con foto, Kia PV5 Cargo 7/8, sin cruces de carrocería Nissan Arizon ni PV5 pickup.');
