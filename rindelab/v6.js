@@ -9,7 +9,8 @@ const techHuman={EV:'Eléctrico',HEV:'Híbrido',MHEV:'Híbrido suave',PHEV:'Híb
 function updateScenarioSummary(){
  const km=Number($('annualKm').value)||15000;
  const mode=$('chargeScenario').value,place=mode==='home'?'carga en casa':mode==='mixed'?'carga mixta (80/20 editable)':mode==='manual'?'tarifa manual':'carga pública';
- $('scenarioSummaryText').textContent='Calculado para '+fmt(km)+' km al año · '+place+' · precios editables';
+ $('scenarioSummaryText').textContent='Calculado para '+fmt(km)+' km al año · '+place+' · tarifas editables, no en tiempo real'+
+  ((mode==='public'||mode==='mixed')?' · carga pública consultada 18/10/2026':'');
 }
 const safe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
@@ -625,6 +626,63 @@ function drivingProfile(row){
  };
  field.addEventListener('input',update);field.addEventListener('change',update);
 }
+
+// Simulación explícita, NO homologación combinada: el rendimiento a combustión
+// se ingresa manualmente y no se infiere del valor ponderado PHEV del 3CV.
+function plugInCostPer100(sharePercent,electricKmPerKwh,combustionKmPerL,electricClpPerKwh,fuelClpPerL){
+ const pct=Number(sharePercent);
+ if(!Number.isFinite(pct)||pct<0||pct>100)return null;
+ const share=pct/100;
+ if(share>0&&(!Number.isFinite(electricKmPerKwh)||electricKmPerKwh<=0||
+                !Number.isFinite(electricClpPerKwh)||electricClpPerKwh<=0))return null;
+ if(share<1&&(!Number.isFinite(combustionKmPerL)||combustionKmPerL<=0||
+                !Number.isFinite(fuelClpPerL)||fuelClpPerL<=0))return null;
+ const electric=share?100*share/electricKmPerKwh*electricClpPerKwh:0;
+ const combustion=share<1?100*(1-share)/combustionKmPerL*fuelClpPerL:0;
+ return {total:electric+combustion,electric,combustion};
+}
+function plugInProfile(row){
+ if(!isPlugInTechnology(row[F.TECH]))return;
+ const section=document.createElement('section');
+ section.className='rinde-profile rinde-plug-in-profile';
+ const isDiesel=row[F.FUEL]==='Diésel';
+ const fuelLabel=isDiesel?'diésel':'bencina';
+ section.innerHTML='<h3>Simular tu uso eléctrico y a combustión</h3>'+
+ '<p class="note">Ejercicio opcional para híbridos enchufables y vehículos de rango extendido. Usa los km/kWh informados por 3CV para el tramo eléctrico, pero <strong>el rendimiento exclusivo a combustión lo ingresas tú</strong>. El rendimiento ponderado oficial no es equivalente al rendimiento solo a combustión. Esta estimación no modifica la ficha 3CV.</p>'+
+ '<div class="rinde-profile-fields">'+
+ '<label>Porcentaje de kilómetros recorridos en modo eléctrico: <output id="rindePlugInShareLabel" for="rindePlugInShare">70 %</output><input type="range" id="rindePlugInShare" min="0" max="100" step="5" value="70"></label>'+
+ '<label>Rendimiento exclusivamente con '+fuelLabel+' (km/L), supuesto del usuario <input type="number" id="rindePlugInFuel" min="0.1" max="100" step="0.1" inputmode="decimal" placeholder="Ej.: 12, dato ingresado por ti"></label>'+
+ '</div><p id="rindePlugInResult" role="status" aria-live="polite">Ingresa un rendimiento a combustión para estimar un perfil mixto.</p>';
+ $('detailContent').append(section);
+ const update=()=>{
+  const share=Number($('rindePlugInShare').value);
+  $('rindePlugInShareLabel').textContent=share+' %';
+  const raw=$('rindePlugInFuel').value;
+  const fuelEfficiency=raw===''?null:Number(raw);
+  const electricalEfficiency=number(row[F.EL]);
+  const electricityPrice=number($('electricPrice').value);
+  const fuelPrice=number($(isDiesel?'dieselPrice':'gasPrice').value);
+  const annualKm=number($('annualKm').value);
+  if((share<100&&(!Number.isFinite(fuelEfficiency)||fuelEfficiency<=0||fuelEfficiency>100))||
+     (share>0&&!electricalEfficiency)||!annualKm){
+   $('rindePlugInResult').textContent='Para estimar, ingresa el rendimiento real o supuesto exclusivamente a combustión (0,1–100 km/L) y verifica que la ficha tenga km/kWh eléctrico informado. No uses aquí el valor ponderado 3CV.';
+   return;
+  }
+  const outcome=plugInCostPer100(share,electricalEfficiency,fuelEfficiency,electricityPrice,fuelPrice);
+  if(!outcome){
+   $('rindePlugInResult').textContent='Falta una tarifa de combustible o electricidad válida para el reparto elegido.';
+   return;
+  }
+  const yearly=outcome.total*annualKm/100;
+  $('rindePlugInResult').textContent='Costo supuesto por 100 km: '+money(outcome.total)+
+   ' (electricidad '+money(outcome.electric)+' + '+fuelLabel+' '+money(outcome.combustion)+
+   '). A '+fmt(annualKm)+' km/año: '+money(yearly)+' anual y '+money(yearly*5)+' en 5 años, tarifas constantes. El reparto es de kilómetros, no de energía; no incluye pérdidas de carga ni otros gastos. No es rendimiento homologado.';
+ };
+ section.addEventListener('input',update);
+ section.addEventListener('change',update);
+ update();
+}
+
 function showDetail(i){
  const r=all[i];if(!r)return;
  $('detailTitle').textContent=r[F.BRAND]+' '+r[F.MODEL];
@@ -639,6 +697,7 @@ function showDetail(i){
   ['Combustible',r[F.FUEL]],['Carrocería',r[F.BODY]],['Tracción',r[F.DRIVE]],
   ['Transmisión',r[F.TRANS]],['Cilindrada',r[F.ENGINE]],
   ['Ciclo de homologación',r[F.CYCLE]],['Fecha de homologación',r[F.DATE]],
+  ['Año de modelo/fabricación acreditado en esta ficha 3CV','No informado; no inferirlo de la fecha de homologación ni de la fotografía'],
   ['Código 3CV',r[F.CODE]],
   ...(isPlugInTechnology(r[F.TECH])?
    [['Rendimiento eléctrico informado (km/kWh)',number(r[F.EL])?fixed(r[F.EL]):'N/D'],
@@ -701,6 +760,7 @@ function showDetail(i){
 }
  else if(emission!==null){const p=document.createElement('p');p.className='note';p.textContent='CO₂ directo: '+emission.toLocaleString('es-CL',{maximumFractionDigits:3})+' t/año según g/km 3CV y '+fmt(Number($('annualKm').value))+' km/año. No incluye emisiones del ciclo de vida.';$('detailContent').append(p);}
  drivingProfile(r);
+ plugInProfile(r);
  if(reviewedEnergyCodes.has(r[F.CODE])){const note=document.createElement('p');note.className='energy-quality-note';note.textContent='Advertencia de calidad: esta homologación NEDC registra 10,6 km/kWh, mientras otra homologación NEDC de esta familia (2023) registra 6,3 km/kWh. No se reemplaza el dato oficial ni se afirma que sea un error; requiere cotejar el expediente 3CV y no es comparable con WLTP.';$('detailContent').append(note);}
  $('detailDialog').showModal();
  if(window.RindelabSII)window.RindelabSII.show(r,family(r));
