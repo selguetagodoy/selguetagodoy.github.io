@@ -979,7 +979,8 @@ await test('JAC, Baic, Nammi, MG, Suzuki y Changan: fichas electrificadas por ma
 });
 await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar ciclos ni motorizaciones',async()=>{
  const entries=await page.evaluate(async()=>fetch('./sii/commercial-2026.json?v=20261019-list347').then(r=>r.json()));
- const fresh=entries.filter(x=>x.checkedAt==='2026-10-18'&&['Great Wall','BYD','Changan'].includes(x.brand));
+ const fresh=entries.filter(x=>['Great Wall','BYD','Changan'].includes(x.brand)&&
+  (x.checkedAt==='2026-10-18'||(x.brand==='BYD'&&x.family==='Yuan Pro DM-i'&&x.checkedAt==='2026-11-22')));
  assert.equal(fresh.length,9);
  assert.deepEqual(fresh.reduce((o,x)=>(o[x.brand]=(o[x.brand]||0)+1,o),{}),{'Great Wall':2,'BYD':3,'Changan':4});
  const lookup=(brand,version)=>fresh.find(x=>x.brand===brand&&x.version===version);
@@ -992,7 +993,7 @@ await test('BYD, Great Wall y Changan: nueve precios oficiales sin equiparar cic
  assert.equal(lookup('Changan','S05 EV').priceListClp,30990000);
  assert.equal(lookup('Changan','CS35 Plus Luxury AT').priceListClp,17590000);
  assert.equal(lookup('Changan','CS35 Plus Elite AT').priceListClp,18890000);
- assert(fresh.every(p=>p.modelYear===null&&p.currency==='CLP'&&/Precio|precio/.test(p.priceBasis)));
+ assert(fresh.every(p=>p.modelYear===null&&p.currency==='CLP'&&/Precio|precio|Lista|lista/.test(p.priceBasis)));
  assert.equal(fresh.filter(x=>x.family==='Yuan Pro DM-i').length,2);
  assert(!fresh.some(x=>x.family==='Yuan Pro'), 'No mezclar enchufable con BEV');
  const mappings=await page.evaluate(()=>{
@@ -2235,7 +2236,7 @@ await test('Buscador expone precio por familia comercial sin equiparar códigos 
  await p.fill('#query','Corolla Cross');await p.click('#searchButton');
  const prices=p.locator('.rinde-commercial');
  assert(await prices.count()>0);
- assert.match(await prices.first().textContent(),/Precio publicado.*misma tecnología.*versión sin verificar|motorización de fuente no informada/i);
+ assert.match(await prices.first().textContent(),/Precio (?:publicado|de familia).*misma tecnología.*versión sin verificar|motorización de fuente no informada/i);
  assert.match(await prices.first().locator('a').getAttribute('href'),/cotizador\.html/);
  assert.deepEqual(issues,[]);
  await p.close();
