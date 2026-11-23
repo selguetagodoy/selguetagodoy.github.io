@@ -1,0 +1,30 @@
+name: RINDELAB open photo fetcher tests
+on:
+  push:
+    paths:
+      - 'scripts/rindelab-open-photos.py'
+      - 'scripts/rindelab-open-photos-requirements.txt'
+      - 'scripts/tests/test_rindelab_open_photos.py'
+      - '.github/workflows/rindelab-open-photos-tests.yml'
+  pull_request:
+    paths:
+      - 'scripts/rindelab-open-photos.py'
+      - 'scripts/rindelab-open-photos-requirements.txt'
+      - 'scripts/tests/test_rindelab_open_photos.py'
+      - '.github/workflows/rindelab-open-photos-tests.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/rindelab-open-photos-requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r scripts/rindelab-open-photos-requirements.txt
+      - name: Compile photo fetcher
+        run: python -m py_compile scripts/rindelab-open-photos.py
+      - name: Validate matching, license restrictions and audit
+        run: python scripts/tests/test_rindelab_open_photos.py -v
