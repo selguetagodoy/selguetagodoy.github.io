@@ -31,6 +31,13 @@ function rebuild(){
  // variante homologada ni un importe editable del cotizador. No duplicar
  // familias con la misma identidad comercial documentada.
  for(const p of dealerListings){
+  // Una publicación sin motorización acreditada no debe crear otra ficha de
+  // la misma familia si ya existe una referencia comercial documentada.
+  // Se evita el duplicado sin inferir que esa publicación use PHEV, EV u otra tecnología.
+  const exactFamily=C.key(p.brand,p.family);
+  const duplicateUnclassified=!p.technology&&[...map.values()].some(items=>
+   items.some(r=>!r.dealerObserved&&C.key(r.brand,r.family)===exactFamily));
+  if(duplicateUnclassified)continue;
   const k=keyOf(p);
   if(!map.has(k))map.set(k,[]);
   if(!map.get(k).some(r=>!r.dealerObserved))map.get(k).push(p);
