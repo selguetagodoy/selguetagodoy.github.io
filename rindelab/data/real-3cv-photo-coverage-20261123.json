@@ -4,13 +4,13 @@
   "october": 272,
   "november": 69,
   "total": 8394,
-  "withPhoto": 2865,
-  "withoutPhoto": 5529,
+  "withPhoto": 3202,
+  "withoutPhoto": 5192,
   "byBrand": {
     "Kia": {
       "total": 304,
-      "withPhoto": 134,
-      "missing": 170
+      "withPhoto": 158,
+      "missing": 146
     },
     "Citroen": {
       "total": 184,
@@ -29,8 +29,8 @@
     },
     "Porsche": {
       "total": 311,
-      "withPhoto": 214,
-      "missing": 97
+      "withPhoto": 220,
+      "missing": 91
     },
     "KGM": {
       "total": 164,
@@ -39,8 +39,8 @@
     },
     "Peugeot": {
       "total": 249,
-      "withPhoto": 80,
-      "missing": 169
+      "withPhoto": 96,
+      "missing": 153
     },
     "Honda": {
       "total": 120,
@@ -79,8 +79,8 @@
     },
     "Toyota": {
       "total": 186,
-      "withPhoto": 71,
-      "missing": 115
+      "withPhoto": 79,
+      "missing": 107
     },
     "Fiat": {
       "total": 127,
@@ -89,8 +89,8 @@
     },
     "Hyundai": {
       "total": 306,
-      "withPhoto": 105,
-      "missing": 201
+      "withPhoto": 134,
+      "missing": 172
     },
     "Tesla": {
       "total": 21,
@@ -124,13 +124,13 @@
     },
     "Volvo": {
       "total": 176,
-      "withPhoto": 56,
-      "missing": 120
+      "withPhoto": 68,
+      "missing": 108
     },
     "Mercedes-Benz": {
       "total": 575,
-      "withPhoto": 130,
-      "missing": 445
+      "withPhoto": 190,
+      "missing": 385
     },
     "Land Rover": {
       "total": 533,
@@ -154,18 +154,18 @@
     },
     "BMW": {
       "total": 464,
-      "withPhoto": 134,
-      "missing": 330
+      "withPhoto": 192,
+      "missing": 272
     },
     "Nissan": {
       "total": 169,
-      "withPhoto": 47,
-      "missing": 122
+      "withPhoto": 73,
+      "missing": 96
     },
     "Suzuki": {
       "total": 163,
-      "withPhoto": 32,
-      "missing": 131
+      "withPhoto": 56,
+      "missing": 107
     },
     "Jac": {
       "total": 123,
@@ -174,8 +174,8 @@
     },
     "Audi": {
       "total": 288,
-      "withPhoto": 69,
-      "missing": 219
+      "withPhoto": 87,
+      "missing": 201
     },
     "BYD": {
       "total": 45,
@@ -214,8 +214,8 @@
     },
     "Ford": {
       "total": 251,
-      "withPhoto": 114,
-      "missing": 137
+      "withPhoto": 132,
+      "missing": 119
     },
     "Great Wall": {
       "total": 131,
@@ -229,8 +229,8 @@
     },
     "Mini": {
       "total": 148,
-      "withPhoto": 30,
-      "missing": 118
+      "withPhoto": 42,
+      "missing": 106
     },
     "Jaecoo": {
       "total": 13,
@@ -254,8 +254,8 @@
     },
     "Volkswagen": {
       "total": 165,
-      "withPhoto": 31,
-      "missing": 134
+      "withPhoto": 42,
+      "missing": 123
     },
     "Bentley": {
       "total": 19,
@@ -264,8 +264,8 @@
     },
     "Chevrolet": {
       "total": 219,
-      "withPhoto": 39,
-      "missing": 180
+      "withPhoto": 54,
+      "missing": 165
     },
     "Riddara": {
       "total": 6,
@@ -608,112 +608,72 @@
       "Mercedes-Benz",
       {
         "total": 575,
-        "withPhoto": 130,
-        "missing": 445
+        "withPhoto": 190,
+        "missing": 385
       }
     ],
     [
       "BMW",
       {
         "total": 464,
-        "withPhoto": 134,
-        "missing": 330
+        "withPhoto": 192,
+        "missing": 272
       }
     ],
     [
       "Audi",
       {
         "total": 288,
-        "withPhoto": 69,
-        "missing": 219
+        "withPhoto": 87,
+        "missing": 201
       }
     ],
     [
       "Hyundai",
       {
         "total": 306,
-        "withPhoto": 105,
-        "missing": 201
+        "withPhoto": 134,
+        "missing": 172
       }
     ],
     [
       "Chevrolet",
       {
         "total": 219,
-        "withPhoto": 39,
-        "missing": 180
-      }
-    ],
-    [
-      "Kia",
-      {
-        "total": 304,
-        "withPhoto": 134,
-        "missing": 170
+        "withPhoto": 54,
+        "missing": 165
       }
     ],
     [
       "Peugeot",
       {
         "total": 249,
-        "withPhoto": 80,
-        "missing": 169
+        "withPhoto": 96,
+        "missing": 153
       }
     ],
     [
-      "Ford",
+      "Kia",
       {
-        "total": 251,
-        "withPhoto": 114,
-        "missing": 137
+        "total": 304,
+        "withPhoto": 158,
+        "missing": 146
       }
     ],
     [
       "Volkswagen",
       {
         "total": 165,
-        "withPhoto": 31,
-        "missing": 134
+        "withPhoto": 42,
+        "missing": 123
       }
     ],
     [
-      "Suzuki",
+      "Ford",
       {
-        "total": 163,
-        "withPhoto": 32,
-        "missing": 131
-      }
-    ],
-    [
-      "Nissan",
-      {
-        "total": 169,
-        "withPhoto": 47,
-        "missing": 122
-      }
-    ],
-    [
-      "Volvo",
-      {
-        "total": 176,
-        "withPhoto": 56,
-        "missing": 120
-      }
-    ],
-    [
-      "Mini",
-      {
-        "total": 148,
-        "withPhoto": 30,
-        "missing": 118
-      }
-    ],
-    [
-      "Toyota",
-      {
-        "total": 186,
-        "withPhoto": 71,
-        "missing": 115
+        "total": 251,
+        "withPhoto": 132,
+        "missing": 119
       }
     ],
     [
@@ -733,6 +693,38 @@
       }
     ],
     [
+      "Volvo",
+      {
+        "total": 176,
+        "withPhoto": 68,
+        "missing": 108
+      }
+    ],
+    [
+      "Toyota",
+      {
+        "total": 186,
+        "withPhoto": 79,
+        "missing": 107
+      }
+    ],
+    [
+      "Suzuki",
+      {
+        "total": 163,
+        "withPhoto": 56,
+        "missing": 107
+      }
+    ],
+    [
+      "Mini",
+      {
+        "total": 148,
+        "withPhoto": 42,
+        "missing": 106
+      }
+    ],
+    [
       "Skoda",
       {
         "total": 110,
@@ -749,11 +741,11 @@
       }
     ],
     [
-      "Porsche",
+      "Nissan",
       {
-        "total": 311,
-        "withPhoto": 214,
-        "missing": 97
+        "total": 169,
+        "withPhoto": 73,
+        "missing": 96
       }
     ],
     [
@@ -778,6 +770,14 @@
         "total": 151,
         "withPhoto": 59,
         "missing": 92
+      }
+    ],
+    [
+      "Porsche",
+      {
+        "total": 311,
+        "withPhoto": 220,
+        "missing": 91
       }
     ],
     [
@@ -830,5 +830,13 @@
     "photoAssetsAdded": 16,
     "source": "data/historical-photo-import-batch2-20261123.json",
     "method": "Fotografías CC verificadas en Commons con 16 reglas por familia y carrocería; exclusiones explícitas de Cabrio y RS; asociación referencial 3CV"
+  },
+  "historicalCommonsBatch320261123": {
+    "withPhotoBefore": 2865,
+    "withoutPhotoBefore": 5529,
+    "newlyCovered": 337,
+    "photoAssetsAdded": 52,
+    "source": "data/historical-photo-import-batch3-20261123.json",
+    "method": "52 imágenes Wikimedia Commons CC con revisión visual manual y filtros de generación/carrocería; imágenes referenciales, no versiones exactas."
   }
 }
