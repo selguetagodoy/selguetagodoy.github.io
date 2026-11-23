@@ -34,3 +34,20 @@
 .market-share input{flex:1;min-width:180px}
 @media(max-width:760px){.market-grid{grid-template-columns:1fr}.market-head .field{width:100%}.market-card{grid-template-columns:124px minmax(0,1fr)}.market-price{font-size:18px}.market-tray{left:7px;right:7px;max-width:none;bottom:7px}.market-tray strong{flex:1}.market-modal .modal-head{align-items:start}.market-compare-table th,.market-compare-table td{min-width:154px}}
 @media(max-width:350px){.market-card{grid-template-columns:110px minmax(0,1fr);gap:9px;padding:10px}.market-card-actions .button{font-size:10.5px}}
+
+
+/* QA comprador móvil · 23/11/2026: 908 px en modal de 352 px ocultaba precios. */
+.market-compare-mobile,.market-mobile-hint{display:none}
+@media(max-width:760px){
+ .market-table-scroll{display:none}
+ .market-compare-mobile{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+ .market-mobile-hint{display:block;font-size:13px;line-height:1.5;color:#31546b;margin:10px 0}
+ .market-compare-mobile-card{border:1px solid #cbdde6;border-radius:12px;background:#fff;padding:14px;min-width:0}
+ .market-compare-mobile-card h3{font-size:17px;line-height:1.35;color:#103c55;margin:0 0 3px;overflow-wrap:anywhere}
+ .market-compare-mobile-card>small{display:block;color:#536b7b;margin-bottom:10px}
+ .market-compare-mobile-card dl{margin:0}
+ .market-compare-mobile-card dl>div{padding:8px 0;border-top:1px solid #e3ebef}
+ .market-compare-mobile-card dt{font-size:12px;color:#587082;font-weight:650}
+ .market-compare-mobile-card dd{font-size:14px;color:#19384a;font-weight:700;margin:3px 0 0;overflow-wrap:anywhere}
+ .market-compare-mobile-card>a{display:inline-flex;align-items:center;min-height:44px;margin-top:9px;font-size:13px;overflow-wrap:anywhere}
+}
