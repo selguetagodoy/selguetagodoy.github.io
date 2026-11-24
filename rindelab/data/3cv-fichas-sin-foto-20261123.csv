@@ -109,8 +109,6 @@ Foton,View Grand 9,2025,,,Diésel
 Foton,View Grand 3,2025,,,Diésel
 Foton,View Grand 3LF,2025,,,Diésel
 Suzuki,Across 1.5 ISG AT 2WD,2025,,,MHEV
-Gac,GS4 MAX 1.5T AT GL,2025,,,Bencina
-Gac,GS4 MAX 1.5T AT GB,2025,,,Bencina
 Omoda,Omoda E5 EV,2025,,,EV
 Porsche,718 Cayman GTS 4.0,2025,,,Bencina
 Riddara,RD6 Pick Up PHEV,2025,,,PHEV
@@ -178,7 +176,6 @@ BMW,M135 xDrive,2025,,,Bencina
 Changan,New CS15 1.5 DCT,2025,,,Bencina
 BMW,430i coupé,2025,,,Bencina
 RAM,Rampage Big Horn 2.2L,2025,,,Diésel
-RAM,Rampage Laramie 2.2L,2025,,,Diésel
 MG,MG GT 1.5L CVT,2025,,,Bencina
 Toyota,Yaris Cross 1.5 HEV,2025,,,HEV
 Volkswagen,Nivus 1.0T AT,2025,,,Bencina
@@ -672,10 +669,6 @@ Mercedes-Benz,V300d- 8 Asientos,2023,,,Diésel
 Mercedes-Benz,V300d 4Matic- 8 Asientos,2023,,,Diésel
 Mercedes-Benz,Vito 119 4x4,2023,,,Diésel
 Mercedes-Benz,Vito 119,2023,,,Diésel
-Mercedes-Benz,Vito 119 Tourer,2023,,,Diésel
-Mercedes-Benz,Vito 119 Tourer 4x4,2023,,,Diésel
-Mercedes-Benz,Vito 124 Tourer,2023,,,Diésel
-Mercedes-Benz,Vito 124 Tourer 4x4,2023,,,Diésel
 Mercedes-Benz,V250d - 6 Asientos,2023,,,Diésel
 Mercedes-Benz,V250d 4Matic - 6 Asientos,2023,,,Diésel
 Mercedes-Benz,V250d - 7 Asientos,2023,,,Diésel
@@ -778,8 +771,6 @@ Mercedes-Benz,Vito 114,2023,,,Diésel
 Mercedes-Benz,V220D 8 asientos,2023,,,Diésel
 Mercedes-Benz,V220d 7 asientos,2023,,,Diésel
 Mercedes-Benz,V220d 6 asientos,2023,,,Diésel
-Mercedes-Benz,Vito 116 Tourer 10 asientos,2023,,,Diésel
-Mercedes-Benz,Vito 116 Tourer 8 asientos,2023,,,Diésel
 Mercedes-Benz,Vito 114 Furgon,2023,,,Diésel
 Mercedes-Benz,Vito 116 Furgon,2023,,,Diésel
 Lexus,LS500h,2023,,,HEV
@@ -952,9 +943,6 @@ DFSK,Cargo Van C35 1.5,2023,,,Bencina
 DFSK,Truck DC C32 1.5,2023,,,Bencina
 DFSK,Truck CS C31 1.5,2023,,,Bencina
 Dongfeng,T5L 1.8T,2023,,,Bencina
-Suzuki,Swift 1.2 L. MT 2WD,2023,,,Bencina
-Suzuki,Swift 1.2 AMT 2WD,2023,,,Bencina
-Suzuki,Swift 1.2 MT 2WD,2023,,,Bencina
 Honda,ZR-V Touring,2023,,,Bencina
 Honda,ZR-V EXL,2023,,,Bencina
 Honda,ZR-V LX,2023,,,Bencina
@@ -977,11 +965,9 @@ Honda,City EXL,2023,,,Bencina
 MG,MG6 1.5T MT,2023,,,Bencina
 BYD,Qin Plus DM-i,2023,,,PHEV
 Zxauto,Grand Terralord 4x4,2023,,,Diésel
-Suzuki,Swift ISG 1.2 Hibrido MT,2023,,,MHEV
 Aston Martin,Aston Martin DBX707,2023,,,Bencina
 KYC,T3 1.6 Cargo Box,2023,,,Bencina
 KYC,T3 1.6 D/C Pick up,2023,,,Bencina
-Suzuki,Swift 1.2 L CVT 2WD,2023,,,Bencina
 BMW,330i Touring,2023,,,Bencina
 KYC,X5 1.5 Cargo Box,2023,,,Bencina
 KYC,X5 1.5 Pick up S/C,2023,,,Bencina
@@ -1128,7 +1114,6 @@ Foton,MIDI CARGOBOX,2022,,,Bencina
 Foton,MIDI REFRIGERADO,2022,,,Bencina
 Foton,MIDI WINGS,2022,,,Bencina
 Mercedes-Benz,Vito 116,2022,,,Diésel
-Mercedes-Benz,Vito 116 Tourer,2022,,,Diésel
 Skoda,Kamiq 1.0 TSI AT,2022,,,Bencina
 Skoda,Scala 1.0 TSI AT,2022,,,Bencina
 Brilliance,T50 1.5 Cargo box MT,2022,,,Bencina
@@ -1193,7 +1178,6 @@ Gac,GS3 Power,2022,,,Bencina
 Gac,GS3 Power AT,2022,,,Bencina
 Gac,GS3 Power MT,2022,,,Bencina
 Gac,GS3 Power MT GS,2022,,,Bencina
-Mercedes-Benz,Vito 111 CDI Tourer Minibus 10 asientos,2022,,,Diésel
 BMW,iX3 M Station Wagon,2022,,,EV
 Chevrolet,Bolt EUV,2022,,,EV
 Ford,Mustang GT Convertible,2022,,,Bencina
@@ -1395,7 +1379,6 @@ Jaguar,E-Pace 2.0iD S,2021,,,Diésel
 Mini,Clubman JCW ALL4,2021,,,Bencina
 Mercedes-Benz,E 220d Sedán,2021,,,Diésel
 Mercedes-Benz,E 220d 4Matic All Terrain,2021,,,Diésel
-Suzuki,Swift ISG Hybrid,2021,,,MHEV
 DS,DS3 Crossback Electrico,2021,,,EV
 Mini,Cooper 5P,2021,,,Bencina
 Mini,Cooper 3P,2021,,,Bencina
@@ -1562,10 +1545,6 @@ Gac,"GS3 1,5 AT",2020,,,Bencina
 Kia,Stinger GT 3.3 8AT T-GDI AWD,2020,,,Bencina
 Kia,Stinger GT 3.3 8AT T-GDI 2WD,2020,,,Bencina
 Uaz,Kazak MT,2020,,,Bencina
-Honda,City EX Sedán 1.5 Lts. 4P. CVT,2020,,,Bencina
-Honda,City LX Sedán 1.5 Lts. 4P. CVT,2020,,,Bencina
-Honda,City LX Sedán 1.5 Lts. 4P. TM,2020,,,Bencina
-Honda,City EX Sedán 1.5 Lts. 4P. TM,2020,,,Bencina
 Renault,Megane RS 1.8 T/A,2020,,,Bencina
 Renault,Express 1.5 T/M,2020,,,Diésel
 Volkswagen,Nivus 1.0L TSI AT,2020,,,Bencina
@@ -2476,7 +2455,6 @@ RAM,"RAM 1200 GLS 2,4 Lts. Camioneta 4P. T/M 4x2 Diésel",2017,,,Diésel
 Citroen,"Spacetourer L3 2,0 Lts. 150 HP Minibus 8 Pasajeros 3P. T/M Diésel",2017,,,Diésel
 Citroen,"Spacetourer Business 2,0 Lts. HDI 150 HP Minibus 9 Pasajeros 4P. T/M Diésel",2017,,,Diésel
 Volvo,"S90 T5 2,0 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
-Skoda,"Fabia 1,0 Lts. Hatchback 5P. T/M Otto",2017,,,Bencina
 Skoda,"Fabia 1,0 Lts. Station Wagon 5P. T/M Otto",2017,,,Bencina
 BMW,"740e iPerformance 2,0 Lts. Sedán 4P. T/A Híbrido",2017,,,PHEV
 BMW,"740le iPerformance 2,0 Lts. Sedán 4P. T/A Híbrido",2017,,,PHEV
@@ -2542,7 +2520,6 @@ Porsche,"911 GT3 4,0 Lts. Coupé 2P. T/A Otto",2017,,,Bencina
 Skoda,"Rapid 1,0 Lts. Hatchback 5P. T/M Otto",2017,,,Bencina
 Skoda,"Rapid 1,0 Lts. Sedán 5P. T/M Otto",2017,,,Bencina
 Chevrolet,"Cavalier 1,5 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
-Skoda,"Fabia 1,0 Lts. Hatchback 5P. T/A Otto",2017,,,Bencina
 Skoda,"Fabia 1,0 Lts. Station Wagon 5P. T/A Otto",2017,,,Bencina
 Hyundai,"HD35 SWB 2,5 Lts. Camioneta 2P. T/M Diésel",2017,,,Diésel
 Peugeot,"208 Pure Tech 110 HP 1,2 Lts. Hatchback 5P. T/A Otto",2017,,,Bencina
@@ -2567,7 +2544,6 @@ Porsche,"911 Carrera 4 GTS 3,0 Lts. Cabriolet 2P. T/A Otto",2017,,,Bencina
 Porsche,"911 Targa 4 GTS 3,0 Lts. Cabriolet 2P. T/A Otto",2017,,,Bencina
 Skoda,"Octavia RS 2,0 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
 Skoda,"Octavia RS 2,0 Lts. Station Wagon 5P. T/A Otto",2017,,,Bencina
-Skoda,"Fabia 1,0 Lts. Hatchback 5P. T/M Otto",2017,,,Bencina
 Skoda,"Fabia 1,0 Lts. Station Wagon 5P. T/M Otto",2017,,,Bencina
 Volkswagen,"Tiguan 1,4 Lts. Station Wagon 7 asientos 5P. T/A Otto",2017,,,Bencina
 KGM,"New Rexton 2,2 Lts. Station Wagon 7 Asientos 5P. T/A 4x2 Diésel",2017,,,Diésel
@@ -2584,8 +2560,6 @@ McLaren,"720S 4,0 Lts. Coupé 2P. T/A Otto",2017,,,Bencina
 Fiat,"Argo 1,3 Lts. Hatchback 5P. T/M Otto",2017,,,Bencina
 Fiat,"Cronos 1,3 Lts. Sedán 4P. T/M Otto",2017,,,Bencina
 Hyundai,"i30 PD PE 1,6 Lts. Hatchback 5P. T/A Otto",2017,,,Bencina
-ZNA Dongfeng,"Rich 2,5 Lts. Camioneta Doble Cabina 4P. T/M 4x4 Diésel",2017,,,Diésel
-ZNA Dongfeng,"Rich 2,5 Lts. Camioneta Doble Cabina 4P. T/M 4x2 Diésel",2017,,,Diésel
 Hyundai,"H350 2,5 Lts. Minibus 16 Asientos 5P. T/M Diésel",2017,,,Diésel
 Hyundai,"H350 2,5 Lts. Minibus 17 Asientos (2 Asientos Delanteros) 5P. T/M Diésel",2017,,,Diésel
 Hyundai,"H350 2,5 Lts. Minibus 17 Asientos (3 Asientos Delanteros) 5P. T/M Diésel",2017,,,Diésel
@@ -2653,14 +2627,12 @@ Dongfeng,"AX3 1,6 Lts. Hatchback 5P. T/M Otto",2017,,,Bencina
 Lada,"Kalina Cross AT 1,6 Lts. Station Wagon 5P. T/A Otto",2017,,,Bencina
 Mercedes-Benz,"GLA 250 4Matic 2,0 Lts. Hatchback 5P. T/A 4x4 Otto",2017,,,Bencina
 Mercedes-Benz,"GLA 200 1,6 Lts. Hatchback 5P. T/A Otto",2017,,,Bencina
-Kia,"Rio 4 (SC) 1,6 Lts. Sedán 4P. T/M Otto",2017,,,Bencina
 Kia,"Rio 3 (SC) 1,6 Lts. Hatchback 3P. T/M Otto",2017,,,Bencina
 Mercedes-Benz,"E 200 2,0 Lts. Coupé 2P. T/A Otto",2017,,,Bencina
 Land Rover,"New Discovery TDV6 3,0 Lts. Station Wagon 5P. T/A 4x4 Diésel",2017,,,Diésel
 Hyundai,"Grand i10 BA PE 1,2 Lts. Sedán 4P. T/M Otto",2017,,,Bencina
 Hyundai,"i30 PD PE CRDI 1,6 Lts. Hatchback 5P. T/M Diésel",2017,,,Diésel
 Citroen,"C-Elysée VTI 1,2 Lts. Sedán 4P. T/M Otto",2017,,,Bencina
-Kia,"Rio 4 (SC) 1,6 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
 Kia,"Rio 3 (SC) 1,6 Lts. Hatchback 3P. T/A Otto",2017,,,Bencina
 BMW,"530i 2,0 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
 Hyundai,"Azera IG GDI 3,0 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
@@ -2695,7 +2667,6 @@ Lada,"Kalina Cross 1,6 Lts. Station Wagon 5P. T/M Otto",2017,,,Bencina
 Lada,"Kalina Luxe 1,6 Lts. Station Wagon 5P. T/M Otto",2017,,,Bencina
 Mini,"F60 Countryman Cooper 1,5 Lts. Station Wagon 5P. T/A Otto",2017,,,Bencina
 Brilliance,"T32 (SY1020LC4AP) 1,3 Lts. Camioneta Doble Cabina 4P. T/M Otto",2017,,,Bencina
-Kia,"Rio 4 (SC) 1,4 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
 Kia,"Rio 3 (SC) 1,4 Lts. Hatchback 3P. T/A Otto",2017,,,Bencina
 Mini,"F60 Countryman Cooper S 2,0 Lts. Station Wagon 5P. T/A Otto",2017,,,Bencina
 Borgward,"BX7 2,0 Lts. Station Wagon 5P. 5 pasajeros T/A Otto",2017,,,Bencina
@@ -2705,7 +2676,6 @@ Hyundai,"i30 PD PE 2,0 Lts. GDI Hatchback 5P. T/A Otto",2017,,,Bencina
 Changan,"CS35 1,6 Lts. Station Wagon 5P. T/A Otto",2017,,,Bencina
 Citroen,"Jumper III Largo H2 2,2 Lts. Furgón 4P. T/M Diésel",2017,,,Diésel
 Citroen,"Jumper III Largo L4H2 2,2 Lts. Furgón 4P. T/M Diésel",2017,,,Diésel
-Kia,"Rio 4 (SC) 1,4 Lts. Sedán 4P. T/M Otto",2017,,,Bencina
 Kia,"Rio 3 (SC) 1,4 Lts. Hatchback 3P. T/M Otto",2017,,,Bencina
 Land Rover,"New Discovery S/C 3,0 Lts. Station Wagon 5P. T/A Otto",2017,,,Bencina
 Hyundai,"i30 PD PE 1,6 Lts. Hatchback 5P. T/M Otto",2017,,,Bencina
@@ -2719,7 +2689,6 @@ Mini,"F57 Cooper 1,5 Lts. Cabriolet 2P. T/M Otto",2017,,,Bencina
 Hyundai,"Grand i10 BA PE 1,2 Lts. Hatchback 5P. T/A Otto",2017,,,Bencina
 Renault,"Alaskan 2,3 Lts. Pick Up Doble Cabina 4P. T/M 4x4 Diésel",2017,,,Diésel
 Renault,"Alaskan 2,3 Lts. Pick Up Doble Cabina 4P. T/M 4x2 Diésel",2017,,,Diésel
-Suzuki,"New Swift DIT 1,0 Lts. Hatchback 5P. T/M Otto",2017,,,Bencina
 Skoda,"SuperB 2,0 Lts. Sedán 4P. T/A Diésel",2017,,,Diésel
 Skoda,"SuperB 2,0 Lts. Station Wagon 5P. T/A Diésel",2017,,,Diésel
 MG,"MG 360 1,5 Lts. Sedán 4P. T/A Otto",2017,,,Bencina
@@ -2963,8 +2932,6 @@ Chevrolet,"Prisma 1,4 Lts. Sedán 4P. T/A",2016,,,Bencina
 Chevrolet,"Onix 1,4 Lts. Hatchback 5P. T/A",2016,,,Bencina
 Fiat,"Doblo Maxi Cargo Largo 1,3 Lts. Multijet 90CV Furgón 5P. T/M",2016,,,Diésel
 Fiat,"Doblo Maxi Cargo Corto 1,3 Lts. Multijet 90CV Furgón 5P. T/M",2016,,,Diésel
-KGM,"XLV 1,6 Lts. Station Wagon 5P. 4x2 T/M",2016,,,Diésel
-KGM,"XLV 1,6 Lts. Station Wagon 5P. 4x4 T/M",2016,,,Diésel
 BMW,"430i 2,0 Lts. Coupé 2P. T/A",2016,,,Bencina
 BMW,"430i 2,0 Lts. Cabriolet 2P. T/A",2016,,,Bencina
 Honda,"Civic EXTL 2Door 1,5 Lt. Coupé T/A",2016,,,Bencina
@@ -2983,15 +2950,10 @@ Foton,"K1 2,0 Lts. Minibus 15 asientos 3P. T/M",2016,,,Bencina
 Opel,"Astra K 1,6 Lts. Turbo MT HB5 Hatchback 5P. T/M",2016,,,Bencina
 Foton,"Midi Cargo 1,2 Lts. Furgón 5P. T/M",2016,,,Bencina
 Foton,"Midi Cargo L 1,2 Lts. Furgón 5P. T/M",2016,,,Bencina
-KGM,"XLV 1,6 Lts. Station Wagon 4P. T/M",2016,,,Bencina
 BMW,"440i 3,0 Lts. Coupé 2P. T/A",2016,,,Bencina
 BMW,"440i 3,0 Lts. Cabriolet 2P. T/A",2016,,,Bencina
 BMW,"420i 2,0 Lts. Coupé 2P. T/A",2016,,,Bencina
 BMW,"420i 2,0 Lts. Cabriolet 2P. T/A",2016,,,Bencina
-KGM,"XLV 1,6 Lts. Station Wagon 5P. 4x2 T/A",2016,,,Bencina
-KGM,"XLV 1,6 Lts. Station Wagon 5P. 4x4 T/A",2016,,,Bencina
-KGM,"XLV 1,6 Lts. Station Wagon 5P. 4x2 T/A",2016,,,Diésel
-KGM,"XLV 1,6 Lts. Station Wagon 5P. 4x4 T/A",2016,,,Diésel
 Kia,"Cadenza YG 3,3 Lts. AT GDI Sedán 4P. T/A",2016,,,Bencina
 Mitsubishi,"Lancer 1,8 Lts. Sedán 4P. T/A",2016,,,Bencina
 Skoda,"Yeti 2,0 Lts. Station Wagon 5P. 4x4 T/A",2016,,,Diésel
@@ -3159,12 +3121,6 @@ RAM,"1500 Crew Cab ST 3,0 Lts. Pick Up. 4P. T/A 4x4 Diésel",2015,,,Diésel
 RAM,"1500 Crew Cab Laramie 3,0 Lts. Pick Up 4P. T/A 4x2 Diésel",2015,,,Diésel
 RAM,"1500 Crew Cab SLT 3,0 Lts. Pick Up 4P. T/A 4x2 Diésel",2015,,,Diésel
 RAM,"1500 Crew Cab ST 3,0 Lts. Pick Up 4P. T/A 4x2 Diésel",2015,,,Diésel
-RAM,"1500 Quad Cab Laramie 3,0 Lts. Pick Up 4P. T/A 4x4 Diésel",2015,,,Diésel
-RAM,"1500 Quad Cab SLT 3,0 Lts. Pick Up 4P. T/A 4x4 Diésel",2015,,,Diésel
-RAM,"1500 Quad Cab ST 3,0 Lts. Pick Up 4P. T/A 4x4 Diésel",2015,,,Diésel
-RAM,"1500 Quad Cab Laramie 3,0 Lts. 3,0 Lts. Pick Up 4P. T/A 4x2 Diésel",2015,,,Diésel
-RAM,"1500 Quad Cab SLT 3,0 Lts. Pick Up 4P. T/A 4x2 Diésel",2015,,,Diésel
-RAM,"1500 Quad Cab ST 3,0 Lts. Pick Up 4P. T/A 4x2 Diésel",2015,,,Diésel
 RAM,"1500 Reg Cab Laramie 3,0 Lts. Pick Up 2P. T/A 4x4 Diésel",2015,,,Diésel
 RAM,"1500 Reg Cab SLT 3,0 Lts. Pick Up 2P. T/A 4x4 Diésel",2015,,,Diésel
 RAM,"1500 Reg Cab ST 3,0 Lts. Pick Up 2P. T/A 4x4 Diésel",2015,,,Diésel
@@ -3230,7 +3186,6 @@ Audi,"RS7 4,0 Lts. Sedán 5P. T/A 4x4 Otto",2015,,,Bencina
 Audi,"S1 2,0 Lts. Hatchback 3P. T/M Motor Otto",2015,,,Bencina
 Audi,"S1 2,0 Lts. Hatchback 5P. T/M Motor Otto",2015,,,Bencina
 Audi,"A5 1,8 Lts. Cabriolet 2P. T/A Otto",2015,,,Bencina
-Volkswagen,"Golf 1,4 Lts. Hatchback 5P. T/A Otto",2015,,,Bencina
 Skoda,"Octavia 1,6 Lts. Sedán 5P. T/A Diésel",2015,,,Diésel
 Skoda,"Octavia 1,6 Lts. Station Wagon 5P. T/A Diésel",2015,,,Diésel
 Bentley,"Flying Spur 4,0 Lts. Sedán 4P. T/A Otto",2015,,,Bencina
@@ -3252,7 +3207,6 @@ Skoda,"Yeti 1,2 Lts. Station Wagon 5P. T/M Otto",2015,,,Bencina
 Suzuki,"Ertiga 1,4 Lts. Station Wagon 5P. T/M Otto",2015,,,Bencina
 Audi,"Q7 3,0 Lts. Station Wagon 5P. T/A 4x4 Diésel",2015,,,Diésel
 Audi,"S7 4,0 Lts. Sedán 5P. T/A 4x4 Otto",2015,,,Bencina
-Volkswagen,"Golf 1,4 Lts. Hatchback 5P. T/M Otto",2015,,,Bencina
 Toyota,"Land Cruiser Prado 4,0 Lts. Station Wagon 5P. T/A 4x4 Otto",2015,,,Bencina
 Mercedes-Benz,"GLE 63 S AMG Coupé 4 Matic 5,5 Lts. Station Wagon 5P. T/A 4x4 Otto",2015,,,Bencina
 Mercedes-Benz,"Vito 111 CDI 1,6 Lts. Furgón 4P. T/M Diésel",2015,,,Diésel
@@ -3267,12 +3221,6 @@ Hyundai,"i20 IB 1,2 Lts. Hatchback 5P. T/M Otto",2015,,,Bencina
 Brilliance,"V3S Turbo 1,5 Lts. Station Wagon 5P. T/M Otto",2015,,,Bencina
 Skoda,"Rapid 1,4 Lts. Hatchback 5P. T/A Otto",2015,,,Bencina
 Volkswagen,"Golf R 2,0 Lts. Hatchback 3P. T/A Otto",2015,,,Bencina
-Ford,"Explorer XLT 3,5 Lts. Station Wagon 5P. T/A 4x4 Otto",2015,,,Bencina
-Ford,"Explorer Limited 3,5 Lts. Station Wagon 5P. T/A 4x4 Otto",2015,,,Bencina
-Ford,"Explorer XLT 3,5 Lts. Station Wagon 5P. T/A 4x2 Otto",2015,,,Bencina
-Ford,"Explorer Ecoboost Limited 2,3 Lts. Station Wagon 5P. T/A 4x2 Otto",2015,,,Bencina
-Ford,"Explorer Ecoboost 2,3 Lts. Station Wagon 5P. T/A 4x2 Otto",2015,,,Bencina
-Ford,"Explorer Limited 2,3 Lts. Station Wagon 5P. T/A 4x4 Otto",2015,,,Bencina
 Alfa Romeo,"Mito SE 1,4 Lts. 78 CV Hatchback 3P. T/M Otto",2015,,,Bencina
 Volvo,"V60 CC T5 2,5 Lts. Station Wagon 5P. T/A 4x4 Otto",2015,,,Bencina
 Volvo,"V40CC T4 2,0 Lts. Hatchback 5P. T/M 4x2 Otto",2015,,,Bencina
@@ -3348,14 +3296,11 @@ DFSK,"Cargo Box DC Serie C 1,5 Lts. Camioneta 4P. T/M Otto",2015,,,Bencina
 DFSK,"Refritruck Serie C 1,5 Lts. Camioneta 2P. T/M Otto",2015,,,Bencina
 Mercedes-Benz,"GLE 350d 4 Matic Coupé 3,0 Lts. Station Wagon 5P. T/A 4x4 Diésel",2015,,,Diésel
 Citroen,"C4 Cactus STT 1,2 Lts. Hatchback 5P. T/M Otto",2015,,,Bencina
-Skoda,"Fabia 1,2 Lts. Hatchback 5P. T/A Otto",2015,,,Bencina
-Skoda,"Fabia 1,2 Lts. Hatchback 5P. T/M Otto",2015,,,Bencina
 Peugeot,"5008 1,6 Lts. Blue-HDI 120 HP Station Wagon (7 plazas) 5P. T/A Diésel",2015,,,Diésel
 Peugeot,"5008 1,6 Lts. Blue-HDI 120 HP Station Wagon (5 plazas) 5P. T/A Diésel",2015,,,Diésel
 Audi,"S6 4,0 Lts. Sedán 4P. T/A Otto",2015,,,Bencina
 Great Wall,"Wingle 6 2,0 Lts. Pick Up 4P. T/M 4x2 Diésel",2015,,,Diésel
 Great Wall,"Wingle 6 2,0 Lts. Pick Up 4P. T/M 4x4 Diésel",2015,,,Diésel
-Skoda,"Fabia 1,4 Lts. Hatchback 5P. T/M Diésel",2015,,,Diésel
 Peugeot,"3008 1,6 Lts. Blue Hdi 120HP. Station Wagon 5P. T/A Diésel",2015,,,Diésel
 Audi,"Q3 T 1,4 Lts. Station Wagon 5P. T/A Otto",2015,,,Bencina
 Citroen,"DS4 1,6 Lts. Hatchback 5P. T/M Diésel",2015,,,Diésel
@@ -3670,7 +3615,6 @@ Mitsubishi,"Mirage 1,2 Lts. DOHC Hatchback 5P. T/M Motor Otto",2014,,,Bencina
 Fiat,"Strada Adventure 1,6 SOHC Pick Up Cabina Doble 3P. T/M Motor Otto",2014,,,Bencina
 Fiat,"Strada Adventure 1,6 SOHC Pick Up Cabina Extendida 2P. T/M Motor Otto",2014,,,Bencina
 Porsche,"Cayman GTS 3,5 Lts. DOHC Coupé 3P. T/A MotorOtto",2014,,,Bencina
-Volkswagen,"Golf A7 1,6 Lts. DOHC Hatchback 5P. T/M Motor CWVA Otto",2014,,,Bencina
 Volkswagen,"Beetle Coupé 1,4 Lts. DOHC Hatchback 3P. T/M Motor CTHD Oto",2014,,,Bencina
 Volkswagen,"Beetle Cabrio 1,4 Lts. DOHC Cabriolet 2P T/M Motor CTHD Otto",2014,,,Bencina
 Fiat,"Strada Working 1,4 Lts. SOHC Camioneta Doble Cabina 3P. T/M Motor Otto",2014,,,Bencina
@@ -3689,15 +3633,12 @@ Chevrolet,"Tahoe 5,3 Lts. AWD DOHC Station Wagon 5P. T/A 4x4 Motor Otto",2014,,,
 Chevrolet,"Tahoe 5,3 Lts. AWD DOHC Station Wagon 5P. T/A 4x2 Motor Otto",2014,,,Bencina
 Nissan,"370Z Z34 3,7 Lts. DOHC Coupé 3P. T/A Motor Otto",2014,,,Bencina
 Nissan,"Murano 3,5 Lts. DOHC Station Wagon 5P. T/A CVT MotorOtto",2014,,,Bencina
-Volkswagen,"Golf A7 1,6 Lts. DOHC Hatchback 5P. T/A Motor CWVA Otto",2014,,,Bencina
 Nissan,"Tiida Elongation 1,6 Lts. DOHC Sedán 4P. T/M Motor Otto",2014,,,Bencina
 Jeep,"Jeep Patriot Sport 2,4 Lts. DOHC Station Wagon 5P. T/M 4x4 Motor Otto",2014,,,Bencina
 Jeep,"Jeep Patriot Sport 2,4 Lts. DOHC Station Wagon 5P. T/M 4x2 Motor Otto",2014,,,Bencina
 Jeep,"Jeep Patriot Limited 2,4 Lts. DOHC Station Wagon 5P. T/M 4x4 Motor Otto",2014,,,Bencina
 BMW,"X4 xDrive20i 2,0 Lts. DOHC Station Wagon 5P. T/A 4x4 Motor Otto",2014,,,Bencina
 BMW,"X4 xDrive28i 2,0 Lts. DOHC Station Wagon 5P. T/A 4x4 Motor Otto",2014,,,Bencina
-Volkswagen,"Golf A7 1,4 Lts. TSI DOHC Hatchback 5P. T/A Motor CHPA Otto",2014,,,Bencina
-Volkswagen,"Golf A7 1,4 Lts. TSI DOHC Hatchback 5P. T/M Motor CHPA Otto",2014,,,Bencina
 Audi,"A1 1,4 Lts. TFSI DOHC Hatchback 5P. T/M Motor CAXA Otto",2014,,,Bencina
 Mini,"Cooper D 1,5 Lts. DOHC Hatchback 3P. T/M Motor Diésel",2014,,,Diésel
 Mini,"Cooper D 1,5 Lts. DOHC Hatchback 5P. T/M Motor Diésel",2014,,,Diésel
@@ -4100,12 +4041,9 @@ Audi,"A3 1,4 Lts. TFSI DOHC Hatchback 3P. T/M Motor CXSA Otto",2013,,,Bencina
 Skoda,"Octavia 1,4 Lts. TSI DOHC Sedán 4P. T/M 4x2 Motor CHPA Otto",2013,,,Bencina
 Skoda,"Octavia 1,4 Lts. TSI DOHC Station Wagon 4P. T/M 4x2 Motor CHPA Otto",2013,,,Bencina
 Peugeot,"308 1,6 Lts. E-HDI SOHC 115 hp Hatchback 5P. T/M Motor Diésel",2013,,,Diésel
-Jeep,"Jeep Wrangler Unlimited Sahara 2,8 Lts. DOHC Tipo Jeep 5P. T/A 4x4 Motor Diésel",2013,,,Diésel
 Jeep,"Jeep Wrangler Sahara 2,8 Lts. DOHC Tipo Jeep 3P. T/A 4x4 Motor Diésel",2013,,,Diésel
 Jeep,"Jeep Wrangler Sport 2,8 Lts. DOHC Tipo Jeep 3P. T/A 4x4 Motor Diésel",2013,,,Diésel
 Jeep,"Jeep Wrangler Rubicon 2,8 Lts. DOHC Tipo Jeep 3P. T/A 4x4 Motor Diésel",2013,,,Diésel
-Jeep,"Jeep Wrangler Unlimited Sport 2,8 Lts. DOHC Tipo Jeep 5P. T/A 4x4 Motor Diésel",2013,,,Diésel
-Jeep,"Jeep Wrangler Unlimited Rubicon 2,8 Lts. DOHC Tipo Jeep 5P. T/A 4x4 Motor Diésel",2013,,,Diésel
 Audi,"A3 1,4 Lts. TFSI DOHC Hatchback 3P. T/A Motor CXSA Otto",2013,,,Bencina
 Fiat,"500 L 1,4 Lts. DOHC Hatchback 5P. T/M Motor Otto",2013,,,Bencina
 Fiat,"500 L Lounge 1,4 Lts. DOHC Hatchback 5P. T/M Motor Otto",2013,,,Bencina
@@ -4324,14 +4262,10 @@ Dodge,"Grand Caravan R/T 3,6 Lts. V6 VVT DOHC Station Wagon Tipo Van 5P. T/A Mot
 Honda,"Accord 3,5 Lts. V6 DOHC Sedán 4P. T/A Motor Otto",2012,,,Bencina
 Honda,"Accord 2,4 Lts. DOHC Sedán 4P. T/A Motor Otto",2012,,,Bencina
 Audi,"A7 3,0 Lts. TDI DOHC Hatchback 5 T/A 4x4 Motor CDUD Diésel",2012,,,Diésel
-Hyundai,"Tucson LM 2,0 Lts. CRDi DOHC Station Wagon 5P. T/M 4WD Motor Diésel",2012,,,Diésel
-Hyundai,"Tucson LM 2,0 Lts. CRDi DOHC Station Wagon 5P. T/M 2WD Motor Diésel",2012,,,Diésel
 Hyundai,"Tucson LM FL 2,0 Lts. CRDi DOHC Station Wagon 5P. T/M 4WD Motor Diésel",2012,,,Diésel
 Hyundai,"Tucson LM FL 2,0 Lts. CRDi DOHC Station Wagon 5P. T/M 2WD Motor Diésel",2012,,,Diésel
 Hyundai,"Tucson LM FL 2,0 Lts. CRDi DOHC Station Wagon 5P. T/A 4WD Motor Diésel",2012,,,Diésel
 Hyundai,"Tucson LM FL 2,0 Lts. CRDi DOHC Station Wagon 5P. T/A 2WD Motor Diésel",2012,,,Diésel
-Hyundai,"Tucson LM 2,0 Lts. CRDi DOHC Station Wagon 5P. T/A 4WD Motor Diésel",2012,,,Diésel
-Hyundai,"Tucson LM 2,0 Lts. CRDi DOHC Station Wagon 5P. T/A 2WD Motor Diésel",2012,,,Diésel
 Audi,"S8 4,0 Lts. T-FSI DOHC Sedán 4P. 4x4 T/A Motor CGTA Otto",2012,,,Bencina
 Chevrolet,"Camaro ZL1 6,2 Lts. OHV Coupé 2P. T/A Motor Otto",2012,,,Bencina
 Chevrolet,"Camaro ZL1 6,2 Lts. OHV Coupé 2P. T/M Motor Otto",2012,,,Bencina
@@ -4379,10 +4313,6 @@ Lexus,"GS 450h Híbrido 3,5 Lts. DOHC Sedán 4P. T/SA (CVT), Vehículo Eléctric
 Mercedes-Benz,"C 180 1,6 Lts. DOHC Coupé 2P. T/A Motor Otto",2012,,,Bencina
 BMW,"X3 xDrive20i 2,0i Lts. DOHC Station Wagon 5P. 4x4 T/A Motor Otto",2012,,,Bencina
 BMW,"X3 xDrive28i 2,0i Lts. DOHC Station Wagon 5P. 4x4 T/A Motor Otto",2012,,,Bencina
-Land Rover,"Range Rover Evoque 2,2 Lts. Dynamic DOHC Station Wagon 3P. 4x4 T/A Motor Diésel",2012,,,Diésel
-Land Rover,"Range Rover Evoque 2,2 Lts. Pure SE DOHC Station Wagon 5P. 4x4 T/A Motor Diésel",2012,,,Diésel
-Land Rover,"Range Rover Evoque 2,2 Lts. Pure DOHC Station Wagon 3P. 4x4 T/A Motor Diésel",2012,,,Diésel
-Land Rover,"Range Rover Evoque 2,2 Lts. Prestige DOHC Station Wagon 3P. 4x4 T/A Motor Diésel",2012,,,Diésel
 Opel,"Antara 2,2 Lts. DOHC Station Wagon 5P. T/A Motor Diésel",2012,,,Diésel
 Opel,"Antara 2,2 Lts. DOHC Station Wagon 5P. T/M Motor Diésel",2012,,,Diésel
 Opel,"Antara 2,2 Lts. DOHC Station Wagon 5P. AWD T/A Motor Diésel",2012,,,Diésel
@@ -4444,12 +4374,6 @@ BMW,"M5 4,4 Lts. DOHC Sedán 4P. T/A Motor Otto",2012,,,Bencina
 BMW,"M6 4,4 Lts. DOHC Coupé 2P. T/A Motor Otto",2012,,,Bencina
 BMW,"M6 4,4 Lts. DOHC Sedán 4P. T/A Motor Otto",2012,,,Bencina
 BMW,"M6 4,4 Lts. DOHC Cabriolet 2P. T/A Motor Otto",2012,,,Bencina
-Jeep,"Wrangler Unlimited Rubicon 3,6 Lts. V6 24v VVT DOHC Tipo Jeep 5P. 4x4 T/A Motor Otto",2012,,,Bencina
-Jeep,"Wrangler Unlimited Sahara 3,6 Lts. V6 24v VVT DOHC Tipo Jeep 5P. 4x4 T/A Motor Otto",2012,,,Bencina
-Jeep,"Wrangler Unlimited Sport 3,6 Lts. V6 24v VVT DOHC Tipo Jeep 5P. 4x4 T/A Motor Otto",2012,,,Bencina
-Jeep,"Wrangler Unlimited Rubicon 3,6 Lts. V6 24v VVT DOHC Tipo Jeep 3P. 4x4 T/A Motor Otto",2012,,,Bencina
-Jeep,"Wrangler Unlimited Sahara 3,6 Lts. V6 24v VVT DOHC Tipo Jeep 3P. 4x4 T/A Motor Otto",2012,,,Bencina
-Jeep,"Wrangler Unlimited Sport 3,6 Lts. V6 24v VVT DOHC Tipo Jeep 3P. 4x4 T/A Motor Otto",2012,,,Bencina
 Skoda,"Fabia 1,4 Lts. T-FSI DOHC Hatchback 5P. T/A Motor CTHE Otto",2012,,,Bencina
 Citroen,"DS4 1,6 Lts. DOHC Hatchback 5P. T/A Motor Otto",2012,,,Bencina
 Honda,"Civic 1,8 Lts. SOHC Coupé 2P. T/M Motor Otto",2012,,,Bencina
@@ -4478,7 +4402,6 @@ Opel,"Astra ST 1,6 Lts. Turbo DOHC Hatchback 5P. T/A Motor Otto",2011,,,Bencina
 Opel,"Astra NB 1,6 Lts. Turbo DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
 Lexus,"LS 460 4,6 Lts. DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
 Volvo,"S80 D5 2,4 Lts. DOHC Sedán 4P. AWD T/A Motor Diésel",2011,,,Diésel
-Mercedes-Benz,"E 350 CGI 3,5 Lts. DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
 Mercedes-Benz,"CLS 350 CGI 3,5 Lts. DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
 Opel,"Insignia ST 2,0 Lts. Turbo DOHC Station Wagon 5P. T/A Motor Otto",2011,,,Bencina
 Opel,"Insignia NB 2,0 Lts. Turbo DOHC Sesdan 4P. T/A Motor Otto",2011,,,Bencina
@@ -4487,7 +4410,6 @@ Opel,"Insignia NB 2,0 Lts. Turbo DOHC Sedán 4P. T/M Motor Otto",2011,,,Bencina
 Jac,"J2 1,0 Lts. DOHC Hatchback 5P. T/M Motor Otto",2011,,,Bencina
 Mercedes-Benz,"C 63 AMG 6,2 Lts. DOHC Coupé 2P. T/A Motor Otto",2011,,,Bencina
 Volkswagen,"Tiguan 1,4 Lts. TSI DOHC Station Wagon 5P. T/M Motor CAXA Otto",2011,,,Bencina
-Mercedes-Benz,"E 500 CGI 4,7 Lts. DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
 Mercedes-Benz,"CLS 500 CGI 4,7 Lts. DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
 Mercedes-Benz,"E 500 CGI 4,7 Lts. DOHC Cabriolet 2P. T/A Motor Otto",2011,,,Bencina
 Mercedes-Benz,"GLK 220 CDI 2,1 Lts. DOHC Station Wagon 5P. T/A Motor Diésel",2011,,,Diésel
@@ -4522,10 +4444,6 @@ Volvo,"S40 DRIVe 1,6 Lts. TDI SOHC Sedán 4P. T/M Motor Diésel",2011,,,Diésel
 Volvo,"C30 DRIVe 1,6 Lts. TDI SOHC Hatchback 3P. T/M Motor Diésel",2011,,,Diésel
 Citroen,"C4 Picasso 2,0 Lts. DOHC Station Wagon 5P. (7 Asientos) HDI T/M Motor Diésel",2011,,,Diésel
 Citroen,"C4 Picasso 2,0 Lts. DOHC Station Wagon 5P. (5 Asientos) HDI T/M Motor Diésel",2011,,,Diésel
-Mini,"Cooper SD Countryman 2,0 Lts. All 4 DOHC Station Wagon 5P. 4WD T/M Motor Diésel",2011,,,Diésel
-Mini,"Cooper SD Countryman 2,0 Lts. DOHC Station Wagon 5P. 2WD T/M Motor Diésel",2011,,,Diésel
-Mini,"Cooper D Countryman 2,0 Lts. All 4 DOHC Station Wagon 5P. 4WD T/A Motor Diésel",2011,,,Diésel
-Mini,"Cooper D Countryman 2,0 Lts. DOHC Station Wagon 5P. 2WD T/A Motor Diésel",2011,,,Diésel
 Mini,"Cooper D 2,0 Lts. DOHC Hatchback 3P. T/A Motor Diésel",2011,,,Diésel
 Mini,"Cooper D 2,0 Lts. DOHC Coupé 3P. T/A 4x2 Motor Diésel",2011,,,Diésel
 Mini,"Paceman Cooper D ALL4 2,0 Lts. Coupé 3P. T/A 4x4 Motor Diésel",2011,,,Diésel
@@ -4533,10 +4451,6 @@ Mini,"Paceman Cooper D 2,0 Lts. Coupé 3P. T/A 4x2 Motor Diésel",2011,,,Diésel
 Volkswagen,"Passat B7 V6 3,6 Lts. FSI DOHC Sedán 4P. 4x4 T/A Motor BWS Otto}",2011,,,Bencina
 BMW,"X3 xDrive20d 2,0 Lts. DOHC Station Wagon 5P. 4x4 T/M Motor Diésel",2011,,,Diésel
 Chrysler,"300C 3,6 V6 DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
-Mini,"Cooper SD Countryman 2,0 Lts. All 4 DOHC Station Wagon 5P. 4WD T/A Motor Diésel",2011,,,Diésel
-Mini,"Cooper SD Countryman 2,0 Lts. DOHC Station Wagon 5P. 2WD T/A Motor Diésel",2011,,,Diésel
-Mini,"Cooper D Countryman 1,6 Lts. All 4 DOHC Station Wagon 5P. 4WD T/M Motor Diésel",2011,,,Diésel
-Mini,"Cooper D Countryman 1,6 Lts. DOHC Station Wagon 5P. 2WD T/M Motor Diésel",2011,,,Diésel
 Mini,"Cooper D 1,6 Lts. DOHC Hatchback 3P. 4x2 T/M Motor Diésel",2011,,,Diésel
 Ford,"Focus 2,0 Lts. DOHC Sedán 4P. T/A Motor Otto",2011,,,Bencina
 Ford,"Focus 2,0 Lts. DOHC Hatchback 5P. T/A Motor Otto",2011,,,Bencina
@@ -4652,7 +4566,6 @@ Mini,"John Cooper Works 1,6 Lts. DOHC Cabrio 2P. T/M Motor Otto",2010,,,Bencina
 Mini,"John Cooper Works 1,6 Lts. DOHC Station Wagon 5P. T/M Motor Otto",2010,,,Bencina
 Mini,"John Cooper Works (SX51) 1,6 Lts. DOHC Coupé 3P. T/M Motor Otto",2010,,,Bencina
 Mini,"John Cooper Works Roadster 1,6 Lts. DOHC Convertible 2P. T/M Motor Otto",2010,,,Bencina
-Mercedes-Benz,"E 350 3,0 Lts. CDI DOHC Sedán 4P. T/A Motor Diésel",2010,,,Diésel
 Mini,"Paceman Cooper 1,6 Lts. DOHC Coupé 2P. 2WD T/M Motor Otto",2010,,,Bencina
 Ford,"Edge 3,5 Lts. DOHC Station Wagon 5P. AWD T/A Motor Otto",2010,,,Bencina
 Mercedes-Benz,"GLK 220 CDI 4Matic 2,1 DOHC Station Wagon 5P. 4x4 T/A Motor Diésel",2010,,,Diésel
@@ -4662,7 +4575,6 @@ Nissan,"X-Trail T31 2,5 Lts. DOHC Station Wagon 5P. 4x4 T/A Motor Otto",2010,,,B
 Nissan,"X-Trail T31 2,5 Lts. DOHC Station Wagon 5P. 4x2 T/A Motor Otto",2010,,,Bencina
 Nissan,"X-Trail T-31 2,5 Lts. DOHC Station Wagon 5P. 4x4 T/M Motor Otto",2010,,,Bencina
 BMW,"ActiveHybrid 7 4,4 Lts. DOHC Sedán 4P. T/A, Vehículo Eléctrico Híbrido",2010,,,HEV
-Mercedes-Benz,"E 220 CDI 2,1 Lts. DOHC Sedán 4P. T/A Motor Diésel",2010,,,Diésel
 Peugeot,"RCZ 1,6 Lts. DOHC Coupé 2P. T/M Motor Otto",2010,,,Bencina
 Peugeot,"RCZ Premier 1,6 Lts. DOHC Coupé 2P. T/M Motor Otto",2010,,,Bencina
 Ford,"Mustang 5,0 Lts. DOHC Coupé 2P. T/A Motor Otto",2010,,,Bencina
@@ -4717,7 +4629,6 @@ BMW,"535I 3,0 Lts. DOHC Sedán 4P. T/A Motor Otto",2010,,,Bencina
 Citroen,"C5 2,0 Lts. HDI DOHC Sedán 4P. T/A Motor Diésel",2010,,,Diésel
 Citroen,"C5 Break 2,0 Lts. HDI DOHC Station Wagon 5P. T/A Motor Diésel",2010,,,Diésel
 Mercedes-Benz,"C 220 CDI 2,1 Lts. DOHC Sedán 4P. T/A Motor Diésel",2010,,,Diésel
-Mercedes-Benz,"E 300 3,0 DOHC Sedán 4P. T/A Motor Otto",2010,,,Bencina
 Suzuki,"Kizashi 2,4 Lts. DOHC Sedán 4P. T/M Motor Otto",2010,,,Bencina
 Suzuki,"Kizashi 2,4 Lts. DOHC Sedán 4P. T/A Motor Otto",2010,,,Bencina
 Citroen,"C3 Picasso 1,6 Lts. HDI DOHC Station 5P. T/M Motor Diésel",2010,,,Diésel
