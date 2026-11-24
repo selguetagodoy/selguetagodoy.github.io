@@ -84,3 +84,7 @@ Se verificaron licencias y atribuciones de 53 fuentes; 52 imágenes exteriores s
 ## Sexto lote Commons — 23/11/2026
 
 Barrido de 120 grupos; 103 con candidatos no certificados, 794 fichas potenciales. 25 fotos aprobadas de 34 descargadas y 89 asociaciones nuevas; 3.596 con foto, 4.798 pendientes. Ver rindelab/data/fotos-rapidas/barrido120/candidatos.json y rindelab/data/historical-photo-import-batch6-20261123.json.
+
+## Septimo lote Commons
+
+300 grupos nuevos, 256 con candidatos, 60 fotos aprobadas y 177 fichas adicionales. Quedan 4621 pendientes. Ver rindelab/data/fotos-rapidas/barrido300/candidatos.json.
