@@ -577,3 +577,7 @@ Tras un barrido de 74 familias/generaciones, se validaron 53 fuentes de Wikimedi
 ### Sexto lote histórico (23/11/2026)
 
 Barrido de 120 grupos, 103 con candidatos sin validar (794 fichas potenciales). 34 fotografías descargadas con licencia libre; 25 aprobadas tras revisión visual y nueve excluidas. Se incorporan 89 asociaciones adicionales. Cobertura: **3.596/8.394 (42,8 %)**; pendientes: **4.798**. Los candidatos restantes se conservan en data/fotos-rapidas/barrido120/candidatos.json.
+
+### Septimo lote historico (23/11/2026)
+
+300 grupos nuevos consultados, 256 con candidatos (1126 fichas potenciales). 70 archivos con licencia verificada; 60 aprobados tras revision visual. 177 fichas adicionales: 3.773/8.394 (44,9 %); 4.621 pendientes. Candidatos: data/fotos-rapidas/barrido300/candidatos.json.
