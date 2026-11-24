@@ -9,7 +9,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'v2-photos.js'),'utf8'),ctx);
 const photos=ctx.window.RindelabPhotos;
 assert.equal(audit.photos.length,41);
 assert.equal(audit.failures.length,0);
-assert.equal(photos.count,918);
+assert.equal(photos.count,975);
 for(const p of audit.photos){
  assert(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(p.source),'Source must be Commons: '+p.model);
  assert(/^(?:CC BY(?:-SA)?(?:\s|$)|CC0|Public domain)/.test(p.license),'Unlicensed photo: '+p.model);
@@ -55,14 +55,14 @@ for(const [brand,model,year,tech] of positive){
  assert(p?.src.includes('rindelab-historical-'),'Expected new licensed image: '+brand+' '+model);
 }
 assert.equal(coverage.total,8394);
-assert.equal(coverage.withPhoto,3773);
-assert.equal(coverage.withoutPhoto,4621);
+assert.equal(coverage.withPhoto,3921);
+assert.equal(coverage.withoutPhoto,4473);
 assert.equal(coverage.historicalCommons20261123.newlyCovered,264);
 assert.equal(coverage.historicalCommons20261123.photoAssetsAdded,41);
 assert.equal(coverage.generationReuse20261123.newlyCovered,299);
 assert.equal(coverage.byBrand.Baic.withPhoto,38);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(html.includes('3.773 de 8.394 fichas'));
-assert(html.includes('4.621 fichas sin foto'));
-assert(html.includes('20261123-historical-commons7'));
-console.log('PASS: 41 imágenes Commons descargadas y atribuidas, 264 fichas 3CV adicionales, 8 exclusiones de carrocería, BAIC 38/39 conservado; 3.773/8.394 con foto');
+assert(html.includes('3.921 de 8.394 fichas'));
+assert(html.includes('4.473 fichas sin foto'));
+assert(html.includes('20261123-historical-commons8'));
+console.log('PASS: 41 imágenes Commons descargadas y atribuidas, 264 fichas 3CV adicionales, 8 exclusiones de carrocería, BAIC 38/39 conservado; 3.921/8.394 con foto');

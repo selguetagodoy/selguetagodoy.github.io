@@ -581,3 +581,7 @@ Barrido de 120 grupos, 103 con candidatos sin validar (794 fichas potenciales). 
 ### Septimo lote historico (23/11/2026)
 
 300 grupos nuevos consultados, 256 con candidatos (1126 fichas potenciales). 70 archivos con licencia verificada; 60 aprobados tras revision visual. 177 fichas adicionales: 3.773/8.394 (44,9 %); 4.621 pendientes. Candidatos: data/fotos-rapidas/barrido300/candidatos.json.
+
+### Octavo lote historico (24/11/2026)
+
+75 archivos con licencia verificada del barrido de 300 grupos; 57 aprobados tras revisión visual. 148 fichas adicionales: 3.921/8.394 (46,7 %); 4.473 pendientes.

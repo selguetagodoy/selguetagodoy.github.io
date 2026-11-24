@@ -11,8 +11,8 @@ assert.equal(source.errors.length,0);
 assert.equal(source.rejectedAfterVisualReview.length,1);
 assert.equal(source.rejectedAfterVisualReview[0].id,'chevrolet-camaro-2013');
 assert.equal(cover.total,8394);
-assert.equal(cover.withPhoto,3773);
-assert.equal(cover.withoutPhoto,4621);
+assert.equal(cover.withPhoto,3921);
+assert.equal(cover.withoutPhoto,4473);
 assert.equal(cover.historicalCommonsBatch320261123.withPhotoBefore,2865);
 assert.equal(cover.historicalCommonsBatch320261123.newlyCovered,337);
 assert.equal(cover.historicalCommonsBatch320261123.photoAssetsAdded,52);
@@ -34,7 +34,7 @@ for(const p of source.photos){
 }
 const ctx={window:{},document:{addEventListener(){}},HTMLImageElement:class{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'v2-photos.js'),'utf8'),ctx);
-const library=ctx.window.RindelabPhotos;assert.equal(library.count,918);
+const library=ctx.window.RindelabPhotos;assert.equal(library.count,975);
 const F={BRAND:0,MODEL:1,TECH:2,DATE:8};
 const find=(brand,model,year)=>library.find([brand,model,'Bencina',null,null,null,null,null,year+'-05-01'],F);
 const yes=[
@@ -64,7 +64,7 @@ for(const [brand,model,year,id] of no){
  assert(!p?.src.includes('rindelab-historical-batch3-'+id),'Wrong vehicle body / rejected photo '+brand+' '+model);
 }
 const page=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(page.includes('3.773 de 8.394 fichas'));
-assert(page.includes('4.621 fichas sin foto'));
-assert(page.includes('20261123-historical-commons7'));
-console.log('PASS batch3 52 CC-licensed photos, +337 3CV, 4.621 still without photos; visual and body QA preserved');
+assert(page.includes('3.921 de 8.394 fichas'));
+assert(page.includes('4.473 fichas sin foto'));
+assert(page.includes('20261123-historical-commons8'));
+console.log('PASS batch3 52 CC-licensed photos, +337 3CV, 4.473 still without photos; visual and body QA preserved');

@@ -43,15 +43,15 @@ assert.equal(legacy.length,8053);
 assert.equal(october.length,272);
 assert.equal(november.length,69);
 assert.equal(rows.length,8394);
-assert.equal(withPhoto,3773,'Cobertura real de fichas 3CV, no de familias comerciales');
-assert.equal(rows.length-withPhoto,4621);
+assert.equal(withPhoto,3921,'Cobertura real de fichas 3CV, no de familias comerciales');
+assert.equal(rows.length-withPhoto,4473);
 assert.equal(coverage.withPhoto,withPhoto);
 assert.equal(coverage.withoutPhoto,rows.length-withPhoto);
 assert.equal(coverage.generationReuse20261123.newlyCovered,299);
 assert.equal(coverage.historicalCommons20261123.newlyCovered,264);
 assert.equal(coverage.historicalCommons20261123.photoAssetsAdded,41);
 assert.equal(curated.rules.length,38);
-assert.equal(lib.count,918,'Sin agregar fotografías ni incrementar artificialmente la biblioteca');
+assert.equal(lib.count,975,'Sin agregar fotografías ni incrementar artificialmente la biblioteca');
 for(const [brand,v] of counts){
  const audited=coverage.byBrand[brand];
  assert(audited,'Marca sin inventariar: '+brand);
@@ -60,9 +60,9 @@ for(const [brand,v] of counts){
  assert.equal(v.missing,audited.missing,'Faltantes marca '+brand);
 }
 const html=fs.readFileSync(path.join(R,'index.html'),'utf8');
-assert(html.includes('3.773 de 8.394 fichas'));
-assert(html.includes('4.621 fichas sin foto'));
-assert(html.includes('v2-photos.js?v=20261123-historical-commons7'));
+assert(html.includes('3.921 de 8.394 fichas'));
+assert(html.includes('4.473 fichas sin foto'));
+assert(html.includes('v2-photos.js?v=20261123-historical-commons8'));
 const photosSource=fs.readFileSync(path.join(R,'v2-photos.js'),'utf8');
 for(const rule of curated.rules){
  assert(/^\d{4}$/.test(rule.from)&&/^\d{4}$/.test(rule.to)&&rule.from<=rule.to);
@@ -70,4 +70,4 @@ for(const rule of curated.rules){
  assert(photosSource.includes(rule.filename),'Falta el archivo/familia: '+rule.filename);
  assert(!/motorway|generic stock/i.test(rule.generation),'Imprecisión: '+rule.generation);
 }
-console.log('PASS: historial 3CV 8.394, con imagen 3.773 (+299 +264), sin imagen 4.621; 38 reglas conservadoras, 918 fotos, control de generaciones y marcas');
+console.log('PASS: historial 3CV 8.394, con imagen 3.921 (+299 +264), sin imagen 4.473; 38 reglas conservadoras, 975 fotos, control de generaciones y marcas');
