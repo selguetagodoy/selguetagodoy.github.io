@@ -8,7 +8,7 @@ assert.equal(scan.filter(x=>x.choices.length>0).reduce((n,x)=>n+Number(x.fichas)
 assert.equal(scan.filter(x=>x.error).length,0);
 assert.equal(source.searched,34);assert.equal(source.imported,25);assert.equal(source.photos.length,25);
 assert.equal(source.errors.length,0);assert.equal(source.rejectedAfterVisualReview.length,9);
-assert.equal(cover.total,8394);assert.equal(cover.withPhoto,3773);assert.equal(cover.withoutPhoto,4621);
+assert.equal(cover.total,8394);assert.equal(cover.withPhoto,3921);assert.equal(cover.withoutPhoto,4473);
 assert.equal(cover.historicalCommonsBatch620261123.newlyCovered,89);assert.equal(cover.historicalCommonsBatch620261123.photoAssetsAdded,25);
 assert.equal(cover.historicalCommonsBatch520261123.newlyCovered,159);
 for(const p of source.photos){
@@ -20,9 +20,9 @@ for(const p of source.photos){
 }
 const ctx={window:{},document:{addEventListener(){}},HTMLImageElement:class{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'v2-photos.js'),'utf8'),ctx);
-assert.equal(ctx.window.RindelabPhotos.count,918);
+assert.equal(ctx.window.RindelabPhotos.count,975);
 const F={BRAND:0,MODEL:1,TECH:2,DATE:8};const find=(b,m,y)=>ctx.window.RindelabPhotos.find([b,m,'Bencina',null,null,null,null,null,y+'-05-01'],F);
 const no=[['Jeep','Wrangler Sahara 3P.','2013','wrangler-jk-unlimited'],['Mercedes-Benz','Vito 116 Furgon','2023','vito-tourer-2023'],['Suzuki','Swift Sport 1.4 MT','2023','swift-az-fl'],['Land Rover','Range Rover Evoque 5P.','2012','evoque-l538-3p'],['RAM','1500 Rebel Crew Cab','2017','ram-quad-2014'],['Mini','Cooper SD Roadster','2013','mini-r57-sd']];
 for(const [b,m,y,id] of no)assert(!find(b,m,y)?.src.includes('rindelab-historical-batch6-'+id),'Wrong body '+b+' '+m);
-const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert(html.includes('3.773 de 8.394 fichas'));assert(html.includes('4.621 fichas sin foto'));assert(html.includes('historical-commons7'));
-console.log('PASS batch6: 120 groups searched, 25 licensed pictures, 89 new records, 4.621 pending.');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert(html.includes('3.921 de 8.394 fichas'));assert(html.includes('4.473 fichas sin foto'));assert(html.includes('historical-commons8'));
+console.log('PASS batch6: 120 groups searched, 25 licensed pictures, 89 new records, 4.473 pending.');

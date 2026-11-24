@@ -4,13 +4,13 @@
   "october": 272,
   "november": 69,
   "total": 8394,
-  "withPhoto": 3773,
-  "withoutPhoto": 4621,
+  "withPhoto": 3921,
+  "withoutPhoto": 4473,
   "byBrand": {
     "Kia": {
       "total": 304,
-      "withPhoto": 191,
-      "missing": 113
+      "withPhoto": 203,
+      "missing": 101
     },
     "Citroen": {
       "total": 184,
@@ -34,18 +34,18 @@
     },
     "KGM": {
       "total": 164,
-      "withPhoto": 120,
-      "missing": 44
+      "withPhoto": 128,
+      "missing": 36
     },
     "Peugeot": {
       "total": 249,
-      "withPhoto": 114,
-      "missing": 135
+      "withPhoto": 118,
+      "missing": 131
     },
     "Honda": {
       "total": 120,
-      "withPhoto": 51,
-      "missing": 69
+      "withPhoto": 56,
+      "missing": 64
     },
     "Smart": {
       "total": 11,
@@ -64,8 +64,8 @@
     },
     "Jeep": {
       "total": 146,
-      "withPhoto": 112,
-      "missing": 34
+      "withPhoto": 115,
+      "missing": 31
     },
     "DFLM": {
       "total": 29,
@@ -74,23 +74,23 @@
     },
     "Geely": {
       "total": 45,
-      "withPhoto": 13,
-      "missing": 32
+      "withPhoto": 17,
+      "missing": 28
     },
     "Toyota": {
       "total": 186,
-      "withPhoto": 85,
-      "missing": 101
+      "withPhoto": 89,
+      "missing": 97
     },
     "Fiat": {
       "total": 127,
-      "withPhoto": 34,
-      "missing": 93
+      "withPhoto": 44,
+      "missing": 83
     },
     "Hyundai": {
       "total": 306,
-      "withPhoto": 141,
-      "missing": 165
+      "withPhoto": 160,
+      "missing": 146
     },
     "Tesla": {
       "total": 21,
@@ -104,8 +104,8 @@
     },
     "Mazda": {
       "total": 140,
-      "withPhoto": 64,
-      "missing": 76
+      "withPhoto": 76,
+      "missing": 64
     },
     "Omoda": {
       "total": 13,
@@ -124,18 +124,18 @@
     },
     "Volvo": {
       "total": 176,
-      "withPhoto": 91,
-      "missing": 85
+      "withPhoto": 96,
+      "missing": 80
     },
     "Mercedes-Benz": {
       "total": 575,
-      "withPhoto": 241,
-      "missing": 334
+      "withPhoto": 248,
+      "missing": 327
     },
     "Land Rover": {
       "total": 533,
-      "withPhoto": 494,
-      "missing": 39
+      "withPhoto": 497,
+      "missing": 36
     },
     "RAM": {
       "total": 118,
@@ -164,13 +164,13 @@
     },
     "Suzuki": {
       "total": 163,
-      "withPhoto": 73,
-      "missing": 90
+      "withPhoto": 77,
+      "missing": 86
     },
     "Jac": {
       "total": 123,
-      "withPhoto": 38,
-      "missing": 85
+      "withPhoto": 40,
+      "missing": 83
     },
     "Audi": {
       "total": 288,
@@ -184,13 +184,13 @@
     },
     "Exeed": {
       "total": 21,
-      "withPhoto": 1,
-      "missing": 20
+      "withPhoto": 5,
+      "missing": 16
     },
     "Mitsubishi": {
       "total": 110,
-      "withPhoto": 40,
-      "missing": 70
+      "withPhoto": 47,
+      "missing": 63
     },
     "Baic": {
       "total": 39,
@@ -219,8 +219,8 @@
     },
     "Great Wall": {
       "total": 131,
-      "withPhoto": 77,
-      "missing": 54
+      "withPhoto": 85,
+      "missing": 46
     },
     "Dongfeng": {
       "total": 78,
@@ -229,8 +229,8 @@
     },
     "Mini": {
       "total": 148,
-      "withPhoto": 60,
-      "missing": 88
+      "withPhoto": 62,
+      "missing": 86
     },
     "Jaecoo": {
       "total": 13,
@@ -244,8 +244,8 @@
     },
     "Foton": {
       "total": 151,
-      "withPhoto": 63,
-      "missing": 88
+      "withPhoto": 67,
+      "missing": 84
     },
     "Opel": {
       "total": 125,
@@ -284,8 +284,8 @@
     },
     "Gac": {
       "total": 70,
-      "withPhoto": 40,
-      "missing": 30
+      "withPhoto": 44,
+      "missing": 26
     },
     "JMC": {
       "total": 44,
@@ -314,8 +314,8 @@
     },
     "Subaru": {
       "total": 111,
-      "withPhoto": 66,
-      "missing": 45
+      "withPhoto": 72,
+      "missing": 39
     },
     "DS": {
       "total": 29,
@@ -444,8 +444,8 @@
     },
     "Jaguar": {
       "total": 128,
-      "withPhoto": 69,
-      "missing": 59
+      "withPhoto": 70,
+      "missing": 58
     },
     "Skywell": {
       "total": 1,
@@ -514,8 +514,8 @@
     },
     "Dodge": {
       "total": 22,
-      "withPhoto": 0,
-      "missing": 22
+      "withPhoto": 6,
+      "missing": 16
     },
     "Lifan": {
       "total": 16,
@@ -569,8 +569,8 @@
     },
     "Daihatsu": {
       "total": 4,
-      "withPhoto": 0,
-      "missing": 4
+      "withPhoto": 4,
+      "missing": 0
     },
     "Chrysler": {
       "total": 5,
@@ -608,8 +608,8 @@
       "Mercedes-Benz",
       {
         "total": 575,
-        "withPhoto": 241,
-        "missing": 334
+        "withPhoto": 248,
+        "missing": 327
       }
     ],
     [
@@ -629,14 +629,6 @@
       }
     ],
     [
-      "Hyundai",
-      {
-        "total": 306,
-        "withPhoto": 141,
-        "missing": 165
-      }
-    ],
-    [
       "Chevrolet",
       {
         "total": 219,
@@ -645,19 +637,19 @@
       }
     ],
     [
-      "Peugeot",
+      "Hyundai",
       {
-        "total": 249,
-        "withPhoto": 114,
-        "missing": 135
+        "total": 306,
+        "withPhoto": 160,
+        "missing": 146
       }
     ],
     [
-      "Kia",
+      "Peugeot",
       {
-        "total": 304,
-        "withPhoto": 191,
-        "missing": 113
+        "total": 249,
+        "withPhoto": 118,
+        "missing": 131
       }
     ],
     [
@@ -685,10 +677,10 @@
       }
     ],
     [
-      "Toyota",
+      "Kia",
       {
-        "total": 186,
-        "withPhoto": 85,
+        "total": 304,
+        "withPhoto": 203,
         "missing": 101
       }
     ],
@@ -698,6 +690,14 @@
         "total": 184,
         "withPhoto": 86,
         "missing": 98
+      }
+    ],
+    [
+      "Toyota",
+      {
+        "total": 186,
+        "withPhoto": 89,
+        "missing": 97
       }
     ],
     [
@@ -717,38 +717,6 @@
       }
     ],
     [
-      "Fiat",
-      {
-        "total": 127,
-        "withPhoto": 34,
-        "missing": 93
-      }
-    ],
-    [
-      "Suzuki",
-      {
-        "total": 163,
-        "withPhoto": 73,
-        "missing": 90
-      }
-    ],
-    [
-      "Mini",
-      {
-        "total": 148,
-        "withPhoto": 60,
-        "missing": 88
-      }
-    ],
-    [
-      "Foton",
-      {
-        "total": 151,
-        "withPhoto": 63,
-        "missing": 88
-      }
-    ],
-    [
       "Skoda",
       {
         "total": 110,
@@ -757,19 +725,51 @@
       }
     ],
     [
-      "Volvo",
+      "Suzuki",
       {
-        "total": 176,
-        "withPhoto": 91,
-        "missing": 85
+        "total": 163,
+        "withPhoto": 77,
+        "missing": 86
+      }
+    ],
+    [
+      "Mini",
+      {
+        "total": 148,
+        "withPhoto": 62,
+        "missing": 86
+      }
+    ],
+    [
+      "Foton",
+      {
+        "total": 151,
+        "withPhoto": 67,
+        "missing": 84
+      }
+    ],
+    [
+      "Fiat",
+      {
+        "total": 127,
+        "withPhoto": 44,
+        "missing": 83
       }
     ],
     [
       "Jac",
       {
         "total": 123,
-        "withPhoto": 38,
-        "missing": 85
+        "withPhoto": 40,
+        "missing": 83
+      }
+    ],
+    [
+      "Volvo",
+      {
+        "total": 176,
+        "withPhoto": 96,
+        "missing": 80
       }
     ],
     [
@@ -777,14 +777,6 @@
       {
         "total": 109,
         "withPhoto": 33,
-        "missing": 76
-      }
-    ],
-    [
-      "Mazda",
-      {
-        "total": 140,
-        "withPhoto": 64,
         "missing": 76
       }
     ],
@@ -802,6 +794,14 @@
         "total": 98,
         "withPhoto": 23,
         "missing": 75
+      }
+    ],
+    [
+      "RAM",
+      {
+        "total": 118,
+        "withPhoto": 45,
+        "missing": 73
       }
     ]
   ],
@@ -870,5 +870,13 @@
     "photoAssetsAdded": 60,
     "source": "data/historical-photo-import-batch7-20261123.json",
     "method": "Commons: busqueda masiva sin repetir grupos, licencia y revision visual, nuevas fotos solo para fichas pendientes"
+  },
+  "historicalCommonsBatch820261123": {
+    "withPhotoBefore": 3773,
+    "withoutPhotoBefore": 4621,
+    "newlyCovered": 148,
+    "photoAssetsAdded": 57,
+    "source": "data/historical-photo-import-batch8-20261123.json",
+    "method": "Commons: reutilizacion del barrido300; licencias verificadas y revision visual; conservar fotos previas"
   }
 }

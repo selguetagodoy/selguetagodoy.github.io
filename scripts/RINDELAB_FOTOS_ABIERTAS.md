@@ -88,3 +88,7 @@ Barrido de 120 grupos; 103 con candidatos no certificados, 794 fichas potenciale
 ## Septimo lote Commons
 
 300 grupos nuevos, 256 con candidatos, 60 fotos aprobadas y 177 fichas adicionales. Quedan 4621 pendientes. Ver rindelab/data/fotos-rapidas/barrido300/candidatos.json.
+
+## Octavo lote Commons
+
+57 fotos aprobadas y 148 fichas adicionales. Quedan 4473 pendientes.

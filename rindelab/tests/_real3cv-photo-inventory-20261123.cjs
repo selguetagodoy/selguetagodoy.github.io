@@ -30,6 +30,7 @@ const sourceBatch4=require('../data/historical-photo-import-batch4-20261123.json
 const sourceBatch5=require('../data/historical-photo-import-batch5-20261123.json');
 const sourceBatch6=require('../data/historical-photo-import-batch6-20261123.json');
 const sourceBatch7=require('../data/historical-photo-import-batch7-20261123.json');
+const sourceBatch8=require('../data/historical-photo-import-batch8-20261123.json');
 const result={time:'2026-11-23',legacy:legacy.length,october:previous.length,november:delta.length,total:rows.length,withPhoto:ok,withoutPhoto:rows.length-ok,byBrand:perBrand,topMissingBrands:ranked,
  beforeGenerationReuse:previousAudit.beforeGenerationReuse,generationReuse20261123:previousAudit.generationReuse20261123,
  historicalCommons20261123:{withPhotoBefore:2425,withoutPhotoBefore:5969,newlyCovered:264,photoAssetsAdded:sourceAudit.photos.length,
@@ -50,7 +51,8 @@ result.historicalCommonsBatch320261123={
 result.historicalCommonsBatch420261123={withPhotoBefore:3202,withoutPhotoBefore:5192,newlyCovered:146,photoAssetsAdded:sourceBatch4.photos.length,source:'data/historical-photo-import-batch4-20261123.json',method:'Commons: licencias verificadas y revisión visual de carrocería y generación'};
 result.historicalCommonsBatch520261123={withPhotoBefore:3348,withoutPhotoBefore:5046,newlyCovered:159,photoAssetsAdded:sourceBatch5.photos.length,source:'data/historical-photo-import-batch5-20261123.json',method:'Commons: licencia y revision visual de generacion y carroceria'};
 result.historicalCommonsBatch620261123={withPhotoBefore:3507,withoutPhotoBefore:4887,newlyCovered:89,photoAssetsAdded:sourceBatch6.photos.length,source:'data/historical-photo-import-batch6-20261123.json',method:'Commons: busqueda masiva, licencia y revision visual por generacion y carroceria'};
-result.historicalCommonsBatch720261123={withPhotoBefore:3596,withoutPhotoBefore:4798,newlyCovered:ok-3596,photoAssetsAdded:sourceBatch7.photos.length,source:'data/historical-photo-import-batch7-20261123.json',method:'Commons: busqueda masiva sin repetir grupos, licencia y revision visual, nuevas fotos solo para fichas pendientes'};
+result.historicalCommonsBatch720261123={withPhotoBefore:3596,withoutPhotoBefore:4798,newlyCovered:177,photoAssetsAdded:sourceBatch7.photos.length,source:'data/historical-photo-import-batch7-20261123.json',method:'Commons: busqueda masiva sin repetir grupos, licencia y revision visual, nuevas fotos solo para fichas pendientes'};
+result.historicalCommonsBatch820261123={withPhotoBefore:3773,withoutPhotoBefore:4621,newlyCovered:ok-3773,photoAssetsAdded:sourceBatch8.photos.length,source:'data/historical-photo-import-batch8-20261123.json',method:'Commons: reutilizacion del barrido300; licencias verificadas y revision visual; conservar fotos previas'};
 fs.writeFileSync(path.join(root,'data/real-3cv-photo-coverage-20261123.json'),JSON.stringify(result,null,2)+'\n');
 console.log('ACTUAL_3CV',rows.length,'WITH_PHOTO',ok,'WITHOUT_PHOTO',rows.length-ok,'RATE',(100*ok/rows.length).toFixed(1)+'%');
 console.log('BAIC',Object.entries(perBrand).filter(([b])=>/^baic$|^beijing$/i.test(b)));
