@@ -21,7 +21,7 @@ for(const p of manifest){
  assert(/^https:\/\/commons.wikimedia.org\//.test(p.source));
  assert(fs.statSync(path.resolve(root,p.localSrc)).size>9000,'Image file missing '+p.key);
 }
-assert.equal(photo.count,833);
+assert.equal(photo.count,858);
 assert.equal(commercial.summary.photosInLibrary,668);
 assert.equal(commercial.summary.activeFamiliesTechnologies,700);
 assert.equal(commercial.summary.withoutFamilyPhoto,0);
@@ -29,13 +29,13 @@ assert.equal(allCoverage.total,8394);
 assert.equal(allCoverage.withPhoto+allCoverage.withoutPhoto,8394);
 assert.equal(allCoverage.byBrand.Baic.withPhoto,38);
 assert.equal(allCoverage.byBrand.Baic.missing,1);
-assert.equal(allCoverage.withPhoto,3507);
-assert.equal(allCoverage.withoutPhoto,4887);
-assert(html.includes('3.507 de 8.394 fichas'),'User-visible photo coverage must not claim 100%');
+assert.equal(allCoverage.withPhoto,3596);
+assert.equal(allCoverage.withoutPhoto,4798);
+assert(html.includes('3.596 de 8.394 fichas'),'User-visible photo coverage must not claim 100%');
 assert(html.includes('scope-quick-button'),'Search result scopes must be understandable');
 assert(html.includes('id="catalogScopeDetails"'),'Advanced scopes must be collapsed');
 assert(!html.includes('id="catalogScopeDetails" open'),'Advanced scopes should start closed');
 assert(/<option value="all" selected>Todos los vehículos/.test(html),'Default must be all models including historical');
 assert(app.includes("if(all.length)performSearch({scroll:false})"),'Quick scopes should update results');
 assert(app.includes("$('catalogScope').value='all';"),'Reset returns to all');
-console.log('PASS BAIC historical photo audit: 38/39 cards with images (37 new fixes), honest 3.507/8.394 3CV photo coverage (41.8%), full commercial coverage separately');
+console.log('PASS BAIC historical photo audit: 38/39 cards with images (37 new fixes), honest 3.596/8.394 3CV photo coverage (42.8%), full commercial coverage separately');

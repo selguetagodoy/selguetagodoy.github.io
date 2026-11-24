@@ -12,8 +12,8 @@ for(const p of records.filter(C.active)){
  if(!groups.has(key))groups.set(key,[]);
  groups.get(key).push(p);
 }
-// Las 165 fotografías históricas 3CV no integran la biblioteca comercial del corte 22/11.
-const historicalOnlyPhotos=require('../rindelab/data/historical-photo-import-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch2-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch3-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch4-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch5-20261123.json').photos.length;
+// Las 190 fotografías históricas 3CV no integran la biblioteca comercial del corte 22/11.
+const historicalOnlyPhotos=require('../rindelab/data/historical-photo-import-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch2-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch3-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch4-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch5-20261123.json').photos.length+require('../rindelab/data/historical-photo-import-batch6-20261123.json').photos.length;
 const summary={generatedDate:'2026-11-22',commercialRecords:records.length,activeFamiliesTechnologies:groups.size,photosInLibrary:photos.count-historicalOnlyPhotos,withoutFamilyPhoto:0,missingTechnologyFamilies:0,missingModelYearFamilies:0,finishedCampaignFamilies:0};
 const out=[];
 for(const [key,items] of groups){

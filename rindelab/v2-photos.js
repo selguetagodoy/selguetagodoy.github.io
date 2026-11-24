@@ -12505,7 +12505,334 @@ const historicalLicensedBatch520261123=[
     "localSrc": "./images/commons/rindelab-historical-batch5-porsche-cayman.jpg"
   }
 ];
-const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122,officialManufacturerBatch920261122,officialManufacturerBatch1020261122,officialManufacturerBatch1120261122,officialManufacturerBatch1220261122,baicHistorical20261123,historicalLicensed20261123,historicalLicensedBatch220261123,historicalLicensedBatch320261123,historicalLicensedBatch420261123,historicalLicensedBatch520261123).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
+const historicalLicensedBatch620261123=[
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^Vito\\b(?=.*Tourer)(?!.*Furg[oó]n)",
+    "from": "2022",
+    "to": "2023",
+    "model": "Mercedes-Benz Vito Tourer (LRM 20230925 172513).jpg (fotografía referencial de generación)",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Vito_Tourer_(LRM_20230925_172513).jpg",
+    "file": "Mercedes-Benz Vito Tourer (LRM 20230925 172513).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-vito-tourer-2023.jpg"
+  },
+  {
+    "brand": "Jeep",
+    "pattern": "^(?:Jeep\\s+)?Wrangler\\s+Unlimited\\b",
+    "from": "2012",
+    "to": "2013",
+    "model": "Jeep Wrangler Unlimited 2.8 CRD Sport 2013 (14182893518).jpg (fotografía referencial de generación)",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeep_Wrangler_Unlimited_2.8_CRD_Sport_2013_(14182893518).jpg",
+    "file": "Jeep Wrangler Unlimited 2.8 CRD Sport 2013 (14182893518).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-wrangler-jk-unlimited.jpg"
+  },
+  {
+    "brand": "Suzuki",
+    "pattern": "^New Swift\\b(?=.*(?:DIT|1,0 Lts\\.))(?=.*Hatchback)(?!.*(?:Sport|Dzire))",
+    "from": "2017",
+    "to": "2017",
+    "model": "2017 Suzuki Swift (AZ) GLX Turbo 5-door hatchback (2017-07-15) 01.jpg (fotografía referencial de generación)",
+    "author": "EurovisionNim",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Suzuki_Swift_(AZ)_GLX_Turbo_5-door_hatchback_(2017-07-15)_01.jpg",
+    "file": "2017 Suzuki Swift (AZ) GLX Turbo 5-door hatchback (2017-07-15) 01.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-swift-az-2017.jpg"
+  },
+  {
+    "brand": "Suzuki",
+    "pattern": "^Swift\\b(?!.*(?:Sport|Dzire))",
+    "from": "2021",
+    "to": "2023",
+    "model": "2020 Suzuki Swift Facelift IMG 1880.jpg (fotografía referencial de generación)",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2020_Suzuki_Swift_Facelift_IMG_1880.jpg",
+    "file": "2020 Suzuki Swift Facelift IMG 1880.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-swift-az-fl.jpg"
+  },
+  {
+    "brand": "ZNA Dongfeng",
+    "pattern": "^Rich\\b(?=.*Doble Cabina)",
+    "from": "2017",
+    "to": "2017",
+    "model": "2017 Dongfeng Rich.jpg (fotografía referencial de generación)",
+    "author": "User 3204",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Dongfeng_Rich.jpg",
+    "file": "2017 Dongfeng Rich.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-rich-dc.jpg"
+  },
+  {
+    "brand": "Chevrolet",
+    "pattern": "^Colorado\\b(?=.*High Country)(?=.*Doble Cabina)",
+    "from": "2021",
+    "to": "2021",
+    "model": "2021 Chevrolet Colorado 2.8 High Country (Colombia) rear view.png (fotografía referencial de generación)",
+    "author": "Autosdeprimera",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Chevrolet_Colorado_2.8_High_Country_(Colombia)_rear_view.png",
+    "file": "2021 Chevrolet Colorado 2.8 High Country (Colombia) rear view.png",
+    "localSrc": "./images/commons/rindelab-historical-batch6-colorado-z71.jpg"
+  },
+  {
+    "brand": "Great Wall",
+    "pattern": "^Wingle\\s*6\\b(?=.*(?:4P\\.|Doble Cabina))",
+    "from": "2016",
+    "to": "2017",
+    "model": "Great Wall Wingle6 2.4 Elite 2016 (45602220971).jpg (fotografía referencial de generación)",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_Wingle6_2.4_Elite_2016_(45602220971).jpg",
+    "file": "Great Wall Wingle6 2.4 Elite 2016 (45602220971).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-wingle6.jpg"
+  },
+  {
+    "brand": "Hyundai",
+    "pattern": "^Tucson\\s+LM\\b(?!.*\\bFL\\b)",
+    "from": "2011",
+    "to": "2012",
+    "model": "Hyundai Tucson GL 2.0 2012 (9571252779).jpg (fotografía referencial de generación)",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Tucson_GL_2.0_2012_(9571252779).jpg",
+    "file": "Hyundai Tucson GL 2.0 2012 (9571252779).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-tucson-lm-2012.jpg"
+  },
+  {
+    "brand": "Jeep",
+    "pattern": "^Cherokee\\b(?=.*(?:Limited|Longitude))(?!.*(?:Grand|Trailhawk))",
+    "from": "2019",
+    "to": "2021",
+    "model": "2019 Jeep Cherokee Limited rear 4.18.18.jpg (fotografía referencial de generación)",
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2019_Jeep_Cherokee_Limited_rear_4.18.18.jpg",
+    "file": "2019 Jeep Cherokee Limited rear 4.18.18.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-cherokee-kl-fl.jpg"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "pattern": "^E\\s*(?:200|220|250|300|350|500|550)\\b(?=.*Sed[aá]n)(?!.*(?:Coup|Cabrio))",
+    "from": "2010",
+    "to": "2012",
+    "model": "W212 E-Class.jpg (fotografía referencial de generación)",
+    "author": "Carcomparing.eu",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:W212_E-Class.jpg",
+    "file": "W212 E-Class.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-e-w212-2010.jpg"
+  },
+  {
+    "brand": "Mini",
+    "pattern": "^(?:Cooper(?:\\s+(?:S|D|SD))?\\s+Countryman|Countryman)\\b(?!.*JCW)",
+    "from": "2011",
+    "to": "2013",
+    "model": "MiNi Cooper S Countryman 2011 (9171130570).jpg (fotografía referencial de generación)",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:MiNi_Cooper_S_Countryman_2011_(9171130570).jpg",
+    "file": "MiNi Cooper S Countryman 2011 (9171130570).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-countryman-r60.jpg"
+  },
+  {
+    "brand": "RAM",
+    "pattern": "^(?:RAM\\s+)?1500\\b(?=.*Quad Cab)(?!.*Rebel)",
+    "from": "2014",
+    "to": "2017",
+    "model": "Ram 1500 Laramie Quad Cab 2014 (11427220706).jpg (fotografía referencial de generación)",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Ram_1500_Laramie_Quad_Cab_2014_(11427220706).jpg",
+    "file": "Ram 1500 Laramie Quad Cab 2014 (11427220706).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-ram-quad-2014.jpg"
+  },
+  {
+    "brand": "RAM",
+    "pattern": "^(?:RAM\\s+)?Rampage\\s+Laramie\\b",
+    "from": "2024",
+    "to": "2026",
+    "model": "2023 Ram Rampage Turbo 170 Laramie 4x4.jpg (fotografía referencial de generación)",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Ram_Rampage_Turbo_170_Laramie_4x4.jpg",
+    "file": "2023 Ram Rampage Turbo 170 Laramie 4x4.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-rampage-laramie.jpg"
+  },
+  {
+    "brand": "RAM",
+    "pattern": "^(?:RAM\\s+)?Rampage\\s+RT\\b",
+    "from": "2024",
+    "to": "2026",
+    "model": "Ram Rampage 2024 RT in Punta del Este 01.jpg (fotografía referencial de generación)",
+    "author": "NaBUru38",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Ram_Rampage_2024_RT_in_Punta_del_Este_01.jpg",
+    "file": "Ram Rampage 2024 RT in Punta del Este 01.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-rampage-rt.jpg"
+  },
+  {
+    "brand": "Skoda",
+    "pattern": "^Fabia\\b(?=.*Hatchback\\s*5P)(?!.*Combi)",
+    "from": "2015",
+    "to": "2017",
+    "model": "Skoda Fabia III Topaz Brown.JPG (fotografía referencial de generación)",
+    "author": "Rozcestnik.sk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Skoda_Fabia_III_Topaz_Brown.JPG",
+    "file": "Skoda Fabia III Topaz Brown.JPG",
+    "localSrc": "./images/commons/rindelab-historical-batch6-fabia-iii.jpg"
+  },
+  {
+    "brand": "Volkswagen",
+    "pattern": "^Golf\\b(?=.*Hatchback\\s*5P)(?!.*(?:\\bR\\b|GTI|GTE|Variant))",
+    "from": "2014",
+    "to": "2016",
+    "model": "2013-2015 Volkswagen Golf (5G) 90TSI Comfortline hatchback (2018-10-19) 01.jpg (fotografía referencial de generación)",
+    "author": "EurovisionNim",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2013-2015_Volkswagen_Golf_(5G)_90TSI_Comfortline_hatchback_(2018-10-19)_01.jpg",
+    "file": "2013-2015 Volkswagen Golf (5G) 90TSI Comfortline hatchback (2018-10-19) 01.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-golf-mk7.jpg"
+  },
+  {
+    "brand": "Gac",
+    "pattern": "^GS4\\s+MAX\\b",
+    "from": "2024",
+    "to": "2026",
+    "model": "GAC Trumpchi GS4 Max China 2025-04-11.jpg (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:GAC_Trumpchi_GS4_Max_China_2025-04-11.jpg",
+    "file": "GAC Trumpchi GS4 Max China 2025-04-11.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-gs4-max.jpg"
+  },
+  {
+    "brand": "KGM",
+    "pattern": "^XLV\\b",
+    "from": "2016",
+    "to": "2017",
+    "model": "Ssangyong XLV 160 e-XGi 2017 (37594592596).jpg (fotografía referencial de generación)",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Ssangyong_XLV_160_e-XGi_2017_(37594592596).jpg",
+    "file": "Ssangyong XLV 160 e-XGi 2017 (37594592596).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-ssangyong-xlv.jpg"
+  },
+  {
+    "brand": "Kia",
+    "pattern": "^Rio\\s*4\\s*\\(SC\\)(?=.*Sed[aá]n)",
+    "from": "2017",
+    "to": "2018",
+    "model": "Kia Rio4 1.4 EX 2018 (24596530027).jpg (fotografía referencial de generación)",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Kia_Rio4_1.4_EX_2018_(24596530027).jpg",
+    "file": "Kia Rio4 1.4 EX 2018 (24596530027).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-rio-sc-sedan.jpg"
+  },
+  {
+    "brand": "Land Rover",
+    "pattern": "^Range Rover Evoque\\b(?=.*3P\\.)",
+    "from": "2012",
+    "to": "2013",
+    "model": "Land Rover Range Rover Evoque L538 Coupe 01 China 2012-05-12.jpg (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Land_Rover_Range_Rover_Evoque_L538_Coupe_01_China_2012-05-12.jpg",
+    "file": "Land Rover Range Rover Evoque L538 Coupe 01 China 2012-05-12.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-evoque-l538-3p.jpg"
+  },
+  {
+    "brand": "Land Rover",
+    "pattern": "^Range Rover Evoque\\b(?=.*5P\\.)",
+    "from": "2012",
+    "to": "2013",
+    "model": "Land Rover Range Rover Evoque L538 01 China 2012-05-22.jpg (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Land_Rover_Range_Rover_Evoque_L538_01_China_2012-05-22.jpg",
+    "file": "Land Rover Range Rover Evoque L538 01 China 2012-05-22.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-evoque-l538-5p.jpg"
+  },
+  {
+    "brand": "Mini",
+    "pattern": "^Cooper\\s+SD\\b(?=.*(?:Cabrio|Convertible))(?!.*Roadster)",
+    "from": "2011",
+    "to": "2013",
+    "model": "2011-2013 Mini Cooper SD Cabriolet.jpg (fotografía referencial de generación)",
+    "author": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2011-2013_Mini_Cooper_SD_Cabriolet.jpg",
+    "file": "2011-2013 Mini Cooper SD Cabriolet.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-mini-r57-sd.jpg"
+  },
+  {
+    "brand": "Exeed",
+    "pattern": "^LX\\b(?=.*1[,.]5T)(?!.*(?:HEV|ET-i))",
+    "from": "2023",
+    "to": "2023",
+    "model": "Exeed LX 1.5T Advanced 2023 (53127746531).jpg (fotografía referencial de generación)",
+    "author": "RL GNZLZ from Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Exeed_LX_1.5T_Advanced_2023_(53127746531).jpg",
+    "file": "Exeed LX 1.5T Advanced 2023 (53127746531).jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-exeed-lx-2023.jpg"
+  },
+  {
+    "brand": "Ford",
+    "pattern": "^Explorer\\b(?=.*Station Wagon)(?!.*Sport)",
+    "from": "2013",
+    "to": "2015",
+    "model": "Ford Explorer V China 2015-04-08.jpg (fotografía referencial de generación)",
+    "author": "Navigator84",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Ford_Explorer_V_China_2015-04-08.jpg",
+    "file": "Ford Explorer V China 2015-04-08.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-explorer-v.jpg"
+  },
+  {
+    "brand": "Honda",
+    "pattern": "^City\\b(?=.*Sed[aá]n)(?!.*Hatchback)",
+    "from": "2020",
+    "to": "2020",
+    "model": "Honda City 2020.jpg (fotografía referencial de generación)",
+    "author": "Thitichai R",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Honda_City_2020.jpg",
+    "file": "Honda City 2020.jpg",
+    "localSrc": "./images/commons/rindelab-historical-batch6-honda-city-2020.jpg"
+  }
+];
+const entries=localEntries.concat(licensed.concat(additionalLicensed20261021,additionalLicensed20261021B,premiumLicensedOct21,reviewedModelsOct21,reviewedOct22Batch3,auditedBatch4Oct22,licensedNovember2026,licensedNovember2026B,licensedCarImagesRights20261122,licensedCommonsMass20261122,licensedCommonsMassBatch220261122,licensedCommonsGap320261122,licensedCommonsGap420261122,licensedCommonsGap520261122,officialManufacturerBatch620261122,officialManufacturerBatch720261122,officialManufacturerBatch820261122,officialManufacturerBatch920261122,officialManufacturerBatch1020261122,officialManufacturerBatch1120261122,officialManufacturerBatch1220261122,baicHistorical20261123,historicalLicensed20261123,historicalLicensedBatch220261123,historicalLicensedBatch320261123,historicalLicensedBatch420261123,historicalLicensedBatch520261123,historicalLicensedBatch620261123).map(p=>({...p,re:new RegExp(p.pattern,'i'),src:p.localSrc||commonsFile(p),source:p.source||commonsSource(p),licenseUrl:p.licenseUrl||licenseUrls[p.license]})));
 
 // Sólo imágenes verificadas como referencia visual de familia/generación admiten motorización no informada.
 const neutralFamilyPhotoSources=new Set([
@@ -12994,7 +13321,7 @@ function find(row,F,skipHistoricalNewBatches=false){
  const macanThermal=(p)=>photoBrandKey(brand)==='porsche'&&photoBrandKey(model)==='macan'&&tech==='Bencina'&&year==='2026'&&p.src==='./images/commons/porsche-porsche-macan-de-combustion-2022-28.jpg';
  // Fotos específicas de tecnología primero; luego la asociación más precisa de carrocería.
  const techRank=p=>tech?(p.tech?3:1):(p.tech?0:2);
- return entries.filter(p=>(!skipHistoricalNewBatches||!/rindelab-historical-batch[2345]-/.test(p.src))&&photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&((year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p)))||allowCuratedHistoricalImage20261123(p,model,tech,year))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
+ return entries.filter(p=>(!skipHistoricalNewBatches||!/rindelab-historical-batch[23456]-/.test(p.src))&&photoBrandKey(p.brand)===photoBrandKey(brand)&&p.re.test(model)&&(!p.tech||(Array.isArray(p.tech)?p.tech.includes(tech):p.tech===tech)||(!tech&&neutralFamilyPhotoSources.has(p.src)))&&(!p.excludeTech||!p.excludeTech.includes(tech))&&((year>=p.from&&(year<=p.to||allowReferenceFor2027(brand,model,tech,p,year)||macanThermal(p)))||allowCuratedHistoricalImage20261123(p,model,tech,year))).sort((a,b)=>techRank(b)-techRank(a)||b.re.source.length-a.re.source.length||Number(b.from)-Number(a.from))[0]||null;
 }
 function findCommercial(p){
  if(!p||!p.brand||!p.family)return null;

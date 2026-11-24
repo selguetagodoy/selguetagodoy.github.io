@@ -80,3 +80,7 @@ Se verificaron licencias y atribuciones de 53 fuentes; 52 imágenes exteriores s
 ## Quinto lote Commons — 23/11/2026
 
 38 fotos con licencia y revisión visual, 159 asociaciones adicionales; 3.507 con foto, 4.887 pendientes. Ver rindelab/data/historical-photo-import-batch5-20261123.json.
+
+## Sexto lote Commons — 23/11/2026
+
+Barrido de 120 grupos; 103 con candidatos no certificados, 794 fichas potenciales. 25 fotos aprobadas de 34 descargadas y 89 asociaciones nuevas; 3.596 con foto, 4.798 pendientes. Ver rindelab/data/fotos-rapidas/barrido120/candidatos.json y rindelab/data/historical-photo-import-batch6-20261123.json.
